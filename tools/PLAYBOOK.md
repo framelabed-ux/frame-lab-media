@@ -1,6 +1,6 @@
 # Frame Lab üretim kılavuzu
 
-Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Konular yapay zekâ, tasarım, video ve sosyal medya. Ton sıcak, net, hafif esprili ve pratik. Her içerik bir şey denetir ya da öğretir: "Haber değil, deney."
+Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Konular yapay zekâ, tasarım, video ve sosyal medya. Ton sıcak, net, hafif esprili ve pratik. Her içerik bir şey dener ya da öğretir: "Haber değil, deney."
 
 ## Hesaplar ve yayın
 - Instagram yayını Windsor MCP üzerinden yapılır: connector `instagram`, account `17841469889313843`.
