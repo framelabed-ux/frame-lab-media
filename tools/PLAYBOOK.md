@@ -21,19 +21,20 @@ Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Ko
 - Reel kapağı `cover_url` ile ayrıca verilir. Kapak 1080x1920 olur, ama ızgarada ortadaki 3:4 alan görünür. Önemli metin dikeyde 300–1600 piksel arasında kalmalı.
 - Carousel içinde kareler açık ve koyu sırayla gider, böylece kaydırırken ritim oluşur.
 
-## Haftalık ritim (feed, saat 19:30 civarı)
-Format dengesi: haftada 2 carousel, 2 Reel, 1 statik (tek görsel).
-| Gün | Format | Seri |
-| --- | --- | --- |
-| Pzt | Carousel | Bu Hafta Dijitalde: haftanın 5 gelişmesi |
-| Sal | Reel | Sıcak Gelişme |
-| Çar | Statik (tek görsel) | Tasarım Kuralı / Günün Prompt'u: tek karede kaydedilecek bir kural, formül ya da hazır prompt |
-| Per | Carousel | 1 Prompt 3 Sonuç: aynı prompt, farklı araçlar ya da yaklaşımlar, karşılaştırmalı |
-| Cum | Reel | Kare Açıklıyor |
-| Cmt | Sadece story | |
-| Paz | Sadece story | |
+## Format sırası (feed, her hafta içi günü 1 gönderi, saat 19:30 civarı)
+Format haftanın gününe bağlı değil, sırayla döner: **Reel → statik → carousel → Reel → statik → carousel …**
+- Bugünün formatı = `posts/state.json` içindeki `grid` listesinin son öğesinin `kind` değerinden bir sonraki format. (Son reel ise statik, son statik ise carousel, son carousel ise Reel.)
+- Ece statik ile carousel'in yeri değişebilir dedi. Gündem gerektiriyorsa (ör. tek görsele sığmayan bir karşılaştırma) o gün statik yerine carousel, ertesi gün statik yapılabilir. Yeter ki üç format sırayla dönsün ve aynı format art arda gelmesin.
+- Hafta sonu feed gönderisi yok, sadece story var. Sıra pazartesi kaldığı yerden devam eder.
 
-Çok büyük bir gelişme olursa o günün planlı içeriğinin yerine "Sıcak Gelişme" girer, ama o günün formatı korunur (Reel günü Reel, carousel günü carousel, statik günü tek görsel). Böylece format dengesi bozulmaz. İçeriklerin yaklaşık %60'ı gündemden gelir. "Mutfaktan" (sosyal medya taktikleri) Çarşamba statiğinde ya da Pazartesi carousel'inde dönüşümlü kullanılabilir.
+Formata göre seriler:
+| Format | Seriler |
+| --- | --- |
+| Reel | Sıcak Gelişme (gündemde büyük bir şey varsa), Kare Açıklıyor (bir kavramı 30–40 saniyede anlatır) |
+| Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın 5 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri) |
+| Statik (tek görsel) | Günün Prompt'u (kopyalanacak hazır prompt), Tasarım Kuralı (tek kural, tek örnek) |
+
+İçeriklerin yaklaşık %60'ı gündemden gelir. Büyük bir gelişme o günün formatına uyarlanır: Reel günü kısa deneme videosu, carousel günü adım adım anlatım, statik günü tek karede "bunu bilmen lazım" kartı.
 
 Statik gönderi: tek slaytlı carousel spec'iyle `render.py carousel` (1080x1350), yayın `create_image_post`. Metin tek bakışta okunmalı: bir başlık ve en fazla 3–4 kısa satır ya da bir prompt kartı.
 
