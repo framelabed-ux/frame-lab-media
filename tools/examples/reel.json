@@ -1,0 +1,4 @@
+{"scenes":[
+ {"theme":"light","duration":3.0,"elements":[{"type":"kare","face":"saskin","size":420,"at":0.1},{"type":"tag","text":"SICAK GELİŞME","at":0.4},{"type":"h1","text":"Bunu\n[[denedik.]]","at":0.7}]},
+ {"theme":"dark","duration":4.0,"elements":[{"type":"tag","text":"DENEME","at":0.1},{"type":"card","label":"PROMPT","text":"Örnek prompt metni burada yazılıyor.","typed":[0.5,1.2],"strong":true,"at":0.3},{"type":"card","label":"SONUÇ","outline":true,"text":"Sonuç metni.","at":2.0},{"type":"pill","text":"İşte bu.","at":3.0}]}
+]}

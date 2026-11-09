@@ -1,0 +1,10 @@
+{
+  "instagram_account": "17841469889313843",
+  "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
+  "grid": [
+    {"date": "2026-11-09", "kind": "carousel", "slug": "2026-11-09-tanisma", "cover_tone": "light", "media_id": "18031318442692957", "title": "Tanışma: Merhaba, ben Kare"},
+    {"date": "2026-11-09", "kind": "reel", "slug": "2026-11-09-ilk-deney", "cover_tone": "dark", "media_id": null, "status": "20:00'de yayınlanacak (bu oturumdan)", "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım"}
+  ],
+  "queue": [],
+  "stories": []
+}

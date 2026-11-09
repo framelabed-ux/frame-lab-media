@@ -1,0 +1,6 @@
+{"slides":[
+ {"theme":"light","elements":[{"type":"kare","face":"saskin","size":380},{"type":"tag","text":"BU HAFTA DİJİTALDE"},{"type":"h1","text":"Bu hafta\n[[5 gelişme]]\nkaçırma."},{"type":"lead","text":"Yapay zekâ, tasarım ve sosyal medyada öne çıkanlar."}]},
+ {"theme":"dark","elements":[{"type":"tag","text":"01"},{"type":"h2","text":"Başlık buraya,\n[[vurgu]] böyle."},{"type":"lead","text":"Ne oldu, neden önemli ve sen bugün ne yapabilirsin: iki üç cümle."},{"type":"chips","items":["Ücretsiz","Türkçe destekli"]}]},
+ {"theme":"soft","elements":[{"type":"h2","text":"Haftanın\n[[özeti]]"},{"type":"rows","items":[["01","Gelişme bir","Tek satır açıklama"],["02","Gelişme iki","Tek satır açıklama"]]}]},
+ {"theme":"dark","elements":[{"type":"kare","face":"fikir","size":300},{"type":"h2","text":"Hangisini\n[[deneyelim?]]"},{"type":"lead","text":"Yorumlara yaz, en çok istenen haftaya içerik olsun."}]}
+]}
