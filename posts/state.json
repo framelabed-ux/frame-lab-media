@@ -20,7 +20,21 @@
       "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım"
     }
   ],
-  "queue": [],
+  "queue": [
+    {
+      "slug": "2026-11-10-prompt-rehberi",
+      "kind": "static",
+      "publish_date": "2026-11-10",
+      "files": [
+        "posts/2026-11-10-prompt-rehberi/1.jpg"
+      ],
+      "cover": "posts/2026-11-10-prompt-rehberi/1.jpg",
+      "cover_tone": "light",
+      "caption": "Sosyal medyada en çok vakit kaybettiren şey ne biliyor musun? Boş sayfaya bakmak.\n\nBu yüzden en çok işimize yarayan 20 prompt'u tek bir rehberde topladık:\n• Kanca ve caption yazarı\n• 30 günlük içerik takvimi\n• Ürün fotoğrafı ve marka paleti\n• Reels senaryosu\n• Teklif e-postası ve rapor yorumcusu\n\nRehber ücretsiz, linki profilde. Hepsi aynı formülle çalışıyor: Rol + Bağlam + Format + Sınır.\n\nSen en çok hangisinde zorlanıyorsun: caption mı, görsel mi, video mu? Yorumlara yaz, sana özel bir prompt önerelim.\n\n#yapayzeka #prompt #chatgpt #icerikuretimi #sosyalmedya #dijitalpazarlama #grafiktasarım",
+      "sources": [],
+      "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/"
+    }
+  ],
   "stories": [
     {
       "date": "2026-11-09",
@@ -64,5 +78,6 @@
       "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
       "media_id": "18101888147645978"
     }
-  ]
+  ],
+  "replied_comments": []
 }

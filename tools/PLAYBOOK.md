@@ -38,6 +38,21 @@ Formata göre seriler:
 
 Statik gönderi: tek slaytlı carousel spec'iyle `render.py carousel` (1080x1350), yayın `create_image_post`. Metin tek bakışta okunmalı: bir başlık ve en fazla 3–4 kısa satır ya da bir prompt kartı.
 
+## Önceden hazırlanmış gönderiler
+`queue` içinde bugünün tarihli bir öğe zaten varsa (Ece ile birlikte önceden hazırlanmış), sabah görevi o gün yeni feed gönderisi üretmez. Sadece o gönderiyi duyuran story'yi yapar ve raporda bunu belirtir. Format sırası ve kapak tonu bu öğeye göre devam eder.
+
+## Prompt rehberi ve link
+- Ücretsiz rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ (kaynak: `rehber/index.html`). Biyografi linki ana sayfa: https://framelabed-ux.github.io/frame-lab-media/
+- Uygun gönderilerde "Rehber ücretsiz, linki profilde" diye hatırlatılabilir, ama her gönderide değil (en fazla haftada 2 kez).
+
+## Yorumlara yanıt (akşam görevi, her gün)
+- Son 7 günün gönderilerindeki yanıtlanmamış yorumlar Windsor'dan okunur (`comment_id`, `comment_text`, `media_id`, `comment_timestamp`). Hesabın kendi yorumları atlanır.
+- Gerçek yorumlara 1–2 cümlelik, kişisel, sıcak bir yanıt verilir (`reply_to_comment`). Yorumdaki ayrıntıya değinilir. Kopyala-yapıştır kalıp kullanılmaz. Soru varsa somut cevap verilir. "Caption / görsel / video" gibi bir ihtiyaç yazılmışsa rehberden uygun prompt'un adı ve tek cümlelik özeti önerilir.
+- Emoji en fazla 1. Link yazılmaz, gerekirse "linki profilde" denir.
+- Spam, reklam, hakaret ya da dolandırıcılık içeren yorumlar gizlenir (`hide_comment`), silinmez ve yanıtlanmaz.
+- Tartışmalı ya da hassas bir yorumda (şikâyet, hukuki ya da kişisel konu) yanıt verilmez, Ece'ye bildirilir.
+- Aynı yoruma iki kez yanıt verilmez. Yanıtlanan comment_id'ler `state.json` içindeki `replied_comments` listesine yazılır.
+
 ## Story (her gün 1 tane, sabah yayınlanır)
 Story o akşamki gönderinin merak uyandıran bir duyurusu, günün kısa bir ipucu ya da bir soru olabilir ("Yorumlara yaz" yerine "DM'den yaz"). 1080x1920 JPEG. Story'de saat yazma, "Bu akşam profilde" de.
 
