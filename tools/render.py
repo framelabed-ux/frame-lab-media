@@ -1,6 +1,7 @@
 """Frame Lab içerik üretici.
 Kullanım:
   python3 tools/render.py carousel spec.json out_dir   -> out_dir/1.jpg ... (1080x1350 JPEG)
+  Statik gönderi: tek slaytlı carousel spec'i -> out_dir/1.jpg (sayfa sayacı olmadan)
   python3 tools/render.py story    spec.json out.jpg   -> 1080x1920 JPEG
   python3 tools/render.py reel     spec.json out.mp4 [voice_file]  -> 1080x1920 MP4, müzikli
 Spec formatı için tools/PLAYBOOK.md'ye bak.
@@ -105,7 +106,7 @@ async def _shots(pages, w, h, paths, t_final=True):
 
 def carousel(spec, out_dir):
     os.makedirs(out_dir, exist_ok=True); sl = spec["slides"]; n = len(sl)
-    pages = [page(s["theme"], s["elements"], 1080, 1350, f"{i+1}/{n}", "Takip et" if i == n-1 else None) for i, s in enumerate(sl)]
+    pages = [page(s["theme"], s["elements"], 1080, 1350, (f"{i+1}/{n}" if n > 1 else ""), ("Takip et" if i == n-1 else None) if n > 1 else "Kaydet") for i, s in enumerate(sl)]
     asyncio.run(_shots(pages, 1080, 1350, [f"{out_dir}/{i+1}.jpg" for i in range(n)]))
 
 def story(spec, out):

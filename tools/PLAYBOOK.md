@@ -22,17 +22,20 @@ Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Ko
 - Carousel içinde kareler açık ve koyu sırayla gider, böylece kaydırırken ritim oluşur.
 
 ## Haftalık ritim (feed, saat 19:30 civarı)
+Format dengesi: haftada 2 carousel, 2 Reel, 1 statik (tek görsel).
 | Gün | Format | Seri |
 | --- | --- | --- |
 | Pzt | Carousel | Bu Hafta Dijitalde: haftanın 5 gelişmesi |
 | Sal | Reel | Sıcak Gelişme |
-| Çar | Carousel | Mutfaktan / Tasarım Kuralı (haftalık dönüşümlü) |
-| Per | Reel | 1 Prompt 3 Sonuç |
+| Çar | Statik (tek görsel) | Tasarım Kuralı / Günün Prompt'u: tek karede kaydedilecek bir kural, formül ya da hazır prompt |
+| Per | Carousel | 1 Prompt 3 Sonuç: aynı prompt, farklı araçlar ya da yaklaşımlar, karşılaştırmalı |
 | Cum | Reel | Kare Açıklıyor |
 | Cmt | Sadece story | |
 | Paz | Sadece story | |
 
-Çok büyük bir gelişme olursa o günün planlı içeriğinin yerine "Sıcak Gelişme" girer. Planlı içerik kayar. İçeriklerin yaklaşık %60'ı gündemden gelir.
+Çok büyük bir gelişme olursa o günün planlı içeriğinin yerine "Sıcak Gelişme" girer, ama o günün formatı korunur (Reel günü Reel, carousel günü carousel, statik günü tek görsel). Böylece format dengesi bozulmaz. İçeriklerin yaklaşık %60'ı gündemden gelir. "Mutfaktan" (sosyal medya taktikleri) Çarşamba statiğinde ya da Pazartesi carousel'inde dönüşümlü kullanılabilir.
+
+Statik gönderi: tek slaytlı carousel spec'iyle `render.py carousel` (1080x1350), yayın `create_image_post`. Metin tek bakışta okunmalı: bir başlık ve en fazla 3–4 kısa satır ya da bir prompt kartı.
 
 ## Story (her gün 1 tane, sabah yayınlanır)
 Story o akşamki gönderinin merak uyandıran bir duyurusu, günün kısa bir ipucu ya da bir soru olabilir ("Yorumlara yaz" yerine "DM'den yaz"). 1080x1920 JPEG. Story'de saat yazma, "Bu akşam profilde" de.
@@ -50,5 +53,5 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
 
 ## Durum dosyası: posts/state.json
 - `grid`: yayınlanan feed gönderileri (tarih, tür, kapak tonu, slug, media_id).
-- `queue`: sabah üretilip akşam yayınlanacaklar. Her öğe: slug, kind (carousel/reel), publish_date, files, cover, cover_tone, caption, sources.
+- `queue`: sabah üretilip akşam yayınlanacaklar. Her öğe: slug, kind (carousel/reel/static), publish_date, files, cover, cover_tone, caption, sources.
 - `stories`: yayınlanan story kayıtları.
