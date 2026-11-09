@@ -28,6 +28,41 @@
       "file": "posts/2026-11-09-story/story.jpg",
       "about": "İlk deney Reel'inin duyurusu",
       "media_id": "17896327833681957"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-baslangic",
+      "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "18027181781863647"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-gundem",
+      "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "17919048858467844"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-ai-lab",
+      "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "18115804277127596"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-tasarim",
+      "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "17887896783503923"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-mutfak",
+      "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "18101888147645978"
     }
   ]
 }
