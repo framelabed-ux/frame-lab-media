@@ -31,7 +31,7 @@ Formata göre seriler:
 | Format | Seriler |
 | --- | --- |
 | Reel | Sıcak Gelişme (gündemde büyük bir şey varsa), Kare Açıklıyor (bir kavramı 30–40 saniyede anlatır) |
-| Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın 5 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri) |
+| Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın 5 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri), Kare'den Haberler (numaralı seri: 1–3 doğrulanmış gelişme, her biri için ne oldu, nasıl çalışır, sana ne faydası var; Ece 10 Kasım'da başlattı) |
 | Statik (tek görsel) | Günün Prompt'u (kopyalanacak hazır prompt), Tasarım Kuralı (tek kural, tek örnek) |
 
 İçeriklerin yaklaşık %60'ı gündemden gelir. Büyük bir gelişme o günün formatına uyarlanır: Reel günü kısa deneme videosu, carousel günü adım adım anlatım, statik günü tek karede "bunu bilmen lazım" kartı.
