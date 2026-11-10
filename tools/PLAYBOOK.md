@@ -85,6 +85,8 @@ Statik gönderi: tek slaytlı carousel spec'iyle `render.py carousel` (1080x1350
 - Emoji en fazla 1. Link yazılmaz, gerekirse "linki profilde" denir.
 - Spam, reklam, hakaret ya da dolandırıcılık içeren yorumlar gizlenir (`hide_comment`), silinmez ve yanıtlanmaz.
 - Tartışmalı ya da hassas bir yorumda (şikâyet, hukuki ya da kişisel konu) yanıt verilmez, Ece'ye bildirilir.
+- **Anahtar kelimeli yorumlar (ör. REHBER):** Gönderinin kuyruk kaydında `keyword` varsa, o kelimeyi içeren yorumlara kısa bir yanıt verilir: "Teşekkürler! Linki DM'den gönderiyoruz, profildeki linkte de var 🙌" (ifadeyi her seferinde biraz değiştir). DM'leri şimdilik Ece elle atıyor (DM otomasyonu yok, ReplyRush 50 takipçi şartı koyuyor). Görev sonunda Ece'ye DM atılacak kişilerin kullanıcı adlarını (Windsor veriyorsa) ya da yorum metinlerini ve gönderiyi listele. 50 takipçiye ulaşılınca Ece'ye ReplyRush kurulumunu hatırlat.
+- Yorumdan DM'e çağrı (CTA) yalnızca gerçekten gönderilecek bir kaynak varsa kullanılır (şimdilik prompt rehberi: https://framelabed-ux.github.io/frame-lab-media/rehber/). Haftada en fazla 2 gönderide.
 - Aynı yoruma iki kez yanıt verilmez. Yanıtlanan comment_id'ler `state.json` içindeki `replied_comments` listesine yazılır.
 
 ## Story (her gün 1 tane, sabah yayınlanır)
