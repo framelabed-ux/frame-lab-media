@@ -65,7 +65,7 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .cmp .c{{border-radius:28px;padding:32px 30px;background:{cardbg}}}
 .cmp .c.good{{background:{LIME};color:{INK}}}
 .cmp .k{{font-family:'Inter Display';font-weight:800;font-size:28px;letter-spacing:.08em;margin-bottom:14px}}
-.cmp .t{{font-size:{30 if h<1500 else 36}px;line-height:1.38}}
+.cmp .t{{white-space:pre-line;font-size:{30 if h<1500 else 36}px;line-height:1.38}}
 .steps{{display:flex;flex-direction:column;gap:26px;width:100%;text-align:left}}
 .step{{display:flex;gap:30px;align-items:flex-start}}
 .step .n{{font-family:'Inter Display';font-weight:800;font-size:{110 if h<1500 else 130}px;line-height:.8;color:transparent;-webkit-text-stroke:3px {lab if theme=='dark' else fg};min-width:150px}}
@@ -123,7 +123,8 @@ def el(e, light):
         return f'<div class="chat{" a" if at else ""}"{at}>{out}</div>'
     if k == "compare":
         L, R = e["left"], e["right"]
-        return f'<div class="cmp{" a" if at else ""}"{at}><div class="c"><div class="k">{H.escape(L["label"])}</div><div class="t">{H.escape(L["text"])}</div></div><div class="c good"><div class="k">{H.escape(R["label"])}</div><div class="t">{H.escape(R["text"])}</div></div></div>'
+        ts = f' style="font-size:{e["size"]}px;font-family:\'Inter Display\';font-weight:800;line-height:1.1"' if "size" in e else ""
+        return f'<div class="cmp{" a" if at else ""}"{at}><div class="c"><div class="k">{H.escape(L["label"])}</div><div class="t"{ts}>{H.escape(L["text"])}</div></div><div class="c good"><div class="k">{H.escape(R["label"])}</div><div class="t"{ts}>{H.escape(R["text"])}</div></div></div>'
     if k == "steps":
         return f'<div class="steps{" a" if at else ""}"{at}>' + "".join(f'<div class="step"><div class="n">{i+1:02d}</div><div><div class="st">{H.escape(t)}</div>' + (f'<div class="sd">{H.escape(d)}</div>' if d else "") + "</div></div>" for i, (t, d) in enumerate(e["items"])) + "</div>"
     if k == "quote":

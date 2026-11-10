@@ -45,6 +45,22 @@
         "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
       ],
       "layout": "bignum"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "reel",
+      "slug": "2026-11-10-fable-5-2",
+      "cover_tone": "dark",
+      "layout": "classic-sticker",
+      "media_id": null,
+      "status": "13:00'te yayınlanacak (bu oturumdan)",
+      "title": "Claude Fable 5.2 çıktı",
+      "sources": [
+        "https://www.anthropic.com/claude/fable",
+        "https://x.com/claudeai/status/2119867114450268322",
+        "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
+        "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
+      ]
     }
   ],
   "queue": [
@@ -56,10 +72,10 @@
         "posts/2026-11-10-prompt-rehberi/1.jpg"
       ],
       "cover": "posts/2026-11-10-prompt-rehberi/1.jpg",
-      "cover_tone": "dark",
+      "cover_tone": "light",
       "caption": "Sosyal medyada en çok vakit kaybettiren şey ne biliyor musun? Boş sayfaya bakmak.\n\nBu yüzden en çok işimize yarayan 20 prompt'u tek bir rehberde topladık:\n• Kanca ve caption yazarı\n• 30 günlük içerik takvimi\n• Ürün fotoğrafı ve marka paleti\n• Reels senaryosu\n• Teklif e-postası ve rapor yorumcusu\n\nRehber ücretsiz, linki profilde. Hepsi aynı formülle çalışıyor: Rol + Bağlam + Format + Sınır.\n\nSen en çok hangisinde zorlanıyorsun: caption mı, görsel mi, video mu? Yorumlara yaz, sana özel bir prompt önerelim.\n\n#yapayzeka #prompt #chatgpt #icerikuretimi #sosyalmedya #dijitalpazarlama #grafiktasarım",
       "sources": [],
-      "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ | 10 Kasım: Kare'den Haberler sabah yayınlandığı için ızgara düzeni gereği kapak koyuya çevrildi (metin aynı).",
+      "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ | 10 Kasım: Kare'den Haberler sabah yayınlandığı için ızgara düzeni gereği kapak koyuya çevrildi (metin aynı). | 10 Kasım 11:30: 13:00'te koyu kapaklı Fable 5.2 Reel'i araya girdiği için rehber açık kapağa çevrildi.",
       "layout": "chat"
     }
   ],

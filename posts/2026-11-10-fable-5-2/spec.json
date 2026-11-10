@@ -1,0 +1,211 @@
+{
+ "scenes": [
+  {
+   "theme": "dark",
+   "pattern": "grid",
+   "duration": 4.0,
+   "elements": [
+    {
+     "type": "sticker",
+     "text": "YENİ"
+    },
+    {
+     "type": "tag",
+     "text": "SICAK GELİŞME",
+     "at": 0.2
+    },
+    {
+     "type": "h1",
+     "text": "Claude\nFable 5.2\n[[çıktı.]]",
+     "size": 140,
+     "at": 0.4
+    },
+    {
+     "type": "lead",
+     "text": "Anthropic dün duyurdu. 30 saniyede özetliyoruz.",
+     "at": 1.2
+    },
+    {
+     "type": "kare_peek",
+     "face": "saskin",
+     "size": 560
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "duration": 4.5,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "1 · HIZ",
+     "at": 0.1
+    },
+    {
+     "type": "bignum",
+     "text": "%30",
+     "size": 400,
+     "label": "daha hızlı yanıt",
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Fable 5.1'e göre, tüm efor seviyelerinde [[%30'a kadar]] daha hızlı.",
+     "at": 1.3
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "duration": 5.5,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "2 · FİYAT",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Daha [[ucuz.]]",
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "API'de 1 milyon token fiyatı (giriş / çıkış):",
+     "at": 0.8
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "FABLE 5.1",
+      "text": "10 $\n50 $"
+     },
+     "right": {
+      "label": "FABLE 5.2",
+      "text": "8 $\n40 $"
+     },
+     "at": 1.4,
+     "size": 76
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "pattern": "dots",
+   "duration": 5.0,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "3 · NEREDE GÜÇLÜ?",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Büyük işlerin\n[[modeli.]]",
+     "at": 0.3
+    },
+    {
+     "type": "tiles",
+     "items": [
+      [
+       "01",
+       "Zorlu yazılım projeleri"
+      ],
+      [
+       "02",
+       "Araştırma ve bilim"
+      ],
+      [
+       "03",
+       "Robot kontrolü"
+      ],
+      [
+       "04",
+       "Ekran ve gerçek dünya için tasarım"
+      ]
+     ],
+     "at": 1.0
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center",
+   "frame": true,
+   "duration": 5.5,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "EN ÇARPICI ÖRNEK",
+     "at": 0.1
+    },
+    {
+     "type": "quote",
+     "text": "1.000 Fable 5.2 ajanı,\nFermat'nın Son Teoremi'ni\n[[30 saatte]] bilgisayarın\ndenetleyebileceği dile çevirdi.",
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Kaynak: Anthropic duyurusu",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "duration": 6.0,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "PEKİ HANGİSİNİ KULLANMALI?",
+     "at": 0.1
+    },
+    {
+     "type": "chat",
+     "names": {
+      "ai": "KARE",
+      "you": "SEN"
+     },
+     "items": [
+      [
+       "you",
+       "Ben hangisini kullanayım?"
+      ],
+      [
+       "ai",
+       "Günlük işler için Opus 5.5. Büyük ve teknik projeler için Fable 5.2. Anthropic de böyle öneriyor."
+      ]
+     ],
+     "at": 0.4
+    },
+    {
+     "type": "lead",
+     "text": "Fable 5.2 tüm ücretli Claude planlarında.",
+     "at": 2.2
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "duration": 4.0,
+   "elements": [
+    {
+     "type": "kare",
+     "face": "fikir",
+     "size": 320,
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Sen ilk neyi\n[[denerdin?]]",
+     "at": 0.4
+    },
+    {
+     "type": "lead",
+     "text": "Yorumlara yaz. Gündemi kaçırmamak için takip et.",
+     "at": 1.0
+    }
+   ]
+  }
+ ]
+}

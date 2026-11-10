@@ -1,0 +1,12 @@
+Anthropic dün Claude Fable 5.2'yi duyurdu. Ne değişti, sana ne faydası var?
+
+• %30'a kadar daha hızlı yanıt
+• Daha ucuz API: 1 milyon token için giriş 8, çıkış 40 dolar (5.1'de 10 ve 50 dolardı)
+• Zorlu yazılım projeleri, araştırma, robot kontrolü ve tasarımda daha güçlü
+• 1.000 Fable 5.2 ajanı, Fermat'nın Son Teoremi'ni 30 saatte bilgisayarın adım adım denetleyebileceği dile çevirdi
+
+Hangisini kullanmalı? Anthropic günlük işler için Opus 5.5'i, büyük ve teknik projeler için Fable 5.2'yi öneriyor. Fable 5.2 tüm ücretli Claude planlarında.
+
+Sen ilk hangi işte denerdin? Yorumlara yaz.
+
+#yapayzeka #claude #anthropic #yapayzekahaberleri #teknoloji #dijitalgündem #reels
