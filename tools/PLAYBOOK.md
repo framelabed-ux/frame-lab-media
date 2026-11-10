@@ -60,7 +60,11 @@ Format haftanın gününe bağlı değil, sırayla döner. **10 Kasım'dan itiba
 - Neden: Hesap küçükken carousel'ler 2–4 kişiye, Reel'ler takip etmeyenlere ulaşıyor (Fable 5.2 Reel'i 3 takipçiyle 1.140 hesaba ulaştı, 9 kaydetme aldı). Takipçi sayısı birkaç yüze çıkınca bu oranı yeniden değerlendirip Ece'ye sor.
 - Bugünün formatı: `grid` listesinin son iki öğesine bak. Son iki öğe Reel ise carousel ya da statik yap (bir önceki carousel ise statik, statik ise carousel). Aksi hâlde Reel yap.
 - Büyük gündem gelişmesi her zaman Reel olur. O gün carousel/statik sırasıysa bile Reel yapılabilir, carousel/statik ertesi güne kayar.
-- Hafta sonu feed gönderisi yok, sadece story var. Sıra pazartesi kaldığı yerden devam eder.
+- **İlk ay sayıyı artırıyoruz (Ece 10 Kasım'da onayladı, ~10 Aralık'a kadar; sonra verilere bakıp Ece'ye sor):**
+  - Hafta sonu da her gün 1 Reel paylaşılır: gündemden bağımsız "Kare Açıklıyor" serisi (bir yapay zekâ, tasarım ya da sosyal medya kavramı, 20–35 saniye). Sabah görevi üretir, akşam görevi yayınlar.
+  - Büyük, doğrulanmış bir gündem gelişmesi olursa öğle görevi aynı gün ek bir Reel üretip hemen yayınlar. Akşamki planlı gönderi yine çıkar.
+  - Hafta sonu Reel'leri ve öğle ek Reel'leri grid kaydında `"extra": true` ile işaretlenir ve hafta içi format sırası hesaplanırken atlanır. Izgaradaki açık/koyu kapak sırasına ise dahildir.
+  - Günde ikiden fazla feed gönderisi yok. Story günde 1 kalır.
 
 Formata göre seriler:
 | Format | Seriler |
