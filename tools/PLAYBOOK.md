@@ -15,6 +15,26 @@ Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Ko
 - Tamamen fosforlu yeşil zemin kullanılmaz. Ece göz yorduğunu söyledi.
 - Üretim için `python3 tools/render.py` (carousel, story, reel). Spec örnekleri `tools/examples/` içinde. Vurgu için metinde `[[kelime]]` yazılır.
 
+## Tasarım çeşitliliği (Ece: "tasarımlar birbirine aşırı benziyor")
+Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir. Kalıp tekrarı yasak.
+- Düzen aileleri (spec örnekleri `tools/examples/layout-*.json`):
+  - **bignum:** dev rakam ya da istatistik + kısa etiket (sayı içeren her şey: "20 prompt", "3 adım", "%40").
+  - **chat:** prompt ve sonuç sohbet balonu olarak (prompt içerikleri için ideal).
+  - **phone:** kenardan giren telefon ekranı (uygulama, platform ve araç haberleri).
+  - **compare:** iki sütun, kötü/iyi ya da önce/sonra.
+  - **steps:** büyük, içi boş numaralı adımlar.
+  - **quote:** ortalanmış büyük cümle, vizör çerçevesi (`"frame": true`) ve `"align": "center"` ile.
+  - **tiles:** 2x2 kutular (4 madde, 4 araç).
+  - **classic:** Kare + etiket + başlık + açıklama (eski kalıp, artık nadiren).
+- Süsleme seçenekleri: `"pattern": "grid"` (laboratuvar kareli zemin) ya da `"dots"`, `sticker` (yuvarlak, eğik etiket: ÜCRETSİZ, YENİ, DENEDİK), `kare_peek` (kenardan bakan büyük Kare), başlıkta `"outline": true` (içi boş yazı), `"narrow": true` (yan tarafta telefon ya da Kare varken metni daraltır).
+- Kurallar:
+  1. Art arda iki feed gönderisinin kapağı aynı düzen ailesinden olamaz. Kullanılan düzen `grid` kaydına `layout` olarak yazılır.
+  2. Bir carousel en az 3 farklı düzen ailesi içerir, ardışık iki slayt aynı düzende olamaz.
+  3. Kare her slaytta olmaz: carousel başına en fazla 2 kez, farklı boyut ve konumda (büyük, kenardan bakan, küçük köşe).
+  4. Kareli/noktalı zemin ve vizör çerçevesi gönderi başına en fazla bir iki slaytta, abartmadan.
+  5. Başlık boyutu, hizalama (üst, orta, alt) ve metin yoğunluğu slayttan slayta değişir.
+  6. Story'ler de aynı ailelerden seçilir, aynı günün feed kapağıyla aynı düzende olmaz.
+
 ## Izgara düzeni (puzzle)
 - Profil ızgarası satranç tahtası gibi görünmeli: her feed gönderisinin kapağı bir öncekinin tersi olmalı. Açık (light veya soft) ve koyu (dark) sırayla gider.
 - Son kapak tonu `posts/state.json` içindeki `grid` listesinin son öğesinde yazar. Yeni gönderinin kapak tonu bunun tersi seçilir.

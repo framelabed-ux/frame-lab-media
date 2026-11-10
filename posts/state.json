@@ -8,7 +8,8 @@
       "slug": "2026-11-09-tanisma",
       "cover_tone": "light",
       "media_id": "18031318442692957",
-      "title": "Tanışma: Merhaba, ben Kare"
+      "title": "Tanışma: Merhaba, ben Kare",
+      "layout": "classic"
     },
     {
       "date": "2026-11-09",
@@ -17,7 +18,8 @@
       "cover_tone": "dark",
       "media_id": "18090307286284943",
       "status": "yayında (20:00)",
-      "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım"
+      "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
+      "layout": "classic"
     },
     {
       "date": "2026-11-10",
@@ -41,7 +43,8 @@
         "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
         "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
         "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-      ]
+      ],
+      "layout": "classic"
     }
   ],
   "queue": [
@@ -56,7 +59,8 @@
       "cover_tone": "dark",
       "caption": "Sosyal medyada en çok vakit kaybettiren şey ne biliyor musun? Boş sayfaya bakmak.\n\nBu yüzden en çok işimize yarayan 20 prompt'u tek bir rehberde topladık:\n• Kanca ve caption yazarı\n• 30 günlük içerik takvimi\n• Ürün fotoğrafı ve marka paleti\n• Reels senaryosu\n• Teklif e-postası ve rapor yorumcusu\n\nRehber ücretsiz, linki profilde. Hepsi aynı formülle çalışıyor: Rol + Bağlam + Format + Sınır.\n\nSen en çok hangisinde zorlanıyorsun: caption mı, görsel mi, video mu? Yorumlara yaz, sana özel bir prompt önerelim.\n\n#yapayzeka #prompt #chatgpt #icerikuretimi #sosyalmedya #dijitalpazarlama #grafiktasarım",
       "sources": [],
-      "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ | 10 Kasım: Kare'den Haberler sabah yayınlandığı için ızgara düzeni gereği kapak koyuya çevrildi (metin aynı)."
+      "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ | 10 Kasım: Kare'den Haberler sabah yayınlandığı için ızgara düzeni gereği kapak koyuya çevrildi (metin aynı).",
+      "layout": "bignum"
     }
   ],
   "stories": [

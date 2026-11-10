@@ -49,7 +49,46 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .rd{{font-size:27px;color:{grey};margin-top:6px}}
 .foot{{position:absolute;left:{88 if h<1500 else 90}px;right:{88 if h<1500 else 90}px;bottom:{80 if h<1500 else 110}px;display:flex;justify-content:space-between;font-size:{26 if h<1500 else 30}px;color:{grey}}}
 .sw{{color:{lab if theme=='dark' else fg};font-weight:600}}
-.a{{opacity:1}}"""
+.a{{opacity:1}}
+.main.center{{text-align:center;align-items:center}} .main.bottom{{justify-content:flex-end}}
+.pat-grid{{background-image:linear-gradient({line} 2px,transparent 2px),linear-gradient(90deg,{line} 2px,transparent 2px);background-size:72px 72px;background-position:-2px -2px}}
+.pat-dots{{background-image:radial-gradient({line} 3px,transparent 3.5px);background-size:44px 44px}}
+.bignum{{font-family:'Inter Display';font-weight:800;line-height:.82;letter-spacing:-.06em;color:{lab if theme=='dark' else fg}}}
+.bignum .u{{display:inline-block;border-bottom:{'0' if theme=='dark' else '28px solid '+LIME};line-height:.7}}
+.blabel{{font-family:'Inter Display';font-weight:700;font-size:{44 if h<1500 else 52}px;margin-top:10px}}
+.chat{{display:flex;flex-direction:column;gap:22px;width:100%}}
+.bub{{max-width:86%;padding:26px 30px;border-radius:30px;font-size:{32 if h<1500 else 40}px;line-height:1.35;text-align:left}}
+.bub.you{{align-self:flex-end;background:{fg};color:{bg};border-bottom-right-radius:8px}}
+.bub.ai{{align-self:flex-start;background:{cardbg};color:{fg};border-bottom-left-radius:8px;{'' if theme=='dark' else 'box-shadow:0 2px 0 '+line}}}
+.bub .who{{display:block;font-size:22px;font-weight:700;letter-spacing:.08em;opacity:.6;margin-bottom:8px}}
+.cmp{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;width:100%;text-align:left}}
+.cmp .c{{border-radius:28px;padding:32px 30px;background:{cardbg}}}
+.cmp .c.good{{background:{LIME};color:{INK}}}
+.cmp .k{{font-family:'Inter Display';font-weight:800;font-size:28px;letter-spacing:.08em;margin-bottom:14px}}
+.cmp .t{{font-size:{30 if h<1500 else 36}px;line-height:1.38}}
+.steps{{display:flex;flex-direction:column;gap:26px;width:100%;text-align:left}}
+.step{{display:flex;gap:30px;align-items:flex-start}}
+.step .n{{font-family:'Inter Display';font-weight:800;font-size:{110 if h<1500 else 130}px;line-height:.8;color:transparent;-webkit-text-stroke:3px {lab if theme=='dark' else fg};min-width:150px}}
+.step .st{{font-family:'Inter Display';font-weight:700;font-size:{40 if h<1500 else 46}px;line-height:1.15}}
+.step .sd{{font-size:{28 if h<1500 else 34}px;color:{grey};margin-top:6px;line-height:1.35}}
+.quote{{font-family:'Inter Display';font-weight:800;font-size:{84 if h<1500 else 96}px;line-height:1.08;letter-spacing:-.025em}}
+.qm{{font-family:'Inter Display';font-weight:800;font-size:260px;line-height:.6;color:{lab if theme=='dark' else LIME_DARK};height:120px}}
+.tiles{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:100%;text-align:left}}
+.tile{{background:{cardbg};border-radius:28px;padding:30px 28px;min-height:{220 if h<1500 else 280}px;display:flex;flex-direction:column;justify-content:space-between}}
+.tile .ti{{font-family:'Inter Display';font-weight:800;font-size:52px;color:{lab if theme=='dark' else LIME_DARK}}}
+.tile .tt{{font-family:'Inter Display';font-weight:700;font-size:{32 if h<1500 else 38}px;line-height:1.2}}
+.sticker{{position:absolute;top:{150 if h<1500 else 190}px;right:{70 if h<1500 else 80}px;width:230px;height:230px;border-radius:50%;background:{LIME};color:{INK};display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Inter Display';font-weight:800;font-size:38px;line-height:1.05;transform:rotate(12deg);z-index:3;padding:20px}}
+.peek{{position:absolute;right:-90px;bottom:{-60 if h<1500 else 40}px;z-index:1;transform:rotate(-10deg)}}
+.frame i{{position:absolute;width:90px;height:90px;border-color:{lab if theme=='dark' else fg};border-style:solid;border-width:0;z-index:2}}
+.frame .tl{{top:{150 if h<1500 else 120}px;left:56px;border-top-width:8px;border-left-width:8px}} .frame .tr{{top:{150 if h<1500 else 120}px;right:56px;border-top-width:8px;border-right-width:8px}}
+.frame .bl{{bottom:{140 if h<1500 else 190}px;left:56px;border-bottom-width:8px;border-left-width:8px}} .frame .br{{bottom:{140 if h<1500 else 190}px;right:56px;border-bottom-width:8px;border-right-width:8px}}
+.phone{{position:absolute;right:-30px;bottom:{-180 if h<1500 else -60}px;width:{430 if h<1500 else 500}px;height:{860 if h<1500 else 1000}px;border-radius:64px;background:{INK};border:14px solid {'#2A2A30' if theme=='dark' else INK};transform:rotate(-7deg);z-index:1;padding:70px 26px 26px;color:{PAPER};display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 60px rgba(0,0,0,.25)}}
+.phone:before{{content:'';position:absolute;top:22px;left:50%;width:120px;height:30px;border-radius:20px;background:#000;transform:translateX(-50%)}}
+.phone .pt{{font-family:'Inter Display';font-weight:800;font-size:36px}}
+.phone .pb{{border-radius:22px;background:#26262C;padding:20px;font-size:26px;line-height:1.3}}
+.phone .pb.acc{{background:{LIME};color:{INK};font-weight:700}}
+.narrow{{max-width:{560 if h<1500 else 600}px}}
+.h1o{{color:transparent;-webkit-text-stroke:3px {fg}}}"""
 
 def el(e, light):
     k = e["type"]; at = f' data-in="{e["at"]}"' if "at" in e else ""
@@ -58,9 +97,12 @@ def el(e, light):
         return f'<div{cls}{at} data-pop="1" style="margin-left:-30px">{kare(e.get("size",340), e.get("face","mutlu"), bg="none", light_bg=light)}</div>'
     if k in ("h1", "h2"):
         st = f' style="font-size:{e["size"]}px"' if "size" in e else ""
-        return f'<{k}{cls}{at}{st}>{hl(e["text"])}</{k}>'
+        oc = ' class="h1o"' if e.get("outline") else ""
+        cl = (cls[:-1] + (" h1o" if e.get("outline") else "") + '"') if cls else oc
+        nar = '<div class="narrow">' if e.get("narrow") else ""
+        return f'{nar}<{k}{cl}{at}{st}>{hl(e["text"])}</{k}>' + ("</div>" if nar else "")
     if k == "tag":  return f'<div class="tag{" a" if at else ""}"{at}>{H.escape(e["text"])}</div>'
-    if k == "lead": return f'<p class="lead{" a" if at else ""}"{at}>{hl(e["text"])}</p>'
+    if k == "lead": return f'<p class="lead{" a" if at else ""}{" narrow" if e.get("narrow") else ""}"{at}>{hl(e["text"])}</p>'
     if k == "chips": return f'<div{cls}{at}>' + "".join(f'<span class="chip">{H.escape(c)}</span>' for c in e["items"]) + "</div>"
     if k == "pill": return f'<div{cls}{at}><span class="pill{" muted" if e.get("muted") else ""}">{H.escape(e["text"])}</span></div>'
     if k == "rows": return f'<div{cls}{at} style="border-bottom:2px solid rgba(127,127,127,.3)">' + "".join(
@@ -70,6 +112,31 @@ def el(e, light):
         body = (f'<div class="ct{" strong" if e.get("strong") else ""}" style="{("font-size:%spx" % e["size"]) if "size" in e else ""}" data-type="{e["typed"][0]},{e["typed"][1]}" data-full="{inner}"></div>'
                 if "typed" in e else f'<div class="ct{" strong" if e.get("strong") else ""}" style="{("font-size:%spx" % e["size"]) if "size" in e else ""}">{H.escape(e["text"])}</div>')
         return f'<div class="card{" out" if e.get("outline") else ""}{" a" if at else ""}"{at}><div class="lbl">{H.escape(e.get("label",""))}</div>{body}</div>'
+    if k == "bignum":
+        sz = e.get("size", 420 if True else 0)
+        return f'<div{cls}{at}><div class="bignum" style="font-size:{sz}px"><span class="u">{H.escape(e["text"])}</span></div>' + (f'<div class="blabel">{hl(e["label"])}</div>' if e.get("label") else "") + "</div>"
+    if k == "chat":
+        out = ""
+        for who, txt in e["items"]:
+            nm = e.get("names", {}).get(who, "SEN" if who == "you" else "YAPAY ZEKÂ")
+            out += f'<div class="bub {who}"><span class="who">{H.escape(nm)}</span>{H.escape(txt)}</div>'
+        return f'<div class="chat{" a" if at else ""}"{at}>{out}</div>'
+    if k == "compare":
+        L, R = e["left"], e["right"]
+        return f'<div class="cmp{" a" if at else ""}"{at}><div class="c"><div class="k">{H.escape(L["label"])}</div><div class="t">{H.escape(L["text"])}</div></div><div class="c good"><div class="k">{H.escape(R["label"])}</div><div class="t">{H.escape(R["text"])}</div></div></div>'
+    if k == "steps":
+        return f'<div class="steps{" a" if at else ""}"{at}>' + "".join(f'<div class="step"><div class="n">{i+1:02d}</div><div><div class="st">{H.escape(t)}</div>' + (f'<div class="sd">{H.escape(d)}</div>' if d else "") + "</div></div>" for i, (t, d) in enumerate(e["items"])) + "</div>"
+    if k == "quote":
+        return f'<div{cls}{at}><div class="qm">“</div><div class="quote">{hl(e["text"])}</div></div>'
+    if k == "tiles":
+        return f'<div class="tiles{" a" if at else ""}"{at}>' + "".join(f'<div class="tile"><div class="ti">{H.escape(t[0])}</div><div class="tt">{H.escape(t[1])}</div></div>' for t in e["items"]) + "</div>"
+    if k == "sticker":
+        return f'<div class="sticker">{hl(e["text"])}</div>'
+    if k == "kare_peek":
+        return f'<div class="peek">{kare(e.get("size",620), e.get("face","goz"), bg="none", light_bg=light)}</div>'
+    if k == "phone":
+        blocks = "".join(f'<div class="pb{" acc" if i == e.get("accent", -1) else ""}">{H.escape(b)}</div>' for i, b in enumerate(e.get("blocks", [])))
+        return f'<div class="phone"><div class="pt">{H.escape(e.get("title",""))}</div>{blocks}</div>'
     raise ValueError("bilinmeyen öğe: " + k)
 
 JS = """<script>
@@ -83,13 +150,17 @@ window.render=function(t){
 };
 </script>"""
 
-def page(theme, elements, w, h, top=None, foot_right=None):
+ABS = ("sticker", "kare_peek", "phone")
+def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="", frame=False):
     light = theme in ("light", "soft")
     t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""
     fr = foot_right if foot_right is not None else ("" if h >= 1500 else "Kaydır →")
     foot = f'<div class="foot"><span>@frame.labo</span><span class="sw">{H.escape(fr) if fr else ("FRAME/LAB" if h>=1500 else "")}</span></div>'
-    body = "".join(el(e, light) for e in elements)
-    return f'<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{css(theme,w,h)}</style></head><body><div class="s">{t}<div class="main">{body}</div>{foot}</div>{JS}</body></html>'
+    body = "".join(el(e, light) for e in elements if e["type"] not in ABS)
+    deco = "".join(el(e, light) for e in elements if e["type"] in ABS)
+    fr = '<div class="frame"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>' if frame else ""
+    pc = f" pat-{pattern}" if pattern else ""
+    return f'<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{css(theme,w,h)}</style></head><body><div class="s{pc}">{fr}{deco}{t}<div class="main {align}" style="position:relative;z-index:2">{body}</div>{foot}</div>{JS}</body></html>'
 
 async def _shots(pages, w, h, paths, t_final=True):
     from playwright.async_api import async_playwright
@@ -106,11 +177,11 @@ async def _shots(pages, w, h, paths, t_final=True):
 
 def carousel(spec, out_dir):
     os.makedirs(out_dir, exist_ok=True); sl = spec["slides"]; n = len(sl)
-    pages = [page(s["theme"], s["elements"], 1080, 1350, (f"{i+1}/{n}" if n > 1 else ""), ("Takip et" if i == n-1 else None) if n > 1 else "Kaydet") for i, s in enumerate(sl)]
+    pages = [page(s["theme"], s["elements"], 1080, 1350, (f"{i+1}/{n}" if n > 1 else ""), s.get("foot_right", ("Takip et" if i == n-1 else None) if n > 1 else "Kaydet"), s.get("align",""), s.get("pattern",""), s.get("frame",False)) for i, s in enumerate(sl)]
     asyncio.run(_shots(pages, 1080, 1350, [f"{out_dir}/{i+1}.jpg" for i in range(n)]))
 
 def story(spec, out):
-    asyncio.run(_shots([page(spec["theme"], spec["elements"], 1080, 1920, foot_right=spec.get("foot_right", ""))], 1080, 1920, [out]))
+    asyncio.run(_shots([page(spec["theme"], spec["elements"], 1080, 1920, foot_right=spec.get("foot_right", ""), align=spec.get("align",""), pattern=spec.get("pattern",""), frame=spec.get("frame",False))], 1080, 1920, [out]))
 
 async def _reel_frames(spec, tmp):
     from playwright.async_api import async_playwright
@@ -119,7 +190,7 @@ async def _reel_frames(spec, tmp):
         b = await p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
         pg = await b.new_page(viewport={"width": 1080, "height": 1920})
         for i, sc in enumerate(spec["scenes"]):
-            f = f"{tmp}/s{i}.html"; open(f, "w").write(page(sc["theme"], sc["elements"], 1080, 1920))
+            f = f"{tmp}/s{i}.html"; open(f, "w").write(page(sc["theme"], sc["elements"], 1080, 1920, align=sc.get("align",""), pattern=sc.get("pattern",""), frame=sc.get("frame",False)))
             await pg.goto("file://" + f); await pg.wait_for_timeout(250)
             n = int(round(sc["duration"] * 30)); part = f"{tmp}/s{i}.tmp.mp4"
             pr = subprocess.Popen(["ffmpeg","-y","-loglevel","error","-f","image2pipe","-framerate","30","-c:v","mjpeg","-i","-",
