@@ -97,6 +97,7 @@ Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini 
 - Kare sahnelere öğe olarak eklenmez. Her sahneye `"kare": {"x":…, "y":…, "size":…, "face":…}` yazılır, Kare geçişlerde bir sonraki konuma zıplar, sahnede hafifçe süzülür ve göz kırpar.
 - Kare'nin konumu metinle çakışmamalı: boş alanlara yerleştir, sahneden sahneye köşe, boyut ve ifade değişsin. `"kare": null` olursa Kare o sahnede görünmez.
 - `bignum` öğesine `"count_at": 0.3` eklenirse rakam sıfırdan sayarak gelir.
+- Her Reel'in sonuna otomatik olarak 3,2 saniyelik logo outro'su eklenir: FL çizilerek belirir, yeşil nokta oturur, FRAME/LAB, slogan, "Takip et" ve @frame.labo gelir. Kare son sahneden yukarı zıplayıp çıkar. Kapatmak için spec'e `"outro": false`. Toplam süre hesaplanırken outro'yu da say.
 - `"stills": [saniye, …]` ile kontrol kareleri üretilir. Her sahnenin sonundan bir kare alıp Read ile bakılır, çakışma varsa konum düzeltilir. Kapak için ilk sahnenin dolu anındaki kare (`*_still_*.jpg`) kullanılabilir.
 
 ## Seslendirme

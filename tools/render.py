@@ -132,6 +132,15 @@ def el(e, light):
         return f'<div{cls}{at}><div class="qm">“</div><div class="quote">{hl(e["text"])}</div></div>'
     if k == "tiles":
         return f'<div class="tiles{" a" if at else ""}"{at}>' + "".join(f'<div class="tile"><div class="ti">{H.escape(t[0])}</div><div class="tt">{H.escape(t[1])}</div></div>' for t in e["items"]) + "</div>"
+    if k == "logo_anim":
+        a = e.get("at", 0.2); sz = e.get("size", 380)
+        col = PAPER if not light else INK
+        return (f'<div style="display:flex;justify-content:center"><svg width="{sz}" height="{sz}" viewBox="40 40 140 140" aria-hidden="true" style="overflow:visible">'
+                f'<path pathLength="1" data-draw="{a}" style="stroke-dasharray:1;stroke-dashoffset:1" d="M60 142 V60 H114" fill="none" stroke="{col}" stroke-width="15" stroke-linecap="square"></path>'
+                f'<path pathLength="1" data-draw="{a+0.35}" style="stroke-dasharray:1;stroke-dashoffset:1" d="M60 100 H98" fill="none" stroke="{col}" stroke-width="15" stroke-linecap="square"></path>'
+                f'<path pathLength="1" data-draw="{a+0.55}" style="stroke-dasharray:1;stroke-dashoffset:1" d="M126 80 V140 H156" fill="none" stroke="{col}" stroke-width="15" stroke-linecap="square"></path>'
+                f'<circle class="a" data-in="{a+1.05}" data-pop="1" style="opacity:0;transform-box:fill-box;transform-origin:center" cx="146" cy="62" r="10" fill="{LIME}"></circle>'
+                f'</svg></div>')
     if k == "sticker":
         return f'<div class="sticker">{hl(e["text"])}</div>'
     if k == "kare_peek":
@@ -149,6 +158,7 @@ window.render=function(t){
  document.querySelectorAll('[data-type]').forEach(e=>{const [s,d]=e.dataset.type.split(',').map(parseFloat);
    const full=e.dataset.full; const n=Math.round(full.length*Math.min(Math.max((t-s)/d,0),1));
    e.textContent=full.slice(0,n)+(t>=s && n<full.length && Math.floor(t*3)%2==0?'|':'');});
+ document.querySelectorAll('[data-draw]').forEach(e=>{const s=parseFloat(e.dataset.draw);const p=ease((t-s)/0.7);e.style.strokeDashoffset=String(1-p);});
  document.querySelectorAll('[data-count]').forEach(e=>{const s=parseFloat(e.dataset.count);const full=e.dataset.full;const m=full.match(/[0-9]+/);if(!m)return;
    const p=ease((t-s)/0.9);const v=Math.round(parseInt(m[0])*p);e.textContent=full.replace(m[0],String(v));});
 };
@@ -257,10 +267,20 @@ window.render=function(t){
 
 def reel_motion(spec, out, voice=None):
     import tempfile
-    sc = spec["scenes"]; t0 = 0.0; S = []; panels = ""
+    sc = list(spec["scenes"])
+    if spec.get("outro", True):
+        sc.append({"theme": "dark", "align": "center", "duration": 3.2, "kare": None, "nofoot": True, "elements": [
+            {"type": "logo_anim", "size": 380, "at": 0.35},
+            {"type": "h2", "text": "FRAME/LAB", "size": 64, "at": 1.5},
+            {"type": "lead", "text": "Dijital dünyayı kare kare deniyoruz.", "at": 1.8},
+            {"type": "pill", "text": "Takip et", "at": 2.1},
+            {"type": "lead", "text": "@frame.labo", "at": 2.3}]})
+    t0 = 0.0; S = []; panels = ""
     for i, s_ in enumerate(sc):
         S.append({"start": round(t0, 3), "dur": s_["duration"]})
         htm = page(s_["theme"], s_["elements"], 1080, 1920, align=s_.get("align",""), pattern=s_.get("pattern",""), frame=s_.get("frame",False))
+        if s_.get("nofoot"):
+            import re as _re; htm = _re.sub(r'<div class="foot">.*?</div>', '', htm, count=1)
         panels += f'<iframe srcdoc="{H.escape(htm)}" style="width:1080px;height:1920px;border:0;flex:none" scrolling="no"></iframe>'
         t0 += s_["duration"]
     T = t0
