@@ -84,15 +84,14 @@ Statik gönderi: tek slaytlı carousel spec'iyle `render.py carousel` (1080x1350
 - Ücretsiz rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ (kaynak: `rehber/index.html`). Biyografi linki ana sayfa: https://framelabed-ux.github.io/frame-lab-media/
 - Uygun gönderilerde "Rehber ücretsiz, linki profilde" diye hatırlatılabilir, ama her gönderide değil (en fazla haftada 2 kez).
 
-## Yorumlara yanıt (akşam görevi, her gün)
-- Son 7 günün gönderilerindeki yanıtlanmamış yorumlar Windsor'dan okunur (`comment_id`, `comment_text`, `media_id`, `comment_timestamp`). Hesabın kendi yorumları atlanır.
-- Gerçek yorumlara 1–2 cümlelik, kişisel, sıcak bir yanıt verilir (`reply_to_comment`). Yorumdaki ayrıntıya değinilir. Kopyala-yapıştır kalıp kullanılmaz. Soru varsa somut cevap verilir. "Caption / görsel / video" gibi bir ihtiyaç yazılmışsa rehberden uygun prompt'un adı ve tek cümlelik özeti önerilir.
-- Emoji en fazla 1. Link yazılmaz, gerekirse "linki profilde" denir.
-- Spam, reklam, hakaret ya da dolandırıcılık içeren yorumlar gizlenir (`hide_comment`), silinmez ve yanıtlanmaz.
-- Tartışmalı ya da hassas bir yorumda (şikâyet, hukuki ya da kişisel konu) yanıt verilmez, Ece'ye bildirilir.
-- **Anahtar kelimeli yorumlar (ör. REHBER):** Gönderinin kuyruk kaydında `keyword` varsa, o kelimeyi içeren yorumlara kısa bir yanıt verilir: "Teşekkürler! Linki DM'den gönderiyoruz, profildeki linkte de var 🙌" (ifadeyi her seferinde biraz değiştir). DM'leri şimdilik Ece elle atıyor (DM otomasyonu yok, ReplyRush 50 takipçi şartı koyuyor). Görev sonunda Ece'ye DM atılacak kişilerin kullanıcı adlarını (Windsor veriyorsa) ya da yorum metinlerini ve gönderiyi listele. 50 takipçiye ulaşılınca Ece'ye ReplyRush kurulumunu hatırlat.
+## Yorumlara yanıt (ONAYLI: Ece 10 Kasım'da "bana sormadan cevap verme" dedi)
+- **Hiçbir yoruma Ece'nin onayı olmadan cevap verilmez, hiçbir yorum gizlenmez ya da silinmez.** Bu kural her görev için geçerlidir.
+- Akşam görevi son 7 günün yanıtlanmamış yorumlarını Windsor'dan okur (`comment_id`, `comment_text`, `comment_username` varsa, `media_id`, `comment_timestamp`). Hesabın kendi yorumları ve `replied_comments` / `pending_replies` içindekiler atlanır.
+- Her yorum için bir yanıt TASLAĞI yazılır: 1–2 cümle, kişisel, sıcak, yorumdaki ayrıntıya değinen, Türkçe, en fazla 1 emoji, link yok. Eleştiri ya da şikâyet içeren yorumlarda savunmaya geçme, abartılı övgüye de kayma; kısa, dürüst ve saygılı ol. Spam gibi görünenler için "gizleyelim mi?" diye sorulur.
+- Taslaklar `state.json` içindeki `pending_replies` listesine yazılır (comment_id, media_id, yorum metni, taslak) ve Ece'ye numaralı liste olarak gönderilir: "1) Yorum: … → Taslak: …". Ece'den "1 onay", "2'yi şöyle değiştir", "3 cevap verme" gibi bir yanıt istenir.
+- Ece aynı konuşmada onay verirse yalnızca onaylanan yanıtlar, Ece'nin son hâliyle birebir gönderilir (`reply_to_comment`). Onay gelmezse hiçbir şey gönderilmez, taslaklar bekler. Gönderilenler `pending_replies`'tan çıkarılıp `replied_comments`'e yazılır. Ece bir yoruma "cevap verme" derse comment_id `replied_comments`'e yazılır, böylece tekrar sorulmaz.
+- **Anahtar kelimeli yorumlar (ör. REHBER):** DM'leri Ece elle atıyor. Görev sonunda DM atılacak kişileri (kullanıcı adı ya da yorum metni ve gönderi) Ece'ye listeler. Bu yorumlara da onaysız açık yanıt yazılmaz. 50 takipçiye ulaşılınca Ece'ye ReplyRush kurulumunu hatırlat.
 - Yorumdan DM'e çağrı (CTA) yalnızca gerçekten gönderilecek bir kaynak varsa kullanılır (şimdilik prompt rehberi: https://framelabed-ux.github.io/frame-lab-media/rehber/). Haftada en fazla 2 gönderide.
-- Aynı yoruma iki kez yanıt verilmez. Yanıtlanan comment_id'ler `state.json` içindeki `replied_comments` listesine yazılır.
 
 ## Story (her gün 1 tane, sabah yayınlanır)
 Story o akşamki gönderinin merak uyandıran bir duyurusu, günün kısa bir ipucu ya da bir soru olabilir ("Yorumlara yaz" yerine "DM'den yaz"). 1080x1920 JPEG. Story'de saat yazma, "Bu akşam profilde" de.
