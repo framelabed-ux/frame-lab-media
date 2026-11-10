@@ -91,6 +91,14 @@ Story o akşamki gönderinin merak uyandıran bir duyurusu, günün kısa bir ip
 
 Öne çıkanlar (Ece uygulamadan ekliyor, API desteklemiyor): Başla, Gündem, AI Lab, Tasarım, Mutfak. Sabah raporunda o günün story'sinin hangi öne çıkana eklenebileceğini öner. Kalıcı değeri olan story'ler (ipucu, formül, gündem özeti) öne çıkana uygundur, akşam duyuruları değildir.
 
+## Hareketli Reel (varsayılan)
+Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini istedi. Tüm Reel'ler **motion modunda** üretilir (örnek: `tools/examples/reel-motion.json`):
+- Spec'e `"motion": true` eklenir. Sahneler yan yana bir şerit olur ve her geçişte sayfa sola kayar.
+- Kare sahnelere öğe olarak eklenmez. Her sahneye `"kare": {"x":…, "y":…, "size":…, "face":…}` yazılır, Kare geçişlerde bir sonraki konuma zıplar, sahnede hafifçe süzülür ve göz kırpar.
+- Kare'nin konumu metinle çakışmamalı: boş alanlara yerleştir, sahneden sahneye köşe, boyut ve ifade değişsin. `"kare": null` olursa Kare o sahnede görünmez.
+- `bignum` öğesine `"count_at": 0.3` eklenirse rakam sıfırdan sayarak gelir.
+- `"stills": [saniye, …]` ile kontrol kareleri üretilir. Her sahnenin sonundan bir kare alıp Read ile bakılır, çakışma varsa konum düzeltilir. Kapak için ilk sahnenin dolu anındaki kare (`*_still_*.jpg`) kullanılabilir.
+
 ## Seslendirme
 Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle (`tools/music.py`, otomatik) üretilir. Ece ses dosyası gönderirse spec'e `voice_segments` eklenip `render.py reel spec out voice` ile kullanılır. Yazılar, sessiz izleyen biri de anlayacak kadar okunur süre ekranda kalmalı: kelime başına en az 0,35 saniye.
 
