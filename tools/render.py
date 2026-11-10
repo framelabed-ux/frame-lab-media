@@ -78,7 +78,7 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .tile .ti{{font-family:'Inter Display';font-weight:800;font-size:52px;color:{lab if theme=='dark' else LIME_DARK}}}
 .tile .tt{{font-family:'Inter Display';font-weight:700;font-size:{32 if h<1500 else 38}px;line-height:1.2}}
 .sticker{{position:absolute;top:{150 if h<1500 else 190}px;right:{70 if h<1500 else 80}px;width:230px;height:230px;border-radius:50%;background:{LIME};color:{INK};display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Inter Display';font-weight:800;font-size:38px;line-height:1.05;transform:rotate(12deg);z-index:3;padding:20px}}
-.peek{{position:absolute;right:-90px;bottom:{-60 if h<1500 else 40}px;z-index:1;transform:rotate(-10deg)}}
+.peek{{position:absolute;right:-80px;bottom:{110 if h<1500 else 200}px;z-index:1;transform:rotate(-10deg)}}
 .frame i{{position:absolute;width:90px;height:90px;border-color:{lab if theme=='dark' else fg};border-style:solid;border-width:0;z-index:2}}
 .frame .tl{{top:{150 if h<1500 else 120}px;left:56px;border-top-width:8px;border-left-width:8px}} .frame .tr{{top:{150 if h<1500 else 120}px;right:56px;border-top-width:8px;border-right-width:8px}}
 .frame .bl{{bottom:{140 if h<1500 else 190}px;left:56px;border-bottom-width:8px;border-left-width:8px}} .frame .br{{bottom:{140 if h<1500 else 190}px;right:56px;border-bottom-width:8px;border-right-width:8px}}
