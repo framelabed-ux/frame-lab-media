@@ -15,6 +15,19 @@ Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Ko
 - Tamamen fosforlu yeşil zemin kullanılmaz. Ece göz yorduğunu söyledi.
 - Üretim için `python3 tools/render.py` (carousel, story, reel). Spec örnekleri `tools/examples/` içinde. Vurgu için metinde `[[kelime]]` yazılır.
 
+## Gündem kaynakları: kaçırılmaması gerekenler
+Genel arama tek başına yetmez (10 Kasım'da Claude Fable 5.2 duyurusu sabah taramasında kaçtı). Her taramada şu kaynaklar **tek tek** kontrol edilir, son 48 saatte yeni bir duyuru var mı diye:
+- **Yapay zekâ şirketleri:** Anthropic (anthropic.com/news, @claudeai), OpenAI (openai.com/news), Google (blog.google, deepmind.google), Meta AI (ai.meta.com/blog), xAI, Mistral, Microsoft (Copilot), Apple.
+- **Görsel ve video yapay zekâsı:** Midjourney, Runway, Pika, Luma, Kling, ElevenLabs, Stability, Black Forest Labs (Flux), Ideogram.
+- **Tasarım araçları:** Adobe (blog.adobe.com, Firefly), Canva (canva.com/newsroom), Figma (figma.com/blog), CapCut.
+- **Platformlar:** Instagram (about.instagram.com, @mosseri), Meta newsroom, TikTok newsroom, YouTube blog / Creator Insider, Threads, LinkedIn.
+- **Teknoloji medyası:** TechCrunch AI, The Verge AI, Engadget, Social Media Today (platform haberleri için).
+Arama ipucu: şirket adı + "announces", "launches", "introducing", "new model", "update" ve bugünün ya da dünün tarihi. "extended" modu kullan.
+
+**Büyük gelişme ölçütü:** Yeni bir ana model sürümü (GPT, Claude, Gemini, Llama, Grok gibi), Instagram/TikTok/YouTube'da içerik üreticileri doğrudan etkileyen bir özellik, Adobe/Canva/Figma'da büyük bir yapay zekâ özelliği ya da viral bir dijital trend. Bunlar o günün feed konusu olur ve mümkünse aynı gün işlenir.
+
+**Kapsanan konular:** İşlenen her gündem konusu `state.json` içindeki `covered_topics` listesine kısa bir anahtarla yazılır (ör. "claude-fable-5-2"). Aynı konu iki kez işlenmez, ama önemli bir devamı varsa "güncelleme" olarak işlenebilir.
+
 ## Tasarım çeşitliliği (Ece: "tasarımlar birbirine aşırı benziyor")
 Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir. Kalıp tekrarı yasak.
 - Düzen aileleri (spec örnekleri `tools/examples/layout-*.json`):

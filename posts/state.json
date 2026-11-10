@@ -143,5 +143,10 @@
       ]
     }
   ],
-  "replied_comments": []
+  "replied_comments": [],
+  "covered_topics": [
+    "instagram-effect-builder",
+    "adobe-max-2026",
+    "claude-fable-5-2"
+  ]
 }
