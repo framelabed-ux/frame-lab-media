@@ -1,0 +1,179 @@
+{
+ "slides": [
+  {
+   "theme": "dark",
+   "pattern": "grid",
+   "elements": [
+    {
+     "type": "sticker",
+     "text": "YENİ\nSERİ"
+    },
+    {
+     "type": "tag",
+     "text": "REKLAM LAB · 1"
+    },
+    {
+     "type": "bignum",
+     "text": "50",
+     "size": 430,
+     "label": "reklam görseli,\n[[tek çekimden.]]"
+    },
+    {
+     "type": "lead",
+     "text": "Ünlüler artık reklam çekimine bir kez gidecek. Ogilvy'nin yeni yapay zekâ platformu ECHO'yu anlatıyoruz.",
+     "narrow": true
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "pattern": "dots",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "NASIL ÇALIŞIYOR?"
+    },
+    {
+     "type": "h2",
+     "text": "ECHO'nun\n[[4 adımı]]",
+     "size": 76
+    },
+    {
+     "type": "steps",
+     "items": [
+      [
+       "Tek çekim, tek tarama",
+       "Ünlünün yüzü ve sesi taranıp CAA Vault'ta saklanıyor."
+      ],
+      [
+       "Yapay zekâ çoğaltıyor",
+       "Normalde 8–10 görsel çıkan çekimden 30–50 reklam üretiliyor."
+      ],
+      [
+       "Son söz ünlüde",
+       "Hangi marka ve kampanyada yer alacağına ünlü karar veriyor."
+      ],
+      [
+       "Filigranla yayın",
+       "Her reklamda “Ünlü onayladı · Yapay zekâyla üretildi” notu var."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "KİMLER YAPTI?"
+    },
+    {
+     "type": "h2",
+     "text": "Ajans, menajer\nve [[teknoloji]] bir arada"
+    },
+    {
+     "type": "tiles",
+     "items": [
+      [
+       "OGILVY",
+       "Platformu geliştiren ajans"
+      ],
+      [
+       "CAA",
+       "Ünlüleri temsil eden ajans"
+      ],
+      [
+       "WPP",
+       "Altyapı: WPP Open"
+      ],
+      [
+       "9 KASIM",
+       "Platform duyuruldu"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "align": "center",
+   "frame": true,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "İŞİN PARA TARAFI"
+    },
+    {
+     "type": "quote",
+     "text": "Görsel başına maliyet\n[[%65–75]]\ndüşebilir."
+    },
+    {
+     "type": "lead",
+     "text": "Kaynak: Ogilvy'nin tahmini"
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "SANA NE ANLATIYOR?"
+    },
+    {
+     "type": "h2",
+     "text": "Küçük markalar\n[[ne yapmalı?]]",
+     "size": 76
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "YAPMA",
+      "text": "Yapay zekâyı gizlemek. Yüzü kullanılan kişiye sormadan üretmek."
+     },
+     "right": {
+      "label": "YAP",
+      "text": "Yapay zekâ kullandığını söyle. Onayı al ve bunu görünür kıl. Tek çekimi baştan çok formata göre planla."
+     },
+     "size": 34
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "SENİN SIRAN"
+    },
+    {
+     "type": "h2",
+     "text": "Kare soruyor:",
+     "size": 72
+    },
+    {
+     "type": "chat",
+     "names": {
+      "ai": "KARE",
+      "you": "TAKİPÇİ"
+     },
+     "items": [
+      [
+       "ai",
+       "Bir ünlü reklamında yapay zekâ kullanıldığını bilsen, markaya güvenin azalır mı?"
+      ],
+      [
+       "you",
+       "Ünlü onay verdiyse bence sorun yok."
+      ],
+      [
+       "ai",
+       "Sen ne düşünüyorsun? Yorumlara yaz."
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,152 +1,177 @@
 {
-  "instagram_account": "17841469889313843",
-  "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
-  "grid": [
-    {
-      "date": "2026-11-09",
-      "kind": "carousel",
-      "slug": "2026-11-09-tanisma",
-      "cover_tone": "light",
-      "media_id": "18031318442692957",
-      "title": "Tanışma: Merhaba, ben Kare",
-      "layout": "classic"
-    },
-    {
-      "date": "2026-11-09",
-      "kind": "reel",
-      "slug": "2026-11-09-ilk-deney",
-      "cover_tone": "dark",
-      "media_id": "18090307286284943",
-      "status": "yayında (20:00)",
-      "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
-      "layout": "classic"
-    },
-    {
-      "date": "2026-11-10",
-      "kind": "carousel",
-      "slug": "2026-11-10-kareden-haberler-1-v2",
-      "cover_tone": "light",
-      "media_id": "18028944962874334",
-      "status": "yayında (yeniden tasarım; eski sürüm 17993387007119720 silindi)",
-      "title": "Kare'den Haberler #1: Instagram Effect Builder ve Adobe MAX",
-      "files": [
-        "posts/2026-11-10-kareden-haberler-1-v2/1.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/2.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/3.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/4.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/5.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/6.jpg"
-      ],
-      "caption_file": "posts/2026-11-10-kareden-haberler-1-v2/caption.txt",
-      "sources": [
-        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
-        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
-        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
-        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-      ],
-      "layout": "bignum"
-    },
-    {
-      "date": "2026-11-10",
-      "kind": "reel",
-      "slug": "2026-11-10-fable-5-2",
-      "cover_tone": "dark",
-      "layout": "classic-sticker",
-      "media_id": null,
-      "status": "13:00'te yayınlanacak (bu oturumdan)",
-      "title": "Claude Fable 5.2 çıktı",
-      "sources": [
-        "https://www.anthropic.com/claude/fable",
-        "https://x.com/claudeai/status/2119867114450268322",
-        "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
-        "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
-      ]
-    }
-  ],
-  "queue": [
-    {
-      "slug": "2026-11-10-prompt-rehberi",
-      "kind": "static",
-      "publish_date": "2026-11-10",
-      "files": [
-        "posts/2026-11-10-prompt-rehberi/1.jpg"
-      ],
-      "cover": "posts/2026-11-10-prompt-rehberi/1.jpg",
-      "cover_tone": "light",
-      "caption": "Sosyal medyada en çok vakit kaybettiren şey ne biliyor musun? Boş sayfaya bakmak.\n\nBu yüzden en çok işimize yarayan 20 prompt'u tek bir rehberde topladık:\n• Kanca ve caption yazarı\n• 30 günlük içerik takvimi\n• Ürün fotoğrafı ve marka paleti\n• Reels senaryosu\n• Teklif e-postası ve rapor yorumcusu\n\nRehber ücretsiz, linki profilde. Hepsi aynı formülle çalışıyor: Rol + Bağlam + Format + Sınır.\n\nSen en çok hangisinde zorlanıyorsun: caption mı, görsel mi, video mu? Yorumlara yaz, sana özel bir prompt önerelim.\n\n#yapayzeka #prompt #chatgpt #icerikuretimi #sosyalmedya #dijitalpazarlama #grafiktasarım",
-      "sources": [],
-      "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ | 10 Kasım: Kare'den Haberler sabah yayınlandığı için ızgara düzeni gereği kapak koyuya çevrildi (metin aynı). | 10 Kasım 11:30: 13:00'te koyu kapaklı Fable 5.2 Reel'i araya girdiği için rehber açık kapağa çevrildi.",
-      "layout": "chat"
-    }
-  ],
-  "stories": [
-    {
-      "date": "2026-11-09",
-      "slug": "2026-11-09-story",
-      "file": "posts/2026-11-09-story/story.jpg",
-      "about": "İlk deney Reel'inin duyurusu",
-      "media_id": "17896327833681957"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-baslangic",
-      "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "18027181781863647"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-gundem",
-      "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "17919048858467844"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-ai-lab",
-      "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "18115804277127596"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-tasarim",
-      "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "17887896783503923"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-mutfak",
-      "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "18101888147645978"
-    },
-    {
-      "date": "2026-11-10",
-      "slug": "2026-11-10-story",
-      "file": "posts/2026-11-10-story/story.jpg",
-      "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
-      "media_id": "17960983923258520"
-    },
-    {
-      "date": "2026-11-10",
-      "slug": "2026-11-10-story-gundem",
-      "file": "posts/2026-11-10-story-gundem/story.jpg",
-      "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
-      "media_id": "18120361793078882",
-      "sources": [
-        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
-        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
-        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
-        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-      ]
-    }
-  ],
-  "replied_comments": [],
-  "covered_topics": [
-    "instagram-effect-builder",
-    "adobe-max-2026",
-    "claude-fable-5-2"
-  ]
+ "instagram_account": "17841469889313843",
+ "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
+ "grid": [
+  {
+   "date": "2026-11-09",
+   "kind": "carousel",
+   "slug": "2026-11-09-tanisma",
+   "cover_tone": "light",
+   "media_id": "18031318442692957",
+   "title": "Tanışma: Merhaba, ben Kare",
+   "layout": "classic"
+  },
+  {
+   "date": "2026-11-09",
+   "kind": "reel",
+   "slug": "2026-11-09-ilk-deney",
+   "cover_tone": "dark",
+   "media_id": "18090307286284943",
+   "status": "yayında (20:00)",
+   "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
+   "layout": "classic"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "carousel",
+   "slug": "2026-11-10-kareden-haberler-1-v2",
+   "cover_tone": "light",
+   "media_id": "18028944962874334",
+   "status": "yayında (yeniden tasarım; eski sürüm 17993387007119720 silindi)",
+   "title": "Kare'den Haberler #1: Instagram Effect Builder ve Adobe MAX",
+   "files": [
+    "posts/2026-11-10-kareden-haberler-1-v2/1.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/2.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/3.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/4.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/5.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/6.jpg"
+   ],
+   "caption_file": "posts/2026-11-10-kareden-haberler-1-v2/caption.txt",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+    "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+    "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+    "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+   ],
+   "layout": "bignum"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "reel",
+   "slug": "2026-11-10-fable-5-2",
+   "cover_tone": "dark",
+   "layout": "classic-sticker",
+   "media_id": null,
+   "status": "13:00'te yayınlanacak (bu oturumdan)",
+   "title": "Claude Fable 5.2 çıktı",
+   "sources": [
+    "https://www.anthropic.com/claude/fable",
+    "https://x.com/claudeai/status/2119867114450268322",
+    "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
+    "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
+   ]
+  }
+ ],
+ "queue": [
+  {
+   "slug": "2026-11-10-prompt-rehberi",
+   "kind": "static",
+   "publish_date": "2026-11-10",
+   "files": [
+    "posts/2026-11-10-prompt-rehberi/1.jpg"
+   ],
+   "cover": "posts/2026-11-10-prompt-rehberi/1.jpg",
+   "cover_tone": "light",
+   "caption": "Sosyal medyada en çok vakit kaybettiren şey ne biliyor musun? Boş sayfaya bakmak.\n\nBu yüzden en çok işimize yarayan 20 prompt'u tek bir rehberde topladık:\n• Kanca ve caption yazarı\n• 30 günlük içerik takvimi\n• Ürün fotoğrafı ve marka paleti\n• Reels senaryosu\n• Teklif e-postası ve rapor yorumcusu\n\nRehber ücretsiz, linki profilde. Hepsi aynı formülle çalışıyor: Rol + Bağlam + Format + Sınır.\n\nSen en çok hangisinde zorlanıyorsun: caption mı, görsel mi, video mu? Yorumlara yaz, sana özel bir prompt önerelim.\n\n#yapayzeka #prompt #chatgpt #icerikuretimi #sosyalmedya #dijitalpazarlama #grafiktasarım",
+   "sources": [],
+   "note": "Ece ile birlikte hazırlandı (9 Kasım). Rehber: https://framelabed-ux.github.io/frame-lab-media/rehber/ | 10 Kasım: Kare'den Haberler sabah yayınlandığı için ızgara düzeni gereği kapak koyuya çevrildi (metin aynı). | 10 Kasım 11:30: 13:00'te koyu kapaklı Fable 5.2 Reel'i araya girdiği için rehber açık kapağa çevrildi.",
+   "layout": "chat"
+  },
+  {
+   "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
+   "kind": "carousel",
+   "publish_date": "2026-11-11",
+   "files": [
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/2.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/3.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/4.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/5.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/6.jpg"
+   ],
+   "cover": "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
+   "cover_tone": "dark",
+   "layout": "bignum",
+   "caption": "Ünlüler artık reklam çekimine bir kez gidecek.\n\nReklam Lab'in ilk bölümünde Ogilvy'nin 9 Kasım'da duyurduğu yapay zekâ platformu ECHO var. CAA ve WPP ile birlikte geliştirilen sistemde ünlünün yüzü ve sesi bir kez taranıyor. Normalde 8–10 görsel çıkan bir çekimden 30–50 reklam üretilebiliyor. Ogilvy, görsel başına maliyetin %65–75 düşebileceğini tahmin ediyor.\n\nPeki ünlünün izni? Hangi marka ve kampanyada yer alacağına ünlü karar veriyor, her reklamda da \"Ünlü onayladı · Yapay zekâyla üretildi\" filigranı bulunuyor. Platforma ilk katılan isim oyuncu Terry Crews.\n\nKüçük bir marka ya da serbest çalışan olarak çıkaracağın ders: Yapay zekâ kullandıysan gizleme, yüzü kullanılan kişinin onayını al ve bunu görünür kıl.\n\nBir ünlü reklamında yapay zekâ kullanıldığını bilsen markaya güvenin azalır mı? Yorumlara yaz.\n\n#reklam #yapayzeka #pazarlama #dijitalpazarlama #reklamcılık #marka #sosyalmedya",
+   "sources": [
+    "https://www.storyboard18.com/advertising/ogilvy-launches-echo-an-ai-platform-to-scale-celebrity-led-advertising-ws-l-114420.htm",
+    "https://bestmediainfo.com/mediainfo/mediainfo-marketing/ogilvy-launches-echo-ai-platform-to-scale-celebrity-campaigns-with-talent-consent-12798305",
+    "https://indiantelevision.com/mam/ogilvy-launches-echo-a-consent-first-ai-platform-to-protect-celebrity-likenesses/",
+    "https://reel360.com/article/caa-and-ogilvy-launch-echo-bringing-ai-celebrity-doubles-to-advertising/"
+   ],
+   "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele."
+  }
+ ],
+ "stories": [
+  {
+   "date": "2026-11-09",
+   "slug": "2026-11-09-story",
+   "file": "posts/2026-11-09-story/story.jpg",
+   "about": "İlk deney Reel'inin duyurusu",
+   "media_id": "17896327833681957"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-baslangic",
+   "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "18027181781863647"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-gundem",
+   "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "17919048858467844"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-ai-lab",
+   "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "18115804277127596"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-tasarim",
+   "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "17887896783503923"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-mutfak",
+   "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "18101888147645978"
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "2026-11-10-story",
+   "file": "posts/2026-11-10-story/story.jpg",
+   "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
+   "media_id": "17960983923258520"
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "2026-11-10-story-gundem",
+   "file": "posts/2026-11-10-story-gundem/story.jpg",
+   "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
+   "media_id": "18120361793078882",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+    "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+    "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+    "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+   ]
+  }
+ ],
+ "replied_comments": [],
+ "covered_topics": [
+  "instagram-effect-builder",
+  "adobe-max-2026",
+  "claude-fable-5-2",
+  "ogilvy-echo"
+ ]
 }

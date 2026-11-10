@@ -115,3 +115,14 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
 - `grid`: yayınlanan feed gönderileri (tarih, tür, kapak tonu, slug, media_id).
 - `queue`: sabah üretilip akşam yayınlanacaklar. Her öğe: slug, kind (carousel/reel/static), publish_date, files, cover, cover_tone, caption, sources.
 - `stories`: yayınlanan story kayıtları.
+
+## Reklam Lab serisi (Ece: "yapay zekâ sunucu olmasın, marka reklamlarına haber şeklinde yer verelim")
+- Amaç: hesaba insan yüzü ve marka hikâyesi katmak. Konu: reklamcılıkta yapay zekâ, dikkat çeken yeni kampanyalar, ajans araçları, tartışmalı reklamlar. Haftada en fazla 1 kez, carousel ya da Reel olarak.
+- Başlık haber dilinde ve kancalı olsun ("Ünlüler artık reklam çekimine bir kez gidecek."). Kapakta tag "REKLAM LAB · <bölüm no>".
+- Son slaytlarda mutlaka "küçük marka / serbest çalışan ne öğrenir?" dersi ve yorum sorusu olsun.
+- Görseller:
+  - Ünlülerin ya da kamuya mal olmuş kişilerin fotoğraflarını tasarıma KOYMA. İsimleri metinde geçebilir.
+  - Reklamdan kare gerekiyorsa yalnızca masaüstü uygulamasındaki tarayıcıyla (bağlıysa) ekran görüntüsü al. Az kare kullan (en fazla 2–3), ürünü, mekânı ya da tanınmış olmayan oyuncuları gösteren kareleri seç. Markayı ve ajansı künye olarak yaz, yorum ekle, reklamın tamamını ya da müziğini kullanma. Resmî basın görselleri önceliklidir.
+  - Tarayıcı bağlı değilse görselsiz düzenlerle (bignum, steps, tiles, compare, chat) hazırla.
+- Rakamları en az iki kaynaktan doğrula. Doğrulanamayan istatistiği kullanma.
+- Bölüm 1: Ogilvy ECHO (11 Kasım).
