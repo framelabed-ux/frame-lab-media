@@ -84,6 +84,19 @@
       "file": "posts/2026-11-10-story/story.jpg",
       "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
       "media_id": "17960983923258520"
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "2026-11-10-story-gundem",
+      "file": "posts/2026-11-10-story-gundem/story.jpg",
+      "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
+      "media_id": "18120361793078882",
+      "sources": [
+        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+      ]
     }
   ],
   "replied_comments": []
