@@ -114,7 +114,8 @@ def el(e, light):
         return f'<div class="card{" out" if e.get("outline") else ""}{" a" if at else ""}"{at}><div class="lbl">{H.escape(e.get("label",""))}</div>{body}</div>'
     if k == "bignum":
         sz = e.get("size", 420 if True else 0)
-        return f'<div{cls}{at}><div class="bignum" style="font-size:{sz}px"><span class="u">{H.escape(e["text"])}</span></div>' + (f'<div class="blabel">{hl(e["label"])}</div>' if e.get("label") else "") + "</div>"
+        cnt = f' data-count="{e["count_at"]}" data-full="{H.escape(e["text"])}"' if "count_at" in e else ""
+        return f'<div{cls}{at}><div class="bignum" style="font-size:{sz}px"><span class="u"{cnt}>{H.escape(e["text"])}</span></div>' + (f'<div class="blabel">{hl(e["label"])}</div>' if e.get("label") else "") + "</div>"
     if k == "chat":
         out = ""
         for who, txt in e["items"]:
@@ -148,6 +149,8 @@ window.render=function(t){
  document.querySelectorAll('[data-type]').forEach(e=>{const [s,d]=e.dataset.type.split(',').map(parseFloat);
    const full=e.dataset.full; const n=Math.round(full.length*Math.min(Math.max((t-s)/d,0),1));
    e.textContent=full.slice(0,n)+(t>=s && n<full.length && Math.floor(t*3)%2==0?'|':'');});
+ document.querySelectorAll('[data-count]').forEach(e=>{const s=parseFloat(e.dataset.count);const full=e.dataset.full;const m=full.match(/[0-9]+/);if(!m)return;
+   const p=ease((t-s)/0.9);const v=Math.round(parseInt(m[0])*p);e.textContent=full.replace(m[0],String(v));});
 };
 </script>"""
 
@@ -222,9 +225,78 @@ def reel(spec, out, voice=None):
                     "-c:a","aac","-b:a","192k","-t",str(T),"-movflags","+faststart",out+".tmp.mp4"], check=True)
     os.replace(out + ".tmp.mp4", out)
 
+MOTION_JS = """<script>
+const S=__SCENES__, K=__KARE__, TR=0.6;
+function eio(x){x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+function lerp(a,b,p){return a+(b-a)*p}
+function setFace(f){document.querySelectorAll('#kare .f').forEach(e=>e.style.display=(e.dataset.face==f?'block':'none'))}
+window.render=function(t){
+  let i=0; for(let k=0;k<S.length;k++){ if(t>=S[k].start) i=k; }
+  let off=i*1080, sw=0;
+  const end=S[i].start+S[i].dur;
+  if(i<S.length-1 && t>end-TR){ sw=eio((t-(end-TR))/TR); off=(i+sw)*1080; }
+  document.getElementById('strip').style.transform='translateX('+(-off)+'px)';
+  document.querySelectorAll('iframe').forEach((f,k)=>{ try{ f.contentWindow.render(t-S[k].start) }catch(e){} });
+  // Kare
+  const a=K[i], b=(i<S.length-1?K[i+1]:K[i]); const el=document.getElementById('kare');
+  if(!a && !b){ el.style.opacity=0; return; }
+  const A=a||{x:b.x,y:-500,size:b.size,face:b.face}, B=b||{x:A.x,y:-500,size:A.size,face:A.face};
+  let x=A.x,y=A.y,sz=A.size,rot=0,face=A.face;
+  const local=t-S[i].start;
+  const intro=(i==0)?eio(local/0.7):1;
+  if(sw>0){ x=lerp(A.x,B.x,sw); y=lerp(A.y,B.y,sw)-Math.sin(Math.PI*sw)*260; sz=lerp(A.size,B.size,sw); rot=Math.sin(Math.PI*sw)*-18; face=sw<.5?A.face:B.face; }
+  else { y+=Math.sin(t*2.6)*14; rot=Math.sin(t*1.7)*4; }
+  if(i==0 && local<0.7){ y=lerp(A.y+500,A.y,intro); }
+  const bl=(t%3.1); if(bl>2.95 && sw==0) face='blink';
+  const land=(sw==0 && local<0.25 && i>0)?(1-local/0.25):0;
+  const sq=1+land*0.12;
+  el.style.opacity=1; setFace(face);
+  el.style.transform='translate('+x+'px,'+y+'px) rotate('+rot+'deg) scale('+(sz/400)*sq+','+(sz/400)/sq+')';
+};
+</script>"""
+
+def reel_motion(spec, out, voice=None):
+    import tempfile
+    sc = spec["scenes"]; t0 = 0.0; S = []; panels = ""
+    for i, s_ in enumerate(sc):
+        S.append({"start": round(t0, 3), "dur": s_["duration"]})
+        htm = page(s_["theme"], s_["elements"], 1080, 1920, align=s_.get("align",""), pattern=s_.get("pattern",""), frame=s_.get("frame",False))
+        panels += f'<iframe srcdoc="{H.escape(htm)}" style="width:1080px;height:1920px;border:0;flex:none" scrolling="no"></iframe>'
+        t0 += s_["duration"]
+    T = t0
+    K = [s_.get("kare") for s_ in sc]
+    faces = "".join(f'<div class="f" data-face="{f}" style="display:none">{kare(400, f, bg="none", light_bg=False).replace(chr(34)+"#F5F4F0"+chr(34)+"></rect>"+chr(10)+"</svg>", chr(34)+"#8A8A82"+chr(34)+"></rect>"+chr(10)+"</svg>")}</div>' for f in ["mutlu","goz","saskin","dusunen","fikir","calisiyor","blink"])
+    js = MOTION_JS.replace("__SCENES__", json.dumps(S)).replace("__KARE__", json.dumps(K))
+    doc = f'<!doctype html><html><head><meta charset="utf-8"><style>body{{margin:0;width:1080px;height:1920px;overflow:hidden;background:#111114}}#strip{{display:flex;width:{1080*len(sc)}px;height:1920px;will-change:transform}}#kare{{position:absolute;left:0;top:0;width:400px;height:400px;transform-origin:0 0;z-index:9;pointer-events:none}}</style></head><body><div id="strip">{panels}</div><div id="kare">{faces}</div>{js}</body></html>'
+    tmp = tempfile.mkdtemp(); f = f"{tmp}/m.html"; open(f, "w").write(doc)
+    async def go():
+        from playwright.async_api import async_playwright
+        async with async_playwright() as p:
+            b = await p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+            pg = await b.new_page(viewport={"width":1080,"height":1920})
+            await pg.goto("file://"+f); await pg.wait_for_timeout(1200)
+            n = int(round(T*30)); part = f"{tmp}/v.tmp.mp4"
+            pr = subprocess.Popen(["ffmpeg","-y","-loglevel","error","-f","image2pipe","-framerate","30","-c:v","mjpeg","-i","-",
+                "-c:v","libx264","-preset","veryfast","-crf","18","-pix_fmt","yuv420p","-r","30",part], stdin=subprocess.PIPE)
+            for k in range(n):
+                await pg.evaluate(f"render({k/30})"); pr.stdin.write(await pg.screenshot(type="jpeg", quality=92))
+            pr.stdin.close()
+            if pr.wait() != 0: raise RuntimeError("ffmpeg")
+            os.replace(part, f"{tmp}/v.mp4")
+            for ct in spec.get("stills", []):
+                await pg.evaluate(f"render({ct})"); await pg.screenshot(path=f"{os.path.splitext(out)[0]}_still_{ct}.jpg", type="jpeg", quality=92)
+            await b.close()
+    asyncio.run(go())
+    here = os.path.dirname(os.path.abspath(__file__))
+    subprocess.run(["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav"], check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/m.wav","-af","volume=0.8,loudnorm=I=-16:TP=-1.5","-ar","44100",f"{tmp}/a.wav"], check=True)
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/v.mp4","-i",f"{tmp}/a.wav","-map","0:v","-map","1:a","-c:v","copy","-af","apad",
+                    "-c:a","aac","-b:a","192k","-t",str(T),"-movflags","+faststart",out+".tmp.mp4"], check=True)
+    os.replace(out + ".tmp.mp4", out)
+
 if __name__ == "__main__":
     mode, spec_path, out = sys.argv[1], sys.argv[2], sys.argv[3]
     spec = json.load(open(spec_path))
     {"carousel": lambda: carousel(spec, out), "story": lambda: story(spec, out),
-     "reel": lambda: reel(spec, out, sys.argv[4] if len(sys.argv) > 4 else None)}[mode]()
+     "reel": lambda: (reel_motion(spec, out) if spec.get("motion") else reel(spec, out, sys.argv[4] if len(sys.argv) > 4 else None))}[mode]()
     print("ok", out)

@@ -24,13 +24,14 @@
      "type": "lead",
      "text": "Anthropic dün duyurdu. 30 saniyede özetliyoruz.",
      "at": 1.2
-    },
-    {
-     "type": "kare_peek",
-     "face": "saskin",
-     "size": 560
     }
-   ]
+   ],
+   "kare": {
+    "x": 560,
+    "y": 1220,
+    "size": 560,
+    "face": "saskin"
+   }
   },
   {
    "theme": "light",
@@ -46,14 +47,21 @@
      "text": "%30",
      "size": 400,
      "label": "daha hızlı yanıt",
-     "at": 0.3
+     "at": 0.3,
+     "count_at": 0.3
     },
     {
      "type": "lead",
      "text": "Fable 5.1'e göre, tüm efor seviyelerinde [[%30'a kadar]] daha hızlı.",
      "at": 1.3
     }
-   ]
+   ],
+   "kare": {
+    "x": 620,
+    "y": 1230,
+    "size": 420,
+    "face": "fikir"
+   }
   },
   {
    "theme": "dark",
@@ -87,7 +95,13 @@
      "at": 1.4,
      "size": 76
     }
-   ]
+   ],
+   "kare": {
+    "x": 40,
+    "y": 1150,
+    "size": 440,
+    "face": "dusunen"
+   }
   },
   {
    "theme": "soft",
@@ -126,7 +140,13 @@
      ],
      "at": 1.0
     }
-   ]
+   ],
+   "kare": {
+    "x": 740,
+    "y": 200,
+    "size": 320,
+    "face": "goz"
+   }
   },
   {
    "theme": "dark",
@@ -149,7 +169,13 @@
      "text": "Kaynak: Anthropic duyurusu",
      "at": 1.6
     }
-   ]
+   ],
+   "kare": {
+    "x": 390,
+    "y": 1420,
+    "size": 300,
+    "face": "saskin"
+   }
   },
   {
    "theme": "light",
@@ -183,21 +209,22 @@
      "text": "Fable 5.2 tüm ücretli Claude planlarında.",
      "at": 2.2
     }
-   ]
+   ],
+   "kare": {
+    "x": 640,
+    "y": 1220,
+    "size": 420,
+    "face": "mutlu"
+   }
   },
   {
    "theme": "dark",
    "duration": 4.0,
    "elements": [
     {
-     "type": "kare",
-     "face": "fikir",
-     "size": 320,
-     "at": 0.1
-    },
-    {
      "type": "h2",
      "text": "Sen ilk neyi\n[[denerdin?]]",
+     "size": 110,
      "at": 0.4
     },
     {
@@ -205,7 +232,19 @@
      "text": "Yorumlara yaz. Gündemi kaçırmamak için takip et.",
      "at": 1.0
     }
-   ]
+   ],
+   "kare": {
+    "x": 250,
+    "y": 200,
+    "size": 580,
+    "face": "fikir"
+   },
+   "align": "bottom"
   }
+ ],
+ "motion": true,
+ "stills": [
+  2.2,
+  27.5
  ]
 }
