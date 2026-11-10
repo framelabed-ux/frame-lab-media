@@ -56,9 +56,10 @@ Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir.
 - Carousel içinde kareler açık ve koyu sırayla gider, böylece kaydırırken ritim oluşur.
 
 ## Format sırası (feed, her hafta içi günü 1 gönderi, saat 19:30 civarı)
-Format haftanın gününe bağlı değil, sırayla döner: **Reel → statik → carousel → Reel → statik → carousel …**
-- Bugünün formatı = `posts/state.json` içindeki `grid` listesinin son öğesinin `kind` değerinden bir sonraki format. (Son reel ise statik, son statik ise carousel, son carousel ise Reel.)
-- Ece statik ile carousel'in yeri değişebilir dedi. Gündem gerektiriyorsa (ör. tek görsele sığmayan bir karşılaştırma) o gün statik yerine carousel, ertesi gün statik yapılabilir. Yeter ki üç format sırayla dönsün ve aynı format art arda gelmesin.
+Format haftanın gününe bağlı değil, sırayla döner. **10 Kasım'dan itibaren Reel ağırlıklı (Ece onayladı):** **Reel → Reel → carousel ya da statik → Reel → Reel → carousel ya da statik …**
+- Neden: Hesap küçükken carousel'ler 2–4 kişiye, Reel'ler takip etmeyenlere ulaşıyor (Fable 5.2 Reel'i 3 takipçiyle 1.140 hesaba ulaştı, 9 kaydetme aldı). Takipçi sayısı birkaç yüze çıkınca bu oranı yeniden değerlendirip Ece'ye sor.
+- Bugünün formatı: `grid` listesinin son iki öğesine bak. Son iki öğe Reel ise carousel ya da statik yap (bir önceki carousel ise statik, statik ise carousel). Aksi hâlde Reel yap.
+- Büyük gündem gelişmesi her zaman Reel olur. O gün carousel/statik sırasıysa bile Reel yapılabilir, carousel/statik ertesi güne kayar.
 - Hafta sonu feed gönderisi yok, sadece story var. Sıra pazartesi kaldığı yerden devam eder.
 
 Formata göre seriler:
@@ -102,6 +103,9 @@ Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini 
 - `bignum` öğesine `"count_at": 0.3` eklenirse rakam sıfırdan sayarak gelir.
 - Her Reel'in sonuna otomatik olarak 3,2 saniyelik logo outro'su eklenir: FL çizilerek belirir, yeşil nokta oturur, FRAME/LAB, slogan, "Takip et" ve @frame.labo gelir. Kare son sahneden yukarı zıplayıp çıkar. Kapatmak için spec'e `"outro": false`. Toplam süre hesaplanırken outro'yu da say.
 - `"stills": [saniye, …]` ile kontrol kareleri üretilir. Her sahnenin sonundan bir kare alıp Read ile bakılır, çakışma varsa konum düzeltilir. Kapak için ilk sahnenin dolu anındaki kare (`*_still_*.jpg`) kullanılabilir.
+
+- **Açılış kancası:** Ortalama izleyici ilk 3 saniyede karar veriyor (Fable Reel'inde %58'i ilk 3 saniyede geçti). İlk sahne 0,5 saniye içinde dolu olmalı, rakamlı ya da merak uyandıran tek bir cümleyle açılmalı ("Claude artık %30 daha hızlı.", "Bu reklamda oyuncu hiç sete gelmedi."). Logo, selamlaşma, "bugün sana … anlatacağım" ile açma.
+- **Süre:** İdeal 20–35 saniye, outro dahil en fazla 45 saniye. Fable Reel'inde ortalama izlenme 12 saniyeydi, asıl bilgi ilk 10 saniyede verilmeli.
 
 ## Seslendirme
 Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle (`tools/music.py`, otomatik) üretilir. Ece ses dosyası gönderirse spec'e `voice_segments` eklenip `render.py reel spec out voice` ile kullanılır. Yazılar, sessiz izleyen biri de anlayacak kadar okunur süre ekranda kalmalı: kelime başına en az 0,35 saniye.
