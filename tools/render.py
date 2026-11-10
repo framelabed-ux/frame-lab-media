@@ -25,7 +25,7 @@ def css(theme, w, h):
     return f"""*{{box-sizing:border-box;margin:0;padding:0}}
 body{{width:{w}px;height:{h}px;background:{bg};color:{fg};font-family:'Inter',sans-serif;overflow:hidden}}
 .s{{position:relative;width:{w}px;height:{h}px;padding:{'96px 88px' if h<1500 else '150px 90px 0'};display:flex;flex-direction:column}}
-.top{{display:flex;justify-content:space-between;align-items:center;font-size:26px;color:{grey};font-weight:500;letter-spacing:.04em}}
+.top{{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;font-size:26px;color:{grey};font-weight:500;letter-spacing:.04em}}
 .brand{{display:flex;align-items:center;gap:14px;color:{fg};font-family:'Inter Display';font-weight:600;letter-spacing:.16em;font-size:24px}}
 .dot{{width:14px;height:14px;border-radius:50%;background:{acc}}}
 .main{{flex:1;display:flex;flex-direction:column;justify-content:center;gap:{40 if h<1500 else 48}px;padding-bottom:{40 if h<1500 else 300}px}}
@@ -88,7 +88,13 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .phone .pb{{border-radius:22px;background:#26262C;padding:20px;font-size:26px;line-height:1.3}}
 .phone .pb.acc{{background:{LIME};color:{INK};font-weight:700}}
 .narrow{{max-width:{560 if h<1500 else 600}px}}
-.h1o{{color:transparent;-webkit-text-stroke:3px {fg}}}"""
+.h1o{{color:transparent;-webkit-text-stroke:3px {fg}}}
+.pbg{{position:absolute;left:0;right:0;top:0;z-index:0;background-size:cover;background-repeat:no-repeat}}
+.pbg:after{{content:'';position:absolute;left:0;right:0;bottom:-2px;height:55%;background:linear-gradient(to bottom,transparent,{bg})}}
+.pbg:before{{content:'';position:absolute;left:0;right:0;top:0;height:220px;background:linear-gradient(to bottom,rgba(0,0,0,.35),transparent);z-index:1}}
+.credit{{position:absolute;right:{88 if h<1500 else 90}px;z-index:3;font-size:20px;letter-spacing:.04em;color:{grey};text-align:right}}
+.photo{{width:100%;border-radius:32px;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}}
+.photo .pc{{position:absolute;right:20px;bottom:16px;font-size:20px;color:#fff;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:10px}}"""
 
 def el(e, light):
     k = e["type"]; at = f' data-in="{e["at"]}"' if "at" in e else ""
@@ -142,12 +148,22 @@ def el(e, light):
                 f'<circle class="a" data-in="{a+1.05}" data-pop="1" style="opacity:0;transform-box:fill-box;transform-origin:center" cx="146" cy="62" r="10" fill="{LIME}"></circle>'
                 f'</svg></div>')
     if k == "sticker":
-        return f'<div class="sticker">{hl(e["text"])}</div>'
+        st = f' style="top:{e["top"]}px"' if "top" in e else ""
+        return f'<div class="sticker"{st}>{hl(e["text"])}</div>'
     if k == "kare_peek":
         return f'<div class="peek">{kare(e.get("size",620), e.get("face","goz"), bg="none", light_bg=light)}</div>'
     if k == "phone":
         blocks = "".join(f'<div class="pb{" acc" if i == e.get("accent", -1) else ""}">{H.escape(b)}</div>' for i, b in enumerate(e.get("blocks", [])))
         return f'<div class="phone"><div class="pt">{H.escape(e.get("title",""))}</div>{blocks}</div>'
+    if k == "photo_bg":  # tam genişlik görsel, alta doğru zemine erir
+        hh = e.get("height", 820)
+        src = "file://" + os.path.abspath(e["src"])
+        cr = f'<div class="credit" style="top:{hh-70}px">{H.escape(e["credit"])}</div>' if e.get("credit") else ""
+        return f'<div class="pbg" style="height:{hh}px;background-image:url(\'{src}\');background-position:{e.get("pos","center")}"></div>{cr}'
+    if k == "photo":  # yuvarlatılmış görsel kartı
+        src = "file://" + os.path.abspath(e["src"])
+        cr = f'<span class="pc">{H.escape(e["credit"])}</span>' if e.get("credit") else ""
+        return f'<div class="photo{" a" if at else ""}"{at} style="height:{e.get("height",520)}px;background-image:url(\'{src}\');background-position:{e.get("pos","center")}">{cr}</div>'
     raise ValueError("bilinmeyen öğe: " + k)
 
 JS = """<script>
@@ -164,7 +180,7 @@ window.render=function(t){
 };
 </script>"""
 
-ABS = ("sticker", "kare_peek", "phone")
+ABS = ("photo_bg", "sticker", "kare_peek", "phone")
 def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="", frame=False):
     light = theme in ("light", "soft")
     t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""

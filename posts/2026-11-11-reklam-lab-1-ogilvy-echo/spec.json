@@ -2,32 +2,57 @@
  "slides": [
   {
    "theme": "dark",
-   "pattern": "grid",
+   "align": "bottom",
    "elements": [
     {
+     "type": "photo_bg",
+     "src": "posts/2026-11-11-reklam-lab-1-ogilvy-echo/src/echo-keyvisual.jpg",
+     "height": 780,
+     "pos": "center 0%",
+     "credit": "Görsel: Ogilvy / CAA"
+    },
+    {
      "type": "sticker",
-     "text": "YENİ\nSERİ"
+     "text": "YENİ\nSERİ",
+     "top": 430
     },
     {
      "type": "tag",
      "text": "REKLAM LAB · 1"
     },
     {
-     "type": "bignum",
-     "text": "50",
-     "size": 430,
-     "label": "reklam görseli,\n[[tek çekimden.]]"
+     "type": "h1",
+     "text": "Ünlüler reklam\nçekimine [[bir kez]]\ngidecek.",
+     "size": 92
     },
     {
      "type": "lead",
-     "text": "Ünlüler artık reklam çekimine bir kez gidecek. Ogilvy'nin yeni yapay zekâ platformu ECHO'yu anlatıyoruz.",
-     "narrow": true
+     "text": "Ogilvy'nin yeni yapay zekâ platformu ECHO, tek çekimi onlarca reklama çeviriyor."
     }
    ]
   },
   {
    "theme": "light",
    "pattern": "dots",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "RAKAMLARLA ECHO"
+    },
+    {
+     "type": "bignum",
+     "text": "50",
+     "size": 400,
+     "label": "reklam görseli,\n[[tek çekimden.]]"
+    },
+    {
+     "type": "lead",
+     "text": "Normalde 8–10 görsel çıkan bir çekimden 30–50 reklam üretiliyor. Ogilvy'ye göre görsel başına maliyet %65–75'e kadar düşebilir."
+    }
+   ]
+  },
+  {
+   "theme": "dark",
    "elements": [
     {
      "type": "tag",
@@ -47,17 +72,36 @@
       ],
       [
        "Yapay zekâ çoğaltıyor",
-       "Normalde 8–10 görsel çıkan çekimden 30–50 reklam üretiliyor."
+       "Aynı çekimden farklı pazar ve platformlara uygun reklamlar üretiliyor."
       ],
       [
        "Son söz ünlüde",
-       "Hangi marka ve kampanyada yer alacağına ünlü karar veriyor."
+       "Hiçbir görsel, ünlü ve menajeri onaylamadan yayınlanamıyor."
       ],
       [
        "Filigranla yayın",
        "Her reklamda “Ünlü onayladı · Yapay zekâyla üretildi” notu var."
       ]
      ]
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "align": "center",
+   "frame": true,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "İŞİN ASIL OLAYI: GÜVEN"
+    },
+    {
+     "type": "quote",
+     "text": "Tüketicilerin\n[[%80'inden fazlası]]\n“ünlü onayladı” notunu\nizin işareti olarak görüyor."
+    },
+    {
+     "type": "lead",
+     "text": "Kaynak: Ogilvy'nin ABD, İngiltere ve Hindistan'da\n1.200'den fazla kişiyle yaptığı araştırma"
     }
    ]
   },
@@ -88,29 +132,10 @@
        "Altyapı: WPP Open"
       ],
       [
-       "9 KASIM",
-       "Platform duyuruldu"
+       "KASIM 2026",
+       "WPP ağında kullanımda"
       ]
      ]
-    }
-   ]
-  },
-  {
-   "theme": "soft",
-   "align": "center",
-   "frame": true,
-   "elements": [
-    {
-     "type": "tag",
-     "text": "İŞİN PARA TARAFI"
-    },
-    {
-     "type": "quote",
-     "text": "Görsel başına maliyet\n[[%65–75]]\ndüşebilir."
-    },
-    {
-     "type": "lead",
-     "text": "Kaynak: Ogilvy'nin tahmini"
     }
    ]
   },
@@ -128,6 +153,7 @@
     },
     {
      "type": "compare",
+     "size": 34,
      "left": {
       "label": "YAPMA",
       "text": "Yapay zekâyı gizlemek. Yüzü kullanılan kişiye sormadan üretmek."
@@ -135,8 +161,7 @@
      "right": {
       "label": "YAP",
       "text": "Yapay zekâ kullandığını söyle. Onayı al ve bunu görünür kıl. Tek çekimi baştan çok formata göre planla."
-     },
-     "size": 34
+     }
     }
    ]
   },

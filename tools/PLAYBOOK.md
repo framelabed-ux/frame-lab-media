@@ -125,4 +125,9 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
   - Reklamdan kare gerekiyorsa yalnızca masaüstü uygulamasındaki tarayıcıyla (bağlıysa) ekran görüntüsü al. Az kare kullan (en fazla 2–3), ürünü, mekânı ya da tanınmış olmayan oyuncuları gösteren kareleri seç. Markayı ve ajansı künye olarak yaz, yorum ekle, reklamın tamamını ya da müziğini kullanma. Resmî basın görselleri önceliklidir.
   - Tarayıcı bağlı değilse görselsiz düzenlerle (bignum, steps, tiles, compare, chat) hazırla.
 - Rakamları en az iki kaynaktan doğrula. Doğrulanamayan istatistiği kullanma.
-- Bölüm 1: Ogilvy ECHO (11 Kasım).
+- Görsel öğeleri (render.py):
+  - `{"type":"photo_bg","src":"posts/<slug>/src/x.jpg","height":780,"pos":"center 0%","credit":"Görsel: Marka / Ajans"}` tam genişlik, alta doğru zemine erir. Slayta `"align":"bottom"` ver.
+  - `{"type":"photo","src":...,"height":520,"credit":...}` yuvarlatılmış görsel kartı.
+  - Sticker'ın yeri `"top"` ile ayarlanır; künyenin ve görseldeki önemli yerlerin üstüne gelmesin.
+- Ekran görüntüsüyle yüksek çözünürlüklü görsel alma: tarayıcı ekran görüntüsü en fazla 800 px genişlikte geliyor. Görseli sayfada sabit bir katmanda büyütüp (ör. 2400 px) parça parça ekran görüntüsü al, sonra PIL ile birleştir. Görseller posts/<slug>/src/ altında dursun.
+- Bölüm 1: Ogilvy ECHO (11 Kasım). Kapakta Ogilvy'nin resmî ECHO illüstrasyonu.
