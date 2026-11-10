@@ -46,6 +46,7 @@ Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir.
   3. Kare her slaytta olmaz: carousel başına en fazla 2 kez, farklı boyut ve konumda (büyük, kenardan bakan, küçük köşe).
   4. Kareli/noktalı zemin ve vizör çerçevesi gönderi başına en fazla bir iki slaytta, abartmadan.
   5. Başlık boyutu, hizalama (üst, orta, alt) ve metin yoğunluğu slayttan slayta değişir.
+  6. **Kısa tut (Ece: "carouseller çok uzun olursa insanlar sıkılır").** Carousel ideal 5 slayt, en fazla 6 (kapak ve son slayt dahil). Her slaytta tek fikir. Teknik ayrıntıyı, künyeyi ve ek rakamları slayta değil caption'a koy. Son slayt hem dersi hem yorum sorusunu taşır, ayrı bir "soru slaytı" açma. Reel de kısa olsun: ideal 20–35 saniye, outro dahil en fazla 45 saniye.
   6. Story'ler de aynı ailelerden seçilir, aynı günün feed kapağıyla aynı düzende olmaz.
 
 ## Izgara düzeni (puzzle)
@@ -64,7 +65,7 @@ Formata göre seriler:
 | Format | Seriler |
 | --- | --- |
 | Reel | Sıcak Gelişme (gündemde büyük bir şey varsa), Kare Açıklıyor (bir kavramı 30–40 saniyede anlatır) |
-| Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın 5 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri), Kare'den Haberler (numaralı seri: 1–3 doğrulanmış gelişme, her biri için ne oldu, nasıl çalışır, sana ne faydası var; Ece 10 Kasım'da başlattı) |
+| Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın en önemli 3–4 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri), Kare'den Haberler (numaralı seri: 1–3 doğrulanmış gelişme, her biri için ne oldu, nasıl çalışır, sana ne faydası var; Ece 10 Kasım'da başlattı) |
 | Statik (tek görsel) | Günün Prompt'u (kopyalanacak hazır prompt), Tasarım Kuralı (tek kural, tek örnek) |
 
 İçeriklerin yaklaşık %60'ı gündemden gelir. Büyük bir gelişme o günün formatına uyarlanır: Reel günü kısa deneme videosu, carousel günü adım adım anlatım, statik günü tek karede "bunu bilmen lazım" kartı.

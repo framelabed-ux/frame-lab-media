@@ -110,40 +110,6 @@
    "elements": [
     {
      "type": "tag",
-     "text": "KİMLER YAPTI?"
-    },
-    {
-     "type": "h2",
-     "text": "Ajans, menajer\nve [[teknoloji]] bir arada"
-    },
-    {
-     "type": "tiles",
-     "items": [
-      [
-       "OGILVY",
-       "Platformu geliştiren ajans"
-      ],
-      [
-       "CAA",
-       "Ünlüleri temsil eden ajans"
-      ],
-      [
-       "WPP",
-       "Altyapı: WPP Open"
-      ],
-      [
-       "KASIM 2026",
-       "WPP ağında kullanımda"
-      ]
-     ]
-    }
-   ]
-  },
-  {
-   "theme": "light",
-   "elements": [
-    {
-     "type": "tag",
      "text": "SANA NE ANLATIYOR?"
     },
     {
@@ -162,41 +128,10 @@
       "label": "YAP",
       "text": "Yapay zekâ kullandığını söyle. Onayı al ve bunu görünür kıl. Tek çekimi baştan çok formata göre planla."
      }
-    }
-   ]
-  },
-  {
-   "theme": "dark",
-   "elements": [
-    {
-     "type": "tag",
-     "text": "SENİN SIRAN"
     },
     {
-     "type": "h2",
-     "text": "Kare soruyor:",
-     "size": 72
-    },
-    {
-     "type": "chat",
-     "names": {
-      "ai": "KARE",
-      "you": "TAKİPÇİ"
-     },
-     "items": [
-      [
-       "ai",
-       "Bir ünlü reklamında yapay zekâ kullanıldığını bilsen, markaya güvenin azalır mı?"
-      ],
-      [
-       "you",
-       "Ünlü onay verdiyse bence sorun yok."
-      ],
-      [
-       "ai",
-       "Sen ne düşünüyorsun? Yorumlara yaz."
-      ]
-     ]
+     "type": "lead",
+     "text": "Sen bir ünlü reklamında yapay zekâyı fark etsen güvenin azalır mı? Yorumlara yaz."
     }
    ]
   }
