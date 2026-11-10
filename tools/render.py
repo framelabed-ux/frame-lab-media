@@ -289,14 +289,29 @@ def reel_motion(spec, out, voice=None):
     asyncio.run(go())
     here = os.path.dirname(os.path.abspath(__file__))
     subprocess.run(["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav"], check=True, stdout=subprocess.DEVNULL)
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/m.wav","-af","volume=0.8,loudnorm=I=-16:TP=-1.5","-ar","44100",f"{tmp}/a.wav"], check=True)
+    if voice:
+        _mix_voice(spec, voice, T, tmp)
+    else:
+        subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/m.wav","-af","volume=0.8,loudnorm=I=-16:TP=-1.5","-ar","44100",f"{tmp}/a.wav"], check=True)
     subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/v.mp4","-i",f"{tmp}/a.wav","-map","0:v","-map","1:a","-c:v","copy","-af","apad",
                     "-c:a","aac","-b:a","192k","-t",str(T),"-movflags","+faststart",out+".tmp.mp4"], check=True)
     os.replace(out + ".tmp.mp4", out)
+
+def _mix_voice(spec, voice, T, tmp):
+    """spec["voice_segments"]: [[kaynak_baş, kaynak_son, sahne_no], ...] -> ses, o sahnenin başından 0.25 sn sonra başlar."""
+    starts = []; t0 = 0.0
+    for s_ in spec["scenes"]: starts.append(t0); t0 += s_["duration"]
+    segs = spec["voice_segments"]; parts = []
+    fc = f"[1:a]aresample=44100,highpass=f=70,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=120,volume=1.6,asplit={len(segs)}" + "".join(f"[s{i}]" for i in range(len(segs))) + ";"
+    for i, (a, b2, sc) in enumerate(segs):
+        at = starts[int(sc)] + 0.25
+        fc += f"[s{i}]atrim={a}:{b2},asetpts=PTS-STARTPTS,adelay={int(at*1000)}|{int(at*1000)}[v{i}];"; parts.append(f"[v{i}]")
+    fc += "".join(parts) + f"amix=inputs={len(segs)}:normalize=0,apad=whole_dur={T},atrim=0:{T}[vo];[0:a]volume=0.45[m];[vo]asplit=2[vk][vm];[m][vk]sidechaincompress=threshold=0.025:ratio=10:attack=15:release=350[md];[md][vm]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1.5[out]"
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/m.wav","-i",voice,"-filter_complex",fc,"-map","[out]","-ar","44100",f"{tmp}/a.wav"], check=True)
 
 if __name__ == "__main__":
     mode, spec_path, out = sys.argv[1], sys.argv[2], sys.argv[3]
     spec = json.load(open(spec_path))
     {"carousel": lambda: carousel(spec, out), "story": lambda: story(spec, out),
-     "reel": lambda: (reel_motion(spec, out) if spec.get("motion") else reel(spec, out, sys.argv[4] if len(sys.argv) > 4 else None))}[mode]()
+     "reel": lambda: (reel_motion(spec, out, sys.argv[4] if len(sys.argv) > 4 else None) if spec.get("motion") else reel(spec, out, sys.argv[4] if len(sys.argv) > 4 else None))}[mode]()
     print("ok", out)

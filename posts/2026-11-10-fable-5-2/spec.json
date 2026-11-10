@@ -3,7 +3,7 @@
   {
    "theme": "dark",
    "pattern": "grid",
-   "duration": 4.0,
+   "duration": 5.3,
    "elements": [
     {
      "type": "sticker",
@@ -35,7 +35,7 @@
   },
   {
    "theme": "light",
-   "duration": 4.5,
+   "duration": 5.4,
    "elements": [
     {
      "type": "tag",
@@ -65,7 +65,7 @@
   },
   {
    "theme": "dark",
-   "duration": 5.5,
+   "duration": 6.6,
    "elements": [
     {
      "type": "tag",
@@ -106,7 +106,7 @@
   {
    "theme": "soft",
    "pattern": "dots",
-   "duration": 5.0,
+   "duration": 5.8,
    "elements": [
     {
      "type": "tag",
@@ -152,7 +152,7 @@
    "theme": "dark",
    "align": "center",
    "frame": true,
-   "duration": 5.5,
+   "duration": 7.7,
    "elements": [
     {
      "type": "tag",
@@ -179,7 +179,7 @@
   },
   {
    "theme": "light",
-   "duration": 6.0,
+   "duration": 7.9,
    "elements": [
     {
      "type": "tag",
@@ -219,7 +219,7 @@
   },
   {
    "theme": "dark",
-   "duration": 4.0,
+   "duration": 4.6,
    "elements": [
     {
      "type": "h2",
@@ -244,7 +244,43 @@
  ],
  "motion": true,
  "stills": [
-  2.2,
-  27.5
+  2.5
+ ],
+ "voice_segments": [
+  [
+   0,
+   4.65,
+   0
+  ],
+  [
+   4.85,
+   9.65,
+   1
+  ],
+  [
+   9.85,
+   15.9,
+   2
+  ],
+  [
+   16.05,
+   21.3,
+   3
+  ],
+  [
+   21.45,
+   28.65,
+   4
+  ],
+  [
+   28.85,
+   36.2,
+   5
+  ],
+  [
+   36.4,
+   40.12,
+   6
+  ]
  ]
 }
