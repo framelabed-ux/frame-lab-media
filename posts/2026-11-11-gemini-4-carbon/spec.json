@@ -1,0 +1,234 @@
+{
+ "motion": true,
+ "stills": [
+  22.6,
+  26.0
+ ],
+ "scenes": [
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center",
+   "duration": 4.4,
+   "nofoot": true,
+   "kare": {
+    "x": 700,
+    "y": 1420,
+    "size": 280,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "burst",
+     "x": 120,
+     "y": 1380,
+     "size": 200,
+     "rot": -10,
+     "at": 0.5
+    },
+    {
+     "type": "lead",
+     "text": "Gemini 4 Carbon · 10 Kasım",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Google'ın en güçlü modeli\n{{artık kullanımda.}}",
+     "light": true,
+     "size": 112,
+     "at": 0.05
+    },
+    {
+     "type": "lead",
+     "text": "Önce yalnızca seçili güvenlik ekiplerine açılmıştı.",
+     "at": 0.7
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "bg": "glow",
+   "align": "center",
+   "duration": 5.6,
+   "transition": "slide",
+   "kare": {
+    "x": 760,
+    "y": 1560,
+    "size": 220,
+    "face": "goz"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "NE DEĞİŞTİ?",
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "Kapı [[{{aralandı.}}]]",
+     "size": 110,
+     "at": 0.15
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "28 EKİM",
+      "text": "Yalnızca seçili siber güvenlik ekipleri"
+     },
+     "right": {
+      "label": "10 KASIM",
+      "text": "Google AI Ultra aboneleri ve ücretli API kullanan geliştiriciler"
+     },
+     "at": 0.8
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "align": "center",
+   "duration": 4.8,
+   "transition": "stack",
+   "kare": {
+    "x": 90,
+    "y": 1500,
+    "size": 230,
+    "face": "dusunen"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "KODLAMA TESTİ",
+     "at": 0.05
+    },
+    {
+     "type": "bignum",
+     "text": "#1",
+     "size": 420,
+     "label": "CursorBench 4.0'da [[ilk sırada.]]",
+     "at": 0.2
+    },
+    {
+     "type": "lead",
+     "text": "Google'a göre görev başına maliyeti, en yakın rakibinin yarısından da az.",
+     "at": 1.2
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "bg": "glow",
+   "align": "center",
+   "duration": 5.0,
+   "transition": "up",
+   "kare": {
+    "x": 720,
+    "y": 330,
+    "size": 240,
+    "face": "calisiyor"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "YENİ: /SWARM",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Tek prompt,\n{{bir ajan ekibi.}}",
+     "light": true,
+     "size": 116,
+     "at": 0.15
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Görevleri ajanlara dağıtır",
+      "İlerlemeyi canlı izlersin",
+      "Şimdilik önizleme, Antigravity'de"
+     ],
+     "at": 1.0
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center",
+   "duration": 4.8,
+   "transition": "zoom",
+   "kare": {
+    "x": 760,
+    "y": 1540,
+    "size": 220,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "API FİYATI · 1M GİRDİ TOKEN",
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "Fiyat ay sonunda\n{{ikiye katlanıyor.}}",
+     "size": 104,
+     "at": 0.15
+    },
+    {
+     "type": "bars",
+     "items": [
+      [
+       "30 Kasım'a kadar",
+       2,
+       "2 $"
+      ],
+      [
+       "Sonrasında",
+       4,
+       "4 $"
+      ]
+     ],
+     "accent": 0,
+     "at": 0.8
+    },
+    {
+     "type": "lead",
+     "text": "Çıktı: 10 $, sonra 20 $.",
+     "at": 1.8
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center",
+   "duration": 4.0,
+   "transition": "wipe",
+   "kare": {
+    "x": 400,
+    "y": 1330,
+    "size": 300,
+    "face": "mutlu"
+   },
+   "elements": [
+    {
+     "type": "h2",
+     "text": "Carbon mı,\nClaude mu,\n[[{{GPT mi?}}]]",
+     "size": 100,
+     "at": 0.05
+    },
+    {
+     "type": "lead",
+     "text": "Kodlayan arkadaşına gönder,\n**yorumlara yaz.**",
+     "at": 0.8
+    }
+   ]
+  }
+ ],
+ "music": {
+  "style": "house",
+  "seed": 57
+ }
+}

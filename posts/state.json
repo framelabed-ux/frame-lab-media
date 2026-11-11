@@ -234,6 +234,31 @@
   "adobe-max-2026-firefly-creative-agent",
   "claude-meetings-sheets-whiteboards"
  ],
- "hot_pending": [],
+ "hot_pending": [
+  {
+   "topic": "gemini-4-carbon",
+   "date_found": "2026-11-11",
+   "summary": "Google, 28 Ekim'de yalnızca siber güvenlik ekiplerine açtığı en güçlü modeli Gemini 4 Carbon'u 10 Kasım'da AI Ultra abonelerine ve ücretli API'ye açtı; /swarm önizlemesi ve 30 Kasım'a kadar tanıtım fiyatı.",
+   "sources": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
+    "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
+   ],
+   "ready": {
+    "slug": "2026-11-11-gemini-4-carbon",
+    "kind": "reel",
+    "files": [
+     "posts/2026-11-11-gemini-4-carbon/reel.mp4"
+    ],
+    "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
+    "cover_tone": "light",
+    "cover_alt_dark": "posts/2026-11-11-gemini-4-carbon/cover-dark.jpg",
+    "caption_file": "posts/2026-11-11-gemini-4-carbon/caption.txt",
+    "layout": "editorial",
+    "music": "house"
+   },
+   "note": "11 Kasım öğle taraması: Reel hazır (31,8 sn, outro dahil) ve kalite kontrolden geçti, ama yayınlanmadı: bugün zaten 3 feed gönderisi var (Reklam Lab, Adobe Reel, akşam Claude Meetings) ve playbook günde en fazla 2 diyor. Ece onay verirse hemen yayınlanabilir; vermezse sabah görevi 12 Kasım'da bunu kullansın (açık kapak, son kapak Claude Meetings koyu). Fiyatlar 30 Kasım'a kadar geçerli, yayın günü tarihleri tekrar kontrol et."
+  }
+ ],
  "scheduled": []
 }

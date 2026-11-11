@@ -1,0 +1,14 @@
+Google'ın en güçlü modeli artık kullanımda: Gemini 4 Carbon.
+
+28 Ekim'de yalnızca seçili siber güvenlik ekiplerine açılmıştı. Google 10 Kasım'da erişimi genişletti:
+
+• Kimler kullanabilir? Google AI Ultra aboneleri (Gemini uygulaması, Arama'daki AI Mode ve Antigravity) ile ücretli Gemini API kullanan geliştiriciler.
+• Neyde iddialı? Google'a göre kodlama testi CursorBench 4.0'da ilk sırada ve görev başına maliyeti en yakın rakibinin yarısından da az.
+• /swarm (önizleme): Antigravity'de tek bir prompt'u birlikte çalışan bir ajan ekibine çeviriyor, ilerlemeyi canlı izliyorsun.
+• Fiyat: 30 Kasım'a kadar 1 milyon girdi token'ı 2 $, çıktı 10 $. Sonrasında 4 $ ve 20 $.
+
+Not: Google, işlerin çoğu için hâlâ Gemini 4 Argon'u öneriyor. Carbon en zor görevler için.
+
+Kodlayan bir arkadaşına gönder: Sence Carbon, Claude ve GPT'nin yanında nerede durur? Yorumlara yaz.
+
+#yapayzeka #gemini #google #teknoloji #yazılım #dijitalgündem #reels
