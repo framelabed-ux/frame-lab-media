@@ -125,9 +125,7 @@
    "music": "synthwave",
    "media_id": "18172083973473135",
    "status": "yayında (12:01)"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-11-claude-meetings",
    "kind": "reel",
@@ -144,8 +142,12 @@
     "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
    ],
    "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
-   "music": "lofi"
-  },
+   "music": "lofi",
+   "media_id": "18139861054680639",
+   "status": "yayında (11 Kasım 19:15, akşam görevi)"
+  }
+ ],
+ "queue": [
   {
    "slug": "2026-11-11-gemini-4-carbon",
    "kind": "reel",
@@ -255,5 +257,6 @@
   "gemini-4-carbon"
  ],
  "hot_pending": [],
- "scheduled": []
+ "scheduled": [],
+ "pending_replies": []
 }
