@@ -348,7 +348,9 @@ def carousel(spec, out_dir):
     asyncio.run(_shots(pages, 1080, 1350, [f"{out_dir}/{i+1}.jpg" for i in range(n)]))
 
 def story(spec, out):
-    asyncio.run(_shots([page(spec["theme"], spec["elements"], 1080, 1920, foot_right=spec.get("foot_right", ""), align=spec.get("align",""), pattern=spec.get("pattern",""), frame=spec.get("frame",False), bg=spec.get("bg",""), logo=spec.get("logo",""))], 1080, 1920, [out]))
+    htm = page(spec["theme"], spec["elements"], 1080, 1920, foot_right=spec.get("foot_right", ""), align=spec.get("align",""), pattern=spec.get("pattern",""), frame=spec.get("frame",False), bg=spec.get("bg",""), logo=spec.get("logo",""))
+    if spec.get("nofoot"): htm = re.sub(r'<div class="foot">.*?</div>', '', htm, count=1)
+    asyncio.run(_shots([htm], 1080, 1920, [out]))
 
 async def _reel_frames(spec, tmp):
     from playwright.async_api import async_playwright

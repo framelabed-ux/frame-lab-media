@@ -129,6 +129,7 @@ Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini 
 - **Ses efektleri:** geçişlerde hafif "whoosh", ana öğe girerken "pop", logoda "ding" otomatik eklenir ve müzikle karışır. Kapatmak için `"sfx": false`.
 - Her Reel'in sonuna otomatik olarak 3,2 saniyelik logo outro'su eklenir. Kapatmak için `"outro": false`. Toplam süre hesaplanırken outro'yu da say.
 - `"stills": [saniye, …]` ile kontrol kareleri üretilir. Her sahnenin dolu anından ve en az bir geçiş anından kare alıp Read ile bak; çakışma, taşma ya da Kare'nin yazıyı kapatması varsa düzelt. Kapak için ilk sahnenin dolu anındaki kare (`*_still_*.jpg`) kullanılabilir.
+- **Reel kapağı:** ilk sahnenin öğelerini `at` olmadan, `"align": "center"` ve `"nofoot": true` ile `render.py story` modunda ayrı render et (örnek: `posts/2026-11-11-adobe-max-creative-agent/cover.json`). Başlık, ızgaradaki 3:4 kırpmaya (üstten 240, alttan 240 piksel kesilir) sığmalı.
 - **İlk sahne boş açılmasın:** ilk sahnede tag `"at": 0`, başlık `"at": 0.05` olsun; alt yazı en geç 0,8'de gelsin.
 - **Açılış kancası:** Ortalama izleyici ilk 3 saniyede karar veriyor (Fable Reel'inde %58'i ilk 3 saniyede geçti). İlk sahne 0,5 saniye içinde dolu olmalı, rakamlı ya da merak uyandıran tek bir cümleyle açılmalı ("Claude artık %30 daha hızlı.", "Bu reklamda oyuncu hiç sete gelmedi."). Logo, selamlaşma, "bugün sana … anlatacağım" ile açma.
 - **Süre:** İdeal 20–35 saniye, outro dahil en fazla 45 saniye. Fable Reel'inde ortalama izlenme 12 saniyeydi, asıl bilgi ilk 10 saniyede verilmeli.

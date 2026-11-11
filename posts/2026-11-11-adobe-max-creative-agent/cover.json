@@ -1,0 +1,47 @@
+{
+ "theme": "light",
+ "bg": "glow",
+ "pattern": "rings",
+ "align": "center",
+ "foot_right": "",
+ "elements": [
+  {
+   "type": "burst",
+   "x": 90,
+   "y": 1100,
+   "size": 230,
+   "rot": -8
+  },
+  {
+   "type": "burst",
+   "x": 850,
+   "y": 1130,
+   "size": 130,
+   "rot": 16
+  },
+  {
+   "type": "phone",
+   "center": true,
+   "title": "AI Assistant (beta)",
+   "blocks": [
+    "Bu fotoğraftan 3 boyutta reklam hazırla.",
+    "Plan: arka plan → metin → boyutlar",
+    "Planı onayla"
+   ],
+   "accent": 2,
+   "bottom": -330,
+   "w": 600
+  },
+  {
+   "type": "lead",
+   "text": "Adobe MAX 2026'nın büyük duyurusu"
+  },
+  {
+   "type": "h1",
+   "text": "Adobe'ye artık\n[[{{iş verebilirsin.}}]]",
+   "light": true,
+   "size": 120
+  }
+ ],
+ "nofoot": true
+}

@@ -1,0 +1,242 @@
+{
+ "motion": true,
+ "stills": [
+  3.0,
+  8.0
+ ],
+ "scenes": [
+  {
+   "theme": "light",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center top",
+   "duration": 3.6,
+   "nofoot": true,
+   "kare": null,
+   "elements": [
+    {
+     "type": "burst",
+     "x": 90,
+     "y": 980,
+     "size": 230,
+     "rot": -8,
+     "at": 0.6
+    },
+    {
+     "type": "burst",
+     "x": 830,
+     "y": 890,
+     "size": 130,
+     "rot": 16,
+     "at": 0.8
+    },
+    {
+     "type": "phone",
+     "center": true,
+     "title": "AI Assistant (beta)",
+     "blocks": [
+      "Bu fotoğraftan 3 boyutta reklam hazırla.",
+      "Plan: arka plan → metin → boyutlar",
+      "Planı onayla"
+     ],
+     "accent": 2,
+     "bottom": -150,
+     "at": 0.4,
+     "w": 600
+    },
+    {
+     "type": "lead",
+     "text": "Adobe MAX 2026'nın büyük duyurusu",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Adobe'ye artık\n[[{{iş verebilirsin.}}]]",
+     "light": true,
+     "size": 120,
+     "at": 0.05
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center top",
+   "duration": 5.0,
+   "nofoot": true,
+   "kare": {
+    "x": 760,
+    "y": 1580,
+    "size": 250,
+    "face": "dusunen"
+   },
+   "elements": [
+    {
+     "type": "hero",
+     "src": "brand/stock/cam-halka.jpg",
+     "x": 150,
+     "y": 1050,
+     "w": 780,
+     "h": 585,
+     "blend": "lighten",
+     "gray": true,
+     "contrast": 1.15,
+     "at": 0.4
+    },
+    {
+     "type": "note",
+     "text": "**Plan Mode:** önce onay, sonra iş.",
+     "x": 90,
+     "y": 1540,
+     "w": 470,
+     "rot": -5,
+     "at": 1.6
+    },
+    {
+     "type": "tag",
+     "text": "FIREFLY AI ASSISTANT",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Önce {{planı}}\ngösteriyor.",
+     "light": true,
+     "size": 124,
+     "at": 0.15
+    },
+    {
+     "type": "lead",
+     "text": "Hedefini yazıyorsun. Araçları ve modeli seçiyor, başlamadan planı onayına sunuyor.",
+     "at": 0.9
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "bg": "glow",
+   "align": "center",
+   "duration": 4.0,
+   "kare": {
+    "x": 400,
+    "y": 1400,
+    "size": 300,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "burst",
+     "x": 800,
+     "y": 330,
+     "size": 160,
+     "rot": 14,
+     "at": 0.5
+    },
+    {
+     "type": "tag",
+     "text": "NEREDE?",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Sadece Firefly'da\n[[{{değil.}}]]",
+     "light": true,
+     "size": 118,
+     "at": 0.15
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Photoshop",
+      "Premiere",
+      "Illustrator",
+      "InDesign",
+      "After Effects",
+      "Frame.io"
+     ],
+     "at": 1.0
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center top",
+   "duration": 4.0,
+   "kare": {
+    "x": 70,
+    "y": 1000,
+    "size": 260,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "hero",
+     "src": "brand/stock/dalga-koyu.jpg",
+     "x": -60,
+     "y": 1060,
+     "w": 1200,
+     "h": 900,
+     "cover": true,
+     "tint": true,
+     "bright": 2.6,
+     "mask": "top",
+     "at": 0.0
+    },
+    {
+     "type": "tag",
+     "text": "MODEL SEÇİMİ",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Modeli\n{{sen seç.}}",
+     "light": true,
+     "size": 132,
+     "at": 0.15
+    },
+    {
+     "type": "lead",
+     "text": "Google, OpenAI, Kling, ByteDance ve ElevenLabs modelleri Firefly'da tek yerde.",
+     "at": 0.9
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center",
+   "duration": 3.8,
+   "kare": {
+    "x": 640,
+    "y": 1330,
+    "size": 340,
+    "face": "mutlu"
+   },
+   "elements": [
+    {
+     "type": "sticker",
+     "text": "BETA",
+     "top": 300
+    },
+    {
+     "type": "lead",
+     "text": "Küçük bir not",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Çoğu özellik\n{{henüz beta.}}",
+     "light": true,
+     "size": 120,
+     "at": 0.15
+    },
+    {
+     "type": "lead",
+     "text": "Sen ilk hangi işi devrederdin?\n**Yorumlara yaz.**",
+     "at": 1.0
+    }
+   ]
+  }
+ ]
+}
