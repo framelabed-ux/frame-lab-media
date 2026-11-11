@@ -75,9 +75,7 @@
    ],
    "layout": "chat",
    "keyword": "REHBER"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
    "kind": "carousel",
@@ -100,9 +98,12 @@
     "https://indiantelevision.com/mam/ogilvy-launches-echo-a-consent-first-ai-platform-to-protect-celebrity-likenesses/",
     "https://reel360.com/article/caa-and-ogilvy-launch-echo-bringing-ai-celebrity-doubles-to-advertising/"
    ],
-   "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı."
+   "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı.",
+   "media_id": "18100588367424828",
+   "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)"
   }
  ],
+ "queue": [],
  "stories": [
   {
    "date": "2026-11-09",
