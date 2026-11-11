@@ -377,7 +377,7 @@ def reel(spec, out, voice=None):
     open(f"{tmp}/l.txt", "w").write("".join(f"file '{f}'\n" for f in files))
     subprocess.run(["ffmpeg","-y","-loglevel","error","-f","concat","-safe","0","-i",f"{tmp}/l.txt","-c","copy",f"{tmp}/v.mp4"], check=True)
     T = sum(s["duration"] for s in spec["scenes"]); here = os.path.dirname(os.path.abspath(__file__))
-    subprocess.run(["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav"], check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav", "-"] + _music_args(spec), check=True, stdout=subprocess.DEVNULL)
     if voice:  # spec["voice_segments"]: [[src_start, src_end, place_at], ...]
         segs = spec["voice_segments"]; parts = []; fc = f"[1:a]aresample=44100,highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=5:release=120,volume=1.6,asplit={len(segs)}" + "".join(f"[s{i}]" for i in range(len(segs))) + ";"
         for i, (a, b2, at) in enumerate(segs):
@@ -516,6 +516,9 @@ def reel_motion(spec, out, voice=None):
     cmd = ["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav"]
     if spec.get("sfx", True):
         json.dump(ev, open(f"{tmp}/sfx.json", "w")); cmd.append(f"{tmp}/sfx.json")
+    else:
+        cmd.append("-")
+    cmd += _music_args(spec)
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL)
     if voice:
         _mix_voice(spec, voice, T, tmp)
@@ -524,6 +527,14 @@ def reel_motion(spec, out, voice=None):
     subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f"{tmp}/v.mp4","-i",f"{tmp}/a.wav","-map","0:v","-map","1:a","-c:v","copy","-af","apad",
                     "-c:a","aac","-b:a","192k","-t",str(T),"-movflags","+faststart",out+".tmp.mp4"], check=True)
     os.replace(out + ".tmp.mp4", out)
+
+def _music_args(spec):
+    """spec["music"]: {"style": pop|lofi|house|synthwave|minimal|trap|funk|ambient, "seed": int}.
+    Yoksa tohum içerikten türetilir, böylece her video farklı müzik alır."""
+    import zlib
+    m = spec.get("music") or {}
+    seed = int(m.get("seed", zlib.crc32(json.dumps(spec.get("scenes", []), ensure_ascii=False).encode()) % 100000))
+    return [m.get("style", "auto"), str(seed)]
 
 def _mix_voice(spec, voice, T, tmp):
     """spec["voice_segments"]: [[kaynak_baş, kaynak_son, sahne_no], ...] -> ses, o sahnenin başından 0.25 sn sonra başlar."""

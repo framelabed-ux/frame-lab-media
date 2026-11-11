@@ -268,5 +268,9 @@
    21.32,
    4
   ]
- ]
+ ],
+ "music": {
+  "style": "synthwave",
+  "seed": 41
+ }
 }

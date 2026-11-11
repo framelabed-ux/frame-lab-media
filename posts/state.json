@@ -19,7 +19,8 @@
    "media_id": "18090307286284943",
    "status": "yayında (20:00)",
    "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
-   "layout": "classic"
+   "layout": "classic",
+   "music": "pop"
   },
   {
    "date": "2026-11-10",
@@ -60,7 +61,8 @@
     "https://x.com/claudeai/status/2119867114450268322",
     "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
     "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
-   ]
+   ],
+   "music": "pop"
   },
   {
    "date": "2026-11-10",
@@ -119,7 +121,8 @@
     "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
     "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
    ],
-   "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn."
+   "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
+   "music": "lofi"
   }
  ],
  "stories": [
@@ -229,7 +232,8 @@
     "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
    ],
    "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
-   "publish_at": "2026-11-11 12:00 (send_later ile bu oturumdan)"
+   "publish_at": "2026-11-11 12:00 (send_later ile bu oturumdan)",
+   "music": "synthwave"
   }
  ]
 }
