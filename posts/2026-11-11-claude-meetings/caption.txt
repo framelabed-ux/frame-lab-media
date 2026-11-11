@@ -1,0 +1,14 @@
+Claude artık toplantılara katılıp not almanın ötesine geçiyor.
+
+Anthropic 10 Kasım'da Claude Meetings'i duyurdu:
+
+• Toplantıya görünür bir katılımcı olarak giriyor, kendini tanıtıp sohbete bildirim bırakıyor.
+• Konuşma sürerken işe başlıyor: konuşulan planın taslağını çıkarıyor, zaman çizelgesi hazırlıyor, sohbetteki sorulara cevap veriyor.
+• Toplantı bitince notlar, görevler ve hazırladığı her şey Claude'da duruyor.
+• Gizlilik: Yönetici izin vermedikçe dışarıdan misafir olan toplantılara girmiyor, sonradan biri katılırsa toplantıdan çıkıyor.
+
+Şimdilik beta: Team ve Enterprise planlarında, Google Meet'te çalışıyor. Diğer platformların sonra geleceği söyleniyor. Aynı gün Claude Whiteboards ve Claude Sheets de beta olarak tüm ücretli planlara geldi.
+
+Toplantı notlarını yapay zekâya bırakır mıydın? Yorumlara yaz.
+
+#yapayzeka #claude #anthropic #verimlilik #toplantı #dijitalgündem #reels

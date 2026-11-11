@@ -1,0 +1,47 @@
+{
+ "theme": "dark",
+ "bg": "glow",
+ "pattern": "rings",
+ "align": "center",
+ "foot_right": "",
+ "nofoot": true,
+ "elements": [
+  {
+   "type": "burst",
+   "x": 90,
+   "y": 1180,
+   "size": 220,
+   "rot": -8
+  },
+  {
+   "type": "burst",
+   "x": 850,
+   "y": 1100,
+   "size": 120,
+   "rot": 16
+  },
+  {
+   "type": "phone",
+   "center": true,
+   "w": 600,
+   "title": "Haftalık toplantı",
+   "blocks": [
+    "Katılımcılar: Ece, Can, Claude",
+    "Claude: Konuştuğumuz planın taslağını hazırladım.",
+    "Planı aç"
+   ],
+   "accent": 2,
+   "bottom": -380
+  },
+  {
+   "type": "lead",
+   "text": "Anthropic dün duyurdu"
+  },
+  {
+   "type": "h1",
+   "text": "Claude artık\n{{toplantına katılıyor.}}",
+   "light": true,
+   "size": 116
+  }
+ ]
+}

@@ -103,7 +103,25 @@
    "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-11-claude-meetings",
+   "kind": "reel",
+   "publish_date": "2026-11-11",
+   "layout": "editorial",
+   "files": [
+    "posts/2026-11-11-claude-meetings/reel.mp4"
+   ],
+   "cover": "posts/2026-11-11-claude-meetings/cover.jpg",
+   "cover_tone": "dark",
+   "caption": "Claude artık toplantılara katılıp not almanın ötesine geçiyor.\n\nAnthropic 10 Kasım'da Claude Meetings'i duyurdu:\n\n• Toplantıya görünür bir katılımcı olarak giriyor, kendini tanıtıp sohbete bildirim bırakıyor.\n• Konuşma sürerken işe başlıyor: konuşulan planın taslağını çıkarıyor, zaman çizelgesi hazırlıyor, sohbetteki sorulara cevap veriyor.\n• Toplantı bitince notlar, görevler ve hazırladığı her şey Claude'da duruyor.\n• Gizlilik: Yönetici izin vermedikçe dışarıdan misafir olan toplantılara girmiyor, sonradan biri katılırsa toplantıdan çıkıyor.\n\nŞimdilik beta: Team ve Enterprise planlarında, Google Meet'te çalışıyor. Diğer platformların sonra geleceği söyleniyor. Aynı gün Claude Whiteboards ve Claude Sheets de beta olarak tüm ücretli planlara geldi.\n\nToplantı notlarını yapay zekâya bırakır mıydın? Yorumlara yaz.\n\n#yapayzeka #claude #anthropic #verimlilik #toplantı #dijitalgündem #reels",
+   "sources": [
+    "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+    "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
+   ],
+   "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle)."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -188,20 +206,10 @@
   "adobe-max-2026",
   "claude-fable-5-2",
   "ogilvy-echo",
-  "adobe-max-2026-firefly-creative-agent"
+  "adobe-max-2026-firefly-creative-agent",
+  "claude-meetings-sheets-whiteboards"
  ],
- "hot_pending": [
-  {
-   "key": "claude-meetings-sheets-whiteboards",
-   "found": "2026-11-11 sabah",
-   "title": "Anthropic: Claude Meetings (Google Meet, Team/Enterprise beta), Claude Whiteboards ve Claude Sheets (ücretli planlar, beta), Claude Data GA",
-   "note": "Ofis araçları duyurusu (10 Kasım). Model sürümü değil; içerik üreticilere doğrudan etkisi orta. Hafta içi carousel/Kare'den Haberler adayı.",
-   "sources": [
-    "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
-    "https://fortune.com/2026/11/10/anthropic-launches-office-knowledge-worker-product-launch-ahead-of-ipo/"
-   ]
-  }
- ],
+ "hot_pending": [],
  "scheduled": [
   {
    "slug": "2026-11-11-adobe-max-creative-agent",
