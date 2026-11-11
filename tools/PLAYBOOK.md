@@ -38,6 +38,8 @@ Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir.
   - **steps:** büyük, içi boş numaralı adımlar.
   - **quote:** ortalanmış büyük cümle, vizör çerçevesi (`"frame": true`) ve `"align": "center"` ile.
   - **tiles:** 2x2 kutular (4 madde, 4 araç).
+  - **bars:** yatay çubuk karşılaştırması (iki–dört değer, biri vurgulu).
+  - **ring:** yüzde halkası + kısa etiket (tek bir oran).
   - **classic:** Kare + etiket + başlık + açıklama (eski kalıp, artık nadiren).
 - Süsleme seçenekleri: `"pattern": "grid"` (laboratuvar kareli zemin) ya da `"dots"`, `sticker` (yuvarlak, eğik etiket: ÜCRETSİZ, YENİ, DENEDİK), `kare_peek` (kenardan bakan büyük Kare), başlıkta `"outline": true` (içi boş yazı), `"narrow": true` (yan tarafta telefon ya da Kare varken metni daraltır).
 - Kurallar:
@@ -99,14 +101,21 @@ Story o akşamki gönderinin merak uyandıran bir duyurusu, günün kısa bir ip
 Öne çıkanlar (Ece uygulamadan ekliyor, API desteklemiyor): Başla, Gündem, AI Lab, Tasarım, Mutfak. Sabah raporunda o günün story'sinin hangi öne çıkana eklenebileceğini öner. Kalıcı değeri olan story'ler (ipucu, formül, gündem özeti) öne çıkana uygundur, akşam duyuruları değildir.
 
 ## Hareketli Reel (varsayılan)
-Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini istedi. Tüm Reel'ler **motion modunda** üretilir (örnek: `tools/examples/reel-motion.json`):
-- Spec'e `"motion": true` eklenir. Sahneler yan yana bir şerit olur ve her geçişte sayfa sola kayar.
-- Kare sahnelere öğe olarak eklenmez. Her sahneye `"kare": {"x":…, "y":…, "size":…, "face":…}` yazılır, Kare geçişlerde bir sonraki konuma zıplar, sahnede hafifçe süzülür ve göz kırpar.
-- Kare'nin konumu metinle çakışmamalı: boş alanlara yerleştir, sahneden sahneye köşe, boyut ve ifade değişsin. `"kare": null` olursa Kare o sahnede görünmez.
-- `bignum` öğesine `"count_at": 0.3` eklenirse rakam sıfırdan sayarak gelir.
-- Her Reel'in sonuna otomatik olarak 3,2 saniyelik logo outro'su eklenir: FL çizilerek belirir, yeşil nokta oturur, FRAME/LAB, slogan, "Takip et" ve @frame.labo gelir. Kare son sahneden yukarı zıplayıp çıkar. Kapatmak için spec'e `"outro": false`. Toplam süre hesaplanırken outro'yu da say.
-- `"stills": [saniye, …]` ile kontrol kareleri üretilir. Her sahnenin sonundan bir kare alıp Read ile bakılır, çakışma varsa konum düzeltilir. Kapak için ilk sahnenin dolu anındaki kare (`*_still_*.jpg`) kullanılabilir.
-
+Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini istedi. Tüm Reel'ler **motion modunda** üretilir. Örnekler: `tools/examples/reel-motion.json` (haber kurgusu) ve `tools/examples/reel-styles.json` (grafik öğeleri).
+- Spec'e `"motion": true` eklenir. Her öğeye `"at"` (sahne başından saniye) yazılır; `at` olmayan öğe animasyonsuz, baştan görünür.
+- **Sahne geçişleri:** Sahneye `"transition"` yazılabilir: `slide` (yana kayar), `up` (yukarı kayar), `stack` (yeni sayfa kart gibi üste biner), `zoom` (içinden geçer), `wipe` (yeşil renk perdesi). Yazılmazsa bu sırayla kendiliğinden döner, outro'ya renk perdesiyle geçilir. Aynı geçişi art arda kullanma.
+- **Yazı ve öğe animasyonları otomatiktir:** h1/h2/quote kelime kelime gelir, `[[vurgu]]` sonradan süpürülerek boyanır, tag harf aralığı daralarak gelir, tiles/steps/rows/chips/chat/compare çocukları sırayla girer (chat için `"gap"` ile balon aralığı ayarlanır, varsayılan 0,6 sn), bignum ve pill yaylanarak büyür, sticker dönerek oturur. Zemin deseni yavaşça kayar, sahne çok hafif yaklaşır.
+- **Grafik öğeleri (Reel'de animasyonlu, carousel/statikte sabit):**
+  - `{"type":"bars","items":[["Reel",1140,"1.140"],["Carousel",4,"4"]],"accent":0,"at":0.7}` yatay çubuk karşılaştırması; çubuklar dolar, sayılar sayarak gelir. `"max"` ile tam genişlik değeri verilebilir.
+  - `{"type":"ring","value":58,"text":"%58","size":600,"label":"ilk 3 saniyede [[geçti.]]","at":0.3}` yüzde halkası (value 0–100).
+  - `{"type":"marquee","text":"REEL MI CAROUSEL MI","top":1420}` arka planda akan dev yazı şeridi; yalnızca Reel'de, sahne başına en fazla bir tane, metnin üstüne gelmesin.
+  - `bignum` öğesine `"count_at": 0.3` eklenirse rakam sıfırdan sayarak gelir ("1.140" gibi binlik ayraçlı sayılar da sayar).
+- **Kare:** sahnelere öğe olarak eklenmez. Her sahneye `"kare": {"x":…, "y":…, "size":…, "face":…}` yazılır; Kare geçişlerde bir sonraki konuma zıplar (zoom ve wipe geçişlerinde takla atar), sahnede süzülür ve göz kırpar. Konumu metinle çakışmamalı; sahneden sahneye köşe, boyut ve ifade değişsin. `"kare": null` olursa o sahnede görünmez.
+- **İlerleme çubuğu:** üstte sahne sayısı kadar parçalı ince çubuk otomatik gelir (izleyene videonun kısa olduğunu gösterir). Kapatmak için spec'e `"progress": false`. Üstteki ilk 100 pikselde öğe olmasın.
+- **Ses efektleri:** geçişlerde hafif "whoosh", ana öğe girerken "pop", logoda "ding" otomatik eklenir ve müzikle karışır. Kapatmak için `"sfx": false`.
+- Her Reel'in sonuna otomatik olarak 3,2 saniyelik logo outro'su eklenir. Kapatmak için `"outro": false`. Toplam süre hesaplanırken outro'yu da say.
+- `"stills": [saniye, …]` ile kontrol kareleri üretilir. Her sahnenin dolu anından ve en az bir geçiş anından kare alıp Read ile bak; çakışma, taşma ya da Kare'nin yazıyı kapatması varsa düzelt. Kapak için ilk sahnenin dolu anındaki kare (`*_still_*.jpg`) kullanılabilir.
+- **İlk sahne boş açılmasın:** ilk sahnede tag `"at": 0`, başlık `"at": 0.05` olsun; alt yazı en geç 0,8'de gelsin.
 - **Açılış kancası:** Ortalama izleyici ilk 3 saniyede karar veriyor (Fable Reel'inde %58'i ilk 3 saniyede geçti). İlk sahne 0,5 saniye içinde dolu olmalı, rakamlı ya da merak uyandıran tek bir cümleyle açılmalı ("Claude artık %30 daha hızlı.", "Bu reklamda oyuncu hiç sete gelmedi."). Logo, selamlaşma, "bugün sana … anlatacağım" ile açma.
 - **Süre:** İdeal 20–35 saniye, outro dahil en fazla 45 saniye. Fable Reel'inde ortalama izlenme 12 saniyeydi, asıl bilgi ilk 10 saniyede verilmeli.
 

@@ -12,18 +12,18 @@
     {
      "type": "tag",
      "text": "SICAK GELİŞME",
-     "at": 0.2
+     "at": 0.0
     },
     {
      "type": "h1",
      "text": "Claude\nFable 5.2\n[[çıktı.]]",
      "size": 140,
-     "at": 0.4
+     "at": 0.05
     },
     {
      "type": "lead",
      "text": "Anthropic dün duyurdu. 30 saniyede özetliyoruz.",
-     "at": 1.2
+     "at": 0.7
     }
    ],
    "kare": {
@@ -175,7 +175,8 @@
     "y": 1420,
     "size": 300,
     "face": "saskin"
-   }
+   },
+   "transition": "zoom"
   },
   {
    "theme": "light",

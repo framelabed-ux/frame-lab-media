@@ -94,50 +94,105 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .pbg:before{{content:'';position:absolute;left:0;right:0;top:0;height:220px;background:linear-gradient(to bottom,rgba(0,0,0,.35),transparent);z-index:1}}
 .credit{{position:absolute;right:{88 if h<1500 else 90}px;z-index:3;font-size:20px;letter-spacing:.04em;color:{grey};text-align:right}}
 .photo{{width:100%;border-radius:32px;background-size:cover;background-repeat:no-repeat;position:relative;overflow:hidden}}
-.photo .pc{{position:absolute;right:20px;bottom:16px;font-size:20px;color:#fff;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:10px}}"""
+.photo .pc{{position:absolute;right:20px;bottom:16px;font-size:20px;color:#fff;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:10px}}
+.w{{display:inline-block;transform-origin:0 100%}}
+.hl[data-hl]{{background:linear-gradient({hb},{hb}) no-repeat 0 50%/0% 100%}}
+.bars{{display:flex;flex-direction:column;gap:{30 if h<1500 else 38}px;width:100%;text-align:left}}
+.bar .bl{{display:flex;justify-content:space-between;align-items:baseline;font-family:'Inter Display';font-weight:700;font-size:{34 if h<1500 else 42}px;margin-bottom:12px}}
+.bar .bt{{height:{40 if h<1500 else 48}px;border-radius:24px;background:{line};overflow:hidden}}
+.bar .bf{{height:100%;border-radius:24px;background:{grey}}}
+.bar.hot .bf{{background:{LIME}}}
+.bar.hot .bl span:last-child{{color:{lab}}}
+.ring{{position:relative;display:inline-flex;align-items:center;justify-content:center}}
+.ring .rv{{position:absolute;font-family:'Inter Display';font-weight:800;letter-spacing:-.04em}}
+.mq{{position:absolute;left:-60px;white-space:nowrap;font-family:'Inter Display';font-weight:800;font-size:230px;line-height:1;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:3px {grey};opacity:.3;z-index:0;transform-origin:0 50%}}"""
+
+def words(text, at, gap=0.06):
+    """Başlığı kelime kelime animasyonlu HTML'e çevirir; [[...]] vurguları korunur ve sonradan süpürülerek gelir."""
+    k = 0; out = ""
+    parts = text.replace("]]", "[[").split("[[")  # tek indeksler vurgu
+    for pi, part in enumerate(parts):
+        seg = ""
+        for li, line in enumerate(part.split("\n")):
+            if li: seg += "<br>"
+            for wi, w in enumerate(line.split(" ")):
+                if wi: seg += " "
+                if w:
+                    seg += f'<span class="w" data-w="{round(at + k*gap, 3)}">{H.escape(w)}</span>'; k += 1
+        out += f'<span class="hl" data-hl="{round(at + k*gap + 0.12, 3)}">{seg}</span>' if pi % 2 else seg
+    return out
 
 def el(e, light):
-    k = e["type"]; at = f' data-in="{e["at"]}"' if "at" in e else ""
-    cls = ' class="a"' if "at" in e else ""
+    k = e["type"]; has = "at" in e
+    at = f' data-in="{e["at"]}"' if has else ""
+    cls = ' class="a"' if has else ""; ac = " a" if has else ""
+    def A(i=0, gap=0.12, fx=""):  # sıralı giriş: i. çocuk, gap sn arayla, fx efektiyle
+        return (f' data-in="{round(e["at"] + i*gap, 3)}"' + (f' data-fx="{fx}"' if fx else "")) if has else ""
     if k == "kare":
         return f'<div{cls}{at} data-pop="1" style="margin-left:-30px">{kare(e.get("size",340), e.get("face","mutlu"), bg="none", light_bg=light)}</div>'
     if k in ("h1", "h2"):
         st = f' style="font-size:{e["size"]}px"' if "size" in e else ""
         oc = ' class="h1o"' if e.get("outline") else ""
-        cl = (cls[:-1] + (" h1o" if e.get("outline") else "") + '"') if cls else oc
         nar = '<div class="narrow">' if e.get("narrow") else ""
-        return f'{nar}<{k}{cl}{at}{st}>{hl(e["text"])}</{k}>' + ("</div>" if nar else "")
-    if k == "tag":  return f'<div class="tag{" a" if at else ""}"{at}>{H.escape(e["text"])}</div>'
-    if k == "lead": return f'<p class="lead{" a" if at else ""}{" narrow" if e.get("narrow") else ""}"{at}>{hl(e["text"])}</p>'
-    if k == "chips": return f'<div{cls}{at}>' + "".join(f'<span class="chip">{H.escape(c)}</span>' for c in e["items"]) + "</div>"
-    if k == "pill": return f'<div{cls}{at}><span class="pill{" muted" if e.get("muted") else ""}">{H.escape(e["text"])}</span></div>'
-    if k == "rows": return f'<div{cls}{at} style="border-bottom:2px solid rgba(127,127,127,.3)">' + "".join(
-        f'<div class="row"><div class="rk">{H.escape(r[0])}</div><div><div class="rt">{H.escape(r[1])}</div><div class="rd">{H.escape(r[2])}</div></div></div>' for r in e["items"]) + "</div>"
+        body = words(e["text"], e["at"]) if has else hl(e["text"])
+        return f'{nar}<{k}{oc}{st}>{body}</{k}>' + ("</div>" if nar else "")
+    if k == "tag":  return f'<div class="tag{ac}"{A(fx="track")}>{H.escape(e["text"])}</div>'
+    if k == "lead": return f'<p class="lead{ac}{" narrow" if e.get("narrow") else ""}"{at}>{hl(e["text"])}</p>'
+    if k == "chips": return "<div>" + "".join(f'<span class="chip{ac}"{A(i, 0.08, "pop")}>{H.escape(c)}</span>' for i, c in enumerate(e["items"])) + "</div>"
+    if k == "pill": return f'<div><span class="pill{" muted" if e.get("muted") else ""}{ac}"{A(fx="pop")}>{H.escape(e["text"])}</span></div>'
+    if k == "rows": return '<div style="border-bottom:2px solid rgba(127,127,127,.3)">' + "".join(
+        f'<div class="row{ac}"{A(i, 0.14, "left")}><div class="rk">{H.escape(r[0])}</div><div><div class="rt">{H.escape(r[1])}</div><div class="rd">{H.escape(r[2])}</div></div></div>' for i, r in enumerate(e["items"])) + "</div>"
     if k == "card":
         inner = H.escape(e["text"]).replace('"', "&quot;")
         body = (f'<div class="ct{" strong" if e.get("strong") else ""}" style="{("font-size:%spx" % e["size"]) if "size" in e else ""}" data-type="{e["typed"][0]},{e["typed"][1]}" data-full="{inner}"></div>'
                 if "typed" in e else f'<div class="ct{" strong" if e.get("strong") else ""}" style="{("font-size:%spx" % e["size"]) if "size" in e else ""}">{H.escape(e["text"])}</div>')
-        return f'<div class="card{" out" if e.get("outline") else ""}{" a" if at else ""}"{at}><div class="lbl">{H.escape(e.get("label",""))}</div>{body}</div>'
+        return f'<div class="card{" out" if e.get("outline") else ""}{ac}"{at}><div class="lbl">{H.escape(e.get("label",""))}</div>{body}</div>'
     if k == "bignum":
-        sz = e.get("size", 420 if True else 0)
+        sz = e.get("size", 420)
         cnt = f' data-count="{e["count_at"]}" data-full="{H.escape(e["text"])}"' if "count_at" in e else ""
-        return f'<div{cls}{at}><div class="bignum" style="font-size:{sz}px"><span class="u"{cnt}>{H.escape(e["text"])}</span></div>' + (f'<div class="blabel">{hl(e["label"])}</div>' if e.get("label") else "") + "</div>"
+        ib = ";display:inline-block" if has else ""
+        return (f'<div><div class="bignum{ac}"{A(fx="pop")} style="font-size:{sz}px{ib}"><span class="u"{cnt}>{H.escape(e["text"])}</span></div>'
+                + (f'<div class="blabel{ac}"{A(1, 0.25)}>{hl(e["label"])}</div>' if e.get("label") else "") + "</div>")
     if k == "chat":
         out = ""
-        for who, txt in e["items"]:
+        for i, (who, txt) in enumerate(e["items"]):
             nm = e.get("names", {}).get(who, "SEN" if who == "you" else "YAPAY ZEKÂ")
-            out += f'<div class="bub {who}"><span class="who">{H.escape(nm)}</span>{H.escape(txt)}</div>'
-        return f'<div class="chat{" a" if at else ""}"{at}>{out}</div>'
+            out += f'<div class="bub {who}{ac}"{A(i, e.get("gap", 0.6), "pop")} style="transform-origin:{"100%" if who == "you" else "0"} 100%"><span class="who">{H.escape(nm)}</span>{H.escape(txt)}</div>'
+        return f'<div class="chat">{out}</div>'
     if k == "compare":
         L, R = e["left"], e["right"]
         ts = f' style="font-size:{e["size"]}px;font-family:\'Inter Display\';font-weight:800;line-height:1.1"' if "size" in e else ""
-        return f'<div class="cmp{" a" if at else ""}"{at}><div class="c"><div class="k">{H.escape(L["label"])}</div><div class="t"{ts}>{H.escape(L["text"])}</div></div><div class="c good"><div class="k">{H.escape(R["label"])}</div><div class="t"{ts}>{H.escape(R["text"])}</div></div></div>'
+        return (f'<div class="cmp"><div class="c{ac}"{A(0, 0.15, "left")}><div class="k">{H.escape(L["label"])}</div><div class="t"{ts}>{H.escape(L["text"])}</div></div>'
+                f'<div class="c good{ac}"{A(1, 0.15, "right")}><div class="k">{H.escape(R["label"])}</div><div class="t"{ts}>{H.escape(R["text"])}</div></div></div>')
     if k == "steps":
-        return f'<div class="steps{" a" if at else ""}"{at}>' + "".join(f'<div class="step"><div class="n">{i+1:02d}</div><div><div class="st">{H.escape(t)}</div>' + (f'<div class="sd">{H.escape(d)}</div>' if d else "") + "</div></div>" for i, (t, d) in enumerate(e["items"])) + "</div>"
+        return '<div class="steps">' + "".join(f'<div class="step{ac}"{A(i, 0.18, "left")}><div class="n">{i+1:02d}</div><div><div class="st">{H.escape(t)}</div>' + (f'<div class="sd">{H.escape(d)}</div>' if d else "") + "</div></div>" for i, (t, d) in enumerate(e["items"])) + "</div>"
     if k == "quote":
-        return f'<div{cls}{at}><div class="qm">“</div><div class="quote">{hl(e["text"])}</div></div>'
+        body = words(e["text"], e["at"] + 0.15) if has else hl(e["text"])
+        return f'<div><div class="qm{ac}"{A()}>“</div><div class="quote">{body}</div></div>'
     if k == "tiles":
-        return f'<div class="tiles{" a" if at else ""}"{at}>' + "".join(f'<div class="tile"><div class="ti">{H.escape(t[0])}</div><div class="tt">{H.escape(t[1])}</div></div>' for t in e["items"]) + "</div>"
+        return '<div class="tiles">' + "".join(f'<div class="tile{ac}"{A(i, 0.1, "pop")}><div class="ti">{H.escape(t[0])}</div><div class="tt">{H.escape(t[1])}</div></div>' for i, t in enumerate(e["items"])) + "</div>"
+    if k == "bars":  # items: [etiket, değer, gösterilecek metin]; "accent": vurgulanacak satırın sırası; "max": tam genişlik değeri
+        mx = e.get("max") or max(it[1] for it in e["items"]); out = ""
+        for i, it in enumerate(e["items"]):
+            pct = max(round(100 * it[1] / mx, 1), 2.5); txt = H.escape(it[2] if len(it) > 2 else str(it[1]))
+            t0 = round(e.get("at", 0) + i*0.2 + 0.1, 3)
+            w = f' data-bar="{t0},{pct}" style="width:0"' if has else f' style="width:{pct}%"'
+            c = f' data-count="{t0}" data-full="{txt}"' if has else ""
+            out += (f'<div class="bar{" hot" if i == e.get("accent", -1) else ""}{ac}"{A(i, 0.2)}><div class="bl"><span>{H.escape(it[0])}</span><span{c}>{txt}</span></div>'
+                    f'<div class="bt"><div class="bf"{w}></div></div></div>')
+        return f'<div class="bars">{out}</div>'
+    if k == "ring":  # value: 0-100; text: ortadaki yazı (ör. "%80"); label: alt yazı
+        sz = e.get("size", 560); v = e["value"]; a0 = round(e.get("at", 0) + 0.1, 3); txt = H.escape(e.get("text", str(v)))
+        col = LIME if not light else LIME_DARK
+        d = f' data-ring="{a0},{v}" style="stroke-dasharray:100;stroke-dashoffset:100"' if has else f' style="stroke-dasharray:100;stroke-dashoffset:{100 - v}"'
+        c = f' data-count="{a0}" data-full="{txt}"' if has else ""
+        return (f'<div{cls}{A()}><div class="ring" style="width:{sz}px;height:{sz}px"><svg width="{sz}" height="{sz}" viewBox="0 0 120 120" style="transform:rotate(-90deg)">'
+                f'<circle cx="60" cy="60" r="50" fill="none" stroke="rgba(127,127,127,.25)" stroke-width="12"></circle>'
+                f'<circle cx="60" cy="60" r="50" fill="none" stroke="{col}" stroke-width="12" stroke-linecap="round" pathLength="100"{d}></circle></svg>'
+                f'<div class="rv" style="font-size:{int(sz*0.3)}px"{c}>{txt}</div></div>'
+                + (f'<div class="blabel">{hl(e["label"])}</div>' if e.get("label") else "") + "</div>")
+    if k == "marquee":  # arka planda akan dev yazı şeridi (yalnızca Reel)
+        return f'<div class="mq" data-mq="{e.get("speed", 150)}" style="top:{e.get("top", 1380)}px;transform:rotate(-6deg)">{(H.escape(e["text"]) + " · ") * 14}</div>'
     if k == "logo_anim":
         a = e.get("at", 0.2); sz = e.get("size", 380)
         col = PAPER if not light else INK
@@ -149,12 +204,12 @@ def el(e, light):
                 f'</svg></div>')
     if k == "sticker":
         st = f' style="top:{e["top"]}px"' if "top" in e else ""
-        return f'<div class="sticker"{st}>{hl(e["text"])}</div>'
+        return f'<div class="sticker a" data-in="{e.get("at", 0.15)}" data-fx="spin"{st}>{hl(e["text"])}</div>'
     if k == "kare_peek":
-        return f'<div class="peek">{kare(e.get("size",620), e.get("face","goz"), bg="none", light_bg=light)}</div>'
+        return f'<div class="peek a" data-in="{e.get("at", 0.3)}" data-fx="peek">{kare(e.get("size",620), e.get("face","goz"), bg="none", light_bg=light)}</div>'
     if k == "phone":
         blocks = "".join(f'<div class="pb{" acc" if i == e.get("accent", -1) else ""}">{H.escape(b)}</div>' for i, b in enumerate(e.get("blocks", [])))
-        return f'<div class="phone"><div class="pt">{H.escape(e.get("title",""))}</div>{blocks}</div>'
+        return f'<div class="phone a" data-in="{e.get("at", 0.3)}" data-fx="phone"><div class="pt">{H.escape(e.get("title",""))}</div>{blocks}</div>'
     if k == "photo_bg":  # tam genişlik görsel, alta doğru zemine erir
         hh = e.get("height", 820)
         src = "file://" + os.path.abspath(e["src"])
@@ -163,24 +218,43 @@ def el(e, light):
     if k == "photo":  # yuvarlatılmış görsel kartı
         src = "file://" + os.path.abspath(e["src"])
         cr = f'<span class="pc">{H.escape(e["credit"])}</span>' if e.get("credit") else ""
-        return f'<div class="photo{" a" if at else ""}"{at} style="height:{e.get("height",520)}px;background-image:url(\'{src}\');background-position:{e.get("pos","center")}">{cr}</div>'
+        return f'<div class="photo{ac}"{at} style="height:{e.get("height",520)}px;background-image:url(\'{src}\');background-position:{e.get("pos","center")}">{cr}</div>'
     raise ValueError("bilinmeyen öğe: " + k)
 
 JS = """<script>
 function ease(x){return 1-Math.pow(1-Math.min(Math.max(x,0),1),3)}
+function back(x){x=Math.min(Math.max(x,0),1);const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
 window.render=function(t){
- document.querySelectorAll('[data-in]').forEach(e=>{const s=parseFloat(e.dataset.in);const p=ease((t-s)/0.45);
-   e.style.opacity=p; e.style.transform='translateY('+(40*(1-p))+'px) scale('+(e.dataset.pop?0.85+0.15*p:1)+')';});
+ const live=t<500;  // sabit görsellerde (t=999) sürekli hareketler kapalı
+ document.querySelectorAll('[data-in]').forEach(e=>{const s=parseFloat(e.dataset.in);const x=(t-s)/0.45;const p=ease(x);const fx=e.dataset.fx||'';
+   let tf='translateY('+(40*(1-p))+'px) scale('+(e.dataset.pop?0.85+0.15*p:1)+')', op=p;
+   if(fx=='pop'){tf='scale('+(0.6+0.4*back((t-s)/0.5))+')';op=Math.min(1,Math.max(x,0)*3);}
+   else if(fx=='left'){tf='translateX('+(-90*(1-p))+'px)';}
+   else if(fx=='right'){tf='translateX('+(90*(1-p))+'px)';}
+   else if(fx=='spin'){tf='rotate('+(12-80*(1-ease((t-s)/0.6))+(live?Math.sin(t*2.2)*3:0))+'deg) scale('+Math.max(back((t-s)/0.6),0)+')';op=(t>=s?1:0);}
+   else if(fx=='peek'){tf='translateX('+(340*(1-back((t-s)/0.7)))+'px) rotate('+(-10+(live?Math.sin(t*1.8)*2:0))+'deg)';op=(t>=s?1:0);}
+   else if(fx=='phone'){tf='translateY('+(560*(1-p))+'px) rotate(-7deg)';op=Math.min(1,p*2);}
+   else if(fx=='track'){e.style.letterSpacing=(0.12+0.45*(1-p))+'em';tf='none';}
+   e.style.opacity=op; e.style.transform=tf;});
+ document.querySelectorAll('[data-w]').forEach(e=>{const s=parseFloat(e.dataset.w);const x=(t-s)/0.5;
+   e.style.opacity=Math.min(Math.max(x*2.5,0),1); e.style.transform='translateY('+(0.55*(1-back(x)))+'em) rotate('+(7*(1-ease(x)))+'deg)';});
+ document.querySelectorAll('[data-hl]').forEach(e=>{const s=parseFloat(e.dataset.hl);e.style.backgroundSize=(ease((t-s)/0.4)*100)+'% 100%';e.style.color=(t>=s-0.15)?'':'inherit';});
  document.querySelectorAll('[data-type]').forEach(e=>{const [s,d]=e.dataset.type.split(',').map(parseFloat);
    const full=e.dataset.full; const n=Math.round(full.length*Math.min(Math.max((t-s)/d,0),1));
    e.textContent=full.slice(0,n)+(t>=s && n<full.length && Math.floor(t*3)%2==0?'|':'');});
  document.querySelectorAll('[data-draw]').forEach(e=>{const s=parseFloat(e.dataset.draw);const p=ease((t-s)/0.7);e.style.strokeDashoffset=String(1-p);});
- document.querySelectorAll('[data-count]').forEach(e=>{const s=parseFloat(e.dataset.count);const full=e.dataset.full;const m=full.match(/[0-9]+/);if(!m)return;
-   const p=ease((t-s)/0.9);const v=Math.round(parseInt(m[0])*p);e.textContent=full.replace(m[0],String(v));});
+ document.querySelectorAll('[data-count]').forEach(e=>{const s=parseFloat(e.dataset.count);const full=e.dataset.full;const m=full.match(/[0-9]{1,3}([.][0-9]{3})+|[0-9]+/);if(!m)return;
+   const p=ease((t-s)/0.9);const th=m[0].indexOf('.')>=0;let z=String(Math.round(parseInt(m[0].split('.').join(''))*p)),o='';
+   if(th){while(z.length>3){o='.'+z.slice(-3)+o;z=z.slice(0,-3);}}
+   e.textContent=full.replace(m[0],z+o);});
+ document.querySelectorAll('[data-bar]').forEach(e=>{const [s,v]=e.dataset.bar.split(',').map(parseFloat);e.style.width=(v*ease((t-s)/0.9))+'%';});
+ document.querySelectorAll('[data-ring]').forEach(e=>{const [s,v]=e.dataset.ring.split(',').map(parseFloat);e.style.strokeDashoffset=String(100-v*ease((t-s)/1.0));});
+ document.querySelectorAll('[data-mq]').forEach(e=>{e.style.transform='rotate(-6deg) translateX('+(live?-Math.max(t,-1)*parseFloat(e.dataset.mq):0)+'px)';});
+ if(live){const s=document.querySelector('.s.pat-grid,.s.pat-dots');if(s){s.style.backgroundPosition=(-2+t*14)+'px '+(-2+t*9)+'px';}}
 };
 </script>"""
 
-ABS = ("photo_bg", "sticker", "kare_peek", "phone")
+ABS = ("photo_bg", "marquee", "sticker", "kare_peek", "phone")
 def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="", frame=False):
     light = theme in ("light", "soft")
     t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""
@@ -252,38 +326,69 @@ def reel(spec, out, voice=None):
     os.replace(out + ".tmp.mp4", out)
 
 MOTION_JS = """<script>
-const S=__SCENES__, K=__KARE__, TR=0.6;
-function eio(x){x=Math.min(Math.max(x,0),1);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+const S=__SCENES__, K=__KARE__, X=__TRANS__, TH=__THEMES__, NC=__NC__, TR=0.6, LIME='__LIME__', INK='__INK__', PAPER='__PAPER__';
+const F=[...document.querySelectorAll('iframe')], W1=document.getElementById('w1'), W2=document.getElementById('w2'), PB=document.getElementById('pb');
+function clamp(x){return Math.min(Math.max(x,0),1)}
+function eio(x){x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
 function lerp(a,b,p){return a+(b-a)*p}
 function setFace(f){document.querySelectorAll('#kare .f').forEach(e=>e.style.display=(e.dataset.face==f?'block':'none'))}
+function put(k,o){const f=F[k].style;f.visibility='visible';f.opacity=(o.op==null?1:o.op);f.zIndex=o.z||1;
+  f.transform='translate('+(o.x||0)+'px,'+(o.y||0)+'px) scale('+(o.s||1)+')';f.borderRadius=(o.r||0)+'px';
+  f.filter=o.dim?'brightness('+(1-o.dim)+')':'none';f.boxShadow=o.sh?'0 -40px 90px rgba(0,0,0,.5)':'none';}
 window.render=function(t){
   let i=0; for(let k=0;k<S.length;k++){ if(t>=S[k].start) i=k; }
-  let off=i*1080, sw=0;
-  const end=S[i].start+S[i].dur;
-  if(i<S.length-1 && t>end-TR){ sw=eio((t-(end-TR))/TR); off=(i+sw)*1080; }
-  document.getElementById('strip').style.transform='translateX('+(-off)+'px)';
-  document.querySelectorAll('iframe').forEach((f,k)=>{ try{ f.contentWindow.render(t-S[k].start) }catch(e){} });
+  const end=S[i].start+S[i].dur, local=t-S[i].start;
+  let q=0, sw=0; if(i<S.length-1 && t>end-TR){ q=(t-(end-TR))/TR; sw=eio(q); }
+  const ty=sw>0?X[i+1]:'';
+  // sahneler: yalnızca etkin olan(lar) görünür
+  F.forEach(f=>{f.style.visibility='hidden'});
+  const cam=1+0.03*clamp(local/S[i].dur);  // sahne boyunca çok hafif yaklaşma
+  let A={s:cam,z:1}, B=null;
+  if(sw>0){
+    if(ty=='up'){A.y=-1920*sw;B={y:1920*(1-sw),z:2};}
+    else if(ty=='stack'){A.s=cam*(1-0.1*sw);A.dim=0.55*sw;A.r=60*sw;B={y:1920*(1-sw),z:2,r:70*(1-sw),sh:1};}
+    else if(ty=='zoom'){A.s=cam*(1+0.6*sw);A.op=1-sw;A.z=2;B={s:1.2-0.2*sw,z:1};}
+    else if(ty=='wipe'){ if(q>=0.5){A=null;B={z:1};} }
+    else {A.x=-1080*sw;B={x:1080*(1-sw),z:2};}
+  }
+  if(A){put(i,A);try{F[i].contentWindow.render(local)}catch(e){}}
+  if(B){put(i+1,B);try{F[i+1].contentWindow.render(t-S[i+1].start)}catch(e){}}
+  // renk perdesi
+  if(ty=='wipe'){ W1.style.display=W2.style.display='block'; W2.style.background=(TH[i]=='dark'?PAPER:INK);
+    W2.style.transform='translateX('+lerp(-2150,1330,eio(q+0.12))+'px) skewX(-12deg)';
+    W1.style.transform='translateX('+lerp(-2150,1330,eio(q))+'px) skewX(-12deg)';
+  } else { W1.style.display=W2.style.display='none'; }
+  // ilerleme çubuğu
+  if(PB){ const dark=(sw>0.5 && i<S.length-1)?TH[i+1]=='dark':TH[i]=='dark';
+    PB.style.opacity=(i>=NC)?0:((i==NC-1 && NC<S.length)?1-sw:1);
+    [...PB.children].forEach((g,k)=>{ g.style.background=dark?'rgba(255,255,255,.22)':'rgba(0,0,0,.14)';
+      g.firstChild.style.background=dark?LIME:INK; g.firstChild.style.width=(clamp((t-S[k].start)/S[k].dur)*100)+'%'; }); }
   // Kare
   const a=K[i], b=(i<S.length-1?K[i+1]:K[i]); const el=document.getElementById('kare');
   if(!a && !b){ el.style.opacity=0; return; }
-  const A=a||{x:b.x,y:-500,size:b.size,face:b.face}, B=b||{x:A.x,y:-500,size:A.size,face:A.face};
-  let x=A.x,y=A.y,sz=A.size,rot=0,face=A.face;
-  const local=t-S[i].start;
+  const KA=a||{x:b.x,y:-500,size:b.size,face:b.face}, KB=b||{x:KA.x,y:-500,size:KA.size,face:KA.face};
+  let x=KA.x,y=KA.y,sz=KA.size,rot=0,face=KA.face;
   const intro=(i==0)?eio(local/0.7):1;
-  if(sw>0){ x=lerp(A.x,B.x,sw); y=lerp(A.y,B.y,sw)-Math.sin(Math.PI*sw)*260; sz=lerp(A.size,B.size,sw); rot=Math.sin(Math.PI*sw)*-18; face=sw<.5?A.face:B.face; }
+  if(sw>0){ x=lerp(KA.x,KB.x,sw); y=lerp(KA.y,KB.y,sw)-Math.sin(Math.PI*sw)*260; sz=lerp(KA.size,KB.size,sw);
+    rot=(ty=='zoom'||ty=='wipe')?-360*sw:Math.sin(Math.PI*sw)*-18; face=sw<.5?KA.face:KB.face; }
   else { y+=Math.sin(t*2.6)*14; rot=Math.sin(t*1.7)*4; }
-  if(i==0 && local<0.7){ y=lerp(A.y+500,A.y,intro); }
+  if(i==0 && local<0.7){ y=lerp(KA.y+500,KA.y,intro); }
   const bl=(t%3.1); if(bl>2.95 && sw==0) face='blink';
   const land=(sw==0 && local<0.25 && i>0)?(1-local/0.25):0;
   const sq=1+land*0.12;
   el.style.opacity=1; setFace(face);
-  el.style.transform='translate('+x+'px,'+y+'px) rotate('+rot+'deg) scale('+(sz/400)*sq+','+(sz/400)/sq+')';
+  el.style.transform='translate('+x+'px,'+y+'px) translate('+(sz/2)+'px,'+(sz/2)+'px) rotate('+rot+'deg) translate('+(-sz/2)+'px,'+(-sz/2)+'px) scale('+(sz/400)*sq+','+(sz/400)/sq+')';
 };
 </script>"""
 
+TRANSITIONS = ["slide", "stack", "wipe", "up", "zoom"]  # belirtilmezse bu sırayla döner
+
 def reel_motion(spec, out, voice=None):
+    """Hareketli Reel. Sahne başına isteğe bağlı "transition": slide | up | stack | zoom | wipe.
+    Spec seçenekleri: "outro": false, "progress": false (ilerleme çubuğu), "sfx": false (ses efektleri), "stills": [sn, ...]."""
     import tempfile
-    sc = list(spec["scenes"])
+    TR = 0.6
+    sc = list(spec["scenes"]); nc = len(sc)
     if spec.get("outro", True):
         sc.append({"theme": "dark", "align": "center", "duration": 3.2, "kare": None, "nofoot": True, "elements": [
             {"type": "logo_anim", "size": 380, "at": 0.35},
@@ -291,19 +396,38 @@ def reel_motion(spec, out, voice=None):
             {"type": "lead", "text": "Dijital dünyayı kare kare deniyoruz.", "at": 1.8},
             {"type": "pill", "text": "Takip et", "at": 2.1},
             {"type": "lead", "text": "@frame.labo", "at": 2.3}]})
-    t0 = 0.0; S = []; panels = ""
+    t0 = 0.0; S = []; panels = ""; ev = []
     for i, s_ in enumerate(sc):
         S.append({"start": round(t0, 3), "dur": s_["duration"]})
         htm = page(s_["theme"], s_["elements"], 1080, 1920, align=s_.get("align",""), pattern=s_.get("pattern",""), frame=s_.get("frame",False))
         if s_.get("nofoot"):
             import re as _re; htm = _re.sub(r'<div class="foot">.*?</div>', '', htm, count=1)
-        panels += f'<iframe srcdoc="{H.escape(htm)}" style="width:1080px;height:1920px;border:0;flex:none" scrolling="no"></iframe>'
+        panels += f'<iframe srcdoc="{H.escape(htm)}" scrolling="no"></iframe>'
+        # ses efektleri: geçişte "whoosh", ana öğe girerken "pop"
+        if i < len(sc) - 1: ev.append([round(t0 + s_["duration"] - TR/2 - 0.28, 3), "whoosh"])
+        main = next((e for e in s_["elements"] if e["type"] in ("h1", "h2", "bignum", "quote", "ring", "bars") and "at" in e), None)
+        if main and i < nc: ev.append([round(t0 + main["at"], 3), "pop"])
+        if any(e["type"] == "sticker" for e in s_["elements"]): ev.append([round(t0 + 0.2, 3), "pop2"])
+        if i >= nc: ev.append([round(t0 + 1.4, 3), "ding"])
         t0 += s_["duration"]
     T = t0
     K = [s_.get("kare") for s_ in sc]
+    X = [None] + [sc[i].get("transition") or TRANSITIONS[(i - 1) % len(TRANSITIONS)] for i in range(1, len(sc))]
+    if len(sc) > nc and not sc[-1].get("transition"):  # outro: renk perdesi (önceki de perdeyse zoom)
+        X[-1] = "zoom" if len(X) > 2 and X[-2] == "wipe" else "wipe"
+    bar = ""
+    if spec.get("progress", True):
+        bar = '<div id="pb">' + "".join(f'<i style="flex:{s_["duration"]}"><b></b></i>' for s_ in sc[:nc]) + "</div>"
     faces = "".join(f'<div class="f" data-face="{f}" style="display:none">{kare(400, f, bg="none", light_bg=False).replace(chr(34)+"#F5F4F0"+chr(34)+"></rect>"+chr(10)+"</svg>", chr(34)+"#8A8A82"+chr(34)+"></rect>"+chr(10)+"</svg>")}</div>' for f in ["mutlu","goz","saskin","dusunen","fikir","calisiyor","blink"])
-    js = MOTION_JS.replace("__SCENES__", json.dumps(S)).replace("__KARE__", json.dumps(K))
-    doc = f'<!doctype html><html><head><meta charset="utf-8"><style>body{{margin:0;width:1080px;height:1920px;overflow:hidden;background:#111114}}#strip{{display:flex;width:{1080*len(sc)}px;height:1920px;will-change:transform}}#kare{{position:absolute;left:0;top:0;width:400px;height:400px;transform-origin:0 0;z-index:9;pointer-events:none}}</style></head><body><div id="strip">{panels}</div><div id="kare">{faces}</div>{js}</body></html>'
+    js = (MOTION_JS.replace("__SCENES__", json.dumps(S)).replace("__KARE__", json.dumps(K)).replace("__TRANS__", json.dumps(X))
+          .replace("__THEMES__", json.dumps([s_["theme"] for s_ in sc])).replace("__NC__", str(nc))
+          .replace("__LIME__", LIME).replace("__INK__", INK).replace("__PAPER__", PAPER))
+    doc = (f'<!doctype html><html><head><meta charset="utf-8"><style>body{{margin:0;width:1080px;height:1920px;overflow:hidden;background:#111114;position:relative}}'
+           f'iframe{{position:absolute;left:0;top:0;width:1080px;height:1920px;border:0;transform-origin:50% 50%;will-change:transform;overflow:hidden;visibility:hidden}}'
+           f'#kare{{position:absolute;left:0;top:0;width:400px;height:400px;transform-origin:0 0;z-index:9;pointer-events:none}}'
+           f'.wp{{position:absolute;top:-100px;left:0;width:1900px;height:2120px;z-index:6;display:none;will-change:transform}}#w1{{background:{LIME};z-index:7}}'
+           f'#pb{{position:absolute;left:90px;right:90px;top:64px;height:8px;display:flex;gap:10px;z-index:8}}#pb i{{display:block;border-radius:4px;overflow:hidden}}#pb b{{display:block;height:100%;width:0}}'
+           f'</style></head><body>{panels}<div class="wp" id="w2"></div><div class="wp" id="w1"></div>{bar}<div id="kare">{faces}</div>{js}</body></html>')
     tmp = tempfile.mkdtemp(); f = f"{tmp}/m.html"; open(f, "w").write(doc)
     async def go():
         from playwright.async_api import async_playwright
@@ -324,7 +448,10 @@ def reel_motion(spec, out, voice=None):
             await b.close()
     asyncio.run(go())
     here = os.path.dirname(os.path.abspath(__file__))
-    subprocess.run(["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav"], check=True, stdout=subprocess.DEVNULL)
+    cmd = ["python3", f"{here}/music.py", str(T), f"{tmp}/m.wav"]
+    if spec.get("sfx", True):
+        json.dump(ev, open(f"{tmp}/sfx.json", "w")); cmd.append(f"{tmp}/sfx.json")
+    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL)
     if voice:
         _mix_voice(spec, voice, T, tmp)
     else:

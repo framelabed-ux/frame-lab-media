@@ -1,0 +1,151 @@
+{
+ "motion": true,
+ "stills": [
+  2.6,
+  6.4,
+  10.2,
+  13.6
+ ],
+ "scenes": [
+  {
+   "theme": "dark",
+   "duration": 3.4,
+   "elements": [
+    {
+     "type": "marquee",
+     "text": "REEL MI CAROUSEL MI",
+     "top": 1420
+    },
+    {
+     "type": "tag",
+     "text": "KENDİ HESABIMIZDA TEST ETTİK",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Reel mi,\n[[carousel mi?]]",
+     "size": 132,
+     "at": 0.1
+    },
+    {
+     "type": "lead",
+     "text": "3 takipçili bir hesapta ikisini de denedik.",
+     "at": 0.8
+    }
+   ],
+   "kare": {
+    "x": 620,
+    "y": 260,
+    "size": 400,
+    "face": "dusunen"
+   }
+  },
+  {
+   "theme": "light",
+   "pattern": "dots",
+   "duration": 3.8,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "ULAŞILAN HESAP",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Fark [[çok büyük.]]",
+     "at": 0.2
+    },
+    {
+     "type": "bars",
+     "items": [
+      [
+       "Reel",
+       1140,
+       "1.140"
+      ],
+      [
+       "Carousel",
+       4,
+       "4"
+      ]
+     ],
+     "accent": 0,
+     "at": 0.7
+    },
+    {
+     "type": "lead",
+     "text": "Aynı hafta, aynı hesap.",
+     "at": 1.6
+    }
+   ],
+   "kare": {
+    "x": 600,
+    "y": 1300,
+    "size": 420,
+    "face": "saskin"
+   }
+  },
+  {
+   "theme": "dark",
+   "align": "center",
+   "duration": 3.6,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "AMA DİKKAT",
+     "at": 0.1
+    },
+    {
+     "type": "ring",
+     "value": 58,
+     "text": "%58",
+     "size": 600,
+     "label": "ilk 3 saniyede [[kaydırıp geçti.]]",
+     "at": 0.3
+    }
+   ],
+   "kare": {
+    "x": 60,
+    "y": 1380,
+    "size": 320,
+    "face": "goz"
+   }
+  },
+  {
+   "theme": "soft",
+   "duration": 3.6,
+   "elements": [
+    {
+     "type": "sticker",
+     "text": "DERS"
+    },
+    {
+     "type": "tag",
+     "text": "SONUÇ",
+     "at": 0.1
+    },
+    {
+     "type": "h1",
+     "text": "İlk cümle\n[[her şeydir.]]",
+     "size": 128,
+     "at": 0.2
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Rakamla aç",
+      "Merak uyandır",
+      "Kısa tut"
+     ],
+     "at": 1.0
+    }
+   ],
+   "kare": {
+    "x": 560,
+    "y": 1250,
+    "size": 480,
+    "face": "fikir"
+   }
+  }
+ ]
+}
