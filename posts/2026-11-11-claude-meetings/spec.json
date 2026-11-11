@@ -1,38 +1,251 @@
-{"motion": true,
- "stills": [2.9, 7.6, 11.6, 15.6, 20.0],
+{
+ "motion": true,
  "scenes": [
-  {"theme": "dark", "bg": "glow", "pattern": "rings", "align": "center top", "duration": 3.6, "nofoot": true, "kare": null,
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center top",
+   "duration": 4.5,
+   "nofoot": true,
+   "kare": null,
    "elements": [
-    {"type": "burst", "x": 90, "y": 1000, "size": 220, "rot": -8, "at": 0.6},
-    {"type": "burst", "x": 850, "y": 920, "size": 120, "rot": 16, "at": 0.8},
-    {"type": "phone", "center": true, "w": 600, "title": "Haftalık toplantı", "blocks": ["Katılımcılar: Ece, Can, Claude", "Claude: Konuştuğumuz planın taslağını hazırladım.", "Planı aç"], "accent": 2, "bottom": -150, "at": 0.4},
-    {"type": "lead", "text": "Anthropic dün duyurdu", "at": 0.0},
-    {"type": "h1", "text": "Claude artık\n{{toplantına katılıyor.}}", "light": true, "size": 116, "at": 0.05}]},
-  {"theme": "light", "bg": "glow", "align": "center", "duration": 4.6,
-   "kare": {"x": 720, "y": 1480, "size": 260, "face": "dusunen"},
+    {
+     "type": "burst",
+     "x": 90,
+     "y": 1000,
+     "size": 220,
+     "rot": -8,
+     "at": 0.6
+    },
+    {
+     "type": "burst",
+     "x": 850,
+     "y": 920,
+     "size": 120,
+     "rot": 16,
+     "at": 0.8
+    },
+    {
+     "type": "phone",
+     "center": true,
+     "w": 600,
+     "title": "Haftalık toplantı",
+     "blocks": [
+      "Katılımcılar: Ece, Can, Claude",
+      "Claude: Konuştuğumuz planın taslağını hazırladım.",
+      "Planı aç"
+     ],
+     "accent": 2,
+     "bottom": -150,
+     "at": 0.4
+    },
+    {
+     "type": "lead",
+     "text": "Anthropic dün duyurdu",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Claude artık\n{{toplantına katılıyor.}}",
+     "light": true,
+     "size": 116,
+     "at": 0.05
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "bg": "glow",
+   "align": "center",
+   "duration": 5.2,
+   "kare": {
+    "x": 720,
+    "y": 1480,
+    "size": 260,
+    "face": "dusunen"
+   },
    "elements": [
-    {"type": "tag", "text": "NASIL ÇALIŞIYOR?", "at": 0.05},
-    {"type": "h2", "text": "Not almakla\n[[{{kalmıyor.}}]]", "size": 104, "at": 0.15},
-    {"type": "steps", "items": [["Görünür katılımcı olarak girer", "Kendini tanıtır, sohbete bildirim bırakır."], ["Konuşurken işe başlar", "Plan taslağı, zaman çizelgesi, sohbetteki sorulara cevap."], ["Toplantı bitince hazır", "Notlar ve görevler Claude'da seni bekler."]], "at": 0.8}]},
-  {"theme": "dark", "bg": "glow", "pattern": "rings", "align": "center", "duration": 4.0,
-   "kare": {"x": 410, "y": 1360, "size": 280, "face": "saskin"},
+    {
+     "type": "tag",
+     "text": "NASIL ÇALIŞIYOR?",
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "Not almakla\n[[{{kalmıyor.}}]]",
+     "size": 104,
+     "at": 0.15
+    },
+    {
+     "type": "steps",
+     "items": [
+      [
+       "Görünür katılımcı olarak girer",
+       "Kendini tanıtır, sohbete bildirim bırakır."
+      ],
+      [
+       "Konuşurken işe başlar",
+       "Plan taslağı, zaman çizelgesi, sohbetteki sorulara cevap."
+      ],
+      [
+       "Toplantı bitince hazır",
+       "Notlar ve görevler Claude'da seni bekler."
+      ]
+     ],
+     "at": 0.8
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center",
+   "duration": 4.0,
+   "kare": {
+    "x": 410,
+    "y": 1360,
+    "size": 280,
+    "face": "saskin"
+   },
    "elements": [
-    {"type": "burst", "x": 800, "y": 380, "size": 150, "rot": 12, "at": 0.5},
-    {"type": "tag", "text": "GİZLİLİK", "at": 0.05},
-    {"type": "h1", "text": "Dışarıdan biri katılırsa\n{{toplantıdan çıkıyor.}}", "light": true, "size": 98, "at": 0.15},
-    {"type": "lead", "text": "Yönetici izin vermedikçe dış misafirli toplantılara hiç girmiyor.", "at": 1.0}]},
-  {"theme": "soft", "bg": "glow", "align": "center", "duration": 3.6,
-   "kare": {"x": 660, "y": 1380, "size": 300, "face": "goz"},
+    {
+     "type": "burst",
+     "x": 800,
+     "y": 380,
+     "size": 150,
+     "rot": 12,
+     "at": 0.5
+    },
+    {
+     "type": "tag",
+     "text": "GİZLİLİK",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Dışarıdan biri katılırsa\n{{toplantıdan çıkıyor.}}",
+     "light": true,
+     "size": 98,
+     "at": 0.15
+    },
+    {
+     "type": "lead",
+     "text": "Yönetici izin vermedikçe dış misafirli toplantılara hiç girmiyor.",
+     "at": 1.0
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "bg": "glow",
+   "align": "center",
+   "duration": 3.6,
+   "kare": {
+    "x": 660,
+    "y": 1380,
+    "size": 300,
+    "face": "goz"
+   },
    "elements": [
-    {"type": "sticker", "text": "BETA", "top": 300},
-    {"type": "tag", "text": "KİMLER KULLANABİLİR?", "at": 0.05},
-    {"type": "h1", "text": "Şimdilik\n{{ekiplere özel.}}", "light": true, "size": 120, "at": 0.15},
-    {"type": "chips", "items": ["Team ve Enterprise planları", "Google Meet", "Diğer platformlar sonra"], "at": 0.9}]},
-  {"theme": "dark", "align": "center", "duration": 4.6,
-   "kare": {"x": 760, "y": 1500, "size": 240, "face": "fikir"},
+    {
+     "type": "sticker",
+     "text": "BETA",
+     "top": 300
+    },
+    {
+     "type": "tag",
+     "text": "KİMLER KULLANABİLİR?",
+     "at": 0.05
+    },
+    {
+     "type": "h1",
+     "text": "Şimdilik\n{{ekiplere özel.}}",
+     "light": true,
+     "size": 120,
+     "at": 0.15
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Team ve Enterprise planları",
+      "Google Meet",
+      "Diğer platformlar sonra"
+     ],
+     "at": 0.9
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center",
+   "duration": 4.8,
+   "kare": {
+    "x": 760,
+    "y": 1500,
+    "size": 240,
+    "face": "fikir"
+   },
    "elements": [
-    {"type": "tag", "text": "AYNI GÜN GELENLER", "at": 0.05},
-    {"type": "tiles", "items": [["Whiteboards", "Konuşmayı zaman çizelgesine çevirir"], ["Sheets", "Tabloyu Claude'la birlikte kurarsın"]], "at": 0.2},
-    {"type": "h2", "text": "Toplantı notunu\n{{yapay zekâya}} bırakır mıydın?", "size": 84, "at": 1.0},
-    {"type": "lead", "text": "**Yorumlara yaz.**", "at": 1.6}]}
- ]}
+    {
+     "type": "tag",
+     "text": "AYNI GÜN GELENLER",
+     "at": 0.05
+    },
+    {
+     "type": "tiles",
+     "items": [
+      [
+       "Whiteboards",
+       "Konuşmayı zaman çizelgesine çevirir"
+      ],
+      [
+       "Sheets",
+       "Tabloyu Claude'la birlikte kurarsın"
+      ]
+     ],
+     "at": 0.2
+    },
+    {
+     "type": "h2",
+     "text": "Toplantı notunu\n{{yapay zekâya}} bırakır mıydın?",
+     "size": 84,
+     "at": 1.0
+    },
+    {
+     "type": "lead",
+     "text": "**Yorumlara yaz.**",
+     "at": 1.6
+    }
+   ]
+  }
+ ],
+ "voice_segments": [
+  [
+   0,
+   4.15,
+   0
+  ],
+  [
+   4.25,
+   9.15,
+   1
+  ],
+  [
+   9.25,
+   12.7,
+   2
+  ],
+  [
+   12.8,
+   15.8,
+   3
+  ],
+  [
+   16.0,
+   20.35,
+   4
+  ]
+ ]
+}
