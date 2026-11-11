@@ -145,6 +145,25 @@
    ],
    "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
    "music": "lofi"
+  },
+  {
+   "slug": "2026-11-11-gemini-4-carbon",
+   "kind": "reel",
+   "publish_date": "2026-11-12",
+   "layout": "bignum",
+   "files": [
+    "posts/2026-11-11-gemini-4-carbon/reel.mp4"
+   ],
+   "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
+   "cover_tone": "light",
+   "caption": "Google'ın en güçlü modeli artık kullanımda: Gemini 4 Carbon.\n\n28 Ekim'de yalnızca seçili siber güvenlik ekiplerine açılmıştı. Google 10 Kasım'da erişimi genişletti:\n\n• Kimler kullanabilir? Google AI Ultra aboneleri (Gemini uygulaması, Arama'daki AI Mode ve Antigravity) ile ücretli Gemini API kullanan geliştiriciler.\n• Neyde iddialı? Google'a göre kodlama testi CursorBench 4.0'da ilk sırada ve görev başına maliyeti en yakın rakibinin yarısından da az.\n• /swarm (önizleme): Antigravity'de tek bir prompt'u birlikte çalışan bir ajan ekibine çeviriyor, ilerlemeyi canlı izliyorsun.\n• Fiyat: 30 Kasım'a kadar 1 milyon girdi token'ı 2 $, çıktı 10 $. Sonrasında 4 $ ve 20 $.\n\nNot: Google, işlerin çoğu için hâlâ Gemini 4 Argon'u öneriyor. Carbon en zor görevler için.\n\nKodlayan bir arkadaşına gönder: Sence Carbon, Claude ve GPT'nin yanında nerede durur? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #yazılım #dijitalgündem #reels",
+   "sources": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
+    "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
+   ],
+   "music": "house",
+   "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli."
   }
  ],
  "stories": [
@@ -232,33 +251,9 @@
   "claude-fable-5-2",
   "ogilvy-echo",
   "adobe-max-2026-firefly-creative-agent",
-  "claude-meetings-sheets-whiteboards"
+  "claude-meetings-sheets-whiteboards",
+  "gemini-4-carbon"
  ],
- "hot_pending": [
-  {
-   "topic": "gemini-4-carbon",
-   "date_found": "2026-11-11",
-   "summary": "Google, 28 Ekim'de yalnızca siber güvenlik ekiplerine açtığı en güçlü modeli Gemini 4 Carbon'u 10 Kasım'da AI Ultra abonelerine ve ücretli API'ye açtı; /swarm önizlemesi ve 30 Kasım'a kadar tanıtım fiyatı.",
-   "sources": [
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-    "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
-    "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
-   ],
-   "ready": {
-    "slug": "2026-11-11-gemini-4-carbon",
-    "kind": "reel",
-    "files": [
-     "posts/2026-11-11-gemini-4-carbon/reel.mp4"
-    ],
-    "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
-    "cover_tone": "light",
-    "cover_alt_dark": "posts/2026-11-11-gemini-4-carbon/cover-dark.jpg",
-    "caption_file": "posts/2026-11-11-gemini-4-carbon/caption.txt",
-    "layout": "editorial",
-    "music": "house"
-   },
-   "note": "11 Kasım öğle taraması: Reel hazır (31,8 sn, outro dahil) ve kalite kontrolden geçti, ama yayınlanmadı: bugün zaten 3 feed gönderisi var (Reklam Lab, Adobe Reel, akşam Claude Meetings) ve playbook günde en fazla 2 diyor. Ece onay verirse hemen yayınlanabilir; vermezse sabah görevi 12 Kasım'da bunu kullansın (açık kapak, son kapak Claude Meetings koyu). Fiyatlar 30 Kasım'a kadar geçerli, yayın günü tarihleri tekrar kontrol et."
-  }
- ],
+ "hot_pending": [],
  "scheduled": []
 }

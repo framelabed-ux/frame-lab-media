@@ -1,31 +1,9 @@
 {
- "theme": "light",
- "bg": "glow",
- "pattern": "rings",
- "align": "center",
- "foot_right": "",
- "nofoot": true,
+ "theme": "light", "bg": "glow", "pattern": "grid", "align": "center", "foot_right": "", "nofoot": true,
  "elements": [
-  {
-   "type": "burst",
-   "x": 120,
-   "y": 1250,
-   "size": 200,
-   "rot": -10
-  },
-  {
-   "type": "lead",
-   "text": "Gemini 4 Carbon · 10 Kasım"
-  },
-  {
-   "type": "h1",
-   "text": "Google'ın en güçlü modeli\n{{artık kullanımda.}}",
-   "light": true,
-   "size": 112
-  },
-  {
-   "type": "lead",
-   "text": "Önce yalnızca seçili güvenlik ekiplerine açılmıştı."
-  }
+  {"type": "tag", "text": "GOOGLE · GEMINI 4 CARBON"},
+  {"type": "bignum", "text": "#1", "size": 400, "label": "CursorBench 4.0'da [[ilk sırada.]]"},
+  {"type": "h2", "text": "Google'ın en güçlü modeli\n[[{{artık kullanımda.}}]]", "size": 92},
+  {"type": "sticker", "text": "YENİ", "top": 1360}
  ]
 }
