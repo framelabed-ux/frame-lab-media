@@ -165,6 +165,17 @@
     "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
     "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
    ]
+  },
+  {
+   "date": "2026-11-11",
+   "slug": "2026-11-11-story",
+   "file": "posts/2026-11-11-story/story.jpg",
+   "about": "Biliyor muydun: Adobe Firefly Plan Mode + 'önce plan' prompt'u (chat düzeni)",
+   "layout": "chat",
+   "sources": [
+    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/"
+   ]
   }
  ],
  "replied_comments": [
@@ -175,5 +186,28 @@
   "adobe-max-2026",
   "claude-fable-5-2",
   "ogilvy-echo"
+ ],
+ "hot_pending": [
+  {
+   "key": "adobe-max-2026-firefly-creative-agent",
+   "found": "2026-11-11 sabah",
+   "title": "Adobe MAX 2026: Creative Agent, Firefly AI Assistant (beta), Plan Mode, Model Selector, Premiere Color Mode, Photoshop/Premiere yerel MCP (önizleme)",
+   "note": "covered_topics'teki 'adobe-max-2026' yalnızca önizlemeydi; bu asıl duyurular (güncelleme olarak işlenebilir). Büyük gelişme ölçütüne uyuyor (Adobe'de büyük yapay zekâ özelliği).",
+   "sources": [
+    "https://news.adobe.com/news/2026/11/adobe-powers-new-era-of-creativity",
+    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/"
+   ]
+  },
+  {
+   "key": "claude-meetings-sheets-whiteboards",
+   "found": "2026-11-11 sabah",
+   "title": "Anthropic: Claude Meetings (Google Meet, Team/Enterprise beta), Claude Whiteboards ve Claude Sheets (ücretli planlar, beta), Claude Data GA",
+   "note": "Ofis araçları duyurusu (10 Kasım). Model sürümü değil; içerik üreticilere doğrudan etkisi orta. Hafta içi carousel/Kare'den Haberler adayı.",
+   "sources": [
+    "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+    "https://fortune.com/2026/11/10/anthropic-launches-office-knowledge-worker-product-launch-ahead-of-ipo/"
+   ]
+  }
  ]
 }

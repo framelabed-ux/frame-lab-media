@@ -1,0 +1,35 @@
+{
+ "theme": "soft",
+ "foot_right": "Kaydet",
+ "elements": [
+  {
+   "type": "tag",
+   "text": "BİLİYOR MUYDUN?"
+  },
+  {
+   "type": "h2",
+   "text": "Adobe'nin\nyapay zekâsı\nönce [[plan]] sunuyor."
+  },
+  {
+   "type": "lead",
+   "text": "Adobe, MAX'te Firefly asistanına (beta) Plan Mode ekledi: Ajan işe başlamadan yaklaşımını gösteriyor, sen onaylıyorsun. Bu taktik her sohbet botunda işe yarar:"
+  },
+  {
+   "type": "chat",
+   "items": [
+    [
+     "you",
+     "Bu işe başlamadan önce adım adım planını yaz. Ben onaylamadan üretmeye başlama."
+    ],
+    [
+     "ai",
+     "Plan: Hedef kitle → 3 başlık → metin. Başlayayım mı?"
+    ]
+   ]
+  },
+  {
+   "type": "lead",
+   "text": "Denedin mi? [[DM'den yaz.]]"
+  }
+ ]
+}
