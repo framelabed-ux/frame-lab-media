@@ -103,27 +103,7 @@
    "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)"
   }
  ],
- "queue": [
-  {
-   "slug": "2026-11-11-adobe-max-creative-agent",
-   "kind": "reel",
-   "publish_date": "2026-11-11",
-   "layout": "editorial",
-   "files": [
-    "posts/2026-11-11-adobe-max-creative-agent/reel.mp4"
-   ],
-   "cover": "posts/2026-11-11-adobe-max-creative-agent/cover.jpg",
-   "cover_tone": "light",
-   "caption": "Adobe uygulamalarına artık yazarak iş verebilirsin.\n\nAdobe MAX 2026'nın (10 Kasım) öne çıkan duyurusu Adobe Creative Agent oldu:\n\n• Firefly AI Assistant (beta): Hedefini sade bir dille yazıyorsun; asistan araçları ve yapay zekâ modelini seçip işi adım adım yapıyor.\n• Plan Mode: Asistan başlamadan önce planını gösteriyor, sen onaylıyorsun.\n• Sadece Firefly'da değil: Photoshop, Premiere, Illustrator, InDesign, After Effects ve Frame.io'da da AI Assistant (beta) olarak geliyor.\n• Model seçimi: Google, OpenAI, Kling, ByteDance ve ElevenLabs gibi şirketlerin modelleri Firefly'da tek yerde.\n\nNot: Bu özelliklerin çoğu şimdilik beta ya da önizleme aşamasında.\n\nSen ilk hangi işi asistana devrederdin? Yorumlara yaz.\n\n#yapayzeka #adobe #photoshop #firefly #grafiktasarım #tasarım #dijitalgündem",
-   "sources": [
-    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
-    "https://variety.com/2026/digital/news/adobe-ai-agentic-features-max-2026-1236943958/",
-    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/",
-    "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
-   ],
-   "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn."
-  }
- ],
+ "queue": [],
  "stories": [
   {
    "date": "2026-11-09",
@@ -220,6 +200,28 @@
     "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
     "https://fortune.com/2026/11/10/anthropic-launches-office-knowledge-worker-product-launch-ahead-of-ipo/"
    ]
+  }
+ ],
+ "scheduled": [
+  {
+   "slug": "2026-11-11-adobe-max-creative-agent",
+   "kind": "reel",
+   "publish_date": "2026-11-11",
+   "layout": "editorial",
+   "files": [
+    "posts/2026-11-11-adobe-max-creative-agent/reel.mp4"
+   ],
+   "cover": "posts/2026-11-11-adobe-max-creative-agent/cover.jpg",
+   "cover_tone": "light",
+   "caption": "Adobe uygulamalarına artık yazarak iş verebilirsin.\n\nAdobe MAX 2026'nın (10 Kasım) öne çıkan duyurusu Adobe Creative Agent oldu:\n\n• Firefly AI Assistant (beta): Hedefini sade bir dille yazıyorsun; asistan araçları ve yapay zekâ modelini seçip işi adım adım yapıyor.\n• Plan Mode: Asistan başlamadan önce planını gösteriyor, sen onaylıyorsun.\n• Sadece Firefly'da değil: Photoshop, Premiere, Illustrator, InDesign, After Effects ve Frame.io'da da AI Assistant (beta) olarak geliyor.\n• Model seçimi: Google, OpenAI, Kling, ByteDance ve ElevenLabs gibi şirketlerin modelleri Firefly'da tek yerde.\n\nNot: Bu özelliklerin çoğu şimdilik beta ya da önizleme aşamasında.\n\nSen ilk hangi işi asistana devrederdin? Yorumlara yaz.\n\n#yapayzeka #adobe #photoshop #firefly #grafiktasarım #tasarım #dijitalgündem",
+   "sources": [
+    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+    "https://variety.com/2026/digital/news/adobe-ai-agentic-features-max-2026-1236943958/",
+    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/",
+    "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
+   ],
+   "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
+   "publish_at": "2026-11-11 12:00 (send_later ile bu oturumdan)"
   }
  ]
 }
