@@ -179,6 +179,7 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
 2. **1.000 – 5.000:** (a) Ortaklık (affiliate) linkleri: yalnızca gerçekten kullandığımız araçlar. İlk aday ElevenLabs (PartnerStack üzerinden, tekrarlayan komisyon); başvuruyu Ece bir kez yapar. Paylaşımda reklam/ortaklık olduğu açıkça yazılır. (b) Ücretli dijital ürün: rehberin genişletilmiş hâli (ör. 100 prompt + şablonlar), Türkiye'de Shopier ya da benzeri bir mağazadan, düşük fiyat.
 3. **5.000 – 10.000:** marka iş birlikleri (yapay zekâ ve tasarım araçları, Türkiye pazarı); "Reklam Lab" ve Reel formatında sponsorlu içerik. Sponsorlu içerik her zaman "iş birliği" etiketiyle.
 4. **10.000+:** Instagram'ın kendi gelir araçları (abonelik, hediyeler) ve daha büyük anlaşmalar.
+- Frame Lab'i işletmelere içerik hizmeti satan bir vitrin olarak kullanma fikri: Ece 11 Kasım'da "1 ay sonra düşünelim" dedi; 11 Aralık'ta hatırlatılacak. O tarihe kadar görevler bunu önermez ve hizmet tanıtımı yapmaz.
 - Ece'nin zamanı: isteğe bağlı seslendirme, yorum onayı, tek seferlik kayıt/ödeme kurulumları. Bunun dışındaki her şeyi görevler yapar.
 
 ## Gelişim günlüğü (haftalık gelişim görevi doldurur)
