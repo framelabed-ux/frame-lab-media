@@ -166,3 +166,21 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
   - Sticker'ın yeri `"top"` ile ayarlanır; künyenin ve görseldeki önemli yerlerin üstüne gelmesin.
 - Ekran görüntüsüyle yüksek çözünürlüklü görsel alma: tarayıcı ekran görüntüsü en fazla 800 px genişlikte geliyor. Görseli sayfada sabit bir katmanda büyütüp (ör. 2400 px) parça parça ekran görüntüsü al, sonra PIL ile birleştir. Görseller posts/<slug>/src/ altında dursun.
 - Bölüm 1: Ogilvy ECHO (11 Kasım). Kapakta Ogilvy'nin resmî ECHO illüstrasyonu.
+
+## Büyüme ve gelir (Ece, 11 Kasım: "global örneklere bak, sürekli kendini güncelle, az enerji harcatmalı, çok iyi olmalı, etkileşim almalı, para kazandırmalı")
+**Ölçtüğümüz şey:** Instagram'ın başı Adam Mosseri'nin 2026'da en önemli dediği sinyaller izlenme süresi, erişim başına DM ile gönderim (sends) ve erişim başına beğeni; kaydetme de beğeniden ağır sayılıyor. Takipçi olmayanlara ulaşmada en güçlü sinyal gönderimler. Bu yüzden:
+- Her içerik "biri bunu bir arkadaşına gönderir mi?" testinden geçer. Gönderilme sebebi olsun: işe yarayan bir ipucu, ekibe iletilecek bir haber, "tam senlik" diyeceği bir durum.
+- CTA'ları dönüşümlü kullan: yorum sorusu, "Bunu ekibine/ihtiyacı olan birine gönder", "Kaydet, lazım olur". Aynı CTA art arda iki gönderide olmasın.
+- Haftalık rapordaki ana metrikler: izlenme, erişim, ortalama izlenme süresi, ilk 3 saniyede geçme oranı, kaydetme/erişim, paylaşım/erişim, takipçi artışı.
+- Özgünlük: başkasının içeriğini yeniden paylaşmak yok; tasarım, metin ve müzik bize ait.
+
+**Para kazanma basamakları** (Ece'nin işi en az olacak şekilde; her adım Ece onayıyla başlar):
+1. **Şimdi – 1.000 takipçi:** güven ve kitle. Ücretsiz prompt rehberi = kitle toplama aracı. Ürün satışı yok.
+2. **1.000 – 5.000:** (a) Ortaklık (affiliate) linkleri: yalnızca gerçekten kullandığımız araçlar. İlk aday ElevenLabs (PartnerStack üzerinden, tekrarlayan komisyon); başvuruyu Ece bir kez yapar. Paylaşımda reklam/ortaklık olduğu açıkça yazılır. (b) Ücretli dijital ürün: rehberin genişletilmiş hâli (ör. 100 prompt + şablonlar), Türkiye'de Shopier ya da benzeri bir mağazadan, düşük fiyat.
+3. **5.000 – 10.000:** marka iş birlikleri (yapay zekâ ve tasarım araçları, Türkiye pazarı); "Reklam Lab" ve Reel formatında sponsorlu içerik. Sponsorlu içerik her zaman "iş birliği" etiketiyle.
+4. **10.000+:** Instagram'ın kendi gelir araçları (abonelik, hediyeler) ve daha büyük anlaşmalar.
+- Ece'nin zamanı: isteğe bağlı seslendirme, yorum onayı, tek seferlik kayıt/ödeme kurulumları. Bunun dışındaki her şeyi görevler yapar.
+
+## Gelişim günlüğü (haftalık gelişim görevi doldurur)
+Her cumartesi görev; verilere ve global örneklere bakıp en fazla 3 kanıta dayalı değişiklik yapar, buraya tarihle yazar. Ece'nin koyduğu kurallar (onay kuralları, renkler, yüzsüz hesap, uzunluk sınırları) görev tarafından değiştirilmez; öneri olarak Ece'ye sorulur.
+- 2026-11-11: Başlangıç. Reel ağırlıklı sıra, 3 saniye kancası, editoryal tasarım dili, 8 müzik stili, sends odaklı CTA kuralı eklendi.
