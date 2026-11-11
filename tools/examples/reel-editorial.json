@@ -1,0 +1,149 @@
+{
+ "motion": true,
+ "scenes": [
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center top",
+   "duration": 3.6,
+   "kare": null,
+   "elements": [
+    {
+     "type": "burst",
+     "x": 700,
+     "y": 1180,
+     "size": 340,
+     "rot": 12,
+     "at": 0.5
+    },
+    {
+     "type": "hero",
+     "src": "brand/stock/kronometre.jpg",
+     "x": 110,
+     "y": 1290,
+     "w": 1100,
+     "h": 627,
+     "blend": "lighten",
+     "contrast": 1.08,
+     "at": 0.25
+    },
+    {
+     "type": "note",
+     "text": "**3 takipçili** hesap,\n1.140 kişiye ulaştı.",
+     "x": 80,
+     "y": 1190,
+     "w": 400,
+     "rot": -6,
+     "at": 1.3
+    },
+    {
+     "type": "lead",
+     "text": "Kendi Reel'imizde ölçtük",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Videonun kaderi\n{{ilk 3 saniyede}}\nbelli olur.",
+     "light": true,
+     "size": 118,
+     "at": 0.05
+    }
+   ],
+   "nofoot": true
+  },
+  {
+   "theme": "light",
+   "bg": "glow",
+   "pattern": "rings",
+   "align": "center",
+   "duration": 3.6,
+   "kare": {
+    "x": 700,
+    "y": 1420,
+    "size": 300,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "burst",
+     "x": 120,
+     "y": 1330,
+     "size": 200,
+     "rot": -10,
+     "at": 0.9
+    },
+    {
+     "type": "lead",
+     "text": "İzleyenlerin",
+     "at": 0.1
+    },
+    {
+     "type": "ring",
+     "value": 58,
+     "text": "%58",
+     "size": 620,
+     "label": "ilk 3 saniyede [[{{kaydırıp geçti.}}]]",
+     "at": 0.25
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center top",
+   "duration": 4.0,
+   "kare": {
+    "x": 60,
+    "y": 980,
+    "size": 260,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "hero",
+     "src": "brand/stock/dalga-koyu.jpg",
+     "x": -60,
+     "y": 1060,
+     "w": 1200,
+     "h": 900,
+     "cover": true,
+     "tint": true,
+     "bright": 2.6,
+     "mask": "top",
+     "at": 0.0
+    },
+    {
+     "type": "tag",
+     "text": "ÇÖZÜM",
+     "at": 0.1
+    },
+    {
+     "type": "h1",
+     "text": "İlk cümleyi\n{{güçlendir.}}",
+     "light": true,
+     "size": 132,
+     "at": 0.2
+    },
+    {
+     "type": "chips",
+     "items": [
+      "Rakamla aç",
+      "Merak uyandır",
+      "Kısa tut"
+     ],
+     "at": 1.0
+    },
+    {
+     "type": "lead",
+     "text": "Sıradaki Reel'de deniyoruz.",
+     "at": 1.7
+    }
+   ]
+  }
+ ],
+ "stills": [
+  2.4,
+  5.6,
+  9.4
+ ]
+}

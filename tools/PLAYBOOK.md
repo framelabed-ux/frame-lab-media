@@ -40,6 +40,7 @@ Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir.
   - **tiles:** 2x2 kutular (4 madde, 4 araç).
   - **bars:** yatay çubuk karşılaştırması (iki–dört değer, biri vurgulu).
   - **ring:** yüzde halkası + kısa etiket (tek bir oran).
+  - **editorial:** ortalı ince başlık + italik serif vurgu + kahraman görsel (aşağıdaki "Editoryal stil" bölümü; kapaklar için varsayılan).
   - **classic:** Kare + etiket + başlık + açıklama (eski kalıp, artık nadiren).
 - Süsleme seçenekleri: `"pattern": "grid"` (laboratuvar kareli zemin) ya da `"dots"`, `sticker` (yuvarlak, eğik etiket: ÜCRETSİZ, YENİ, DENEDİK), `kare_peek` (kenardan bakan büyük Kare), başlıkta `"outline": true` (içi boş yazı), `"narrow": true` (yan tarafta telefon ya da Kare varken metni daraltır).
 - Kurallar:
@@ -50,6 +51,19 @@ Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir.
   5. Başlık boyutu, hizalama (üst, orta, alt) ve metin yoğunluğu slayttan slayta değişir.
   6. **Kısa tut (Ece: "carouseller çok uzun olursa insanlar sıkılır").** Carousel ideal 5 slayt, en fazla 6 (kapak ve son slayt dahil). Her slaytta tek fikir. Teknik ayrıntıyı, künyeyi ve ek rakamları slayta değil caption'a koy. Son slayt hem dersi hem yorum sorusunu taşır, ayrı bir "soru slaytı" açma. Reel de kısa olsun: ideal 20–35 saniye, outro dahil en fazla 45 saniye.
   6. Story'ler de aynı ailelerden seçilir, aynı günün feed kapağıyla aynı düzende olmaz.
+
+## Editoryal stil (Ece, 11 Kasım: "çok aynı tip gidiyoruz"; Behance'ten ajans işleri örnek gösterdi)
+Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince başlık + italik serif vurgu, ışıklı zemin ve altta büyük bir "kahraman" görsel. Örnekler: `tools/examples/editorial.json` (4 gönderi) ve `tools/examples/reel-editorial.json`. Örnek gösterilen işler yalnızca yön içindir; hiçbirinin kurgusunu, nesnesini ya da metnini kopyalama.
+- Slayt/sahne seçenekleri: `"bg": "glow"` (ışıklı degrade zemin), `"pattern": "rings"` (ince halkalar), `"logo": "center"` (üstte ortalı logo), `"align": "center top"`.
+- Başlık: `{"type":"h1","light":true,"size":104,"text":"Videonun kaderi\n{{ilk 3 saniyede}}\nbelli olur."}`. `{{...}}` italik serif (koyu temada yeşil), `[[{{...}}]]` yeşil kutu içinde italik serif (açık temada), `**...**` kalın. Başlığın üstüne kısa bir `lead` (üst satır), altına tek cümlelik `lead` gelir.
+- `{"type":"pill","outline":true,"text":"Açıklamayı oku"}` ince çerçeveli hap.
+- `{"type":"hero","src":"brand/stock/x.jpg","x":200,"y":837,"w":900,"h":513,"blend":"lighten"}` kahraman görsel. Siyah zeminli görsel koyu temada `"blend":"lighten"` ile zemine karışır; beyaz zeminli görsel açık temada `"blend":"multiply"`. `"gray": true` renkleri alır, `"tint": true` yeşile boyar, `"cover": true` kutuyu doldurur, `"mask": "top"|"bottom"|"radial"` kenarı eritir. Görsel alt kenardan taşabilir; alttaki yazıyla çakışıyorsa slayta `"foot_right": ""`, Reel sahnesine `"nofoot": true` yaz.
+- `{"type":"burst","x":700,"y":742,"size":310,"rot":12}` yeşil dört uçlu parıltı (`"shape":"sun"` ışınlı). Görselin arkasına ya da boşluğa, slayt başına en fazla iki tane.
+- `{"type":"note","text":"**Rakamla** aç.\nMerak uyandır.","x":90,"y":900,"w":340,"rot":-6}` yırtık kâğıt notu; en fazla iki kısa satır, görselin kenarına biner ama yazıyı kapatmaz.
+- `{"type":"phone","center":true,"title":"…","blocks":[…],"accent":3,"bottom":-470}` ortada alttan yükselen telefon (açık temada kahraman görsel yerine).
+- Hazır görseller `brand/stock/` içinde: `kronometre.jpg` (zaman, hız), `cam-halka.jpg` (döngü, süreç), `dalga-koyu.jpg` (soyut zemin, `tint` ile). Aynı görseli iki hafta içinde ikinci kez kapakta kullanma.
+- Yeni görsel gerekirse yalnızca masaüstü uygulamasındaki tarayıcı bağlıyken, Unsplash'in ücretsiz lisanslı fotoğraflarından ekran görüntüsüyle alınır (Unsplash+ değil). Marka logosu, tanınabilir ürün markası ve ünlü yüzü içeren görsel kullanılmaz; logolu kısım kadraj dışında bırakılır. Tarayıcı bağlı değilse hazır görseller ya da telefon/grafik öğeleri kullanılır.
+- Bu stil eski düzen aileleriyle karışık kullanılır: carousel'de kapak editoryal, iç slaytlar steps/bars/ring/compare/chat olabilir. Izgarada açık/koyu sırası aynen geçerli.
 
 ## Izgara düzeni (puzzle)
 - Profil ızgarası satranç tahtası gibi görünmeli: her feed gönderisinin kapağı bir öncekinin tersi olmalı. Açık (light veya soft) ve koyu (dark) sırayla gider.

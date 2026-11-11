@@ -1,0 +1,206 @@
+{
+ "slides": [
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "logo": "center",
+   "align": "center top",
+   "foot_right": "",
+   "elements": [
+    {
+     "type": "burst",
+     "x": 700,
+     "y": 742,
+     "size": 310,
+     "rot": 12
+    },
+    {
+     "type": "hero",
+     "src": "brand/stock/kronometre.jpg",
+     "x": 200,
+     "y": 837,
+     "w": 900,
+     "h": 513,
+     "blend": "lighten",
+     "contrast": 1.08
+    },
+    {
+     "type": "note",
+     "text": "**Rakamla** aç.\nMerak uyandır.",
+     "x": 90,
+     "y": 900,
+     "w": 340,
+     "rot": -6
+    },
+    {
+     "type": "lead",
+     "text": "Kendi Reel'imizde ölçtük"
+    },
+    {
+     "type": "h1",
+     "text": "Videonun kaderi\n{{ilk 3 saniyede}}\nbelli olur.",
+     "light": true,
+     "size": 104
+    },
+    {
+     "type": "lead",
+     "text": "İzleyenlerin **%58'i** ilk 3 saniyede kaydırıp geçti."
+    },
+    {
+     "type": "pill",
+     "text": "Açıklamayı oku",
+     "outline": true
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "bg": "glow",
+   "pattern": "rings",
+   "logo": "center",
+   "align": "center top",
+   "foot_right": "",
+   "elements": [
+    {
+     "type": "burst",
+     "x": 96,
+     "y": 700,
+     "size": 250,
+     "rot": -8
+    },
+    {
+     "type": "burst",
+     "x": 800,
+     "y": 620,
+     "size": 130,
+     "rot": 18
+    },
+    {
+     "type": "phone",
+     "center": true,
+     "title": "Prompt formülü",
+     "blocks": [
+      "1 · Rol: Kimsin?",
+      "2 · Bağlam: Durum ne?",
+      "3 · Format: Çıktı nasıl olsun?",
+      "4 · Sınır: Ne olmasın?"
+     ],
+     "accent": 3,
+     "bottom": -470
+    },
+    {
+     "type": "note",
+     "text": "Kopyala, yapıştır,\n**kendine uyarla.**",
+     "x": 716,
+     "y": 925,
+     "w": 320,
+     "rot": 5
+    },
+    {
+     "type": "lead",
+     "text": "İyi sonuç şans değil"
+    },
+    {
+     "type": "h1",
+     "text": "Prompt yazmanın\nbir [[{{formülü}}]] var.",
+     "light": true,
+     "size": 104
+    },
+    {
+     "type": "pill",
+     "text": "20 hazır prompt profildeki linkte",
+     "outline": true
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "logo": "center",
+   "align": "center top",
+   "foot_right": "Kaydet",
+   "elements": [
+    {
+     "type": "hero",
+     "src": "brand/stock/dalga-koyu.jpg",
+     "x": -60,
+     "y": 560,
+     "w": 1200,
+     "h": 900,
+     "cover": true,
+     "tint": true,
+     "bright": 2.6,
+     "mask": "top"
+    },
+    {
+     "type": "tag",
+     "text": "TASARIM KURALI · 1"
+    },
+    {
+     "type": "h1",
+     "text": "Tek vurgu rengi\n{{yeter.}}",
+     "light": true,
+     "size": 124
+    },
+    {
+     "type": "lead",
+     "text": "Bir renk seç, her yerde aynı işi yapsın.\nGöz nereye bakacağını bilir."
+    },
+    {
+     "type": "pill",
+     "text": "Kaydet, lazım olur",
+     "outline": true
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "bg": "glow",
+   "pattern": "rings",
+   "logo": "center",
+   "align": "center top",
+   "elements": [
+    {
+     "type": "hero",
+     "src": "brand/stock/cam-halka.jpg",
+     "x": 190,
+     "y": 640,
+     "w": 700,
+     "h": 525,
+     "blend": "lighten",
+     "gray": true,
+     "contrast": 1.15
+    },
+    {
+     "type": "burst",
+     "x": 760,
+     "y": 640,
+     "size": 170,
+     "rot": 10
+    },
+    {
+     "type": "note",
+     "text": "Her içerik bir **deney.**",
+     "x": 610,
+     "y": 1010,
+     "w": 330,
+     "rot": 5
+    },
+    {
+     "type": "lead",
+     "text": "Frame Lab nasıl çalışır?"
+    },
+    {
+     "type": "h1",
+     "text": "Önce döngüyü kur:\n{{dene, ölç, tekrarla.}}",
+     "light": true,
+     "size": 96
+    },
+    {
+     "type": "lead",
+     "text": "Sonuçları açık açık paylaşıyoruz."
+    }
+   ]
+  }
+ ]
+}

@@ -6,7 +6,7 @@ Kullanım:
   python3 tools/render.py reel     spec.json out.mp4 [voice_file]  -> 1080x1920 MP4, müzikli
 Spec formatı için tools/PLAYBOOK.md'ye bak.
 """
-import sys, os, json, asyncio, subprocess, tempfile, html as H
+import sys, os, re, json, asyncio, subprocess, tempfile, random, html as H
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from brand import kare, INK, PAPER, LIME, SOFT, GREY, LIME_DARK
 
@@ -15,13 +15,16 @@ THEMES = {  # bg, fg, lead, grey, accent(dot), line, highlight(fg,bg,pad), card_
  "soft":  (SOFT, INK, "#33372B", "#5E6650", LIME_DARK, "#D3E3B5", (INK, LIME, "0 12px"), "#FFFFFF"),
  "dark":  (INK, PAPER, "#D9D8D2", GREY, LIME, "#26262C", (LIME, "transparent", "0"), "#1D1D22"),
 }
-def hl(text):  # [[...]] -> vurgu
+def hl(text):  # [[...]] -> vurgu, {{...}} -> italik serif, **...** -> kalın
     t = H.escape(text).replace("\n", "<br>")
+    t = t.replace("{{", '<span class="se">').replace("}}", "</span>")
+    t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
     return t.replace("[[", '<span class="hl">').replace("]]", "</span>")
 
 def css(theme, w, h):
     bg, fg, lead, grey, acc, line, (hf, hb, hp), cardbg = THEMES[theme]
     lab = LIME if theme == "dark" else LIME_DARK
+    G = {"dark": ("#2A2A32", "#08080A", "rgba(255,255,255,.09)"), "light": ("#FFFFFF", "#E2E1DB", "rgba(0,0,0,.07)"), "soft": ("#FAFDF3", "#DCE8C3", "rgba(0,0,0,.07)")}[theme]
     return f"""*{{box-sizing:border-box;margin:0;padding:0}}
 body{{width:{w}px;height:{h}px;background:{bg};color:{fg};font-family:'Inter',sans-serif;overflow:hidden}}
 .s{{position:relative;width:{w}px;height:{h}px;padding:{'96px 88px' if h<1500 else '150px 90px 0'};display:flex;flex-direction:column}}
@@ -105,11 +108,25 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .bar.hot .bl span:last-child{{color:{lab}}}
 .ring{{position:relative;display:inline-flex;align-items:center;justify-content:center}}
 .ring .rv{{position:absolute;font-family:'Inter Display';font-weight:800;letter-spacing:-.04em}}
+.se{{font-family:'Lora',serif;font-style:italic;font-weight:500;letter-spacing:-.025em;color:{lab if theme=='dark' else 'inherit'}}} .hl .se{{color:inherit}}
+.hlt{{font-weight:300;letter-spacing:-.045em;line-height:1.02}} .hlt b{{font-weight:600}} .hlt .se{{font-size:1.06em}}
+.lead b{{color:{fg};font-weight:600}}
+.s.bg-glow{{background:radial-gradient(130% 85% at 50% 28%,{G[0]} 0%,{bg} 55%,{G[1]} 100%)}}
+.rings{{position:absolute;left:50%;top:{int(h*0.34)}px;z-index:0}} .rings i{{position:absolute;border:1.5px solid {G[2]};border-radius:50%;transform:translate(-50%,-50%)}}
+.top.logoc{{justify-content:center;position:relative}} .top.logoc .pn{{position:absolute;right:0;top:0}}
+.main.top{{justify-content:flex-start;padding-top:{56 if h<1500 else 40}px;gap:{30 if h<1500 else 40}px}}
+.pill.outl{{background:transparent;border:2px solid {fg};color:{fg};font-family:'Inter';font-weight:500;font-size:{28 if h<1500 else 34}px;padding:13px 30px}}
+.note{{position:absolute;z-index:4;filter:drop-shadow(0 16px 24px rgba(0,0,0,.38))}}
+.note>div{{background:#FFFFFF;color:#111114;padding:30px 34px 34px;font-size:{30 if h<1500 else 36}px;line-height:1.22;letter-spacing:-.02em;text-align:left}}
+.note b{{font-weight:700}}
+.hero{{position:absolute;z-index:1;background-size:contain;background-repeat:no-repeat;background-position:center}}
+.burst{{position:absolute;z-index:1}}
+.s.ed .foot{{z-index:3}}
 .mq{{position:absolute;left:-60px;white-space:nowrap;font-family:'Inter Display';font-weight:800;font-size:230px;line-height:1;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:3px {grey};opacity:.3;z-index:0;transform-origin:0 50%}}"""
 
 def words(text, at, gap=0.06):
     """Başlığı kelime kelime animasyonlu HTML'e çevirir; [[...]] vurguları korunur ve sonradan süpürülerek gelir."""
-    k = 0; out = ""
+    k = 0; out = ""; se = bo = False
     parts = text.replace("]]", "[[").split("[[")  # tek indeksler vurgu
     for pi, part in enumerate(parts):
         seg = ""
@@ -118,7 +135,12 @@ def words(text, at, gap=0.06):
             for wi, w in enumerate(line.split(" ")):
                 if wi: seg += " "
                 if w:
-                    seg += f'<span class="w" data-w="{round(at + k*gap, 3)}">{H.escape(w)}</span>'; k += 1
+                    if w.startswith("{{"): se = True; w = w[2:]
+                    if w.startswith("**"): bo = True; w = w[2:]
+                    c = "w" + (" se" if se else ""); wt = "font-weight:600;" if bo else ""
+                    if w.endswith("}}") or "}}" in w: se = False; w = w.replace("}}", "")
+                    if w.endswith("**") or "**" in w: bo = False; w = w.replace("**", "")
+                    seg += f'<span class="{c}" style="{wt}" data-w="{round(at + k*gap, 3)}">{H.escape(w)}</span>'; k += 1
         out += f'<span class="hl" data-hl="{round(at + k*gap + 0.12, 3)}">{seg}</span>' if pi % 2 else seg
     return out
 
@@ -132,14 +154,15 @@ def el(e, light):
         return f'<div{cls}{at} data-pop="1" style="margin-left:-30px">{kare(e.get("size",340), e.get("face","mutlu"), bg="none", light_bg=light)}</div>'
     if k in ("h1", "h2"):
         st = f' style="font-size:{e["size"]}px"' if "size" in e else ""
-        oc = ' class="h1o"' if e.get("outline") else ""
+        hc = " ".join(c for c, on in (("h1o", e.get("outline")), ("hlt", e.get("light"))) if on)
+        oc = f' class="{hc}"' if hc else ""
         nar = '<div class="narrow">' if e.get("narrow") else ""
         body = words(e["text"], e["at"]) if has else hl(e["text"])
         return f'{nar}<{k}{oc}{st}>{body}</{k}>' + ("</div>" if nar else "")
     if k == "tag":  return f'<div class="tag{ac}"{A(fx="track")}>{H.escape(e["text"])}</div>'
     if k == "lead": return f'<p class="lead{ac}{" narrow" if e.get("narrow") else ""}"{at}>{hl(e["text"])}</p>'
     if k == "chips": return "<div>" + "".join(f'<span class="chip{ac}"{A(i, 0.08, "pop")}>{H.escape(c)}</span>' for i, c in enumerate(e["items"])) + "</div>"
-    if k == "pill": return f'<div><span class="pill{" muted" if e.get("muted") else ""}{ac}"{A(fx="pop")}>{H.escape(e["text"])}</span></div>'
+    if k == "pill": return f'<div><span class="pill{" muted" if e.get("muted") else ""}{" outl" if e.get("outline") else ""}{ac}"{A(fx="pop")}>{H.escape(e["text"])}</span></div>'
     if k == "rows": return '<div style="border-bottom:2px solid rgba(127,127,127,.3)">' + "".join(
         f'<div class="row{ac}"{A(i, 0.14, "left")}><div class="rk">{H.escape(r[0])}</div><div><div class="rt">{H.escape(r[1])}</div><div class="rd">{H.escape(r[2])}</div></div></div>' for i, r in enumerate(e["items"])) + "</div>"
     if k == "card":
@@ -191,6 +214,34 @@ def el(e, light):
                 f'<circle cx="60" cy="60" r="50" fill="none" stroke="{col}" stroke-width="12" stroke-linecap="round" pathLength="100"{d}></circle></svg>'
                 f'<div class="rv" style="font-size:{int(sz*0.3)}px"{c}>{txt}</div></div>'
                 + (f'<div class="blabel">{hl(e["label"])}</div>' if e.get("label") else "") + "</div>")
+    if k == "hero":  # kahraman görsel: x,y sol üst köşe; w,h kutu; blend: lighten (siyah zeminli görsel, koyu temada) | multiply (beyaz zeminli, açık temada)
+        src = "file://" + os.path.abspath(e["src"]); st = [f'left:{e.get("x",90)}px', f'top:{e.get("y",600)}px', f'width:{e.get("w",900)}px', f'height:{e.get("h",700)}px', f"background-image:url('{src}')"]
+        if e.get("blend"): st.append(f'mix-blend-mode:{e["blend"]}')
+        fl = (["grayscale(1)"] if e.get("gray") else []) + (["grayscale(1) sepia(1) hue-rotate(38deg) saturate(4.2) brightness(1.05)"] if e.get("tint") else []) + ([f'contrast({e["contrast"]})'] if e.get("contrast") else []) + ([f'brightness({e["bright"]})'] if e.get("bright") else [])
+        if fl: st.append("filter:" + " ".join(fl))
+        if e.get("cover"): st.append("background-size:cover")
+        if e.get("pos"): st.append(f'background-position:{e["pos"]}')
+        if e.get("mask"): st.append({"bottom": "-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent)", "top": "-webkit-mask-image:linear-gradient(to top,#000 60%,transparent)", "radial": "-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent)"}[e["mask"]])
+        tf = f'rotate({e.get("rot",0)}deg)'
+        an = f' data-in="{e["at"]}" data-fx="hero" data-tf="{tf}"' if has else ""
+        return f'<div class="hero{ac}"{an} style="{";".join(st)};transform:{tf}"></div>'
+    if k == "burst":  # yeşil parıltı / yıldız: shape spark (4 uçlu) | sun (ışınlı)
+        sz = e.get("size", 300); col = e.get("color", LIME); rot = e.get("rot", 0)
+        if e.get("shape", "spark") == "sun":
+            body = "".join(f'<rect x="46" y="2" width="8" height="30" rx="4" fill="{col}" transform="rotate({a} 50 50)"></rect>' for a in range(0, 360, 30))
+        else:
+            body = f'<path d="M50 0 C54 34 66 46 100 50 C66 54 54 66 50 100 C46 66 34 54 0 50 C34 46 46 34 50 0Z" fill="{col}"></path>'
+        tf = f'rotate({rot}deg)'
+        an = f' data-in="{e["at"]}" data-fx="hero" data-tf="{tf}"' if has else ""
+        return f'<div class="burst{ac}"{an} style="left:{e.get("x",700)}px;top:{e.get("y",700)}px;width:{sz}px;height:{sz}px;transform:{tf}"><svg viewBox="0 0 100 100" width="{sz}" height="{sz}">{body}</svg></div>'
+    if k == "note":  # yırtık kâğıt notu: x,y konum; w genişlik; rot eğim
+        rnd = random.Random(len(e["text"]) * 7 + 3); n = 16
+        topp = [f'{round(100*i/n,1)}% {round(rnd.uniform(0,3.2),1)}%' for i in range(n + 1)]
+        botp = [f'{round(100*i/n,1)}% {round(100 - rnd.uniform(0,3.6),1)}%' for i in range(n, -1, -1)]
+        tf = f'rotate({e.get("rot",-4)}deg)'
+        an = f' data-in="{e["at"]}" data-fx="hero" data-tf="{tf}"' if has else ""
+        return (f'<div class="note{ac}"{an} style="left:{e.get("x",560)}px;top:{e.get("y",900)}px;width:{e.get("w",400)}px;transform:{tf}">'
+                f'<div style="clip-path:polygon({",".join(topp + botp)})">{hl(e["text"])}</div></div>')
     if k == "marquee":  # arka planda akan dev yazı şeridi (yalnızca Reel)
         return f'<div class="mq" data-mq="{e.get("speed", 150)}" style="top:{e.get("top", 1380)}px;transform:rotate(-6deg)">{(H.escape(e["text"]) + " · ") * 14}</div>'
     if k == "logo_anim":
@@ -209,6 +260,10 @@ def el(e, light):
         return f'<div class="peek a" data-in="{e.get("at", 0.3)}" data-fx="peek">{kare(e.get("size",620), e.get("face","goz"), bg="none", light_bg=light)}</div>'
     if k == "phone":
         blocks = "".join(f'<div class="pb{" acc" if i == e.get("accent", -1) else ""}">{H.escape(b)}</div>' for i, b in enumerate(e.get("blocks", [])))
+        if e.get("center"):  # ortada, alttan yükselen büyük telefon
+            tf = f'translateX(-50%) rotate({e.get("rot", -4)}deg)'
+            return (f'<div class="phone a" data-in="{e.get("at", 0.3)}" data-fx="hero" data-tf="{tf}" style="left:50%;right:auto;width:{e.get("w", 520)}px;height:1040px;bottom:{e.get("bottom", -400)}px;transform:{tf}">'
+                    f'<div class="pt">{H.escape(e.get("title",""))}</div>{blocks}</div>')
         return f'<div class="phone a" data-in="{e.get("at", 0.3)}" data-fx="phone"><div class="pt">{H.escape(e.get("title",""))}</div>{blocks}</div>'
     if k == "photo_bg":  # tam genişlik görsel, alta doğru zemine erir
         hh = e.get("height", 820)
@@ -234,6 +289,7 @@ window.render=function(t){
    else if(fx=='spin'){tf='rotate('+(12-80*(1-ease((t-s)/0.6))+(live?Math.sin(t*2.2)*3:0))+'deg) scale('+Math.max(back((t-s)/0.6),0)+')';op=(t>=s?1:0);}
    else if(fx=='peek'){tf='translateX('+(340*(1-back((t-s)/0.7)))+'px) rotate('+(-10+(live?Math.sin(t*1.8)*2:0))+'deg)';op=(t>=s?1:0);}
    else if(fx=='phone'){tf='translateY('+(560*(1-p))+'px) rotate(-7deg)';op=Math.min(1,p*2);}
+   else if(fx=='hero'){const b=back((t-s)/0.6);tf=(e.dataset.tf||'')+' translateY('+(60*(1-p))+'px) scale('+(0.8+0.2*b)+')';op=Math.min(1,Math.max(x,0)*2.5);}
    else if(fx=='track'){e.style.letterSpacing=(0.12+0.45*(1-p))+'em';tf='none';}
    e.style.opacity=op; e.style.transform=tf;});
  document.querySelectorAll('[data-w]').forEach(e=>{const s=parseFloat(e.dataset.w);const x=(t-s)/0.5;
@@ -254,17 +310,24 @@ window.render=function(t){
 };
 </script>"""
 
-ABS = ("photo_bg", "marquee", "sticker", "kare_peek", "phone")
-def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="", frame=False):
+ABS = ("photo_bg", "hero", "burst", "note", "marquee", "sticker", "kare_peek", "phone")
+def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="", frame=False, bg="", logo=""):
+    """bg="glow": ışıklı degrade zemin. pattern="rings": ince eşmerkezli halkalar. logo="center": üstte ortalı logo (editoryal düzen)."""
     light = theme in ("light", "soft")
-    t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""
+    if logo == "center":
+        t = f'<div class="top logoc"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div class="pn">{top or ""}</div></div>'
+    else:
+        t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""
     fr = foot_right if foot_right is not None else ("" if h >= 1500 else "Kaydır →")
     foot = f'<div class="foot"><span>@frame.labo</span><span class="sw">{H.escape(fr) if fr else ("FRAME/LAB" if h>=1500 else "")}</span></div>'
     body = "".join(el(e, light) for e in elements if e["type"] not in ABS)
     deco = "".join(el(e, light) for e in elements if e["type"] in ABS)
     fr = '<div class="frame"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>' if frame else ""
-    pc = f" pat-{pattern}" if pattern else ""
-    return f'<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{css(theme,w,h)}</style></head><body><div class="s{pc}">{fr}{deco}{t}<div class="main {align}" style="position:relative;z-index:2">{body}</div>{foot}</div>{JS}</body></html>'
+    rings = ""
+    if pattern == "rings":
+        rings = '<div class="rings">' + "".join(f'<i style="width:{d}px;height:{d}px"></i>' for d in (620, 980, 1340, 1700)) + "</div>"
+    pc = (f" pat-{pattern}" if pattern and pattern != "rings" else "") + (f" bg-{bg}" if bg else "") + (" ed" if logo == "center" or any(e["type"] == "hero" for e in elements) else "")
+    return f'<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{css(theme,w,h)}</style></head><body><div class="s{pc}">{rings}{fr}{deco}{t}<div class="main {align}" style="position:relative;z-index:2">{body}</div>{foot}</div>{JS}</body></html>'
 
 async def _shots(pages, w, h, paths, t_final=True):
     from playwright.async_api import async_playwright
@@ -281,11 +344,11 @@ async def _shots(pages, w, h, paths, t_final=True):
 
 def carousel(spec, out_dir):
     os.makedirs(out_dir, exist_ok=True); sl = spec["slides"]; n = len(sl)
-    pages = [page(s["theme"], s["elements"], 1080, 1350, (f"{i+1}/{n}" if n > 1 else ""), s.get("foot_right", ("Takip et" if i == n-1 else None) if n > 1 else "Kaydet"), s.get("align",""), s.get("pattern",""), s.get("frame",False)) for i, s in enumerate(sl)]
+    pages = [page(s["theme"], s["elements"], 1080, 1350, (f"{i+1}/{n}" if n > 1 else ""), s.get("foot_right", ("Takip et" if i == n-1 else None) if n > 1 else "Kaydet"), s.get("align",""), s.get("pattern",""), s.get("frame",False), bg=s.get("bg",""), logo=s.get("logo","")) for i, s in enumerate(sl)]
     asyncio.run(_shots(pages, 1080, 1350, [f"{out_dir}/{i+1}.jpg" for i in range(n)]))
 
 def story(spec, out):
-    asyncio.run(_shots([page(spec["theme"], spec["elements"], 1080, 1920, foot_right=spec.get("foot_right", ""), align=spec.get("align",""), pattern=spec.get("pattern",""), frame=spec.get("frame",False))], 1080, 1920, [out]))
+    asyncio.run(_shots([page(spec["theme"], spec["elements"], 1080, 1920, foot_right=spec.get("foot_right", ""), align=spec.get("align",""), pattern=spec.get("pattern",""), frame=spec.get("frame",False), bg=spec.get("bg",""), logo=spec.get("logo",""))], 1080, 1920, [out]))
 
 async def _reel_frames(spec, tmp):
     from playwright.async_api import async_playwright
@@ -294,7 +357,7 @@ async def _reel_frames(spec, tmp):
         b = await p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
         pg = await b.new_page(viewport={"width": 1080, "height": 1920})
         for i, sc in enumerate(spec["scenes"]):
-            f = f"{tmp}/s{i}.html"; open(f, "w").write(page(sc["theme"], sc["elements"], 1080, 1920, align=sc.get("align",""), pattern=sc.get("pattern",""), frame=sc.get("frame",False)))
+            f = f"{tmp}/s{i}.html"; open(f, "w").write(page(sc["theme"], sc["elements"], 1080, 1920, align=sc.get("align",""), pattern=sc.get("pattern",""), frame=sc.get("frame",False), bg=sc.get("bg",""), logo=sc.get("logo","")))
             await pg.goto("file://" + f); await pg.wait_for_timeout(250)
             n = int(round(sc["duration"] * 30)); part = f"{tmp}/s{i}.tmp.mp4"
             pr = subprocess.Popen(["ffmpeg","-y","-loglevel","error","-f","image2pipe","-framerate","30","-c:v","mjpeg","-i","-",
@@ -399,7 +462,7 @@ def reel_motion(spec, out, voice=None):
     t0 = 0.0; S = []; panels = ""; ev = []
     for i, s_ in enumerate(sc):
         S.append({"start": round(t0, 3), "dur": s_["duration"]})
-        htm = page(s_["theme"], s_["elements"], 1080, 1920, align=s_.get("align",""), pattern=s_.get("pattern",""), frame=s_.get("frame",False))
+        htm = page(s_["theme"], s_["elements"], 1080, 1920, align=s_.get("align",""), pattern=s_.get("pattern",""), frame=s_.get("frame",False), bg=s_.get("bg",""), logo=s_.get("logo",""))
         if s_.get("nofoot"):
             import re as _re; htm = _re.sub(r'<div class="foot">.*?</div>', '', htm, count=1)
         panels += f'<iframe srcdoc="{H.escape(htm)}" scrolling="no"></iframe>'
