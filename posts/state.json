@@ -145,9 +145,7 @@
    "music": "lofi",
    "media_id": "18139861054680639",
    "status": "yayında (11 Kasım 19:15, akşam görevi)"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-11-gemini-4-carbon",
    "kind": "reel",
@@ -165,9 +163,12 @@
     "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
    ],
    "music": "house",
-   "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli."
+   "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli.",
+   "media_id": "17887918917625015",
+   "status": "yayında (12 Kasım 19:14, akşam görevi)"
   }
  ],
+ "queue": [],
  "stories": [
   {
    "date": "2026-11-09",
