@@ -1,0 +1,11 @@
+{
+ "theme": "dark",
+ "foot_right": "Kaydet",
+ "elements": [
+  {"type": "tag", "text": "BİLİYOR MUYDUN?"},
+  {"type": "h2", "text": "ChatGPT artık\nmarkanı [[kaç kez\nandığını]] gösteriyor."},
+  {"type": "lead", "text": "OpenAI'ın yeni Business Hub'ında (beta) işletmeler neler yapabiliyor?"},
+  {"type": "tiles", "items": [["ANILMA", "Kaç kez anıldığını görür"], ["TIK", "Sitesine giden tıkları görür"], ["KONU", "Hangi konularda geçtiğini görür"], ["AJAN", "Kendi sohbet ajanını kurar (şimdilik ABD)"]]},
+  {"type": "card", "outline": true, "label": "KENDİN DENE", "text": "Müşterin gibi sor: “Kadıköy'de en iyi pastane hangisi?” Markan çıkıyor mu? DM'den yaz."}
+ ]
+}
