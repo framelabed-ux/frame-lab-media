@@ -9,7 +9,8 @@
    "cover_tone": "light",
    "media_id": "18031318442692957",
    "title": "Tanışma: Merhaba, ben Kare",
-   "layout": "classic"
+   "layout": "classic",
+   "topic_area": "tanitim"
   },
   {
    "date": "2026-11-09",
@@ -20,7 +21,8 @@
    "status": "yayında (20:00)",
    "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
    "layout": "classic",
-   "music": "pop"
+   "music": "pop",
+   "topic_area": "ai"
   },
   {
    "date": "2026-11-10",
@@ -45,7 +47,8 @@
     "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
     "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
    ],
-   "layout": "bignum"
+   "layout": "bignum",
+   "topic_area": "ai"
   },
   {
    "date": "2026-11-10",
@@ -62,7 +65,8 @@
     "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
     "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
    ],
-   "music": "pop"
+   "music": "pop",
+   "topic_area": "ai"
   },
   {
    "date": "2026-11-10",
@@ -76,7 +80,8 @@
     "posts/2026-11-10-prompt-rehberi/1.jpg"
    ],
    "layout": "chat",
-   "keyword": "REHBER"
+   "keyword": "REHBER",
+   "topic_area": "ai"
   },
   {
    "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
@@ -102,7 +107,8 @@
    ],
    "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı.",
    "media_id": "18100588367424828",
-   "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)"
+   "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)",
+   "topic_area": "marka"
   },
   {
    "slug": "2026-11-11-adobe-max-creative-agent",
@@ -124,7 +130,8 @@
    "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
    "music": "synthwave",
    "media_id": "18172083973473135",
-   "status": "yayında (12:01)"
+   "status": "yayında (12:01)",
+   "topic_area": "ai"
   },
   {
    "slug": "2026-11-11-claude-meetings",
@@ -144,7 +151,8 @@
    "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
    "music": "lofi",
    "media_id": "18139861054680639",
-   "status": "yayında (11 Kasım 19:15, akşam görevi)"
+   "status": "yayında (11 Kasım 19:15, akşam görevi)",
+   "topic_area": "ai"
   },
   {
    "slug": "2026-11-11-gemini-4-carbon",
@@ -165,7 +173,8 @@
    "music": "house",
    "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli.",
    "media_id": "17887918917625015",
-   "status": "yayında (12 Kasım 19:14, akşam görevi)"
+   "status": "yayında (12 Kasım 19:14, akşam görevi)",
+   "topic_area": "ai"
   }
  ],
  "queue": [
@@ -189,7 +198,8 @@
    ],
    "music": "minimal",
    "note": "13 Kasım sabah görevi: büyük gelişme (yeni Gemini modeli, Arama'da tüm kullanıcılara) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,8 sn (outro dahil). Kapak bars düzeni, koyu ton. 13 Kasım 18:20 güncellendi (Ece): süs öğeleri (nokta deseni, kayan yazı, köşe çizgileri, parıltı) çıkarıldı, pembe ikinci vurgu eklendi.",
-   "cover_type": "tipografi"
+   "cover_type": "tipografi",
+   "topic_area": "ai"
   }
  ],
  "stories": [
