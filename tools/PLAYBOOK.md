@@ -60,7 +60,15 @@ Profil 3 sütun. Kapaklar şu 3'lü döngüyü sırayla izler: **görsel → tip
 - Bugünün kapak türü: `grid` ve `queue` içindeki son kaydın `cover_type` alanına bak, döngüde bir sonrakini seç. Kaydı yazarken `"cover_type"` alanını mutlaka doldur. (13 Kasım Gemini 4 Hydrogen = tipografi; sıradaki = Kare.)
 - **Kapakta en fazla 5 kelime.** Ayrıntı içeride ve açıklama metninde.
 - "YENİ" etiketi en fazla 9 gönderide bir. Aynı vurgu kalıbını (yeşil kutu) art arda iki kapakta kullanma.
-- Renk ve tipografi dili Ece'nin seçeceği yöne göre güncellenecek (13 Kasım'da 3 yön sunuldu: A Deney Raporu, B Vizör, C Renk Blokları). Seçim gelene kadar mevcut editoryal stil sürer.
+- Renk ve tipografi dili: 13 Kasım'da A (Deney Raporu), B (Vizör) ve C (Renk Blokları) yönleri reddedildi. Ece'nin gönderdiği son örneklere göre hazırlanan yeni yön (3D nesne + illüstrasyon + tipografi; lime, canlı pembe, güneş sarısı, krem, siyah) onay bekliyor. Onay gelene kadar mevcut editoryal stil sürer.
+
+## Süs yok kuralı (Ece, 13 Kasım: "anlamsız şeyler koyma, gereksiz şeyler koyma tasarımlara")
+Tasarımdaki her öğe ya bilgi taşır ya da konuyu gösterir. Şunlar **kullanılmaz**:
+- Sıra/sayı numaraları ("№ 18" gibi), kod, tarih damgası gibi okura bir şey söylemeyen etiketler.
+- Köşe çizgileri, kamera kadrajı, odak kutusu, REC, zaman kodu, pozlama cetveli gibi sahte arayüz öğeleri.
+- Yalnızca boşluk doldurmak için konan artı işaretleri, ince çizgiler, rastgele şekiller.
+- Düz turuncu ve düz açık mavi zemin/vurgu (Ece "çok kötü durmuş" dedi).
+Üstteki küçük seri adı (Video, Tasarım, Kare Açıklıyor…) kalabilir; başka üst/alt etiket eklenmez.
 
 ## Editoryal stil (Ece, 11 Kasım: "çok aynı tip gidiyoruz"; Behance'ten ajans işleri örnek gösterdi)
 Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince başlık + italik serif vurgu, ışıklı zemin ve altta büyük bir "kahraman" görsel. Örnekler: `tools/examples/editorial.json` (4 gönderi) ve `tools/examples/reel-editorial.json`. Örnek gösterilen işler yalnızca yön içindir; hiçbirinin kurgusunu, nesnesini ya da metnini kopyalama.
@@ -98,6 +106,15 @@ Formata göre seriler:
 | Reel | Sıcak Gelişme (gündemde büyük bir şey varsa), Kare Açıklıyor (bir kavramı 30–40 saniyede anlatır) |
 | Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın en önemli 3–4 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri), Kare'den Haberler (numaralı seri: 1–3 doğrulanmış gelişme, her biri için ne oldu, nasıl çalışır, sana ne faydası var; Ece 10 Kasım'da başlattı) |
 | Statik (tek görsel) | Günün Prompt'u (kopyalanacak hazır prompt), Tasarım Kuralı (tek kural, tek örnek) |
+
+**Konu alanları genişletildi (Ece, 13 Kasım: "içerik skalasını da genişletelim").** Gündem dışındaki içerikler yalnızca yapay zekâ/tasarım/sosyal medya ipuçlarıyla sınırlı değil; şu alanlar sırayla dönsün, aynı alan art arda iki kez gelmesin:
+- **Marka ve reklam:** yeni logo/kimlik değişimleri, dikkat çeken kampanyalar, "bu reklam neden çalıştı" (Reklam Lab kuralları geçerli).
+- **Para ve iş:** freelance fiyatlama, ilk müşteriyi bulma, içerik üreticilerin gelir yolları, teklif/brief hazırlama.
+- **Dikkat ve psikoloji:** neden kaydırırız, kanca neden çalışır, renk ve yazı tipi algısı. İddia varsa kaynağı doğrulanır.
+- **İnternet kültürü ve trend:** "bu format neden tuttu", viral bir akımın anatomisi.
+- **Görsel kültür:** film jeneriği, klip, oyun ve afiş tasarımından tek bir fikir; tipografi ve tasarım tarihinden kısa hikâyeler.
+- **Perde arkası:** bir içeriği (3D sahne, animasyon, kapak) nasıl yaptığımız.
+Bu alanlardaki olgular da gündem haberleri gibi doğrulanır; doğrulanamayan rakam yazılmaz.
 
 İçeriklerin yaklaşık %60'ı gündemden gelir. Büyük bir gelişme o günün formatına uyarlanır: Reel günü kısa deneme videosu, carousel günü adım adım anlatım, statik günü tek karede "bunu bilmen lazım" kartı.
 
