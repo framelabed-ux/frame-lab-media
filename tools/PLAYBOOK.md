@@ -1,6 +1,6 @@
 # Frame Lab üretim kılavuzu
 
-Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Konular yapay zekâ, tasarım, video ve sosyal medya. Ton sıcak, net, hafif esprili ve pratik. Her içerik bir şey dener ya da öğretir: "Haber değil, deney."
+Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Konular yaratıcı dijital dünyanın tamamı: tasarım, marka ve reklam, sosyal medya ve platformlar, video ve görsel kültür, internet trendleri, içerik üreticiliği ve para kazanma, yapay zekâ. **Yapay zekâ bu konulardan yalnızca biri** (Ece, 13 Kasım: "sadece yapay zekâ paylaşıyoruz, çok dar bir yere sıkıştırma bizi"). Ton sıcak, net, hafif esprili ve pratik. Her içerik bir şey dener ya da öğretir: "Haber değil, deney."
 
 ## Hesaplar ve yayın
 - Instagram yayını Windsor MCP üzerinden yapılır: connector `instagram`, account `17841469889313843`.
@@ -17,6 +17,13 @@ Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Ko
 - Arada (haftada en fazla 1–2 içerikte) 3D nesne, illüstrasyon ya da animasyon kullanılabilir; ama genel görünüm mevcut çizgiden uzaklaşmaz. 3D için `tools/r3d.py` (tarayıcıda yazılımla çizilen sahneler: `SC` 0 = 3D Kare, 1 = oynat düğmesi, 2 = madeni paralar; renkler `BG0/BG1/RIMA/RIMB/OBJ`; çıktıyı `hero` ya da `photo_bg` olarak kullan). Renkler yine lime + pembe + siyah/krem.
 - Üretim için `python3 tools/render.py` (carousel, story, reel). Spec örnekleri `tools/examples/` içinde. Vurgu için metinde `[[kelime]]` yazılır.
 
+## Konu dengesi (Ece, 13 Kasım; 14 Kasım'dan itibaren geçerli)
+- Yapay zekâ içeriği **en fazla 3 gönderide 1** olur. Art arda iki yapay zekâ gönderisi yok (çok büyük bir model duyurusu istisna; o zaman sonraki iki gönderi kesinlikle başka alandan).
+- Kalan gönderiler "Konu alanları" listesindeki alanlardan döner (marka ve reklam, para ve iş, dikkat ve psikoloji, internet kültürü ve trend, görsel kültür, perde arkası) ve platform/sosyal medya haberleri.
+- Gündem payı (~%60) yalnızca yapay zekâ gündemi demek değil: yeni logo ve kimlik değişimleri, konuşulan reklam kampanyaları, Instagram/TikTok/YouTube güncellemeleri, viral akımlar, tasarım araçlarındaki yenilikler de gündemdir.
+- Hafta sonu "Kare Açıklıyor" Reel'leri de bu dengeye uyar: tasarım, marka, sosyal medya, psikoloji ya da internet kültüründen bir kavram (ör. "kerning nedir", "neden kırmızı logo çok", "algoritma ne demek").
+- Her sabah `grid` ve `queue` içindeki son 3 kaydın `topic_area` alanına bak; kayıt yazarken `"topic_area"` alanını doldur (`ai`, `marka`, `para`, `psikoloji`, `trend`, `gorsel-kultur`, `platform`, `tasarim`, `perde-arkasi`).
+
 ## Gündem kaynakları: kaçırılmaması gerekenler
 Genel arama tek başına yetmez (10 Kasım'da Claude Fable 5.2 duyurusu sabah taramasında kaçtı). Her taramada şu kaynaklar **tek tek** kontrol edilir, son 48 saatte yeni bir duyuru var mı diye:
 - **Yapay zekâ şirketleri:** Anthropic (anthropic.com/news, @claudeai), OpenAI (openai.com/news), Google (blog.google, deepmind.google), Meta AI (ai.meta.com/blog), xAI, Mistral, Microsoft (Copilot), Apple.
@@ -24,6 +31,8 @@ Genel arama tek başına yetmez (10 Kasım'da Claude Fable 5.2 duyurusu sabah ta
 - **Tasarım araçları:** Adobe (blog.adobe.com, Firefly), Canva (canva.com/newsroom), Figma (figma.com/blog), CapCut.
 - **Platformlar:** Instagram (about.instagram.com, @mosseri), Meta newsroom, TikTok newsroom, YouTube blog / Creator Insider, Threads, LinkedIn.
 - **Teknoloji medyası:** TechCrunch AI, The Verge AI, Engadget, Social Media Today (platform haberleri için).
+- **Marka, reklam ve tasarım medyası:** Brand New (underconsideration.com/brandnew, logo/kimlik değişimleri), Creative Bloq, It's Nice That, Dezeen (grafik/ürün), Adweek, Ad Age, Campaign, The Drum, Marketing Türkiye, Kreatif, Webrazzi (Türkiye dijital gündemi).
+- **Trend ve internet kültürü:** Know Your Meme (akımın kaynağını doğrulamak için), TikTok Creative Center trendleri, Instagram @creators.
 Arama ipucu: şirket adı + "announces", "launches", "introducing", "new model", "update" ve bugünün ya da dünün tarihi. "extended" modu kullan.
 
 **Büyük gelişme ölçütü:** Yeni bir ana model sürümü (GPT, Claude, Gemini, Llama, Grok gibi), Instagram/TikTok/YouTube'da içerik üreticileri doğrudan etkileyen bir özellik, Adobe/Canva/Figma'da büyük bir yapay zekâ özelliği ya da viral bir dijital trend. Bunlar o günün feed konusu olur ve mümkünse aynı gün işlenir.
