@@ -1,0 +1,215 @@
+{
+ "motion": true,
+ "stills": [
+  0.6,
+  3.0,
+  12.5,
+  17.5,
+  25.0,
+  29.5,
+  34.0
+ ],
+ "scenes": [
+  {
+   "theme": "dark",
+   "pattern": "dots",
+   "duration": 6.5,
+   "kare": {
+    "x": 720,
+    "y": 1300,
+    "size": 260,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "marquee",
+     "text": "GEMINI 4 HYDROGEN",
+     "top": 1580
+    },
+    {
+     "type": "tag",
+     "text": "YENİ MODEL · GOOGLE",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Gemini'nin\nyeni modeli\n[[2,5 kat]] daha hızlı.",
+     "size": 104,
+     "at": 0.05
+    },
+    {
+     "type": "lead",
+     "text": "Adı **Gemini 4 Hydrogen.** Önceki hızlı model 3.8 Flash'ın yerini alıyor.",
+     "at": 0.7
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "duration": 7.0,
+   "transition": "up",
+   "kare": {
+    "x": 70,
+    "y": 1500,
+    "size": 260,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "ZEKÂ ENDEKSİ · ARTIFICIAL ANALYSIS",
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "Hızlı ama\n[[daha akıllı.]]",
+     "size": 104,
+     "at": 0.15
+    },
+    {
+     "type": "bars",
+     "items": [
+      [
+       "Gemini 4 Hydrogen",
+       51,
+       "51"
+      ],
+      [
+       "Gemini 4 Argon",
+       50,
+       "50"
+      ],
+      [
+       "Gemini 3.8 Flash",
+       31,
+       "31"
+      ]
+     ],
+     "accent": 0,
+     "max": 58,
+     "at": 0.8
+    },
+    {
+     "type": "lead",
+     "text": "Google'ın büyük modeli Argon'u bile [[az farkla]] geçti.",
+     "at": 2.0
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "duration": 7.8,
+   "transition": "zoom",
+   "kare": {
+    "x": 720,
+    "y": 1520,
+    "size": 250,
+    "face": "mutlu"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "SANA NE?",
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "Ücretsiz hesaba da\n[[geliyor.]]",
+     "at": 0.15
+    },
+    {
+     "type": "rows",
+     "items": [
+      [
+       "ARAMA",
+       "Google Arama'da",
+       "Dünya genelinde, tüm kullanıcılara"
+      ],
+      [
+       "GEMINI",
+       "Gemini uygulamasında",
+       "Ücretsizde otomatik model seçimiyle"
+      ],
+      [
+       "API",
+       "Geliştiriciler için",
+       "1M girdi token'ı 1,50 $"
+      ]
+     ],
+     "at": 0.9
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "duration": 6.5,
+   "transition": "slide",
+   "kare": {
+    "x": 760,
+    "y": 300,
+    "size": 220,
+    "face": "dusunen"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "HANGİ İŞE HANGİ MODEL?",
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "Hız mı,\n[[derinlik mi?]]",
+     "size": 104,
+     "at": 0.15
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "HIZ LAZIMSA",
+      "text": "Hydrogen: günlük işler, hızlı görevler"
+     },
+     "right": {
+      "label": "DERİNLİK LAZIMSA",
+      "text": "Carbon ve Argon: zor, uzun soluklu işler"
+     },
+     "at": 0.9
+    },
+    {
+     "type": "lead",
+     "text": "Google da böyle konumlandırıyor.",
+     "at": 2.2
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center",
+   "frame": true,
+   "duration": 4.8,
+   "transition": "stack",
+   "kare": {
+    "x": 110,
+    "y": 1390,
+    "size": 270,
+    "face": "goz"
+   },
+   "elements": [
+    {
+     "type": "h2",
+     "text": "Gemini'yi en çok\nne için [[açıyorsun?]]",
+     "size": 100,
+     "at": 0.05
+    },
+    {
+     "type": "lead",
+     "text": "Yorumlara yaz. **Kaydet,** model seçerken lazım olur.",
+     "at": 0.8
+    }
+   ]
+  }
+ ],
+ "music": {
+  "style": "minimal",
+  "seed": 83
+ }
+}

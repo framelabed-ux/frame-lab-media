@@ -168,7 +168,29 @@
    "status": "yayında (12 Kasım 19:14, akşam görevi)"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-13-gemini-4-hydrogen",
+   "kind": "reel",
+   "publish_date": "2026-11-13",
+   "layout": "bars",
+   "files": [
+    "posts/2026-11-13-gemini-4-hydrogen/reel.mp4"
+   ],
+   "cover": "posts/2026-11-13-gemini-4-hydrogen/cover.jpg",
+   "cover_tone": "dark",
+   "caption": "Gemini'nin yeni modeli 2,5 kat daha hızlı ve ücretsiz hesaplara da geliyor.\n\nGoogle 12 Kasım'da Gemini 4 Hydrogen modelini duyurdu. Önceki hızlı model Gemini 3.8 Flash'ın yerini alıyor:\n\n• Hız: Google'a göre işleri 3.8 Flash'tan 2,5 kat hızlı bitiriyor.\n• Zekâ: Artificial Analysis Zekâ Endeksi'nde 51 puanla Google'ın büyük modeli Gemini 4 Argon'u (50) az farkla geçti. 3.8 Flash'ın puanı 31.\n• Nerede? Google Arama'da dünya genelinde tüm kullanıcılara açılıyor. Gemini uygulamasında ücretsiz kullanıcılar için otomatik model seçimi uygun gördüğünde Hydrogen devreye giriyor.\n• Geliştiriciler için: Gemini API'de 1 milyon girdi token'ı 1,50 $, çıktı 7,50 $.\n\nHangi işe hangi model? Hız gereken günlük işler ve çok adımlı görevler için Hydrogen; uzun soluklu, derin düşünme gerektiren işler için Carbon ve Argon. Google da modelleri böyle konumlandırıyor.\n\nKaydet, model seçerken lazım olur. Sen Gemini'yi en çok ne için açıyorsun? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #dijitalgündem #verimlilik #reels",
+   "sources": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/",
+    "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
+    "https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor",
+    "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
+   ],
+   "music": "minimal",
+   "note": "13 Kasım sabah görevi: büyük gelişme (yeni Gemini modeli, Arama'da tüm kullanıcılara) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,8 sn (outro dahil). Kapak bars düzeni, koyu ton."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -268,7 +290,8 @@
   "ogilvy-echo",
   "adobe-max-2026-firefly-creative-agent",
   "claude-meetings-sheets-whiteboards",
-  "gemini-4-carbon"
+  "gemini-4-carbon",
+  "gemini-4-hydrogen"
  ],
  "hot_pending": [],
  "scheduled": [],

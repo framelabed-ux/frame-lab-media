@@ -1,0 +1,51 @@
+{
+ "theme": "dark",
+ "pattern": "dots",
+ "align": "center",
+ "foot_right": "",
+ "nofoot": true,
+ "elements": [
+  {
+   "type": "tag",
+   "text": "YENİ MODEL · GOOGLE"
+  },
+  {
+   "type": "h1",
+   "text": "Gemini'nin\nyeni modeli\n[[2,5 kat]] daha hızlı.",
+   "size": 104
+  },
+  {
+   "type": "bars",
+   "items": [
+    [
+     "Gemini 4 Hydrogen",
+     51,
+     "51"
+    ],
+    [
+     "Gemini 4 Argon",
+     50,
+     "50"
+    ],
+    [
+     "Gemini 3.8 Flash",
+     31,
+     "31"
+    ]
+   ],
+   "accent": 0,
+   "max": 58
+  },
+  {
+   "type": "lead",
+   "text": "Zekâ endeksinde Argon'u da geçti."
+  },
+  {
+   "type": "burst",
+   "x": 820,
+   "y": 1440,
+   "size": 150,
+   "rot": 12
+  }
+ ]
+}

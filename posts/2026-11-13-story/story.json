@@ -1,0 +1,43 @@
+{
+ "theme": "light",
+ "pattern": "dots",
+ "foot_right": "Gündem",
+ "elements": [
+  {
+   "type": "tag",
+   "text": "BİLİYOR MUYDUN? · YOUTUBE"
+  },
+  {
+   "type": "h1",
+   "text": "YouTube'da Hype\n[[artık Türkiye'de.]]",
+   "size": 100
+  },
+  {
+   "type": "steps",
+   "items": [
+    [
+     "İzleyici videonu hype'lar.",
+     "Haftalık ücretsiz hakkı bitince Jewels ile devam edebilir."
+    ],
+    [
+     "Ücretli her hype sana Rubies kazandırır.",
+     "Kazanç AdSense üzerinden ödenir."
+    ],
+    [
+     "Şartlar",
+     "YouTube İş Ortağı Programı, 500–500.000 abone. Yalnızca uzun videolar, yüklemeden sonraki ilk 7 gün."
+    ]
+   ]
+  },
+  {
+   "type": "lead",
+   "text": "Kanalın var mı? **DM'den yaz.**"
+  },
+  {
+   "type": "kare_peek",
+   "face": "goz",
+   "size": 420,
+   "at": 0
+  }
+ ]
+}
