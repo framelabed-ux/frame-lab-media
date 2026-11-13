@@ -1,6 +1,5 @@
 {
  "theme": "dark",
- "pattern": "dots",
  "align": "center",
  "foot_right": "",
  "nofoot": true,
@@ -11,7 +10,7 @@
   },
   {
    "type": "h1",
-   "text": "Gemini'nin\nyeni modeli\n[[2,5 kat]] daha hızlı.",
+   "text": "Gemini'nin\nyeni modeli\n[[!2,5 kat]] daha hızlı.",
    "size": 104
   },
   {
@@ -34,18 +33,12 @@
     ]
    ],
    "accent": 0,
-   "max": 58
+   "max": 58,
+   "color": "pink"
   },
   {
    "type": "lead",
    "text": "Zekâ endeksinde Argon'u da geçti."
-  },
-  {
-   "type": "burst",
-   "x": 820,
-   "y": 1440,
-   "size": 150,
-   "rot": 12
   }
  ]
 }

@@ -1,5 +1,5 @@
 """Frame Lab marka varlıkları: renkler, Kare maskotu ve FL monogram (SVG üretir)."""
-INK="#111114"; PAPER="#F5F4F0"; LIME="#B8F24A"; VIOLET="#7B61FF"; SOFT="#EEF6DE"; GREY="#A9A9A2"; LIME_DARK="#5E9E00"
+INK="#111114"; PAPER="#F5F4F0"; LIME="#B8F24A"; VIOLET="#7B61FF"; SOFT="#EEF6DE"; GREY="#A9A9A2"; LIME_DARK="#5E9E00"; PINK="#FF2E93"
 W="#FFFFFF"
 
 def kare(size, face="mutlu", bg=INK, light_bg=False):

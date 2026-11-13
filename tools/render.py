@@ -8,15 +8,16 @@ Spec formatı için tools/PLAYBOOK.md'ye bak.
 """
 import sys, os, re, json, asyncio, subprocess, tempfile, random, html as H
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from brand import kare, INK, PAPER, LIME, SOFT, GREY, LIME_DARK
+from brand import kare, INK, PAPER, LIME, SOFT, GREY, LIME_DARK, PINK
 
 THEMES = {  # bg, fg, lead, grey, accent(dot), line, highlight(fg,bg,pad), card_bg
  "light": (PAPER, INK, "#3A3A36", "#6B6B65", LIME, "#D9D8D2", (INK, LIME, "0 12px"), "#FFFFFF"),
  "soft":  (SOFT, INK, "#33372B", "#5E6650", LIME_DARK, "#D3E3B5", (INK, LIME, "0 12px"), "#FFFFFF"),
  "dark":  (INK, PAPER, "#D9D8D2", GREY, LIME, "#26262C", (LIME, "transparent", "0"), "#1D1D22"),
 }
-def hl(text):  # [[...]] -> vurgu, {{...}} -> italik serif, **...** -> kalın
+def hl(text):  # [[...]] -> vurgu, [[!...]] -> pembe vurgu, {{...}} -> italik serif, **...** -> kalın
     t = H.escape(text).replace("\n", "<br>")
+    t = t.replace("[[!", '<span class="hl pk">')
     t = t.replace("{{", '<span class="se">').replace("}}", "</span>")
     t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
     return t.replace("[[", '<span class="hl">').replace("]]", "</span>")
@@ -100,6 +101,8 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .photo .pc{{position:absolute;right:20px;bottom:16px;font-size:20px;color:#fff;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:10px}}
 .w{{display:inline-block;transform-origin:0 100%}}
 .hl[data-hl]{{background:linear-gradient({hb},{hb}) no-repeat 0 50%/0% 100%}}
+.hl.pk{{color:{PINK if theme=='dark' else INK};background-color:{'transparent' if theme=='dark' else PINK}}} .hl.pk[data-hl]{{background:linear-gradient({'transparent' if theme=='dark' else PINK},{'transparent' if theme=='dark' else PINK}) no-repeat 0 50%/0% 100%}}
+.bar.hot.pk .bf{{background:{PINK}}} .bar.hot.pk .bl span:last-child{{color:{PINK if theme=='dark' else INK}}}
 .bars{{display:flex;flex-direction:column;gap:{30 if h<1500 else 38}px;width:100%;text-align:left}}
 .bar .bl{{display:flex;justify-content:space-between;align-items:baseline;font-family:'Inter Display';font-weight:700;font-size:{34 if h<1500 else 42}px;margin-bottom:12px}}
 .bar .bt{{height:{40 if h<1500 else 48}px;border-radius:24px;background:{line};overflow:hidden}}
@@ -129,7 +132,8 @@ def words(text, at, gap=0.06):
     k = 0; out = ""; se = bo = False
     parts = text.replace("]]", "[[").split("[[")  # tek indeksler vurgu
     for pi, part in enumerate(parts):
-        seg = ""
+        seg = ""; pk = ""
+        if pi % 2 and part.startswith("!"): part = part[1:]; pk = " pk"
         for li, line in enumerate(part.split("\n")):
             if li: seg += "<br>"
             for wi, w in enumerate(line.split(" ")):
@@ -141,7 +145,7 @@ def words(text, at, gap=0.06):
                     if w.endswith("}}") or "}}" in w: se = False; w = w.replace("}}", "")
                     if w.endswith("**") or "**" in w: bo = False; w = w.replace("**", "")
                     seg += f'<span class="{c}" style="{wt}" data-w="{round(at + k*gap, 3)}">{H.escape(w)}</span>'; k += 1
-        out += f'<span class="hl" data-hl="{round(at + k*gap + 0.12, 3)}">{seg}</span>' if pi % 2 else seg
+        out += f'<span class="hl{pk}" data-hl="{round(at + k*gap + 0.12, 3)}">{seg}</span>' if pi % 2 else seg
     return out
 
 def el(e, light):
@@ -201,7 +205,7 @@ def el(e, light):
             t0 = round(e.get("at", 0) + i*0.2 + 0.1, 3)
             w = f' data-bar="{t0},{pct}" style="width:0"' if has else f' style="width:{pct}%"'
             c = f' data-count="{t0}" data-full="{txt}"' if has else ""
-            out += (f'<div class="bar{" hot" if i == e.get("accent", -1) else ""}{ac}"{A(i, 0.2)}><div class="bl"><span>{H.escape(it[0])}</span><span{c}>{txt}</span></div>'
+            out += (f'<div class="bar{" hot" if i == e.get("accent", -1) else ""}{" pk" if e.get("color") == "pink" else ""}{ac}"{A(i, 0.2)}><div class="bl"><span>{H.escape(it[0])}</span><span{c}>{txt}</span></div>'
                     f'<div class="bt"><div class="bf"{w}></div></div></div>')
         return f'<div class="bars">{out}</div>'
     if k == "ring":  # value: 0-100; text: ortadaki yazı (ör. "%80"); label: alt yazı

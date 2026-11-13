@@ -13,6 +13,8 @@ Frame Lab, Ece Duru'nun yüzsüz Türkçe Instagram hesabı: **@frame.labo**. Ko
 - Fontlar: başlık Inter Display (800), metin Inter.
 - Maskot Kare'nin yüzleri: mutlu, goz (ipucu), saskin, dusunen, fikir (sonuç), calisiyor (AI üretirken).
 - Tamamen fosforlu yeşil zemin kullanılmaz. Ece göz yorduğunu söyledi.
+- **İkinci vurgu rengi: Pembe #FF2E93** (Ece, 13 Kasım: "sarıya gerek yok, sadece pembe eklenebilir, mevcut çizgiden çok uzaklaşmak doğru olmaz"). Metinde `[[!kelime]]` pembe vurgu verir (koyu temada pembe yazı, açık temada pembe kutu + siyah yazı); `bars` öğesine `"color": "pink"` vurgulanan çubuğu pembe yapar. Ölçülü kullan: bir içerikte lime ana vurgu, pembe en fazla 2–3 yerde (ör. kapakta ana rakam, bir sahnede grafik, son soru). Sarı, turuncu, açık mavi ve mor zemin kullanılmaz.
+- Arada (haftada en fazla 1–2 içerikte) 3D nesne, illüstrasyon ya da animasyon kullanılabilir; ama genel görünüm mevcut çizgiden uzaklaşmaz. 3D için `tools/r3d.py` (tarayıcıda yazılımla çizilen sahneler: `SC` 0 = 3D Kare, 1 = oynat düğmesi, 2 = madeni paralar; renkler `BG0/BG1/RIMA/RIMB/OBJ`; çıktıyı `hero` ya da `photo_bg` olarak kullan). Renkler yine lime + pembe + siyah/krem.
 - Üretim için `python3 tools/render.py` (carousel, story, reel). Spec örnekleri `tools/examples/` içinde. Vurgu için metinde `[[kelime]]` yazılır.
 
 ## Gündem kaynakları: kaçırılmaması gerekenler
@@ -60,7 +62,7 @@ Profil 3 sütun. Kapaklar şu 3'lü döngüyü sırayla izler: **görsel → tip
 - Bugünün kapak türü: `grid` ve `queue` içindeki son kaydın `cover_type` alanına bak, döngüde bir sonrakini seç. Kaydı yazarken `"cover_type"` alanını mutlaka doldur. (13 Kasım Gemini 4 Hydrogen = tipografi; sıradaki = Kare.)
 - **Kapakta en fazla 5 kelime.** Ayrıntı içeride ve açıklama metninde.
 - "YENİ" etiketi en fazla 9 gönderide bir. Aynı vurgu kalıbını (yeşil kutu) art arda iki kapakta kullanma.
-- Renk ve tipografi dili: 13 Kasım'da A (Deney Raporu), B (Vizör) ve C (Renk Blokları) yönleri reddedildi. Ece'nin gönderdiği son örneklere göre hazırlanan yeni yön (3D nesne + illüstrasyon + tipografi; lime, canlı pembe, güneş sarısı, krem, siyah) onay bekliyor. Onay gelene kadar mevcut editoryal stil sürer.
+- Renk ve tipografi dili (Ece, 13 Kasım): A/B/C yönleri ve sarılı yeni ızgara reddedildi. **Mevcut çizgi sürer, yalnızca pembe eklenir** (bkz. Marka). Izgara yeniden yapılmaz.
 
 ## Süs yok kuralı (Ece, 13 Kasım: "anlamsız şeyler koyma, gereksiz şeyler koyma tasarımlara")
 Tasarımdaki her öğe ya bilgi taşır ya da konuyu gösterir. Şunlar **kullanılmaz**:
@@ -69,6 +71,7 @@ Tasarımdaki her öğe ya bilgi taşır ya da konuyu gösterir. Şunlar **kullan
 - Yalnızca boşluk doldurmak için konan artı işaretleri, ince çizgiler, rastgele şekiller.
 - Düz turuncu ve düz açık mavi zemin/vurgu (Ece "çok kötü durmuş" dedi).
 Üstteki küçük seri adı (Video, Tasarım, Kare Açıklıyor…) kalabilir; başka üst/alt etiket eklenmez.
+- Motor seçenekleri: `"frame": true` (köşe çizgileri) **kullanılmaz**. `"pattern"` (nokta/ızgara/halka deseni), `burst` (parıltı) ve `marquee` (kayan yazı) yalnızca bir anlam taşıyorsa kullanılır, süs olsun diye konmaz. Aşağıdaki eski bölümlerde bunlardan söz edilse de bu kural önceliklidir.
 
 ## Editoryal stil (Ece, 11 Kasım: "çok aynı tip gidiyoruz"; Behance'ten ajans işleri örnek gösterdi)
 Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince başlık + italik serif vurgu, ışıklı zemin ve altta büyük bir "kahraman" görsel. Örnekler: `tools/examples/editorial.json` (4 gönderi) ve `tools/examples/reel-editorial.json`. Örnek gösterilen işler yalnızca yön içindir; hiçbirinin kurgusunu, nesnesini ya da metnini kopyalama.
