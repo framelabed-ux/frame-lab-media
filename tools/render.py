@@ -218,6 +218,7 @@ def el(e, light):
         src = "file://" + os.path.abspath(e["src"]); st = [f'left:{e.get("x",90)}px', f'top:{e.get("y",600)}px', f'width:{e.get("w",900)}px', f'height:{e.get("h",700)}px', f"background-image:url('{src}')"]
         if e.get("blend"): st.append(f'mix-blend-mode:{e["blend"]}')
         fl = (["grayscale(1)"] if e.get("gray") else []) + (["grayscale(1) sepia(1) hue-rotate(38deg) saturate(4.2) brightness(1.05)"] if e.get("tint") else []) + ([f'contrast({e["contrast"]})'] if e.get("contrast") else []) + ([f'brightness({e["bright"]})'] if e.get("bright") else [])
+        if e.get("filter"): fl.append(e["filter"])  # serbest CSS filtresi, ör. "invert(1) grayscale(1)"
         if fl: st.append("filter:" + " ".join(fl))
         if e.get("cover"): st.append("background-size:cover")
         if e.get("pos"): st.append(f'background-position:{e["pos"]}')

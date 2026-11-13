@@ -52,6 +52,16 @@ Marka aynı kalır (renkler, fontlar, Kare), ama düzen her seferinde değişir.
   6. **Kısa tut (Ece: "carouseller çok uzun olursa insanlar sıkılır").** Carousel ideal 5 slayt, en fazla 6 (kapak ve son slayt dahil). Her slaytta tek fikir. Teknik ayrıntıyı, künyeyi ve ek rakamları slayta değil caption'a koy. Son slayt hem dersi hem yorum sorusunu taşır, ayrı bir "soru slaytı" açma. Reel de kısa olsun: ideal 20–35 saniye, outro dahil en fazla 45 saniye.
   6. Story'ler de aynı ailelerden seçilir, aynı günün feed kapağıyla aynı düzende olmaz.
 
+## Izgara sütun sistemi (Ece onayladı, 13 Kasım)
+Profil 3 sütun. Kapaklar şu 3'lü döngüyü sırayla izler: **görsel → tipografi → Kare → görsel → …** Her yeni gönderi ızgarayı bir kare kaydırsa da her sütun tek türde kalır; açık/koyu dama tahtası da (tonu her gönderide değiştirerek) korunur.
+- **görsel:** kapağın çoğunu büyük bir nesne/fotoğraf kaplar (kronometre, cam halka, telefon, marka basın görseli…), üstünde en fazla 5 kelime.
+- **tipografi:** tek bir dev rakam ya da 2–3 kelime; başka öğe yok ya da çok az.
+- **Kare:** maskot büyük ve net görünür (en az kapağın üçte biri), yanında kısa soru/başlık.
+- Bugünün kapak türü: `grid` ve `queue` içindeki son kaydın `cover_type` alanına bak, döngüde bir sonrakini seç. Kaydı yazarken `"cover_type"` alanını mutlaka doldur. (13 Kasım Gemini 4 Hydrogen = tipografi; sıradaki = Kare.)
+- **Kapakta en fazla 5 kelime.** Ayrıntı içeride ve açıklama metninde.
+- "YENİ" etiketi en fazla 9 gönderide bir. Aynı vurgu kalıbını (yeşil kutu) art arda iki kapakta kullanma.
+- Renk ve tipografi dili Ece'nin seçeceği yöne göre güncellenecek (13 Kasım'da 3 yön sunuldu: A Deney Raporu, B Vizör, C Renk Blokları). Seçim gelene kadar mevcut editoryal stil sürer.
+
 ## Editoryal stil (Ece, 11 Kasım: "çok aynı tip gidiyoruz"; Behance'ten ajans işleri örnek gösterdi)
 Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince başlık + italik serif vurgu, ışıklı zemin ve altta büyük bir "kahraman" görsel. Örnekler: `tools/examples/editorial.json` (4 gönderi) ve `tools/examples/reel-editorial.json`. Örnek gösterilen işler yalnızca yön içindir; hiçbirinin kurgusunu, nesnesini ya da metnini kopyalama.
 - Slayt/sahne seçenekleri: `"bg": "glow"` (ışıklı degrade zemin), `"pattern": "rings"` (ince halkalar), `"logo": "center"` (üstte ortalı logo), `"align": "center top"`.
