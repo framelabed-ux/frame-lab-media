@@ -6,18 +6,28 @@
  "elements": [
   {
    "type": "tag",
-   "text": "YOUTUBE · GTA VI"
+   "text": "YOUTUBE · ÇIKIŞ HAZIRLIĞI"
   },
   {
-   "type": "bignum",
-   "text": "40 milyar",
-   "size": 220,
-   "label": "izlenme, oyun [[!çıkmadan.]]"
+   "type": "h1",
+   "text": "GTA VI",
+   "size": 240
   },
   {
-   "type": "kare",
-   "size": 640,
-   "face": "saskin"
+   "type": "photo",
+   "src": "posts/2026-11-14-youtube-gta-vi/src/vice-city-2002.jpg",
+   "height": 454,
+   "pos": "center",
+   "credit": "Görsel: GTA: Vice City (2002) · Rockstar Games"
+  },
+  {
+   "type": "h2",
+   "text": "[[!40 milyar]] izlenme",
+   "size": 92
+  },
+  {
+   "type": "lead",
+   "text": "Oyun daha çıkmadan."
   }
  ]
 }

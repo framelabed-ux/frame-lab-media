@@ -7,33 +7,40 @@
  "scenes": [
   {
    "theme": "light",
-   "duration": 4.5,
+   "duration": 5.0,
    "elements": [
     {
      "type": "tag",
-     "text": "YOUTUBE · GTA VI",
+     "text": "YOUTUBE · ÇIKIŞ HAZIRLIĞI",
      "at": 0.0
     },
     {
-     "type": "bignum",
-     "text": "40 milyar",
-     "size": 210,
-     "label": "izlenme. Oyun daha [[!çıkmadı.]]",
-     "at": 0.05,
-     "count_at": 0.05
+     "type": "h1",
+     "text": "GTA VI",
+     "size": 240,
+     "at": 0.05
+    },
+    {
+     "type": "photo",
+     "src": "posts/2026-11-14-youtube-gta-vi/src/vice-city-2002.jpg",
+     "height": 454,
+     "pos": "center",
+     "credit": "Görsel: GTA: Vice City (2002) · Rockstar Games",
+     "at": 0.3
+    },
+    {
+     "type": "h2",
+     "text": "[[!40 milyar]] izlenme",
+     "size": 92,
+     "at": 0.6
     },
     {
      "type": "lead",
-     "text": "GTA VI 19 Kasım'da çıkıyor. YouTube hazırlığını açıkladı.",
-     "at": 0.8
+     "text": "Oyun daha çıkmadan. 19 Kasım'da geliyor.",
+     "at": 1.1
     }
    ],
-   "kare": {
-    "x": 600,
-    "y": 1250,
-    "size": 420,
-    "face": "saskin"
-   }
+   "kare": null
   },
   {
    "theme": "dark",
@@ -194,6 +201,8 @@
   }
  ],
  "stills": [
-  17.5
+  3.5,
+  9.0,
+  30.0
  ]
 }
