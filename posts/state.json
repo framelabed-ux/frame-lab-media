@@ -202,7 +202,30 @@
    "published_at": "2026-11-13T18:16+03:00"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-14-von-restorff",
+   "kind": "reel",
+   "publish_date": "2026-11-14",
+   "extra": true,
+   "title": "Kare Açıklıyor: Von Restorff etkisi (farklı olan akılda kalır)",
+   "layout": "quote",
+   "cover_type": "kare",
+   "topic_area": "psikoloji",
+   "files": [
+    "posts/2026-11-14-von-restorff/reel.mp4"
+   ],
+   "cover": "posts/2026-11-14-von-restorff/cover.jpg",
+   "cover_tone": "light",
+   "music": "funk",
+   "caption": "Bu listeden aklında hangi kelime kaldı: kalem, silgi, defter, cetvel, zürafa, makas?\n\nBüyük ihtimalle zürafa. Buna Von Restorff etkisi (izolasyon etkisi) deniyor.\n\n1933'te Berlin'de Hedwig von Restorff'un deneyleri şunu gösterdi: Birbirine benzeyen öğelerin arasındaki tek farklı öğe daha iyi hatırlanıyor.\n\nTasarımda nasıl kullanırsın?\n• Kapakta yalnızca bir kelimeyi vurgula.\n• Sayfada tek bir buton farklı renkte olsun.\n• Fiyat tablosunda öne çıkarmak istediğin paketi ayır.\n\nEn sık hata her şeyi vurgulamak. Her şey kalın ve renkliyse hiçbir şey öne çıkmaz. Bir de yalnızca renge güvenme: Renk körlüğü olan biri farkı göremeyebilir, boyut ya da konumla da ayır.\n\nSon paylaşımında kaç vurgu vardı? Yorumlara yaz, tasarım yapan bir arkadaşına da gönder.\n\n#tasarım #grafiktasarım #psikoloji #pazarlama #sosyalmedya #tipografi #içerikpazarlaması",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
+    "https://lawsofux.com/von-restorff-effect/"
+   ],
+   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -315,9 +338,30 @@
   "adobe-max-2026-firefly-creative-agent",
   "claude-meetings-sheets-whiteboards",
   "gemini-4-carbon",
-  "gemini-4-hydrogen"
+  "gemini-4-hydrogen",
+  "von-restorff-etkisi"
  ],
- "hot_pending": [],
+ "hot_pending": [
+  {
+   "key": "youtube-gta-vi-paketi",
+   "found": "2026-11-14",
+   "big": true,
+   "note": "YouTube 12 Kasım'da GTA VI paketi duyurdu: 19 Kasım 00:00 ET (08:00 İstanbul) başlayan 24 saatlik canlı yayın (30+ üretici), Shorts'ta 'GTAVI: Visit Vice City' efekti, 5 sınırlı Live hediyesi, GTA temalı logo. YouTube'a göre GTA VI içerikleri 40 milyardan fazla izlendi. Süreli: 19 Kasım öncesi (16–18 Kasım) işlenmeli.",
+   "sources": [
+    "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
+    "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/"
+   ]
+  },
+  {
+   "key": "edits-speed-curves",
+   "found": "2026-11-14",
+   "big": true,
+   "note": "Instagram Edits uygulamasına hız eğrileri, otomatik ses dengeleme, Inspiration sekmesinde konu tercihi ve metin animasyonu ayarları geldi (@creators Threads, 12 Kasım). Bölge/tarih bilgisi yok; pratik 'nasıl kullanılır' içeriği olarak uygun.",
+   "sources": [
+    "https://www.socialmediatoday.com/news/edits-app-gets-speed-curves-and-auto-audio-balancing/874586/"
+   ]
+  }
+ ],
  "scheduled": [],
  "pending_replies": []
 }

@@ -1,0 +1,11 @@
+{
+ "theme": "light",
+ "align": "center",
+ "foot_right": "",
+ "nofoot": true,
+ "elements": [
+  {"type": "tag", "text": "KARE AÇIKLIYOR"},
+  {"type": "h1", "text": "Farklı olan\n[[!akılda kalır.]]", "size": 116},
+  {"type": "kare", "size": 760, "face": "goz"}
+ ]
+}
