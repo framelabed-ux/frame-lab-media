@@ -249,6 +249,17 @@ def el(e, light):
                 f'<div style="clip-path:polygon({",".join(topp + botp)})">{hl(e["text"])}</div></div>')
     if k == "marquee":  # arka planda akan dev yazı şeridi (yalnızca Reel)
         return f'<div class="mq" data-mq="{e.get("speed", 150)}" style="top:{e.get("top", 1380)}px;transform:rotate(-6deg)">{(H.escape(e["text"]) + " · ") * 14}</div>'
+    if k == "clock":  # kronometre: "start" sn'den itibaren "secs" saniye tıklayarak ilerler, sonunda alarm gibi sallanır
+        sz = e.get("size", 560); st = e.get("start", 0.3); n = e.get("secs", 3)
+        col = PAPER if not light else INK; acc = LIME if not light else LIME_DARK
+        ticks = "".join(f'<line x1="60" y1="{9 if j % 5 == 0 else 11}" x2="60" y2="{17 if j % 5 == 0 else 15}" stroke="{col}" stroke-width="{1.6 if j % 5 == 0 else 0.8}" transform="rotate({j*6} 60 60)" opacity="{1 if j % 5 == 0 else .45}"></line>' for j in range(60))
+        return (f'<div style="display:flex;flex-direction:column;align-items:center;gap:40px"><div class="clk" data-clock="{st},{n},{e.get("ring", 1.0)}" style="width:{sz}px;height:{sz}px;transform-origin:50% 60%">'
+                f'<svg width="{sz}" height="{sz}" viewBox="0 0 120 120"><rect x="54" y="0" width="12" height="5" rx="2" fill="{col}"></rect>'
+                f'<circle cx="60" cy="62" r="52" fill="none" stroke="{col}" stroke-width="3.5"></circle>'
+                f'<g transform="translate(0 2)">{ticks}'
+                f'<line class="chand" x1="60" y1="66" x2="60" y2="14" stroke="{col}" stroke-width="2.6" stroke-linecap="round" transform="rotate(0 60 60)"></line>'
+                f'<circle cx="60" cy="60" r="4.5" fill="{acc}"></circle></g></svg></div>'
+                f'<div class="cdig" style="font-family:\'Inter Display\';font-weight:800;font-size:{int(sz*0.26)}px;letter-spacing:-.02em;font-variant-numeric:tabular-nums">00:00</div></div>')
     if k == "logo_anim":
         a = e.get("at", 0.2); sz = e.get("size", 380)
         col = PAPER if not light else INK
@@ -311,6 +322,11 @@ window.render=function(t){
  document.querySelectorAll('[data-bar]').forEach(e=>{const [s,v]=e.dataset.bar.split(',').map(parseFloat);e.style.width=(v*ease((t-s)/0.9))+'%';});
  document.querySelectorAll('[data-ring]').forEach(e=>{const [s,v]=e.dataset.ring.split(',').map(parseFloat);e.style.strokeDashoffset=String(100-v*ease((t-s)/1.0));});
  document.querySelectorAll('[data-mq]').forEach(e=>{e.style.transform='rotate(-6deg) translateX('+(live?-Math.max(t,-1)*parseFloat(e.dataset.mq):0)+'px)';});
+ document.querySelectorAll('[data-clock]').forEach(e=>{const [s,n,r]=e.dataset.clock.split(',').map(parseFloat);const el=t-s;
+   let ang;if(el<0){ang=0;}else if(el>=n+0.12){ang=6*n;}else{const k=Math.floor(el),f=el-k;ang=(k>=1&&f<0.12)?6*(k-1+ease(f/0.12)):6*Math.min(k,n);if(k>=n&&f<0.12)ang=6*(n-1+ease(f/0.12));}
+   const h=e.querySelector('.chand');if(h)h.setAttribute('transform','rotate('+ang+' 60 60)');
+   const sec=el<0?0:Math.min(Math.floor(el+1e-6),n);const d=e.parentNode.querySelector('.cdig');if(d)d.textContent='00:0'+sec;
+   const z=el-n;if(z>=0&&z<r&&live){e.style.transform='rotate('+(8*Math.sin(z*2*Math.PI*14)*(1-0.6*z/r))+'deg) scale('+(1+0.04*Math.sin(Math.min(z/0.1,1)*Math.PI/2))+')';}else{e.style.transform='none';}});
  if(live){const s=document.querySelector('.s.pat-grid,.s.pat-dots');if(s){s.style.backgroundPosition=(-2+t*14)+'px '+(-2+t*9)+'px';}}
 };
 </script>"""
@@ -484,6 +500,15 @@ def reel_motion(spec, out, voice=None):
         if main and i < nc: ev.append([round(t0 + main["at"], 3), "pop"])
         if any(e["type"] == "sticker" for e in s_["elements"]): ev.append([round(t0 + 0.2, 3), "pop2"])
         if i >= nc: ev.append([round(t0 + 1.4, 3), "ding"])
+        for e_ in s_.get("sfx_events", []):  # sahneye özel ses: [[sn, "tick"|"alarm"|...], ...]
+            ev.append([round(t0 + e_[0], 3), e_[1]])
+        if s_.get("music_mute"):  # [baş, son] (sahne saniyesi): müzik o aralıkta kısılır
+            a_, b_ = s_["music_mute"]; ev.append([round(t0 + a_, 3), "mute", round(b_ - a_, 3)])
+        for e_ in s_["elements"]:  # saat öğesi: her saniye tık, sonunda alarm
+            if e_["type"] == "clock" and spec.get("sfx", True):
+                st_ = e_.get("start", 0.3); n_ = e_.get("secs", 3)
+                for k_ in range(n_): ev.append([round(t0 + st_ + k_, 3), "tick"])
+                ev.append([round(t0 + st_ + n_, 3), "alarm"])
         t0 += s_["duration"]
     T = t0
     K = [s_.get("kare") for s_ in sc]

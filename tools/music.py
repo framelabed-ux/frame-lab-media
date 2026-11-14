@@ -1,6 +1,6 @@
 """Frame Lab müzik üreticisi (telifsiz, tamamen sentez).
 Kullanım: python3 music.py <saniye> <out.wav> [olaylar.json|-] [stil] [tohum]
-  olaylar.json: ses efektleri [[zaman, "whoosh"|"pop"|"pop2"|"ding"], ...]  ("-" = yok)
+  olaylar.json: ses efektleri [[zaman, "whoosh"|"pop"|"pop2"|"ding"|"tick"|"alarm"], ...], müziği kısmak için [zaman, "mute", süre]  ("-" = yok)
   stil: pop | lofi | house | synthwave | minimal | trap | funk | ambient  (yoksa tohuma göre seçilir)
   tohum: tamsayı; aynı stil + tohum aynı müziği verir, farklı tohum farklı ton/melodi/ritim verir.
 """
@@ -199,11 +199,31 @@ def ding():
     d = 1.0; tt = np.arange(int(sr * d)) / sr
     y = (np.sin(2 * np.pi * 1318.5 * tt) + 0.5 * np.sin(2 * np.pi * 1975.5 * tt) + 0.25 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 5) * np.minimum(tt / 0.003, 1)
     return y / np.max(np.abs(y))
+def tick():  # saat tıkırtısı
+    d = 0.05; tt = np.arange(int(sr * d)) / sr
+    y = (np.sin(2 * np.pi * 3200 * tt) * 0.6 + rng.standard_normal(len(tt)) * 0.4) * np.exp(-tt * 140)
+    return y / np.max(np.abs(y))
+def alarm():  # dijital çalar saat: 4'lü bip, iki kez
+    out = np.zeros(int(sr * 1.0)); b = int(sr * 0.07); tt = np.arange(b) / sr
+    bip = np.sign(np.sin(2 * np.pi * 2730 * tt)) * 0.5 + np.sin(2 * np.pi * 2730 * tt) * 0.5
+    bip *= np.minimum(np.minimum(tt / 0.004, 1), np.minimum((0.07 - tt) / 0.004, 1))
+    for g0 in (0.0, 0.5):
+        for k in range(4):
+            i = int(sr * (g0 + k * 0.1)); out[i:i + b] += bip
+    return lp(out, 2) / 1.0
 if ev_path:
+    evs = json.load(open(ev_path))
+    for e_ in evs:  # [başlangıç, "mute", süre]: müziği o aralıkta neredeyse sustur
+        if e_[1] == "mute":
+            a0, d0 = e_[0], e_[2]; g = np.ones(N)
+            ramp = 0.25; x0 = (t - a0) / ramp; x1 = (a0 + d0 - t) / ramp
+            g = 1 - 0.88 * np.clip(np.minimum(x0, x1), 0, 1); mix *= g
     sfx = np.zeros(N); cache = {}
-    for at, kind in json.load(open(ev_path)):
-        if kind not in cache: cache[kind] = {"whoosh": whoosh, "pop": pop, "pop2": lambda: pop(700, 1150), "ding": ding}[kind]()
-        sig = cache[kind]; g = {"whoosh": 0.5, "pop": 0.3, "pop2": 0.26, "ding": 0.34}[kind]
+    for e_ in evs:
+        at, kind = e_[0], e_[1]
+        if kind == "mute": continue
+        if kind not in cache: cache[kind] = {"whoosh": whoosh, "pop": pop, "pop2": lambda: pop(700, 1150), "ding": ding, "tick": tick, "alarm": alarm}[kind]()
+        sig = cache[kind]; g = {"whoosh": 0.5, "pop": 0.3, "pop2": 0.26, "ding": 0.34, "tick": 0.45, "alarm": 0.42}[kind]
         i = max(0, int(at * sr)); j = min(N, i + len(sig))
         if i < N: sfx[i:j] += sig[:j - i] * g
     mix = mix + sfx; mix = mix / max(1.0, float(np.max(np.abs(mix))))

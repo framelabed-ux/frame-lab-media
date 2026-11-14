@@ -250,8 +250,8 @@
     "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
     "https://lawsofux.com/von-restorff-effect/"
    ],
-   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi. | 14 Kasım: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 43,0 sn (outro dahil).",
-   "voice": "posts/2026-11-14-von-restorff/voice.mp3"
+   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi. | 14 Kasım: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 43,0 sn (outro dahil). | Ece'nin isteğiyle liste sahnesinden sonra boş ekranda 3 saniye ilerleyen kronometre + alarm sahnesi eklendi (müzik kısık, tık sesleri). Seslendirmedeki duraklar biraz sıkılaştırıldı (voice_tight.wav). Süre 44,8 sn.",
+   "voice": "posts/2026-11-14-von-restorff/voice_tight.wav"
   }
  ],
  "stories": [

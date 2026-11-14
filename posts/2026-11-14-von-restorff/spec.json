@@ -7,7 +7,7 @@
  "scenes": [
   {
    "theme": "light",
-   "duration": 9.0,
+   "duration": 8.6,
    "elements": [
     {
      "type": "tag",
@@ -35,8 +35,28 @@
    }
   },
   {
+   "theme": "light",
+   "duration": 4.3,
+   "transition": "zoom",
+   "align": "center",
+   "elements": [
+    {
+     "type": "clock",
+     "size": 600,
+     "start": 0.3,
+     "secs": 3,
+     "ring": 1.0
+    }
+   ],
+   "kare": null,
+   "music_mute": [
+    0.0,
+    4.0
+   ]
+  },
+  {
    "theme": "dark",
-   "duration": 4.8,
+   "duration": 4.3,
    "transition": "slide",
    "elements": [
     {
@@ -60,7 +80,7 @@
   },
   {
    "theme": "soft",
-   "duration": 8.3,
+   "duration": 7.8,
    "transition": "up",
    "elements": [
     {
@@ -89,7 +109,7 @@
   },
   {
    "theme": "dark",
-   "duration": 7.0,
+   "duration": 6.8,
    "transition": "stack",
    "elements": [
     {
@@ -124,8 +144,8 @@
   },
   {
    "theme": "light",
-   "duration": 6.2,
-   "transition": "zoom",
+   "duration": 5.9,
+   "transition": "slide",
    "elements": [
     {
      "type": "tag",
@@ -161,7 +181,7 @@
   {
    "theme": "dark",
    "align": "bottom",
-   "duration": 4.5,
+   "duration": 3.9,
    "transition": "wipe",
    "elements": [
     {
@@ -185,39 +205,39 @@
   }
  ],
  "stills": [
-  4.0,
-  12.0
+  11.0,
+  12.1
  ],
  "voice_segments": [
   [
    0,
-   8.27,
+   8.18,
    0
   ],
   [
-   8.57,
-   12.36,
-   1
-  ],
-  [
-   12.63,
-   20.1,
+   8.98,
+   12.77,
    2
   ],
   [
-   20.36,
-   26.6,
+   13.57,
+   20.93,
    3
   ],
   [
-   26.94,
-   32.31,
+   21.73,
+   28.04,
    4
   ],
   [
-   32.58,
-   36.13,
+   28.84,
+   34.25,
    5
+  ],
+  [
+   35.05,
+   38.547,
+   6
   ]
  ]
 }
