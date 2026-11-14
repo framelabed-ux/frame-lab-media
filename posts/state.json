@@ -325,6 +325,19 @@
     "https://ppc.land/youtube-creators-in-us-uk-and-7-more-markets-gain-income-from-paid-hypes/"
    ],
    "media_id": "18029963495869441"
+  },
+  {
+   "date": "2026-11-14",
+   "slug": "2026-11-14-story",
+   "file": "posts/2026-11-14-story/story.jpg",
+   "about": "Biliyor muydun: Tomy 20 yıl sonra TAKARATOMY oluyor (bugün/1 Nisan 2027 karşılaştırması, asobi sembolü, 'logon tek bakışta okunuyor mu?' DM sorusu; compare düzeni, koyu)",
+   "layout": "compare",
+   "topic_area": "marka",
+   "sources": [
+    "https://kyodonewsprwire.jp/release/202611099717",
+    "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled"
+   ],
+   "media_id": "17922183303526724"
   }
  ],
  "replied_comments": [
@@ -339,7 +352,8 @@
   "claude-meetings-sheets-whiteboards",
   "gemini-4-carbon",
   "gemini-4-hydrogen",
-  "von-restorff-etkisi"
+  "von-restorff-etkisi",
+  "takaratomy-rebrand"
  ],
  "hot_pending": [
   {
