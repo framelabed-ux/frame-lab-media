@@ -200,6 +200,33 @@
    "topic_area": "ai",
    "media_id": "18105721748566120",
    "published_at": "2026-11-13T18:16+03:00"
+  },
+  {
+   "slug": "2026-11-14-youtube-gta-vi",
+   "kind": "reel",
+   "publish_date": "2026-11-14",
+   "extra": true,
+   "title": "YouTube'un GTA VI çıkış hazırlığı (40 milyar izlenme, 24 saatlik yayın, Shorts efekti, hediyeler)",
+   "layout": "photo",
+   "cover_type": "gorsel",
+   "topic_area": "platform",
+   "files": [
+    "posts/2026-11-14-youtube-gta-vi/reel.mp4"
+   ],
+   "cover": "posts/2026-11-14-youtube-gta-vi/cover.jpg",
+   "cover_tone": "light",
+   "music": "synthwave",
+   "voice": "posts/2026-11-14-youtube-gta-vi/voice.mp3",
+   "caption": "GTA VI daha çıkmadı ama YouTube'da 40 milyar izlenmeyi geçti.\n\nOyun 19 Kasım'da çıkıyor. YouTube 12 Kasım'da çıkış için hazırladıklarını açıkladı:\n\n• 24 saatlik canlı yayın: 19 Kasım'da Türkiye saatiyle 08:00'de youtube.com/youtube kanalında başlıyor. Oyun içerik üreticileri canlı oynanış, podcast ve özel içeriklerle yayında olacak.\n• Shorts efekti: \"GTAVI: Visit Vice City\" efektiyle kendini oyunun dünyasına koyabiliyorsun. YouTube efektin hangi ülkelerde açık olduğunu belirtmedi.\n• Canlı yayın hediyeleri: GTA temalı 5 sınırlı sürüm hediye geliyor. Biri, seçili yayınlarda stoklar bitene kadar ücretsiz.\n• YouTube Music: Oyunun müzikleri çıkış haftası boyunca ana sayfada.\n\nYouTube'a göre GTA serisiyle ilgili videolar toplamda 900 milyardan fazla izlendi.\n\nKapaktaki görsel, serinin 2002'deki oyunu GTA: Vice City'den. GTA VI de seriyi Vice City'ye geri götürüyor.\n\nİçerik üreticisiysen: Efekti çıkış haftasında dene, kendi açını bul (yorum, tepki, karşılaştırma) ve canlı yayında hangi formatların tuttuğuna bak.\n\nSen GTA VI oynayacak mısın? Yorumlara yaz, oyun seven arkadaşına gönder.\n\n#youtube #gta6 #oyun #shorts #içeriküreticisi #sosyalmedya #dijitalgündem",
+   "sources": [
+    "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
+    "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/",
+    "https://abcnews4.com/news/offbeat/rockstar-games-grand-theft-auto-vi-brings-series-back-florida-inspired-vice-city-leonida-everglades-miami-florida-keys-wetland-video-game-xbox-playstation-jason-duval-lucia-caminos"
+   ],
+   "note": "14 Kasım: Ece'nin isteğiyle hafta sonu ek Reel olarak öğlen yayınlandı. Kapak: dev 'GTA VI' + Ece'nin gönderdiği GTA: Vice City (2002) görseli (künyeli). Ece'nin ElevenLabs seslendirmesi, 40,5 sn. Kapak türü döngüde Kare sırasıydı ama Ece görsel istediği için 'görsel' oldu.",
+   "media_id": "17955542733341306",
+   "status": "yayında (14 Kasım, Ece'nin onayıyla)",
+   "published_at": "2026-11-14"
   }
  ],
  "queue": [
@@ -210,20 +237,20 @@
    "extra": true,
    "title": "Kare Açıklıyor: Von Restorff etkisi (farklı olan akılda kalır)",
    "layout": "quote",
-   "cover_type": "kare",
+   "cover_type": "tipografi",
    "topic_area": "psikoloji",
    "files": [
     "posts/2026-11-14-von-restorff/reel.mp4"
    ],
    "cover": "posts/2026-11-14-von-restorff/cover.jpg",
-   "cover_tone": "light",
+   "cover_tone": "dark",
    "music": "funk",
    "caption": "Bu listeden aklında hangi kelime kaldı: kalem, silgi, defter, cetvel, zürafa, makas?\n\nBüyük ihtimalle zürafa. Buna Von Restorff etkisi (izolasyon etkisi) deniyor.\n\n1933'te Berlin'de Hedwig von Restorff'un deneyleri şunu gösterdi: Birbirine benzeyen öğelerin arasındaki tek farklı öğe daha iyi hatırlanıyor.\n\nTasarımda nasıl kullanırsın?\n• Kapakta yalnızca bir kelimeyi vurgula.\n• Sayfada tek bir buton farklı renkte olsun.\n• Fiyat tablosunda öne çıkarmak istediğin paketi ayır.\n\nEn sık hata her şeyi vurgulamak. Her şey kalın ve renkliyse hiçbir şey öne çıkmaz. Bir de yalnızca renge güvenme: Renk körlüğü olan biri farkı göremeyebilir, boyut ya da konumla da ayır.\n\nSon paylaşımında kaç vurgu vardı? Yorumlara yaz, tasarım yapan bir arkadaşına da gönder.\n\n#tasarım #grafiktasarım #psikoloji #pazarlama #sosyalmedya #tipografi #içerikpazarlaması",
    "sources": [
     "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
     "https://lawsofux.com/von-restorff-effect/"
    ],
-   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi."
+   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi."
   }
  ],
  "stories": [
@@ -353,19 +380,10 @@
   "gemini-4-carbon",
   "gemini-4-hydrogen",
   "von-restorff-etkisi",
-  "takaratomy-rebrand"
+  "takaratomy-rebrand",
+  "youtube-gta-vi-paketi"
  ],
  "hot_pending": [
-  {
-   "key": "youtube-gta-vi-paketi",
-   "found": "2026-11-14",
-   "big": true,
-   "note": "YouTube 12 Kasım'da GTA VI paketi duyurdu: 19 Kasım 00:00 ET (08:00 İstanbul) başlayan 24 saatlik canlı yayın (30+ üretici), Shorts'ta 'GTAVI: Visit Vice City' efekti, 5 sınırlı Live hediyesi, GTA temalı logo. YouTube'a göre GTA VI içerikleri 40 milyardan fazla izlendi. Süreli: 19 Kasım öncesi (16–18 Kasım) işlenmeli.",
-   "sources": [
-    "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
-    "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/"
-   ]
-  },
   {
    "key": "edits-speed-curves",
    "found": "2026-11-14",

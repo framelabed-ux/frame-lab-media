@@ -51,7 +51,7 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .rk{{width:150px;font-family:'Inter Display';font-weight:700;font-size:30px;color:{lab};letter-spacing:.06em}}
 .rt{{font-family:'Inter Display';font-weight:700;font-size:38px}}
 .rd{{font-size:27px;color:{grey};margin-top:6px}}
-.foot{{position:absolute;left:{88 if h<1500 else 90}px;right:{88 if h<1500 else 90}px;bottom:{80 if h<1500 else 110}px;display:flex;justify-content:space-between;font-size:{26 if h<1500 else 30}px;color:{grey}}}
+.foot{{position:absolute;left:{88 if h<1500 else 90}px;right:{88 if h<1500 else 90}px;bottom:{80 if h<1500 else 110}px;display:flex;justify-content:space-between;align-items:center;font-size:{26 if h<1500 else 30}px;color:{grey}}}
 .sw{{color:{lab if theme=='dark' else fg};font-weight:600}}
 .a{{opacity:1}}
 .main.center{{text-align:center;align-items:center}} .main.bottom{{justify-content:flex-end}}
@@ -329,7 +329,7 @@ def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="",
     lg = (f'<svg width="{ls}" height="{ls}" viewBox="40 40 140 140" aria-hidden="true" style="display:block">'
           f'<path d="M60 142 V60 H114 M60 100 H98 M126 80 V140 H156" fill="none" stroke="{lc}" stroke-width="15" stroke-linecap="square"></path>'
           f'<circle cx="146" cy="62" r="10" fill="{LIME}"></circle></svg>')
-    foot = f'<div class="foot" style="align-items:center"><span class="sw">{H.escape(fr) if fr else ""}</span><span>{lg}</span></div>'
+    foot = f'<div class="foot"><span class="sw">{H.escape(fr) if fr else ""}</span><span>{lg}</span></div>'
     body = "".join(el(e, light) for e in elements if e["type"] not in ABS)
     deco = "".join(el(e, light) for e in elements if e["type"] in ABS)
     fr = '<div class="frame"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>' if frame else ""
