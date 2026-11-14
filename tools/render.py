@@ -324,7 +324,12 @@ def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="",
     else:
         t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""
     fr = foot_right if foot_right is not None else ("" if h >= 1500 else "Kaydır →")
-    foot = f'<div class="foot"><span>@frame.labo</span><span class="sw">{H.escape(fr) if fr else ("FRAME/LAB" if h>=1500 else "")}</span></div>'
+    # Alt bilgi (Ece, 14 Kasım): kullanıcı adı ve FRAME/LAB yazısı yok; sağ altta yalnızca küçük FL logosu. Varsa kısa metin (ör. "Kaydır →") solda.
+    lc = PAPER if not light else INK; ls = 64 if h >= 1500 else 56
+    lg = (f'<svg width="{ls}" height="{ls}" viewBox="40 40 140 140" aria-hidden="true" style="display:block">'
+          f'<path d="M60 142 V60 H114 M60 100 H98 M126 80 V140 H156" fill="none" stroke="{lc}" stroke-width="15" stroke-linecap="square"></path>'
+          f'<circle cx="146" cy="62" r="10" fill="{LIME}"></circle></svg>')
+    foot = f'<div class="foot" style="align-items:center"><span class="sw">{H.escape(fr) if fr else ""}</span><span>{lg}</span></div>'
     body = "".join(el(e, light) for e in elements if e["type"] not in ABS)
     deco = "".join(el(e, light) for e in elements if e["type"] in ABS)
     fr = '<div class="frame"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>' if frame else ""

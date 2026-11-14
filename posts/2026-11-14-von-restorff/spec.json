@@ -1,45 +1,124 @@
 {
  "motion": true,
- "music": {"style": "funk", "seed": 1114},
+ "music": {
+  "style": "funk",
+  "seed": 1114
+ },
  "scenes": [
   {
    "theme": "light",
    "duration": 5.0,
    "elements": [
-    {"type": "tag", "text": "KARE AÇIKLIYOR", "at": 0.0},
-    {"type": "h1", "text": "Hangisi aklında\n[[kalacak?]]", "size": 118, "at": 0.05},
-    {"type": "h2", "text": "kalem · silgi · defter\ncetvel · [[!zürafa]] · makas", "size": 70, "at": 0.8}
+    {
+     "type": "tag",
+     "text": "KARE AÇIKLIYOR",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Hangisi aklında\n[[kalacak?]]",
+     "size": 118,
+     "at": 0.05
+    },
+    {
+     "type": "h2",
+     "text": "kalem · silgi · defter\ncetvel · [[!zürafa]] · makas",
+     "size": 70,
+     "at": 0.8
+    }
    ],
-   "kare": {"x": 640, "y": 1260, "size": 380, "face": "goz"}
+   "kare": {
+    "x": 640,
+    "y": 1260,
+    "size": 380,
+    "face": "goz"
+   }
   },
   {
    "theme": "dark",
    "duration": 4.5,
    "transition": "slide",
    "elements": [
-    {"type": "h1", "text": "[[!Zürafa,]]\ndeğil mi?", "size": 140, "at": 0.1},
-    {"type": "lead", "text": "Hem rengi hem anlamı farklıydı. Farklı olan akılda kalır.", "at": 0.9}
+    {
+     "type": "h1",
+     "text": "[[!Zürafa,]]\ndeğil mi?",
+     "size": 140,
+     "at": 0.1
+    },
+    {
+     "type": "lead",
+     "text": "Hem rengi hem anlamı farklıydı. Farklı olan akılda kalır.",
+     "at": 0.9
+    }
    ],
-   "kare": {"x": 560, "y": 1250, "size": 460, "face": "saskin"}
+   "kare": {
+    "x": 560,
+    "y": 1250,
+    "size": 460,
+    "face": "saskin"
+   }
   },
   {
    "theme": "soft",
    "duration": 6.0,
    "transition": "up",
    "elements": [
-    {"type": "tag", "text": "ADI NE?", "at": 0.1},
-    {"type": "h2", "text": "Von Restorff\n[[etkisi]]", "size": 104, "at": 0.3},
-    {"type": "lead", "text": "1933'te Hedwig von Restorff gösterdi: Benzerlerin arasındaki tek farklı öğe daha iyi hatırlanıyor.", "at": 1.1}
+    {
+     "type": "tag",
+     "text": "ADI NE?",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Von Restorff\n[[etkisi]]",
+     "size": 104,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "1933'te Hedwig von Restorff gösterdi: Benzerlerin arasındaki tek farklı öğe daha iyi hatırlanıyor.",
+     "at": 1.1
+    }
    ],
-   "kare": {"x": 90, "y": 1300, "size": 360, "face": "dusunen"}
+   "kare": {
+    "x": 90,
+    "y": 1300,
+    "size": 360,
+    "face": "dusunen"
+   }
   },
   {
    "theme": "dark",
    "duration": 5.5,
    "transition": "stack",
    "elements": [
-    {"type": "tag", "text": "NEREDE GÖRÜRSÜN?", "at": 0.1},
-    {"type": "tiles", "items": [["01", "Fiyat tablosunda öne çıkan paket"], ["02", "Sayfadaki tek renkli buton"], ["03", "Kapakta tek vurgulu kelime"], ["04", "Rafta farklı renkli ambalaj"]], "at": 0.4}
+    {
+     "type": "tag",
+     "text": "NEREDE GÖRÜRSÜN?",
+     "at": 0.1
+    },
+    {
+     "type": "tiles",
+     "items": [
+      [
+       "01",
+       "Fiyat tablosunda öne çıkan paket"
+      ],
+      [
+       "02",
+       "Sayfadaki tek renkli buton"
+      ],
+      [
+       "03",
+       "Kapakta tek vurgulu kelime"
+      ],
+      [
+       "04",
+       "Rafta farklı renkli ambalaj"
+      ]
+     ],
+     "at": 0.4
+    }
    ],
    "kare": null
   },
@@ -48,11 +127,36 @@
    "duration": 6.0,
    "transition": "zoom",
    "elements": [
-    {"type": "tag", "text": "EN SIK HATA", "at": 0.1},
-    {"type": "h2", "text": "Her şey vurguluysa\nhiçbir şey [[öne çıkmaz.]]", "size": 78, "at": 0.3},
-    {"type": "compare", "left": {"label": "BÖYLE YAPMA", "text": "Kalın, renkli,\nbüyük ve altı\nçizili kelimeler"}, "right": {"label": "BÖYLE YAP", "text": "Tek kelime,\ntek renk.\nGöz oraya gider."}, "at": 1.4}
+    {
+     "type": "tag",
+     "text": "EN SIK HATA",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Her şey vurguluysa\nhiçbir şey [[öne çıkmaz.]]",
+     "size": 78,
+     "at": 0.3
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "BÖYLE YAPMA",
+      "text": "Kalın, renkli,\nbüyük ve altı\nçizili kelimeler"
+     },
+     "right": {
+      "label": "BÖYLE YAP",
+      "text": "Tek kelime,\ntek renk.\nGöz oraya gider."
+     },
+     "at": 1.4
+    }
    ],
-   "kare": {"x": 700, "y": 1380, "size": 300, "face": "fikir"}
+   "kare": {
+    "x": 700,
+    "y": 1380,
+    "size": 300,
+    "face": "fikir"
+   }
   },
   {
    "theme": "dark",
@@ -60,11 +164,25 @@
    "duration": 4.5,
    "transition": "wipe",
    "elements": [
-    {"type": "h2", "text": "Son paylaşımında\nkaç vurgu [[!vardı?]]", "size": 104, "at": 0.3},
-    {"type": "lead", "text": "Yorumlara yaz, tasarım yapan bir arkadaşına gönder.", "at": 1.0}
+    {
+     "type": "h2",
+     "text": "Son paylaşımında\nkaç vurgu [[!vardı?]]",
+     "size": 104,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Yorumlara yaz, tasarım yapan bir arkadaşına gönder.",
+     "at": 1.0
+    }
    ],
-   "kare": {"x": 300, "y": 230, "size": 520, "face": "mutlu"}
+   "kare": {
+    "x": 300,
+    "y": 230,
+    "size": 520,
+    "face": "mutlu"
+   }
   }
  ],
- "stills": [3.5, 29.5]
+ "stills": []
 }

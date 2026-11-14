@@ -80,6 +80,7 @@ Tasarımdaki her öğe ya bilgi taşır ya da konuyu gösterir. Şunlar **kullan
 - Yalnızca boşluk doldurmak için konan artı işaretleri, ince çizgiler, rastgele şekiller.
 - Düz turuncu ve düz açık mavi zemin/vurgu (Ece "çok kötü durmuş" dedi).
 Üstteki küçük seri adı (Video, Tasarım, Kare Açıklıyor…) kalabilir; başka üst/alt etiket eklenmez.
+- **Alt bilgi (Ece, 14 Kasım):** "@frame.labo" kullanıcı adı ve "FRAME/LAB" yazısı kullanılmaz (zaten o hesaptan paylaşılıyor). Sağ altta yalnızca küçük FL logosu durur; `render.py` bunu otomatik yapar.
 - Motor seçenekleri: `"frame": true` (köşe çizgileri) **kullanılmaz**. `"pattern"` (nokta/ızgara/halka deseni), `burst` (parıltı) ve `marquee` (kayan yazı) yalnızca bir anlam taşıyorsa kullanılır, süs olsun diye konmaz. Aşağıdaki eski bölümlerde bunlardan söz edilse de bu kural önceliklidir.
 
 ## Editoryal stil (Ece, 11 Kasım: "çok aynı tip gidiyoruz"; Behance'ten ajans işleri örnek gösterdi)
