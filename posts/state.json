@@ -1,416 +1,435 @@
 {
- "instagram_account": "17841469889313843",
- "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
- "grid": [
-  {
-   "date": "2026-11-09",
-   "kind": "carousel",
-   "slug": "2026-11-09-tanisma",
-   "cover_tone": "light",
-   "media_id": "18031318442692957",
-   "title": "Tanışma: Merhaba, ben Kare",
-   "layout": "classic",
-   "topic_area": "tanitim"
-  },
-  {
-   "date": "2026-11-09",
-   "kind": "reel",
-   "slug": "2026-11-09-ilk-deney",
-   "cover_tone": "dark",
-   "media_id": "18090307286284943",
-   "status": "yayında (20:00)",
-   "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
-   "layout": "classic",
-   "music": "pop",
-   "topic_area": "ai"
-  },
-  {
-   "date": "2026-11-10",
-   "kind": "carousel",
-   "slug": "2026-11-10-kareden-haberler-1-v2",
-   "cover_tone": "light",
-   "media_id": "18028944962874334",
-   "status": "yayında (yeniden tasarım; eski sürüm 17993387007119720 silindi)",
-   "title": "Kare'den Haberler #1: Instagram Effect Builder ve Adobe MAX",
-   "files": [
-    "posts/2026-11-10-kareden-haberler-1-v2/1.jpg",
-    "posts/2026-11-10-kareden-haberler-1-v2/2.jpg",
-    "posts/2026-11-10-kareden-haberler-1-v2/3.jpg",
-    "posts/2026-11-10-kareden-haberler-1-v2/4.jpg",
-    "posts/2026-11-10-kareden-haberler-1-v2/5.jpg",
-    "posts/2026-11-10-kareden-haberler-1-v2/6.jpg"
-   ],
-   "caption_file": "posts/2026-11-10-kareden-haberler-1-v2/caption.txt",
-   "sources": [
-    "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
-    "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
-    "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
-    "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-   ],
-   "layout": "bignum",
-   "topic_area": "ai"
-  },
-  {
-   "date": "2026-11-10",
-   "kind": "reel",
-   "slug": "2026-11-10-fable-5-2",
-   "cover_tone": "dark",
-   "layout": "classic-sticker",
-   "media_id": "18173187451461130",
-   "status": "yayında (13:00)",
-   "title": "Claude Fable 5.2 çıktı",
-   "sources": [
-    "https://www.anthropic.com/claude/fable",
-    "https://x.com/claudeai/status/2119867114450268322",
-    "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
-    "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
-   ],
-   "music": "pop",
-   "topic_area": "ai"
-  },
-  {
-   "date": "2026-11-10",
-   "kind": "static",
-   "slug": "2026-11-10-prompt-rehberi",
-   "cover_tone": "light",
-   "media_id": "18129784361476884",
-   "status": "yayında (19:15)",
-   "title": "Prompt rehberi: Boş sayfaya bakma, kopyala.",
-   "files": [
-    "posts/2026-11-10-prompt-rehberi/1.jpg"
-   ],
-   "layout": "chat",
-   "keyword": "REHBER",
-   "topic_area": "ai"
-  },
-  {
-   "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
-   "kind": "carousel",
-   "publish_date": "2026-11-11",
-   "files": [
-    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
-    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/2.jpg",
-    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/3.jpg",
-    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/4.jpg",
-    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/5.jpg"
-   ],
-   "cover": "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
-   "cover_tone": "dark",
-   "layout": "photo",
-   "caption": "Ünlüler artık reklam çekimine bir kez gidecek.\n\nReklam Lab'in ilk bölümünde Ogilvy'nin 9 Kasım'da duyurduğu yapay zekâ platformu ECHO var. CAA ve WPP ile birlikte geliştirilen sistemde ünlünün yüzü ve sesi bir kez taranıyor. Normalde 8–10 görsel çıkan bir çekimden 30–50 reklam üretilebiliyor. Ogilvy'ye göre görsel başına maliyet %65–75'e kadar düşebilir.\n\nPeki ünlünün izni? Hiçbir görsel ünlü onaylamadan yayınlanamıyor, her reklamda da \"Ünlü onayladı · Yapay zekâyla üretildi\" filigranı bulunuyor. Platforma ilk katılan isim oyuncu Terry Crews.\n\nİşin asıl dikkat çeken tarafı güven: Ogilvy'nin araştırmasına göre tüketicilerin %80'inden fazlası \"ünlü onayladı\" notunu izin işareti olarak görüyor.\n\nKüçük bir marka ya da serbest çalışan olarak çıkaracağın ders: Yapay zekâ kullandıysan gizleme, yüzü kullanılan kişinin onayını al ve bunu görünür kıl.\n\nBir ünlü reklamında yapay zekâ kullanıldığını bilsen markaya güvenin azalır mı? Yorumlara yaz.\n\nGörsel: Ogilvy / CAA\n\n#reklam #yapayzeka #pazarlama #dijitalpazarlama #reklamcılık #marka #sosyalmedya",
-   "sources": [
-    "https://www.ogilvy.com/ideas/ogilvy-launches-echo-industrys-first-talent-consent-based-creative-ai-platform",
-    "https://www.storyboard18.com/advertising/ogilvy-launches-echo-an-ai-platform-to-scale-celebrity-led-advertising-ws-l-114420.htm",
-    "https://bestmediainfo.com/mediainfo/mediainfo-marketing/ogilvy-launches-echo-ai-platform-to-scale-celebrity-campaigns-with-talent-consent-12798305",
-    "https://indiantelevision.com/mam/ogilvy-launches-echo-a-consent-first-ai-platform-to-protect-celebrity-likenesses/",
-    "https://reel360.com/article/caa-and-ogilvy-launch-echo-bringing-ai-celebrity-doubles-to-advertising/"
-   ],
-   "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı.",
-   "media_id": "18100588367424828",
-   "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)",
-   "topic_area": "marka"
-  },
-  {
-   "slug": "2026-11-11-adobe-max-creative-agent",
-   "kind": "reel",
-   "publish_date": "2026-11-11",
-   "layout": "editorial",
-   "files": [
-    "posts/2026-11-11-adobe-max-creative-agent/reel.mp4"
-   ],
-   "cover": "posts/2026-11-11-adobe-max-creative-agent/cover.jpg",
-   "cover_tone": "light",
-   "caption": "Adobe uygulamalarına artık yazarak iş verebilirsin.\n\nAdobe MAX 2026'nın (10 Kasım) öne çıkan duyurusu Adobe Creative Agent oldu:\n\n• Firefly AI Assistant (beta): Hedefini sade bir dille yazıyorsun; asistan araçları ve yapay zekâ modelini seçip işi adım adım yapıyor.\n• Plan Mode: Asistan başlamadan önce planını gösteriyor, sen onaylıyorsun.\n• Sadece Firefly'da değil: Photoshop, Premiere, Illustrator, InDesign, After Effects ve Frame.io'da da AI Assistant (beta) olarak geliyor.\n• Model seçimi: Google, OpenAI, Kling, ByteDance ve ElevenLabs gibi şirketlerin modelleri Firefly'da tek yerde.\n\nNot: Bu özelliklerin çoğu şimdilik beta ya da önizleme aşamasında.\n\nSen ilk hangi işi asistana devrederdin? Yorumlara yaz.\n\n#yapayzeka #adobe #photoshop #firefly #grafiktasarım #tasarım #dijitalgündem",
-   "sources": [
-    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
-    "https://variety.com/2026/digital/news/adobe-ai-agentic-features-max-2026-1236943958/",
-    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/",
-    "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
-   ],
-   "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
-   "music": "synthwave",
-   "media_id": "18172083973473135",
-   "status": "yayında (12:01)",
-   "topic_area": "ai"
-  },
-  {
-   "slug": "2026-11-11-claude-meetings",
-   "kind": "reel",
-   "publish_date": "2026-11-11",
-   "layout": "editorial",
-   "files": [
-    "posts/2026-11-11-claude-meetings/reel.mp4"
-   ],
-   "cover": "posts/2026-11-11-claude-meetings/cover.jpg",
-   "cover_tone": "dark",
-   "caption": "Claude artık toplantılara katılıp not almanın ötesine geçiyor.\n\nAnthropic 10 Kasım'da Claude Meetings'i duyurdu:\n\n• Toplantıya görünür bir katılımcı olarak giriyor, kendini tanıtıp sohbete bildirim bırakıyor.\n• Konuşma sürerken işe başlıyor: konuşulan planın taslağını çıkarıyor, zaman çizelgesi hazırlıyor, sohbetteki sorulara cevap veriyor.\n• Toplantı bitince notlar, görevler ve hazırladığı her şey Claude'da duruyor.\n• Gizlilik: Yönetici izin vermedikçe dışarıdan misafir olan toplantılara girmiyor, sonradan biri katılırsa toplantıdan çıkıyor.\n\nŞimdilik beta: Team ve Enterprise planlarında, Google Meet'te çalışıyor. Diğer platformların sonra geleceği söyleniyor. Aynı gün Claude Whiteboards ve Claude Sheets de beta olarak tüm ücretli planlara geldi.\n\nToplantı notlarını yapay zekâya bırakır mıydın? Yorumlara yaz.\n\n#yapayzeka #claude #anthropic #verimlilik #toplantı #dijitalgündem #reels",
-   "sources": [
-    "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
-    "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
-   ],
-   "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
-   "music": "lofi",
-   "media_id": "18139861054680639",
-   "status": "yayında (11 Kasım 19:15, akşam görevi)",
-   "topic_area": "ai"
-  },
-  {
-   "slug": "2026-11-11-gemini-4-carbon",
-   "kind": "reel",
-   "publish_date": "2026-11-12",
-   "layout": "bignum",
-   "files": [
-    "posts/2026-11-11-gemini-4-carbon/reel.mp4"
-   ],
-   "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
-   "cover_tone": "light",
-   "caption": "Google'ın en güçlü modeli artık kullanımda: Gemini 4 Carbon.\n\n28 Ekim'de yalnızca seçili siber güvenlik ekiplerine açılmıştı. Google 10 Kasım'da erişimi genişletti:\n\n• Kimler kullanabilir? Google AI Ultra aboneleri (Gemini uygulaması, Arama'daki AI Mode ve Antigravity) ile ücretli Gemini API kullanan geliştiriciler.\n• Neyde iddialı? Google'a göre kodlama testi CursorBench 4.0'da ilk sırada ve görev başına maliyeti en yakın rakibinin yarısından da az.\n• /swarm (önizleme): Antigravity'de tek bir prompt'u birlikte çalışan bir ajan ekibine çeviriyor, ilerlemeyi canlı izliyorsun.\n• Fiyat: 30 Kasım'a kadar 1 milyon girdi token'ı 2 $, çıktı 10 $. Sonrasında 4 $ ve 20 $.\n\nNot: Google, işlerin çoğu için hâlâ Gemini 4 Argon'u öneriyor. Carbon en zor görevler için.\n\nKodlayan bir arkadaşına gönder: Sence Carbon, Claude ve GPT'nin yanında nerede durur? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #yazılım #dijitalgündem #reels",
-   "sources": [
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-    "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
-    "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
-   ],
-   "music": "house",
-   "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli.",
-   "media_id": "17887918917625015",
-   "status": "yayında (12 Kasım 19:14, akşam görevi)",
-   "topic_area": "ai"
-  },
-  {
-   "slug": "2026-11-13-gemini-4-hydrogen",
-   "kind": "reel",
-   "publish_date": "2026-11-13",
-   "layout": "bars",
-   "files": [
-    "posts/2026-11-13-gemini-4-hydrogen/reel.mp4"
-   ],
-   "cover": "posts/2026-11-13-gemini-4-hydrogen/cover.jpg",
-   "cover_tone": "dark",
-   "caption": "Gemini'nin yeni modeli 2,5 kat daha hızlı ve ücretsiz hesaplara da geliyor.\n\nGoogle 12 Kasım'da Gemini 4 Hydrogen modelini duyurdu. Önceki hızlı model Gemini 3.8 Flash'ın yerini alıyor:\n\n• Hız: Google'a göre işleri 3.8 Flash'tan 2,5 kat hızlı bitiriyor.\n• Zekâ: Artificial Analysis Zekâ Endeksi'nde 51 puanla Google'ın büyük modeli Gemini 4 Argon'u (50) az farkla geçti. 3.8 Flash'ın puanı 31.\n• Nerede? Google Arama'da dünya genelinde tüm kullanıcılara açılıyor. Gemini uygulamasında ücretsiz kullanıcılar için otomatik model seçimi uygun gördüğünde Hydrogen devreye giriyor.\n• Geliştiriciler için: Gemini API'de 1 milyon girdi token'ı 1,50 $, çıktı 7,50 $.\n\nHangi işe hangi model? Hız gereken günlük işler ve çok adımlı görevler için Hydrogen; uzun soluklu, derin düşünme gerektiren işler için Carbon ve Argon. Google da modelleri böyle konumlandırıyor.\n\nKaydet, model seçerken lazım olur. Sen Gemini'yi en çok ne için açıyorsun? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #dijitalgündem #verimlilik #reels",
-   "sources": [
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-    "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/",
-    "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
-    "https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor",
-    "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
-   ],
-   "music": "minimal",
-   "note": "13 Kasım sabah görevi: büyük gelişme (yeni Gemini modeli, Arama'da tüm kullanıcılara) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,8 sn (outro dahil). Kapak bars düzeni, koyu ton. 13 Kasım 18:20 güncellendi (Ece): süs öğeleri (nokta deseni, kayan yazı, köşe çizgileri, parıltı) çıkarıldı, pembe ikinci vurgu eklendi. Ece'nin isteğiyle 18:16'da elle yayınlandı (seslendirmesiz).",
-   "cover_type": "tipografi",
-   "topic_area": "ai",
-   "media_id": "18105721748566120",
-   "published_at": "2026-11-13T18:16+03:00"
-  },
-  {
-   "slug": "2026-11-14-youtube-gta-vi",
-   "kind": "reel",
-   "publish_date": "2026-11-14",
-   "extra": true,
-   "title": "YouTube'un GTA VI çıkış hazırlığı (40 milyar izlenme, 24 saatlik yayın, Shorts efekti, hediyeler)",
-   "layout": "photo",
-   "cover_type": "gorsel",
-   "topic_area": "platform",
-   "files": [
-    "posts/2026-11-14-youtube-gta-vi/reel.mp4"
-   ],
-   "cover": "posts/2026-11-14-youtube-gta-vi/cover.jpg",
-   "cover_tone": "light",
-   "music": "synthwave",
-   "voice": "posts/2026-11-14-youtube-gta-vi/voice.mp3",
-   "caption": "GTA VI daha çıkmadı ama YouTube'da 40 milyar izlenmeyi geçti.\n\nOyun 19 Kasım'da çıkıyor. YouTube 12 Kasım'da çıkış için hazırladıklarını açıkladı:\n\n• 24 saatlik canlı yayın: 19 Kasım'da Türkiye saatiyle 08:00'de youtube.com/youtube kanalında başlıyor. Oyun içerik üreticileri canlı oynanış, podcast ve özel içeriklerle yayında olacak.\n• Shorts efekti: \"GTAVI: Visit Vice City\" efektiyle kendini oyunun dünyasına koyabiliyorsun. YouTube efektin hangi ülkelerde açık olduğunu belirtmedi.\n• Canlı yayın hediyeleri: GTA temalı 5 sınırlı sürüm hediye geliyor. Biri, seçili yayınlarda stoklar bitene kadar ücretsiz.\n• YouTube Music: Oyunun müzikleri çıkış haftası boyunca ana sayfada.\n\nYouTube'a göre GTA serisiyle ilgili videolar toplamda 900 milyardan fazla izlendi.\n\nKapaktaki görsel, serinin 2002'deki oyunu GTA: Vice City'den. GTA VI de seriyi Vice City'ye geri götürüyor.\n\nİçerik üreticisiysen: Efekti çıkış haftasında dene, kendi açını bul (yorum, tepki, karşılaştırma) ve canlı yayında hangi formatların tuttuğuna bak.\n\nSen GTA VI oynayacak mısın? Yorumlara yaz, oyun seven arkadaşına gönder.\n\n#youtube #gta6 #oyun #shorts #içeriküreticisi #sosyalmedya #dijitalgündem",
-   "sources": [
-    "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
-    "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/",
-    "https://abcnews4.com/news/offbeat/rockstar-games-grand-theft-auto-vi-brings-series-back-florida-inspired-vice-city-leonida-everglades-miami-florida-keys-wetland-video-game-xbox-playstation-jason-duval-lucia-caminos"
-   ],
-   "note": "14 Kasım: Ece'nin isteğiyle hafta sonu ek Reel olarak öğlen yayınlandı. Kapak: dev 'GTA VI' + Ece'nin gönderdiği GTA: Vice City (2002) görseli (künyeli). Ece'nin ElevenLabs seslendirmesi, 40,5 sn. Kapak türü döngüde Kare sırasıydı ama Ece görsel istediği için 'görsel' oldu.",
-   "media_id": "17955542733341306",
-   "status": "yayında (14 Kasım, Ece'nin onayıyla)",
-   "published_at": "2026-11-14"
-  }
- ],
- "queue": [
-  {
-   "slug": "2026-11-14-von-restorff",
-   "kind": "reel",
-   "publish_date": "2026-11-14",
-   "extra": true,
-   "title": "Kare Açıklıyor: Von Restorff etkisi (farklı olan akılda kalır)",
-   "layout": "quote",
-   "cover_type": "tipografi",
-   "topic_area": "psikoloji",
-   "files": [
-    "posts/2026-11-14-von-restorff/reel.mp4"
-   ],
-   "cover": "posts/2026-11-14-von-restorff/cover.jpg",
-   "cover_tone": "dark",
-   "music": "funk",
-   "caption": "Bu listeden aklında hangi kelime kaldı: kalem, silgi, defter, cetvel, zürafa, makas?\n\nBüyük ihtimalle zürafa. Buna Von Restorff etkisi (izolasyon etkisi) deniyor.\n\n1933'te Berlin'de Hedwig von Restorff'un deneyleri şunu gösterdi: Birbirine benzeyen öğelerin arasındaki tek farklı öğe daha iyi hatırlanıyor.\n\nTasarımda nasıl kullanırsın?\n• Kapakta yalnızca bir kelimeyi vurgula.\n• Sayfada tek bir buton farklı renkte olsun.\n• Fiyat tablosunda öne çıkarmak istediğin paketi ayır.\n\nEn sık hata her şeyi vurgulamak. Her şey kalın ve renkliyse hiçbir şey öne çıkmaz. Bir de yalnızca renge güvenme: Renk körlüğü olan biri farkı göremeyebilir, boyut ya da konumla da ayır.\n\nSon paylaşımında kaç vurgu vardı? Yorumlara yaz, tasarım yapan bir arkadaşına da gönder.\n\n#tasarım #grafiktasarım #psikoloji #pazarlama #sosyalmedya #tipografi #içerikpazarlaması",
-   "sources": [
-    "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
-    "https://lawsofux.com/von-restorff-effect/"
-   ],
-   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi. | 14 Kasım: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 43,0 sn (outro dahil). | Ece'nin isteğiyle liste sahnesinden sonra boş ekranda 3 saniye ilerleyen kronometre + alarm sahnesi eklendi (müzik kısık, tık sesleri). Seslendirmedeki duraklar biraz sıkılaştırıldı (voice_tight.wav). Süre 44,8 sn.",
-   "voice": "posts/2026-11-14-von-restorff/voice_tight.wav"
-  }
- ],
- "stories": [
-  {
-   "date": "2026-11-09",
-   "slug": "2026-11-09-story",
-   "file": "posts/2026-11-09-story/story.jpg",
-   "about": "İlk deney Reel'inin duyurusu",
-   "media_id": "17896327833681957"
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "one-cikan-baslangic",
-   "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
-   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-   "media_id": "18027181781863647"
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "one-cikan-gundem",
-   "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
-   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-   "media_id": "17919048858467844"
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "one-cikan-ai-lab",
-   "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
-   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-   "media_id": "18115804277127596"
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "one-cikan-tasarim",
-   "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
-   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-   "media_id": "17887896783503923"
-  },
-  {
-   "date": "2026-11-09",
-   "slug": "one-cikan-mutfak",
-   "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
-   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-   "media_id": "18101888147645978"
-  },
-  {
-   "date": "2026-11-10",
-   "slug": "2026-11-10-story",
-   "file": "posts/2026-11-10-story/story.jpg",
-   "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
-   "media_id": "17960983923258520"
-  },
-  {
-   "date": "2026-11-10",
-   "slug": "2026-11-10-story-gundem",
-   "file": "posts/2026-11-10-story-gundem/story.jpg",
-   "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
-   "media_id": "18120361793078882",
-   "sources": [
-    "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
-    "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
-    "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
-    "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-   ]
-  },
-  {
-   "date": "2026-11-11",
-   "slug": "2026-11-11-story",
-   "file": "posts/2026-11-11-story/story.jpg",
-   "about": "Biliyor muydun: Adobe Firefly Plan Mode + 'önce plan' prompt'u (chat düzeni)",
-   "layout": "chat",
-   "sources": [
-    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
-    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/"
-   ],
-   "media_id": "17968221638979469"
-  },
-  {
-   "date": "2026-11-12",
-   "slug": "2026-11-12-story",
-   "file": "posts/2026-11-12-story/story.jpg",
-   "about": "Biliyor muydun: ChatGPT Business Hub (beta) — anılma, tık, konu, ajan + 'kendin dene' sorusu (tiles düzeni, koyu)",
-   "layout": "tiles",
-   "sources": [
-    "https://www.seroundtable.com/chatgpt-business-hub-42505.html",
-    "https://ppc.land/businesses-gain-chatgpt-click-and-mention-counts-in-openais-business-hub/",
-    "https://tech-ish.com/2026/11/11/openais-business-hub-lets-you-manage-your-business-in-chatgpt/"
-   ],
-   "media_id": "18109814321248870"
-  },
-  {
-   "date": "2026-11-13",
-   "slug": "2026-11-13-story",
-   "file": "posts/2026-11-13-story/story.jpg",
-   "about": "Biliyor muydun: YouTube Hype (Jewels/Rubies) artık Türkiye'de — nasıl çalışır + şartlar, 'DM'den yaz' (steps düzeni, açık)",
-   "layout": "steps",
-   "sources": [
-    "https://www.socialmediatoday.com/news/youtube-expands-custom-feeds-and-offers-new-partnership-options/874068/",
-    "https://ppc.land/youtube-creators-in-us-uk-and-7-more-markets-gain-income-from-paid-hypes/"
-   ],
-   "media_id": "18029963495869441"
-  },
-  {
-   "date": "2026-11-14",
-   "slug": "2026-11-14-story",
-   "file": "posts/2026-11-14-story/story.jpg",
-   "about": "Biliyor muydun: Tomy 20 yıl sonra TAKARATOMY oluyor (bugün/1 Nisan 2027 karşılaştırması, asobi sembolü, 'logon tek bakışta okunuyor mu?' DM sorusu; compare düzeni, koyu)",
-   "layout": "compare",
-   "topic_area": "marka",
-   "sources": [
-    "https://kyodonewsprwire.jp/release/202611099717",
-    "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled"
-   ],
-   "media_id": "17922183303526724"
-  }
- ],
- "replied_comments": [
-  "18127192088314324"
- ],
- "covered_topics": [
-  "instagram-effect-builder",
-  "adobe-max-2026",
-  "claude-fable-5-2",
-  "ogilvy-echo",
-  "adobe-max-2026-firefly-creative-agent",
-  "claude-meetings-sheets-whiteboards",
-  "gemini-4-carbon",
-  "gemini-4-hydrogen",
-  "von-restorff-etkisi",
-  "takaratomy-rebrand",
-  "youtube-gta-vi-paketi"
- ],
- "hot_pending": [
-  {
-   "key": "edits-speed-curves",
-   "found": "2026-11-14",
-   "big": true,
-   "note": "Instagram Edits uygulamasına hız eğrileri, otomatik ses dengeleme, Inspiration sekmesinde konu tercihi ve metin animasyonu ayarları geldi (@creators Threads, 12 Kasım). Bölge/tarih bilgisi yok; pratik 'nasıl kullanılır' içeriği olarak uygun.",
-   "sources": [
-    "https://www.socialmediatoday.com/news/edits-app-gets-speed-curves-and-auto-audio-balancing/874586/"
-   ]
-  }
- ],
- "scheduled": [],
- "pending_replies": [],
- "weekly_metrics": [
-  {
-   "week_end": "2026-11-14",
-   "range": "2026-11-08..2026-11-14",
-   "followers": 5,
-   "followers_prev": null,
-   "note": "İlk haftalık kayıt; 10 Kasım notunda 3 takipçi yazıyordu.",
-   "posts": 11,
-   "views": 2392,
-   "reach": 1973,
-   "reels_skip_rate_range": "61–85%",
-   "reels_avg_watch_s_range": "2.7–11.2",
-   "best": "18173187451461130 (Fable 5.2: erişim 1400, skip %61, 11,2 sn, 9 kaydetme, 6 paylaşım)",
-   "worst": "18139861054680639 (Claude Meetings: erişim 109, skip %85, 2,7 sn)"
-  }
- ]
+  "instagram_account": "17841469889313843",
+  "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
+  "grid": [
+    {
+      "date": "2026-11-09",
+      "kind": "carousel",
+      "slug": "2026-11-09-tanisma",
+      "cover_tone": "light",
+      "media_id": "18031318442692957",
+      "title": "Tanışma: Merhaba, ben Kare",
+      "layout": "classic",
+      "topic_area": "tanitim"
+    },
+    {
+      "date": "2026-11-09",
+      "kind": "reel",
+      "slug": "2026-11-09-ilk-deney",
+      "cover_tone": "dark",
+      "media_id": "18090307286284943",
+      "status": "yayında (20:00)",
+      "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
+      "layout": "classic",
+      "music": "pop",
+      "topic_area": "ai"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "carousel",
+      "slug": "2026-11-10-kareden-haberler-1-v2",
+      "cover_tone": "light",
+      "media_id": "18028944962874334",
+      "status": "yayında (yeniden tasarım; eski sürüm 17993387007119720 silindi)",
+      "title": "Kare'den Haberler #1: Instagram Effect Builder ve Adobe MAX",
+      "files": [
+        "posts/2026-11-10-kareden-haberler-1-v2/1.jpg",
+        "posts/2026-11-10-kareden-haberler-1-v2/2.jpg",
+        "posts/2026-11-10-kareden-haberler-1-v2/3.jpg",
+        "posts/2026-11-10-kareden-haberler-1-v2/4.jpg",
+        "posts/2026-11-10-kareden-haberler-1-v2/5.jpg",
+        "posts/2026-11-10-kareden-haberler-1-v2/6.jpg"
+      ],
+      "caption_file": "posts/2026-11-10-kareden-haberler-1-v2/caption.txt",
+      "sources": [
+        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+      ],
+      "layout": "bignum",
+      "topic_area": "ai"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "reel",
+      "slug": "2026-11-10-fable-5-2",
+      "cover_tone": "dark",
+      "layout": "classic-sticker",
+      "media_id": "18173187451461130",
+      "status": "yayında (13:00)",
+      "title": "Claude Fable 5.2 çıktı",
+      "sources": [
+        "https://www.anthropic.com/claude/fable",
+        "https://x.com/claudeai/status/2119867114450268322",
+        "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
+        "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
+      ],
+      "music": "pop",
+      "topic_area": "ai"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "static",
+      "slug": "2026-11-10-prompt-rehberi",
+      "cover_tone": "light",
+      "media_id": "18129784361476884",
+      "status": "yayında (19:15)",
+      "title": "Prompt rehberi: Boş sayfaya bakma, kopyala.",
+      "files": [
+        "posts/2026-11-10-prompt-rehberi/1.jpg"
+      ],
+      "layout": "chat",
+      "keyword": "REHBER",
+      "topic_area": "ai"
+    },
+    {
+      "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
+      "kind": "carousel",
+      "publish_date": "2026-11-11",
+      "files": [
+        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
+        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/2.jpg",
+        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/3.jpg",
+        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/4.jpg",
+        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/5.jpg"
+      ],
+      "cover": "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
+      "cover_tone": "dark",
+      "layout": "photo",
+      "caption": "Ünlüler artık reklam çekimine bir kez gidecek.\n\nReklam Lab'in ilk bölümünde Ogilvy'nin 9 Kasım'da duyurduğu yapay zekâ platformu ECHO var. CAA ve WPP ile birlikte geliştirilen sistemde ünlünün yüzü ve sesi bir kez taranıyor. Normalde 8–10 görsel çıkan bir çekimden 30–50 reklam üretilebiliyor. Ogilvy'ye göre görsel başına maliyet %65–75'e kadar düşebilir.\n\nPeki ünlünün izni? Hiçbir görsel ünlü onaylamadan yayınlanamıyor, her reklamda da \"Ünlü onayladı · Yapay zekâyla üretildi\" filigranı bulunuyor. Platforma ilk katılan isim oyuncu Terry Crews.\n\nİşin asıl dikkat çeken tarafı güven: Ogilvy'nin araştırmasına göre tüketicilerin %80'inden fazlası \"ünlü onayladı\" notunu izin işareti olarak görüyor.\n\nKüçük bir marka ya da serbest çalışan olarak çıkaracağın ders: Yapay zekâ kullandıysan gizleme, yüzü kullanılan kişinin onayını al ve bunu görünür kıl.\n\nBir ünlü reklamında yapay zekâ kullanıldığını bilsen markaya güvenin azalır mı? Yorumlara yaz.\n\nGörsel: Ogilvy / CAA\n\n#reklam #yapayzeka #pazarlama #dijitalpazarlama #reklamcılık #marka #sosyalmedya",
+      "sources": [
+        "https://www.ogilvy.com/ideas/ogilvy-launches-echo-industrys-first-talent-consent-based-creative-ai-platform",
+        "https://www.storyboard18.com/advertising/ogilvy-launches-echo-an-ai-platform-to-scale-celebrity-led-advertising-ws-l-114420.htm",
+        "https://bestmediainfo.com/mediainfo/mediainfo-marketing/ogilvy-launches-echo-ai-platform-to-scale-celebrity-campaigns-with-talent-consent-12798305",
+        "https://indiantelevision.com/mam/ogilvy-launches-echo-a-consent-first-ai-platform-to-protect-celebrity-likenesses/",
+        "https://reel360.com/article/caa-and-ogilvy-launch-echo-bringing-ai-celebrity-doubles-to-advertising/"
+      ],
+      "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı.",
+      "media_id": "18100588367424828",
+      "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)",
+      "topic_area": "marka"
+    },
+    {
+      "slug": "2026-11-11-adobe-max-creative-agent",
+      "kind": "reel",
+      "publish_date": "2026-11-11",
+      "layout": "editorial",
+      "files": [
+        "posts/2026-11-11-adobe-max-creative-agent/reel.mp4"
+      ],
+      "cover": "posts/2026-11-11-adobe-max-creative-agent/cover.jpg",
+      "cover_tone": "light",
+      "caption": "Adobe uygulamalarına artık yazarak iş verebilirsin.\n\nAdobe MAX 2026'nın (10 Kasım) öne çıkan duyurusu Adobe Creative Agent oldu:\n\n• Firefly AI Assistant (beta): Hedefini sade bir dille yazıyorsun; asistan araçları ve yapay zekâ modelini seçip işi adım adım yapıyor.\n• Plan Mode: Asistan başlamadan önce planını gösteriyor, sen onaylıyorsun.\n• Sadece Firefly'da değil: Photoshop, Premiere, Illustrator, InDesign, After Effects ve Frame.io'da da AI Assistant (beta) olarak geliyor.\n• Model seçimi: Google, OpenAI, Kling, ByteDance ve ElevenLabs gibi şirketlerin modelleri Firefly'da tek yerde.\n\nNot: Bu özelliklerin çoğu şimdilik beta ya da önizleme aşamasında.\n\nSen ilk hangi işi asistana devrederdin? Yorumlara yaz.\n\n#yapayzeka #adobe #photoshop #firefly #grafiktasarım #tasarım #dijitalgündem",
+      "sources": [
+        "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+        "https://variety.com/2026/digital/news/adobe-ai-agentic-features-max-2026-1236943958/",
+        "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/",
+        "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
+      ],
+      "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
+      "music": "synthwave",
+      "media_id": "18172083973473135",
+      "status": "yayında (12:01)",
+      "topic_area": "ai"
+    },
+    {
+      "slug": "2026-11-11-claude-meetings",
+      "kind": "reel",
+      "publish_date": "2026-11-11",
+      "layout": "editorial",
+      "files": [
+        "posts/2026-11-11-claude-meetings/reel.mp4"
+      ],
+      "cover": "posts/2026-11-11-claude-meetings/cover.jpg",
+      "cover_tone": "dark",
+      "caption": "Claude artık toplantılara katılıp not almanın ötesine geçiyor.\n\nAnthropic 10 Kasım'da Claude Meetings'i duyurdu:\n\n• Toplantıya görünür bir katılımcı olarak giriyor, kendini tanıtıp sohbete bildirim bırakıyor.\n• Konuşma sürerken işe başlıyor: konuşulan planın taslağını çıkarıyor, zaman çizelgesi hazırlıyor, sohbetteki sorulara cevap veriyor.\n• Toplantı bitince notlar, görevler ve hazırladığı her şey Claude'da duruyor.\n• Gizlilik: Yönetici izin vermedikçe dışarıdan misafir olan toplantılara girmiyor, sonradan biri katılırsa toplantıdan çıkıyor.\n\nŞimdilik beta: Team ve Enterprise planlarında, Google Meet'te çalışıyor. Diğer platformların sonra geleceği söyleniyor. Aynı gün Claude Whiteboards ve Claude Sheets de beta olarak tüm ücretli planlara geldi.\n\nToplantı notlarını yapay zekâya bırakır mıydın? Yorumlara yaz.\n\n#yapayzeka #claude #anthropic #verimlilik #toplantı #dijitalgündem #reels",
+      "sources": [
+        "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+        "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
+      ],
+      "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
+      "music": "lofi",
+      "media_id": "18139861054680639",
+      "status": "yayında (11 Kasım 19:15, akşam görevi)",
+      "topic_area": "ai"
+    },
+    {
+      "slug": "2026-11-11-gemini-4-carbon",
+      "kind": "reel",
+      "publish_date": "2026-11-12",
+      "layout": "bignum",
+      "files": [
+        "posts/2026-11-11-gemini-4-carbon/reel.mp4"
+      ],
+      "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
+      "cover_tone": "light",
+      "caption": "Google'ın en güçlü modeli artık kullanımda: Gemini 4 Carbon.\n\n28 Ekim'de yalnızca seçili siber güvenlik ekiplerine açılmıştı. Google 10 Kasım'da erişimi genişletti:\n\n• Kimler kullanabilir? Google AI Ultra aboneleri (Gemini uygulaması, Arama'daki AI Mode ve Antigravity) ile ücretli Gemini API kullanan geliştiriciler.\n• Neyde iddialı? Google'a göre kodlama testi CursorBench 4.0'da ilk sırada ve görev başına maliyeti en yakın rakibinin yarısından da az.\n• /swarm (önizleme): Antigravity'de tek bir prompt'u birlikte çalışan bir ajan ekibine çeviriyor, ilerlemeyi canlı izliyorsun.\n• Fiyat: 30 Kasım'a kadar 1 milyon girdi token'ı 2 $, çıktı 10 $. Sonrasında 4 $ ve 20 $.\n\nNot: Google, işlerin çoğu için hâlâ Gemini 4 Argon'u öneriyor. Carbon en zor görevler için.\n\nKodlayan bir arkadaşına gönder: Sence Carbon, Claude ve GPT'nin yanında nerede durur? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #yazılım #dijitalgündem #reels",
+      "sources": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+        "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
+        "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
+      ],
+      "music": "house",
+      "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli.",
+      "media_id": "17887918917625015",
+      "status": "yayında (12 Kasım 19:14, akşam görevi)",
+      "topic_area": "ai"
+    },
+    {
+      "slug": "2026-11-13-gemini-4-hydrogen",
+      "kind": "reel",
+      "publish_date": "2026-11-13",
+      "layout": "bars",
+      "files": [
+        "posts/2026-11-13-gemini-4-hydrogen/reel.mp4"
+      ],
+      "cover": "posts/2026-11-13-gemini-4-hydrogen/cover.jpg",
+      "cover_tone": "dark",
+      "caption": "Gemini'nin yeni modeli 2,5 kat daha hızlı ve ücretsiz hesaplara da geliyor.\n\nGoogle 12 Kasım'da Gemini 4 Hydrogen modelini duyurdu. Önceki hızlı model Gemini 3.8 Flash'ın yerini alıyor:\n\n• Hız: Google'a göre işleri 3.8 Flash'tan 2,5 kat hızlı bitiriyor.\n• Zekâ: Artificial Analysis Zekâ Endeksi'nde 51 puanla Google'ın büyük modeli Gemini 4 Argon'u (50) az farkla geçti. 3.8 Flash'ın puanı 31.\n• Nerede? Google Arama'da dünya genelinde tüm kullanıcılara açılıyor. Gemini uygulamasında ücretsiz kullanıcılar için otomatik model seçimi uygun gördüğünde Hydrogen devreye giriyor.\n• Geliştiriciler için: Gemini API'de 1 milyon girdi token'ı 1,50 $, çıktı 7,50 $.\n\nHangi işe hangi model? Hız gereken günlük işler ve çok adımlı görevler için Hydrogen; uzun soluklu, derin düşünme gerektiren işler için Carbon ve Argon. Google da modelleri böyle konumlandırıyor.\n\nKaydet, model seçerken lazım olur. Sen Gemini'yi en çok ne için açıyorsun? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #dijitalgündem #verimlilik #reels",
+      "sources": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/",
+        "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
+        "https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor",
+        "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
+      ],
+      "music": "minimal",
+      "note": "13 Kasım sabah görevi: büyük gelişme (yeni Gemini modeli, Arama'da tüm kullanıcılara) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,8 sn (outro dahil). Kapak bars düzeni, koyu ton. 13 Kasım 18:20 güncellendi (Ece): süs öğeleri (nokta deseni, kayan yazı, köşe çizgileri, parıltı) çıkarıldı, pembe ikinci vurgu eklendi. Ece'nin isteğiyle 18:16'da elle yayınlandı (seslendirmesiz).",
+      "cover_type": "tipografi",
+      "topic_area": "ai",
+      "media_id": "18105721748566120",
+      "published_at": "2026-11-13T18:16+03:00"
+    },
+    {
+      "slug": "2026-11-14-youtube-gta-vi",
+      "kind": "reel",
+      "publish_date": "2026-11-14",
+      "extra": true,
+      "title": "YouTube'un GTA VI çıkış hazırlığı (40 milyar izlenme, 24 saatlik yayın, Shorts efekti, hediyeler)",
+      "layout": "photo",
+      "cover_type": "gorsel",
+      "topic_area": "platform",
+      "files": [
+        "posts/2026-11-14-youtube-gta-vi/reel.mp4"
+      ],
+      "cover": "posts/2026-11-14-youtube-gta-vi/cover.jpg",
+      "cover_tone": "light",
+      "music": "synthwave",
+      "voice": "posts/2026-11-14-youtube-gta-vi/voice.mp3",
+      "caption": "GTA VI daha çıkmadı ama YouTube'da 40 milyar izlenmeyi geçti.\n\nOyun 19 Kasım'da çıkıyor. YouTube 12 Kasım'da çıkış için hazırladıklarını açıkladı:\n\n• 24 saatlik canlı yayın: 19 Kasım'da Türkiye saatiyle 08:00'de youtube.com/youtube kanalında başlıyor. Oyun içerik üreticileri canlı oynanış, podcast ve özel içeriklerle yayında olacak.\n• Shorts efekti: \"GTAVI: Visit Vice City\" efektiyle kendini oyunun dünyasına koyabiliyorsun. YouTube efektin hangi ülkelerde açık olduğunu belirtmedi.\n• Canlı yayın hediyeleri: GTA temalı 5 sınırlı sürüm hediye geliyor. Biri, seçili yayınlarda stoklar bitene kadar ücretsiz.\n• YouTube Music: Oyunun müzikleri çıkış haftası boyunca ana sayfada.\n\nYouTube'a göre GTA serisiyle ilgili videolar toplamda 900 milyardan fazla izlendi.\n\nKapaktaki görsel, serinin 2002'deki oyunu GTA: Vice City'den. GTA VI de seriyi Vice City'ye geri götürüyor.\n\nİçerik üreticisiysen: Efekti çıkış haftasında dene, kendi açını bul (yorum, tepki, karşılaştırma) ve canlı yayında hangi formatların tuttuğuna bak.\n\nSen GTA VI oynayacak mısın? Yorumlara yaz, oyun seven arkadaşına gönder.\n\n#youtube #gta6 #oyun #shorts #içeriküreticisi #sosyalmedya #dijitalgündem",
+      "sources": [
+        "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
+        "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/",
+        "https://abcnews4.com/news/offbeat/rockstar-games-grand-theft-auto-vi-brings-series-back-florida-inspired-vice-city-leonida-everglades-miami-florida-keys-wetland-video-game-xbox-playstation-jason-duval-lucia-caminos"
+      ],
+      "note": "14 Kasım: Ece'nin isteğiyle hafta sonu ek Reel olarak öğlen yayınlandı. Kapak: dev 'GTA VI' + Ece'nin gönderdiği GTA: Vice City (2002) görseli (künyeli). Ece'nin ElevenLabs seslendirmesi, 40,5 sn. Kapak türü döngüde Kare sırasıydı ama Ece görsel istediği için 'görsel' oldu.",
+      "media_id": "17955542733341306",
+      "status": "yayında (14 Kasım, Ece'nin onayıyla)",
+      "published_at": "2026-11-14"
+    },
+    {
+      "slug": "2026-11-14-von-restorff",
+      "kind": "reel",
+      "publish_date": "2026-11-14",
+      "extra": true,
+      "title": "Kare Açıklıyor: Von Restorff etkisi (farklı olan akılda kalır)",
+      "layout": "quote",
+      "cover_type": "tipografi",
+      "topic_area": "psikoloji",
+      "files": [
+        "posts/2026-11-14-von-restorff/reel.mp4"
+      ],
+      "cover": "posts/2026-11-14-von-restorff/cover.jpg",
+      "cover_tone": "dark",
+      "music": "funk",
+      "caption": "Bu listeden aklında hangi kelime kaldı: kalem, silgi, defter, cetvel, zürafa, makas?\n\nBüyük ihtimalle zürafa. Buna Von Restorff etkisi (izolasyon etkisi) deniyor.\n\n1933'te Berlin'de Hedwig von Restorff'un deneyleri şunu gösterdi: Birbirine benzeyen öğelerin arasındaki tek farklı öğe daha iyi hatırlanıyor.\n\nTasarımda nasıl kullanırsın?\n• Kapakta yalnızca bir kelimeyi vurgula.\n• Sayfada tek bir buton farklı renkte olsun.\n• Fiyat tablosunda öne çıkarmak istediğin paketi ayır.\n\nEn sık hata her şeyi vurgulamak. Her şey kalın ve renkliyse hiçbir şey öne çıkmaz. Bir de yalnızca renge güvenme: Renk körlüğü olan biri farkı göremeyebilir, boyut ya da konumla da ayır.\n\nSon paylaşımında kaç vurgu vardı? Yorumlara yaz, tasarım yapan bir arkadaşına da gönder.\n\n#tasarım #grafiktasarım #psikoloji #pazarlama #sosyalmedya #tipografi #içerikpazarlaması",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
+        "https://lawsofux.com/von-restorff-effect/"
+      ],
+      "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi. | 14 Kasım: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 43,0 sn (outro dahil). | Ece'nin isteğiyle liste sahnesinden sonra boş ekranda 3 saniye ilerleyen kronometre + alarm sahnesi eklendi (müzik kısık, tık sesleri). Seslendirmedeki duraklar biraz sıkılaştırıldı (voice_tight.wav). Süre 44,8 sn.",
+      "voice": "posts/2026-11-14-von-restorff/voice_tight.wav",
+      "media_id": "17913159696588712",
+      "published_at": "2026-11-14T19:15+03:00",
+      "status": "yayında (14 Kasım akşam görevi)"
+    }
+  ],
+  "queue": [],
+  "stories": [
+    {
+      "date": "2026-11-09",
+      "slug": "2026-11-09-story",
+      "file": "posts/2026-11-09-story/story.jpg",
+      "about": "İlk deney Reel'inin duyurusu",
+      "media_id": "17896327833681957"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-baslangic",
+      "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "18027181781863647"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-gundem",
+      "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "17919048858467844"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-ai-lab",
+      "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "18115804277127596"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-tasarim",
+      "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "17887896783503923"
+    },
+    {
+      "date": "2026-11-09",
+      "slug": "one-cikan-mutfak",
+      "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
+      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+      "media_id": "18101888147645978"
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "2026-11-10-story",
+      "file": "posts/2026-11-10-story/story.jpg",
+      "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
+      "media_id": "17960983923258520"
+    },
+    {
+      "date": "2026-11-10",
+      "slug": "2026-11-10-story-gundem",
+      "file": "posts/2026-11-10-story-gundem/story.jpg",
+      "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
+      "media_id": "18120361793078882",
+      "sources": [
+        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "slug": "2026-11-11-story",
+      "file": "posts/2026-11-11-story/story.jpg",
+      "about": "Biliyor muydun: Adobe Firefly Plan Mode + 'önce plan' prompt'u (chat düzeni)",
+      "layout": "chat",
+      "sources": [
+        "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+        "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/"
+      ],
+      "media_id": "17968221638979469"
+    },
+    {
+      "date": "2026-11-12",
+      "slug": "2026-11-12-story",
+      "file": "posts/2026-11-12-story/story.jpg",
+      "about": "Biliyor muydun: ChatGPT Business Hub (beta) — anılma, tık, konu, ajan + 'kendin dene' sorusu (tiles düzeni, koyu)",
+      "layout": "tiles",
+      "sources": [
+        "https://www.seroundtable.com/chatgpt-business-hub-42505.html",
+        "https://ppc.land/businesses-gain-chatgpt-click-and-mention-counts-in-openais-business-hub/",
+        "https://tech-ish.com/2026/11/11/openais-business-hub-lets-you-manage-your-business-in-chatgpt/"
+      ],
+      "media_id": "18109814321248870"
+    },
+    {
+      "date": "2026-11-13",
+      "slug": "2026-11-13-story",
+      "file": "posts/2026-11-13-story/story.jpg",
+      "about": "Biliyor muydun: YouTube Hype (Jewels/Rubies) artık Türkiye'de — nasıl çalışır + şartlar, 'DM'den yaz' (steps düzeni, açık)",
+      "layout": "steps",
+      "sources": [
+        "https://www.socialmediatoday.com/news/youtube-expands-custom-feeds-and-offers-new-partnership-options/874068/",
+        "https://ppc.land/youtube-creators-in-us-uk-and-7-more-markets-gain-income-from-paid-hypes/"
+      ],
+      "media_id": "18029963495869441"
+    },
+    {
+      "date": "2026-11-14",
+      "slug": "2026-11-14-story",
+      "file": "posts/2026-11-14-story/story.jpg",
+      "about": "Biliyor muydun: Tomy 20 yıl sonra TAKARATOMY oluyor (bugün/1 Nisan 2027 karşılaştırması, asobi sembolü, 'logon tek bakışta okunuyor mu?' DM sorusu; compare düzeni, koyu)",
+      "layout": "compare",
+      "topic_area": "marka",
+      "sources": [
+        "https://kyodonewsprwire.jp/release/202611099717",
+        "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled"
+      ],
+      "media_id": "17922183303526724"
+    }
+  ],
+  "replied_comments": [
+    "18127192088314324"
+  ],
+  "covered_topics": [
+    "instagram-effect-builder",
+    "adobe-max-2026",
+    "claude-fable-5-2",
+    "ogilvy-echo",
+    "adobe-max-2026-firefly-creative-agent",
+    "claude-meetings-sheets-whiteboards",
+    "gemini-4-carbon",
+    "gemini-4-hydrogen",
+    "von-restorff-etkisi",
+    "takaratomy-rebrand",
+    "youtube-gta-vi-paketi"
+  ],
+  "hot_pending": [
+    {
+      "key": "edits-speed-curves",
+      "found": "2026-11-14",
+      "big": true,
+      "note": "Instagram Edits uygulamasına hız eğrileri, otomatik ses dengeleme, Inspiration sekmesinde konu tercihi ve metin animasyonu ayarları geldi (@creators Threads, 12 Kasım). Bölge/tarih bilgisi yok; pratik 'nasıl kullanılır' içeriği olarak uygun.",
+      "sources": [
+        "https://www.socialmediatoday.com/news/edits-app-gets-speed-curves-and-auto-audio-balancing/874586/"
+      ]
+    }
+  ],
+  "scheduled": [],
+  "pending_replies": [
+    {
+      "comment_id": "18130577105477477",
+      "media_id": "18105721748566120",
+      "username": "karacaisaaa",
+      "comment": "Video tarzın çok güzel birde kendine özgü ses buldun mu yürürsün güzel bir tasarım dilin var 1 aya 10k",
+      "draft": "Çok teşekkürler, bu yorum çok motive etti! Ses konusunda haklısın, son videolarda seslendirmeyi de denemeye başladık. 10k hedefini not aldık 🙌",
+      "created": "2026-11-14"
+    },
+    {
+      "comment_id": "17942939919389976",
+      "media_id": "17955542733341306",
+      "username": "m3metmehm4t",
+      "comment": "Bende izliyorum 41 milyar",
+      "draft": "Demek o fazladan 1 milyar senden geldi 😄 19 Kasım'daki 24 saatlik yayını da izleyecek misin?",
+      "created": "2026-11-14"
+    }
+  ],
+  "weekly_metrics": [
+    {
+      "week_end": "2026-11-14",
+      "range": "2026-11-08..2026-11-14",
+      "followers": 5,
+      "followers_prev": null,
+      "note": "İlk haftalık kayıt; 10 Kasım notunda 3 takipçi yazıyordu.",
+      "posts": 11,
+      "views": 2392,
+      "reach": 1973,
+      "reels_skip_rate_range": "61–85%",
+      "reels_avg_watch_s_range": "2.7–11.2",
+      "best": "18173187451461130 (Fable 5.2: erişim 1400, skip %61, 11,2 sn, 9 kaydetme, 6 paylaşım)",
+      "worst": "18139861054680639 (Claude Meetings: erişim 109, skip %85, 2,7 sn)"
+    }
+  ]
 }
