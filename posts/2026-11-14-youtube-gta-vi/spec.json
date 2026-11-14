@@ -1,0 +1,199 @@
+{
+ "motion": true,
+ "music": {
+  "style": "synthwave",
+  "seed": 1906
+ },
+ "scenes": [
+  {
+   "theme": "light",
+   "duration": 4.5,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "YOUTUBE · GTA VI",
+     "at": 0.0
+    },
+    {
+     "type": "bignum",
+     "text": "40 milyar",
+     "size": 210,
+     "label": "izlenme. Oyun daha [[!çıkmadı.]]",
+     "at": 0.05,
+     "count_at": 0.05
+    },
+    {
+     "type": "lead",
+     "text": "GTA VI 19 Kasım'da çıkıyor. YouTube hazırlığını açıkladı.",
+     "at": 0.8
+    }
+   ],
+   "kare": {
+    "x": 600,
+    "y": 1250,
+    "size": 420,
+    "face": "saskin"
+   }
+  },
+  {
+   "theme": "dark",
+   "duration": 5.0,
+   "transition": "slide",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "1 · CANLI YAYIN",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "24 saat\n[[kesintisiz]] yayın.",
+     "size": 110,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "19 Kasım, Türkiye saatiyle 08:00'de youtube.com/youtube kanalında başlıyor.",
+     "at": 1.0
+    }
+   ],
+   "kare": {
+    "x": 80,
+    "y": 1280,
+    "size": 380,
+    "face": "goz"
+   }
+  },
+  {
+   "theme": "soft",
+   "duration": 5.5,
+   "transition": "up",
+   "elements": [
+    {
+     "type": "phone",
+     "title": "Shorts efekti",
+     "blocks": [
+      "GTAVI: Visit Vice City",
+      "Kendini oyunun dünyasına koy",
+      "Birkaç hazır arka plan"
+     ],
+     "accent": 0,
+     "at": 0.2
+    },
+    {
+     "type": "tag",
+     "text": "2 · SHORTS EFEKTİ",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Kendini\n[[Vice City'ye]]\nkoy.",
+     "size": 100,
+     "narrow": true,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Yeni efektle oyunun dünyasında Shorts çekebilirsin.",
+     "narrow": true,
+     "at": 1.1
+    }
+   ],
+   "kare": null
+  },
+  {
+   "theme": "dark",
+   "duration": 5.0,
+   "transition": "stack",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "3 · CANLI YAYIN HEDİYELERİ",
+     "at": 0.1
+    },
+    {
+     "type": "bignum",
+     "text": "5",
+     "size": 420,
+     "label": "GTA temalı sınırlı sürüm hediye",
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Biri, seçili yayınlarda stoklar bitene kadar [[ücretsiz.]]",
+     "at": 1.2
+    }
+   ],
+   "kare": {
+    "x": 620,
+    "y": 1280,
+    "size": 360,
+    "face": "fikir"
+   }
+  },
+  {
+   "theme": "light",
+   "duration": 6.0,
+   "transition": "zoom",
+   "elements": [
+    {
+     "type": "tag",
+     "text": "ÜRETİCİYSEN NE YAPMALI?",
+     "at": 0.1
+    },
+    {
+     "type": "steps",
+     "items": [
+      [
+       "Efekti çıkış haftasında dene",
+       "İlgi en yüksekken içerik üret."
+      ],
+      [
+       "Kendi açını bul",
+       "Yorum, tepki ya da karşılaştırma."
+      ],
+      [
+       "Canlı yayını izle",
+       "Hangi format tutuyor, not al."
+      ]
+     ],
+     "at": 0.4
+    }
+   ],
+   "kare": {
+    "x": 700,
+    "y": 1380,
+    "size": 300,
+    "face": "mutlu"
+   }
+  },
+  {
+   "theme": "dark",
+   "align": "bottom",
+   "duration": 4.5,
+   "transition": "wipe",
+   "elements": [
+    {
+     "type": "h2",
+     "text": "Sen GTA VI\n[[!oynayacak mısın?]]",
+     "size": 104,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Yorumlara yaz, oyun seven arkadaşına gönder.",
+     "at": 1.0
+    }
+   ],
+   "kare": {
+    "x": 300,
+    "y": 230,
+    "size": 520,
+    "face": "fikir"
+   }
+  }
+ ],
+ "stills": [
+  17.5
+ ]
+}
