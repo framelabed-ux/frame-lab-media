@@ -396,5 +396,21 @@
   }
  ],
  "scheduled": [],
- "pending_replies": []
+ "pending_replies": [],
+ "weekly_metrics": [
+  {
+   "week_end": "2026-11-14",
+   "range": "2026-11-08..2026-11-14",
+   "followers": 5,
+   "followers_prev": null,
+   "note": "İlk haftalık kayıt; 10 Kasım notunda 3 takipçi yazıyordu.",
+   "posts": 11,
+   "views": 2392,
+   "reach": 1973,
+   "reels_skip_rate_range": "61–85%",
+   "reels_avg_watch_s_range": "2.7–11.2",
+   "best": "18173187451461130 (Fable 5.2: erişim 1400, skip %61, 11,2 sn, 9 kaydetme, 6 paylaşım)",
+   "worst": "18139861054680639 (Claude Meetings: erişim 109, skip %85, 2,7 sn)"
+  }
+ ]
 }

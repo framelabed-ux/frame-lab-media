@@ -38,16 +38,14 @@
      "at": 1.3
     },
     {
-     "type": "lead",
-     "text": "Kendi Reel'imizde ölçtük",
-     "at": 0.0
-    },
-    {
      "type": "h1",
      "text": "Videonun kaderi\n{{ilk 3 saniyede}}\nbelli olur.",
-     "light": true,
-     "size": 118,
-     "at": 0.05
+     "size": 118
+    },
+    {
+     "type": "lead",
+     "text": "Kendi Reel'imizde ölçtük",
+     "at": 0.6
     }
    ],
    "nofoot": true
