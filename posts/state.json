@@ -255,7 +255,30 @@
    "status": "yayında (14 Kasım akşam görevi)"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-15-60-30-10",
+   "kind": "reel",
+   "publish_date": "2026-11-15",
+   "extra": true,
+   "title": "Kare Açıklıyor: 60-30-10 renk kuralı",
+   "layout": "classic",
+   "cover_type": "kare",
+   "topic_area": "tasarim",
+   "files": [
+    "posts/2026-11-15-60-30-10/reel.mp4"
+   ],
+   "cover": "posts/2026-11-15-60-30-10/cover.jpg",
+   "cover_tone": "light",
+   "music": "lofi",
+   "caption": "Aynı 3 renk, iki tasarım: biri dağınık, biri net. Fark renklerde değil, oranlarda.\n\nBunun adı 60-30-10 kuralı. İç mimarlıkta onlarca yıldır kullanılan pratik bir kural; ekran tasarımında da aynı mantık işliyor:\n\n• %60 ana renk: zemin, büyük alanlar\n• %30 ikinci renk: metin, görseller, kartlar\n• %10 vurgu: buton, tek kelime, ikon\n\nVurgu az yer kapladığı için öne çıkar. Her yeri vurgularsan göz nereye bakacağını bilemez.\n\nOdadaki karşılığı: duvarlar %60, perde ve döşeme %30, lamba ve yastıklar %10.\n\nOranlar kesin değil, bir başlangıç noktası. Ama dağınık görünen bir tasarımda ilk bakılacak yer burası.\n\nBizim paletimiz de bu mantıkla çalışıyor: krem ya da siyah zemin, karşıt renkte yazı, yeşil yalnızca vurguda.\n\nSon paylaşımında vurgu rengin ne kadar yer kaplıyor: %10 mu, daha fazlası mı? Yorumlara yaz. Kaydet, bir sonraki tasarımda lazım olur.\n\n#tasarım #grafiktasarım #renkpaleti #tasarımipuçları #sosyalmedya #içerikpazarlaması #uxtasarım",
+   "sources": [
+    "https://bobvila.com/articles/60-30-10-rule",
+    "https://uxplanet.org/the-60-30-10-rule-a-simple-way-to-creating-catchy-user-interfaces-e9e2cf957213"
+   ],
+   "note": "15 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,4 sn, outro dahil, seslendirmesiz). Kapak classic ailesi + büyük Kare, açık ton (önceki koyu), sütun döngüsünde sıra Kare'deydi. Son 3 kayıt ai/platform/psikoloji olduğu için tasarım alanı seçildi. Karşılaştırma görseli kendi çizimimiz (src/karsilastirma.png)."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -368,6 +391,19 @@
     "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled"
    ],
    "media_id": "17922183303526724"
+  },
+  {
+   "date": "2026-11-15",
+   "slug": "2026-11-15-story",
+   "file": "posts/2026-11-15-story/story.jpg",
+   "about": "Biliyor muydun: Microsoft 365 ~18 saat çöktü, internet 'Microsoft 364' dedi; ders: adındaki sayı bir vaattir + 'DM'den yaz' (bignum düzeni, koyu)",
+   "layout": "bignum",
+   "topic_area": "trend",
+   "sources": [
+    "https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/",
+    "https://knowyourmeme.com/memes/microsoft-364"
+   ],
+   "media_id": "18030220238699530"
   }
  ],
  "replied_comments": [
@@ -384,7 +420,9 @@
   "gemini-4-hydrogen",
   "von-restorff-etkisi",
   "takaratomy-rebrand",
-  "youtube-gta-vi-paketi"
+  "youtube-gta-vi-paketi",
+  "60-30-10-renk-kurali",
+  "microsoft-364"
  ],
  "hot_pending": [
   {
