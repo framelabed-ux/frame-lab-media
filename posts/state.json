@@ -253,9 +253,7 @@
    "media_id": "17913159696588712",
    "published_at": "2026-11-14T19:15+03:00",
    "status": "yayında (14 Kasım akşam görevi)"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-15-60-30-10",
    "kind": "reel",
@@ -276,9 +274,13 @@
     "https://bobvila.com/articles/60-30-10-rule",
     "https://uxplanet.org/the-60-30-10-rule-a-simple-way-to-creating-catchy-user-interfaces-e9e2cf957213"
    ],
-   "note": "15 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,4 sn, outro dahil, seslendirmesiz). Kapak classic ailesi + büyük Kare, açık ton (önceki koyu), sütun döngüsünde sıra Kare'deydi. Son 3 kayıt ai/platform/psikoloji olduğu için tasarım alanı seçildi. Karşılaştırma görseli kendi çizimimiz (src/karsilastirma.png)."
+   "note": "15 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,4 sn, outro dahil, seslendirmesiz). Kapak classic ailesi + büyük Kare, açık ton (önceki koyu), sütun döngüsünde sıra Kare'deydi. Son 3 kayıt ai/platform/psikoloji olduğu için tasarım alanı seçildi. Karşılaştırma görseli kendi çizimimiz (src/karsilastirma.png).",
+   "media_id": "17896261899438742",
+   "published_at": "2026-11-15T19:12+03:00",
+   "status": "yayında (15 Kasım akşam görevi)"
   }
  ],
+ "queue": [],
  "stories": [
   {
    "date": "2026-11-09",
