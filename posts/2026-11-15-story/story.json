@@ -1,0 +1,11 @@
+{
+ "theme": "dark",
+ "foot_right": "",
+ "elements": [
+  {"type": "tag", "text": "BİLİYOR MUYDUN?"},
+  {"type": "bignum", "text": "364", "size": 400, "label": "Microsoft 365'in [[yeni lakabı.]]"},
+  {"type": "lead", "text": "12 Kasım'da Outlook, Teams ve Copilot yaklaşık 18 saat çalışmadı. İnternet hemen bir gün eksik saydı."},
+  {"type": "card", "label": "DERS", "text": "Adındaki sayı bir vaattir. Vaat aksarsa internet sayıyı değiştirir.", "strong": true},
+  {"type": "lead", "text": "Sen de etkilendin mi? [[!DM'den yaz.]]"}
+ ]
+}

@@ -117,7 +117,7 @@ h2{{font-family:'Inter Display';font-weight:800;font-size:{76 if h<1500 else 88}
 .s.bg-glow{{background:radial-gradient(130% 85% at 50% 28%,{G[0]} 0%,{bg} 55%,{G[1]} 100%)}}
 .rings{{position:absolute;left:50%;top:{int(h*0.34)}px;z-index:0}} .rings i{{position:absolute;border:1.5px solid {G[2]};border-radius:50%;transform:translate(-50%,-50%)}}
 .top.logoc{{justify-content:center;position:relative}} .top.logoc .pn{{position:absolute;right:0;top:0}}
-.main.top{{justify-content:flex-start;padding-top:{56 if h<1500 else 40}px;gap:{30 if h<1500 else 40}px}}
+.main.top{{color:{fg};font-size:inherit;font-weight:inherit;letter-spacing:normal;justify-content:flex-start;padding-top:{56 if h<1500 else 40}px;gap:{30 if h<1500 else 40}px}}
 .pill.outl{{background:transparent;border:2px solid {fg};color:{fg};font-family:'Inter';font-weight:500;font-size:{28 if h<1500 else 34}px;padding:13px 30px}}
 .note{{position:absolute;z-index:4;filter:drop-shadow(0 16px 24px rgba(0,0,0,.38))}}
 .note>div{{background:#FFFFFF;color:#111114;padding:30px 34px 34px;font-size:{30 if h<1500 else 36}px;line-height:1.22;letter-spacing:-.02em;text-align:left}}

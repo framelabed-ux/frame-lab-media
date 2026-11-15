@@ -1,0 +1,181 @@
+{
+ "motion": true,
+ "music": {
+  "style": "lofi",
+  "seed": 1115
+ },
+ "stills": [
+  0.0,
+  3.0,
+  6.5,
+  8.5,
+  15.5,
+  22.5,
+  29.5
+ ],
+ "scenes": [
+  {
+   "theme": "light",
+   "align": "center top",
+   "duration": 5.6,
+   "nofoot": true,
+   "kare": {
+    "x": 770,
+    "y": 1470,
+    "size": 270,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "hero",
+     "src": "posts/2026-11-15-60-30-10/src/karsilastirma.png",
+     "x": 90,
+     "y": 760,
+     "w": 900,
+     "h": 620,
+     "at": 0.15
+    },
+    {
+     "type": "tag",
+     "text": "KARE AÇIKLIYOR",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Aynı 3 renk.\nBiri dağınık,\nbiri [[net.]]",
+     "size": 124
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "center",
+   "duration": 4.6,
+   "transition": "zoom",
+   "kare": {
+    "x": 690,
+    "y": 1380,
+    "size": 300,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "lead",
+     "text": "Farkı yapan tek kural:",
+     "at": 0.1
+    },
+    {
+     "type": "bignum",
+     "text": "60/30/10",
+     "size": 210,
+     "label": "renk [[oranı.]]",
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "duration": 7.8,
+   "transition": "stack",
+   "kare": {
+    "x": 760,
+    "y": 1440,
+    "size": 240,
+    "face": "goz"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "ORAN ŞÖYLE",
+     "at": 0.1
+    },
+    {
+     "type": "bars",
+     "items": [
+      [
+       "Ana renk · zemin",
+       60,
+       "%60"
+      ],
+      [
+       "İkinci renk · metin, görsel",
+       30,
+       "%30"
+      ],
+      [
+       "Vurgu · buton, tek kelime",
+       10,
+       "%10"
+      ]
+     ],
+     "accent": 2,
+     "color": "pink",
+     "at": 0.4
+    },
+    {
+     "type": "lead",
+     "text": "Vurgu az yer kaplar. Az olduğu için öne çıkar.",
+     "at": 2.4
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "duration": 6.6,
+   "transition": "slide",
+   "kare": {
+    "x": 80,
+    "y": 1400,
+    "size": 320,
+    "face": "dusunen"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "NEREDEN GELİYOR?",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "İç mimarlıktan\n[[ödünç]] bir kural.",
+     "size": 104,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Duvarlar %60, perde ve döşeme %30, lamba ve yastıklar %10. Ekranda da aynı mantık işler.",
+     "at": 1.4
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "duration": 6.6,
+   "transition": "up",
+   "kare": {
+    "x": 700,
+    "y": 1380,
+    "size": 330,
+    "face": "mutlu"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "DENE",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Vurgu %10'u geçerse\n[[!vurgu olmaz.]]",
+     "size": 100,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Son tasarımını aç. Vurgu rengin ne kadar yer kaplıyor? Yorumlara yaz.",
+     "at": 1.6
+    }
+   ]
+  }
+ ]
+}

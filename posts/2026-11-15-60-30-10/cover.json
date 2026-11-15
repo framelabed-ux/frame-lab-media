@@ -1,0 +1,11 @@
+{
+ "theme": "light",
+ "align": "center",
+ "foot_right": "",
+ "nofoot": true,
+ "elements": [
+  {"type": "kare", "face": "saskin", "size": 840},
+  {"type": "tag", "text": "KARE AÇIKLIYOR"},
+  {"type": "h1", "text": "Renkler neden\n[[dağınık?]]", "size": 140}
+ ]
+}

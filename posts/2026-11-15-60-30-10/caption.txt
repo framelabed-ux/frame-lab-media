@@ -1,0 +1,19 @@
+Aynı 3 renk, iki tasarım: biri dağınık, biri net. Fark renklerde değil, oranlarda.
+
+Bunun adı 60-30-10 kuralı. İç mimarlıkta onlarca yıldır kullanılan pratik bir kural; ekran tasarımında da aynı mantık işliyor:
+
+• %60 ana renk: zemin, büyük alanlar
+• %30 ikinci renk: metin, görseller, kartlar
+• %10 vurgu: buton, tek kelime, ikon
+
+Vurgu az yer kapladığı için öne çıkar. Her yeri vurgularsan göz nereye bakacağını bilemez.
+
+Odadaki karşılığı: duvarlar %60, perde ve döşeme %30, lamba ve yastıklar %10.
+
+Oranlar kesin değil, bir başlangıç noktası. Ama dağınık görünen bir tasarımda ilk bakılacak yer burası.
+
+Bizim paletimiz de bu mantıkla çalışıyor: krem ya da siyah zemin, karşıt renkte yazı, yeşil yalnızca vurguda.
+
+Son paylaşımında vurgu rengin ne kadar yer kaplıyor: %10 mu, daha fazlası mı? Yorumlara yaz. Kaydet, bir sonraki tasarımda lazım olur.
+
+#tasarım #grafiktasarım #renkpaleti #tasarımipuçları #sosyalmedya #içerikpazarlaması #uxtasarım
