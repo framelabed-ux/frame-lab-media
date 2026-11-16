@@ -278,9 +278,7 @@
    "media_id": "17896261899438742",
    "published_at": "2026-11-15T19:12+03:00",
    "status": "yayında (15 Kasım akşam görevi)"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-16-edits-hiz-egrisi",
    "kind": "reel",
@@ -300,9 +298,13 @@
     "https://www.socialmediatoday.com/news/metas-edits-app-gets-speed-curves-and-auto-audio-balancing/874586/",
     "https://www.techjuice.pk/instagram-edits-speed-curves-audio-balancing/"
    ],
-   "note": "16 Kasım sabah görevi: hot_pending'deki büyük gelişme (içerik üreticilerini doğrudan etkileyen Edits özelliği) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,0 sn (outro dahil), seslendirmesiz. Kapak: kendi çizdiğimiz hız eğrisi grafiği (src/egri-koyu.png) + başlık, koyu ton, görsel türü. Hazır eğri adları doğrulanamadığı için yazılmadı; bölge/tarih bilgisi yok (caption'da belirtildi)."
+   "note": "16 Kasım sabah görevi: hot_pending'deki büyük gelişme (içerik üreticilerini doğrudan etkileyen Edits özelliği) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,0 sn (outro dahil), seslendirmesiz. Kapak: kendi çizdiğimiz hız eğrisi grafiği (src/egri-koyu.png) + başlık, koyu ton, görsel türü. Hazır eğri adları doğrulanamadığı için yazılmadı; bölge/tarih bilgisi yok (caption'da belirtildi).",
+   "media_id": "17966520864228296",
+   "published_at": "2026-11-16T19:20+03:00",
+   "status": "yayında (16 Kasım akşam görevi; raw video adresi 'could not process' verdi, GitHub Pages adresiyle yayınlandı)"
   }
  ],
+ "queue": [],
  "stories": [
   {
    "date": "2026-11-09",
