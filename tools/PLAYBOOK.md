@@ -102,23 +102,23 @@ Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince
 - Reel kapağı `cover_url` ile ayrıca verilir. Kapak 1080x1920 olur, ama ızgarada ortadaki 3:4 alan görünür. Önemli metin dikeyde 300–1600 piksel arasında kalmalı.
 - Carousel içinde kareler açık ve koyu sırayla gider, böylece kaydırırken ritim oluşur.
 
-## Format sırası (feed, her hafta içi günü 1 gönderi, saat 19:30 civarı)
-Format haftanın gününe bağlı değil, sırayla döner. **10 Kasım'dan itibaren Reel ağırlıklı (Ece onayladı):** **Reel → Reel → carousel ya da statik → Reel → Reel → carousel ya da statik …**
-- Neden: Hesap küçükken carousel'ler 2–4 kişiye, Reel'ler takip etmeyenlere ulaşıyor (Fable 5.2 Reel'i 3 takipçiyle 1.140 hesaba ulaştı, 9 kaydetme aldı). Takipçi sayısı birkaç yüze çıkınca bu oranı yeniden değerlendirip Ece'ye sor.
-- Bugünün formatı: `grid` listesinin son iki öğesine bak. Son iki öğe Reel ise carousel ya da statik yap (bir önceki carousel ise statik, statik ise carousel). Aksi hâlde Reel yap.
-- Büyük gündem gelişmesi her zaman Reel olur. O gün carousel/statik sırasıysa bile Reel yapılabilir, carousel/statik ertesi güne kayar.
-- **İlk ay sayıyı artırıyoruz (Ece 10 Kasım'da onayladı, ~10 Aralık'a kadar; sonra verilere bakıp Ece'ye sor):**
-  - Hafta sonu da her gün 1 Reel paylaşılır: gündemden bağımsız "Kare Açıklıyor" serisi (bir yapay zekâ, tasarım ya da sosyal medya kavramı, 20–35 saniye). Sabah görevi üretir, akşam görevi yayınlar.
-  - Büyük, doğrulanmış bir gündem gelişmesi olursa öğle görevi aynı gün ek bir Reel üretip hemen yayınlar. Akşamki planlı gönderi yine çıkar.
-  - Hafta sonu Reel'leri ve öğle ek Reel'leri grid kaydında `"extra": true` ile işaretlenir ve hafta içi format sırası hesaplanırken atlanır. Izgaradaki açık/koyu kapak sırasına ise dahildir.
-  - Günde ikiden fazla feed gönderisi yok. Story günde 1 kalır.
+## Format sırası: sabah statik, akşam Reel (Ece, 16 Kasım; 17 Kasım'dan itibaren her gün, hafta sonu dahil)
+Ece: "Sabahları statik post, akşamları video paylaş." Her gün **2 feed gönderisi** çıkar:
+- **Sabah (~09:00–09:30): statik gönderi.** Sabah görevi üretir, kalite kontrolünden geçirir ve **hemen kendisi yayınlar** (`create_image_post`). Kuyruğa girmez, doğrudan `grid`'e yazılır.
+- **Akşam (19:10): Reel.** Sabah görevi üretip kuyruğa koyar, akşam görevi yayınlar. Hafta sonu Reel'leri "Kare Açıklıyor" serisinden olur.
+- Carousel şimdilik rotasyonda yok. Çok iyi bir carousel fikri çıkarsa sabah statiğinin yerine kullanmak için Ece'ye sor.
+- Aynı günün statiği ve Reel'i **farklı konu alanlarından** olur (bkz. Konu dengesi). Yapay zekâ yine en fazla 3 gönderide 1.
+- Kapak tonu: sabah statiği `grid`'in son kaydının tersi, akşam Reel kapağı sabah statiğinin tersi (açık/koyu dama düzeni sürer). Izgara sütun döngüsü (`cover_type`) iki gönderide de devam eder.
+- **Büyük gündem gelişmesi:** Sabah fark edilirse o günün akşam Reel'i bu konuda olur (planlanan Reel ertesi güne kayar). Öğle görevi fark ederse **üçüncü gönderi açmaz**: o konuda Reel üretir ve bugünün kuyruktaki akşam Reel'inin yerine koyar; yerinden çıkan Reel'in `publish_date`'i ertesi gün olur ve ertesi sabah yeni Reel üretilmez. Akşam Reel'i zaten büyük bir gelişme hakkındaysa dokunulmaz, yeni konu `hot_pending`'e yazılır.
+- Günde ikiden fazla feed gönderisi yok. Story günde 1 kalır (sabah görevi, statik gönderiden farklı bir düzen ve tercihen farklı konu).
+- Eski `"extra": true` işareti artık kullanılmaz (geçmiş kayıtlarda kalabilir).
 
 Formata göre seriler:
 | Format | Seriler |
 | --- | --- |
 | Reel | Sıcak Gelişme (gündemde büyük bir şey varsa), Kare Açıklıyor (bir kavramı 30–40 saniyede anlatır) |
 | Carousel | Bu Hafta Dijitalde (haftanın ilk carousel'i, haftanın en önemli 3–4 gelişmesi), 1 Prompt 3 Sonuç (karşılaştırma), Mutfaktan (sosyal medya taktikleri), Kare'den Haberler (numaralı seri: 1–3 doğrulanmış gelişme, her biri için ne oldu, nasıl çalışır, sana ne faydası var; Ece 10 Kasım'da başlattı) |
-| Statik (tek görsel) | Günün Prompt'u (kopyalanacak hazır prompt), Tasarım Kuralı (tek kural, tek örnek) |
+| Statik (tek görsel, her sabah) | Günün Prompt'u (kopyalanacak hazır prompt), Tasarım Kuralı (tek kural, tek örnek), Bunu Bilmen Lazım (gündemden tek kare), Marka Önce/Sonra (logo ya da kimlik değişimi, görsel kural ve telif sınırları geçerli), Tek Rakam (doğrulanmış tek bir veri), Mini Test ("hangisi daha okunaklı?" gibi yoruma davet eden soru) |
 
 **Konu alanları genişletildi (Ece, 13 Kasım: "içerik skalasını da genişletelim").** Gündem dışındaki içerikler yalnızca yapay zekâ/tasarım/sosyal medya ipuçlarıyla sınırlı değil; şu alanlar sırayla dönsün, aynı alan art arda iki kez gelmesin:
 - **Marka ve reklam:** yeni logo/kimlik değişimleri, dikkat çeken kampanyalar, "bu reklam neden çalıştı" (Reklam Lab kuralları geçerli).
