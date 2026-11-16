@@ -1,0 +1,25 @@
+{
+ "theme": "dark",
+ "align": "center bottom",
+ "foot_right": "",
+ "nofoot": true,
+ "elements": [
+  {
+   "type": "tag",
+   "text": "SICAK GELİŞME"
+  },
+  {
+   "type": "h1",
+   "text": "Edits'e hız\neğrisi [[geldi.]]",
+   "size": 132
+  },
+  {
+   "type": "hero",
+   "src": "posts/2026-11-16-edits-hiz-egrisi/src/egri-koyu.png",
+   "x": 40,
+   "y": 330,
+   "w": 1000,
+   "h": 640
+  }
+ ]
+}

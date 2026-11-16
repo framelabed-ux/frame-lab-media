@@ -1,0 +1,208 @@
+{
+ "motion": true,
+ "music": {
+  "style": "house",
+  "seed": 1116
+ },
+ "stills": [
+  0.0,
+  2.5,
+  8.0,
+  14.0,
+  16.5,
+  24.0,
+  29.0
+ ],
+ "scenes": [
+  {
+   "theme": "dark",
+   "align": "center top",
+   "duration": 5.2,
+   "nofoot": true,
+   "kare": {
+    "x": 800,
+    "y": 1600,
+    "size": 200,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "SICAK GELİŞME",
+     "at": 0.0
+    },
+    {
+     "type": "h1",
+     "text": "Edits'e\nhız eğrisi\n[[geldi.]]",
+     "size": 150
+    },
+    {
+     "type": "lead",
+     "text": "Tek klipte hem hızlanma hem ağır çekim.",
+     "at": 0.6
+    },
+    {
+     "type": "hero",
+     "src": "posts/2026-11-16-edits-hiz-egrisi/src/egri-koyu.png",
+     "x": 40,
+     "y": 1010,
+     "w": 1000,
+     "h": 640,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "duration": 6.2,
+   "transition": "stack",
+   "kare": {
+    "x": 720,
+    "y": 1430,
+    "size": 300,
+    "face": "goz"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "NE İŞE YARAR?",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Klip bir yerde hızlanır,\nbir yerde [[yavaşlar.]]",
+     "size": 92,
+     "at": 0.3
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "SABİT HIZ",
+      "text": "Her saniye\naynı tempoda."
+     },
+     "right": {
+      "label": "HIZ EĞRİSİ",
+      "text": "Sıkıcı kısım hızlı,\nen iyi an yavaş."
+     },
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "duration": 7.4,
+   "transition": "slide",
+   "kare": {
+    "x": 790,
+    "y": 250,
+    "size": 220,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "DENE: 3 ADIMLIK FORMÜL",
+     "at": 0.1
+    },
+    {
+     "type": "steps",
+     "items": [
+      [
+       "Hızlı gir.",
+       "Girişi kısalt, tempoyu kur."
+      ],
+      [
+       "En iyi anda yavaşla.",
+       "Zıplama, dönüş, ürünün göründüğü an."
+      ],
+      [
+       "Hızlı çık.",
+       "Bir sonraki sahneye enerjiyle geç."
+      ]
+     ],
+     "at": 0.4
+    },
+    {
+     "type": "hero",
+     "src": "posts/2026-11-16-edits-hiz-egrisi/src/egri-koyu.png",
+     "x": 90,
+     "y": 1180,
+     "w": 900,
+     "h": 576,
+     "at": 1.2
+    }
+   ],
+   "nofoot": true
+  },
+  {
+   "theme": "soft",
+   "duration": 8.2,
+   "transition": "up",
+   "kare": {
+    "x": 80,
+    "y": 1450,
+    "size": 260,
+    "face": "mutlu"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "GÜNCELLEMENİN TAMAMI",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "4 yeni [[ayar.]]",
+     "at": 0.3
+    },
+    {
+     "type": "tiles",
+     "items": [
+      [
+       "Hız",
+       "Hazır eğri seç ya da kendin çiz."
+      ],
+      [
+       "Ses",
+       "Müzik ve konuşma otomatik dengelenir."
+      ],
+      [
+       "Yazı",
+       "Animasyon hızı ve ekranda kalma süresi."
+      ],
+      [
+       "İlham",
+       "Hangi konuları daha çok göreceğini seç."
+      ]
+     ],
+     "at": 1.0
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "bottom",
+   "duration": 4.8,
+   "transition": "zoom",
+   "kare": {
+    "x": 250,
+    "y": 260,
+    "size": 560,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "h2",
+     "text": "Hangisini ilk\n[[denersin?]]",
+     "size": 112,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Yorumlara yaz. Video kurgulayan bir arkadaşına gönder.",
+     "at": 1.0
+    }
+   ]
+  }
+ ]
+}

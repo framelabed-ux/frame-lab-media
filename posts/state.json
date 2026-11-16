@@ -280,7 +280,29 @@
    "status": "yayında (15 Kasım akşam görevi)"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-16-edits-hiz-egrisi",
+   "kind": "reel",
+   "publish_date": "2026-11-16",
+   "title": "Edits'e hız eğrisi geldi (hız eğrisi, otomatik ses dengeleme, yazı animasyonu, İlham sekmesi) + 3 adımlık hız eğrisi formülü",
+   "layout": "editorial",
+   "cover_type": "gorsel",
+   "topic_area": "platform",
+   "files": [
+    "posts/2026-11-16-edits-hiz-egrisi/reel.mp4"
+   ],
+   "cover": "posts/2026-11-16-edits-hiz-egrisi/cover.jpg",
+   "cover_tone": "dark",
+   "music": "house",
+   "caption": "Tek klipte hem hızlanma hem ağır çekim: Edits'e hız eğrisi geldi.\n\nMeta 12 Kasım'da Instagram'ın video düzenleme uygulaması Edits için yeni bir güncelleme duyurdu:\n\n• Hız eğrisi: Klibin hızını tek bir sabit değerle değil, an an ayarlıyorsun. Hazır eğrilerden birini seçebilir ya da kendi eğrini çizebilirsin.\n• Otomatik ses dengeleme: Müzik, seslendirme ve ortam sesinin seviyesi otomatik dengeleniyor.\n• Yazı animasyonu ayarı: Yazının ekranda ne kadar kalacağını, ne hızla girip çıkacağını ve animasyonun döngü hızını sen belirliyorsun.\n• İlham sekmesi: Hangi konulardan daha çok, hangilerinden daha az örnek göreceğini seçebiliyorsun.\n\nHız eğrisini nasıl kullanmalı? 3 adımlık formül:\n1. Hızlı gir: Girişi kısalt, tempoyu kur.\n2. En iyi anda yavaşla: Zıplama, dönüş, ürünün göründüğü an.\n3. Hızlı çık: Bir sonraki sahneye enerjiyle geç.\n\nNot: Meta, özelliklerin hangi ülkelerde ve ne zaman açılacağını belirtmedi. Henüz görmüyorsan uygulamayı güncelle ve birkaç gün sonra tekrar bak.\n\nHangisini ilk denersin? Yorumlara yaz, video kurgulayan bir arkadaşına da gönder.\n\n#instagram #edits #reels #videokurgu #içeriküreticisi #sosyalmedya #dijitalgündem",
+   "sources": [
+    "https://www.socialmediatoday.com/news/metas-edits-app-gets-speed-curves-and-auto-audio-balancing/874586/",
+    "https://www.techjuice.pk/instagram-edits-speed-curves-audio-balancing/"
+   ],
+   "note": "16 Kasım sabah görevi: hot_pending'deki büyük gelişme (içerik üreticilerini doğrudan etkileyen Edits özelliği) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,0 sn (outro dahil), seslendirmesiz. Kapak: kendi çizdiğimiz hız eğrisi grafiği (src/egri-koyu.png) + başlık, koyu ton, görsel türü. Hazır eğri adları doğrulanamadığı için yazılmadı; bölge/tarih bilgisi yok (caption'da belirtildi)."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -424,19 +446,10 @@
   "takaratomy-rebrand",
   "youtube-gta-vi-paketi",
   "60-30-10-renk-kurali",
-  "microsoft-364"
+  "microsoft-364",
+  "edits-speed-curves"
  ],
- "hot_pending": [
-  {
-   "key": "edits-speed-curves",
-   "found": "2026-11-14",
-   "big": true,
-   "note": "Instagram Edits uygulamasına hız eğrileri, otomatik ses dengeleme, Inspiration sekmesinde konu tercihi ve metin animasyonu ayarları geldi (@creators Threads, 12 Kasım). Bölge/tarih bilgisi yok; pratik 'nasıl kullanılır' içeriği olarak uygun.",
-   "sources": [
-    "https://www.socialmediatoday.com/news/edits-app-gets-speed-curves-and-auto-audio-balancing/874586/"
-   ]
-  }
- ],
+ "hot_pending": [],
  "scheduled": [],
  "pending_replies": [
   {

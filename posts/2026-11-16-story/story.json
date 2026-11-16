@@ -1,0 +1,12 @@
+{
+ "theme": "light",
+ "align": "center",
+ "foot_right": "",
+ "elements": [
+  {"type": "tag", "text": "BİLİYOR MUYDUN?"},
+  {"type": "quote", "text": "Bu, 2026'dan bir\nkasım memesi.\n[[Henüz anlamazsınız.]]"},
+  {"type": "lead", "text": "2023'te TikTok'ta yapay zekâyla üretilmiş gibi duran bir kutup ayısı görseli bu Rusça yazıyla yayıldı. Ağustos 2026'da akım geri döndü. Şimdi Kasım 2026."},
+  {"type": "card", "label": "DERS", "text": "Merak boşluğu bırakan tek bir cümle, bir görseli yıllarca konuşturdu.", "strong": true},
+  {"type": "lead", "text": "Sence bu ay ne olacak? [[!DM'den yaz.]]"}
+ ]
+}
