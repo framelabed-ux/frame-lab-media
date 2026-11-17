@@ -104,7 +104,11 @@ Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince
 
 ## Format sırası: sabah statik, akşam Reel (Ece, 16 Kasım; 17 Kasım'dan itibaren her gün, hafta sonu dahil)
 Ece: "Sabahları statik post, akşamları video paylaş." Her gün **2 feed gönderisi** çıkar:
-- **Sabah (~09:00–09:30): statik gönderi.** Sabah görevi üretir, kalite kontrolünden geçirir ve **hemen kendisi yayınlar** (`create_image_post`). Kuyruğa girmez, doğrudan `grid`'e yazılır.
+- **Sabah (~09:00–09:30): hareketli kare (Ece, 17 Kasım onayladı).** Statik gönderi tasarımı, 7–10 saniyelik tek sahnelik, müzikli bir Reel olarak yayınlanır. Neden: 5 takipçiyle gerçek statikler 2–7 kişiye ulaştı; Reel'ler takip etmeyenlere de gösteriliyor. Profilde yine tek kare gibi durur. Takipçi birkaç yüze çıkınca gerçek statiğe dönmeyi Ece'ye sor.
+  - Nasıl: `tools/examples/kare-reel.json` kalıbı. Tek sahne, `"outro": false`, `"progress": false`, 7–10 sn. Ana başlık ya da rakam `at` almaz, 0. karede tam görünür; yalnızca ikincil satırlar 1–2. saniyede girer. İçerik ortadaki 3:4 alanda kalır. Müzik stili akşam Reel'inden farklı.
+  - Kapak: aynı sahnenin son hali, `render.py story` ile `"nofoot": true`.
+  - Yayın: sabah görevi kalite kontrolünden sonra **hemen kendisi yayınlar** (`create_video_post`, `share_to_feed: true`). Kuyruğa girmez, doğrudan `grid`'e `kind: "kare-reel"` ile yazılır.
+  - Statik seriler (aşağıdaki tablo) bu gönderide kullanılır. Format sırası hesaplarında `kare-reel` statik sayılır.
 - **Akşam (19:10): Reel.** Sabah görevi üretip kuyruğa koyar, akşam görevi yayınlar. Hafta sonu Reel'leri "Kare Açıklıyor" serisinden olur.
 - Carousel şimdilik rotasyonda yok. Çok iyi bir carousel fikri çıkarsa sabah statiğinin yerine kullanmak için Ece'ye sor.
 - Aynı günün statiği ve Reel'i **farklı konu alanlarından** olur (bkz. Konu dengesi). Yapay zekâ yine en fazla 3 gönderide 1.

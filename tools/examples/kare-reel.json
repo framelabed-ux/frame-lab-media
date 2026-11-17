@@ -1,0 +1,39 @@
+{
+ "_not": "Sabah 'hareketli kare' Reel'i: tek sahne, 7–10 sn, ilerleme çubuğu ve outro yok. İçerik ortadaki 3:4 alanda kalır; profil ızgarasında statik gibi görünür. Kapak (cover.json) aynı sahnenin animasyonsuz hali, story komutuyla ve nofoot ile. Ana başlık/rakam 'at' almaz: 0. karede tam görünür (ilk kare kanca kuralı). Yalnızca ikincil satırlar sonradan girer.",
+ "outro": false,
+ "progress": false,
+ "stills": [
+  0.05,
+  2.5,
+  7.5
+ ],
+ "music": {
+  "style": "minimal",
+  "seed": 17
+ },
+ "scenes": [
+  {
+   "theme": "light",
+   "align": "center",
+   "duration": 8.0,
+   "kare": null,
+   "elements": [
+    {
+     "type": "tag",
+     "text": "TASARIM KURALI"
+    },
+    {
+     "type": "bignum",
+     "text": "66",
+     "size": 680,
+     "label": "karakter: ideal\n[[!satır uzunluğu.]]"
+    },
+    {
+     "type": "lead",
+     "text": "Rahat aralık 45–75 karakter.\nBoşluklar da sayılır.",
+     "at": 1.0
+    }
+   ]
+  }
+ ]
+}
