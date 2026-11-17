@@ -321,11 +321,34 @@
     "https://baymard.com/blog/line-length-readability"
    ],
    "media_id": "18129678413489983",
-   "published_at": "2026-11-17T08:58+03:00",
+   "published_at": "2026-11-17T08:50+03:00",
    "status": "yayında (17 Kasım sabah görevi)"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-17-linkedin-ai-yorumlar",
+   "kind": "reel",
+   "publish_date": "2026-11-17",
+   "title": "LinkedIn yapay zekâ yorumlarını alta itiyor (sıralama, bildirim, silme yok; testte %20+ düşüş) + görünen yorum için 3 kural",
+   "layout": "classic",
+   "cover_type": "kare",
+   "topic_area": "platform",
+   "files": [
+    "posts/2026-11-17-linkedin-ai-yorumlar/reel.mp4"
+   ],
+   "cover": "posts/2026-11-17-linkedin-ai-yorumlar/cover.jpg",
+   "cover_tone": "dark",
+   "music": "minimal",
+   "caption": "\"Harika paylaşım, çok değerli bilgiler!\" Bu tarz kalıp yorumlar yapay zekâ kokuyor. LinkedIn de yapay zekâ yorumlarını daha az gösterecek.\n\nLinkedIn'in baş ürün sorumlusu Hari Srinivasan, yorumlar için tespit sistemini ve sınıflandırıcıları güncellediklerini açıkladı:\n\n• Sıralama: Yeni sınıflandırıcılar yorumun gönderiyle ne kadar alakalı olduğuna bakıyor. Yapay zekâyla yazıldığından şüphelenilen yorumlar varsayılan \"en alakalı\" görünümde alta iniyor.\n• Bildirim: İçerik üreticilerine yalnızca \"ilgileneceğin kaliteli yorumlar\" bildiriliyor.\n• Silme yok: Yorumlar kaldırılmıyor, sadece daha az kişi görüyor.\n\nTestte bu tür yorumların görüntülenmesi %20'den fazla düştü. LinkedIn değişikliği yakında herkese açacağını söyledi.\n\nNeden şimdi? Kullanıcılar akışın yapay zekâ içeriğiyle dolduğundan şikâyet ediyordu. LinkedIn'in bu yaz eklediği \"yapay zekâ içeriği\" bildirme seçeneğini ilk 3 haftada 1 milyondan fazla kişi kullandı.\n\nGörünen bir yorum için 3 kural:\n1. Gönderiden bir ayrıntı yakala.\n2. Kendi deneyimini ekle.\n3. Gerçek bir soru sor.\n\nYorumunu yapay zekâya yazdırır mısın? Yorumlara yaz, LinkedIn kullanan bir arkadaşına da gönder.\n\n#linkedin #sosyalmedya #yapayzeka #kişiselmarka #içeriküreticisi #dijitalgündem #kariyer",
+   "sources": [
+    "https://www.socialmediatoday.com/news/linkedin-cracks-down-on-ai-generated-comments/874707/",
+    "https://dataconomy.com/2026/11/16/linkedin-cuts-visibility-of-ai-generated-comments/",
+    "https://fortune.com/2026/07/31/linkedin-seems-like-ai-slop-button-billions-automated-comments-attempts/"
+   ],
+   "note": "17 Kasım sabah görevi: hafta içi Sıcak Gelişme Reel'i (33,7 sn, outro dahil, seslendirmesiz). Sabah statiği tasarım (açık, tipografi, bignum) olduğu için Reel platform alanından; kapak koyu, Kare türü, classic düzen. 'Genel geçer/özgün' yorum örnekleri ve 3 kural bizim önerimiz, LinkedIn'in açıklaması değil (Reel'de ve caption'da böyle çerçevelendi)."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -484,7 +507,8 @@
   "60-30-10-renk-kurali",
   "microsoft-364",
   "edits-speed-curves",
-  "satir-uzunlugu-66-karakter"
+  "satir-uzunlugu-66-karakter",
+  "linkedin-ai-yorumlari"
  ],
  "hot_pending": [],
  "scheduled": [],

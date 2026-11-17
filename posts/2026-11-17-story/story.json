@@ -1,0 +1,38 @@
+{
+ "theme": "light",
+ "align": "",
+ "foot_right": "",
+ "elements": [
+  {
+   "type": "tag",
+   "text": "BİLİYOR MUYDUN?"
+  },
+  {
+   "type": "h2",
+   "text": "Reel'e [[30 ürün]]\nlinki eklenebiliyor.",
+   "size": 96
+  },
+  {
+   "type": "lead",
+   "text": "Instagram, Amazon ortaklık linklerini Reel ve gönderilere getirdi. Şimdilik ABD'de. Instagram'a göre içerikteki ürün linki, biyodakinden [[!yaklaşık 2 kat]] fazla tıklanıyor."
+  },
+  {
+   "type": "lead",
+   "text": "**Sen linkini nereye koyuyorsun?\nDM'den yaz.**"
+  },
+  {
+   "type": "phone",
+   "center": true,
+   "rot": -4,
+   "bottom": -500,
+   "title": "Ürün ekle",
+   "blocks": [
+    "Reel: en fazla 30 ürün",
+    "Gönderi: en fazla 20 ürün",
+    "Tahmini komisyon oranı görünür",
+    "Instagram kesinti almaz"
+   ],
+   "accent": 3
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "motion": true,
+ "music": {
+  "style": "minimal",
+  "seed": 1117
+ },
+ "stills": [
+  0.0,
+  3.6,
+  5.3,
+  11.0,
+  15.0,
+  19.5,
+  24.0,
+  28.5
+ ],
+ "scenes": [
+  {
+   "theme": "dark",
+   "align": "center top",
+   "duration": 5.0,
+   "nofoot": true,
+   "kare": {
+    "x": 330,
+    "y": 1080,
+    "size": 440,
+    "face": "saskin"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "SICAK GELİŞME"
+    },
+    {
+     "type": "h1",
+     "text": "LinkedIn,\nyapay zekâ\nyorumlarını\n[[alta itiyor.]]",
+     "size": 140
+    },
+    {
+     "type": "lead",
+     "text": "Testte bu yorumların görüntülenmesi [[!%20'den fazla]] düştü.",
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "theme": "light",
+   "duration": 8.0,
+   "transition": "stack",
+   "kare": {
+    "x": 780,
+    "y": 250,
+    "size": 200,
+    "face": "goz"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "NE DEĞİŞİYOR?",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "Yorum silinmiyor,\n[[daha az görünüyor.]]",
+     "size": 84,
+     "at": 0.3
+    },
+    {
+     "type": "card",
+     "label": "SIRALAMA",
+     "text": "Varsayılan \"en alakalı\" görünümde alta iner.",
+     "strong": true,
+     "at": 1.5
+    },
+    {
+     "type": "card",
+     "label": "BİLDİRİM",
+     "text": "Üreticiye yalnızca kaliteli yorumlar bildirilir.",
+     "strong": true,
+     "at": 2.3
+    },
+    {
+     "type": "card",
+     "label": "SİLME",
+     "text": "Yok. Yorum durur, daha az kişi görür.",
+     "strong": true,
+     "at": 3.1
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "duration": 7.5,
+   "transition": "slide",
+   "kare": {
+    "x": 90,
+    "y": 1500,
+    "size": 240,
+    "face": "dusunen"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "HANGİ YORUM ÖNE ÇIKAR?",
+     "at": 0.1
+    },
+    {
+     "type": "h2",
+     "text": "LinkedIn yorumun\n[[alakasına]] bakıyor.",
+     "size": 84,
+     "at": 0.3
+    },
+    {
+     "type": "compare",
+     "left": {
+      "label": "GENEL GEÇER",
+      "text": "Harika paylaşım!\nÇok değerli\nbilgiler."
+     },
+     "right": {
+      "label": "ÖZGÜN",
+      "text": "İkinci adımı denedim,\nişe yaradı. Üçüncüyü\nnasıl ölçtünüz?"
+     },
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "theme": "soft",
+   "duration": 5.5,
+   "transition": "up",
+   "kare": {
+    "x": 720,
+    "y": 1450,
+    "size": 300,
+    "face": "fikir"
+   },
+   "elements": [
+    {
+     "type": "tag",
+     "text": "GÖRÜNEN YORUM: 3 KURAL",
+     "at": 0.1
+    },
+    {
+     "type": "steps",
+     "items": [
+      [
+       "Gönderiden bir ayrıntı yakala.",
+       ""
+      ],
+      [
+       "Kendi deneyimini ekle.",
+       ""
+      ],
+      [
+       "Gerçek bir soru sor.",
+       ""
+      ]
+     ],
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "theme": "dark",
+   "align": "bottom",
+   "duration": 4.5,
+   "transition": "zoom",
+   "kare": {
+    "x": 270,
+    "y": 280,
+    "size": 540,
+    "face": "mutlu"
+   },
+   "elements": [
+    {
+     "type": "h2",
+     "text": "Yorumunu\nyapay zekâya\n[[yazdırır mısın?]]",
+     "size": 110,
+     "at": 0.3
+    },
+    {
+     "type": "lead",
+     "text": "Yorumlara yaz. LinkedIn kullanan bir arkadaşına gönder.",
+     "at": 1.0
+    }
+   ]
+  }
+ ]
+}

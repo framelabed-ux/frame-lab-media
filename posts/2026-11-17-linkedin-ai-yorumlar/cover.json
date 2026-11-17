@@ -1,0 +1,11 @@
+{
+ "theme": "dark",
+ "align": "center",
+ "foot_right": "",
+ "nofoot": true,
+ "elements": [
+  {"type": "tag", "text": "SICAK GELİŞME"},
+  {"type": "h1", "text": "Yorumun yapay\nzekâ mı [[kokuyor?]]", "size": 124},
+  {"type": "kare", "face": "dusunen", "size": 760}
+ ]
+}
