@@ -435,7 +435,8 @@ window.render=function(t){
   const ty=sw>0?X[i+1]:'';
   // sahneler: yalnızca etkin olan(lar) görünür
   F.forEach(f=>{f.style.visibility='hidden'});
-  const cam=1+0.03*clamp(local/S[i].dur);  // sahne boyunca çok hafif yaklaşma
+  let cam=1+S[i].cam*eio(local/S[i].dur);  // sahne boyunca yaklaşma ("cam": miktar)
+  (S[i].beats||[]).forEach(b=>{const d=local-b; if(d>=0&&d<0.45){cam+=0.035*Math.sin(Math.PI*Math.min(1,d/0.45))*(1-d/0.45*0.5);}});  // vuruşta küçük "punch"
   let A={s:cam,z:1}, B=null;
   if(sw>0){
     if(ty=='up'){A.y=-1920*sw;B={y:1920*(1-sw),z:2};}
@@ -491,7 +492,8 @@ def reel_motion(spec, out, voice=None):
             {"type": "lead", "text": "@frame.labo", "at": 2.3}]})
     t0 = 0.0; S = []; panels = ""; ev = []
     for i, s_ in enumerate(sc):
-        S.append({"start": round(t0, 3), "dur": s_["duration"]})
+        S.append({"start": round(t0, 3), "dur": s_["duration"], "cam": s_.get("cam", 0.03), "beats": s_.get("beats", [])})
+        for b_ in s_.get("beats", []): ev.append([round(t0 + b_, 3), "pop"])
         htm = page(s_["theme"], s_["elements"], 1080, 1920, align=s_.get("align",""), pattern=s_.get("pattern",""), frame=s_.get("frame",False), bg=s_.get("bg",""), logo=s_.get("logo",""))
         if s_.get("nofoot"):
             import re as _re; htm = _re.sub(r'<div class="foot">.*?</div>', '', htm, count=1)

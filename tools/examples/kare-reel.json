@@ -1,22 +1,24 @@
 {
- "_not": "Sabah 'hareketli kare' Reel'i: tek sahne, 7–10 sn, ilerleme çubuğu ve outro yok. İçerik ortadaki 3:4 alanda kalır; profil ızgarasında statik gibi görünür. Kapak (cover.json) aynı sahnenin animasyonsuz hali, story komutuyla ve nofoot ile. Ana başlık/rakam 'at' almaz: 0. karede tam görünür (ilk kare kanca kuralı). Yalnızca ikincil satırlar sonradan girer.",
+ "_not": "Sabah 'hareketli kare' Reel'i: tek sahne, 8–10 sn, ilerleme çubuğu ve outro yok; içerik ortadaki 3:4 alanda kalır, profil ızgarasında statik gibi görünür. Ece 17 Kasım: 'aşırı az hareketli' → her kare-reel en az 3 vuruş taşır: (1) 0. karede tam görünen kanca (başlık/rakam 'at' almaz), (2) 1–4 sn arası konuyu GÖSTEREN hareketli bir öğe (bars, ring, chips, compare, steps, card yazılması, phone), (3) 4–7 sn arası açıklayıcı bir satır ve kapanış sticker'ı ('Kaydet, lazım olur' / 'Arkadaşına gönder'; sticker'ın 'top' değeri içeriğin altında kalmalı, başlık ya da çubuklarla çakışmamalı). Sahneye \"cam\": 0.08–0.12 (yaklaşma) ve \"beats\": [vuruş saniyeleri] (her vuruşta küçük punch + pop sesi) verilir. Kapak: aynı sahnenin son hali, story komutuyla ve nofoot ile.",
  "outro": false,
  "progress": false,
- "stills": [
-  0.05,
-  2.5,
-  7.5
- ],
+ "sfx": true,
  "music": {
-  "style": "minimal",
+  "style": "funk",
   "seed": 17
  },
  "scenes": [
   {
    "theme": "light",
    "align": "center",
-   "duration": 8.0,
+   "duration": 9.0,
    "kare": null,
+   "cam": 0.1,
+   "beats": [
+    1.2,
+    4.4,
+    6.4
+   ],
    "elements": [
     {
      "type": "tag",
@@ -25,13 +27,43 @@
     {
      "type": "bignum",
      "text": "66",
-     "size": 680,
+     "size": 560,
      "label": "karakter: ideal\n[[!satır uzunluğu.]]"
     },
     {
+     "type": "bars",
+     "at": 1.2,
+     "accent": 1,
+     "color": "pink",
+     "max": 100,
+     "items": [
+      [
+       "Çok kısa",
+       30,
+       "30"
+      ],
+      [
+       "İdeal",
+       66,
+       "66"
+      ],
+      [
+       "Yorucu",
+       100,
+       "100+"
+      ]
+     ]
+    },
+    {
      "type": "lead",
-     "text": "Rahat aralık 45–75 karakter.\nBoşluklar da sayılır.",
-     "at": 1.0
+     "text": "Daha uzunsa göz bir sonraki satırı kaybeder.",
+     "at": 4.4
+    },
+    {
+     "type": "sticker",
+     "text": "Kaydet, lazım olur",
+     "at": 6.4,
+     "top": 1430
     }
    ]
   }

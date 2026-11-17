@@ -105,6 +105,7 @@ Kapaklarda ve tek görsellerde varsayılan görünüm budur: ortalı kurgu, ince
 ## Format sırası: sabah statik, akşam Reel (Ece, 16 Kasım; 17 Kasım'dan itibaren her gün, hafta sonu dahil)
 Ece: "Sabahları statik post, akşamları video paylaş." Her gün **2 feed gönderisi** çıkar:
 - **Sabah (~09:00–09:30): hareketli kare (Ece, 17 Kasım onayladı).** Statik gönderi tasarımı, 7–10 saniyelik tek sahnelik, müzikli bir Reel olarak yayınlanır. Neden: 5 takipçiyle gerçek statikler 2–7 kişiye ulaştı; Reel'ler takip etmeyenlere de gösteriliyor. Profilde yine tek kare gibi durur. Takipçi birkaç yüze çıkınca gerçek statiğe dönmeyi Ece'ye sor.
+  - **17 Kasım güncellemesi:** Ece bu metin ağırlıklı kalıbı "sıkıcı" buldu. Sabah gönderisi de "Dikkat araştırması ve yeni görsel dil" kurallarına uyar: 7–10 sn'lik kısa bir çizgi film / oyun / 3D sahnesi (`tools/anim.py`). Aşağıdaki kare-reel.json yalnızca teknik ayarlar (tek sahne, outro yok) için referanstır.
   - Nasıl: `tools/examples/kare-reel.json` kalıbı. Tek sahne, `"outro": false`, `"progress": false`, 7–10 sn. Ana başlık ya da rakam `at` almaz, 0. karede tam görünür; yalnızca ikincil satırlar 1–2. saniyede girer. İçerik ortadaki 3:4 alanda kalır. Müzik stili akşam Reel'inden farklı.
   - Kapak: aynı sahnenin son hali, `render.py story` ile `"nofoot": true`.
   - Yayın: sabah görevi kalite kontrolünden sonra **hemen kendisi yayınlar** (`create_video_post`, `share_to_feed: true`). Kuyruğa girmez, doğrudan `grid`'e `kind: "kare-reel"` ile yazılır.
@@ -229,6 +230,22 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
 4. **10.000+:** Instagram'ın kendi gelir araçları (abonelik, hediyeler) ve daha büyük anlaşmalar.
 - Frame Lab'i işletmelere içerik hizmeti satan bir vitrin olarak kullanma fikri: Ece 11 Kasım'da "1 ay sonra düşünelim" dedi; 11 Aralık'ta hatırlatılacak. O tarihe kadar görevler bunu önermez ve hizmet tanıtımı yapmaz.
 - Ece'nin zamanı: isteğe bağlı seslendirme, yorum onayı, tek seferlik kayıt/ödeme kurulumları. Bunun dışındaki her şeyi görevler yapar.
+
+## Dikkat araştırması ve yeni görsel dil (Ece, 17 Kasım: "sadece metinlerden oluşuyor, koca bir 66 yazısı kimsenin dikkatini çekmez … ikonlar, maskotlar, 3D, oyun, çizgi film olabilir")
+Bulgular (kaynaklar aşağıda):
+- Beyin ilk 100–250 ms'de yalnızca renk, yön, boyut ve **hareketi** tarar; hareket ve renk en güçlü ikisi. Düz zeminde duran metin bu taramada öne çıkmaz.
+- **Yüz ve göz** en hızlı fark edilen şeydir; çizgi film gözleri ve yüze benzeyen şekiller de aynı önceliği alır. İzleyiciye bakan maskot güveni artırır.
+- **Karakter** kullanan reklamlar (13.000 reklam analizi) yeni müşteri, pazar payı ve kârda daha iyi sonuç verdi. Duolingo: maskot logo değil, karakter; diziye dönüşen hikâyeler.
+- İnsanlar az önce gördüklerinden **farklı** görünen şeyde durur. Düz akışta 3D hacim ve ışık fark yaratır; yapay zekâ içeriği arttıkça el yapımı/kil/çizgi film dokusu öne çıkıyor; Mosseri "kusursuz cilalı estetik bitti" diyor.
+- Mizah ve merak durdurur (tüketicilerin %55'i komik an ya da güçlü kanca için duruyor). Başarılı yüzsüz kanallar sabit bir görsel dil ve tekrar eden karakterle tanınır (Kurzgesagt kuşları).
+Kurallar (hemen geçerli):
+1. **Sadece metin + rakam kompozisyonu yasak.** Her gönderinin ilk karesinde ya büyük ve izleyiciye bakan **Kare** (bir şey yaparken: şaşırıyor, kaçıyor, bir şeyi gösteriyor) ya da konuyu gösteren **bir nesne/sahne** (3D nesne, ikon, illüstrasyon, oyun sahnesi) olur. Metin ikinci planda, ekranda en fazla ~6 kelimelik başlık + altyazı.
+2. **0. karede hareket:** ilk karede bir şey zaten hareket ediyor (düşüyor, dönüyor, koşuyor).
+3. **Tarz dönüşümü:** tarzlar dönüşümlü kullanılır, aynı tarz art arda 2 kez gelmez: **çizgi film** (`tools/scenes/cartoon-kare.html`: kalın kontur, lastik hortum kollu Kare, 12 fps titreyen çizgi), **oyun** (`tools/scenes/game-kare.html`: 8-bit, HUD, görev/level dili, Türkçe piksel yazı), **3D** (`tools/scenes/3d-kare.html`: ışın yürütmeli 3D Kare ve nesneler), mevcut **editoryal** Reel motoru yalnızca veri/haber anlatımında ve mutlaka bir görsel öğeyle. Ortak bağ: Kare, lime + pembe, Inter.
+4. Sahneler `tools/anim.py` ile müzikli MP4'e çevrilir (`window.render(t)`, `window.DUR`, `window.SFX`). Yeni konu için uygun sahne dosyası kopyalanıp metinler, zamanlama ve olay örgüsü konuya göre yeniden yazılır; aynı sahne aynen tekrar kullanılmaz.
+5. Her video bir **mini hikâye** taşır: Kare bir sorunla karşılaşır → konu çözüm olarak gösterilir → izleyiciye dönük kapanış. Mümkünse bir espri.
+6. Ece hangi tarzları seçerse bu bölüm ona göre güncellenecek; o zamana kadar üç tarz dönüşümlü.
+Kaynaklar: pre-attentive tarama (oakgen.ai/blog/thumb-stopping-social-media-visuals; scitepress.org/Papers/2025/131287/131287.pdf), yüz/pareidolia (eurekalert.org/news-releases/1092222; par.nsf.gov/servlets/purl/10400737), maskot göz teması (livescience.com/44621-why-characters-on-cereal-boxes-stare-at-you.html), karakterli reklamlar (archive.researchworld.com/building-character-why-every-brand-needs-a-mascot), Duolingo (ads.tiktok.com/business/en/inspiration/ad-awards-duolingo-case-study), 3D fark (futuramo.com/blog/?p=19027), el yapımı animasyon (mediapost.com/publications/article/419160), Mosseri ve paylaşım ağırlığı (dataslayer.ai/blog/instagram-algorithm-2025-complete-guide-for-marketers), mizah/kanca (clutch.co/resources/attention-economy-2025), görsel kimlik (revid.ai/blog/best-faceless-youtube-channels).
 
 ## Veri dersleri (17 Kasım analizi, 15 gönderi, 5 takipçi)
 Instagram her Reel'i önce ~100–120 takip etmeyen kişiye deniyor; sinyal iyiyse genişletiyor. Bizde 2 Reel bu eşiği geçti, 9'u ~105–125 erişimde kaldı. Statik ve carousel'ler 2–7 erişimde kaldı (yalnızca takipçiler görüyor).

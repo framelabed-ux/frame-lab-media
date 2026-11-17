@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab oyun sahnesi: 8-bit platform oyunu. 270x480 piksel tuvale çizilir, 4 kat büyütülür.
+   Konu: akışta ilk 1,7 saniye; dikkati çeken 3 güç: HAREKET, GÖZ TEMASI, MERAK. */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00';
+window.DUR=10.5;
+window.SFX=[[0.05,'pop2'],[1.6,'pop'],[2.15,'ding'],[3.6,'pop'],[4.15,'ding'],[5.6,'pop'],[6.15,'ding'],[7.6,'whoosh'],[8.1,'ding'],[8.4,'pop2'],[9.2,'pop']];
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler). Her satır 5 bitlik sayı. Aksanlar ayrı satırda. */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite: 16x18, kafa yeşil, ekran siyah, beyaz gözler */
+function kareSprite(x0,y0,frame,face='happy',k=3){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM; // bacaklar
+  if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  // kollar
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+/* düşman: dev başparmak "KAYDIR" */
+function thumb(x0,y0,t,k=3){X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  box(x,y,22,30,'#F2C9A0',INK,1);box(x+4,y+2,14,9,'#FFE4CF',INK,1);
+  X.fillStyle=INK;X.fillRect(x+5,y+15,3,3);X.fillRect(x+14,y+15,3,3);X.fillRect(x+7,y+22,8,1);
+  X.fillRect(x+4,y+14,5,1);X.fillRect(x+13,y+14,5,1);
+  X.restore();
+}
+function giftBox(x,y,hit,col=PINK){x=Math.round(x);y=Math.round(y);box(x,y,30,30,hit?GREY:col,INK,2);
+  if(!hit){X.fillStyle=LIME;X.fillRect(x+13,y+2,4,26);X.fillRect(x+2,y+13,26,4);}}
+function coin(x,y,t){const w=Math.round(Math.abs(Math.cos(t*6))*3)+1;X.fillStyle=INK;X.fillRect(x-w-1,y-4,2*w+2,9);X.fillStyle=PINK;X.fillRect(x-w,y-3,2*w,7);}
+function heart(x,y,on){const c=on?PINK:GREY;X.fillStyle=c;[[1,0],[2,0],[4,0],[5,0],[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[0,2],[1,2],[2,2],[3,2],[4,2],[5,2],[6,2],[1,3],[2,3],[3,3],[4,3],[5,3],[2,4],[3,4],[4,4],[3,5]].forEach(([a,b])=>X.fillRect(x+a,y+b,1,1));}
+
+const POW=[{t:1.6,x:56,label:'HAREKET',desc:['GÖZ ÖNCE','HAREKETİ GÖRÜR.']},
+           {t:3.6,x:116,label:'GÖZ TEMASI',desc:['YÜZ VE GÖZ','DİKKATİ KİLİTLER.']},
+           {t:5.6,x:176,label:'MERAK',desc:['YARIM BİLGİ','SONA KADAR İZLETİR.']}];
+window.render=function(t){
+  X.imageSmoothingEnabled=false;
+  X.fillStyle=INK;X.fillRect(0,0,270,480);
+  // arka plan: yukarı kayan akış kartları (paralaks)
+  for(let i=0;i<14;i++){const sp=10+(i%3)*8;const x=(i*53)%262; const y=((i*97-t*sp*6)%560+560)%560-60;
+    X.fillStyle=i%4===0?'#2A1020':i%4===1?'#1E2A0E':'#1C1C22';X.fillRect(x,y,30+(i%3)*8,22+(i%2)*10);}
+  // zemin
+  const gy=372; X.fillStyle=LIME;X.fillRect(0,gy,270,108);
+  for(let i=-1;i<20;i++){const xx=Math.round(i*16-(t*60)%16);X.fillStyle=DLIME;X.fillRect(xx,gy,1,108);X.fillRect(xx,gy+16,16,1);}
+  X.fillStyle=INK;X.fillRect(0,gy,270,2);
+  // ------- HUD (0. karede tam) -------
+  box(6,8,258,40,INK,LIME,2);
+  for(let i=0;i<3;i++) heart(14+i*10,16,true);
+  txt('CAN',14,26,1,LIME,'left',null);
+  const left=Math.max(0,1.7-Math.max(0,t-0.4)*0.17).toFixed(1).replace('.',',');
+  txt('SÜRE',112,16,1,LIME,'left',null); txt(left,112,26,2,(t%0.5<0.25&&t>6.5&&t<7.6)?PINK:WHITE,'left',null);
+  const got=POW.filter(p=>t>p.t+0.55).length;
+  txt('GÜÇ',200,16,1,LIME,'left',null); txt(got+'/3',200,26,2,WHITE,'left',null);
+  // başlık
+  if(t<1.5){const a=t<1.2?1:clamp(1-(t-1.2)/0.3);X.globalAlpha=a;
+    box(20,70,230,74,PINK,INK,3);txt('LEVEL 1',135,82,3,WHITE,'center');txt('İLK 1,7 SANİYE',135,114,2,INK,'center',null);X.globalAlpha=1;}
+  // güç kutuları + koşan Kare
+  const kxAt=tt=>{if(tt<1.25)return 10+tt*16; if(tt>=5.6) return 176+15-25+(Math.min(tt,7.6)-5.6)*8; for(let i=0;i<2;i++){const a=POW[i],b=POW[i+1]; if(tt<b.t) return a.x+15-25+(tt-a.t)/(b.t-a.t)*(b.x-a.x);} return 0;};
+  let kx=t<1.6?10+(t/1.6)*(POW[0].x+15-25-10):kxAt(t), ky=gy-54, jump=0, face='happy';
+  POW.forEach(p=>{const d=t-(p.t-0.35); if(d>0&&d<0.7){jump=Math.sin(clamp(d/0.7)*Math.PI)*58; face='wow';}});
+  if(t>=7.6){const d=t-7.6; jump=d<0.6?Math.sin(d/0.6*Math.PI)*90:0;}
+  POW.forEach((p,i)=>{const hit=t>p.t; const by=gy-150+(hit&&t<p.t+0.15?-4:0); giftBox(p.x,by,hit);
+    if(hit){const d=t-p.t; const ry=by-8-Math.min(d,0.5)*60; if(d<1.6){txt(p.label,p.x+15,Math.round(ry),2,LIME,'center');}
+      if(d<0.5) coin(p.x+15,Math.round(by-6-d*40),t);} });
+  // başparmak düşman: soldan kovalıyor, sonda Kare üstüne zıplar
+  let tx=-70+t*12, ty=gy-90;
+  if(t>=7.6){const d=t-7.6; tx=-70+7.6*12; if(d>0.45){ty=gy-90+Math.pow(d-0.45,2)*700;}}
+  if(ty<480){thumb(tx,ty,t); if(t<7.9) txt('KAYDIR',tx+33,ty-14,2,'#F2C9A0','center');}
+  kareSprite(kx,ky-jump,Math.floor(t*8)%2,face);
+  // diyalog kutusu (RPG)
+  box(8,390,254,84,CREAM,INK,3);
+  let L=['GÖREV:','KAYDIRILMADAN','İZLEYİCİYİ DURDUR!'], c0=INK;
+  if(t>=1.0&&t<7.6){const p=[...POW].reverse().find(p=>t>p.t)||null;
+    if(p){L=['+ '+p.label].concat(p.desc); c0=PINK;} else {L=['AKIŞTA BİR GÖNDERİYE','ORTALAMA 1,7 SN','BAKILIYOR.'];}}
+  if(t>=7.6){L=['LEVEL CLEAR!','KAYDET = +1 CAN','GÖNDER = +1 OYUNCU']; c0=PINK;}
+  L.forEach((l,i)=>txt(l,18,402+i*22,2,i===0?c0:INK,'left',null));
+  if(t>=1.0&&t<1.6) txt('KAYNAK: FACEBOOK IQ',262,380,1,INK,'right',null);
+  // final
+  if(t>=8.0){const a=clamp((t-8.0)/0.2);X.globalAlpha=a;box(18,150,234,92,LIME,INK,3);txt('LEVEL',135,162,3,INK,'center',null);txt('CLEAR!',135,192,4,PINK,'center',INK);X.globalAlpha=1;
+    if(t>9.0){box(40,258,190,26,PINK,INK,2);txt('ARKADAŞINA GÖNDER',135,267,1,WHITE,'center',null);}}
+  txt('@FRAME.LABO',264,476,1,GREY,'right',null);
+  // büyüt
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+};
+window.render(0);
+</script></body></html>
