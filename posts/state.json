@@ -302,6 +302,27 @@
    "media_id": "17966520864228296",
    "published_at": "2026-11-16T19:20+03:00",
    "status": "yayında (16 Kasım akşam görevi; raw video adresi 'could not process' verdi, GitHub Pages adresiyle yayınlandı)"
+  },
+  {
+   "slug": "2026-11-17-satir-uzunlugu",
+   "kind": "static",
+   "publish_date": "2026-11-17",
+   "title": "Tasarım Kuralı: 66 karakter ideal satır uzunluğu (45–75 rahat aralık)",
+   "files": [
+    "posts/2026-11-17-satir-uzunlugu/1.jpg"
+   ],
+   "layout": "bignum",
+   "cover_type": "tipografi",
+   "cover_tone": "light",
+   "topic_area": "tasarim",
+   "caption": "Metnin okunmuyorsa sorun yazıda değil, satırın uzunluğunda olabilir.\n\nTipografinin en bilinen kurallarından biri: Bir satırda 66 karakter (harfler ve boşluklar dahil) ideal kabul edilir. Rahat aralık 45–75 karakter.\n\nNeden?\n• Satır çok uzunsa göz bir sonraki satırın başını bulmakta zorlanır. Okur yorulur, metni atlar.\n• Satır çok kısaysa göz çok sık geri döner, okuma ritmi bozulur.\n\nNerede işine yarar?\n• Web sitesi ve blog: Metin alanının genişliğini sınırla, yazıyı ekranın tamamına yayma.\n• Sunum ve görsel: Uzun paragraf yerine kısa satırlar kur.\n• Çok sütunlu düzen (bülten, dergi): 40–50 karakter daha iyi çalışır.\n\nKendin dene: Son yazdığın metinden bir satır seç, boşluklar dahil karakterlerini say. 45–75 arasında mı?\n\nKaynak: Robert Bringhurst, The Elements of Typographic Style\n\nKaydet, bir sonraki tasarımda lazım olur. Senin satırın kaç karakter çıktı? Yorumlara yaz.\n\n#tasarım #tipografi #grafiktasarım #webtasarım #tasarımipuçları #uxtasarım #okunabilirlik",
+   "sources": [
+    "https://webtypography.net/2.1.2",
+    "https://baymard.com/blog/line-length-readability"
+   ],
+   "media_id": "18129678413489983",
+   "published_at": "2026-11-17T08:58+03:00",
+   "status": "yayında (17 Kasım sabah görevi)"
   }
  ],
  "queue": [],
@@ -462,7 +483,8 @@
   "youtube-gta-vi-paketi",
   "60-30-10-renk-kurali",
   "microsoft-364",
-  "edits-speed-curves"
+  "edits-speed-curves",
+  "satir-uzunlugu-66-karakter"
  ],
  "hot_pending": [],
  "scheduled": [],
