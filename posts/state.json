@@ -547,7 +547,21 @@
   "instagram-amazon-affiliate-linkleri",
   "dikkat-1-7-saniye"
  ],
- "hot_pending": [],
+ "hot_pending": [
+  {
+   "key": "youtube-co-views",
+   "topic": "YouTube herkese açık izlenme sayılarına TV'deki birlikte izleyenleri (co-views) ekledi",
+   "found": "2026-11-17",
+   "big": true,
+   "note": "16 Kasım'da duyuruldu, Kasım 2026'dan itibaren yayılıyor: TV'de birlikte izlendiği tahmin edilen her kişi herkese açık izlenme sayısına ekleniyor (yalnızca TV; telefon/bilgisayar/tablet değişmedi). YPP gelirleri ve uygunluk etkilenmiyor (engaged views'a dahil değil). Studio'da 'co-view rate' metriği var; tahmin modeli kamera/mikrofon kullanmıyor. YouTube TV'de günde 1 milyar saatten fazla izleniyor. Öğle görevi (17 Kasım): akşamki LinkedIn Reel'i zaten Sıcak Gelişme olduğu için kuyruğa dokunulmadı; 18 Kasım akşam Reel'i için aday.",
+   "sources": [
+    "https://support.google.com/youtube/answer/2991785",
+    "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
+    "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
+    "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/"
+   ]
+  }
+ ],
  "scheduled": [],
  "pending_replies": [
   {
