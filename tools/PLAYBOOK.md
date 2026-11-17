@@ -226,9 +226,26 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
 - Frame Lab'i işletmelere içerik hizmeti satan bir vitrin olarak kullanma fikri: Ece 11 Kasım'da "1 ay sonra düşünelim" dedi; 11 Aralık'ta hatırlatılacak. O tarihe kadar görevler bunu önermez ve hizmet tanıtımı yapmaz.
 - Ece'nin zamanı: isteğe bağlı seslendirme, yorum onayı, tek seferlik kayıt/ödeme kurulumları. Bunun dışındaki her şeyi görevler yapar.
 
+## Veri dersleri (17 Kasım analizi, 15 gönderi, 5 takipçi)
+Instagram her Reel'i önce ~100–120 takip etmeyen kişiye deniyor; sinyal iyiyse genişletiyor. Bizde 2 Reel bu eşiği geçti, 9'u ~105–125 erişimde kaldı. Statik ve carousel'ler 2–7 erişimde kaldı (yalnızca takipçiler görüyor).
+| | Geçenler (Fable 5.2, YouTube–GTA VI) | Kalanlar (9 Reel) |
+| --- | --- | --- |
+| Erişim | 1.400 / 1.150 | 105–123 |
+| 3 sn'de geçme | %61 / %53 | %57–85 (çoğu %73+) |
+| Ort. izlenme | 11,2 / 11,3 sn | 2,7–8,6 sn |
+| Paylaşım | 6 / 5 | 0–2 |
+| Konu | Herkesin bildiği büyük isim, aynı gün sıcak haber | Niş kavram (60-30-10, hız eğrisi) ya da ikinci kez aynı marka (Gemini ×2) |
+Kurallar:
+1. **Geniş tanınırlık testi:** Reel'in ilk karesinde geniş kitlenin bildiği bir isim (oyun, uygulama, büyük marka, platform) ya da herkesin yaşadığı bir sorun olur. Niş tasarım kavramları ancak gündelik bir sonuca bağlanarak anlatılır ("Sunumun neden ucuz görünüyor?" gibi), kavram adıyla açılmaz.
+2. **Sıcakken çık:** Büyük haber aynı gün çıkmalı; iki kazanan da haberin günü yayınlandı.
+3. **Paylaşılabilirlik:** Her Reel "bunu bir arkadaşıma atar mıyım?" testinden geçer; kazananlarda paylaşım/erişim ~%0,4, kalanlarda ~%0–1 adet. CTA'larda ara sıra "bunu ... olan arkadaşına gönder" kullanılır.
+4. **Tutma:** Hedef çizgisi sürer (3 sn'de geçme < %60, izlenme ≥ 8 sn). Von Restorff Reel'i %57 ve 8,6 sn'ye ulaştı ama paylaşım 0 olduğu için genişlemedi: tutma tek başına yetmiyor.
+5. **Statik/carousel erişimi takipçiye bağlı:** Takipçi az iken statik gönderiler neredeyse kimseye ulaşmaz; bunu Ece'ye raporla, yeni takipçi kazanmak için Reel'e güven.
+
 ## Gelişim günlüğü (haftalık gelişim görevi doldurur)
 Her cumartesi görev; verilere ve global örneklere bakıp en fazla 3 kanıta dayalı değişiklik yapar, buraya tarihle yazar. Ece'nin koyduğu kurallar (onay kuralları, renkler, yüzsüz hesap, uzunluk sınırları) görev tarafından değiştirilmez; öneri olarak Ece'ye sorulur.
 - 2026-11-11: Başlangıç. Reel ağırlıklı sıra, 3 saniye kancası, editoryal tasarım dili, 8 müzik stili, sends odaklı CTA kuralı eklendi.
 - 2026-11-14 (1): "İlk kare kancayı taşır": ilk sahne başlığı animasyonsuz, kalın ve 0. karede tam görünür; üstte küçük "X duyurdu" satırı yok. Kanıt: Meetings/Adobe Reel'leri (ince başlık + üst satır) skip %85/%83, Fable (kalın) %61. Dış kaynak: ilk karede tam görünen kanca yazısı ve sessiz izleme payı (creatorlanehq.com/blog/first-three-seconds-instagram-hook-anatomy-2026; lilachbullock.com/what-is-a-good-skip-rate-on-instagram). `tools/examples/reel-editorial.json` ilk sahnesi buna göre güncellendi.
 - 2026-11-14 (2): "X artık Y" kanca kalıbı bırakıldı; ürün adı + somut sonuç ya da sonucu önce gösteren kanca. Kanıt: "artık" ile açılan 3 Reel ortalama skip %81, diğer 3 Reel %69.
+- 2026-11-17: Ece "son içerikler hiç etkileşim almadı" dedi; 15 gönderilik analiz yapıldı, "Veri dersleri" bölümü eklendi; sabah görevi her gün son 7 günün verisine bakacak.
 - 2026-11-14 (3): Reel hedef çizgisi (skip < %60, izlenme ≥ 8 sn) ve `state.json` → `weekly_metrics` haftalık özet kaydı. Kanıt: skip %73–85 olan 6 Reel ~110 erişimde kaldı, %61 olan 1.400'e çıktı. Mosseri'nin küçük hesap içeriğini takipçi olmayanlara deneme amaçlı gösterme ilkesi (socialmediatoday.com, 24 Eylül 2026).
