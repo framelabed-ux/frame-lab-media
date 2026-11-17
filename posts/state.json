@@ -345,9 +345,7 @@
    "note": "Ece ile hazırlandı, çizgi film tarzı, Ece'nin seslendirmesi. Ece'nin isteğiyle 17 Kasım 14:13'te elle yayınlandı (günün 3. gönderisi).",
    "media_id": "18084742475717388",
    "published_at": "2026-11-17T14:13+03:00"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-17-linkedin-ai-yorumlar",
    "kind": "reel",
@@ -368,9 +366,13 @@
     "https://dataconomy.com/2026/11/16/linkedin-cuts-visibility-of-ai-generated-comments/",
     "https://fortune.com/2026/07/31/linkedin-seems-like-ai-slop-button-billions-automated-comments-attempts/"
    ],
-   "note": "17 Kasım sabah görevi: hafta içi Sıcak Gelişme Reel'i (33,7 sn, outro dahil, seslendirmesiz). Sabah statiği tasarım (açık, tipografi, bignum) olduğu için Reel platform alanından; kapak koyu, Kare türü, classic düzen. 'Genel geçer/özgün' yorum örnekleri ve 3 kural bizim önerimiz, LinkedIn'in açıklaması değil (Reel'de ve caption'da böyle çerçevelendi)."
+   "note": "17 Kasım sabah görevi: hafta içi Sıcak Gelişme Reel'i (33,7 sn, outro dahil, seslendirmesiz). Sabah statiği tasarım (açık, tipografi, bignum) olduğu için Reel platform alanından; kapak koyu, Kare türü, classic düzen. 'Genel geçer/özgün' yorum örnekleri ve 3 kural bizim önerimiz, LinkedIn'in açıklaması değil (Reel'de ve caption'da böyle çerçevelendi).",
+   "media_id": "18477298123184660",
+   "published_at": "2026-11-17T19:15+03:00",
+   "status": "yayında (17 Kasım akşam görevi)"
   }
  ],
+ "queue": [],
  "stories": [
   {
    "date": "2026-11-09",
