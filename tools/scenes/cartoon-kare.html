@@ -8,8 +8,8 @@
    Konu: akışta bir gönderiye ortalama 1,7 saniye bakıyoruz (Facebook IQ). */
 const C=document.getElementById('c'), X=C.getContext('2d');
 const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF';
-window.DUR=10.4;
-window.SFX=[[0.38,'pop'],[2.3,'whoosh'],[2.75,'pop2'],[5.25,'pop'],[5.6,'tick'],[6.1,'tick'],[6.6,'tick'],[7.15,'ding'],[7.75,'whoosh'],[8.2,'pop'],[9.0,'pop2']];
+window.DUR=26.5;
+window.SFX=[[0.38,'pop'],[2.4,'whoosh'],[2.85,'pop2'],[5.6,'whoosh'],[5.9,'pop'],[6.3,'pop'],[6.7,'pop'],[7.6,'whoosh'],[8.0,'pop2'],[9.0,'pop'],[10.0,'pop'],[11.0,'pop'],[12.4,'whoosh'],[12.9,'ding'],[17.2,'whoosh'],[17.7,'tick'],[18.7,'tick'],[19.7,'tick'],[21.0,'ding'],[22.0,'whoosh'],[23.2,'pop2'],[24.4,'pop']];
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
 const eio=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
@@ -126,18 +126,33 @@ function stopwatch(x,y,r,val,ang,sc){
 }
 function speed(x,y,n,len,t){X.lineCap='round';for(let i=0;i<n;i++){const xx=x+(i-(n-1)/2)*70+j(600+i,6);X.beginPath();X.moveTo(xx,y-len*(0.6+0.4*rnd(610+i)));X.lineTo(xx,y);X.lineWidth=10;X.strokeStyle=INK;X.globalAlpha=0.85;X.stroke();X.globalAlpha=1;}}
 
+function iconMotion(x,y,s){X.save();X.translate(x,y);X.scale(s,s);rr(-70,-70,140,140,36,1000);inkFill(LIME,10);
+  for(let i=0;i<3;i++){X.beginPath();X.moveTo(-40+i*6,-30+i*30);X.lineTo(10+i*6,-30+i*30);X.lineWidth=12;X.strokeStyle=INK;X.lineCap='round';X.stroke();}
+  ell(36,0,22,22,1001);inkFill(PINK,8);X.restore();}
+function iconEye(x,y,s,look=0){X.save();X.translate(x,y);X.scale(s,s);rr(-70,-70,140,140,36,1010);inkFill(WHITE,10);
+  X.beginPath();X.moveTo(-50,0);X.quadraticCurveTo(0,-48,50,0);X.quadraticCurveTo(0,48,-50,0);X.closePath();inkFill(WHITE,9);
+  ell(look*10,0,20,20,1011);X.fillStyle=INK;X.fill();ell(look*10+6,-6,6,6,1012);X.fillStyle=WHITE;X.fill();X.restore();}
+function iconQ(x,y,s){X.save();X.translate(x,y);X.scale(s,s);rr(-70,-70,140,140,36,1020);inkFill(PINK,10);
+  X.font='900 120px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=12;X.strokeStyle=INK;X.strokeText('?',0,6);X.fillStyle=WHITE;X.fillText('?',0,6);X.restore();}
+function label(n,txt,y){comic(n+'. '+txt,540,y,104,WHITE,'center',18);}
+function postCard(x,y,s,grey){X.save();X.translate(x,y);X.scale(s,s);rr(-170,-210,340,420,30,1100);inkFill(grey?'#E2E0D8':WHITE,10);
+  rr(-140,-180,280,230,20,1101);X.fillStyle=grey?'#C9C7BF':'#FFD9EA';X.fill();X.fillStyle=grey?'#B7B5AD':INK;X.fillRect(-140,80,220,18);X.fillRect(-140,112,160,18);X.restore();}
+function giftQ(x,y,s,lid,wob){X.save();X.translate(x,y);X.scale(s,s);
+  rr(-190,-150,380,300,26,1200);inkFill(PINK,12);X.fillStyle=LIME;X.fillRect(-26,-150,52,300);X.lineWidth=10;X.strokeStyle=INK;X.strokeRect(-26,-150,52,300);
+  X.save();X.translate(0,-150-lid*220);X.rotate(wob-lid*0.5);rr(-215,-70,430,80,22,1210);inkFill(PINK,12);X.fillStyle=LIME;X.fillRect(-26,-70,52,80);X.strokeRect(-26,-70,52,80);
+  ell(-60,-96,62,34,1211);inkFill(LIME,10);ell(60,-96,62,34,1212);inkFill(LIME,10);X.restore();
+  if(lid>0.05){X.globalAlpha=clamp(lid*1.5);X.font='900 200px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=18;X.strokeStyle=INK;X.strokeText('?',0,-260-lid*80);X.fillStyle=WHITE;X.fillText('?',0,-260-lid*80);X.globalAlpha=1;}
+  X.restore();}
+
 window.render=function(t){
   BOIL=Math.floor(t*12);
   X.setTransform(1,0,0,1,0,0);
   X.fillStyle=CREAM;X.fillRect(0,0,1080,1920);
-  // arka plan: büyük pembe daire (sahne değişince renk değişir)
   const bgR=900+20*Math.sin(t*2);
-  X.save();
-  let bgc=PINK; if(t>=5.2&&t<7.6) bgc=LIME; if(t>=7.6) bgc=PINK;
+  let bgc=PINK; if(t>=5.6&&t<7.6) bgc=WHITE; else if(t>=7.6&&t<12.4) bgc=LIME; else if(t>=12.4&&t<17.2) bgc='#8EC9FF'; else if(t>=17.2&&t<22) bgc=LIME;
   ell(540,1080,bgR*0.8,bgR*0.8,700);X.fillStyle=bgc;X.fill();X.lineWidth=14;X.strokeStyle=INK;X.stroke();
-  X.restore();
-  // ---------- 1) DUR! (0–2.2) ----------
-  if(t<2.3){
+  // ---------- 1) DUR! (0–2.4) ----------
+  if(t<2.4){
     const fall=ease(t/0.36), land=t>0.36?Math.exp(-(t-0.36)*7)*Math.sin((t-0.36)*28):0;
     const y=1250+(1640-1250)*fall;
     if(t<0.4) speed(540,y-1080,5,300,t);
@@ -146,9 +161,9 @@ window.render=function(t){
     if(t>0.34){const bs=elastic((t-0.34)/0.5); bubble(780,260,440,240,'DUR!',150,650,470,800,bs);}
     if(t>0.7){const a=clamp((t-0.7)/0.2); caption('Bunu da kaydıracaktın.',1790,56,a);}
   }
-  // ---------- 2) telefon + kaydırma (2.2–5.2) ----------
-  else if(t<5.2){
-    const lt=t-2.3, inn=back(lt/0.45);
+  // ---------- 2) 1,7 sn (2.4–5.6) ----------
+  else if(t<5.6){
+    const lt=t-2.4, inn=back(lt/0.45);
     const scroll=lt<0.4?0:Math.pow(lt-0.4,1.6)*900;
     const lookY=Math.sin(lt*16)*0.9;
     phone(650,1000-(1-inn)*900,1.0,scroll,0.07);
@@ -157,27 +172,56 @@ window.render=function(t){
     const a=clamp((lt-0.25)/0.25); caption('Akışta bir gönderiye\nortalama bu kadar bakıyoruz.',1790,52,a);
     X.globalAlpha=a;X.font='600 30px "Inter"';X.textAlign='right';X.fillStyle=INK;X.fillText('Kaynak: Facebook IQ',1036,1890);X.globalAlpha=1;
   }
-  // ---------- 3) kronometre (5.2–7.6) ----------
+  // ---------- 3) 3 şey durdurur (5.6–7.6) ----------
   else if(t<7.6){
-    const lt=t-5.2, inn=elastic(lt/0.6);
-    const left=Math.max(0,1.7-Math.max(0,lt-0.35)*0.95);
-    const val=left.toFixed(1).replace('.',',');
-    kare({x:540,y:1900,s:0.74,look:[0,-0.9],mouth:'grit',wide:true,sweat:lt*1.6,armL:[-420,-900+40*Math.sin(lt*30)],armR:[420,-900-40*Math.sin(lt*30)]});
-    stopwatch(540,780,330,val,(1.7-left)/1.7*Math.PI*2,inn);
-    const a=clamp((lt-0.3)/0.2); caption('Karar 1,7 saniyede veriliyor.',1215,50,a);
-    if(left===0){const z=clamp((lt-2.15)/0.15);comic('KAYDIRDI!',540,330,120,WHITE,'center',18);}
+    const lt=t-5.6;
+    comic('Seni ne\ndurdurur?',540,330,130,WHITE,'center',18);
+    const pops=[0.3,0.7,1.1]; const fns=[iconMotion,(x,y,s)=>iconEye(x,y,s,Math.sin(lt*4)),iconQ];
+    pops.forEach((p,i)=>{const e=elastic((lt-p)/0.5); if(lt>p){fns[i](240+i*300,840,1.65*e); comic(String(i+1),240+i*300,1060,96,PINK,'center',14);}});
+    kare({x:540,y:1880,s:0.62,look:[0,-0.8],mouth:'smile',armL:[-380,-700],armR:[380,-700]});
+    caption('3 şey.',1180,60,clamp((lt-1.3)/0.2));
   }
-  // ---------- 4) sen hâlâ buradasın (7.6–10.4) ----------
+  // ---------- 4) HAREKET (7.6–12.4) ----------
+  else if(t<12.4){
+    const lt=t-7.6;
+    label(1,'HAREKET',300);
+    postCard(300,880,0.95,true); X.font='800 40px "Inter"';X.textAlign='center';X.fillStyle=INK;X.fillText('Duran gönderi',300,1150);
+    const hop=Math.abs(Math.sin(lt*Math.PI*1.0)), sq=hop<0.15?(0.15-hop)*1.4:-0.06*hop;
+    if(lt>0.4){X.globalAlpha=clamp((lt-0.4)/0.2);
+      kare({x:780,y:1150-hop*230,s:0.5,sq:sq,look:[-0.5,0],mouth:hop>0.5?'shout':'smile',armL:[-430,-950+hop*200],armR:[430,-950+hop*200]});
+      if(hop>0.4) speed(780,1150-hop*230+90,3,120,t);
+      X.font='800 40px "Inter"';X.textAlign='center';X.fillStyle=INK;X.fillText('Hareket eden',780,1250);X.globalAlpha=1;}
+    caption('Göz önce hareketi görür.\nİlk karede bir şey kıpırdasın.',1640,52,clamp((lt-0.8)/0.25));
+  }
+  // ---------- 5) GÖZ TEMASI (12.4–17.2) ----------
+  else if(t<17.2){
+    const lt=t-12.4, inn=back(lt/0.5);
+    label(2,'GÖZ TEMASI',300);
+    const lk=lt<1.6?[Math.sin(lt*5)*0.9,0.2]:[0,0.2];
+    kare({x:540,y:1880+(1-inn)*600,s:1.55,look:lk,mouth:lt>1.6?'smile':'o',blink:(lt>3.0&&lt<3.12)?1:0,armL:[-430,-560],armR:[430,-560]});
+    caption('Beyin yüzleri her şeyden hızlı fark eder.\nÇizgi film yüzü de sayılır.',1560,46,clamp((lt-0.7)/0.25));
+    if(lt>1.6){const e=elastic((lt-1.6)/0.5);bubble(800,560,360,170,'Merhaba!',70,700,700,1300,e);}
+  }
+  // ---------- 6) MERAK (17.2–22) ----------
+  else if(t<22.0){
+    const lt=t-17.2;
+    label(3,'MERAK',300);
+    const wob=lt<3.6?Math.sin(lt*14)*0.06*(lt>0.4?1:0):0, lid=lt<3.8?0.06*Math.abs(Math.sin(lt*7)):ease((lt-3.8)/0.4);
+    giftQ(540,1000,1.05,lid,wob);
+    kare({x:880,y:1500,s:0.42,look:[-0.9,-0.5],mouth:'o',wide:true,armL:[-430,-700],armR:[380,-760],sweat:lt>1?lt*1.2:0});
+    caption('Cevabı hemen verme.\nYarım bilgi sonuna kadar izletir.',1660,50,clamp((lt-0.6)/0.25));
+  }
+  // ---------- 7) kapanış (22–26.5) ----------
   else{
-    const lt=t-7.6, inn=back(lt/0.5);
-    const wink=lt>1.1&&lt<1.6;
+    const lt=t-22.0, inn=back(lt/0.5);
+    const wink=lt>1.6&&lt<2.1;
     kare({x:540,y:1700+(1-inn)*500,s:1.0,look:[0,0.2],mouth:'smile',wink:wink,armL:[-440,-700],armR:[330,-1240],point:true,legs:Math.sin(lt*6)*0.1});
-    comic('Ama sen\nhâlâ buradasın.',540,300,110,WHITE,'center',18);
-    if(lt>1.4){const sc=elastic((lt-1.4)/0.5);X.save();X.translate(790,1820);X.rotate(-0.06);X.scale(sc,sc);rr(-250,-60,500,120,60,900);inkFill(LIME,10);
+    comic('Bu videoda\nüçü de vardı.',540,280,104,WHITE,'center',18);
+    if(lt>1.2){const a=clamp((lt-1.2)/0.25);caption('Ve sen hâlâ buradasın.',560,58,a);}
+    if(lt>2.4){const sc=elastic((lt-2.4)/0.5);X.save();X.translate(790,1820);X.rotate(-0.06);X.scale(sc,sc);rr(-250,-60,500,120,60,900);inkFill(LIME,10);
       X.font='900 46px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.fillStyle=INK;X.fillText('Arkadaşına gönder',0,4);X.restore();}
   }
-  // köşe imzası
-  X.font='900 34px "Inter Display"';X.textAlign='left';X.textBaseline='alphabetic';X.fillStyle=INK;X.fillText('@frame.labo',44,1890-0);
+  X.font='900 34px "Inter Display"';X.textAlign='left';X.textBaseline='alphabetic';X.fillStyle=INK;X.fillText('@frame.labo',44,1890);
 };
 window.render(0);
 </script></body></html>
