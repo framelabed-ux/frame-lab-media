@@ -110,6 +110,7 @@ Ece: "Sabahları statik post, akşamları video paylaş." Her gün **2 feed gön
   - Kapak: aynı sahnenin son hali, `render.py story` ile `"nofoot": true`.
   - Yayın: sabah görevi kalite kontrolünden sonra **hemen kendisi yayınlar** (`create_video_post`, `share_to_feed: true`). Kuyruğa girmez, doğrudan `grid`'e `kind: "kare-reel"` ile yazılır.
   - Statik seriler (aşağıdaki tablo) bu gönderide kullanılır. Format sırası hesaplarında `kare-reel` statik sayılır.
+- **Önceden hazırlanmış sabah gönderisi:** `queue` içinde `publish_date` bugün ve `"slot": "sabah"` olan bir öğe varsa (Ece ile birlikte hazırlanmış), sabah görevi yeni sabah gönderisi üretmez; bu öğeyi kalite kontrolünden geçirip sabah yayınlar ve `grid`'e taşır. Akşam görevi `slot: "sabah"` öğelerini yayınlamaz.
 - **Akşam (19:10): Reel.** Sabah görevi üretip kuyruğa koyar, akşam görevi yayınlar. Hafta sonu Reel'leri "Kare Açıklıyor" serisinden olur.
 - Carousel şimdilik rotasyonda yok. Çok iyi bir carousel fikri çıkarsa sabah statiğinin yerine kullanmak için Ece'ye sor.
 - Aynı günün statiği ve Reel'i **farklı konu alanlarından** olur (bkz. Konu dengesi). Yapay zekâ yine en fazla 3 gönderide 1.

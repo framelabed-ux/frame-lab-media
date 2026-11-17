@@ -347,6 +347,27 @@
     "https://fortune.com/2026/07/31/linkedin-seems-like-ai-slop-button-billions-automated-comments-attempts/"
    ],
    "note": "17 Kasım sabah görevi: hafta içi Sıcak Gelişme Reel'i (33,7 sn, outro dahil, seslendirmesiz). Sabah statiği tasarım (açık, tipografi, bignum) olduğu için Reel platform alanından; kapak koyu, Kare türü, classic düzen. 'Genel geçer/özgün' yorum örnekleri ve 3 kural bizim önerimiz, LinkedIn'in açıklaması değil (Reel'de ve caption'da böyle çerçevelendi)."
+  },
+  {
+   "slug": "2026-11-18-dikkat-1-7-saniye",
+   "kind": "reel",
+   "slot": "sabah",
+   "style": "cizgi-film",
+   "publish_date": "2026-11-18",
+   "files": [
+    "posts/2026-11-18-dikkat-1-7-saniye/reel.mp4"
+   ],
+   "cover": "posts/2026-11-18-dikkat-1-7-saniye/cover.jpg",
+   "cover_tone": "light",
+   "cover_type": "kare",
+   "topic_area": "psikoloji",
+   "layout": "cartoon",
+   "voice": true,
+   "caption": "Bu videoyu da kaydıracaktın. Ama hâlâ buradasın.\n\nAkışta bir gönderiye ortalama 1,7 saniye bakıyoruz. O kısa sürede seni durduran 3 şey var:\n\n1. Hareket: Göz önce hareketi görür. İlk karede bir şey kıpırdasın.\n2. Göz teması: Beyin yüzleri her şeyden hızlı fark eder; çizgi film yüzü bile.\n3. Merak: Cevabı hemen verme. Yarım bilgi sonuna kadar izletir.\n\nBu videoda üçü de vardı. Sence en güçlüsü hangisi? Yorumlara yaz, içerik üreten arkadaşına da gönder.\n\nKaynak: Facebook IQ (mobil akışta bir içeriğe ortalama bakma süresi)\n\n#sosyalmedya #içerikstratejisi #reels #dikkat #tasarım #instagramipuçları #içerikkurgusu",
+   "sources": [
+    "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative"
+   ],
+   "note": "Ece ile birlikte hazırlandı (17 Kasım): çizgi film tarzı, Ece'nin ElevenLabs seslendirmesiyle. 18 Kasım SABAH gönderisi; sabah görevi bunu yayınlar, ayrıca sabah gönderisi üretmez."
   }
  ],
  "stories": [
@@ -522,7 +543,8 @@
   "edits-speed-curves",
   "satir-uzunlugu-66-karakter",
   "linkedin-ai-yorumlari",
-  "instagram-amazon-affiliate-linkleri"
+  "instagram-amazon-affiliate-linkleri",
+  "dikkat-1-7-saniye"
  ],
  "hot_pending": [],
  "scheduled": [],

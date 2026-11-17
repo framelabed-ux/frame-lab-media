@@ -9,6 +9,11 @@
 const C=document.getElementById('c'), X=C.getContext('2d');
 const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF';
 window.DUR=26.5;
+/* Seslendirmeye hizalama: WARP_V = sesteki sahne başlangıçları, WARP_S = sahne dosyasındaki başlangıçlar (son değer = bitiş).
+   Ses yoksa null bırak. Ses gelince silencedetect ile cümle aralarını bul, burayı doldur, DUR'u sesin sonu + ~1 sn yap. */
+window.WARP_S=[0,2.4,5.6,7.6,12.4,17.2,22.0,26.5];
+window.WARP_V=[0,2.2,6.4,9.3,14.6,20.6,25.9,32.3];
+window.DUR=window.WARP_V?window.WARP_V[window.WARP_V.length-1]:26.5;
 window.SFX=[[0.38,'pop'],[2.4,'whoosh'],[2.85,'pop2'],[5.6,'whoosh'],[5.9,'pop'],[6.3,'pop'],[6.7,'pop'],[7.6,'whoosh'],[8.0,'pop2'],[9.0,'pop'],[10.0,'pop'],[11.0,'pop'],[12.4,'whoosh'],[12.9,'ding'],[17.2,'whoosh'],[17.7,'tick'],[18.7,'tick'],[19.7,'tick'],[21.0,'ding'],[22.0,'whoosh'],[23.2,'pop2'],[24.4,'pop']];
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
@@ -144,8 +149,12 @@ function giftQ(x,y,s,lid,wob){X.save();X.translate(x,y);X.scale(s,s);
   if(lid>0.05){X.globalAlpha=clamp(lid*1.5);X.font='900 200px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=18;X.strokeStyle=INK;X.strokeText('?',0,-260-lid*80);X.fillStyle=WHITE;X.fillText('?',0,-260-lid*80);X.globalAlpha=1;}
   X.restore();}
 
-window.render=function(t){
-  BOIL=Math.floor(t*12);
+function warp(t){const V=window.WARP_V,S=window.WARP_S;if(!V)return t;for(let i=0;i<V.length-1;i++){if(t<V[i+1]||i===V.length-2){return S[i]+(t-V[i])/(V[i+1]-V[i])*(S[i+1]-S[i]);}}return t;}
+function unwarp(s){const V=window.WARP_V,S=window.WARP_S;if(!V)return s;for(let i=0;i<S.length-1;i++){if(s<S[i+1]||i===S.length-2){return V[i]+(s-S[i])/(S[i+1]-S[i])*(V[i+1]-V[i]);}}return s;}
+window.SFX=window.SFX.map(e=>[+unwarp(e[0]).toFixed(3),e[1]]);
+window.render=function(tv){
+  const t=warp(tv);
+  BOIL=Math.floor(tv*12);
   X.setTransform(1,0,0,1,0,0);
   X.fillStyle=CREAM;X.fillRect(0,0,1080,1920);
   const bgR=900+20*Math.sin(t*2);
