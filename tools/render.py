@@ -335,7 +335,9 @@ ABS = ("photo_bg", "hero", "burst", "note", "marquee", "sticker", "kare_peek", "
 def page(theme, elements, w, h, top=None, foot_right=None, align="", pattern="", frame=False, bg="", logo=""):
     """bg="glow": ışıklı degrade zemin. pattern="rings": ince eşmerkezli halkalar. logo="center": üstte ortalı logo (editoryal düzen)."""
     light = theme in ("light", "soft")
-    if logo == "center":
+    if logo == "none":  # üstte FRAME/LAB yazısı yok (Ece, 14 Kasım: alt/üst bilgide FRAME/LAB kullanılmaz)
+        t = ""
+    elif logo == "center":
         t = f'<div class="top logoc"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div class="pn">{top or ""}</div></div>'
     else:
         t = f'<div class="top"><div class="brand"><span class="dot"></span>FRAME/LAB</div><div>{top or ""}</div></div>' if h < 1500 else ""

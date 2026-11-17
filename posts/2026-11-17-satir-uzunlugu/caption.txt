@@ -1,0 +1,20 @@
+Metnin okunmuyorsa sorun yazıda değil, satırın uzunluğunda olabilir.
+
+Tipografinin en bilinen kurallarından biri: Bir satırda 66 karakter (harfler ve boşluklar dahil) ideal kabul edilir. Rahat aralık 45–75 karakter.
+
+Neden?
+• Satır çok uzunsa göz bir sonraki satırın başını bulmakta zorlanır. Okur yorulur, metni atlar.
+• Satır çok kısaysa göz çok sık geri döner, okuma ritmi bozulur.
+
+Nerede işine yarar?
+• Web sitesi ve blog: Metin alanının genişliğini sınırla, yazıyı ekranın tamamına yayma.
+• Sunum ve görsel: Uzun paragraf yerine kısa satırlar kur.
+• Çok sütunlu düzen (bülten, dergi): 40–50 karakter daha iyi çalışır.
+
+Kendin dene: Son yazdığın metinden bir satır seç, boşluklar dahil karakterlerini say. 45–75 arasında mı?
+
+Kaynak: Robert Bringhurst, The Elements of Typographic Style
+
+Kaydet, bir sonraki tasarımda lazım olur. Senin satırın kaç karakter çıktı? Yorumlara yaz.
+
+#tasarım #tipografi #grafiktasarım #webtasarım #tasarımipuçları #uxtasarım #okunabilirlik
