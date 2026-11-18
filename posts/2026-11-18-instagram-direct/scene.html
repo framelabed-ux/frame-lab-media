@@ -1,265 +1,216 @@
-<!doctype html>
-<html lang="tr"><head><meta charset="utf-8">
-<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block}</style></head>
-<body><canvas id="c" width="1080" height="1920"></canvas>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0B0B0D;font-family:Inter,sans-serif;color:#fff}
+#bg{position:absolute;inset:0;background:radial-gradient(70% 45% at 50% 58%,#1b2410 0%,#0B0B0D 70%)}
+#glow{position:absolute;left:190px;top:700px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(255,46,147,.22),rgba(255,46,147,0) 65%);filter:blur(10px)}
+.hd{position:absolute;left:60px;right:60px;top:150px;text-align:center}
+.hd h1{font-family:"Inter Display";font-weight:800;font-size:76px;line-height:1.02;letter-spacing:-2px}
+.hd h1 em{font-style:normal;color:#C6F24E}
+.hd p{margin-top:18px;font-size:38px;font-weight:500;color:#C9C9CF}
+.pill{display:inline-block;margin-top:22px;padding:14px 34px;border-radius:60px;background:#FF2E93;color:#fff;font-weight:800;font-size:44px}
+.chips{margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.chip{padding:12px 26px;border-radius:40px;background:#1E1E24;border:2px solid #34343c;font-size:34px;font-weight:700;color:#fff}
+.chip.on{background:#C6F24E;color:#0B0B0D;border-color:#C6F24E}
+#phone{position:absolute;left:260px;top:560px;width:560px;height:1150px;border-radius:86px;background:#121214;padding:18px;
+  box-shadow:0 60px 120px rgba(0,0,0,.65),0 0 0 3px #2a2a30 inset,0 0 0 2px #3a3a42;transform-origin:50% 50%}
+#scr{position:relative;width:100%;height:100%;border-radius:70px;overflow:hidden;background:#fff;color:#111}
+#isl{position:absolute;left:50%;top:22px;width:150px;height:42px;margin-left:-75px;border-radius:30px;background:#000;z-index:20}
+.sc{position:absolute;inset:0;opacity:0}
+.sb{position:absolute;left:44px;right:44px;top:30px;display:flex;justify-content:space-between;font-weight:700;font-size:24px;z-index:19}
+.appicon{display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#FF5AAE,#E0157A);box-shadow:0 10px 26px rgba(224,21,122,.35)}
+/* kilit ekranı */
+#s1{background:linear-gradient(170deg,#2b2f3a,#0f1116);color:#fff}
+#s1 .tm{position:absolute;top:150px;width:100%;text-align:center;font-family:"Inter Display";font-weight:300;font-size:150px;letter-spacing:-4px}
+#s1 .dt{position:absolute;top:120px;width:100%;text-align:center;font-size:28px;font-weight:600;opacity:.85}
+#noti{position:absolute;left:24px;right:24px;top:430px;padding:22px;border-radius:34px;background:rgba(255,255,255,.18);backdrop-filter:blur(20px);display:flex;gap:18px;align-items:center}
+#noti b{display:block;font-size:26px} #noti span{font-size:24px;opacity:.9;line-height:1.25}
+/* açılış */
+#s2{background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+#s2 .nm{font-family:"Inter Display";font-weight:800;font-size:64px;color:#111;letter-spacing:-1px}
+#s2 .sub{font-size:26px;color:#666;text-align:center;padding:0 40px;line-height:1.3}
+#s2 .tst{margin-top:20px;display:flex;gap:12px}
+#s2 .tst div{padding:10px 22px;border-radius:30px;background:#F2F2F5;font-weight:700;font-size:26px;color:#111}
+/* kayıt */
+#s3{background:#fff;padding:120px 40px 0}
+#s3 h3{font-family:"Inter Display";font-size:46px;font-weight:800;color:#111;margin:26px 0 10px}
+#s3 .ds{font-size:24px;color:#666;margin-bottom:40px}
+.btn{height:92px;border-radius:24px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:27px;margin-bottom:20px;border:2px solid #E5E5EA;color:#111;background:#fff;position:relative}
+.btn.pr{background:#111;color:#fff;border-color:#111}
+.or{text-align:center;color:#999;font-size:22px;margin:8px 0 24px}
+#tap{position:absolute;width:90px;height:90px;border-radius:50%;background:rgba(255,46,147,.35);border:4px solid #FF2E93;opacity:0;z-index:30}
+#sync{position:absolute;left:30px;right:30px;bottom:60px;padding:30px;border-radius:30px;background:#111;color:#fff;opacity:0;text-align:center}
+#sync .row{display:flex;justify-content:center;align-items:center;gap:22px;margin-bottom:18px}
+#sync .ig{padding:12px 20px;border-radius:18px;background:#26262c;font-weight:700;font-size:24px}
+#sync .ar{font-size:40px;color:#C6F24E;font-weight:800}
+#sync p{font-size:24px;line-height:1.3}
+/* sohbet */
+#s4{background:#fff}
+#s4 .top{position:absolute;top:84px;left:0;right:0;height:100px;display:flex;align-items:center;gap:16px;padding:0 30px;border-bottom:1px solid #EEE}
+.av{width:64px;height:64px;border-radius:50%;background:linear-gradient(140deg,#C6F24E,#7cc400)}
+#s4 .top b{font-size:28px} #s4 .top span{display:block;font-size:20px;color:#888}
+#note{position:absolute;left:96px;top:66px;padding:8px 16px;border-radius:18px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.15);font-size:20px;font-weight:600;opacity:0;z-index:5}
+.msg{position:absolute;max-width:380px;padding:18px 24px;border-radius:30px;font-size:27px;line-height:1.3}
+.msg.l{left:28px;background:#F0F0F3;color:#111;border-bottom-left-radius:8px}
+.msg.r{right:28px;background:#FF2E93;color:#fff;border-bottom-right-radius:8px}
+#draw{position:absolute;left:150px;top:560px;opacity:0}
+#stk{position:absolute;right:40px;top:690px;opacity:0}
+#snd{position:absolute;left:28px;top:900px;width:400px;padding:18px 22px;border-radius:30px;background:#F0F0F3;display:flex;gap:16px;align-items:center;opacity:0}
+#snd .pl{width:56px;height:56px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center}
+#snd .wv{display:flex;gap:5px;align-items:center;height:50px}
+#snd .wv i{display:block;width:6px;border-radius:3px;background:#111}
+#snd small{display:block;font-size:20px;color:#666;margin-top:4px}
+.bub{position:absolute;border-radius:50%;border:3px solid #8EC9FF;opacity:0}
+/* gizlilik */
+#s5{background:#F2F2F7;padding:120px 30px 0}
+#s5 h3{font-family:"Inter Display";font-size:46px;font-weight:800;color:#111;margin:20px 10px 26px}
+.grp{background:#fff;border-radius:26px;overflow:hidden;margin-bottom:26px}
+.grp .tt{padding:22px 26px 6px;font-size:22px;color:#888;font-weight:600}
+.opt{display:flex;justify-content:space-between;align-items:center;padding:24px 26px;border-top:1px solid #EEE;font-size:27px;font-weight:600;color:#111}
+.opt .ck{opacity:0}
+.tg{width:84px;height:50px;border-radius:30px;background:#DDD;position:relative}
+.tg i{position:absolute;top:4px;left:4px;width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.age{display:inline-block;padding:6px 16px;border-radius:14px;background:#111;color:#fff;font-weight:800}
+/* ana ekran */
+#s6{background:linear-gradient(170deg,#1d2230,#0d0f15)}
+#grid{position:absolute;left:40px;right:40px;top:140px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px 26px}
+#grid .ap{width:100px;height:100px;border-radius:26px;background:#2b2f3c}
+#grid .lb{height:14px;width:70px;margin:10px auto 0;border-radius:7px;background:#3a3f4d}
+#dIcon{position:absolute;left:50%;top:640px;margin-left:-110px;text-align:center}
+#dIcon .appicon{width:220px;height:220px;border-radius:56px}
+#dIcon b{display:block;margin-top:16px;font-size:34px;color:#fff}
+#q{position:absolute;left:640px;top:600px;font-family:"Inter Display";font-weight:900;font-size:200px;color:#C6F24E;opacity:0}
+#kare{position:absolute;right:30px;top:1500px;width:230px;height:230px;z-index:40;filter:drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+#kare>div{position:absolute;inset:0;opacity:0}
+#hand{position:absolute;left:44px;bottom:40px;font:800 28px Inter;color:rgba(255,255,255,.55)}
+</style></head><body>
+<div id="bg"></div><div id="glow"></div>
+<div class="hd" id="h1"><h1>Instagram'ın yeni uygulaması<br><em>sadece 2 ülkede.</em></h1><div class="pill" id="p1">Biri Türkiye!</div></div>
+<div class="hd" id="h2"><h1>Adı: <em>Direct</em></h1><p>Instagram'dan ayrı, sadece mesajlaşma için.</p></div>
+<div class="hd" id="h3"><h1>Instagram hesabı<br><em>şart değil.</em></h1></div>
+<div class="hd" id="h4"><h1>İçinde <em>neler var?</em></h1><div class="chips"><div class="chip" id="c1">Çizim</div><div class="chip" id="c2">Notlar</div><div class="chip" id="c3">Çıkartmalar</div><div class="chip" id="c4">Ses efektleri</div></div></div>
+<div class="hd" id="h5"><h1>Sana kim<br><em>yazabilir?</em></h1></div>
+<div class="hd" id="h6"><h1>Senin telefonunda<br><em>var mı?</em></h1><div class="pill" id="p6">Gördüysen yorumlara yaz</div></div>
+<div id="phone"><div id="scr"><div id="isl"></div>
+ <div class="sc" id="s1"><div class="sb"><span>19:10</span><span>5G</span></div><div class="dt">18 Kasım Çarşamba</div><div class="tm">19:10</div>
+  <div id="noti"><div class="appicon" style="width:70px;height:70px;border-radius:18px"><svg viewBox="0 0 100 100" width="43" height="43"><path d="M14 47 L86 16 L66 86 L49 60 Z" fill="#fff"/><path d="M49 60 L86 16" stroke="#E0157A" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><div><b>Direct</b><span>Instagram'dan ayrı yeni mesajlaşma uygulaması</span></div></div></div>
+ <div class="sc" id="s2"><div class="sb"><span>19:10</span><span>5G</span></div><div class="appicon" style="width:200px;height:200px;border-radius:50px"><svg viewBox="0 0 100 100" width="124" height="124"><path d="M14 47 L86 16 L66 86 L49 60 Z" fill="#fff"/><path d="M49 60 L86 16" stroke="#E0157A" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><div class="nm">Direct</div><div class="sub">Sadece mesajlaşma için.</div>
+  <div class="tst" id="tst"><div>Test: Türkiye</div><div>Tayland</div></div></div>
+ <div class="sc" id="s3"><div id="tap"></div><div class="sb" style="color:#111"><span>19:10</span><span>5G</span></div><div class="appicon" style="width:96px;height:96px;border-radius:24px"><svg viewBox="0 0 100 100" width="59" height="59"><path d="M14 47 L86 16 L66 86 L49 60 Z" fill="#fff"/><path d="M49 60 L86 16" stroke="#E0157A" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><h3>Direct'e hoş geldin</h3><div class="ds">Nasıl devam etmek istersin?</div>
+  <div class="btn" id="b1">E-posta ile kaydol</div><div class="btn" id="b2">Telefon numarasıyla kaydol</div><div class="or">ya da</div><div class="btn pr" id="b3">Instagram hesabınla giriş yap</div>
+  <div id="sync"><div class="row"><div class="ig">Instagram</div><div class="ar">⇄</div><div class="ig">Direct</div></div><p>Sohbetlerin iki uygulamada da eşitlenir.</p></div></div>
+ <div class="sc" id="s4"><div class="sb" style="color:#111"><span>19:10</span><span>5G</span></div><div class="top"><div class="av"></div><div><b>Deniz</b><span>Çevrim içi</span></div></div>
+  <div id="note">Not: Kahve molası</div>
+  <div class="msg l" id="m1" style="top:230px">Akşam ne yapıyoruz?</div>
+  <div class="msg r" id="m2" style="top:360px">Bir dakika, çiziyorum…</div>
+  <svg id="draw" width="260" height="140" viewBox="0 0 260 140"><path id="dp" d="M20 100 C 40 20, 90 20, 100 70 C 110 120, 160 120, 175 60 C 185 25, 230 25, 240 80" fill="none" stroke="#FF2E93" stroke-width="10" stroke-linecap="round"/></svg>
+  <div id="stk"><svg width="230" height="230" viewBox="0 0 200 200" aria-hidden="true">
+<circle cx="100" cy="100" r="100" fill="none"></circle>
+<line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line>
+<circle cx="100" cy="35" r="8" fill="#7B61FF"></circle>
+<rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect>
+<rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect>
+<path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path>
+<rect x="83" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><rect x="108" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><path d="M92 107 Q100 113 108 107" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path>
+<rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect>
+<rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect>
+</svg></div>
+  <div id="snd"><div class="pl"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2 1 L9 5 L2 9 Z" fill="#fff"/></svg></div><div><div class="wv"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Ses efekti: su altı sesi</small></div></div>
+  <div class="bub" id="bb1" style="left:330px;top:900px;width:26px;height:26px"></div><div class="bub" id="bb2" style="left:370px;top:900px;width:18px;height:18px"></div><div class="bub" id="bb3" style="left:300px;top:900px;width:14px;height:14px"></div></div>
+ <div class="sc" id="s5"><div class="sb" style="color:#111"><span>19:10</span><span>5G</span></div><h3>Gizlilik</h3>
+  <div class="grp"><div class="tt">Sana kim mesaj atabilir?</div><div class="opt" id="o1">Rehberindeki kişiler<span class="ck" id="k1"><svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="11" fill="#1DB954"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="opt" id="o2">Bağlantıların<span class="ck" id="k2"><svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="11" fill="#1DB954"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div>
+  <div class="grp" id="g2" style="opacity:0"><div class="opt">Yaş sınırı<span class="age">13+</span></div><div class="opt">Ebeveyn denetimi<div class="tg" id="tg"><i id="tgi"></i></div></div></div></div>
+ <div class="sc" id="s6"><div class="sb"><span>19:10</span><span>5G</span></div><div id="grid"><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div><div><div class="ap"></div><div class="lb"></div></div></div><div id="dIcon"><div class="appicon" style="width:220px;height:220px;border-radius:56px"><svg viewBox="0 0 100 100" width="136" height="136"><path d="M14 47 L86 16 L66 86 L49 60 Z" fill="#fff"/><path d="M49 60 L86 16" stroke="#E0157A" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><b>Direct</b></div><div id="q">?</div></div>
+</div></div>
+<div id="kare"><div id="kf_mutlu"><svg width="230" height="230" viewBox="0 0 200 200" aria-hidden="true">
+<circle cx="100" cy="100" r="100" fill="none"></circle>
+<line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line>
+<circle cx="100" cy="35" r="8" fill="#7B61FF"></circle>
+<rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect>
+<rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect>
+<path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path>
+<rect x="83" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><rect x="108" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><path d="M92 107 Q100 113 108 107" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path>
+<rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect>
+<rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect>
+</svg></div><div id="kf_saskin"><svg width="230" height="230" viewBox="0 0 200 200" aria-hidden="true">
+<circle cx="100" cy="100" r="100" fill="none"></circle>
+<line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line>
+<circle cx="100" cy="35" r="8" fill="#7B61FF"></circle>
+<rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect>
+<rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect>
+<path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path>
+<circle cx="87" cy="91" r="7" fill="#FFFFFF"></circle><circle cx="113" cy="91" r="7" fill="#FFFFFF"></circle><circle cx="100" cy="110" r="4.5" fill="none" stroke="#FFFFFF" stroke-width="3"></circle>
+<rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect>
+<rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect>
+</svg></div><div id="kf_fikir"><svg width="230" height="230" viewBox="0 0 200 200" aria-hidden="true">
+<circle cx="100" cy="100" r="100" fill="none"></circle>
+<line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line>
+<circle cx="100" cy="35" r="8" fill="#7B61FF"></circle>
+<rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect>
+<rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect>
+<path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path>
+<path d="M81 94 Q87.5 86 94 94" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M106 94 Q112.5 86 119 94" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M88 104 H112 Q110 116 100 116 Q90 116 88 104 Z" fill="#FFFFFF"></path><circle cx="100" cy="35" r="15" fill="none" stroke="#B8F24A" stroke-width="3" opacity="0.6"></circle>
+<rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect>
+<rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect>
+</svg></div><div id="kf_goz"><svg width="230" height="230" viewBox="0 0 200 200" aria-hidden="true">
+<circle cx="100" cy="100" r="100" fill="none"></circle>
+<line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line>
+<circle cx="100" cy="35" r="8" fill="#7B61FF"></circle>
+<rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect>
+<rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect>
+<path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path>
+<rect x="83" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><path d="M106 93 Q112.5 87 119 93" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M90 106 Q100 115 110 106" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path>
+<rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect>
+<rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect>
+</svg></div></div>
+<div id="hand">@frame.labo</div>
 <script>
-/* Frame Lab çizgi film sahnesi (cartoon-kare.html'den uyarlandı).
-   Konu: Meta'nın ayrı mesajlaşma uygulaması Direct, yalnızca Türkiye ve Tayland'da test ediliyor (Meta, 17 Kasım 2026). */
-const C=document.getElementById('c'), X=C.getContext('2d');
-const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF';
-window.WARP_S=[0,3.4,8.0,13.0,18.6,23.2,28.5];
-window.WARP_V=[0,6.0,12.2,21.4,28.3,35.6,40.6];
-window.DUR=window.WARP_V?window.WARP_V[window.WARP_V.length-1]:28.5;
-window.SFX=[[0.3,'pop'],[0.9,'pop2'],[3.4,'whoosh'],[3.9,'ding'],[5.2,'pop'],[5.5,'pop'],[8.0,'whoosh'],[8.6,'pop2'],[10.2,'pop'],[13.0,'whoosh'],[13.5,'pop'],[14.0,'pop'],[14.5,'pop'],[15.0,'pop'],[16.0,'pop2'],[18.6,'whoosh'],[19.3,'pop'],[23.2,'whoosh'],[23.8,'pop2'],[25.6,'ding']];
-const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
-const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
-const eio=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
-const back=x=>{x=clamp(x);const c=1.9;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
-const elastic=x=>{x=clamp(x);return x===0?0:x===1?1:Math.pow(2,-10*x)*Math.sin((x*10-0.75)*2.094)+1};
-let BOIL=0; // her 1/12 sn değişen tohum
-function rnd(i){const s=Math.sin(i*127.1+BOIL*311.7)*43758.5453;return s-Math.floor(s)}
-function j(i,a=3){return (rnd(i)-.5)*2*a} // titreme
-function rr(x,y,w,h,r,k=0){ // titreyen yuvarlak dikdörtgen
-  X.beginPath();
-  X.moveTo(x+r+j(k+1),y+j(k+2)); X.lineTo(x+w-r+j(k+3),y+j(k+4));
-  X.quadraticCurveTo(x+w+j(k+5),y+j(k+6),x+w+j(k+7),y+r+j(k+8)); X.lineTo(x+w+j(k+9),y+h-r+j(k+10));
-  X.quadraticCurveTo(x+w+j(k+11),y+h+j(k+12),x+w-r+j(k+13),y+h+j(k+14)); X.lineTo(x+r+j(k+15),y+h+j(k+16));
-  X.quadraticCurveTo(x+j(k+17),y+h+j(k+18),x+j(k+19),y+h-r+j(k+20)); X.lineTo(x+j(k+21),y+r+j(k+22));
-  X.quadraticCurveTo(x+j(k+23),y+j(k+24),x+r+j(k+1),y+j(k+2)); X.closePath();
-}
-function ell(x,y,rx,ry,k=0){X.beginPath();X.ellipse(x+j(k,2),y+j(k+1,2),Math.max(1,rx+j(k+2,2)),Math.max(1,ry+j(k+3,2)),0,0,Math.PI*2)}
-function inkFill(fill,lw=12){X.fillStyle=fill;X.fill();X.lineWidth=lw;X.strokeStyle=INK;X.lineJoin='round';X.lineCap='round';X.stroke()}
-function noodle(x1,y1,cx,cy,x2,y2,lw=26,k=0){ // lastik hortum kol/bacak: kontur + iç
-  X.lineCap='round';
-  for(const [w,c] of [[lw+20,INK],[lw,INK]]){X.beginPath();X.moveTo(x1,y1);X.quadraticCurveTo(cx+j(k,4),cy+j(k+1,4),x2,y2);X.lineWidth=w;X.strokeStyle=c;X.stroke();}
-}
-function glove(x,y,r=46,k=0,point=false){ell(x,y,r,r*.9,k);inkFill(WHITE,10);
-  if(point){X.beginPath();X.moveTo(x-6,y-r*.6);X.lineTo(x-6,y-r*1.9);X.lineWidth=34;X.strokeStyle=INK;X.stroke();X.lineWidth=16;X.strokeStyle=WHITE;X.stroke();}
-  X.beginPath();X.moveTo(x-r*.35,y-r*.1);X.lineTo(x-r*.35,y+r*.45);X.moveTo(x+r*.05,y-r*.1);X.lineTo(x+r*.05,y+r*.5);X.lineWidth=6;X.strokeStyle=INK;X.stroke();}
-function shoe(x,y,dir=1,k=0){ell(x+dir*22,y,62,34,k);inkFill(INK,4);ell(x+dir*40,y-10,18,9,k+9);X.fillStyle='#444';X.fill();}
-/* Kare: o = {x,y,s,sq,look:[lx,ly],blink,mouth,armL,armR,legs,sweat,wink,point} ; (x,y) ayak tabanı */
-function kare(o){
-  const s=o.s||1; X.save(); X.translate(o.x,o.y); X.scale(s*(1+(o.sq||0)),s*(1-(o.sq||0)));
-  const W=520,Hh=430, top=-Hh-300;
-  // bacaklar
-  const lg=o.legs||0;
-  noodle(-110,-300,-130+lg*30,-150,-150+lg*60,-34,28,30); noodle(110,-300,130-lg*30,-150,150-lg*60,-34,28,40);
-  shoe(-150+lg*60,-20,-1,50); shoe(150-lg*60,-20,1,60);
-  // kollar (gövdenin arkası)
-  const aL=o.armL||[-430,-560], aR=o.armR||[430,-560];
-  noodle(-W/2+10,top+Hh*.62,(aL[0]-W/2)/2-60,(aL[1]+top+Hh*.62)/2+80,aL[0],aL[1],26,70);
-  noodle(W/2-10,top+Hh*.62,(aR[0]+W/2)/2+60,(aR[1]+top+Hh*.62)/2+80,aR[0],aR[1],26,80);
-  // boyun/gövde
-  rr(-150,-330,300,60,24,90); inkFill(LIME,12);
-  // anten
-  X.beginPath();X.moveTo(0,top);X.quadraticCurveTo(j(100,6),top-60,8*Math.sin(BOIL),top-120);X.lineWidth=12;X.strokeStyle=INK;X.stroke();
-  ell(8*Math.sin(BOIL),top-140,30,30,110); inkFill(PINK,10);
-  // kafa
-  rr(-W/2,top,W,Hh,80,120); inkFill(LIME,14);
-  rr(-W/2+48,top+46,W-96,Hh-92,52,150); inkFill(INK,8);
-  // gözler
-  const ex=118, ey=top+Hh*.44, lk=o.look||[0,0], bl=clamp(1-(o.blink||0),0.08,1);
-  for(const sd of [-1,1]){
-    const wink=(o.wink&&sd===1);
-    if(wink){X.beginPath();X.moveTo(sd*ex-46,ey);X.quadraticCurveTo(sd*ex,ey-40,sd*ex+46,ey);X.lineWidth=14;X.strokeStyle=WHITE;X.lineCap='round';X.stroke();continue;}
-    const big=o.wide?1.18:1;
-    ell(sd*ex,ey,62*big,66*big*bl,160+sd*5); X.fillStyle=WHITE; X.fill();
-    if(bl>0.3){ell(sd*ex+lk[0]*24,ey+lk[1]*22,27,29*Math.min(1,bl*1.2),170+sd*5);X.fillStyle=INK;X.fill();
-      ell(sd*ex+lk[0]*24+10,ey+lk[1]*22-10,8,8,180+sd);X.fillStyle=WHITE;X.fill();}
-  }
-  // ağız
-  const my=top+Hh*.72; X.strokeStyle=WHITE; X.lineWidth=13; X.lineCap='round';
-  if(o.mouth==='o'){ell(0,my+6,30,38,190);X.fillStyle=WHITE;X.fill();ell(0,my+12,18,22,191);X.fillStyle=PINK;X.fill();}
-  else if(o.mouth==='shout'){X.beginPath();X.moveTo(-70,my-14);X.quadraticCurveTo(0,my+90,70,my-14);X.closePath();X.fillStyle=WHITE;X.fill();
-    X.beginPath();X.moveTo(-40,my+30);X.quadraticCurveTo(0,my+64,40,my+30);X.fillStyle=PINK;X.fill();}
-  else if(o.mouth==='grit'){rr(-70,my-20,140,48,14,200);X.fillStyle=WHITE;X.fill();X.beginPath();for(let i=-1;i<=1;i++){X.moveTo(i*35,my-20);X.lineTo(i*35,my+28);}X.moveTo(-70,my+4);X.lineTo(70,my+4);X.lineWidth=5;X.strokeStyle=INK;X.stroke();}
-  else {X.beginPath();X.moveTo(-64,my-6);X.quadraticCurveTo(0,my+56,64,my-6);X.stroke();}
-  // ter damlaları
-  if(o.sweat){for(const [dx,dy,ph] of [[W/2-10,top+60,0],[-W/2+20,top+90,.5]]){const f=(o.sweat+ph)%1;const yy=dy+f*120;
-    X.globalAlpha=1-f; X.beginPath();X.moveTo(dx,yy-34);X.quadraticCurveTo(dx+26,yy,dx,yy+14);X.quadraticCurveTo(dx-26,yy,dx,yy-34);X.fillStyle='#8EC9FF';X.fill();X.lineWidth=7;X.strokeStyle=INK;X.stroke();X.globalAlpha=1;}}
-  X.restore();
-  // eldivenler (en önde)
-  X.save(); X.translate(o.x,o.y); X.scale(s*(1+(o.sq||0)),s*(1-(o.sq||0)));
-  glove(aL[0],aL[1],48,210); glove(aR[0],aR[1],48,220,o.point);
-  X.restore();
-}
-function bubble(x,y,w,h,txt,size,tailX,tailY,k=0,sc=1){
-  X.save();X.translate(x,y);X.scale(sc,sc);
-  X.beginPath();X.moveTo(-w*.12,h*.4);X.lineTo(tailX-x,tailY-y);X.lineTo(w*.12,h*.4);X.closePath();inkFill(WHITE,12);
-  rr(-w/2,-h/2,w,h,h*.45,k);inkFill(WHITE,12);
-  X.beginPath();X.moveTo(-w*.11,h*.36);X.lineTo(w*.11,h*.36);X.lineWidth=16;X.strokeStyle=WHITE;X.stroke();
-  X.font=`900 ${size}px "Inter Display"`;X.textAlign='center';X.textBaseline='middle';X.fillStyle=INK;X.fillText(txt,0,4);
-  X.restore();
-}
-function comic(txt,x,y,size,fill=WHITE,align='center',lw=16){ // konturlu çizgi roman yazısı
-  X.font=`900 ${size}px "Inter Display"`;X.letterSpacing=Math.round(size*0.03)+'px';X.textAlign=align;X.textBaseline='alphabetic';X.lineJoin='round';
-  const lines=txt.split('\n'); lines.forEach((l,i)=>{const yy=y+i*size*1.02;
-    X.lineWidth=lw;X.strokeStyle=INK;X.strokeText(l,x,yy);X.fillStyle=fill;X.fillText(l,x,yy);}); X.letterSpacing='0px';
-}
-function caption(txt,y,size=58,alpha=1){ // altyazı şeridi
-  X.globalAlpha=alpha;X.font=`800 ${size}px "Inter"`;X.textAlign='center';X.textBaseline='middle';
-  const lines=txt.split('\n'); const w=Math.max(...lines.map(l=>X.measureText(l).width))+80, h=lines.length*size*1.25+44;
-  rr(540-w/2,y-h/2,w,h,28,300);inkFill(WHITE,10);
-  X.fillStyle=INK;lines.forEach((l,i)=>X.fillText(l,540,y-h/2+22+size*.65+i*size*1.25));X.globalAlpha=1;
-}
-function phone(x,y,s,scroll,rot){
-  X.save();X.translate(x,y);X.rotate(rot);X.scale(s,s);
-  rr(-200,-380,400,760,64,400);inkFill(INK,12);
-  X.save();X.beginPath();X.rect(-170,-330,340,660);X.clip();X.fillStyle=CREAM;X.fillRect(-170,-330,340,660);
-  const cols=[PINK,LIME,'#8EC9FF',INK,'#FFD9EA',LIME];
-  for(let i=-1;i<8;i++){const yy=-330+((i*250-scroll)%2000+2000)%2000-250; if(yy>340||yy<-600)continue;
-    rr(-150,yy+20,300,210,26,410+i);inkFill(cols[(i+8)%cols.length],6);
-    ell(-110,yy+60,18,18,420+i);inkFill(WHITE,5);X.fillStyle=INK;X.fillRect(-80,yy+52,120,14);}
-  const sp=Math.abs(scroll-(window._ls||scroll));window._ls=scroll;
-  X.restore();
-  rr(-60,-360,120,20,10,430);X.fillStyle='#333';X.fill();
-  X.restore();
-}
-function stopwatch(x,y,r,val,ang,sc){
-  X.save();X.translate(x,y);X.scale(sc,sc);
-  rr(-40,-r-70,80,60,14,500);inkFill(PINK,12);
-  ell(0,0,r,r,510);inkFill(CREAM,16);ell(0,0,r-38,r-38,520);X.lineWidth=6;X.strokeStyle=INK;X.stroke();
-  for(let i=0;i<12;i++){const a=i/12*Math.PI*2;X.beginPath();X.moveTo(Math.sin(a)*(r-50),-Math.cos(a)*(r-50));X.lineTo(Math.sin(a)*(r-76),-Math.cos(a)*(r-76));X.lineWidth=8;X.strokeStyle=INK;X.stroke();}
-  X.save();X.rotate(ang);X.beginPath();X.moveTo(0,20);X.lineTo(0,-r+70);X.lineWidth=14;X.strokeStyle=PINK;X.lineCap='round';X.stroke();X.restore();
-  ell(0,0,20,20,530);inkFill(INK,4);
-  X.font='900 150px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.fillStyle=INK;X.fillText(val,0,r*.42);
-  X.restore();
-}
-function speed(x,y,n,len,t){X.lineCap='round';for(let i=0;i<n;i++){const xx=x+(i-(n-1)/2)*70+j(600+i,6);X.beginPath();X.moveTo(xx,y-len*(0.6+0.4*rnd(610+i)));X.lineTo(xx,y);X.lineWidth=10;X.strokeStyle=INK;X.globalAlpha=0.85;X.stroke();X.globalAlpha=1;}}
-
-function iconMotion(x,y,s){X.save();X.translate(x,y);X.scale(s,s);rr(-70,-70,140,140,36,1000);inkFill(LIME,10);
-  for(let i=0;i<3;i++){X.beginPath();X.moveTo(-40+i*6,-30+i*30);X.lineTo(10+i*6,-30+i*30);X.lineWidth=12;X.strokeStyle=INK;X.lineCap='round';X.stroke();}
-  ell(36,0,22,22,1001);inkFill(PINK,8);X.restore();}
-function iconEye(x,y,s,look=0){X.save();X.translate(x,y);X.scale(s,s);rr(-70,-70,140,140,36,1010);inkFill(WHITE,10);
-  X.beginPath();X.moveTo(-50,0);X.quadraticCurveTo(0,-48,50,0);X.quadraticCurveTo(0,48,-50,0);X.closePath();inkFill(WHITE,9);
-  ell(look*10,0,20,20,1011);X.fillStyle=INK;X.fill();ell(look*10+6,-6,6,6,1012);X.fillStyle=WHITE;X.fill();X.restore();}
-function iconQ(x,y,s){X.save();X.translate(x,y);X.scale(s,s);rr(-70,-70,140,140,36,1020);inkFill(PINK,10);
-  X.font='900 120px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=12;X.strokeStyle=INK;X.strokeText('?',0,6);X.fillStyle=WHITE;X.fillText('?',0,6);X.restore();}
-function label(n,txt,y){comic(n+'. '+txt,540,y,104,WHITE,'center',18);}
-function postCard(x,y,s,grey){X.save();X.translate(x,y);X.scale(s,s);rr(-170,-210,340,420,30,1100);inkFill(grey?'#E2E0D8':WHITE,10);
-  rr(-140,-180,280,230,20,1101);X.fillStyle=grey?'#C9C7BF':'#FFD9EA';X.fill();X.fillStyle=grey?'#B7B5AD':INK;X.fillRect(-140,80,220,18);X.fillRect(-140,112,160,18);X.restore();}
-function giftQ(x,y,s,lid,wob){X.save();X.translate(x,y);X.scale(s,s);
-  rr(-190,-150,380,300,26,1200);inkFill(PINK,12);X.fillStyle=LIME;X.fillRect(-26,-150,52,300);X.lineWidth=10;X.strokeStyle=INK;X.strokeRect(-26,-150,52,300);
-  X.save();X.translate(0,-150-lid*220);X.rotate(wob-lid*0.5);rr(-215,-70,430,80,22,1210);inkFill(PINK,12);X.fillStyle=LIME;X.fillRect(-26,-70,52,80);X.strokeRect(-26,-70,52,80);
-  ell(-60,-96,62,34,1211);inkFill(LIME,10);ell(60,-96,62,34,1212);inkFill(LIME,10);X.restore();
-  if(lid>0.05){X.globalAlpha=clamp(lid*1.5);X.font='900 200px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=18;X.strokeStyle=INK;X.strokeText('?',0,-260-lid*80);X.fillStyle=WHITE;X.fillText('?',0,-260-lid*80);X.globalAlpha=1;}
-  X.restore();}
-
-
-/* ---- bu sahneye özel nesneler ---- */
-function plane(x,y,s,k=0){X.save();X.translate(x,y);X.scale(s,s);
-  X.beginPath();X.moveTo(-62+j(k,2),8+j(k+1,2));X.lineTo(64+j(k+2,2),-52+j(k+3,2));X.lineTo(22+j(k+4,2),58+j(k+5,2));X.lineTo(2,22);X.closePath();inkFill(LIME,9);
-  X.beginPath();X.moveTo(2,22);X.lineTo(64,-52);X.lineWidth=7;X.strokeStyle=INK;X.stroke();X.restore();}
-function appIcon(x,y,s,k=0){X.save();X.translate(x,y);X.scale(s,s);rr(-110,-110,220,220,60,k);inkFill(PINK,12);X.restore();plane(x,y,s*1.05,k+40);}
-function phoneFrame(x,y,s,rot,k=0){X.save();X.translate(x,y);X.rotate(rot);X.scale(s,s);rr(-200,-380,400,760,64,k);inkFill(INK,12);
-  X.fillStyle=CREAM;X.beginPath();X.roundRect(-172,-340,344,680,36);X.fill();rr(-60,-362,120,18,9,k+30);X.fillStyle='#333';X.fill();}
-function phoneEnd(){X.restore();}
-function cloth(s,lt,k=0){ // örtülü ikon
-  X.beginPath();X.moveTo(-150,-120+j(k,4));X.quadraticCurveTo(0,-170+8*Math.sin(lt*9),150,-120+j(k+1,4));X.lineTo(170,140);X.quadraticCurveTo(0,110+10*Math.sin(lt*7),-170,140);X.closePath();inkFill(PINK,10);
-  X.font='900 170px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=16;X.strokeStyle=INK;X.strokeText('?',0,10);X.fillStyle=WHITE;X.fillText('?',0,10);}
-function tile(x,y,s,fill,k,draw){X.save();X.translate(x,y);X.scale(s,s);rr(-80,-80,160,160,40,k);inkFill(fill,10);draw();X.restore();}
-const icPencil=()=>{X.save();X.rotate(-0.75);rr(-16,-56,32,92,6,1500);inkFill(LIME,8);X.beginPath();X.moveTo(-16,36);X.lineTo(0,62);X.lineTo(16,36);X.closePath();inkFill(PINK,7);X.restore();};
-const icNote=()=>{rr(-56,-40,112,64,30,1510);inkFill(WHITE,8);X.beginPath();X.moveTo(-20,22);X.lineTo(-34,48);X.lineTo(0,24);X.fillStyle=WHITE;X.fill();X.lineWidth=8;X.strokeStyle=INK;X.stroke();
-  for(let i=-1;i<=1;i++){ell(i*26,-8,7,7,1511+i);X.fillStyle=INK;X.fill();}};
-const icSticker=()=>{ell(0,0,54,54,1520);inkFill(WHITE,8);ell(-18,-10,7,9,1521);X.fillStyle=INK;X.fill();ell(18,-10,7,9,1522);X.fill();
-  X.beginPath();X.moveTo(-24,14);X.quadraticCurveTo(0,40,24,14);X.lineWidth=8;X.strokeStyle=INK;X.lineCap='round';X.stroke();
-  X.beginPath();X.moveTo(22,50);X.quadraticCurveTo(40,30,52,22);X.lineTo(50,48);X.closePath();inkFill(LIME,6);};
-const icSpeaker=()=>{X.beginPath();X.moveTo(-50,-18);X.lineTo(-24,-18);X.lineTo(4,-44);X.lineTo(4,44);X.lineTo(-24,18);X.lineTo(-50,18);X.closePath();inkFill(INK,6);
-  for(let i=1;i<=2;i++){X.beginPath();X.arc(8,0,18+i*16,-0.8,0.8);X.lineWidth=8;X.strokeStyle=INK;X.lineCap='round';X.stroke();}};
-const icMail=()=>{rr(-58,-40,116,80,12,1530);inkFill(WHITE,8);X.beginPath();X.moveTo(-54,-34);X.lineTo(0,8);X.lineTo(54,-34);X.lineWidth=8;X.strokeStyle=INK;X.stroke();};
-const icPhoneNum=()=>{rr(-32,-56,64,112,16,1540);inkFill(WHITE,8);for(let r=0;r<3;r++)for(let c=0;c<3;c++){X.fillStyle=INK;X.fillRect(-20+c*15,-34+r*17,9,9);}};
-function lock(x,y,s,k=0){X.save();X.translate(x,y);X.scale(s,s);
-  X.beginPath();X.arc(0,-60,70,Math.PI,0);X.lineWidth=40;X.strokeStyle=INK;X.stroke();X.lineWidth=20;X.strokeStyle=WHITE;X.stroke();
-  rr(-120,-70,240,190,36,k);inkFill(PINK,12);ell(0,10,24,24,k+5);X.fillStyle=INK;X.fill();X.fillRect(-9,14,18,52);X.restore();}
-function tag(txt,x,y,fill,sc,fg=INK){if(sc<=0.01)return;X.save();X.translate(x,y);X.scale(sc,sc);X.font='900 54px "Inter Display"';const w=X.measureText(txt).width+80;
-  rr(-w/2,-50,w,100,50,1600+txt.length);inkFill(fill,10);X.fillStyle=fg;X.textAlign='center';X.textBaseline='middle';X.fillText(txt,0,4);X.restore();}
-function bubbles(x,y,lt){for(let i=0;i<5;i++){const f=((lt*0.9+i*0.21)%1);ell(x+Math.sin(i*2+lt*3)*30,y-f*260,10+i*3,10+i*3,1700+i);X.globalAlpha=1-f;X.lineWidth=6;X.strokeStyle=INK;X.stroke();X.globalAlpha=1;}}
-function sync(x,y,lt){X.lineWidth=12;X.strokeStyle=INK;X.lineCap='round';const o=8*Math.sin(lt*6);
-  X.beginPath();X.moveTo(x-70,y-24);X.lineTo(x+70,y-24);X.moveTo(x+46,y-48+o*0);X.lineTo(x+70,y-24);X.lineTo(x+46,y);X.stroke();
-  X.beginPath();X.moveTo(x+70,y+34);X.lineTo(x-70,y+34);X.moveTo(x-46,y+10);X.lineTo(x-70,y+34);X.lineTo(x-46,y+58);X.stroke();}
-
-function warp(t){const V=window.WARP_V,S=window.WARP_S;if(!V)return t;for(let i=0;i<V.length-1;i++){if(t<V[i+1]||i===V.length-2){return S[i]+(t-V[i])/(V[i+1]-V[i])*(S[i+1]-S[i]);}}return t;}
-function unwarp(s){const V=window.WARP_V,S=window.WARP_S;if(!V)return s;for(let i=0;i<S.length-1;i++){if(s<S[i+1]||i===S.length-2){return V[i]+(s-S[i])/(S[i+1]-S[i])*(V[i+1]-V[i]);}}return s;}
-window.SFX=window.SFX.map(e=>[+unwarp(e[0]).toFixed(3),e[1]]);
-window.render=function(tv){
-  const t=warp(tv);
-  BOIL=Math.floor(tv*12);
-  X.setTransform(1,0,0,1,0,0);
-  X.fillStyle=CREAM;X.fillRect(0,0,1080,1920);
-  const bgR=900+20*Math.sin(t*2);
-  let bgc=PINK; if(t>=3.4&&t<8.0) bgc=LIME; else if(t>=8.0&&t<13.0) bgc=WHITE; else if(t>=13.0&&t<18.6) bgc='#FFD9EA'; else if(t>=18.6&&t<23.2) bgc=LIME; else if(t>=23.2) bgc=PINK;
-  ell(540,1080,bgR*0.8,bgR*0.8,700);X.fillStyle=bgc;X.fill();X.lineWidth=14;X.strokeStyle=INK;X.stroke();
-  // ---------- 1) kanca (0–3.4) ----------
-  if(t<3.4){
-    const fall=ease(t/0.36), land=t>0.36?Math.exp(-(t-0.36)*7)*Math.sin((t-0.36)*28):0;
-    const y=1450+(1720-1450)*fall;
-    if(t<0.4) speed(400,y-760,4,220,t);
-    const s=0.95, aR=[470,-700+30*Math.sin(t*10)];
-    kare({x:400,y:y,s:s,sq:t<0.36?-0.12*(1-fall):land*0.22,look:[0.25,0.15],mouth:t>0.34?'shout':'o',
-      armL:[-430,-880+60*Math.sin(t*14)],armR:aR,legs:0,blink:(t>2.2&&t<2.3)?1:0});
-    phoneFrame(400+aR[0]*s+40,y+aR[1]*s-60,0.62,0.12+0.05*Math.sin(t*5),900); cloth(1,t,920); phoneEnd();
-    comic("Instagram'ın yeni\nuygulaması\nsadece 2 ülkede.",540,220,94,WHITE,'center',18);
-    if(t>0.6){const bs=elastic((t-0.6)/0.5); bubble(300,680,420,190,'Biri Türkiye!',64,360,830,800,bs);}
-  }
-  // ---------- 2) Direct (3.4–8.0) ----------
-  else if(t<8.0){
-    const lt=t-3.4, inn=back(lt/0.45);
-    phoneFrame(500,900+(1-inn)*900,1.0,-0.04,1000);
-    const rev=ease((lt-0.35)/0.4);
-    if(rev<1){X.save();X.translate(0,-rev*700);X.globalAlpha=1-rev;cloth(1,lt,1020);X.restore();X.globalAlpha=1;}
-    if(lt>0.35){const sc=elastic((lt-0.35)/0.6); appIcon(0,-60,sc*1.1,1040);
-      X.font='900 76px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.fillStyle=INK;X.globalAlpha=clamp((lt-0.6)/0.3);X.fillText('Direct',0,140);X.globalAlpha=1;}
-    phoneEnd();
-    kare({x:880,y:1300,s:0.36,look:[-0.9,-0.3],mouth:'o',wide:true,armL:[-560,-820],armR:[380,-700],point:false});
-    comic('Adı: Direct',540,300,120,WHITE,'center',18);
-    tag('Türkiye',380,1420,PINK,back((lt-1.8)/0.4),WHITE); tag('Tayland',720,1420,WHITE,back((lt-2.1)/0.4));
-    caption("Instagram'dan ayrı bir mesajlaşma uygulaması.\nTest şimdilik bu iki ülkede.",1590,44,clamp((lt-0.9)/0.25));
-  }
-  // ---------- 3) hesap şart değil (8.0–13.0) ----------
-  else if(t<13.0){
-    const lt=t-8.0, inn=back(lt/0.5);
-    comic("Instagram hesabı\nşart değil.",540,290,112,WHITE,'center',18);
-    const nod=lt<2.4?0:Math.sin((lt-2.4)*8)*0.25;
-    kare({x:540,y:1380+(1-inn)*600,s:0.66,look:[lt<2.4?Math.sin(lt*3)*0.8:0,0.1+nod],mouth:'smile',armL:[-470,-760],armR:[470,-760]});
-    if(lt<2.4){const a=back((lt-0.5)/0.4), b=back((lt-0.75)/0.4);
-      tile(190,820,1.2*a,WHITE,1100,icMail); tile(890,820,1.2*b,WHITE,1110,icPhoneNum);
-      caption('E-posta ya da telefon\nnumarasıyla kaydolabilirsin.',1560,48,clamp((lt-0.6)/0.25));}
-    else {const a=back((lt-2.4)/0.4);
-      X.save();X.translate(190,840);X.scale(a*0.5,a*0.5);phoneFrame(0,0,1,-0.06,1120);appIcon(0,0,0.9,1130);phoneEnd();X.restore();
-      X.save();X.translate(890,840);X.scale(a*0.5,a*0.5);phoneFrame(0,0,1,0.06,1140);X.save();X.scale(1.6,1.6);icNote();X.restore();phoneEnd();X.restore();
-      X.font='800 34px "Inter"';X.textAlign='center';X.fillStyle=INK;X.globalAlpha=clamp((lt-2.6)/0.3);X.fillText('Direct',190,1090);X.fillText('Instagram',890,1090);X.globalAlpha=1;
-      caption("Instagram'la girersen sohbetlerin\niki uygulamada da eşitlenir.",1560,48,clamp((lt-2.5)/0.25));}
-  }
-  // ---------- 4) özellikler (13.0–18.6) ----------
-  else if(t<18.6){
-    const lt=t-13.0;
-    comic('İçinde neler var?',540,290,100,WHITE,'center',18);
-    const items=[[330,600,LIME,icPencil,'Çizim'],[750,600,WHITE,icNote,'Notlar'],[330,940,PINK,icSticker,'Çıkartma'],[750,940,WHITE,icSpeaker,'Ses efekti']];
-    items.forEach((it,i)=>{const p=0.4+i*0.5; if(lt>p){const e=elastic((lt-p)/0.5); tile(it[0],it[1],1.25*e,it[2],1200+i*10,it[3]);
-      X.font='900 46px "Inter Display"';X.textAlign='center';X.textBaseline='alphabetic';X.fillStyle=INK;X.globalAlpha=clamp((lt-p-0.2)/0.2);X.fillText(it[4],it[0],it[1]+150);X.globalAlpha=1;}});
-    const blub=lt>3.0;
-    kare({x:540,y:1560,s:0.42,look:blub?[0.2,0]:[0,-0.8],mouth:blub?'o':'smile',armL:[-430,-700],armR:[430,-700],wide:blub});
-    if(blub){bubbles(520,1150,lt);const e=elastic((lt-3.0)/0.5);bubble(830,1190,330,140,'Blub blub!',54,700,1290,1250,e);
-      caption('Ses efekti: kahkaha ya da su altı sesi.',1690,40,clamp((lt-3.2)/0.25));}
-  }
-  // ---------- 5) güvenlik (18.6–23.2) ----------
-  else if(t<23.2){
-    const lt=t-18.6;
-    comic('Sana kim\nyazabilir?',540,290,112,WHITE,'center',18);
-    const e=elastic((lt-0.5)/0.6); lock(730,900,1.25*e,1300);
-    kare({x:310,y:1360,s:0.5,look:[0.9,-0.3],mouth:lt>1.6?'smile':'o',armL:[-430,-700],armR:[470,-900],blink:(lt>2.8&&lt<2.9)?1:0});
-    caption('Sadece rehberindeki kişiler\nve bağlantıların yazabilir.\n13 yaş sınırı ve ebeveyn denetimi var.',1560,46,clamp((lt-0.9)/0.25));
-  }
-  // ---------- 6) kapanış (23.2–28.5) ----------
-  else{
-    const lt=t-23.2, inn=back(lt/0.5);
-    const wink=lt>2.6&&lt<3.1;
-    kare({x:540,y:1580+(1-inn)*500,s:0.85,look:[0,0.2],mouth:'smile',wink:wink,armL:[-440,-700],armR:[420,-860],point:true,legs:Math.sin(lt*6)*0.1});
-    comic('Telefonunda\nvar mı?',540,300,124,WHITE,'center',18);
-    if(lt>1.0){const a=clamp((lt-1.0)/0.25);caption('Gördüysen yorumlara yaz.',590,56,a);}
-    if(lt>2.0){const sc=elastic((lt-2.0)/0.5);X.save();X.translate(560,1720);X.rotate(-0.05);X.scale(sc,sc);rr(-250,-60,500,120,60,900);inkFill(LIME,10);
-      X.font='900 46px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.fillStyle=INK;X.fillText('Arkadaşına gönder',0,4);X.restore();}
-  }
+window.WARP_S=null; window.DUR=40.6;
+window.SFX=[[0.2,'whoosh'],[1.0,'pop'],[4.8,'pop2'],[6.0,'whoosh'],[6.5,'pop'],[9.9,'ding'],[12.2,'whoosh'],[14.7,'pop'],[16.0,'pop'],[17.9,'pop2'],[18.6,'ding'],[21.4,'whoosh'],[22.8,'pop'],[23.9,'pop'],[25.0,'pop2'],[26.5,'pop'],[28.3,'whoosh'],[29.6,'tick'],[30.6,'tick'],[33.0,'pop'],[34.0,'ding'],[35.6,'whoosh'],[36.2,'pop2'],[37.9,'pop']];
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), E=x=>1-Math.pow(1-cl(x),3), Bk=x=>{x=cl(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const SC=[0,6.0,12.2,21.4,28.3,35.6,40.6];
+function vis(t,i){const a=SC[i],b=SC[i+1];return cl((t-a)/0.35)*(i===5?1:cl((b-t)/0.3));}
+function st(id,o,tx=0,ty=0,s=1){const e=$(id);e.style.opacity=o;e.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;}
+window.render=function(t){
+  // telefon: hafif 3D eğim ve süzülme
+  const ent=E(t/0.7), rx=8*Math.sin(t*0.9), ry=-12+10*Math.sin(t*0.6), fl=10*Math.sin(t*1.4);
+  let sc=0.86+0.14*ent; if(t>=35.6) sc=1+0.06*E((t-35.6)/1.2);
+  $('phone').style.transform=`translateY(${(1-ent)*600+fl}px) perspective(1600px) rotateX(${rx*0.4}deg) rotateY(${ry}deg) scale(${sc})`;
+  $('glow').style.transform=`scale(${1+0.08*Math.sin(t*2)})`;
+  for(let i=0;i<6;i++){const v=vis(t,i); st('h'+(i+1),v,0,(1-E((t-SC[i])/0.5))*40); $('s'+(i+1)).style.opacity=v;}
+  // 1
+  st('p1',t>4.7?1:0,0,0,t>4.7?Bk((t-4.7)/0.4):0.5);
+  const n=E((t-1.0)/0.5); $('noti').style.transform=`translateY(${(1-n)*-260}px)`; $('noti').style.opacity=n;
+  // 2
+  $('tst').style.opacity=cl((t-9.9)/0.3); $('tst').style.transform=`translateY(${(1-E((t-9.9)/0.4))*30}px)`;
+  // 3
+  const hl=(id,a,b)=>{$(id).style.borderColor=(t>a&&t<b)?'#FF2E93':''; $(id).style.boxShadow=(t>a&&t<b)?'0 0 0 4px rgba(255,46,147,.25)':'none';};
+  hl('b1',14.7,16.0); hl('b2',16.0,17.4);
+  let tp=null; if(t>15.0&&t<15.6) tp=['b1',t-15.0]; else if(t>16.3&&t<16.9) tp=['b2',t-16.3]; else if(t>17.8&&t<18.4) tp=['b3',t-17.8];
+  if(tp){const b=$(tp[0]), e=$('tap'); e.style.left=(b.offsetLeft+b.offsetWidth*0.7-45)+'px'; e.style.top=(b.offsetTop+b.offsetHeight/2-45)+'px'; e.style.opacity=1-tp[1]/0.6; e.style.transform=`scale(${0.6+tp[1]*1.2})`;} else $('tap').style.opacity=0;
+  $('b3').style.transform=(t>17.8&&t<18.1)?'scale(.96)':'none';
+  const sy=E((t-18.5)/0.5); $('sync').style.opacity=sy; $('sync').style.transform=`translateY(${(1-sy)*80}px)`;
+  // 4
+  st('m1',cl((t-21.7)/0.3),0,(1-E((t-21.7)/0.4))*30); st('m2',cl((t-22.3)/0.3),0,(1-E((t-22.3)/0.4))*30);
+  $('draw').style.opacity=t>22.8?1:0; const dl=600; $('dp').style.strokeDasharray=dl; $('dp').style.strokeDashoffset=dl*(1-E((t-22.8)/1.0));
+  $('note').style.opacity=cl((t-23.9)/0.3); $('note').style.transform=`scale(${t>23.9?Bk((t-23.9)/0.4):0.5})`;
+  $('stk').style.opacity=t>25.0?1:0; $('stk').style.transform=`scale(${t>25.0?Bk((t-25.0)/0.45)*0.62:0.2}) rotate(${-8+4*Math.sin(t*6)}deg)`;
+  $('snd').style.opacity=cl((t-26.5)/0.3);
+  document.querySelectorAll('#snd .wv i').forEach((e,i)=>{const h=10+30*Math.abs(Math.sin(t*9+i*0.7))*(t>26.5?1:0.2); e.style.height=h+'px';});
+  ['bb1','bb2','bb3'].forEach((id,i)=>{const f=((t-26.8+i*0.35)%1.2)/1.2; const on=t>26.8; $(id).style.opacity=on?(1-f):0; $(id).style.transform=`translateY(${-f*160}px)`;});
+  ['c1','c2','c3','c4'].forEach((id,i)=>{const a=[22.8,23.9,25.0,26.5][i]; $(id).className='chip'+(t>a?' on':''); $(id).style.transform=`scale(${t>a&&t<a+0.3?1.08:1})`;});
+  // 5
+  $('k1').style.opacity=t>29.6?1:0; $('k2').style.opacity=t>30.6?1:0;
+  $('o1').style.background=(t>29.6&&t<30.3)?'#FFF0F7':''; $('o2').style.background=(t>30.6&&t<31.3)?'#FFF0F7':'';
+  $('g2').style.opacity=cl((t-32.9)/0.3); const tg=E((t-34.0)/0.3); $('tgi').style.left=(4+34*tg)+'px'; $('tg').style.background=tg>0.5?'#1DB954':'#DDD';
+  // 6
+  const di=t>35.9?Bk((t-35.9)/0.5):0; $('dIcon').style.transform=`scale(${di}) translateY(${-14*Math.abs(Math.sin(t*3))}px)`;
+  $('q').style.opacity=cl((t-36.6)/0.3); $('q').style.transform=`rotate(${10*Math.sin(t*4)}deg)`;
+  st('p6',t>37.8?1:0,0,0,t>37.8?Bk((t-37.8)/0.4):0.5);
+  // Kare rehber: sahneye göre yüz
+  const face=t<6?(t<4.7?'saskin':'mutlu'):t<12.2?'fikir':t<21.4?'mutlu':t<28.3?'goz':t<35.6?'fikir':'saskin';
+  ['mutlu','saskin','fikir','goz'].forEach(f=>$('kf_'+f).style.opacity=f===face?1:0);
+  const kin=E((t-0.6)/0.6); $('kare').style.transform=`translateY(${(1-kin)*300+8*Math.sin(t*3)}px) rotate(${4*Math.sin(t*1.7)}deg)`;
 };
 window.render(0);
 </script></body></html>

@@ -9,10 +9,17 @@ import sys, os, re, json, glob
 SKIP = re.compile(r"^(#|rgba?\(|[0-9.\s,%-]+$|Inter|Lora|Poppins|DejaVu|TeX|center|left|right|middle|top|bottom|alphabetic|round|butt|square|"
                   r"pop2?|whoosh|ding|tick|alarm|light|dark|soft|webgl2?|image/|file:|https?:|[a-z_]+\.(png|jpe?g|mp4|mp3|json|html)$)")
 def from_html(path):
-    s = open(path, encoding="utf-8").read()
+    raw = open(path, encoding="utf-8").read()
+    out = []
+    # 1) sayfadaki görünür metin (etiketler arası), script/style/svg hariç
+    body = re.sub(r"(?is)<(script|style|svg)\b.*?</\1>", " ", raw)
+    for seg in re.split(r"<[^>]+>", body):
+        t = re.sub(r"\s+", " ", seg).strip()
+        if t and re.search(r"[A-Za-zÇĞİÖŞÜçğıöşü]", t) and not t.startswith("__"): out.append(t)
+    # 2) script içindeki tırnaklı metinler (canvas'a çizilen yazılar)
+    s = " ".join(re.findall(r"(?is)<script\b[^>]*>(.*?)</script>", raw))
     s = re.sub(r"/\*.*?\*/", "", s, flags=re.S)            # yorumlar
     s = re.sub(r"(?m)//[^\n]*$", "", s)
-    out = []
     for q, body in re.findall(r"(['\"`])((?:\\.|(?!\1).)*?)\1", s):
         t = body.replace("\\n", " / ").strip()
         if re.search(r"\d+px|utf-8|^-?\d", t): continue
@@ -21,6 +28,7 @@ def from_html(path):
         if re.match(r"^[a-z_][A-Za-z0-9_]*$", t): continue                # değişken/anahtar adı
         if re.match(r"^[a-zA-Z_]+(\.[a-zA-Z_]+)+$", t): continue
         if t in ("tr-TR", "en-US"): continue
+        if re.match(r"^[MLCQHVZmlcqhvz0-9 .,\-]+$", t) or re.search(r"^[a-z-]+:|scale\(|translate|rotate\(|^(btn|msg|chip|sc|on)\b", t): continue
         out.append(t)
     return out
 def from_json(path):
