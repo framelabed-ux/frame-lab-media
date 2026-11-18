@@ -2,8 +2,9 @@
 
 Yayın: 31 Aralık, 19:10. Süre: ~25 sn + kapanış kartı (4 sn) + FL logo kapanışı.
 Amaç: Yeni yıl kutlaması ve yumuşak hizmet tanıtımı ("Markan için de üretelim").
-Üretim: Higgsfield, Seedance 2.0, 9:16, 5 sn, ses kapalı, referans: ref-kare-on.png + ref-kare-yan.png (Kare sahnelerinde).
+Üretim: Ece ChatGPT ile üretiyor; YATAY 16:9 (Ece, 18 Kasım), 5 sn, ses kapalı, referans: ref-kare-on.png + ref-kare-yan.png (Kare sahnelerinde).
 Kurgu, sayaç ve yazılar, müzik ve seslendirme Claude'da (anim.py / ffmpeg).
+Instagram sürümü: yatay video 9:16 çerçevenin ortasında; üstte başlık, altta altyazı (siyah bant yerine tasarlanmış çerçeve). Yatay ana sürüm portfolyo ve müşteri sunumu için.
 
 ## Sahneler
 1. Pervazda Kare, dışarıda kar; ekranı açılır, gülümser.
