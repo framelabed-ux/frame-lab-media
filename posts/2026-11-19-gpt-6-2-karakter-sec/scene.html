@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab oyun sahnesi: dövüş oyunu 'karakter seç' ekranı. 270x480 piksel tuval, 4 kat büyütülür.
+   Konu: OpenAI GPT-6.2 Astra ve GPT-6.2 Sol (17 Kasım 2026). */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00';
+
+
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler). Her satır 5 bitlik sayı. Aksanlar ayrı satırda. */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],"'":[4,4,8,0,0,0,0],'%':[24,25,2,4,8,19,3],'(':[2,4,8,8,8,4,2],')':[8,4,2,2,2,4,8],'*':[0,21,14,31,14,21,0],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite: 16x18, kafa yeşil, ekran siyah, beyaz gözler */
+function kareSprite(x0,y0,frame,face='happy',k=3){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM; // bacaklar
+  if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  // kollar
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+/* düşman: dev başparmak "KAYDIR" */
+function thumb(x0,y0,t,k=3){X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  box(x,y,22,30,'#F2C9A0',INK,1);box(x+4,y+2,14,9,'#FFE4CF',INK,1);
+  X.fillStyle=INK;X.fillRect(x+5,y+15,3,3);X.fillRect(x+14,y+15,3,3);X.fillRect(x+7,y+22,8,1);
+  X.fillRect(x+4,y+14,5,1);X.fillRect(x+13,y+14,5,1);
+  X.restore();
+}
+function giftBox(x,y,hit,col=PINK){x=Math.round(x);y=Math.round(y);box(x,y,30,30,hit?GREY:col,INK,2);
+  if(!hit){X.fillStyle=LIME;X.fillRect(x+13,y+2,4,26);X.fillRect(x+2,y+13,26,4);}}
+function coin(x,y,t){const w=Math.round(Math.abs(Math.cos(t*6))*3)+1;X.fillStyle=INK;X.fillRect(x-w-1,y-4,2*w+2,9);X.fillStyle=PINK;X.fillRect(x-w,y-3,2*w,7);}
+function heart(x,y,on){const c=on?PINK:GREY;X.fillStyle=c;[[1,0],[2,0],[4,0],[5,0],[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[0,2],[1,2],[2,2],[3,2],[4,2],[5,2],[6,2],[1,3],[2,3],[3,3],[4,3],[5,3],[2,4],[3,4],[4,4],[3,5]].forEach(([a,b])=>X.fillRect(x+a,y+b,1,1));}
+
+
+window.WARP_S=[0,4.5,8,17,22,30,35,40];
+window.WARP_V=null;
+window.DUR=window.WARP_V?window.WARP_V[window.WARP_V.length-1]:40;
+window.SFX=[[0.05,'whoosh'],[0.5,'pop2'],[4.6,'pop'],[5.2,'pop'],[5.9,'ding'],[8.0,'whoosh'],[8.5,'pop'],[11.0,'pop'],[12.5,'ding'],[17.0,'pop2'],[19.0,'ding'],[22.0,'whoosh'],[22.5,'pop'],[25.0,'pop'],[27.0,'ding'],[30.0,'pop2'],[30.6,'pop'],[31.2,'pop'],[31.8,'pop'],[32.4,'pop'],[35.0,'whoosh'],[36.5,'ding'],[38.0,'pop2']];
+function warp(t){const V=window.WARP_V,S=window.WARP_S;if(!V)return t;for(let i=0;i<V.length-1;i++){if(t<V[i+1]||i===V.length-2){return S[i]+(t-V[i])/(V[i+1]-V[i])*(S[i+1]-S[i]);}}return t;}
+function unwarp(s){const V=window.WARP_V,S=window.WARP_S;if(!V)return s;for(let i=0;i<S.length-1;i++){if(s<S[i+1]||i===S.length-2){return V[i]+(s-S[i])/(S[i+1]-S[i])*(V[i+1]-V[i]);}}return s;}
+window.SFX=window.SFX.map(e=>[+unwarp(e[0]).toFixed(3),e[1]]);
+const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
+const pop=(t,a,d=0.25)=>{const x=clamp((t-a)/d);return x<1?Math.round((1+Math.sin(x*Math.PI)*0.25)*x*100)/100:1;};
+/* ikonlar: yıldız (Astra), güneş (Sol) */
+function star(x,y,k,col=PINK){const P=[[3,0],[3,1],[2,2],[3,2],[4,2],[0,3],[1,3],[2,3],[3,3],[4,3],[5,3],[6,3],[1,4],[2,4],[3,4],[4,4],[5,4],[2,5],[3,5],[4,5],[1,6],[2,6],[4,6],[5,6],[0,7],[1,7],[5,7],[6,7]];
+  X.fillStyle=INK;P.forEach(([a,b])=>X.fillRect(Math.round(x+a*k-k*0.5),Math.round(y+b*k-k*0.5),k*2,k*2));X.fillStyle=col;P.forEach(([a,b])=>X.fillRect(Math.round(x+a*k),Math.round(y+b*k),k,k));}
+function sun(x,y,k,t){X.fillStyle=LIME;const r=3;for(let a=-r;a<=r;a++)for(let b=-r;b<=r;b++)if(a*a+b*b<=r*r+1)X.fillRect(x+a*k,y+b*k,k,k);
+  const ph=Math.floor(t*4)%2;X.fillStyle=ph?LIME:CREAM;[[0,-5],[0,5],[-5,0],[5,0],[-4,-4],[4,4],[-4,4],[4,-4]].forEach(([a,b])=>X.fillRect(x+a*k,y+b*k,k,k));
+  X.fillStyle=INK;X.fillRect(x-k,y-k,k,k);X.fillRect(x+k,y-k,k,k);X.fillRect(x-k,y+k,3*k,k);}
+function card(x,y,w,h,name,cls,col,sel,t,icon){box(x,y,w,h,sel?col:'#1C1C22',sel?WHITE:col,3);
+  box(x+8,y+8,w-16,62,INK,col,2); if(icon==='star') star(x+w/2-10,y+22,3); else sun(x+w/2,y+38,4,t);
+  txt(name,x+w/2,y+80,2,sel?INK:WHITE,'center',null); txt(cls,x+w/2,y+100,1,sel?INK:col,'center',null);}
+function bar(x,y,label,v,col,t0,t){const f=clamp((t-t0)/0.6)*v; txt(label,x,y,1,WHITE,'left',null); box(x,y+10,110,10,INK,GREY,1); X.fillStyle=col;X.fillRect(x+1,y+11,Math.round(108*f),8);}
+function dialog(lines,col0=INK){box(8,388,254,86,CREAM,INK,3);lines.forEach((l,i)=>txt(l,18,398+i*20,2,i===0?col0:INK,'left',null));}
+function dialogS(lines){box(8,388,254,86,CREAM,INK,3);lines.forEach((l,i)=>txt(l,16,396+i*13,1,i===0?PINK:INK,'left',null));}
+window.render=function(tv){
+  const t=warp(tv);
+  X.imageSmoothingEnabled=false; X.fillStyle=INK;X.fillRect(0,0,270,480);
+  // zemin (ekranın altı) + kayan ızgara
+  const gy=330; X.fillStyle='#16161B';X.fillRect(0,gy,270,58);
+  for(let i=0;i<20;i++){const xx=Math.round(i*16-(tv*30)%16);X.fillStyle='#24242C';X.fillRect(xx,gy,1,58);} X.fillStyle=LIME;X.fillRect(0,gy,270,2);
+  // ---------- 1) yeni oyuncular (0–4.5) ----------
+  if(t<4.5){
+    const s=pop(t,0.0,0.3); box(16,40,238,64,PINK,INK,3); txt('YENİ OYUNCULAR',135,52,2,WHITE,'center'); txt('GELDİ!',135,74,3,INK,'center',null);
+    const a=ease((t-0.5)/0.5), b=ease((t-0.9)/0.5);
+    card(Math.round(-120+(26+120)*a),128,104,120,'ASTRA','GPT-6.2',PINK,false,tv,'star');
+    card(Math.round(390-(390-140)*b),128,104,120,'SOL','GPT-6.2',LIME,false,tv,'sun');
+    if(t>1.4){const f=Math.floor(tv*8)%2; txt('VS',135,176,3,f?WHITE:PINK,'center');}
+    kareSprite(118,gy-54,Math.floor(tv*8)%2,'wow');
+    dialog(['OPENAI 2 YENİ MODEL','ÇIKARDI:','ASTRA VE SOL.'],PINK);
+  }
+  // ---------- 2) oyuncu seç (4.5–8) ----------
+  else if(t<8){
+    const lt=t-4.5; txt('OYUNCU SEÇ',135,44,3,LIME,'center');
+    const cur=lt<1.2?0:(lt<2.4?1:0);
+    card(26,96,104,120,'ASTRA','ZOR İŞLER',PINK,cur===0,tv,'star'); card(140,96,104,120,'SOL','GÜNLÜK İŞLER',LIME,cur===1,tv,'sun');
+    const bx=cur===0?26:140; if(Math.floor(tv*4)%2===0){X.fillStyle=WHITE;X.fillRect(bx+44,226,16,4);X.fillRect(bx+48,230,8,4);X.fillRect(bx+50,234,4,3);}
+    kareSprite(cur===0?60:174,gy-54,Math.floor(tv*8)%2,'happy');
+    dialog(['HANGİSİNİ','SEÇMELİSİN?','KARTLARA BAKALIM.']);
+  }
+  // ---------- 3) Astra kartı (8–17) ----------
+  else if(t<17){
+    const lt=t-8; card(16,40,100,120,'ASTRA','ZOR İŞLER',PINK,true,tv,'star');
+    txt('YETENEKLER',134,44,1,PINK,'left',null);
+    ['SUNUM','TABLO','BELGE'].forEach((w,i)=>{if(lt>0.6+i*0.5){box(134,58+i*24,120,20,'#1C1C22',LIME,2);txt('+ '+w,142,64+i*24,1,WHITE,'left',null);}});
+    if(lt>3.2){const s=clamp((lt-3.2)/0.3);box(16,178,238,108,INK,PINK,3);txt('* ÖZEL GÜÇ *',135,188,2,PINK,'center',null);
+      // ekran görüntüsü -> kopya slayt
+      box(28,212,80,58,CREAM,INK,2);X.fillStyle=PINK;X.fillRect(34,218,40,6);X.fillStyle=GREY;X.fillRect(34,230,64,4);X.fillRect(34,238,50,4);X.fillStyle=LIME;X.fillRect(80,244,22,20);
+      txt('ÖRNEK SLAYT',68,272,1,WHITE,'center',null);
+      const k=clamp((lt-4.2)/0.8); X.fillStyle=WHITE; for(let i=0;i<Math.floor(k*5);i++) X.fillRect(116+i*8,238,5,5);
+      if(lt>5.0){box(162,212,80,58,CREAM,INK,2);X.fillStyle=PINK;X.fillRect(168,218,40,6);X.fillStyle=GREY;X.fillRect(168,230,64,4);X.fillRect(168,238,50,4);X.fillStyle=LIME;X.fillRect(214,244,22,20);
+        txt('YENİ SLAYT',202,272,1,WHITE,'center',null);}}
+    kareSprite(118,gy-54,Math.floor(tv*8)%2,lt>5?'wow':'happy');
+    if(lt<3.2) dialog(['ZOR İŞLERİN UZMANI','SUNUM, TABLO VE','BELGE HAZIRLIYOR.'],PINK);
+    else dialogS(['ÖZEL GÜÇ','BİR SLAYDIN EKRAN GÖRÜNTÜSÜNÜ VER;','DÜZENİNİ, RENKLERİNİ VE','YAZI BOYUTUNU BİLE KOPYALASIN.','KAYNAK: OPENAI, SILICONANGLE']);
+  }
+  // ---------- 4) Basis (17–22) ----------
+  else if(t<22){
+    const lt=t-17; txt('TEST SONUCU',135,44,3,LIME,'center');
+    txt('UZUN MUHASEBE İŞLERİ',135,96,1,WHITE,'center',null);
+    txt('ÖNCE',40,124,1,GREY,'left',null); box(40,136,190,22,INK,GREY,2); X.fillStyle=GREY;X.fillRect(42,138,186,18);
+    txt('ASTRA İLE',40,170,1,PINK,'left',null); const f=clamp((lt-0.8)/1.0); box(40,182,190,22,INK,PINK,2); X.fillStyle=PINK;X.fillRect(42,184,Math.round(186*(1-0.5*f)),18);
+    if(lt>2.0){txt('-%50',230,218,3,LIME,'right');}
+    kareSprite(118,gy-54,Math.floor(tv*8)%2,'wow');
+    dialogS(['ERKEN TEST: BASIS','MUHASEBE GİRİŞİMİ BASIS\'E GÖRE','UZUN MUHASEBE İŞLERİNDE ORTALAMA','SÜRE YARI YARIYA KISALDI.','KAYNAK: SILICONANGLE']);
+  }
+  // ---------- 5) Sol kartı (22–30) ----------
+  else if(t<30){
+    const lt=t-22; card(16,40,100,120,'SOL','GÜNLÜK İŞLER',LIME,true,tv,'sun');
+    txt('KOD TESTİ',134,44,1,LIME,'left',null);
+    bar(134,58,'ASTRA',1.0,PINK,0.4,lt); bar(134,84,'SOL',0.985,LIME,0.8,lt);
+    if(lt>1.6) txt('FARK: 0,5 PUAN',134,112,1,WHITE,'left',null);
+    if(lt>3.0){txt('MALİYET',134,130,1,LIME,'left',null); bar(134,140,'ASTRA',1.0,PINK,3.2,lt); bar(134,166,'SOL',0.2,LIME,3.6,lt);}
+    if(lt>4.8){box(15,212,240,40,LIME,INK,3);txt('BEŞTE BİR MALİYET',135,226,2,INK,'center',null);}
+    kareSprite(118,gy-54,Math.floor(tv*8)%2,'happy');
+    dialogS(['SOL: GÜNLÜK İŞLER','KOD TESTİNDE ASTRA\'YA YARIM PUAN','YAKLAŞIYOR, ÜSTELİK YAKLAŞIK','BEŞTE BİR MALİYETLE.','KAYNAK: OPENAI (FRONTIERCODE 2.0)']);
+  }
+  // ---------- 6) kimler oynayabilir (30–35) ----------
+  else if(t<35){
+    const lt=t-30; txt('KİMLER',135,44,3,LIME,'center'); txt('OYNAYABİLİR?',135,70,3,LIME,'center');
+    ['PLUS','PRO','ENTERPRISE','EDU'].forEach((w,i)=>{if(lt>0.6+i*0.6){const yy=112+i*28;box(50,yy,170,22,'#1C1C22',PINK,2);txt('+ '+w,60,yy+7,1,WHITE,'left',null);}});
+    if(lt>3.2){txt('CHATGPT WORK + CODEX',135,240,1,LIME,'center',null);}
+    kareSprite(118,gy-54,Math.floor(tv*8)%2,'happy');
+    dialogS(['NEREDE?','İKİSİ DE CHATGPT WORK VE','CODEX\'TE; PLUS, PRO, ENTERPRISE','VE EDU KULLANICILARINA AÇIK.','ENTERPRISE VE EDU\'DA YÖNETİCİ AÇMALI.']);
+  }
+  // ---------- 7) sen hangisini seçerdin (35–40) ----------
+  else{
+    const lt=t-35; txt('SEN',135,44,3,WHITE,'center'); txt('HANGİSİNİ',135,70,3,WHITE,'center'); txt('SEÇERDİN?',135,96,3,PINK,'center');
+    const blink=Math.floor(tv*3)%2;
+    card(26,136,104,120,'ASTRA','ZOR İŞLER',PINK,blink===0,tv,'star'); card(140,136,104,120,'SOL','GÜNLÜK İŞLER',LIME,blink===1,tv,'sun');
+    kareSprite(118,gy-54,Math.floor(tv*8)%2,'wow');
+    dialog(lt>1.5?['YORUMA YAZ:','ASTRA MI, SOL MÜ?','ARKADAŞINA GÖNDER!']:['YORUMA YAZ:','ASTRA MI, SOL MÜ?'],PINK);
+  }
+  txt('@FRAME.LABO',264,476,1,GREY,'right',null);
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+};
+window.render(0);
+</script></body></html>

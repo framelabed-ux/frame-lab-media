@@ -17,8 +17,10 @@ def from_html(path):
         t = body.replace("\\n", " / ").strip()
         if re.search(r"\d+px|utf-8|^-?\d", t): continue
         if len(t) < 2 or SKIP.match(t) or not re.search(r"[A-Za-zÇĞİÖŞÜçğıöşüâÂ]", t): continue
-        if re.search(r"[{};=<>]|\$\{|^\w+$" , t) and not re.search(r"[ÇĞİÖŞÜçğıöşü!?.]", t): continue  # kod parçası
+        if re.search(r"[{}=<>]|\$\{|=>|\)\s*;", t): continue          # kod parçası
+        if re.match(r"^[a-z_][A-Za-z0-9_]*$", t): continue                # değişken/anahtar adı
         if re.match(r"^[a-zA-Z_]+(\.[a-zA-Z_]+)+$", t): continue
+        if t in ("tr-TR", "en-US"): continue
         out.append(t)
     return out
 def from_json(path):

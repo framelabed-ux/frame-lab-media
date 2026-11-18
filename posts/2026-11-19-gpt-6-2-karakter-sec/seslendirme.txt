@@ -1,0 +1,13 @@
+OpenAI iki yeni oyuncu çıkardı: GPT altı nokta iki Astra ve Sol.
+
+Hangisini seçmelisin? Kartlara bakalım.
+
+Astra, zor işlerin uzmanı. Sunum, tablo ve belge hazırlıyor. Özel gücü: Bir slaydın ekran görüntüsünü ver; düzenini, renklerini, hatta yazı boyutunu bile kopyalasın.
+
+Erken test eden muhasebe girişimi Basis'e göre, uzun muhasebe işlerinde süre yarı yarıya kısalmış.
+
+Sol ise günlük işler için. Kod testinde Astra'ya yarım puan yaklaşıyor, üstelik yaklaşık beşte bir maliyetle.
+
+İkisi de ChatGPT Work ve Codex'te; Plus, Pro, Enterprise ve Edu kullanıcılarına açık.
+
+Sen hangisini seçerdin? Astra mı, Sol mü? Yorumlara yaz!

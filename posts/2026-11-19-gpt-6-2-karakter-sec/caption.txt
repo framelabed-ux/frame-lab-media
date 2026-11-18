@@ -1,0 +1,15 @@
+GPT-6.2 Astra mı, GPT-6.2 Sol mü? Hangisi sana lazım, kısaca anlattık.
+
+OpenAI 17 Kasım'da iki yeni model duyurdu:
+
+Astra: Zor işler için. Sunum, tablo ve belge hazırlıyor. Bir slaydın ekran görüntüsünden düzeni, renkleri ve yazı boyutunu bile kopyalayabiliyor. Erken test eden muhasebe girişimi Basis'e göre uzun muhasebe işlerinde ortalama süre yarı yarıya kısaldı.
+
+Sol: Günlük işler için. OpenAI'ın paylaştığı FrontierCode 2.0 kod testinde Astra'ya yarım puan kadar yaklaşıyor, maliyeti ise yaklaşık beşte biri.
+
+Kimler kullanabilir? İkisi de ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açık. Enterprise ve Edu'da erişimi yöneticinin açması gerekiyor.
+
+Sen hangisini seçerdin? Yorumlara yaz, bu ikisini kıyaslayan arkadaşına da gönder.
+
+Kaynak: OpenAI duyurusu, SiliconANGLE, 9to5Mac
+
+#yapayzeka #chatgpt #openai #gpt6 #verimlilik #dijitalgündem #teknoloji
