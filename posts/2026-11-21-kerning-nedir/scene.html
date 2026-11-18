@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab oyun sahnesi: dövüş oyunu 'karakter seç' ekranı. 270x480 piksel tuval, 4 kat büyütülür.
+   Konu: Kare Açıklıyor: Kerning nedir? (Ece'nin seslendirmesine hizalı) */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00';
+
+
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler). Her satır 5 bitlik sayı. Aksanlar ayrı satırda. */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,10,10,4,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],"'":[4,4,8,0,0,0,0],'%':[24,25,2,4,8,19,3],'(':[2,4,8,8,8,4,2],')':[8,4,2,2,2,4,8],'*':[0,21,14,31,14,21,0],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite: 16x18, kafa yeşil, ekran siyah, beyaz gözler */
+function kareSprite(x0,y0,frame,face='happy',k=3){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM; // bacaklar
+  if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  // kollar
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+/* düşman: dev başparmak "KAYDIR" */
+function thumb(x0,y0,t,k=3){X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  box(x,y,22,30,'#F2C9A0',INK,1);box(x+4,y+2,14,9,'#FFE4CF',INK,1);
+  X.fillStyle=INK;X.fillRect(x+5,y+15,3,3);X.fillRect(x+14,y+15,3,3);X.fillRect(x+7,y+22,8,1);
+  X.fillRect(x+4,y+14,5,1);X.fillRect(x+13,y+14,5,1);
+  X.restore();
+}
+function giftBox(x,y,hit,col=PINK){x=Math.round(x);y=Math.round(y);box(x,y,30,30,hit?GREY:col,INK,2);
+  if(!hit){X.fillStyle=LIME;X.fillRect(x+13,y+2,4,26);X.fillRect(x+2,y+13,26,4);}}
+function coin(x,y,t){const w=Math.round(Math.abs(Math.cos(t*6))*3)+1;X.fillStyle=INK;X.fillRect(x-w-1,y-4,2*w+2,9);X.fillStyle=PINK;X.fillRect(x-w,y-3,2*w,7);}
+function heart(x,y,on){const c=on?PINK:GREY;X.fillStyle=c;[[1,0],[2,0],[4,0],[5,0],[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[0,2],[1,2],[2,2],[3,2],[4,2],[5,2],[6,2],[1,3],[2,3],[3,3],[4,3],[5,3],[2,4],[3,4],[4,4],[3,5]].forEach(([a,b])=>X.fillRect(x+a,y+b,1,1));}
+
+
+
+window.DUR=38.6;
+window.SFX=[[0.05,'pop2'],[2.3,'pop'],[5.6,'whoosh'],[8.4,'tick'],[13.8,'pop'],[15.2,'ding'],[16.8,'whoosh'],[18.5,'tick'],[20.6,'pop2'],[22.1,'ding'],[25.0,'whoosh'],[26.5,'pop2'],[27.6,'whoosh'],[29.0,'pop'],[30.2,'pop'],[32.9,'whoosh'],[37.2,'ding']];
+const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
+function dialog(lines,col0=INK){box(8,388,254,86,CREAM,INK,3);lines.forEach((l,i)=>txt(l,18,398+i*22,2,i===0?col0:INK,'left',null));}
+function bigTxt(s,x,y,px,col,lsp){X.font=`900 ${px}px "Inter Display"`;X.textBaseline='alphabetic';X.fillStyle=col;let cx=x;for(let i=0;i<s.length;i++){X.fillText(s[i],cx,y);cx+=X.measureText(s[i]).width+(lsp[i]||0);}return cx-x;}
+function measure(s,px,lsp){X.font=`900 ${px}px "Inter Display"`;let w=0;for(let i=0;i<s.length;i++){w+=X.measureText(s[i]).width+(i<s.length-1?(lsp[i]||0):0);}return w;}
+window.render=function(t){
+  X.imageSmoothingEnabled=false; X.fillStyle=INK;X.fillRect(0,0,270,480);
+  const gy=352; X.fillStyle='#16161B';X.fillRect(0,gy,270,36);
+  for(let i=0;i<20;i++){const xx=Math.round(i*16-(t*30)%16);X.fillStyle='#24242C';X.fillRect(xx,gy,1,36);} X.fillStyle=LIME;X.fillRect(0,gy,270,2);
+  const walk=Math.floor(t*8)%2;
+  // 1) 0–5.5 başlık
+  if(t<5.5){
+    box(30,44,210,30,PINK,INK,3); txt('KARE AÇIKLIYOR',135,53,2,WHITE,'center',null);
+    if(t>1.4){txt('KERNING',135,110,5,LIME,'center'); txt('NEDİR?',135,160,3,WHITE,'center');}
+    kareSprite(118,gy-54,walk,'wow');
+    if(t<2.25) dialog(['KARE AÇIKLIYOR:','KERNING NEDİR?'],PINK); else dialog(['İKİ HARF ARASINDAKİ','BOŞLUĞUN TEK TEK','AYARLANMASI.'],PINK);
+  }
+  // 2) 5.5–16.5 A + V
+  else if(t<16.5){
+    txt('LEVEL 1',135,44,2,LIME,'center',null); txt('A + V',135,62,3,WHITE,'center');
+    const push=ease((t-13.9)/1.2), gap=Math.round(26-20*push);
+    const wA=40, ax=Math.round(135-(wA*2+gap)/2), vx=ax+wA+gap;
+    txt('A',ax,120,8,WHITE,'left',null); txt('V',vx,120,8,WHITE,'left',null);
+    if(t>8.4&&t<13.9){const f=Math.floor(t*4)%2; X.fillStyle=f?PINK:'#5a1838'; X.fillRect(ax+wA+2,150,gap-4,40); txt('BOŞLUK',135,206,1,PINK,'center',null);}
+    if(t>15.1){txt('TAMAM!',135,206,2,LIME,'center',null);}
+    const kx=t<13.6?118:Math.min(vx+44, 118+60*push);
+    kareSprite(t<13.6?118:vx+40,gy-54,walk,t>13.6?'wow':'happy');
+    if(t<8.3) dialog(['HER HARF ÇİFTİ','AYNI BOŞLUĞU','İSTEMEZ.']); else if(t<13.7) dialog(['A İLE V YAN YANA:','EŞİT ARALIK BİLE','FAZLA AÇIK GÖRÜNÜR.']); else dialog(['TASARIMCI İKİSİNİ','BİRAZ YAKLAŞTIRIR.'],PINK);
+  }
+  // 3) 16.5–24.8 kurnaz -> kumaz
+  else if(t<24.8){
+    txt('LEVEL 2',135,44,2,LIME,'center',null);
+    const k=ease((t-19.4)/1.6); const w='kurnaz'; const lsp=[3,3,3-11*k,3,3,0];
+    const W=measure(w,62,lsp); bigTxt(w,Math.round(135-W/2),150,62,WHITE,lsp);
+    if(t>21.0){const f=Math.floor(t*5)%2; txt(f?'KUMAZ?':'KURNAZ',135,180,2,f?PINK:GREY,'center',null);}
+    kareSprite(118,gy-54,walk,t>20.6?'wow':'happy');
+    if(t<18.4) dialog(['AYAR KAÇARSA','NE OLUR?']); else if(t<22.0) dialog(['R İLE N FAZLA','YAKLAŞIRSA','M GİBİ OKUNUR.']); else dialog(['KURNAZ BİR ANDA','KUMAZ OLUVERİR!'],PINK);
+  }
+  // 4) 24.8–27.4 keming
+  else if(t<27.4){
+    const s=(t>26.4)?1:0; txt('BUNUN BİR ADI',135,70,2,WHITE,'center',null); txt('BİLE VAR:',135,92,2,WHITE,'center',null);
+    if(t>26.4){box(30,130,210,70,PINK,INK,3); txt('KEMING',135,146,5,WHITE,'center',INK);}
+    kareSprite(118,gy-54,walk,'wow');
+    dialog(['BUNUN BİR ADI','BİLE VAR:','KEMING.'],PINK);
+  }
+  // 5) 27.4–32.6 tracking
+  else if(t<32.6){
+    txt('TRACKING',135,44,2,LIME,'center',null);
+    const sp=t<31.0?(Math.sin((t-27.6)*2.4)*0.5+0.5)*9:4; const w='TRACKING'; const lsp=Array(8).fill(sp);
+    X.font='900 40px "Inter Display"'; const W=measure(w,40,lsp); bigTxt(w,Math.round(135-W/2),150,40,WHITE,lsp);
+    X.fillStyle=LIME; X.fillRect(Math.round(135-W/2),160,Math.round(W),3);
+    kareSprite(118,gy-54,walk,'happy');
+    dialog(['TÜM SATIRI AÇIP','KISMAK İSE','TRACKING.'],PINK);
+  }
+  // 6) 32.6–38.6 tabela
+  else{
+    box(40,60,190,90,'#2b1d0e',CREAM,3); X.fillStyle=CREAM;X.fillRect(70,150,4,40);X.fillRect(196,150,4,40);
+    const lsp=[3,3,-8,3,3,0]; const W=measure('kurnaz',44,lsp); bigTxt('kurnaz',Math.round(135-W/2),122,44,LIME,lsp);
+    txt('HİÇ GÖRDÜN MÜ?',135,210,2,WHITE,'center',null);
+    kareSprite(118,gy-54-(t>37.1?Math.abs(Math.sin(t*6))*10:0),walk,'wow');
+    if(t<37.1) dialog(['YANLIŞ OKUDUĞUN','BİR TABELA','GÖRDÜN MÜ?']); else dialog(['YORUMLARA YAZ!','ARKADAŞINA GÖNDER!'],PINK);
+  }
+  txt('@FRAME.LABO',264,476,1,GREY,'right',null);
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+};
+window.render(0);
+</script></body></html>

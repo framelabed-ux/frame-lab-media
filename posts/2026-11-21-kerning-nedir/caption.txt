@@ -1,0 +1,13 @@
+Kare Açıklıyor: Kerning nedir?
+
+Kerning, iki harf arasındaki boşluğun tek tek ayarlanması.
+
+Her harf çifti aynı boşluğu istemez. Büyük A ile V yan yana gelince, matematiksel olarak eşit aralık bile gözümüze fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.
+
+Ayar kaçarsa ne olur? r ile n fazla yaklaşırsa m gibi okunur: "kurnaz" bir anda "kumaz" oluverir. Bu hataya şakayla "keming" deniyor.
+
+Tüm satırdaki aralığı birden açıp kısmak ise başka bir ayar: tracking.
+
+Sen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz, tasarımcı arkadaşına da gönder.
+
+#tipografi #tasarım #grafiktasarım #kerning #tasarımipuçları #yazıkarakteri #kareaçıklıyor

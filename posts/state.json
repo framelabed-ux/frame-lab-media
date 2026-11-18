@@ -485,6 +485,41 @@
     "https://creatorflow.so/blog/instagram-algorithm/"
    ],
    "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik house). Akşam 19:10."
+  },
+  {
+   "slug": "2026-11-21-kerning-nedir",
+   "kind": "reel",
+   "style": "oyun",
+   "publish_date": "2026-11-21",
+   "files": [
+    "posts/2026-11-21-kerning-nedir/reel.mp4"
+   ],
+   "cover": "posts/2026-11-21-kerning-nedir/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "tasarim",
+   "voice": true,
+   "caption": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Büyük A ile V yan yana gelince, matematiksel olarak eşit aralık bile gözümüze fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? r ile n fazla yaklaşırsa m gibi okunur: \"kurnaz\" bir anda \"kumaz\" oluverir. Bu hataya şakayla \"keming\" deniyor.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir ayar: tracking.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\n#tipografi #tasarım #grafiktasarım #kerning #tasarımipuçları #yazıkarakteri #kareaçıklıyor",
+   "sources": [
+    "https://en.wikipedia.com/wiki/Kerning",
+    "https://www.shopify.com/blog/what-is-kerning"
+   ],
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik synthwave). Akşam 19:10."
+  },
+  {
+   "slug": "2026-11-22-ilk-freelance-musteri",
+   "kind": "reel",
+   "style": "3d",
+   "publish_date": "2026-11-22",
+   "files": [
+    "posts/2026-11-22-ilk-freelance-musteri/reel.mp4"
+   ],
+   "cover": "posts/2026-11-22-ilk-freelance-musteri/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "para",
+   "voice": true,
+   "caption": "İlk freelance müşterini nereden bulursun? Üç adımda:\n\n1. Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\n2. Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\n3. Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.\n\n#freelance #serbestçalışma #sosyalmedyauzmanı #grafiktasarım #portfolyo #ekgelir #içerikküretimi",
+   "sources": [],
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik funk). Akşam 19:10."
   }
  ],
  "stories": [
@@ -847,7 +882,8 @@
    "sources": [
     "https://en.wikipedia.com/wiki/Kerning",
     "https://www.shopify.com/blog/what-is-kerning"
-   ]
+   ],
+   "produced": true
   },
   {
    "date": "2026-11-22",
@@ -857,7 +893,8 @@
    "title": "İlk freelance müşterini nereden bulursun?",
    "script": "İlk freelance müşterini nereden bulursun? Üç adımda anlatayım.\n\nBir: Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\nİki: Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\nÜç: Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.",
    "visual_note": "3D: üç basamaklı merdiven, her basamakta 3D nesne (mesaj balonu, portfolyo kartları, fiyat etiketi); Kare basamakları çıkıyor.",
-   "sources": []
+   "sources": [],
+   "produced": true
   }
  ]
 }
