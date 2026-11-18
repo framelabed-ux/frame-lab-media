@@ -187,6 +187,13 @@ Ece Reel'lerin daha hareketli olmasını, Kare'nin sayfalar arasında gezmesini 
 Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle (`tools/music.py`, otomatik) üretilir. Ece ses dosyası gönderirse spec'e `voice_segments` eklenip `render.py reel spec out voice` ile kullanılır. Yazılar, sessiz izleyen biri de anlayacak kadar okunur süre ekranda kalmalı: kelime başına en az 0,35 saniye.
 
 ## Kalite kontrol (her içerikte, yayından önce)
+
+**Anlam ve dil kontrolü (Ece, 18 Kasım: story'de "BEN DE MİYİM?" yazıyordu: "neden böyle yanlış ve anlamsız ifadeler kullanıyorsun").** Görsel ya da videodaki her metin yayından önce şu adımlardan geçer:
+1. Sahne dosyasındaki tüm ekran metinlerini (balon, altyazı, başlık, piksel yazı, etiket) tek bir listeye çıkar. Satırlara bölünmüş ifadeleri birleştirip **tam cümle olarak** oku.
+2. Her ifade, bağlamı bilmeyen birinin ilk okumada anlayacağı, dil bilgisi doğru, eksiksiz bir Türkçe cümle ya da öbek olmalı. Soru ekleri ünlü uyumuna ve yazımına uyar, eklendiği kelime eksik bırakılmaz ("Ben de insan mıyım?" doğru, "Ben de miyim?" yanlış).
+3. Esprili ya da karakter replikleri için: "Bunu açıklamam gerekir mi?" Gerekirse replik atılır ya da açık hâle getirilir. Uydurma kelime oyunu, yarım bırakılmış soru, belirsiz zamir yok ("kişilerin" yerine "rehberindeki kişiler").
+4. Piksel yazıda Türkçe harflerin (İ, I, Ş, Ğ, Ü, Ö, Ç) doğru göründüğünü karede kontrol et.
+5. Raporda Ece'ye ekran metinlerinin tam listesini de ver.
 1. **Doğruluk:** Her gündem iddiası birincil ya da saygın bir kaynakta açılıp doğrulanmış olmalı (resmî blog, büyük teknoloji medyası). Doğrulanamayan hiçbir şey yazılmaz. Sürüm, tarih, fiyat uydurulmaz. Emin olunmayan ifade çıkarılır.
 2. **Mantık:** Başlık ile içerik, prompt ile sonuç, sayılar ile anlatım tutarlı mı? "3 deneme" diyorsa 3 tane mi? Kendini çürüten ya da abartılı vaat ("bedava, sınırsız") var mı?
 3. **Yazım:** Türkçe imla (ı/i, ş, ğ, ç, ö, ü, şapkalı â), birleşik ve ayrı yazılanlar (de/da, ki, mi), noktalama, büyük harf. Görseldeki her metin ve caption satır satır tekrar okunur.

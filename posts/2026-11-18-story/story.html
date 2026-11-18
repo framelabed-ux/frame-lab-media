@@ -57,7 +57,6 @@ function kareSprite(x0,y0,frame,face='happy',k=3){
 function render(){
   X.imageSmoothingEnabled=false;
   X.fillStyle=INK;X.fillRect(0,0,270,480);
-  for(let i=0;i<14;i++){const x=(i*53)%262, y=(i*97)%480; X.fillStyle=i%4===0?'#2A1020':i%4===1?'#1E2A0E':'#1C1C22';X.fillRect(x,y,30+(i%3)*8,22+(i%2)*10);}
   const gy=372; X.fillStyle=LIME;X.fillRect(0,gy,270,108);
   for(let i=0;i<18;i++){X.fillStyle=DLIME;X.fillRect(i*16,gy,1,108);X.fillRect(i*16,gy+16,16,1);} X.fillStyle=INK;X.fillRect(0,gy,270,2);
   box(30,70,210,30,PINK,INK,3); txt('BİLİYOR MUYDUN?',135,80,2,WHITE,'center');
@@ -65,7 +64,7 @@ function render(){
   txt('HUMAN',135,138,7,LIME,'center',INK);
   txt('= İNSAN',135,200,2,WHITE,'center',null);
   kareSprite(110,236,1,'wow',3);
-  box(172,226,90,34,WHITE,INK,2); X.fillStyle=INK;X.fillRect(166,246,8,4); txt('BEN DE',217,232,1,INK,'center',null); txt('MİYİM?',217,245,1,PINK,'center',null);
+  box(172,226,90,34,WHITE,INK,2); X.fillStyle=INK;X.fillRect(166,246,8,4); txt('BEN DE',217,232,1,INK,'center',null); txt('İNSAN MIYIM?',217,245,1,PINK,'center',null);
   OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
   // Inter katmanı
   const O=OUT; O.fillStyle=CREAM; O.beginPath();O.roundRect(48,1250,984,360,28);O.fill();O.lineWidth=10;O.strokeStyle=INK;O.stroke();
