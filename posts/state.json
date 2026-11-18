@@ -396,6 +396,29 @@
    "media_id": "18457465903122891",
    "published_at": "2026-11-18T08:57+03:00",
    "status": "yayında (18 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-19-gpt-6-2-karakter-sec",
+   "kind": "reel",
+   "style": "oyun",
+   "publish_date": "2026-11-18",
+   "files": [
+    "posts/2026-11-19-gpt-6-2-karakter-sec/reel.mp4"
+   ],
+   "cover": "posts/2026-11-19-gpt-6-2-karakter-sec/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "ai",
+   "layout": "game",
+   "voice": true,
+   "caption": "GPT-6.2 Astra mı, GPT-6.2 Sol mü? Hangisi sana lazım, kısaca anlattık.\n\nOpenAI 17 Kasım'da iki yeni model duyurdu:\n\nAstra: Zor işler için. Sunum, tablo ve belge hazırlıyor. Bir slaydın ekran görüntüsünden düzeni, renkleri ve yazı boyutunu bile kopyalayabiliyor. Erken test eden muhasebe girişimi Basis'e göre uzun muhasebe işlerinde ortalama süre yarı yarıya kısaldı.\n\nSol: Günlük işler için. OpenAI'ın paylaştığı FrontierCode 2.0 kod testinde Astra'ya yarım puan kadar yaklaşıyor, maliyeti ise yaklaşık beşte biri.\n\nKimler kullanabilir? İkisi de ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açık. Enterprise ve Edu'da erişimi yöneticinin açması gerekiyor.\n\nSen hangisini seçerdin? Yorumlara yaz, bu ikisini kıyaslayan arkadaşına da gönder.\n\nKaynak: OpenAI duyurusu, SiliconANGLE, 9to5Mac\n\n#yapayzeka #chatgpt #openai #gpt6 #verimlilik #dijitalgündem #teknoloji",
+   "sources": [
+    "https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/",
+    "https://9to5mac.com/2026/11/17/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-2-astra-and-sol-models/",
+    "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
+   ],
+   "note": "Ece ile hazırlandı: oyun tarzı 'karakter seç', Ece'nin seslendirmesi. Ece'nin isteğiyle 18 Kasım 10:49'da elle yayınlandı (günün 2. gönderisi; akşam Direct Reel'i ile 3).",
+   "media_id": "17914541763574067",
+   "published_at": "2026-11-18T10:49+03:00"
   }
  ],
  "queue": [
@@ -422,28 +445,6 @@
     "https://www.lowyat.net/2026/409934/meta-instagram-direct-messaging-app/"
    ],
    "note": "18 Kasım sabah görevi: Sıcak Gelişme Reel'i, çizgi film tarzı (28,5 sn, outro yok, seslendirmesiz; seslendirme metni Ece'ye gönderildi). Kanca: 'Instagram'ın yeni uygulaması sadece 2 ülkede' + Kare 'Biri Türkiye!'. Direct ikonu kendi çizimimiz (kâğıt uçak), Meta'nın gerçek ikonu değil. youtube-co-views hot_pending'de kaldı."
-  },
-  {
-   "slug": "2026-11-19-gpt-6-2-karakter-sec",
-   "kind": "reel",
-   "slot": "sabah",
-   "style": "oyun",
-   "publish_date": "2026-11-19",
-   "files": [
-    "posts/2026-11-19-gpt-6-2-karakter-sec/reel.mp4"
-   ],
-   "cover": "posts/2026-11-19-gpt-6-2-karakter-sec/cover.jpg",
-   "cover_tone": "dark",
-   "topic_area": "ai",
-   "layout": "game",
-   "voice": true,
-   "caption": "GPT-6.2 Astra mı, GPT-6.2 Sol mü? Hangisi sana lazım, kısaca anlattık.\n\nOpenAI 17 Kasım'da iki yeni model duyurdu:\n\nAstra: Zor işler için. Sunum, tablo ve belge hazırlıyor. Bir slaydın ekran görüntüsünden düzeni, renkleri ve yazı boyutunu bile kopyalayabiliyor. Erken test eden muhasebe girişimi Basis'e göre uzun muhasebe işlerinde ortalama süre yarı yarıya kısaldı.\n\nSol: Günlük işler için. OpenAI'ın paylaştığı FrontierCode 2.0 kod testinde Astra'ya yarım puan kadar yaklaşıyor, maliyeti ise yaklaşık beşte biri.\n\nKimler kullanabilir? İkisi de ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açık. Enterprise ve Edu'da erişimi yöneticinin açması gerekiyor.\n\nSen hangisini seçerdin? Yorumlara yaz, bu ikisini kıyaslayan arkadaşına da gönder.\n\nKaynak: OpenAI duyurusu, SiliconANGLE, 9to5Mac\n\n#yapayzeka #chatgpt #openai #gpt6 #verimlilik #dijitalgündem #teknoloji",
-   "sources": [
-    "https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/",
-    "https://9to5mac.com/2026/11/17/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-2-astra-and-sol-models/",
-    "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
-   ],
-   "note": "Ece ile hazırlandı (18 Kasım): oyun tarzı 'karakter seç', Ece'nin ElevenLabs seslendirmesi, 46 sn. 19 Kasım SABAH gönderisi; sabah görevi bunu yayınlar, ayrıca sabah gönderisi üretmez. Akşam Reel'i yapay zekâ dışı bir konu ve oyun dışı bir tarz olmalı."
   }
  ],
  "stories": [
