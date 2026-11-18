@@ -68,7 +68,7 @@ function heart(x,y,on){const c=on?PINK:GREY;X.fillStyle=c;[[1,0],[2,0],[4,0],[5,
 
 
 window.WARP_S=[0,4.5,8,17,22,30,35,40];
-window.WARP_V=null;
+window.WARP_V=[0,5.4,8.2,20.2,26.55,34.05,40.6,46.2];
 window.DUR=window.WARP_V?window.WARP_V[window.WARP_V.length-1]:40;
 window.SFX=[[0.05,'whoosh'],[0.5,'pop2'],[4.6,'pop'],[5.2,'pop'],[5.9,'ding'],[8.0,'whoosh'],[8.5,'pop'],[11.0,'pop'],[12.5,'ding'],[17.0,'pop2'],[19.0,'ding'],[22.0,'whoosh'],[22.5,'pop'],[25.0,'pop'],[27.0,'ding'],[30.0,'pop2'],[30.6,'pop'],[31.2,'pop'],[31.8,'pop'],[32.4,'pop'],[35.0,'whoosh'],[36.5,'ding'],[38.0,'pop2']];
 function warp(t){const V=window.WARP_V,S=window.WARP_S;if(!V)return t;for(let i=0;i<V.length-1;i++){if(t<V[i+1]||i===V.length-2){return S[i]+(t-V[i])/(V[i+1]-V[i])*(S[i+1]-S[i]);}}return t;}
