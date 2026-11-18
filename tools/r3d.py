@@ -95,7 +95,7 @@ vec3 shade(vec2 uv){
   vec3 alb; float rough=.35; vec3 em=vec3(0.);
   if(m==1) alb=lin(OBJ);
   else if(m==2){ alb=vec3(.012); rough=.08; em=face(lp)*1.25; }
-  else if(m==3) alb=lin(vec3(.55,.38,.98));
+  else if(m==3) alb=lin(vec3(1.,.18,.56));
   else if(m==4){ alb=vec3(.02); rough=.25; }
   else if(m==6) alb=lin(vec3(1.,.18,.56));
   else alb=vec3(.9);
