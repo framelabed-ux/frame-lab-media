@@ -1,0 +1,16 @@
+Sunum şablonunu tarif etmekle uğraşma: GPT-6.2 ekran görüntüsünden kopyalıyor.
+
+OpenAI 17 Kasım'da iki yeni model duyurdu: GPT-6.2 Astra (en zor işler için) ve GPT-6.2 Sol (günlük işler için, daha uygun fiyatlı).
+
+Tasarım tarafını ilgilendiren kısım şu: Astra bir slayt şablonunu orijinal dosyadan ya da sadece ekran görüntüsünden alıp yeni slaytlarda aynı düzeni, renkleri ve yazı tipini, yazı boyutuna kadar eşleştirebiliyor.
+
+Nasıl denersin?
+1. Şirketinin ya da okulunun şablonundaki bir slaydın ekran görüntüsünü al.
+2. Astra'ya ver: "Bu şablonla 5 slaytlık bir sunum hazırla: [konu]"
+3. Çıkan slaytlarda renkleri, yazı boyutunu ve hizalamayı kontrol et.
+
+Kimler kullanabiliyor? Modeller ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açıldı.
+
+Sunum hazırlayan bir arkadaşına gönder. Sen ilk hangi şablonu denerdin? Yorumlara yaz.
+
+#yapayzeka #chatgpt #sunum #sunumtasarımı #tasarım #dijitalgündem #verimlilik
