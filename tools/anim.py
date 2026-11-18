@@ -42,7 +42,7 @@ async def go():
         await b.close()
         return dur, sfx
 dur, sfx = asyncio.run(go())
-outro = os.path.join(os.path.dirname(here), "brand", "outro.mp4")
+outro = os.path.join(os.path.dirname(here), "brand", "outro-yatay.mp4" if a.w > a.h else "outro.mp4")
 if not a.nooutro and os.path.exists(outro):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/v.mp4", "-i", outro, "-filter_complex",
                     f"[0:v]fps={a.fps},format=yuv420p[a];[1:v]fps={a.fps},scale={a.w}:{a.h},format=yuv420p[b];[a][b]concat=n=2:v=1:a=0[v]",
