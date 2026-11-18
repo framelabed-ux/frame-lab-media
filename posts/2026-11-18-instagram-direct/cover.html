@@ -3,12 +3,18 @@
 <style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block}</style></head>
 <body><canvas id="c" width="1080" height="1920"></canvas>
 <script>
-/* Frame Lab çizgi film sahnesi (cartoon-kare.html'den uyarlandı).
-   Konu: Meta'nın ayrı mesajlaşma uygulaması Direct, yalnızca Türkiye ve Tayland'da test ediliyor (Meta, 17 Kasım 2026). */
+/* Frame Lab çizgi film sahnesi: "lastik hortum" (rubber-hose) Kare.
+   Kalın mürekkep kontur, düz renkler, saniyede 12 kez titreyen çizgi (el çizimi hissi).
+   Konu: akışta bir gönderiye ortalama 1,7 saniye bakıyoruz (Facebook IQ). */
 const C=document.getElementById('c'), X=C.getContext('2d');
 const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF';
-window.DUR=28.5;
-window.SFX=[[0.3,'pop'],[0.9,'pop2'],[3.4,'whoosh'],[3.9,'ding'],[5.2,'pop'],[5.5,'pop'],[8.0,'whoosh'],[8.6,'pop2'],[10.2,'pop'],[13.0,'whoosh'],[13.5,'pop'],[14.0,'pop'],[14.5,'pop'],[15.0,'pop'],[16.0,'pop2'],[18.6,'whoosh'],[19.3,'pop'],[23.2,'whoosh'],[23.8,'pop2'],[25.6,'ding']];
+window.DUR=26.5;
+/* Seslendirmeye hizalama: WARP_V = sesteki sahne başlangıçları, WARP_S = sahne dosyasındaki başlangıçlar (son değer = bitiş).
+   Ses yoksa null bırak. Ses gelince silencedetect ile cümle aralarını bul, burayı doldur, DUR'u sesin sonu + ~1 sn yap. */
+window.WARP_S=[0,2.4,5.6,7.6,12.4,17.2,22.0,26.5];
+window.WARP_V=[0,2.2,6.4,9.3,14.6,20.6,25.9,32.3];
+window.DUR=window.WARP_V?window.WARP_V[window.WARP_V.length-1]:26.5;
+window.SFX=[[0.38,'pop'],[2.4,'whoosh'],[2.85,'pop2'],[5.6,'whoosh'],[5.9,'pop'],[6.3,'pop'],[6.7,'pop'],[7.6,'whoosh'],[8.0,'pop2'],[9.0,'pop'],[10.0,'pop'],[11.0,'pop'],[12.4,'whoosh'],[12.9,'ding'],[17.2,'whoosh'],[17.7,'tick'],[18.7,'tick'],[19.7,'tick'],[21.0,'ding'],[22.0,'whoosh'],[23.2,'pop2'],[24.4,'pop']];
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
 const eio=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
@@ -143,48 +149,19 @@ function giftQ(x,y,s,lid,wob){X.save();X.translate(x,y);X.scale(s,s);
   if(lid>0.05){X.globalAlpha=clamp(lid*1.5);X.font='900 200px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=18;X.strokeStyle=INK;X.strokeText('?',0,-260-lid*80);X.fillStyle=WHITE;X.fillText('?',0,-260-lid*80);X.globalAlpha=1;}
   X.restore();}
 
+function warp(t){const V=window.WARP_V,S=window.WARP_S;if(!V)return t;for(let i=0;i<V.length-1;i++){if(t<V[i+1]||i===V.length-2){return S[i]+(t-V[i])/(V[i+1]-V[i])*(S[i+1]-S[i]);}}return t;}
+function unwarp(s){const V=window.WARP_V,S=window.WARP_S;if(!V)return s;for(let i=0;i<S.length-1;i++){if(s<S[i+1]||i===S.length-2){return V[i]+(s-S[i])/(S[i+1]-S[i])*(V[i+1]-V[i]);}}return s;}
+window.SFX=window.SFX.map(e=>[+unwarp(e[0]).toFixed(3),e[1]]);
 
-/* ---- bu sahneye özel nesneler ---- */
-function plane(x,y,s,k=0){X.save();X.translate(x,y);X.scale(s,s);
-  X.beginPath();X.moveTo(-62+j(k,2),8+j(k+1,2));X.lineTo(64+j(k+2,2),-52+j(k+3,2));X.lineTo(22+j(k+4,2),58+j(k+5,2));X.lineTo(2,22);X.closePath();inkFill(LIME,9);
-  X.beginPath();X.moveTo(2,22);X.lineTo(64,-52);X.lineWidth=7;X.strokeStyle=INK;X.stroke();X.restore();}
-function appIcon(x,y,s,k=0){X.save();X.translate(x,y);X.scale(s,s);rr(-110,-110,220,220,60,k);inkFill(PINK,12);X.restore();plane(x,y,s*1.05,k+40);}
-function phoneFrame(x,y,s,rot,k=0){X.save();X.translate(x,y);X.rotate(rot);X.scale(s,s);rr(-200,-380,400,760,64,k);inkFill(INK,12);
-  X.fillStyle=CREAM;X.beginPath();X.roundRect(-172,-340,344,680,36);X.fill();rr(-60,-362,120,18,9,k+30);X.fillStyle='#333';X.fill();}
-function phoneEnd(){X.restore();}
-function cloth(s,lt,k=0){ // örtülü ikon
-  X.beginPath();X.moveTo(-150,-120+j(k,4));X.quadraticCurveTo(0,-170+8*Math.sin(lt*9),150,-120+j(k+1,4));X.lineTo(170,140);X.quadraticCurveTo(0,110+10*Math.sin(lt*7),-170,140);X.closePath();inkFill(PINK,10);
-  X.font='900 170px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.lineWidth=16;X.strokeStyle=INK;X.strokeText('?',0,10);X.fillStyle=WHITE;X.fillText('?',0,10);}
-function tile(x,y,s,fill,k,draw){X.save();X.translate(x,y);X.scale(s,s);rr(-80,-80,160,160,40,k);inkFill(fill,10);draw();X.restore();}
-const icPencil=()=>{X.save();X.rotate(-0.75);rr(-16,-56,32,92,6,1500);inkFill(LIME,8);X.beginPath();X.moveTo(-16,36);X.lineTo(0,62);X.lineTo(16,36);X.closePath();inkFill(PINK,7);X.restore();};
-const icNote=()=>{rr(-56,-40,112,64,30,1510);inkFill(WHITE,8);X.beginPath();X.moveTo(-20,22);X.lineTo(-34,48);X.lineTo(0,24);X.fillStyle=WHITE;X.fill();X.lineWidth=8;X.strokeStyle=INK;X.stroke();
-  for(let i=-1;i<=1;i++){ell(i*26,-8,7,7,1511+i);X.fillStyle=INK;X.fill();}};
-const icSticker=()=>{ell(0,0,54,54,1520);inkFill(WHITE,8);ell(-18,-10,7,9,1521);X.fillStyle=INK;X.fill();ell(18,-10,7,9,1522);X.fill();
-  X.beginPath();X.moveTo(-24,14);X.quadraticCurveTo(0,40,24,14);X.lineWidth=8;X.strokeStyle=INK;X.lineCap='round';X.stroke();
-  X.beginPath();X.moveTo(22,50);X.quadraticCurveTo(40,30,52,22);X.lineTo(50,48);X.closePath();inkFill(LIME,6);};
-const icSpeaker=()=>{X.beginPath();X.moveTo(-50,-18);X.lineTo(-24,-18);X.lineTo(4,-44);X.lineTo(4,44);X.lineTo(-24,18);X.lineTo(-50,18);X.closePath();inkFill(INK,6);
-  for(let i=1;i<=2;i++){X.beginPath();X.arc(8,0,18+i*16,-0.8,0.8);X.lineWidth=8;X.strokeStyle=INK;X.lineCap='round';X.stroke();}};
-const icMail=()=>{rr(-58,-40,116,80,12,1530);inkFill(WHITE,8);X.beginPath();X.moveTo(-54,-34);X.lineTo(0,8);X.lineTo(54,-34);X.lineWidth=8;X.strokeStyle=INK;X.stroke();};
-const icPhoneNum=()=>{rr(-32,-56,64,112,16,1540);inkFill(WHITE,8);for(let r=0;r<3;r++)for(let c=0;c<3;c++){X.fillStyle=INK;X.fillRect(-20+c*15,-34+r*17,9,9);}};
-function lock(x,y,s,k=0){X.save();X.translate(x,y);X.scale(s,s);
-  X.beginPath();X.arc(0,-60,70,Math.PI,0);X.lineWidth=40;X.strokeStyle=INK;X.stroke();X.lineWidth=20;X.strokeStyle=WHITE;X.stroke();
-  rr(-120,-70,240,190,36,k);inkFill(PINK,12);ell(0,10,24,24,k+5);X.fillStyle=INK;X.fill();X.fillRect(-9,14,18,52);X.restore();}
-function tag(txt,x,y,fill,sc,fg=INK){if(sc<=0.01)return;X.save();X.translate(x,y);X.scale(sc,sc);X.font='900 54px "Inter Display"';const w=X.measureText(txt).width+80;
-  rr(-w/2,-50,w,100,50,1600+txt.length);inkFill(fill,10);X.fillStyle=fg;X.textAlign='center';X.textBaseline='middle';X.fillText(txt,0,4);X.restore();}
-function bubbles(x,y,lt){for(let i=0;i<5;i++){const f=((lt*0.9+i*0.21)%1);ell(x+Math.sin(i*2+lt*3)*30,y-f*260,10+i*3,10+i*3,1700+i);X.globalAlpha=1-f;X.lineWidth=6;X.strokeStyle=INK;X.stroke();X.globalAlpha=1;}}
-function sync(x,y,lt){X.lineWidth=12;X.strokeStyle=INK;X.lineCap='round';const o=8*Math.sin(lt*6);
-  X.beginPath();X.moveTo(x-70,y-24);X.lineTo(x+70,y-24);X.moveTo(x+46,y-48+o*0);X.lineTo(x+70,y-24);X.lineTo(x+46,y);X.stroke();
-  X.beginPath();X.moveTo(x+70,y+34);X.lineTo(x-70,y+34);X.moveTo(x-46,y+10);X.lineTo(x-70,y+34);X.lineTo(x-46,y+58);X.stroke();}
-
-window.render=function(tv){
-  BOIL=3; X.setTransform(1,0,0,1,0,0);
-  X.fillStyle=INK;X.fillRect(0,0,1080,1920);
-  X.font='900 520px "Inter Display"';X.textAlign='center';X.textBaseline='alphabetic';X.letterSpacing='-20px';
-  X.lineWidth=26;X.lineJoin='round';X.strokeStyle=WHITE;X.strokeText('2',250,900);X.fillStyle=LIME;X.fillText('2',250,900);X.letterSpacing='0px';
-  comic('ülke.',765,860,230,LIME,'center',22);
-  comic('Biri',540,1150,200,WHITE,'center',20);
-  comic('Türkiye.',540,1350,200,PINK,'center',20);
-  appIcon(860,540,0.9,1040);
+window.render=function(tv){ BOIL=5; X.setTransform(1,0,0,1,0,0); X.fillStyle=CREAM;X.fillRect(0,0,1080,1920);
+  ell(540,1180,560,560,700);X.fillStyle=LIME;X.fill();X.lineWidth=14;X.strokeStyle=INK;X.stroke();
+  comic("Instagram'ın yeni",540,380,92,WHITE,'center',16); comic('uygulaması',540,480,92,WHITE,'center',16);
+  X.save();X.translate(540,600);rr(-330,-62,660,124,62,950);inkFill(PINK,12);X.font='900 74px "Inter Display"';X.textAlign='center';X.textBaseline='middle';X.fillStyle=WHITE;X.fillText('Biri Türkiye!',0,6);X.restore();
+  X.save();X.translate(720,1130);X.rotate(0.08);rr(-170,-320,340,640,56,960);inkFill(INK,12);rr(-140,-280,280,560,30,961);inkFill(PINK,6);X.restore();
+  X.save();X.translate(720,1120);X.scale(1.1,1.1);X.beginPath();X.moveTo(-90,10);X.lineTo(95,-80);X.lineTo(40,90);X.lineTo(10,30);X.closePath();inkFill(WHITE,12);
+ X.beginPath();X.moveTo(10,30);X.lineTo(95,-80);X.lineWidth=10;X.strokeStyle=INK;X.stroke();X.restore();
+  X.save();X.translate(720,1380);X.rotate(0.08);X.font='900 54px "Inter Display"';X.textAlign='center';X.fillStyle=WHITE;X.fillText('Direct',0,0);X.restore();
+  kare({x:340,y:1560,s:0.62,look:[0.9,-0.3],mouth:'shout',wide:true,armL:[-430,-760],armR:[520,-900],point:true});
 };
 window.render(0);
 </script></body></html>
