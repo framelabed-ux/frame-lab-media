@@ -189,7 +189,7 @@ Otomatik çalışmada yapay ses aracı yok. Reel'ler ekran yazısı ve müzikle 
 ## Kalite kontrol (her içerikte, yayından önce)
 
 **Anlam ve dil kontrolü (Ece, 18 Kasım: story'de "BEN DE MİYİM?" yazıyordu: "neden böyle yanlış ve anlamsız ifadeler kullanıyorsun").** Görsel ya da videodaki her metin yayından önce şu adımlardan geçer:
-1. Sahne dosyasındaki tüm ekran metinlerini (balon, altyazı, başlık, piksel yazı, etiket) tek bir listeye çıkar. Satırlara bölünmüş ifadeleri birleştirip **tam cümle olarak** oku.
+1. `python3 tools/metinler.py posts/<klasör>` ile tüm ekran metinlerini (balon, altyazı, başlık, piksel yazı, etiket, kapak) ve açıklamayı tek listeye çıkar. **Ece, 18 Kasım: "paylaşmadan önce mutlaka kontrol et, yazım hatası ya da gramer hatası asla olmamalı."** Bir tek hata bile varsa gönderi yayınlanmaz; düzeltilip yeniden üretilir. Satırlara bölünmüş ifadeleri birleştirip **tam cümle olarak** oku.
 2. Her ifade, bağlamı bilmeyen birinin ilk okumada anlayacağı, dil bilgisi doğru, eksiksiz bir Türkçe cümle ya da öbek olmalı. Soru ekleri ünlü uyumuna ve yazımına uyar, eklendiği kelime eksik bırakılmaz ("Ben de insan mıyım?" doğru, "Ben de miyim?" yanlış).
 3. Esprili ya da karakter replikleri için: "Bunu açıklamam gerekir mi?" Gerekirse replik atılır ya da açık hâle getirilir. Uydurma kelime oyunu, yarım bırakılmış soru, belirsiz zamir yok ("kişilerin" yerine "rehberindeki kişiler").
 4. Piksel yazıda Türkçe harflerin (İ, I, Ş, Ğ, Ü, Ö, Ç) doğru göründüğünü karede kontrol et.
