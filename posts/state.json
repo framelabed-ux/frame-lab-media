@@ -766,5 +766,57 @@
    },
    "lesson": "İzleyiciye bakan çizgi film Kare + 'bunu da kaydıracaktın' gibi doğrudan izleyiciye hitap eden açılış %45 skip, 1.010 erişim; metin ağırlıklı editoryal Reel %88 skip, 104 erişim; statik 3 erişim. Bugün iki gönderi de karakterle (3D Kare sabah, çizgi film Kare akşam) ve ilk karede hareketle açılıyor, editoryal motor kullanılmadı."
   }
+ ],
+ "planned_reels": [
+  {
+   "date": "2026-11-19",
+   "slug": "2026-11-19-logolar-neden-ayni",
+   "style": "3d",
+   "topic_area": "marka",
+   "title": "Lüks markaların logoları neden birbirine benziyor? (blanding)",
+   "script": "Lüks markaların logoları neden birbirine benzemeye başladı?\n\nBurberry, Balenciaga, Saint Laurent, Balmain… Birçok moda markası süslü yazılarını bırakıp sade, büyük harfli logolara geçti.\n\nBuna \"blanding\" deniyor: marka ile yavanlığın birleşimi.\n\nSebep basit: Logo artık en çok telefon ekranında ve küçücük profil fotoğraflarında görünüyor. Sade yazı küçükken de okunuyor.\n\nAma bir bedeli var: Herkes aynı görünmeye başladı.\n\nŞimdi bazıları geri dönüyor. Burberry, 2023'te atlı şövalyesini ve daha klasik bir yazıyı geri getirdi.\n\nSence sade logo mu, karakterli logo mu? Yorumlara yaz.",
+   "visual_note": "Gerçek logolar GÖSTERİLMEZ. 3D 'MARKA' kelimesi süslü serif yazıdan sade büyük harfe dönüşür, sonra yan yana aynı görünen kopyalar; Burberry kısmında genel bir at/şövalye silüeti (logo kopyası değil).",
+   "sources": [
+    "https://www.thedrum.com/opinion/2020/11/20/fashion-shot-the-serif-homogeneous-logos-and-luxury-branding-intertwine",
+    "https://www.nssmag.com/en/article/41960",
+    "https://www.campaignasia.com/article/burberrys-return-to-british-eccentricity-defies-8216reblanding8217-trend/483228"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "slug": "2026-11-20-en-degerli-tepki",
+   "style": "arayuz",
+   "topic_area": "platform",
+   "title": "Instagram'da en değerli tepki hangisi?",
+   "script": "Instagram'da en değerli tepki hangisi: beğeni mi, yorum mu, paylaşım mı?\n\nInstagram'ın başındaki Adam Mosseri bunu açıkça söyledi. En önemli üç sinyal: izlenme süresi, beğeni ve gönderme.\n\nAma asıl ölçü sayı değil, oran. Kaç kişiye ulaştın, bunların kaçı beğendi, kaçı bir arkadaşına gönderdi?\n\nBeğeni, takipçilerinde biraz daha önemli. Takip etmeyenlere ulaşmak içinse gönderme biraz daha önemli.\n\nYani yeni insanlara ulaşmak istiyorsan şunu sor: Bunu biri arkadaşına atar mı?\n\nSen en son hangi videoyu birine gönderdin? Yorumlara yaz. Bu videoyu da içerik üreten bir arkadaşına gönder!",
+   "visual_note": "Gerçekçi arayüz (tools/scenes/ui-telefon.html): telefonda bir Reel, beğeni/yorum/gönder ikonları; istatistik ekranında 'izlenme süresi, beğeni/erişim, gönderme/erişim'; gönder butonuna dokunma. Instagram logosu kullanılmaz.",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-shares-algorithm-2025/738034/",
+    "https://creatorflow.so/blog/instagram-algorithm/"
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "slug": "2026-11-21-kerning-nedir",
+   "style": "oyun",
+   "topic_area": "tasarim",
+   "title": "Kare Açıklıyor: Kerning nedir?",
+   "script": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Mesela A ile V yan yana gelince eşit aralık bile fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? R ile n fazla yaklaşırsa m gibi okunur. \"Kurnaz\" bir anda \"kumaz\" oluverir.\n\nBunun bir adı bile var: keming.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir şey; ona tracking deniyor.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz!",
+   "visual_note": "Oyun tarzı: harfler piksel bloklar, Kare 'A' ile 'V'yi itip yaklaştırıyor; 'KURNAZ' yazısında r ve n çarpışıp 'm' oluyor (KUMAZ), 'KEMİNG' rozeti; tracking için tüm satır akordeon gibi açılıp kapanıyor.",
+   "sources": [
+    "https://en.wikipedia.com/wiki/Kerning",
+    "https://www.shopify.com/blog/what-is-kerning"
+   ]
+  },
+  {
+   "date": "2026-11-22",
+   "slug": "2026-11-22-ilk-freelance-musteri",
+   "style": "3d",
+   "topic_area": "para",
+   "title": "İlk freelance müşterini nereden bulursun?",
+   "script": "İlk freelance müşterini nereden bulursun? Üç adımda anlatayım.\n\nBir: Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\nİki: Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\nÜç: Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.",
+   "visual_note": "3D: üç basamaklı merdiven, her basamakta 3D nesne (mesaj balonu, portfolyo kartları, fiyat etiketi); Kare basamakları çıkıyor.",
+   "sources": []
+  }
  ]
 }
