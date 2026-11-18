@@ -419,9 +419,7 @@
    "note": "Ece ile hazırlandı: oyun tarzı 'karakter seç', Ece'nin seslendirmesi. Ece'nin isteğiyle 18 Kasım 10:49'da elle yayınlandı (günün 2. gönderisi; akşam Direct Reel'i ile 3).",
    "media_id": "17914541763574067",
    "published_at": "2026-11-18T10:49+03:00"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-18-instagram-direct",
    "kind": "reel",
@@ -445,8 +443,13 @@
     "https://www.lowyat.net/2026/409934/meta-instagram-direct-messaging-app/"
    ],
    "note": "18 Kasım sabah görevi: Sıcak Gelişme Reel'i, çizgi film tarzı (28,5 sn, outro yok, seslendirmesiz; seslendirme metni Ece'ye gönderildi). Kanca: 'Instagram'ın yeni uygulaması sadece 2 ülkede' + Kare 'Biri Türkiye!'. Direct ikonu kendi çizimimiz (kâğıt uçak), Meta'nın gerçek ikonu değil. youtube-co-views hot_pending'de kaldı. 18 Kasım 11:05: Ece'nin seslendirmesi eklendi (sese hizalı), logo kapanışı ve yeni kapak eklendi. 43,8 sn.",
-   "voice": true
-  },
+   "voice": true,
+   "media_id": "17991178818089969",
+   "published_at": "2026-11-18T19:15+03:00",
+   "status": "yayında (18 Kasım akşam görevi)"
+  }
+ ],
+ "queue": [
   {
    "slug": "2026-11-19-logolar-neden-ayni",
    "kind": "reel",
