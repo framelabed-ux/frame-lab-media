@@ -7,7 +7,9 @@
    Konu: Meta'nın ayrı mesajlaşma uygulaması Direct, yalnızca Türkiye ve Tayland'da test ediliyor (Meta, 17 Kasım 2026). */
 const C=document.getElementById('c'), X=C.getContext('2d');
 const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF';
-window.DUR=28.5;
+window.WARP_S=[0,3.4,8.0,13.0,18.6,23.2,28.5];
+window.WARP_V=[0,6.0,12.2,21.4,28.3,35.6,40.6];
+window.DUR=window.WARP_V?window.WARP_V[window.WARP_V.length-1]:28.5;
 window.SFX=[[0.3,'pop'],[0.9,'pop2'],[3.4,'whoosh'],[3.9,'ding'],[5.2,'pop'],[5.5,'pop'],[8.0,'whoosh'],[8.6,'pop2'],[10.2,'pop'],[13.0,'whoosh'],[13.5,'pop'],[14.0,'pop'],[14.5,'pop'],[15.0,'pop'],[16.0,'pop2'],[18.6,'whoosh'],[19.3,'pop'],[23.2,'whoosh'],[23.8,'pop2'],[25.6,'ding']];
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
@@ -176,8 +178,11 @@ function sync(x,y,lt){X.lineWidth=12;X.strokeStyle=INK;X.lineCap='round';const o
   X.beginPath();X.moveTo(x-70,y-24);X.lineTo(x+70,y-24);X.moveTo(x+46,y-48+o*0);X.lineTo(x+70,y-24);X.lineTo(x+46,y);X.stroke();
   X.beginPath();X.moveTo(x+70,y+34);X.lineTo(x-70,y+34);X.moveTo(x-46,y+10);X.lineTo(x-70,y+34);X.lineTo(x-46,y+58);X.stroke();}
 
+function warp(t){const V=window.WARP_V,S=window.WARP_S;if(!V)return t;for(let i=0;i<V.length-1;i++){if(t<V[i+1]||i===V.length-2){return S[i]+(t-V[i])/(V[i+1]-V[i])*(S[i+1]-S[i]);}}return t;}
+function unwarp(s){const V=window.WARP_V,S=window.WARP_S;if(!V)return s;for(let i=0;i<S.length-1;i++){if(s<S[i+1]||i===S.length-2){return V[i]+(s-S[i])/(S[i+1]-S[i])*(V[i+1]-V[i]);}}return s;}
+window.SFX=window.SFX.map(e=>[+unwarp(e[0]).toFixed(3),e[1]]);
 window.render=function(tv){
-  const t=tv;
+  const t=warp(tv);
   BOIL=Math.floor(tv*12);
   X.setTransform(1,0,0,1,0,0);
   X.fillStyle=CREAM;X.fillRect(0,0,1080,1920);
