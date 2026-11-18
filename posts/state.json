@@ -398,7 +398,32 @@
    "status": "yayında (18 Kasım sabah görevi)"
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "slug": "2026-11-18-instagram-direct",
+   "kind": "reel",
+   "style": "cizgi-film",
+   "publish_date": "2026-11-18",
+   "title": "Instagram'ın ayrı mesajlaşma uygulaması Direct yalnızca Türkiye ve Tayland'da test ediliyor (hesapsız kayıt, senkron sohbet, Çizim/Notlar/çıkartma/ses efekti, güvenlik)",
+   "files": [
+    "posts/2026-11-18-instagram-direct/reel.mp4"
+   ],
+   "cover": "posts/2026-11-18-instagram-direct/cover.jpg",
+   "cover_type": "tipografi",
+   "cover_tone": "dark",
+   "topic_area": "platform",
+   "layout": "cartoon",
+   "music": "funk",
+   "caption": "Instagram'ın yeni uygulaması şu an sadece 2 ülkede test ediliyor. Biri Türkiye.\n\nMeta 17 Kasım'da Direct'i duyurdu: Instagram'dan ayrı, sadece mesajlaşma için bir uygulama. Test Türkiye ve Tayland'da, Android ve iOS'ta yayılıyor.\n\nBilmen gerekenler:\n• Instagram hesabı şart değil: E-posta adresi ya da telefon numarasıyla kaydolabiliyorsun.\n• Instagram kullanıcı adın ve şifrenle girersen mevcut sohbetlerin iki uygulamada da eşitleniyor.\n• Özellikler: Çizim (sohbette karalama), Notlar (arkadaşlarının kısa güncellemeleri mesaj kutusunun üstünde), özel çıkartmalar, ses efektleri (kalabalık kahkahası, su altı sesi gibi) ve sohbet temaları.\n• Sohbeti yalnızca kişilerin ve zaten bağlantılı olduğun kişiler başlatabiliyor ya da seni gruba ekleyebiliyor.\n• Yaş sınırı 13. Instagram hesabıyla giren gençler Genç Hesap mesaj korumalarını Direct'te de alıyor; ebeveynler denetim araçlarıyla günlük süre sınırı koyabiliyor.\n\nNot: Meta uygulamanın başka ülkelere ne zaman açılacağını söylemedi. Instagram'ın 2017'de de Direct adında ayrı bir mesaj uygulaması vardı; 2019'da kapatılma kararı alınmıştı.\n\nTelefonunda Direct'i gördün mü? Yorumlara yaz. Instagram'da en çok DM atan arkadaşına da gönder.\n\n#instagram #direct #sosyalmedya #dijitalgündem #mesajlaşma #meta #türkiye",
+   "sources": [
+    "https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging/",
+    "https://techcrunch.com/2026/11/17/meta-launches-direct-a-standalone-messaging-app-for-instagram/",
+    "https://webrazzi.com/2026/11/17/meta-instagramin-bagimsiz-mesajlasma-uygulamasi-directi-turkiyede-test-ediyor/",
+    "https://www.lowyat.net/2026/409934/meta-instagram-direct-messaging-app/"
+   ],
+   "note": "18 Kasım sabah görevi: Sıcak Gelişme Reel'i, çizgi film tarzı (28,5 sn, outro yok, seslendirmesiz; seslendirme metni Ece'ye gönderildi). Kanca: 'Instagram'ın yeni uygulaması sadece 2 ülkede' + Kare 'Biri Türkiye!'. Direct ikonu kendi çizimimiz (kâğıt uçak), Meta'nın gerçek ikonu değil. youtube-co-views hot_pending'de kaldı."
+  }
+ ],
  "stories": [
   {
    "date": "2026-11-09",
@@ -574,7 +599,8 @@
   "linkedin-ai-yorumlari",
   "instagram-amazon-affiliate-linkleri",
   "dikkat-1-7-saniye",
-  "gpt-6-2-astra-sol"
+  "gpt-6-2-astra-sol",
+  "instagram-direct-app"
  ],
  "hot_pending": [
   {
@@ -582,13 +608,42 @@
    "topic": "YouTube herkese açık izlenme sayılarına TV'deki birlikte izleyenleri (co-views) ekledi",
    "found": "2026-11-17",
    "big": true,
-   "note": "16 Kasım'da duyuruldu, Kasım 2026'dan itibaren yayılıyor: TV'de birlikte izlendiği tahmin edilen her kişi herkese açık izlenme sayısına ekleniyor (yalnızca TV; telefon/bilgisayar/tablet değişmedi). YPP gelirleri ve uygunluk etkilenmiyor (engaged views'a dahil değil). Studio'da 'co-view rate' metriği var; tahmin modeli kamera/mikrofon kullanmıyor. YouTube TV'de günde 1 milyar saatten fazla izleniyor. Öğle görevi (17 Kasım): akşamki LinkedIn Reel'i zaten Sıcak Gelişme olduğu için kuyruğa dokunulmadı; 18 Kasım akşam Reel'i için aday.",
+   "note": "16 Kasım'da duyuruldu, Kasım 2026'dan itibaren yayılıyor: TV'de birlikte izlendiği tahmin edilen her kişi herkese açık izlenme sayısına ekleniyor (yalnızca TV; telefon/bilgisayar/tablet değişmedi). YPP gelirleri ve uygunluk etkilenmiyor (engaged views'a dahil değil). Studio'da 'co-view rate' metriği var; tahmin modeli kamera/mikrofon kullanmıyor. YouTube TV'de günde 1 milyar saatten fazla izleniyor. Öğle görevi (17 Kasım): akşamki LinkedIn Reel'i zaten Sıcak Gelişme olduğu için kuyruğa dokunulmadı; 18 Kasım akşam Reel'i için aday. 18 Kasım: akşam Reel'i Instagram Direct (Türkiye testi) oldu; co-views yine bekliyor.",
    "sources": [
     "https://support.google.com/youtube/answer/2991785",
     "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
     "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
     "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/"
    ]
+  },
+  {
+   "key": "instagram-content-protection",
+   "topic": "Instagram içerik koruma aracını uygun içerik üreticilerine açtı (izinsiz yeniden yüklenen Reel'leri bulup engelleme ya da 'original by' etiketi; yapay zekâyla görüntüsü değiştirilip orijinal sesi kullanan videoları tespit testi yakında)",
+   "found": "2026-11-18",
+   "big": true,
+   "sources": [
+    "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/"
+   ]
+  },
+  {
+   "key": "cambridge-woty-2026-human",
+   "topic": "Cambridge Dictionary 2026 yılın kelimesi: 'human' (yapay zekâ ile insan arasındaki sınır tartışması); yeni eklenenler: aura farming, looksmaxxing",
+   "found": "2026-11-18",
+   "big": false,
+   "sources": [
+    "https://dictionaryblog.cambridge.org/2026/11/18/word-of-the-year-2026/"
+   ]
+  },
+  {
+   "key": "gta-vi-launch",
+   "topic": "GTA VI 19 Kasım gece yarısı (yerel saat) PS5 ve Xbox Series X|S'te çıkıyor; The Game Awards 2026 GOTY adayı (10 Aralık)",
+   "found": "2026-11-18",
+   "big": true,
+   "sources": [
+    "https://www.forbes.com/sites/brianmazique/2026/11/12/gta-6-unlocks-at-midnight-on-november-19-but-millions-of-americans-can-start-playing-the-night-before/",
+    "https://www.keengamer.com/articles/news/the-game-awards-2026-all-game-of-the-year-nominees-revealed/"
+   ],
+   "note": "youtube-gta-vi-paketi zaten işlendi; çıkış günü farklı bir açıdan (ör. oyunun pazarlaması/fragman rekorları) değerlendirilebilir, rakamlar ayrıca doğrulanmalı."
   }
  ],
  "scheduled": [],
