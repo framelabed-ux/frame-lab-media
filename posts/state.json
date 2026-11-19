@@ -454,7 +454,7 @@
    "style": "arayuz",
    "media_id": "18668539741040283",
    "publish_date": "2026-11-19",
-   "published_at": "2026-11-19T09:01+03:00",
+   "published_at": "2026-11-19T08:49+03:00",
    "title": "Instagram: paylaşılan story ilk 15 dakika içinde düzenlenebiliyor (yazı, müzik, çıkartma, çizim; izlenmeler korunuyor)",
    "files": [
     "posts/2026-11-19-story-duzenleme/reel.mp4"
@@ -740,6 +740,21 @@
    "about": "Düzeltilmiş story: 'Ben de insan mıyım?' (ilk sürümde anlamsız 'Ben de miyim?' vardı; Ece eskisini silecek)",
    "style": "oyun",
    "media_id": "18447555022133162"
+  },
+  {
+   "date": "2026-11-19",
+   "slug": "2026-11-19-story",
+   "file": "posts/2026-11-19-story/story.jpg",
+   "about": "GTA VI bugün çıktı; önceki oyun GTA V 2013'te: arada 13 yıldan fazla var. Piksel yükleme çubuğu (%100), kumandalı piksel Kare, 'Sen oynayacak mısın? DM'den yaz.'",
+   "layout": "game",
+   "style": "oyun",
+   "topic_area": "trend",
+   "sources": [
+    "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+    "https://gulfnews.com/technology/gaming/gta-6-drops-nov-19-as-preloads-open-nov-10-five-things-to-know-about-grand-theft-auto-1.500740670",
+    "https://allthings.how/how-long-the-wait-for-gta-6-has-been-release-set-for/"
+   ],
+   "media_id": "18097896470159431"
   }
  ],
  "replied_comments": [
