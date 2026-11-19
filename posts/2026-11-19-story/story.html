@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab story (oyun tarzı, game-kare.html'den): GTA VI 19 Kasım 2026'da çıktı; GTA V 2013'teydi. */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00';
+
+window._SFX=[[0.05,'pop2'],[1.6,'pop'],[2.15,'ding'],[3.6,'pop'],[4.15,'ding'],[5.6,'pop'],[6.15,'ding'],[7.6,'whoosh'],[8.1,'ding'],[8.4,'pop2'],[9.2,'pop']];
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler). Her satır 5 bitlik sayı. Aksanlar ayrı satırda. */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'%':[24,25,2,4,8,19,3],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite: 16x18, kafa yeşil, ekran siyah, beyaz gözler */
+function kareSprite(x0,y0,frame,face='happy',k=3){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM; // bacaklar
+  if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  // kollar
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+
+function pad(x,y,k){ // piksel oyun kumandası
+  X.save();X.translate(x,y);X.scale(k,k);
+  box(0,2,22,10,GREY,INK,1); X.fillStyle=GREY;X.fillRect(1,10,5,4);X.fillRect(16,10,5,4);
+  X.fillStyle=WHITE;X.fillRect(4,6,5,1);X.fillRect(6,4,1,5);
+  X.fillStyle=PINK;X.fillRect(15,5,2,2);X.fillStyle=LIME;X.fillRect(18,7,2,2);
+  X.restore();
+}
+function render(){
+  X.imageSmoothingEnabled=false;
+  X.fillStyle=INK;X.fillRect(0,0,270,480);
+  // arka planda piksel şehir silüeti (oyun sahnesi)
+  const bl=[[0,300,26,72],[30,280,22,92],[56,318,30,54],[200,290,24,82],[228,312,18,60],[250,270,20,102]];
+  for(const [x,y,w,h] of bl){X.fillStyle='#24242B';X.fillRect(x,y,w,h);X.fillStyle='#3A3A42';for(let yy=y+6;yy<y+h-6;yy+=10)for(let xx=x+4;xx<x+w-4;xx+=8)X.fillRect(xx,yy,3,4);}
+  const gy=372; X.fillStyle=LIME;X.fillRect(0,gy,270,108);
+  for(let i=0;i<18;i++){X.fillStyle=DLIME;X.fillRect(i*16,gy,1,108);X.fillRect(i*16,gy+16,16,1);} X.fillStyle=INK;X.fillRect(0,gy,270,2);
+  box(36,58,198,30,PINK,INK,3); txt('BEKLEME BİTTİ!',135,68,2,WHITE,'center');
+  txt('GTA V: 2013',135,104,3,CREAM,'center',null);
+  txt('GTA VI: BUGÜN',135,138,3,LIME,'center',null);
+  txt('13 YILLIK BEKLEME',135,172,1,WHITE,'center',null);
+  box(34,184,202,24,INK,CREAM,2);
+  for(let i=0;i<16;i++){X.fillStyle=i%2?LIME:DLIME;X.fillRect(38+i*12,188,11,16);}
+  txt('%100',135,216,2,LIME,'center',null);
+  kareSprite(110,250,1,'happy',3); pad(117,291,1);
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+  const O=OUT; O.fillStyle=INK; O.beginPath();O.roundRect(48,1290,984,380,28);O.fill();O.lineWidth=8;O.strokeStyle=LIME;O.stroke();
+  O.textAlign='center';O.textBaseline='alphabetic';
+  O.fillStyle=WHITE;O.font='800 50px "Inter"';O.fillText('GTA VI bugün çıktı.',540,1372);
+  O.fillStyle='#D2D2D8';O.font='500 40px "Inter"';O.fillText("Bir önceki oyun GTA V, 2013'te gelmişti.",540,1440);O.fillText('Arada 13 yıldan fazla var.',540,1492);
+  O.fillStyle=PINK;O.font='800 44px "Inter"';O.fillText("Sen oynayacak mısın? DM'den yaz.",540,1598);
+}
+render();
+</script></body></html>
