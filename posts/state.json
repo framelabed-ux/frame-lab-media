@@ -447,6 +447,32 @@
    "media_id": "17991178818089969",
    "published_at": "2026-11-18T19:15+03:00",
    "status": "yayında (18 Kasım akşam görevi)"
+  },
+  {
+   "slug": "2026-11-19-story-duzenleme",
+   "kind": "short-reel",
+   "style": "arayuz",
+   "media_id": "18668539741040283",
+   "publish_date": "2026-11-19",
+   "published_at": "2026-11-19T09:01+03:00",
+   "title": "Instagram: paylaşılan story ilk 15 dakika içinde düzenlenebiliyor (yazı, müzik, çıkartma, çizim; izlenmeler korunuyor)",
+   "files": [
+    "posts/2026-11-19-story-duzenleme/reel.mp4"
+   ],
+   "cover": "posts/2026-11-19-story-duzenleme/cover.jpg",
+   "cover_type": "kare",
+   "cover_tone": "light",
+   "topic_area": "platform",
+   "layout": "ui",
+   "music": "pop",
+   "caption": "Story'de yazım hatası mı var, saati mi yanlış yazdın? Artık silip baştan atmana gerek yok.\n\nInstagram'ın başı Adam Mosseri 18 Kasım'da duyurdu: Paylaştığın story'yi ilk 15 dakika içinde düzenleyebiliyorsun.\n\nNeleri değiştirebilirsin?\n• Yazı (yazım hatası, yanlış saat, yanlış fiyat)\n• Müzik\n• Çıkartmalar\n• Çizimler\n\nNasıl? Story'ni aç, alttaki üç nokta menüsüne dokun ve düzenleme seçeneğini seç.\n\nEn güzel kısmı: Silip yeniden attığında sıfırdan başlayan izlenmeler, beğeniler ve yanıtlar bu sefer yerinde kalıyor.\n\nÖzellik kademeli olarak açılıyor; Türkiye'ye de önümüzdeki günlerde gelmesi bekleniyor. 15 dakika geçtiyse tek yol yine silip yeniden paylaşmak.\n\nSende var mı? Yorumlara yaz. Kaydet, lazım olur.\n\nKaynak: 9to5Mac, Techturco (The Verge'e dayanarak)\n\n#instagram #instagramipuçları #sosyalmedya #içeriküretimi #içeriküreticisi #dijitalpazarlama",
+   "sources": [
+    "https://9to5mac.com/2026/11/18/instagram-finally-lets-users-edit-stories-after-publishing-but-theres-a-catch/",
+    "https://www.techturco.com/en/software/instagram-lets-users-edit-stories-for-15-minutes-after-104222",
+    "https://kantan.news/news/instagram-launches-feature-to-edit-shared-stories"
+   ],
+   "note": "19 Kasım sabah görevi: büyük platform gelişmesi (Mosseri, 18 Kasım) aynı gün; 8,6 sn sahne + 3,2 sn logo kapanışı = 11,8 sn. Akşam Reel'i Ece'yle hazırlanmış seslendirmeli plan olduğu için yerinden oynatılmadı; büyük gelişme sabah kısa Reel'inde işlendi.",
+   "status": "yayında (19 Kasım sabah görevi)"
   }
  ],
  "queue": [
@@ -468,7 +494,8 @@
     "https://www.nssmag.com/en/article/41960",
     "https://www.campaignasia.com/article/burberrys-return-to-british-eccentricity-defies-8216reblanding8217-trend/483228"
    ],
-   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik lofi). Akşam 19:10."
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik lofi). Akşam 19:10.",
+   "cover_type": "gorsel"
   },
   {
    "slug": "2026-11-20-en-degerli-tepki",
@@ -739,7 +766,8 @@
   "dikkat-1-7-saniye",
   "gpt-6-2-astra-sol",
   "instagram-direct-app",
-  "gpt-6-2-karakter-sec"
+  "gpt-6-2-karakter-sec",
+  "instagram-story-duzenleme"
  ],
  "hot_pending": [
   {
@@ -775,15 +803,25 @@
    "note": "18 Kasım story'sinde kısaca işlendi; feed için ancak yeni bir açı varsa."
   },
   {
-   "key": "gta-vi-launch",
-   "topic": "GTA VI 19 Kasım gece yarısı (yerel saat) PS5 ve Xbox Series X|S'te çıkıyor; The Game Awards 2026 GOTY adayı (10 Aralık)",
-   "found": "2026-11-18",
-   "big": true,
+   "key": "gemini-4-neon",
+   "topic": "Google Gemini 4 Neon'u yayınladı (bir ayda dördüncü Gemini 4 modeli; AI Pro/Ultra)",
+   "found": "2026-11-19",
+   "big": false,
+   "note": "Gemini ×2 zaten işlendi ve veri dersine göre aynı markanın tekrarı tutmadı; yapay zekâ kotası (dün 2 AI gönderisi). Ancak yeni bir somut açı varsa.",
    "sources": [
-    "https://www.forbes.com/sites/brianmazique/2026/11/12/gta-6-unlocks-at-midnight-on-november-19-but-millions-of-americans-can-start-playing-the-night-before/",
-    "https://www.keengamer.com/articles/news/the-game-awards-2026-all-game-of-the-year-nominees-revealed/"
-   ],
-   "note": "youtube-gta-vi-paketi zaten işlendi; çıkış günü farklı bir açıdan (ör. oyunun pazarlaması/fragman rekorları) değerlendirilebilir, rakamlar ayrıca doğrulanmalı."
+    "https://www.androidauthority.com/gemini-4-neon-3736931/",
+    "https://www.digitaltrends.com/computing/google-says-gemini-4-neon-can-hang-with-claude-opus-5-5-and-gpt-6-2-sol-for-less/"
+   ]
+  },
+  {
+   "key": "anthropic-ipo",
+   "topic": "Anthropic bugün (19 Kasım) Nasdaq'ta halka arz oluyor (ANT, hisse 83 $)",
+   "found": "2026-11-19",
+   "big": false,
+   "note": "Finans haberi, yaratıcı dijital kapsamın dışında; feed için uygun değil.",
+   "sources": [
+    "https://www.cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut/"
+   ]
   }
  ],
  "scheduled": [],
@@ -858,6 +896,46 @@
     "style": "editoryal (render.py)"
    },
    "lesson": "İzleyiciye bakan çizgi film Kare + 'bunu da kaydıracaktın' gibi doğrudan izleyiciye hitap eden açılış %45 skip, 1.010 erişim; metin ağırlıklı editoryal Reel %88 skip, 104 erişim; statik 3 erişim. Bugün iki gönderi de karakterle (3D Kare sabah, çizgi film Kare akşam) ve ilk karede hareketle açılıyor, editoryal motor kullanılmadı."
+  },
+  {
+   "date": "2026-11-19",
+   "followers": 5,
+   "yesterday_morning": {
+    "media_id": "18457465903122891",
+    "slug": "2026-11-18-gpt-6-2-slayt",
+    "kind": "short-reel",
+    "style": "3d",
+    "reach": 107,
+    "views": 119,
+    "skip_rate": 0.806,
+    "avg_watch_s": 2.8,
+    "shares": 0
+   },
+   "yesterday_midday": {
+    "media_id": "17914541763574067",
+    "slug": "2026-11-19-gpt-6-2-karakter-sec",
+    "kind": "reel",
+    "style": "oyun (Ece seslendirmesi)",
+    "reach": 1026,
+    "views": 1183,
+    "skip_rate": 0.488,
+    "avg_watch_s": 10.4,
+    "shares": 1,
+    "saved": 3
+   },
+   "yesterday_evening": {
+    "media_id": "17991178818089969",
+    "slug": "2026-11-18-instagram-direct",
+    "kind": "reel",
+    "style": "cizgi-film (Ece seslendirmesi)",
+    "reach": 1254,
+    "views": 1451,
+    "skip_rate": 0.534,
+    "avg_watch_s": 12.5,
+    "shares": 132,
+    "saved": 6
+   },
+   "lesson": "Herkesin kullandığı Instagram özelliği (Direct, Türkiye'de test) 132 paylaşım ve 1.254 erişim aldı; anlatımlı oyun Reel'i de 1.026 erişim. Metin ağırlıklı 3D kısa sabah Reel'i (GPT-6.2 slayt) %81 skip, 107 erişimde kaldı. Bugün sabah gönderisi yine geniş kitlenin kullandığı bir Instagram özelliği (story düzenleme), ilk karede telefon + izleyiciye bakan Kare, doğrudan hitap eden soru ('Story'de hata mı yaptın?')."
   }
  ],
  "planned_reels": [
