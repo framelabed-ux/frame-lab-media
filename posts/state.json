@@ -497,6 +497,32 @@
    "media_id": "17981484864140074",
    "published_at": "2026-11-19T19:15+03:00",
    "music": "lofi"
+  },
+  {
+   "slug": "2026-11-20-yukleme-cubugu",
+   "kind": "short-reel",
+   "style": "oyun",
+   "media_id": "18123156926059374",
+   "publish_date": "2026-11-20",
+   "published_at": "2026-11-20T08:58+03:00",
+   "title": "Mini test: iki yükleme çubuğu aynı 5 saniyede doluyor; geriye akan çizgili olan beklemeyi %11 daha kısa hissettiriyor (CHI 2010)",
+   "files": [
+    "posts/2026-11-20-yukleme-cubugu/reel.mp4"
+   ],
+   "cover": "posts/2026-11-20-yukleme-cubugu/cover.jpg",
+   "cover_type": "tipografi",
+   "cover_tone": "light",
+   "topic_area": "psikoloji",
+   "layout": "game",
+   "music": "synthwave",
+   "caption": "Hangisi daha hızlı doldu sence: A mı, B mi?\n\nİkisi de tam 5 saniyede doluyor. Ama çizgili olan daha çabuk bitmiş gibi gelebilir.\n\n2010'da CHI konferansında yayımlanan bir araştırmada (Harrison, Yeo ve Hudson) katılımcılara farklı yükleme çubukları izletildi. En etkili olan, çizgileri ilerlemenin tersine, yani geriye doğru akan ve giderek yavaşlayan çubuktu: Bekleme süresini %11 daha kısa hissettirdi. Süre aynı, his farklı.\n\nSenin için anlamı:\n• Uygulama, site ya da form tasarlıyorsan yükleme çubuğuna geriye akan çizgiler eklemeyi dene.\n• Bekleme kısalmasa bile beklemenin hissi tasarlanabilir.\n\nA mı dedin, B mi? Yorumlara yaz. Kaydet, bir gün bir yükleme ekranı tasarlarken lazım olur.\n\nKaynak: Harrison, Yeo, Hudson, \"Faster Progress Bars\", CHI 2010\n\n#tasarım #uxtasarım #arayüztasarımı #psikoloji #kullanıcıdeneyimi #grafiktasarım #biliyormuydun",
+   "sources": [
+    "https://chrisharrison.net/index.php/Research/ProgressBars2",
+    "https://chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf",
+    "https://www.figlab.com/research/2010/faster-progress-bars"
+   ],
+   "note": "20 Kasım sabah görevi: krem zeminli oyun tarzı mini test (10 sn + 3,2 sn logo kapanışı). Ders: sessiz kısa sabah Reel'leri ~110 erişimde kalıyor; bu sefer sonuna kadar izletecek bir test/cevap yapısı ve yoruma davet (A mı, B mi?) denendi.",
+   "status": "yayında (20 Kasım sabah görevi)"
   }
  ],
  "queue": [
@@ -758,6 +784,18 @@
     "https://allthings.how/how-long-the-wait-for-gta-6-has-been-release-set-for/"
    ],
    "media_id": "18097896470159431"
+  },
+  {
+   "date": "2026-11-20",
+   "slug": "2026-11-20-story",
+   "file": "posts/2026-11-20-story/story.jpg",
+   "about": "Biliyor muydun: Kling Image 4.0 tek görsele 2.000 karaktere kadar yazı yazabiliyor; ipucu: yine de her harfi kendin kontrol et; 'Sen denedin mi? DM'den yaz.' (3D Kare, koyu)",
+   "layout": "3d",
+   "style": "3d",
+   "topic_area": "ai",
+   "sources": [
+    "https://technode.com/2026/11/18/kuaishou-launches-kling-image-4-0-with-native-8k-generation"
+   ]
   }
  ],
  "replied_comments": [
@@ -785,7 +823,8 @@
   "gpt-6-2-astra-sol",
   "instagram-direct-app",
   "gpt-6-2-karakter-sec",
-  "instagram-story-duzenleme"
+  "instagram-story-duzenleme",
+  "yukleme-cubugu-algi"
  ],
  "hot_pending": [
   {
@@ -954,6 +993,35 @@
     "saved": 6
    },
    "lesson": "Herkesin kullandığı Instagram özelliği (Direct, Türkiye'de test) 132 paylaşım ve 1.254 erişim aldı; anlatımlı oyun Reel'i de 1.026 erişim. Metin ağırlıklı 3D kısa sabah Reel'i (GPT-6.2 slayt) %81 skip, 107 erişimde kaldı. Bugün sabah gönderisi yine geniş kitlenin kullandığı bir Instagram özelliği (story düzenleme), ilk karede telefon + izleyiciye bakan Kare, doğrudan hitap eden soru ('Story'de hata mı yaptın?')."
+  },
+  {
+   "date": "2026-11-20",
+   "followers": 5,
+   "yesterday_morning": {
+    "media_id": "18668539741040283",
+    "slug": "2026-11-19-story-duzenleme",
+    "kind": "short-reel",
+    "style": "arayuz",
+    "reach": 113,
+    "views": 140,
+    "skip_rate": 0.655,
+    "avg_watch_s": 4.5,
+    "shares": 3,
+    "saved": 0
+   },
+   "yesterday_evening": {
+    "media_id": "17981484864140074",
+    "slug": "2026-11-19-logolar-neden-ayni",
+    "kind": "reel",
+    "style": "3d (Ece seslendirmesi)",
+    "reach": 1300,
+    "views": 1440,
+    "skip_rate": 0.447,
+    "avg_watch_s": 13.1,
+    "shares": 5,
+    "saved": 9
+   },
+   "lesson": "Seslendirmeli 4 Reel üst üste test havuzunu aştı (1.014–1.402 erişim, skip %45–54); sessiz kısa sabah Reel'leri yine ~110'da kaldı (skip %65–81, izlenme 2,7–4,5 sn). Bugün sabah Reel'i sonuna kadar izletecek bir mini test (cevap 5. saniyede) ve A/B yorum çağrısıyla açıldı; Kare 0. karede izleyiciye bakıyor."
   }
  ],
  "planned_reels": [
