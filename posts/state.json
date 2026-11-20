@@ -881,6 +881,42 @@
    "sources": [
     "https://www.cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut/"
    ]
+  },
+  {
+   "key": "canva-ai-controls",
+   "topic": "Canva, üretken yapay zekâ özelliklerini gizleyen ve şablon/aramada daha az yapay zekâ içeriği gösteren 'AI Controls' ayarlarını duyurdu (Free ve Pro, ücretsiz; kademeli yayılıyor)",
+   "found": "2026-11-20",
+   "big": false,
+   "note": "19 Kasım. İki ayar: Ayarlar > İzinler > 'Enable generative AI features' (yardım sayfasında adımlar henüz 'coming soon') ve Hesabın > AI personalization (şablon, öğe, arama ve önerilerde daha az yapay zekâ içeriği). Background Remover, Magic Grab gibi düzenleme araçları açık kalıyor. Öğle görevi (20 Kasım): büyük gelişme ölçütüne girmedi (yeni özellik değil, kapatma ayarı); tasarım alanı için iyi bir sabah/story konusu.",
+   "sources": [
+    "https://9to5mac.com/2026/11/19/canva-introduces-new-controls-to-hide-generative-ai-features/",
+    "https://www.canva.com/help/manage-ai-features/",
+    "https://www.canva.com/newsroom/news/ai-controls-canva/"
+   ]
+  },
+  {
+   "key": "coca-cola-enjoy-joy-yapay-zekasiz",
+   "topic": "Coca-Cola, son iki yılın tartışmalı yapay zekâ yılbaşı reklamlarından sonra 2026 ABD yılbaşı kampanyası 'Enjoy Joy'u gerçek çekimle yaptı (Ogilvy / WPP Open X, yönetmen Paul Dektor)",
+   "found": "2026-11-20",
+   "big": false,
+   "note": "19 Kasım. 30/15/6 sn'lik kesimler, 'Grandma's Holiday Table' sosyal serisi, 270'ten fazla duraklı Holiday Caravan. Resmî görsel var (Marketing Dive, 'Courtesy of Coca-Cola'). Marka/reklam alanı için güçlü aday; görsel kuralı geçerli.",
+   "sources": [
+    "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215/",
+    "https://www.contentgrip.com/coca-cola-enjoy-joy-holiday/"
+   ]
+  },
+  {
+   "key": "gta-vi-cikis-rekorlari",
+   "topic": "GTA VI çıkışının ilk günü: Metacritic 99 (Ocarina of Time ile en yüksek puana ortak), Twitch'te izleyici rekoru; markaların GTA pazarlaması (Specsavers 'GTA Transport', Logitech izin günü, Popeyes)",
+   "found": "2026-11-20",
+   "big": false,
+   "note": "Çıkış (19 Kasım) 19 Kasım story'sinde işlendi. Twitch rakamları kaynaklara göre değişiyor (Engadget 3,3 milyon+, Kotaku ~2,8 milyon); satış rakamları yalnızca tahmin (Sensor Tower), Take-Two resmî rakam vermedi. İşlenecekse 'markalar GTA VI'dan nasıl pay kaptı' açısı, rakamlar yeniden doğrulanarak.",
+   "sources": [
+    "https://www.engadget.com/2320788/gta-vi-launch-day-live-blog/",
+    "https://kotaku.com/live-updates-on-gta-6-the-biggest-launch-in-gaming-history-2000758030",
+    "https://www.creativebloq.com/news/the-specsavers-gta-6-campaign-is-hilariously-on-brand",
+    "https://www.adweek.com/brand-marketing/6-ways-brands-are-capturing-buzz-around-gta-6s-release/"
+   ]
   }
  ],
  "scheduled": [],
