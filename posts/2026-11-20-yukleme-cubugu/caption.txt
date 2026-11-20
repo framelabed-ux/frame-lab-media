@@ -1,0 +1,15 @@
+Hangisi daha hızlı doldu sence: A mı, B mi?
+
+İkisi de tam 5 saniyede doluyor. Ama çizgili olan daha çabuk bitmiş gibi gelebilir.
+
+2010'da CHI konferansında yayımlanan bir araştırmada (Harrison, Yeo ve Hudson) katılımcılara farklı yükleme çubukları izletildi. En etkili olan, çizgileri ilerlemenin tersine, yani geriye doğru akan ve giderek yavaşlayan çubuktu: Bekleme süresini %11 daha kısa hissettirdi. Süre aynı, his farklı.
+
+Senin için anlamı:
+• Uygulama, site ya da form tasarlıyorsan yükleme çubuğuna geriye akan çizgiler eklemeyi dene.
+• Bekleme kısalmasa bile beklemenin hissi tasarlanabilir.
+
+A mı dedin, B mi? Yorumlara yaz. Kaydet, bir gün bir yükleme ekranı tasarlarken lazım olur.
+
+Kaynak: Harrison, Yeo, Hudson, "Faster Progress Bars", CHI 2010
+
+#tasarım #uxtasarım #arayüztasarımı #psikoloji #kullanıcıdeneyimi #grafiktasarım #biliyormuydun
