@@ -1,0 +1,92 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#F5F4F0;overflow:hidden}#g{position:absolute;left:0;top:0;width:1080px;height:1920px}#o{position:absolute;left:0;top:0}</style></head>
+<body><canvas id="g" width="600" height="1067"></canvas><canvas id="o" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab sabah kısa Reel'i (3D): ChatGPT canlı dikte. Kare konuşur, sözler mesaj kutusuna canlı akar; 3D mikrofon ve 10 dakika sınırının kalkması; kapanış: mikrofona dokun. */
+const FS="#version 300 es\nprecision highp float;\nuniform vec2 R; uniform int SC; uniform float T; uniform int FACE;\nuniform vec3 BG0, BG1, RIMA, RIMB, OBJ; uniform vec2 GC; uniform float GR; uniform float YAW, PITCH, ZOOM, OY;\nout vec4 o;\nint M; vec3 LP;\nmat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}\nfloat sdRB(vec3 p, vec3 b, float r){vec3 q=abs(p)-b+r;return length(max(q,0.))+min(max(q.x,max(q.y,q.z)),0.)-r;}\nfloat sdCap(vec3 p, vec3 a, vec3 b, float r){vec3 pa=p-a,ba=b-a;float h=clamp(dot(pa,ba)/dot(ba,ba),0.,1.);return length(pa-ba*h)-r;}\nfloat sdRCyl(vec3 p, float ra, float rb, float h){vec2 d=vec2(length(p.xz)-ra+rb,abs(p.y)-h+rb);return min(max(d.x,d.y),0.)+length(max(d,0.))-rb;}\nfloat sdTorus(vec3 p, vec2 t){vec2 q=vec2(length(p.xy)-t.x,p.z);return length(q)-t.y;}\nfloat sdTri(vec2 p, float r){const float k=1.7320508;p.x=abs(p.x)-r;p.y=p.y+r/k;if(p.x+k*p.y>0.)p=vec2(p.x-k*p.y,-k*p.x-p.y)/2.;p.x-=clamp(p.x,-2.*r,0.);return -length(p)*sign(p.y);}\nfloat sdBox2(vec2 p, vec2 b, float r){vec2 q=abs(p)-b+r;return length(max(q,0.))+min(max(q.x,q.y),0.)-r;}\nvoid U(float d, int m, inout float D){if(d<D){D=d;M=m;}}\nfloat GY;\nfloat map(vec3 p){\n  float D=1e9; M=0;\n  U(p.y-GY, 5, D);\n  vec3 q=p; q.y-=OY; q.y-=0.03*sin(T*2.0); q.xz*=rot(YAW+0.12*sin(T*1.3)); q.yz*=rot(PITCH);\n  if(SC==0){ // Kare\n    float head=sdRB(q-vec3(0.,.15,0.), vec3(.62,.5,.34), .17);\n    float cut=sdRB(q-vec3(0.,.15,.36), vec3(.49,.37,.05), .11);\n    head=max(head,-cut);\n    U(head,1,D);\n    float scr=sdRB(q-vec3(0.,.15,.29), vec3(.485,.365,.03), .10);\n    if(scr<D){D=scr;M=2;LP=q;}\n    U(sdCap(q,vec3(0.,.62,0.),vec3(0.,.93,0.),.028),1,D);\n    U(length(q-vec3(0.,1.0,0.))-.095,3,D);\n    U(sdRCyl(q-vec3(0.,-.42,0.),.10,.02,.10),1,D);\n    U(sdRB(q-vec3(0.,-.56,0.), vec3(.40,.05,.17), .05),4,D);\n  } else if(SC==1){ // oynat d\u00fc\u011fmesi\n    vec2 t2=vec2(q.y,q.x+.08);\n    float d2=sdTri(t2,.40)-.20;\n    vec2 w=vec2(d2,abs(q.z)-.13);\n    U(min(max(w.x,w.y),0.)+length(max(w,0.))-.09,1,D);\n    vec3 s=p; s.y-=OY;\n    U(length(s-vec3(.98,.62,-.3))-.15,6,D);\n    U(length(s-vec3(-.9,-.55,.35))-.09,7,D);\n    U(length(s-vec3(-.82,.78,-.5))-.11,3,D);\n  } else if(SC==2){ // madeni paralar\n    for(int i=0;i<4;i++){\n      float fi=float(i);\n      vec3 c=q-vec3(.05*sin(fi*2.1)-.15,-.48+fi*.15,.04*cos(fi*1.7));\n      float d=sdRCyl(c,.50,.035,.068);\n      if(i==3){ float g=abs(sdBox2(c.xz,vec2(.22),.07))-.022; d=max(d,-max(g,.045-c.y)); }\n      U(d,1,D);\n    }\n    vec3 c=q-vec3(.72,-.20,.12); c.xy*=rot(-1.18);\n    float d=sdRCyl(c,.50,.035,.068);\n    float g=abs(sdBox2(c.xz,vec2(.22),.07))-.022; d=max(d,-max(g,.045-c.y));\n    U(d,1,D);\n    vec3 s=p; s.y-=OY;\n    U(length(s-vec3(-.95,.55,-.2))-.12,6,D);\n    U(length(s-vec3(1.05,.75,-.5))-.08,3,D);\n  } else if(SC==3){ // mikrofon\n    float hd=sdCap(q,vec3(0.,.32,0.),vec3(0.,.80,0.),.36); if(hd<D){D=hd;M=9;LP=q;}\n    U(sdRCyl(q-vec3(0.,.36,0.),.378,.02,.06),4,D);\n    U(max(sdTorus(q-vec3(0.,.40,0.),vec2(.52,.045)),q.y-.40),4,D);\n    U(sdCap(q,vec3(0.,-.12,0.),vec3(0.,-.62,0.),.05),4,D);\n    U(sdRCyl(q-vec3(0.,-.66,0.),.36,.03,.05),4,D);\n  }\n  return D;\n}\nvec3 nrm(vec3 p){vec2 e=vec2(.0012,0.);int m=M;vec3 n=normalize(vec3(map(p+e.xyy)-map(p-e.xyy),map(p+e.yxy)-map(p-e.yxy),map(p+e.yyx)-map(p-e.yyx)));M=m;return n;}\nfloat shadow(vec3 ro, vec3 rd){float r=1.,t=.03;for(int i=0;i<48;i++){float h=map(ro+rd*t);r=min(r,9.*h/t);t+=clamp(h,.02,.25);if(r<.01||t>6.)break;}return clamp(r,0.,1.);}\nfloat ao(vec3 p, vec3 n){float a=0.,s=1.;for(int i=1;i<=5;i++){float h=.05*float(i);a+=(h-map(p+n*h))*s;s*=.72;}return clamp(1.-2.2*a,0.,1.);}\nvec3 lin(vec3 c){return pow(c,vec3(2.2));}\nvec3 bg(vec2 uv){float d=length((uv-GC)*vec2(1.,.85))/GR;return mix(lin(BG0),lin(BG1),smoothstep(0.,1.,d));}\nvec3 env(vec3 d){float t=smoothstep(.35,.95,d.y);float box=smoothstep(.55,.75,d.y)*smoothstep(.9,.2,abs(d.x));return vec3(.10)+vec3(1.4)*box+vec3(.25)*t;}\nvec3 face(vec3 q){\n  vec2 p=q.xy-vec2(0.,.15); vec3 c=vec3(0.);\n  float aa=.006;\n  vec2 e=vec2(abs(p.x)-.19,p.y-.05);\n  float eye;\n  if(FACE==2){ eye=abs(length(e-vec2(0.,-.03))-.075)-.02; eye=max(eye,-(e.y+.03)); }\n  else eye=length(e)-.075;\n  c+=vec3(1.)*smoothstep(aa,-aa,eye);\n  if(FACE==1){ c*=smoothstep(-aa,aa,length(e-vec2(-.02*sign(p.x)+.0,-.015))-.032); c+=vec3(1.)*smoothstep(aa,-aa,abs(length(p-vec2(0.,-.15))-.04)-.014); }\n  else { float m=abs(length(p-vec2(0.,-.08))-.11)-.018; m=max(m,p.y+.11); c+=vec3(1.)*smoothstep(aa,-aa,m); }\n  vec2 k=abs(p)-vec2(.40,.28);\n  float tick=min(max(abs(k.x)-.008,abs(k.y+.035)-.04),max(abs(k.y)-.008,abs(k.x+.035)-.04));\n  c+=lin(vec3(.776,.949,.306))*.9*smoothstep(aa,-aa,tick);\n  return c;\n}\nvec3 shade(vec2 uv){\n  vec3 ro=vec3(0.,.25,ZOOM), ta=vec3(0.,.12,0.);\n  if(SC==2){ro=vec3(0.,1.25,ZOOM);ta=vec3(0.,-.1,0.);}\n  vec3 f=normalize(ta-ro), r=normalize(cross(f,vec3(0.,1.,0.))), u=cross(r,f);\n  vec3 rd=normalize(f*3.6+r*uv.x+u*uv.y);\n  float t=0.; int m=0; bool hit=false;\n  for(int i=0;i<140;i++){float h=map(ro+rd*t); if(h<.0008){hit=true;break;} t+=h; if(t>14.)break;}\n  vec3 B=bg(uv);\n  if(!hit) return B;\n  m=M; vec3 lp=LP; vec3 p=ro+rd*t; vec3 n=nrm(p);\n  vec3 L=normalize(vec3(-.45,.9,.55));\n  float sh=shadow(p+n*.004,L), a=ao(p,n);\n  if(m==5){ float k=mix(.42,1.,sh)*mix(.6,1.,a); return B*k; }\n  vec3 alb; float rough=.35; vec3 em=vec3(0.);\n  if(m==1) alb=lin(OBJ);\n  else if(m==2){ alb=vec3(.012); rough=.08; em=face(lp)*1.25; }\n  else if(m==3) alb=lin(vec3(1.,.18,.56));\n  else if(m==4){ alb=vec3(.02); rough=.25; }\n  else if(m==6) alb=lin(vec3(1.,.18,.56));\n  else if(m==9){ alb=lin(OBJ)*mix(.42,1.,smoothstep(.25,.45,abs(fract(lp.y*11.)-.5)*2.)); rough=.3; }\n  else alb=vec3(.9);\n  float nl=max(dot(n,L),0.), nv=max(dot(n,-rd),0.);\n  vec3 col=alb*(nl*sh*1.15+ (0.22+.20*n.y)*a);\n  col+=alb*.35*lin(RIMA)*max(dot(n,normalize(vec3(.9,.1,-.3))),0.)*a;\n  col+=alb*.35*lin(RIMB)*max(dot(n,normalize(vec3(-.9,.2,-.2))),0.)*a;\n  float fr=.04+.96*pow(1.-nv,5.);\n  vec3 h=normalize(L-rd);\n  col+=pow(max(dot(n,h),0.),mix(220.,40.,rough))*sh*(1.-rough)*1.2;\n  col+=env(reflect(rd,n))*fr*a*(1.-rough*.5);\n  col+=pow(1.-nv,2.5)*(lin(RIMA)*smoothstep(-.2,.9,n.x)+lin(RIMB)*smoothstep(-.2,.9,-n.x))*.55;\n  if(m==4||m==2) return col*.0+alb*(nl*sh+.2*a)+env(reflect(rd,n))*fr*a+pow(max(dot(n,h),0.),200.)*sh+em;\n  return col+em;\n}\nfloat hash(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}\nvoid main(){\n  GY=(SC==0?-.78:(SC==1?-1.05:(SC==3?-.71:-.55)))+OY;\n  vec3 c=vec3(0.);\n  c=shade((2.*gl_FragCoord.xy-R)/R.y);\n  c=c*(2.51*c+.03)/(c*(2.43*c+.59)+.14);\n  c=pow(clamp(c,0.,1.),vec3(1./2.2));\n  c+=(hash(gl_FragCoord.xy)-.5)/255.*2.;\n  o=vec4(c,1.);\n}";
+window.DUR=9.6;
+window.SFX=[[0.05,'whoosh'],[0.5,'pop'],[3.2,'whoosh'],[3.6,'pop2'],[4.7,'tick'],[5.15,'tick'],[5.6,'alarm'],[6.6,'whoosh'],[7.0,'ding'],[8.2,'pop']];
+const g=document.getElementById('g').getContext('webgl2',{preserveDrawingBuffer:true});
+const sh=(t,s)=>{const x=g.createShader(t);g.shaderSource(x,s);g.compileShader(x);if(!g.getShaderParameter(x,g.COMPILE_STATUS))throw g.getShaderInfoLog(x);return x};
+const P=g.createProgram();g.attachShader(P,sh(g.VERTEX_SHADER,'#version 300 es\nin vec2 a;void main(){gl_Position=vec4(a,0.,1.);}'));g.attachShader(P,sh(g.FRAGMENT_SHADER,FS));g.linkProgram(P);g.useProgram(P);
+const B=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,B);g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),g.STATIC_DRAW);
+const L=g.getAttribLocation(P,'a');g.enableVertexAttribArray(L);g.vertexAttribPointer(L,2,g.FLOAT,false,0,0);g.viewport(0,0,600,1067);
+const hx=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16)/255);
+function U(k,v){const u=g.getUniformLocation(P,k);if(k=='SC'||k=='FACE')g.uniform1i(u,v);else if(Array.isArray(v)&&v.length==3)g.uniform3fv(u,v);else if(Array.isArray(v))g.uniform2fv(u,v);else g.uniform1f(u,v);}
+const O=document.getElementById('o').getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', WHITE='#FFFFFF', GREY='#8A8880';
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), ease=x=>1-Math.pow(1-clamp(x),3), sm=x=>{x=clamp(x);return x*x*(3-2*x)};
+const back=x=>{x=clamp(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+function big(txt,x,y,size,fill,lh=0.98){O.font=`900 ${size}px "Inter Display"`;O.letterSpacing=(-Math.round(size*0.035))+'px';O.textAlign='center';O.textBaseline='alphabetic';
+  txt.split('\n').forEach((l,i)=>{O.fillStyle=fill;O.fillText(l,x,y+i*size*lh);});O.letterSpacing='0px';}
+function sub(txt,x,y,size,fill,a=1){if(a<=0)return;O.globalAlpha=a;O.font=`600 ${size}px "Inter"`;O.textAlign='center';O.textBaseline='alphabetic';O.fillStyle=fill;
+  txt.split('\n').forEach((l,i)=>O.fillText(l,x,y+i*size*1.3));O.globalAlpha=1;}
+function pill(txt,x,y,size,bg,fg,a=1,sc=1,border=null){if(sc<=0.01||a<=0)return;O.save();O.globalAlpha=a;O.translate(x,y);O.scale(sc,sc);O.font=`800 ${size}px "Inter"`;const w=O.measureText(txt).width+size*1.6,h=size*2;
+  O.beginPath();O.roundRect(-w/2,-h/2,w,h,h/2);O.fillStyle=bg;O.fill();if(border){O.lineWidth=4;O.strokeStyle=border;O.stroke();}O.fillStyle=fg;O.textAlign='center';O.textBaseline='middle';O.fillText(txt,0,size*.06);O.restore();}
+/* mikrofon simgesi (mesaj kutusundaki düğme) */
+function micIcon(x,y,s,col){O.save();O.translate(x,y);O.strokeStyle=col;O.fillStyle=col;O.lineWidth=s*0.12;O.lineCap='round';
+  O.beginPath();O.roundRect(-s*0.18,-s*0.5,s*0.36,s*0.62,s*0.18);O.fill();
+  O.beginPath();O.arc(0,-s*0.12,s*0.34,0.15*Math.PI,0.85*Math.PI);O.stroke();
+  O.beginPath();O.moveTo(0,s*0.22);O.lineTo(0,s*0.42);O.stroke();O.restore();}
+/* mesaj kutusu: sözler konuşuldukça canlı yazılır; words = görünen kelime sayısı (kesirli) */
+const SENT='Yarın sunumum var, bana üç başlık öner.'.split(' ');
+function box(cx,cy,w,words,listen,t,sc=1,pulse=0){if(sc<=0.01)return;O.save();O.translate(cx,cy);O.scale(sc,sc);
+  const h=150; O.shadowColor='rgba(17,17,20,.16)';O.shadowBlur=34;O.shadowOffsetY=14;
+  O.beginPath();O.roundRect(-w/2,-h/2,w,h,h/2);O.fillStyle=WHITE;O.fill();O.shadowColor='transparent';O.lineWidth=5;O.strokeStyle=INK;O.stroke();
+  const n=Math.floor(words), part=words-n; let s=SENT.slice(0,n).join(' ');
+  O.font='600 42px "Inter"';O.textAlign='left';O.textBaseline='middle';O.fillStyle=INK;
+  const maxw=w-230; let shown=s; while(O.measureText(shown).width>maxw && shown.length>4){shown=shown.slice(shown.indexOf(' ')+1);}
+  if(shown!==s) shown='…'+shown;
+  O.fillText(shown,-w/2+56,2);
+  if(n<SENT.length && part>0){const nx=-w/2+56+O.measureText(shown+(shown?' ':'')).width; O.globalAlpha=part; O.fillStyle=GREY; O.fillText(SENT[n],nx,2); O.globalAlpha=1;}
+  // imleç
+  if(Math.floor(t*3)%2===0){const cxp=-w/2+56+O.measureText(shown).width+6; O.fillStyle=PINK; O.fillRect(Math.min(cxp,w/2-180),-26,5,52);}
+  // sağdaki düğme: dinlerken dalga, yoksa mikrofon
+  const bx=w/2-82; O.beginPath();O.arc(bx,0,52+pulse*10,0,7);O.fillStyle=listen?PINK:INK;O.fill();
+  if(listen){O.fillStyle=WHITE;for(let i=0;i<5;i++){const hh=14+30*Math.abs(Math.sin(t*9+i*1.3));O.beginPath();O.roundRect(bx-34+i*15,-hh/2,8,hh,4);O.fill();}}
+  else micIcon(bx,4,62,WHITE);
+  O.restore();}
+/* kronometre çipi */
+function timer(cx,cy,secs,flash,sc){if(sc<=0.01)return;const m=Math.floor(secs/60), s=Math.floor(secs%60);const txt=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  O.save();O.translate(cx,cy);O.scale(sc,sc);O.font='800 76px "Inter"';const w=O.measureText(txt).width+150,h=130;
+  O.beginPath();O.roundRect(-w/2,-h/2,w,h,h/2);O.fillStyle=flash>0?PINK:INK;O.fill();
+  O.beginPath();O.arc(-w/2+62,0,16,0,7);O.fillStyle=flash>0?WHITE:PINK;O.fill();
+  O.fillStyle=WHITE;O.textAlign='left';O.textBaseline='middle';O.fillText(txt,-w/2+98,4);O.restore();}
+window.render=function(t){
+  let p={SC:0,FACE:0,T:t,BG0:'#FFFFFF',BG1:'#E4E2D9',RIMA:'#C6F24E',RIMB:'#FF2E93',OBJ:'#C6F24E',GC:[0,0.25],GR:1.15,YAW:-0.45,PITCH:0.06,ZOOM:6.2,OY:0.2};
+  const talk=f=>(Math.floor(f*7)%2===0)?0:1;
+  if(t<3.2){ // 1) Kare dönerek gelir ve konuşur
+    const e=ease(t/1.0); p.YAW=-1.1*(1-e)-0.25*e+0.1*Math.sin(t*3); p.ZOOM=8.6-2.6*e; p.FACE=talk(t); p.OY=0.5; p.GC=[0,0.4];
+  } else if(t<6.6){ // 2) 3D mikrofon yükselir
+    const lt=t-3.2, e=back(lt/0.6); p.SC=3; p.YAW=-0.5+lt*0.32+(1-ease(lt/0.6))*2.2; p.PITCH=0.1; p.ZOOM=8.2-lt*0.2; p.OY=-0.5-(1-e)*1.2; p.GC=[0,-0.15];
+  } else { // 3) Kare mutlu, izleyiciye bakar
+    const lt=t-6.6, e=ease(lt/0.7); p.YAW=1.6*(1-e)-0.2+0.15*Math.sin(lt*2.6); p.ZOOM=8.0-1.6*e; p.FACE=lt<1.6?2:(lt<1.8?0:2); p.OY=-0.1; p.PITCH=0.08+0.04*Math.sin(lt*4); p.GC=[0,0.15];
+  }
+  for(const k of ['BG0','BG1','RIMA','RIMB','OBJ']) p[k]=hx(p[k]);
+  U('R',[600,1067]); for(const k in p) U(k,p[k]); g.drawArrays(g.TRIANGLES,0,3);
+  O.clearRect(0,0,1080,1920);
+  if(t<3.2){
+    box(540,1150,900,1.2+t*2.6,true,t,1,0);
+    big('ChatGPT\nkonuştukça yazıyor.',540,1400,102,INK,1.05);
+    sub('Canlı dikte, ücretsiz dahil tüm planlarda açılıyor.',540,1690,44,INK,clamp((t-0.45)/0.3));
+  } else if(t<6.6){
+    const lt=t-3.2;
+    big('10 dakika sınırı',540,330,110,INK);
+    O.globalAlpha=clamp((lt-0.3)/0.25); big('kalktı.',540,450,130,PINK); O.globalAlpha=1;
+    // 09:58 → 10:02, 10:00'da eski sınır yanıp söner
+    const secs=598+Math.floor(clamp((lt-0.6)/2.25)*5);
+    const fl=(lt>2.35&&lt<2.85)?1:0;
+    timer(540,620,secs,fl,back((lt-0.2)/0.4));
+    sub('Göndermeden önce metni düzeltebilirsin.',540,1720,44,INK,clamp((lt-1.0)/0.3));
+  } else {
+    const lt=t-6.6;
+    big('Mesaj kutusundaki',540,260,92,INK);
+    O.globalAlpha=clamp((lt-0.3)/0.25); big('mikrofona dokun.',540,360,92,PINK); O.globalAlpha=1;
+    const pu=Math.max(0,Math.sin(lt*5))*clamp((lt-0.9)/0.3);
+    box(540,1490,900,0,false,lt,back((lt-0.5)/0.5),pu);
+    pill('iOS · Android · web · masaüstü',540,1635,32,WHITE,INK,clamp((lt-1.0)/0.3),1,INK);
+    pill('Sesli mesaj seven arkadaşına gönder',540,1765,42,PINK,WHITE,1,back((lt-1.6)/0.5));
+  }
+};
+window.render(0);
+</script></body></html>

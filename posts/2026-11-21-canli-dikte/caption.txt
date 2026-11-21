@@ -1,0 +1,18 @@
+Uzun mesajı yazmakla uğraşma, söyle: ChatGPT konuştukça yazıyor.
+
+OpenAI 18 Kasım'da ChatGPT'ye "canlı dikte" özelliğini getirdi. Mesaj kutusundaki mikrofona dokunup konuşuyorsun, söylediklerin sen konuşurken yazıya dönüşüyor.
+
+Neler değişti?
+• Metin, kaydın bitmesini beklemeden ekranda beliriyor.
+• Göndermeden önce yazıyı düzeltebiliyorsun.
+• Eski 10 dakikalık kayıt sınırı kaldırıldı.
+
+Kimler kullanabiliyor? Ücretsiz dahil tüm ChatGPT planları; iOS, Android, web ve masaüstü uygulaması. Özellik kademeli açılıyor, sende henüz görünmüyorsa biraz zaman alabilir.
+
+İpucu: Bunu sesli modla karıştırma. Sesli modda ChatGPT'yle karşılıklı konuşursun; dikte ise söylediğini yazıya çevirip mesaj kutusuna koyar.
+
+Sen ChatGPT'ye yazıyor musun, konuşuyor musun? Yorumlara yaz. Kaydet, uzun bir mesaj yazarken lazım olur.
+
+Kaynak: OpenAI ChatGPT sürüm notları (9to5Mac ve Notebookcheck'in aktardığı şekliyle)
+
+#chatgpt #yapayzeka #yapayzekaaraçları #verimlilik #dijitalgündem #teknoloji #ipucu
