@@ -572,9 +572,7 @@
       ],
       "note": "21 Kasım sabah görevi: 3D (yeni 3D mikrofon nesnesi + konuşan Kare), 9,6 sn + logo kapanışı. Ders: sessiz kısa sabah Reel'leri ~110'da kalıyor; bu sefer herkesin bildiği isim (ChatGPT) + 0. karede dönen, konuşan Kare ve canlı yazılan mesaj kutusu.",
       "status": "yayında (21 Kasım sabah görevi)"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "2026-11-21-kerning-nedir",
       "kind": "reel",
@@ -587,13 +585,19 @@
       "cover_tone": "dark",
       "topic_area": "tasarim",
       "voice": true,
-      "caption": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Büyük A ile V yan yana gelince, matematiksel olarak eşit aralık bile gözümüze fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? r ile n fazla yaklaşırsa m gibi okunur: \"kurnaz\" bir anda \"kumaz\" oluverir. Bu hataya şakayla \"keming\" deniyor.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir ayar: tracking.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\n#tipografi #tasarım #grafiktasarım #kerning #tasarımipuçları #yazıkarakteri #kareaçıklıyor",
+      "caption": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Büyük A ile V yan yana gelince, matematiksel olarak eşit aralık bile gözümüze fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? r ile n fazla yaklaşırsa m gibi okunur: \"kurnaz\" bir anda \"kumaz\" oluverir. Bu hataya şakayla \"keming\" deniyor.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir ayar: tracking.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: ilk freelance müşterini nereden bulursun?\n\n#tipografi #tasarım #grafiktasarım #kerning #tasarımipuçları #yazıkarakteri #kareaçıklıyor",
       "sources": [
         "https://en.wikipedia.com/wiki/Kerning",
         "https://www.shopify.com/blog/what-is-kerning"
       ],
-      "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik synthwave). Akşam 19:10."
-    },
+      "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik synthwave). Akşam 19:10.",
+      "media_id": "18095163653204124",
+      "date": "2026-11-21",
+      "published_at": "2026-11-21T19:13+03:00",
+      "music": "synthwave"
+    }
+  ],
+  "queue": [
     {
       "slug": "2026-11-22-ilk-freelance-musteri",
       "kind": "reel",
@@ -981,6 +985,14 @@
       "comment": "Bende izliyorum 41 milyar",
       "draft": "Demek o fazladan 1 milyar senden geldi 😄 19 Kasım'daki 24 saatlik yayını da izleyecek misin?",
       "created": "2026-11-14"
+    },
+    {
+      "comment_id": "18106188500627518",
+      "media_id": "17977057674151921",
+      "username": "neyazim_bulamadm",
+      "comment": "İzlenme sayisi bence",
+      "draft": "İzlenme sayısı ilk bakışta en çok göze çarpan sayı, haklısın! Mosseri'ye göre asıl belirleyici olan ise izlenme süresi, yani videonun ne kadar uzun izlendiği 👀",
+      "created": "2026-11-21"
     }
   ],
   "weekly_metrics": [
