@@ -634,7 +634,7 @@
       "cover_tone": "dark",
       "topic_area": "para",
       "voice": true,
-      "caption": "İlk freelance müşterini nereden bulursun? Üç adımda:\n\n1. Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\n2. Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\n3. Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.\n\n#freelance #serbestçalışma #sosyalmedyauzmanı #grafiktasarım #portfolyo #ekgelir #içeriküretimi",
+      "caption": "İlk freelance müşterini nereden bulursun? Üç adımda:\n\n1. Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\n2. Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\n3. Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?\n\n#freelance #serbestçalışma #sosyalmedyauzmanı #grafiktasarım #portfolyo #ekgelir #içeriküretimi",
       "sources": [],
       "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik funk). Akşam 19:10."
     },
@@ -1292,6 +1292,45 @@
       "visual_note": "3D: üç basamaklı merdiven, her basamakta 3D nesne (mesaj balonu, portfolyo kartları, fiyat etiketi); Kare basamakları çıkıyor.",
       "sources": [],
       "produced": true
+    },
+    {
+      "date": "2026-11-23",
+      "slug": "2026-11-23-youtube-tv-izlenme",
+      "style": "oyun",
+      "topic_area": "platform",
+      "title": "TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?",
+      "script": "Bir videoyu salonda üç kişi izlerseniz YouTube kaç izlenme sayar? Artık üç.\n\nYouTube, TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına eklemeye başladı. Telefonda, bilgisayarda ve tablette değişen bir şey yok; sadece TV.\n\nPeki içerik üreticisi daha çok mu kazanacak? Hayır. Gelir ve para kazanma şartları bu tahminden etkilenmiyor.\n\nBir de merak edenler için: YouTube bunu kamera ya da mikrofonla değil, bir tahmin modeliyle hesaplıyor.\n\nSen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?",
+      "visual_note": "Oyun tarzı: piksel salon, TV ve kanepe; tek izleyici sayacı 1, iki kişi daha oturunca 3'e çıkar; telefon/tablet ikonlarında sayaç 1'de kalır; para kesesi değişmez (gelir etkilenmiyor); kamera/mikrofon ikonu üstü çizili. 21 Kasım story'sinden farklı yeni sahne. YouTube logosu kullanılmaz.",
+      "sources": [
+        "https://support.google.com/youtube/answer/2991785",
+        "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
+        "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "slug": "2026-11-24-sesli-mi-sessiz-mi",
+      "style": "arayuz",
+      "topic_area": "perde-arkasi",
+      "title": "Sesli video mu, sessiz video mu? Kendi 11 Reel'imizden",
+      "script": "Aynı hesap, aynı hafta, on bir video. Aradaki tek büyük fark: ses.\n\nSeslendirdiğimiz beş videonun beşi de bin kişiden fazlasına ulaştı. Sadece yazı ve müzikle çıkan altı videonun altısı da yüz yirmi kişinin altında kaldı.\n\nİlk üç saniyede kaydırıp geçenler sesli videolarda yarıya yakındı, sessizlerde üçte ikiden fazla.\n\nYani yüzünü göstermek zorunda değilsin, ama sesini kullan. Bir ses sana konuşunca durup dinliyorsun.\n\nSen videolarını seslendiriyor musun? Yorumlara yaz, video çeken arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: film afişleri neden hep turuncu ve mavi?",
+      "visual_note": "Gerçekçi arayüz: telefonda istatistik ekranı; iki sütun Reel kartı (hoparlör ikonlu / sessiz ikonlu), erişim sayıları sayarak yükselir; skip oranı halkaları. Veriler: 15–20 Kasım, seslendirmeli 5 Reel 1.014–1.404 erişim, skip %45–54; sessiz 6 Reel 105–118 erişim, skip %66–88 (state.json daily_metrics). Yeni veri gelirse rakamları yeniden kontrol et.",
+      "sources": [
+        "kendi verimiz: posts/state.json daily_metrics ve weekly_metrics (15–20 Kasım)"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "slug": "2026-11-25-turuncu-mavi-afisler",
+      "style": "3d",
+      "topic_area": "gorsel-kultur",
+      "title": "Film afişleri neden hep turuncu ve mavi?",
+      "script": "Son gördüğün film afişini hatırla. Büyük ihtimalle turuncu ve mavi.\n\nHollywood'da çok sevilen bu ikilinin adı turkuaz ve turuncu.\n\nSebep insan teni. Ten rengi turuncuya yakın. Arka planı mavi-yeşile çekince yüzler öne çıkıyor, çünkü bu iki renk renk çemberinde birbirinin karşısında.\n\nAteş, patlama ve gün batımı zaten turuncu; gece ve gökyüzü mavi. Kontrast hazır.\n\nKapak görselinde bir şeyi öne çıkarmak mı istiyorsun? Karşıt rengini arkaya koy.\n\nSen bu ikiliyi en son hangi afişte gördün? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
+      "visual_note": "3D: genel bir afiş çerçevesi (gerçek film afişi yok), içinde turuncu ışıklı 3D Kare yüzü + turkuaz zemin; renk çemberi döner, turuncu ve turkuaz karşı karşıya kilitlenir; son sahnede kapak görseli örneği.",
+      "sources": [
+        "https://www.adobe.com/creativecloud/video/hub/features/why-use-orange-teal-grading",
+        "https://petapixel.com/2017/02/23/orange-teal-look-popular-hollywood/"
+      ]
     }
   ]
 }
