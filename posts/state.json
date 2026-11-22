@@ -869,6 +869,20 @@
         "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/"
       ],
       "media_id": "17977586139149651"
+    },
+    {
+      "date": "2026-11-22",
+      "slug": "2026-11-22-story",
+      "file": "posts/2026-11-22-story/story.jpg",
+      "about": "Biliyor muydun: Gemini uygulaması yazıdan, fotoğraftan ya da videodan ~3 sn'lik döngülü GIF yapıyor; Türkiye'de şimdilik Google AI abonelerine açılıyor; 'Hangi GIF'i yaptırırdın? DM'den yaz.' (3D Kare, koyu)",
+      "layout": "3d",
+      "style": "3d",
+      "topic_area": "ai",
+      "sources": [
+        "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
+        "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
+      ],
+      "media_id": "18123267931940582"
     }
   ],
   "replied_comments": [
