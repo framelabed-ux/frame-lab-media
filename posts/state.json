@@ -595,6 +595,30 @@
       "date": "2026-11-21",
       "published_at": "2026-11-21T19:13+03:00",
       "music": "synthwave"
+    },
+    {
+      "slug": "2026-11-22-icerik-koruma",
+      "kind": "short-reel",
+      "style": "arayuz",
+      "media_id": "18204297724401494",
+      "publish_date": "2026-11-22",
+      "published_at": "2026-11-22T09:08+03:00",
+      "title": "Instagram içerik koruma: kopyalanan Reel'leri bulup engelleme, 'orijinal' etiketi ya da takip (17 Kasım, uygun içerik üreticileri)",
+      "files": [
+        "posts/2026-11-22-icerik-koruma/reel.mp4"
+      ],
+      "cover": "posts/2026-11-22-icerik-koruma/cover.jpg",
+      "cover_type": "kare",
+      "cover_tone": "light",
+      "topic_area": "platform",
+      "layout": "arayuz",
+      "music": "house",
+      "caption": "Reel'ini başka bir hesap paylaşıp izlenmeleri mi topluyor? Instagram artık bu kopyaları kendisi arıyor.\n\nInstagram 17 Kasım'da \"içerik koruma\" aracını uygun içerik üreticilerine açtı. Araç, koruma altına aldığın videoların izinsiz yüklenen kopyalarını sürekli tarıyor ve bir eşleşme bulunca sana haber veriyor.\n\nEşleşme bulunduğunda ne yapabilirsin?\n• Engelle: Kopya video Instagram ve Facebook'ta gizlenir.\n• Etiketle: Kopyaya, izleyeni senin orijinal videona götüren bir \"orijinal\" etiketi eklenir.\n• Takipte tut: Kopya görünür kalır, sen performansını izlersin.\n• Ya da hak talebinden vazgeçip videonun yayında kalmasına izin verirsin.\n\nİzin verdiğin hesapları (ikinci hesabın ya da birlikte çalıştığın bir marka) bir listeye ekleyebiliyorsun; onların paylaşımları kopya sayılmıyor.\n\nNasıl açılır? Uygun hesaplara etkinlik bildirimlerinde bir davet geliyor. Katıldıktan sonra paylaştığın her yeni orijinal video otomatik korunuyor; eski videolarını da tek tek seçip koruma altına alabiliyorsun.\n\nSırada ne var? Görüntüsü yapay zekâyla değiştirilip senin videondaki sesi kullanan kopyaları yakalama özelliği önümüzdeki haftalarda küçük bir grup içerik üreticisiyle test edilecek.\n\nSana bu bildirim geldi mi? Yorumlara yaz. Videoları sürekli kopyalanan bir içerik üreticisi tanıyorsan ona da gönder.\n\nKaynak: TechCrunch, 17 Kasım 2026\n\n#instagram #içeriküreticisi #instagramipuçları #reels #sosyalmedya #telifhakkı #dijitalgündem",
+      "sources": [
+        "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/"
+      ],
+      "note": "22 Kasım sabah görevi: gerçekçi arayüz (telefon: Reel'in başka hesapta → 'İçerik koruma' bildirimi → Engelle → video gizlendi), 9 sn + logo kapanışı, house müzik. hot_pending'den.",
+      "status": "yayında (22 Kasım sabah görevi)"
     }
   ],
   "queue": [
@@ -875,7 +899,9 @@
     "instagram-story-duzenleme",
     "yukleme-cubugu-algi",
     "kling-image-4-yazi",
-    "chatgpt-live-dictation"
+    "chatgpt-live-dictation",
+    "instagram-content-protection",
+    "gemini-gif"
   ],
   "hot_pending": [
     {
@@ -889,15 +915,6 @@
         "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
         "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
         "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/"
-      ]
-    },
-    {
-      "key": "instagram-content-protection",
-      "topic": "Instagram içerik koruma aracını uygun içerik üreticilerine açtı (izinsiz yeniden yüklenen Reel'leri bulup engelleme ya da 'original by' etiketi; yapay zekâyla görüntüsü değiştirilip orijinal sesi kullanan videoları tespit testi yakında)",
-      "found": "2026-11-18",
-      "big": true,
-      "sources": [
-        "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/"
       ]
     },
     {
@@ -965,6 +982,17 @@
         "https://kotaku.com/live-updates-on-gta-6-the-biggest-launch-in-gaming-history-2000758030",
         "https://www.creativebloq.com/news/the-specsavers-gta-6-campaign-is-hilariously-on-brand",
         "https://www.adweek.com/brand-marketing/6-ways-brands-are-capturing-buzz-around-gta-6s-release/"
+      ]
+    },
+    {
+      "key": "gemini-gif",
+      "topic": "Gemini uygulaması GIF üretiyor (Gemini Omni 1.2 Flash; yazı, fotoğraf ya da videodan ~3 sn döngülü GIF; Google AI abonelerine küresel, ücretsiz kullanıcılara 8 ülkede — Türkiye yok)",
+      "found": "2026-11-22",
+      "big": false,
+      "note": "22 Kasım story'sinde işlendi; feed için ancak yeni bir açı varsa.",
+      "sources": [
+        "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
+        "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
       ]
     }
   ],
@@ -1161,6 +1189,39 @@
         "comments": 1
       },
       "lesson": "Seslendirmeli akşam Reel'leri 5'te 5 test havuzunu aştı (1.014–1.404 erişim, skip %45–54, izlenme 10–13 sn); sessiz kısa sabah Reel'leri hâlâ ~110'da (dünkü verisi eksik). Bugün sabah Reel'i herkesin bildiği bir isimle (ChatGPT) ve 0. karede konuşan, dönen 3D Kare + canlı yazılan mesaj kutusuyla açıldı."
+    },
+    {
+      "date": "2026-11-22",
+      "followers": 6,
+      "yesterday_morning": {
+        "media_id": "17958169884268324",
+        "slug": "2026-11-21-canli-dikte",
+        "kind": "short-reel",
+        "style": "3d",
+        "reach": 106,
+        "views": 128,
+        "skip_rate": 0.712,
+        "avg_watch_s": 3.6,
+        "shares": 0,
+        "saved": 0,
+        "likes": 0
+      },
+      "yesterday_evening": {
+        "media_id": "18095163653204124",
+        "slug": "2026-11-21-kerning-nedir",
+        "kind": "reel",
+        "style": "oyun (Ece seslendirmesi)",
+        "reach": 104,
+        "views": 112,
+        "skip_rate": 0.59,
+        "avg_watch_s": 7.1,
+        "shares": 0,
+        "saved": 0,
+        "likes": 1,
+        "note": "Yayından ~16 saat sonra ölçüldü; hâlâ test havuzunda, genişleyebilir"
+      },
+      "note_2026_11_20_morning": "yukleme-cubugu (18123156926059374) hâlâ erişim 3, izlenme 4: veri eksik değil, Reel dağıtılmamış görünüyor",
+      "lesson": "Sessiz sabah Reel'i (3D, ChatGPT) yine ~106'da kaldı (skip %71, 3,6 sn). Seslendirmeli kerning Reel'i skip %59 ile hedefin hemen altında ama izlenme 7,1 sn ve 0 paylaşım: niş kavram ilk gün genişlemedi (geniş tanınırlık dersi). Bugün sabah Reel'i herkesin yaşadığı bir soruna (Reel'in başka hesapta dönmesi) doğrudan soruyla açıldı; gerçekçi arayüz ve hikâye 0. karede başlıyor, gönderme CTA'sı kişiyi hedefliyor."
     }
   ],
   "planned_reels": [
