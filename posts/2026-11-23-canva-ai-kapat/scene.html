@@ -1,0 +1,123 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>
+/* Frame Lab sabah kısa Reel'i (gerçekçi arayüz, ui-telefon.html ailesinden yeniden yazıldı):
+   Canva, Free ve Pro kullanıcılarına üretken yapay zekâ özelliklerini kapatma ayarı getiriyor (19 Kasım 2026, kademeli).
+   Hikâye: tasarım ekranında yapay zekâ önerileri üst üste açılıyor → Ayarlar > İzinler'de anahtar kapanıyor →
+   öneriler kayboluyor, arka plan kaldırma aracı kalıyor → izleyiciye soru. */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0B0B0D;font-family:Inter,sans-serif;color:#fff}
+#bg{position:absolute;inset:0;background:radial-gradient(70% 45% at 50% 62%,#1b2410 0%,#0B0B0D 70%)}
+#glow{position:absolute;left:190px;top:780px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(198,242,78,.16),rgba(198,242,78,0) 65%);filter:blur(10px)}
+.hd{position:absolute;left:60px;right:60px;top:130px;text-align:center;opacity:0}
+.hd h1{font-family:"Inter Display";font-weight:800;font-size:82px;line-height:1.04;letter-spacing:-2px}
+.hd h1 em{font-style:normal;color:#C6F24E}
+.hd p{margin-top:18px;font-size:40px;font-weight:500;color:#D2D2D8}
+.pill{display:inline-block;margin-top:24px;padding:14px 36px;border-radius:60px;background:#FF2E93;color:#fff;font-weight:800;font-size:46px}
+#phone{position:absolute;left:260px;top:570px;width:560px;height:1150px;border-radius:86px;background:#121214;padding:18px;
+  box-shadow:0 60px 120px rgba(0,0,0,.65),0 0 0 3px #2a2a30 inset,0 0 0 2px #3a3a42;transform-origin:50% 50%}
+#scr{position:relative;width:100%;height:100%;border-radius:70px;overflow:hidden;background:#EDEDF0;color:#111}
+#isl{position:absolute;left:50%;top:22px;width:150px;height:42px;margin-left:-75px;border-radius:30px;background:#000;z-index:20}
+.sc{position:absolute;inset:0}
+/* tasarım ekranı */
+#ed{background:#E9E9EE}
+#ed .top{position:absolute;left:0;right:0;top:0;height:120px;background:#fff;border-bottom:2px solid #E0E0E6}
+#ed .top .bk{position:absolute;left:34px;top:70px;width:26px;height:26px;border-left:5px solid #111;border-bottom:5px solid #111;transform:rotate(45deg)}
+#ed .top .sh{position:absolute;right:30px;top:62px;padding:8px 22px;border-radius:14px;background:#111;color:#fff;font-weight:700;font-size:22px}
+#poster{position:absolute;left:62px;top:190px;width:400px;height:540px;border-radius:10px;background:#F5F4F0;box-shadow:0 14px 30px rgba(0,0,0,.12);overflow:hidden}
+#poster .bl{position:absolute;left:-60px;top:-80px;width:340px;height:340px;border-radius:50%;background:#C6F24E}
+#poster .cup{position:absolute;left:120px;top:150px;width:160px;height:150px;border-radius:0 0 60px 60px;background:#111114}
+#poster .hd2{position:absolute;left:258px;top:180px;width:70px;height:80px;border:16px solid #111114;border-left:none;border-radius:0 40px 40px 0}
+#poster .st{position:absolute;top:110px;width:14px;height:40px;border-radius:7px;background:#FF2E93}
+#poster .t{position:absolute;left:0;right:0;top:360px;text-align:center;font-family:"Inter Display";font-weight:800;font-size:58px;color:#111114;letter-spacing:-1px}
+#poster .t2{position:absolute;left:0;right:0;top:438px;text-align:center;font-size:26px;font-weight:600;color:#555}
+#sel{position:absolute;left:56px;top:184px;width:412px;height:552px;border:3px solid #7B61FF;border-radius:12px;opacity:0}
+#bar{position:absolute;left:0;right:0;bottom:0;height:150px;background:#fff;border-top:2px solid #E0E0E6;display:flex;justify-content:space-around;align-items:center;padding:0 10px 30px}
+#bar .ti{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:19px;font-weight:600;color:#333}
+#bar .ti i{display:block;width:44px;height:44px;border-radius:12px;background:#E9E9EE}
+/* yapay zekâ öneri balonları */
+.ai{position:absolute;padding:16px 22px;border-radius:22px;background:linear-gradient(135deg,#8E6CFF,#FF2E93);color:#fff;font-weight:800;font-size:25px;white-space:nowrap;
+  box-shadow:0 12px 26px rgba(120,60,200,.35);display:flex;align-items:center;gap:10px;transform:scale(0);z-index:6}
+.ai svg{flex:none}
+#keep{position:absolute;left:50%;top:790px;margin-left:-190px;width:380px;padding:18px 22px;border-radius:22px;background:#fff;border:3px solid #C6F24E;color:#111;font-weight:800;font-size:26px;
+  display:flex;align-items:center;gap:14px;box-shadow:0 12px 26px rgba(0,0,0,.12);opacity:0;z-index:6}
+#keep .ok{flex:none;width:40px;height:40px;border-radius:50%;background:#C6F24E;display:flex;align-items:center;justify-content:center}
+/* ayarlar ekranı */
+#st{background:#F6F6F8;transform:translateX(100%);z-index:8;padding:120px 30px 0}
+#st h3{font-family:"Inter Display";font-size:50px;font-weight:800;margin:10px 6px 6px}
+#st .sub{font-size:26px;font-weight:700;color:#7B7B85;margin:30px 8px 14px;letter-spacing:.5px}
+.card{background:#fff;border-radius:26px;padding:6px 24px}
+.rw{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 0;border-bottom:2px solid #F0F0F3;font-size:28px;font-weight:700}
+.rw:last-child{border-bottom:none}
+.rw small{display:block;margin-top:6px;font-size:21px;font-weight:500;color:#777;line-height:1.25}
+.tg{flex:none;position:relative;width:96px;height:56px;border-radius:30px;background:#34C759}
+.tg i{position:absolute;top:4px;left:44px;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+.gr{background:#D9D9DE}
+#tap{position:absolute;width:90px;height:90px;border-radius:50%;background:rgba(255,46,147,.35);border:4px solid #FF2E93;opacity:0;z-index:30}
+#kare{position:absolute;left:670px;top:1210px;width:430px;height:430px;z-index:40;filter:drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+#kare>div{position:absolute;inset:0;opacity:0}
+</style></head><body>
+<div id="bg"></div><div id="glow"></div>
+<div class="hd" id="h1"><h1>Canva'daki yapay zekâ<br>önerileri <em>bıktırdı mı?</em></h1></div>
+<div class="hd" id="h2"><h1>Artık <em>kapatabilirsin.</em></h1><p>Ayarlar → İzinler</p></div>
+<div class="hd" id="h3"><h1>Arka plan silme <em>açık kalıyor.</em></h1><p>Free ve Pro'da ücretsiz, kademeli geliyor.</p><div class="pill" id="p3">Sen kapatır mısın?</div></div>
+<div id="phone"><div id="scr"><div id="isl"></div>
+ <div class="sc" id="ed">
+  <div class="top"><div class="bk"></div><div class="sh">Paylaş</div></div>
+  <div id="poster"><div class="bl"></div><div class="st" style="left:160px"></div><div class="st" style="left:200px"></div><div class="st" style="left:240px"></div>
+   <div class="cup"></div><div class="hd2"></div><div class="t">KAHVE</div><div class="t2">Her sabah 8'de</div></div>
+  <div id="sel"></div>
+  <div class="ai" id="a1" style="left:250px;top:150px"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 2l2.2 6.3L20 10l-5.8 1.7L12 18l-2.2-6.3L4 10l5.8-1.7z" fill="#fff"/></svg>Görsel üret</div>
+  <div class="ai" id="a2" style="left:30px;top:420px"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 2l2.2 6.3L20 10l-5.8 1.7L12 18l-2.2-6.3L4 10l5.8-1.7z" fill="#fff"/></svg>Metin üret</div>
+  <div class="ai" id="a3" style="left:200px;top:610px"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 2l2.2 6.3L20 10l-5.8 1.7L12 18l-2.2-6.3L4 10l5.8-1.7z" fill="#fff"/></svg>Görseli genişlet</div>
+  <div class="ai" id="a4" style="left:60px;top:790px"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 2l2.2 6.3L20 10l-5.8 1.7L12 18l-2.2-6.3L4 10l5.8-1.7z" fill="#fff"/></svg>Tasarımı baştan yap</div>
+  <div id="keep"><div class="ok"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Arka planı kaldır</div>
+  <div id="bar"><div class="ti"><i></i>Şablon</div><div class="ti"><i></i>Öğeler</div><div class="ti"><i></i>Metin</div><div class="ti"><i></i>Yüklenenler</div></div>
+ </div>
+ <div class="sc" id="st">
+  <h3>Ayarlar</h3>
+  <div class="sub">İZİNLER</div>
+  <div class="card">
+   <div class="rw"><div>Üretken yapay zekâ özellikleri<small>Kapatınca görsel ve metin üreten araçlar gizlenir.</small></div><div class="tg" id="tg"><i id="kn"></i></div></div>
+   <div class="rw"><div>Bildirimler</div><div class="tg gr"><i style="left:4px"></i></div></div>
+  </div>
+ </div>
+ <div id="tap"></div>
+</div></div>
+<div id="kare"><div id="kf_mutlu"><svg width="430" height="430" viewBox="0 0 200 200"><line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line><circle cx="100" cy="35" r="8" fill="#7B61FF"></circle><rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect><rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect><path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path><rect x="83" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><rect x="108" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><path d="M92 107 Q100 113 108 107" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect><rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect></svg></div><div id="kf_saskin"><svg width="430" height="430" viewBox="0 0 200 200"><line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line><circle cx="100" cy="35" r="8" fill="#7B61FF"></circle><rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect><rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect><path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path><circle cx="87" cy="91" r="7" fill="#FFFFFF"></circle><circle cx="113" cy="91" r="7" fill="#FFFFFF"></circle><circle cx="100" cy="110" r="4.5" fill="none" stroke="#FFFFFF" stroke-width="3"></circle><rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect><rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect></svg></div><div id="kf_fikir"><svg width="430" height="430" viewBox="0 0 200 200"><line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line><circle cx="100" cy="35" r="8" fill="#7B61FF"></circle><rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect><rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect><path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path><path d="M81 94 Q87.5 86 94 94" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M106 94 Q112.5 86 119 94" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M88 104 H112 Q110 116 100 116 Q90 116 88 104 Z" fill="#FFFFFF"></path><circle cx="100" cy="35" r="15" fill="none" stroke="#B8F24A" stroke-width="3" opacity="0.6"></circle><rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect><rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect></svg></div><div id="kf_goz"><svg width="430" height="430" viewBox="0 0 200 200"><line x1="100" y1="58" x2="100" y2="40" stroke="#B8F24A" stroke-width="6" stroke-linecap="round"></line><circle cx="100" cy="35" r="8" fill="#7B61FF"></circle><rect x="48" y="56" width="104" height="88" rx="24" fill="#B8F24A"></rect><rect x="60" y="68" width="80" height="56" rx="13" fill="#111114"></rect><path d="M68 82 V76 H74 M126 76 H132 V82 M132 110 V116 H126 M74 116 H68 V110" fill="none" stroke="#B8F24A" stroke-width="3" stroke-linecap="round"></path><rect x="83" y="84" width="9" height="16" rx="4.5" fill="#FFFFFF"></rect><path d="M106 93 Q112.5 87 119 93" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><path d="M90 106 Q100 115 110 106" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path><rect x="84" y="144" width="32" height="10" rx="5" fill="#B8F24A"></rect><rect x="68" y="154" width="64" height="8" rx="4" fill="#F5F4F0"></rect></svg></div></div>
+<script>
+window.DUR=9.0;
+window.SFX=[[0.05,'whoosh'],[0.3,'pop'],[0.9,'pop'],[1.5,'pop2'],[2.1,'pop'],[3.1,'whoosh'],[4.4,'tick'],[4.6,'pop2'],[5.6,'whoosh'],[6.1,'pop'],[6.6,'ding'],[7.4,'pop']];
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), E=x=>1-Math.pow(1-cl(x),3), Bk=x=>{x=cl(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const HS=[0,3.1,6.2,9.0];
+function hv(t,i){const a=HS[i],b=HS[i+1];return (i===0?1:cl((t-a)/0.3))*(i===2?1:cl((b-t)/0.25));}
+function tapAt(t,t0,x,y){if(t<t0||t>t0+0.6) return false; const k=$('tap'), f=(t-t0)/0.6;
+  k.style.left=(x-45)+'px'; k.style.top=(y-45)+'px'; k.style.opacity=1-f; k.style.transform=`scale(${0.6+f*1.2})`; return true;}
+window.render=function(t){
+  const ent=E(0.35+t/0.8), rx=6*Math.sin(t*0.9), ry=-10+8*Math.sin(t*0.7), fl=8*Math.sin(t*1.5);
+  let sc=0.9+0.1*ent; if(t>=6.2) sc=1+0.04*E((t-6.2)/1.0);
+  $('phone').style.transform=`translateY(${(1-ent)*260+fl}px) perspective(1600px) rotateX(${rx*0.4}deg) rotateY(${ry}deg) scale(${sc})`;
+  $('glow').style.transform=`scale(${1+0.08*Math.sin(t*2)})`;
+  for(let i=0;i<3;i++){const v=hv(t,i); const h=$('h'+(i+1)); h.style.opacity=v; h.style.transform=`translateY(${i===0?0:(1-E((t-HS[i])/0.45))*40}px)`;}
+  // öneri balonları: üst üste açılıyor, ayarı kapatınca kayboluyor
+  const off=t>=5.6;
+  [["a1",-1],['a2',0.9],['a3',1.5],['a4',2.1]].forEach(([id,a],i)=>{
+    let s=t<a?0:Bk((t-a)/0.35); if(off) s*=1-E((t-5.6-i*0.08)/0.3);
+    const wob=t>a+0.35&&!off?1+0.03*Math.sin(t*8+i):1; $(id).style.transform=`scale(${s*wob}) rotate(${(i%2?-3:3)}deg)`;});
+  $('sel').style.opacity=t>0.2&&t<3.1?(0.6+0.4*Math.sin(t*6)):0;
+  $('keep').style.opacity=E((t-6.0)/0.35); $('keep').style.transform=`scale(${t<6.0?0.8:Bk((t-6.0)/0.4)})`;
+  // ayarlar ekranı kayarak gelir ve gider
+  const sx=t<3.1?1:t<5.5?1-E((t-3.1)/0.4):E((t-5.5)/0.4);
+  $('st').style.transform=`translateX(${sx*100}%)`;
+  // anahtar 4.5'te kapanır
+  const k=E((t-4.45)/0.25); $('kn').style.left=(44-40*k)+'px';
+  $('tg').style.background=k<0.5?'#34C759':'#D9D9DE';
+  let any=tapAt(t,4.35,710,950); if(!any) $('tap').style.opacity=0;
+  $('p3').style.transform=`scale(${t>7.4?Bk((t-7.4)/0.4):0})`;
+  // Kare izleyiciye bakıyor: şaşkın → fikir → mutlu → göz kırpar
+  const face=t<3.1?'saskin':t<6.2?'fikir':(t<7.6?'mutlu':'goz');
+  ['mutlu','saskin','fikir','goz'].forEach(f=>$('kf_'+f).style.opacity=f===face?1:0);
+  const hop=t<3.1?Math.abs(Math.sin(t*7))*18:6*Math.sin(t*3);
+  $('kare').style.transform=`translate(0px,${-hop}px) rotate(${(t<3.1?7:4)*Math.sin(t*(t<3.1?9:1.7))}deg)`;
+};
+window.render(0);
+</script></body></html>
