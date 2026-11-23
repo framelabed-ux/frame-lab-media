@@ -1,1451 +1,1451 @@
 {
-  "instagram_account": "17841469889313843",
-  "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
-  "grid": [
-    {
-      "date": "2026-11-09",
-      "kind": "carousel",
-      "slug": "2026-11-09-tanisma",
-      "cover_tone": "light",
-      "media_id": "18031318442692957",
-      "title": "Tanışma: Merhaba, ben Kare",
-      "layout": "classic",
-      "topic_area": "tanitim"
-    },
-    {
-      "date": "2026-11-09",
-      "kind": "reel",
-      "slug": "2026-11-09-ilk-deney",
-      "cover_tone": "dark",
-      "media_id": "18090307286284943",
-      "status": "yayında (20:00)",
-      "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
-      "layout": "classic",
-      "music": "pop",
-      "topic_area": "ai"
-    },
-    {
-      "date": "2026-11-10",
-      "kind": "carousel",
-      "slug": "2026-11-10-kareden-haberler-1-v2",
-      "cover_tone": "light",
-      "media_id": "18028944962874334",
-      "status": "yayında (yeniden tasarım; eski sürüm 17993387007119720 silindi)",
-      "title": "Kare'den Haberler #1: Instagram Effect Builder ve Adobe MAX",
-      "files": [
-        "posts/2026-11-10-kareden-haberler-1-v2/1.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/2.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/3.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/4.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/5.jpg",
-        "posts/2026-11-10-kareden-haberler-1-v2/6.jpg"
-      ],
-      "caption_file": "posts/2026-11-10-kareden-haberler-1-v2/caption.txt",
-      "sources": [
-        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
-        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
-        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
-        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-      ],
-      "layout": "bignum",
-      "topic_area": "ai"
-    },
-    {
-      "date": "2026-11-10",
-      "kind": "reel",
-      "slug": "2026-11-10-fable-5-2",
-      "cover_tone": "dark",
-      "layout": "classic-sticker",
-      "media_id": "18173187451461130",
-      "status": "yayında (13:00)",
-      "title": "Claude Fable 5.2 çıktı",
-      "sources": [
-        "https://www.anthropic.com/claude/fable",
-        "https://x.com/claudeai/status/2119867114450268322",
-        "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
-        "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
-      ],
-      "music": "pop",
-      "topic_area": "ai"
-    },
-    {
-      "date": "2026-11-10",
-      "kind": "static",
-      "slug": "2026-11-10-prompt-rehberi",
-      "cover_tone": "light",
-      "media_id": "18129784361476884",
-      "status": "yayında (19:15)",
-      "title": "Prompt rehberi: Boş sayfaya bakma, kopyala.",
-      "files": [
-        "posts/2026-11-10-prompt-rehberi/1.jpg"
-      ],
-      "layout": "chat",
-      "keyword": "REHBER",
-      "topic_area": "ai"
-    },
-    {
-      "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
-      "kind": "carousel",
-      "publish_date": "2026-11-11",
-      "files": [
-        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
-        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/2.jpg",
-        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/3.jpg",
-        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/4.jpg",
-        "posts/2026-11-11-reklam-lab-1-ogilvy-echo/5.jpg"
-      ],
-      "cover": "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
-      "cover_tone": "dark",
-      "layout": "photo",
-      "caption": "Ünlüler artık reklam çekimine bir kez gidecek.\n\nReklam Lab'in ilk bölümünde Ogilvy'nin 9 Kasım'da duyurduğu yapay zekâ platformu ECHO var. CAA ve WPP ile birlikte geliştirilen sistemde ünlünün yüzü ve sesi bir kez taranıyor. Normalde 8–10 görsel çıkan bir çekimden 30–50 reklam üretilebiliyor. Ogilvy'ye göre görsel başına maliyet %65–75'e kadar düşebilir.\n\nPeki ünlünün izni? Hiçbir görsel ünlü onaylamadan yayınlanamıyor, her reklamda da \"Ünlü onayladı · Yapay zekâyla üretildi\" filigranı bulunuyor. Platforma ilk katılan isim oyuncu Terry Crews.\n\nİşin asıl dikkat çeken tarafı güven: Ogilvy'nin araştırmasına göre tüketicilerin %80'inden fazlası \"ünlü onayladı\" notunu izin işareti olarak görüyor.\n\nKüçük bir marka ya da serbest çalışan olarak çıkaracağın ders: Yapay zekâ kullandıysan gizleme, yüzü kullanılan kişinin onayını al ve bunu görünür kıl.\n\nBir ünlü reklamında yapay zekâ kullanıldığını bilsen markaya güvenin azalır mı? Yorumlara yaz.\n\nGörsel: Ogilvy / CAA\n\n#reklam #yapayzeka #pazarlama #dijitalpazarlama #reklamcılık #marka #sosyalmedya",
-      "sources": [
-        "https://www.ogilvy.com/ideas/ogilvy-launches-echo-industrys-first-talent-consent-based-creative-ai-platform",
-        "https://www.storyboard18.com/advertising/ogilvy-launches-echo-an-ai-platform-to-scale-celebrity-led-advertising-ws-l-114420.htm",
-        "https://bestmediainfo.com/mediainfo/mediainfo-marketing/ogilvy-launches-echo-ai-platform-to-scale-celebrity-campaigns-with-talent-consent-12798305",
-        "https://indiantelevision.com/mam/ogilvy-launches-echo-a-consent-first-ai-platform-to-protect-celebrity-likenesses/",
-        "https://reel360.com/article/caa-and-ogilvy-launch-echo-bringing-ai-celebrity-doubles-to-advertising/"
-      ],
-      "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı.",
-      "media_id": "18100588367424828",
-      "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)",
-      "topic_area": "marka"
-    },
-    {
-      "slug": "2026-11-11-adobe-max-creative-agent",
-      "kind": "reel",
-      "publish_date": "2026-11-11",
-      "layout": "editorial",
-      "files": [
-        "posts/2026-11-11-adobe-max-creative-agent/reel.mp4"
-      ],
-      "cover": "posts/2026-11-11-adobe-max-creative-agent/cover.jpg",
-      "cover_tone": "light",
-      "caption": "Adobe uygulamalarına artık yazarak iş verebilirsin.\n\nAdobe MAX 2026'nın (10 Kasım) öne çıkan duyurusu Adobe Creative Agent oldu:\n\n• Firefly AI Assistant (beta): Hedefini sade bir dille yazıyorsun; asistan araçları ve yapay zekâ modelini seçip işi adım adım yapıyor.\n• Plan Mode: Asistan başlamadan önce planını gösteriyor, sen onaylıyorsun.\n• Sadece Firefly'da değil: Photoshop, Premiere, Illustrator, InDesign, After Effects ve Frame.io'da da AI Assistant (beta) olarak geliyor.\n• Model seçimi: Google, OpenAI, Kling, ByteDance ve ElevenLabs gibi şirketlerin modelleri Firefly'da tek yerde.\n\nNot: Bu özelliklerin çoğu şimdilik beta ya da önizleme aşamasında.\n\nSen ilk hangi işi asistana devrederdin? Yorumlara yaz.\n\n#yapayzeka #adobe #photoshop #firefly #grafiktasarım #tasarım #dijitalgündem",
-      "sources": [
-        "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
-        "https://variety.com/2026/digital/news/adobe-ai-agentic-features-max-2026-1236943958/",
-        "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/",
-        "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
-      ],
-      "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
-      "music": "synthwave",
-      "media_id": "18172083973473135",
-      "status": "yayında (12:01)",
-      "topic_area": "ai"
-    },
-    {
-      "slug": "2026-11-11-claude-meetings",
-      "kind": "reel",
-      "publish_date": "2026-11-11",
-      "layout": "editorial",
-      "files": [
-        "posts/2026-11-11-claude-meetings/reel.mp4"
-      ],
-      "cover": "posts/2026-11-11-claude-meetings/cover.jpg",
-      "cover_tone": "dark",
-      "caption": "Claude artık toplantılara katılıp not almanın ötesine geçiyor.\n\nAnthropic 10 Kasım'da Claude Meetings'i duyurdu:\n\n• Toplantıya görünür bir katılımcı olarak giriyor, kendini tanıtıp sohbete bildirim bırakıyor.\n• Konuşma sürerken işe başlıyor: konuşulan planın taslağını çıkarıyor, zaman çizelgesi hazırlıyor, sohbetteki sorulara cevap veriyor.\n• Toplantı bitince notlar, görevler ve hazırladığı her şey Claude'da duruyor.\n• Gizlilik: Yönetici izin vermedikçe dışarıdan misafir olan toplantılara girmiyor, sonradan biri katılırsa toplantıdan çıkıyor.\n\nŞimdilik beta: Team ve Enterprise planlarında, Google Meet'te çalışıyor. Diğer platformların sonra geleceği söyleniyor. Aynı gün Claude Whiteboards ve Claude Sheets de beta olarak tüm ücretli planlara geldi.\n\nToplantı notlarını yapay zekâya bırakır mıydın? Yorumlara yaz.\n\n#yapayzeka #claude #anthropic #verimlilik #toplantı #dijitalgündem #reels",
-      "sources": [
-        "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
-        "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
-      ],
-      "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
-      "music": "lofi",
-      "media_id": "18139861054680639",
-      "status": "yayında (11 Kasım 19:15, akşam görevi)",
-      "topic_area": "ai"
-    },
-    {
-      "slug": "2026-11-11-gemini-4-carbon",
-      "kind": "reel",
-      "publish_date": "2026-11-12",
-      "layout": "bignum",
-      "files": [
-        "posts/2026-11-11-gemini-4-carbon/reel.mp4"
-      ],
-      "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
-      "cover_tone": "light",
-      "caption": "Google'ın en güçlü modeli artık kullanımda: Gemini 4 Carbon.\n\n28 Ekim'de yalnızca seçili siber güvenlik ekiplerine açılmıştı. Google 10 Kasım'da erişimi genişletti:\n\n• Kimler kullanabilir? Google AI Ultra aboneleri (Gemini uygulaması, Arama'daki AI Mode ve Antigravity) ile ücretli Gemini API kullanan geliştiriciler.\n• Neyde iddialı? Google'a göre kodlama testi CursorBench 4.0'da ilk sırada ve görev başına maliyeti en yakın rakibinin yarısından da az.\n• /swarm (önizleme): Antigravity'de tek bir prompt'u birlikte çalışan bir ajan ekibine çeviriyor, ilerlemeyi canlı izliyorsun.\n• Fiyat: 30 Kasım'a kadar 1 milyon girdi token'ı 2 $, çıktı 10 $. Sonrasında 4 $ ve 20 $.\n\nNot: Google, işlerin çoğu için hâlâ Gemini 4 Argon'u öneriyor. Carbon en zor görevler için.\n\nKodlayan bir arkadaşına gönder: Sence Carbon, Claude ve GPT'nin yanında nerede durur? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #yazılım #dijitalgündem #reels",
-      "sources": [
-        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-        "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
-        "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
-      ],
-      "music": "house",
-      "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli.",
-      "media_id": "17887918917625015",
-      "status": "yayında (12 Kasım 19:14, akşam görevi)",
-      "topic_area": "ai"
-    },
-    {
-      "slug": "2026-11-13-gemini-4-hydrogen",
-      "kind": "reel",
-      "publish_date": "2026-11-13",
-      "layout": "bars",
-      "files": [
-        "posts/2026-11-13-gemini-4-hydrogen/reel.mp4"
-      ],
-      "cover": "posts/2026-11-13-gemini-4-hydrogen/cover.jpg",
-      "cover_tone": "dark",
-      "caption": "Gemini'nin yeni modeli 2,5 kat daha hızlı ve ücretsiz hesaplara da geliyor.\n\nGoogle 12 Kasım'da Gemini 4 Hydrogen modelini duyurdu. Önceki hızlı model Gemini 3.8 Flash'ın yerini alıyor:\n\n• Hız: Google'a göre işleri 3.8 Flash'tan 2,5 kat hızlı bitiriyor.\n• Zekâ: Artificial Analysis Zekâ Endeksi'nde 51 puanla Google'ın büyük modeli Gemini 4 Argon'u (50) az farkla geçti. 3.8 Flash'ın puanı 31.\n• Nerede? Google Arama'da dünya genelinde tüm kullanıcılara açılıyor. Gemini uygulamasında ücretsiz kullanıcılar için otomatik model seçimi uygun gördüğünde Hydrogen devreye giriyor.\n• Geliştiriciler için: Gemini API'de 1 milyon girdi token'ı 1,50 $, çıktı 7,50 $.\n\nHangi işe hangi model? Hız gereken günlük işler ve çok adımlı görevler için Hydrogen; uzun soluklu, derin düşünme gerektiren işler için Carbon ve Argon. Google da modelleri böyle konumlandırıyor.\n\nKaydet, model seçerken lazım olur. Sen Gemini'yi en çok ne için açıyorsun? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #dijitalgündem #verimlilik #reels",
-      "sources": [
-        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-        "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/",
-        "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
-        "https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor",
-        "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
-      ],
-      "music": "minimal",
-      "note": "13 Kasım sabah görevi: büyük gelişme (yeni Gemini modeli, Arama'da tüm kullanıcılara) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,8 sn (outro dahil). Kapak bars düzeni, koyu ton. 13 Kasım 18:20 güncellendi (Ece): süs öğeleri (nokta deseni, kayan yazı, köşe çizgileri, parıltı) çıkarıldı, pembe ikinci vurgu eklendi. Ece'nin isteğiyle 18:16'da elle yayınlandı (seslendirmesiz).",
-      "cover_type": "tipografi",
-      "topic_area": "ai",
-      "media_id": "18105721748566120",
-      "published_at": "2026-11-13T18:16+03:00"
-    },
-    {
-      "slug": "2026-11-14-youtube-gta-vi",
-      "kind": "reel",
-      "publish_date": "2026-11-14",
-      "extra": true,
-      "title": "YouTube'un GTA VI çıkış hazırlığı (40 milyar izlenme, 24 saatlik yayın, Shorts efekti, hediyeler)",
-      "layout": "photo",
-      "cover_type": "gorsel",
-      "topic_area": "platform",
-      "files": [
-        "posts/2026-11-14-youtube-gta-vi/reel.mp4"
-      ],
-      "cover": "posts/2026-11-14-youtube-gta-vi/cover.jpg",
-      "cover_tone": "light",
-      "music": "synthwave",
-      "voice": "posts/2026-11-14-youtube-gta-vi/voice.mp3",
-      "caption": "GTA VI daha çıkmadı ama YouTube'da 40 milyar izlenmeyi geçti.\n\nOyun 19 Kasım'da çıkıyor. YouTube 12 Kasım'da çıkış için hazırladıklarını açıkladı:\n\n• 24 saatlik canlı yayın: 19 Kasım'da Türkiye saatiyle 08:00'de youtube.com/youtube kanalında başlıyor. Oyun içerik üreticileri canlı oynanış, podcast ve özel içeriklerle yayında olacak.\n• Shorts efekti: \"GTAVI: Visit Vice City\" efektiyle kendini oyunun dünyasına koyabiliyorsun. YouTube efektin hangi ülkelerde açık olduğunu belirtmedi.\n• Canlı yayın hediyeleri: GTA temalı 5 sınırlı sürüm hediye geliyor. Biri, seçili yayınlarda stoklar bitene kadar ücretsiz.\n• YouTube Music: Oyunun müzikleri çıkış haftası boyunca ana sayfada.\n\nYouTube'a göre GTA serisiyle ilgili videolar toplamda 900 milyardan fazla izlendi.\n\nKapaktaki görsel, serinin 2002'deki oyunu GTA: Vice City'den. GTA VI de seriyi Vice City'ye geri götürüyor.\n\nİçerik üreticisiysen: Efekti çıkış haftasında dene, kendi açını bul (yorum, tepki, karşılaştırma) ve canlı yayında hangi formatların tuttuğuna bak.\n\nSen GTA VI oynayacak mısın? Yorumlara yaz, oyun seven arkadaşına gönder.\n\n#youtube #gta6 #oyun #shorts #içeriküreticisi #sosyalmedya #dijitalgündem",
-      "sources": [
-        "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
-        "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/",
-        "https://abcnews4.com/news/offbeat/rockstar-games-grand-theft-auto-vi-brings-series-back-florida-inspired-vice-city-leonida-everglades-miami-florida-keys-wetland-video-game-xbox-playstation-jason-duval-lucia-caminos"
-      ],
-      "note": "14 Kasım: Ece'nin isteğiyle hafta sonu ek Reel olarak öğlen yayınlandı. Kapak: dev 'GTA VI' + Ece'nin gönderdiği GTA: Vice City (2002) görseli (künyeli). Ece'nin ElevenLabs seslendirmesi, 40,5 sn. Kapak türü döngüde Kare sırasıydı ama Ece görsel istediği için 'görsel' oldu.",
-      "media_id": "17955542733341306",
-      "status": "yayında (14 Kasım, Ece'nin onayıyla)",
-      "published_at": "2026-11-14"
-    },
-    {
-      "slug": "2026-11-14-von-restorff",
-      "kind": "reel",
-      "publish_date": "2026-11-14",
-      "extra": true,
-      "title": "Kare Açıklıyor: Von Restorff etkisi (farklı olan akılda kalır)",
-      "layout": "quote",
-      "cover_type": "tipografi",
-      "topic_area": "psikoloji",
-      "files": [
-        "posts/2026-11-14-von-restorff/reel.mp4"
-      ],
-      "cover": "posts/2026-11-14-von-restorff/cover.jpg",
-      "cover_tone": "dark",
-      "music": "funk",
-      "caption": "Bu listeden aklında hangi kelime kaldı: kalem, silgi, defter, cetvel, zürafa, makas?\n\nBüyük ihtimalle zürafa. Buna Von Restorff etkisi (izolasyon etkisi) deniyor.\n\n1933'te Berlin'de Hedwig von Restorff'un deneyleri şunu gösterdi: Birbirine benzeyen öğelerin arasındaki tek farklı öğe daha iyi hatırlanıyor.\n\nTasarımda nasıl kullanırsın?\n• Kapakta yalnızca bir kelimeyi vurgula.\n• Sayfada tek bir buton farklı renkte olsun.\n• Fiyat tablosunda öne çıkarmak istediğin paketi ayır.\n\nEn sık hata her şeyi vurgulamak. Her şey kalın ve renkliyse hiçbir şey öne çıkmaz. Bir de yalnızca renge güvenme: Renk körlüğü olan biri farkı göremeyebilir, boyut ya da konumla da ayır.\n\nSon paylaşımında kaç vurgu vardı? Yorumlara yaz, tasarım yapan bir arkadaşına da gönder.\n\n#tasarım #grafiktasarım #psikoloji #pazarlama #sosyalmedya #tipografi #içerikpazarlaması",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
-        "https://lawsofux.com/von-restorff-effect/"
-      ],
-      "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi. | 14 Kasım: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 43,0 sn (outro dahil). | Ece'nin isteğiyle liste sahnesinden sonra boş ekranda 3 saniye ilerleyen kronometre + alarm sahnesi eklendi (müzik kısık, tık sesleri). Seslendirmedeki duraklar biraz sıkılaştırıldı (voice_tight.wav). Süre 44,8 sn.",
-      "voice": "posts/2026-11-14-von-restorff/voice_tight.wav",
-      "media_id": "17913159696588712",
-      "published_at": "2026-11-14T19:15+03:00",
-      "status": "yayında (14 Kasım akşam görevi)"
-    },
-    {
-      "slug": "2026-11-15-60-30-10",
-      "kind": "reel",
-      "publish_date": "2026-11-15",
-      "extra": true,
-      "title": "Kare Açıklıyor: 60-30-10 renk kuralı",
-      "layout": "classic",
-      "cover_type": "kare",
-      "topic_area": "tasarim",
-      "files": [
-        "posts/2026-11-15-60-30-10/reel.mp4"
-      ],
-      "cover": "posts/2026-11-15-60-30-10/cover.jpg",
-      "cover_tone": "light",
-      "music": "lofi",
-      "caption": "Aynı 3 renk, iki tasarım: biri dağınık, biri net. Fark renklerde değil, oranlarda.\n\nBunun adı 60-30-10 kuralı. İç mimarlıkta onlarca yıldır kullanılan pratik bir kural; ekran tasarımında da aynı mantık işliyor:\n\n• %60 ana renk: zemin, büyük alanlar\n• %30 ikinci renk: metin, görseller, kartlar\n• %10 vurgu: buton, tek kelime, ikon\n\nVurgu az yer kapladığı için öne çıkar. Her yeri vurgularsan göz nereye bakacağını bilemez.\n\nOdadaki karşılığı: duvarlar %60, perde ve döşeme %30, lamba ve yastıklar %10.\n\nOranlar kesin değil, bir başlangıç noktası. Ama dağınık görünen bir tasarımda ilk bakılacak yer burası.\n\nBizim paletimiz de bu mantıkla çalışıyor: krem ya da siyah zemin, karşıt renkte yazı, yeşil yalnızca vurguda.\n\nSon paylaşımında vurgu rengin ne kadar yer kaplıyor: %10 mu, daha fazlası mı? Yorumlara yaz. Kaydet, bir sonraki tasarımda lazım olur.\n\n#tasarım #grafiktasarım #renkpaleti #tasarımipuçları #sosyalmedya #içerikpazarlaması #uxtasarım",
-      "sources": [
-        "https://bobvila.com/articles/60-30-10-rule",
-        "https://uxplanet.org/the-60-30-10-rule-a-simple-way-to-creating-catchy-user-interfaces-e9e2cf957213"
-      ],
-      "note": "15 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,4 sn, outro dahil, seslendirmesiz). Kapak classic ailesi + büyük Kare, açık ton (önceki koyu), sütun döngüsünde sıra Kare'deydi. Son 3 kayıt ai/platform/psikoloji olduğu için tasarım alanı seçildi. Karşılaştırma görseli kendi çizimimiz (src/karsilastirma.png).",
-      "media_id": "17896261899438742",
-      "published_at": "2026-11-15T19:12+03:00",
-      "status": "yayında (15 Kasım akşam görevi)"
-    },
-    {
-      "slug": "2026-11-16-edits-hiz-egrisi",
-      "kind": "reel",
-      "publish_date": "2026-11-16",
-      "title": "Edits'e hız eğrisi geldi (hız eğrisi, otomatik ses dengeleme, yazı animasyonu, İlham sekmesi) + 3 adımlık hız eğrisi formülü",
-      "layout": "editorial",
-      "cover_type": "gorsel",
-      "topic_area": "platform",
-      "files": [
-        "posts/2026-11-16-edits-hiz-egrisi/reel.mp4"
-      ],
-      "cover": "posts/2026-11-16-edits-hiz-egrisi/cover.jpg",
-      "cover_tone": "dark",
-      "music": "house",
-      "caption": "Tek klipte hem hızlanma hem ağır çekim: Edits'e hız eğrisi geldi.\n\nMeta 12 Kasım'da Instagram'ın video düzenleme uygulaması Edits için yeni bir güncelleme duyurdu:\n\n• Hız eğrisi: Klibin hızını tek bir sabit değerle değil, an an ayarlıyorsun. Hazır eğrilerden birini seçebilir ya da kendi eğrini çizebilirsin.\n• Otomatik ses dengeleme: Müzik, seslendirme ve ortam sesinin seviyesi otomatik dengeleniyor.\n• Yazı animasyonu ayarı: Yazının ekranda ne kadar kalacağını, ne hızla girip çıkacağını ve animasyonun döngü hızını sen belirliyorsun.\n• İlham sekmesi: Hangi konulardan daha çok, hangilerinden daha az örnek göreceğini seçebiliyorsun.\n\nHız eğrisini nasıl kullanmalı? 3 adımlık formül:\n1. Hızlı gir: Girişi kısalt, tempoyu kur.\n2. En iyi anda yavaşla: Zıplama, dönüş, ürünün göründüğü an.\n3. Hızlı çık: Bir sonraki sahneye enerjiyle geç.\n\nNot: Meta, özelliklerin hangi ülkelerde ve ne zaman açılacağını belirtmedi. Henüz görmüyorsan uygulamayı güncelle ve birkaç gün sonra tekrar bak.\n\nHangisini ilk denersin? Yorumlara yaz, video kurgulayan bir arkadaşına da gönder.\n\n#instagram #edits #reels #videokurgu #içeriküreticisi #sosyalmedya #dijitalgündem",
-      "sources": [
-        "https://www.socialmediatoday.com/news/metas-edits-app-gets-speed-curves-and-auto-audio-balancing/874586/",
-        "https://www.techjuice.pk/instagram-edits-speed-curves-audio-balancing/"
-      ],
-      "note": "16 Kasım sabah görevi: hot_pending'deki büyük gelişme (içerik üreticilerini doğrudan etkileyen Edits özelliği) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,0 sn (outro dahil), seslendirmesiz. Kapak: kendi çizdiğimiz hız eğrisi grafiği (src/egri-koyu.png) + başlık, koyu ton, görsel türü. Hazır eğri adları doğrulanamadığı için yazılmadı; bölge/tarih bilgisi yok (caption'da belirtildi).",
-      "media_id": "17966520864228296",
-      "published_at": "2026-11-16T19:20+03:00",
-      "status": "yayında (16 Kasım akşam görevi; raw video adresi 'could not process' verdi, GitHub Pages adresiyle yayınlandı)"
-    },
-    {
-      "slug": "2026-11-17-satir-uzunlugu",
-      "kind": "static",
-      "publish_date": "2026-11-17",
-      "title": "Tasarım Kuralı: 66 karakter ideal satır uzunluğu (45–75 rahat aralık)",
-      "files": [
-        "posts/2026-11-17-satir-uzunlugu/1.jpg"
-      ],
-      "layout": "bignum",
-      "cover_type": "tipografi",
-      "cover_tone": "light",
-      "topic_area": "tasarim",
-      "caption": "Metnin okunmuyorsa sorun yazıda değil, satırın uzunluğunda olabilir.\n\nTipografinin en bilinen kurallarından biri: Bir satırda 66 karakter (harfler ve boşluklar dahil) ideal kabul edilir. Rahat aralık 45–75 karakter.\n\nNeden?\n• Satır çok uzunsa göz bir sonraki satırın başını bulmakta zorlanır. Okur yorulur, metni atlar.\n• Satır çok kısaysa göz çok sık geri döner, okuma ritmi bozulur.\n\nNerede işine yarar?\n• Web sitesi ve blog: Metin alanının genişliğini sınırla, yazıyı ekranın tamamına yayma.\n• Sunum ve görsel: Uzun paragraf yerine kısa satırlar kur.\n• Çok sütunlu düzen (bülten, dergi): 40–50 karakter daha iyi çalışır.\n\nKendin dene: Son yazdığın metinden bir satır seç, boşluklar dahil karakterlerini say. 45–75 arasında mı?\n\nKaynak: Robert Bringhurst, The Elements of Typographic Style\n\nKaydet, bir sonraki tasarımda lazım olur. Senin satırın kaç karakter çıktı? Yorumlara yaz.\n\n#tasarım #tipografi #grafiktasarım #webtasarım #tasarımipuçları #uxtasarım #okunabilirlik",
-      "sources": [
-        "https://webtypography.net/2.1.2",
-        "https://baymard.com/blog/line-length-readability"
-      ],
-      "media_id": "18129678413489983",
-      "published_at": "2026-11-17T08:50+03:00",
-      "status": "yayında (17 Kasım sabah görevi)"
-    },
-    {
-      "slug": "2026-11-18-dikkat-1-7-saniye",
-      "kind": "reel",
-      "style": "cizgi-film",
-      "publish_date": "2026-11-17",
-      "files": [
-        "posts/2026-11-18-dikkat-1-7-saniye/reel.mp4"
-      ],
-      "cover": "posts/2026-11-18-dikkat-1-7-saniye/cover.jpg",
-      "cover_tone": "light",
-      "cover_type": "kare",
-      "topic_area": "psikoloji",
-      "layout": "cartoon",
-      "voice": true,
-      "caption": "Bu videoyu da kaydıracaktın. Ama hâlâ buradasın.\n\nAkışta bir gönderiye ortalama 1,7 saniye bakıyoruz. O kısa sürede seni durduran 3 şey var:\n\n1. Hareket: Göz önce hareketi görür. İlk karede bir şey kıpırdasın.\n2. Göz teması: Beyin yüzleri her şeyden hızlı fark eder; çizgi film yüzü bile.\n3. Merak: Cevabı hemen verme. Yarım bilgi sonuna kadar izletir.\n\nBu videoda üçü de vardı. Sence en güçlüsü hangisi? Yorumlara yaz, içerik üreten arkadaşına da gönder.\n\nKaynak: Facebook IQ, 2016 (mobil akışta bir içeriğe ortalama bakma süresi)\n\n#sosyalmedya #içerikstratejisi #reels #dikkat #tasarım #instagramipuçları #içerikkurgusu",
-      "sources": [
-        "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative"
-      ],
-      "note": "Ece ile hazırlandı, çizgi film tarzı, Ece'nin seslendirmesi. Ece'nin isteğiyle 17 Kasım 14:13'te elle yayınlandı (günün 3. gönderisi).",
-      "media_id": "18084742475717388",
-      "published_at": "2026-11-17T14:13+03:00"
-    },
-    {
-      "slug": "2026-11-17-linkedin-ai-yorumlar",
-      "kind": "reel",
-      "publish_date": "2026-11-17",
-      "title": "LinkedIn yapay zekâ yorumlarını alta itiyor (sıralama, bildirim, silme yok; testte %20+ düşüş) + görünen yorum için 3 kural",
-      "layout": "classic",
-      "cover_type": "kare",
-      "topic_area": "platform",
-      "files": [
-        "posts/2026-11-17-linkedin-ai-yorumlar/reel.mp4"
-      ],
-      "cover": "posts/2026-11-17-linkedin-ai-yorumlar/cover.jpg",
-      "cover_tone": "dark",
-      "music": "minimal",
-      "caption": "\"Harika paylaşım, çok değerli bilgiler!\" Bu tarz kalıp yorumlar yapay zekâ kokuyor. LinkedIn de yapay zekâ yorumlarını daha az gösterecek.\n\nLinkedIn'in baş ürün sorumlusu Hari Srinivasan, yorumlar için tespit sistemini ve sınıflandırıcıları güncellediklerini açıkladı:\n\n• Sıralama: Yeni sınıflandırıcılar yorumun gönderiyle ne kadar alakalı olduğuna bakıyor. Yapay zekâyla yazıldığından şüphelenilen yorumlar varsayılan \"en alakalı\" görünümde alta iniyor.\n• Bildirim: İçerik üreticilerine yalnızca \"ilgileneceğin kaliteli yorumlar\" bildiriliyor.\n• Silme yok: Yorumlar kaldırılmıyor, sadece daha az kişi görüyor.\n\nTestte bu tür yorumların görüntülenmesi %20'den fazla düştü. LinkedIn değişikliği yakında herkese açacağını söyledi.\n\nNeden şimdi? Kullanıcılar akışın yapay zekâ içeriğiyle dolduğundan şikâyet ediyordu. LinkedIn'in bu yaz eklediği \"yapay zekâ içeriği\" bildirme seçeneğini ilk 3 haftada 1 milyondan fazla kişi kullandı.\n\nGörünen bir yorum için 3 kural:\n1. Gönderiden bir ayrıntı yakala.\n2. Kendi deneyimini ekle.\n3. Gerçek bir soru sor.\n\nYorumunu yapay zekâya yazdırır mısın? Yorumlara yaz, LinkedIn kullanan bir arkadaşına da gönder.\n\n#linkedin #sosyalmedya #yapayzeka #kişiselmarka #içeriküreticisi #dijitalgündem #kariyer",
-      "sources": [
-        "https://www.socialmediatoday.com/news/linkedin-cracks-down-on-ai-generated-comments/874707/",
-        "https://dataconomy.com/2026/11/16/linkedin-cuts-visibility-of-ai-generated-comments/",
-        "https://fortune.com/2026/07/31/linkedin-seems-like-ai-slop-button-billions-automated-comments-attempts/"
-      ],
-      "note": "17 Kasım sabah görevi: hafta içi Sıcak Gelişme Reel'i (33,7 sn, outro dahil, seslendirmesiz). Sabah statiği tasarım (açık, tipografi, bignum) olduğu için Reel platform alanından; kapak koyu, Kare türü, classic düzen. 'Genel geçer/özgün' yorum örnekleri ve 3 kural bizim önerimiz, LinkedIn'in açıklaması değil (Reel'de ve caption'da böyle çerçevelendi).",
-      "media_id": "18477298123184660",
-      "published_at": "2026-11-17T19:15+03:00",
-      "status": "yayında (17 Kasım akşam görevi)"
-    },
-    {
-      "slug": "2026-11-18-gpt-6-2-slayt",
-      "kind": "short-reel",
-      "style": "3d",
-      "publish_date": "2026-11-18",
-      "title": "GPT-6.2 çıktı: Astra slayt şablonunu ekran görüntüsünden eşleştiriyor (düzen, renk, yazı boyutu)",
-      "files": [
-        "posts/2026-11-18-gpt-6-2-slayt/reel.mp4"
-      ],
-      "cover": "posts/2026-11-18-gpt-6-2-slayt/cover.jpg",
-      "cover_type": "gorsel",
-      "cover_tone": "light",
-      "topic_area": "ai",
-      "layout": "3d",
-      "music": "synthwave",
-      "caption": "Sunum şablonunu tarif etmekle uğraşma: GPT-6.2 ekran görüntüsünden kopyalıyor.\n\nOpenAI 17 Kasım'da iki yeni model duyurdu: GPT-6.2 Astra (en zor işler için) ve GPT-6.2 Sol (günlük işler için, daha uygun fiyatlı).\n\nTasarım tarafını ilgilendiren kısım şu: Astra bir slayt şablonunu orijinal dosyadan ya da sadece ekran görüntüsünden alıp yeni slaytlarda aynı düzeni, renkleri ve yazı tipini, yazı boyutuna kadar eşleştirebiliyor.\n\nNasıl denersin?\n1. Şirketinin ya da okulunun şablonundaki bir slaydın ekran görüntüsünü al.\n2. Astra'ya ver: \"Bu şablonla 5 slaytlık bir sunum hazırla: [konu]\"\n3. Çıkan slaytlarda renkleri, yazı boyutunu ve hizalamayı kontrol et.\n\nKimler kullanabiliyor? Modeller ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açıldı.\n\nSunum hazırlayan bir arkadaşına gönder. Sen ilk hangi şablonu denerdin? Yorumlara yaz.\n\n#yapayzeka #chatgpt #sunum #sunumtasarımı #tasarım #dijitalgündem #verimlilik",
-      "sources": [
-        "https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/",
-        "https://9to5mac.com/2026/11/17/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-2-astra-and-sol-models/",
-        "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
-      ],
-      "note": "18 Kasım sabah görevi: 9,6 sn 3D kısa Reel (outro yok). Büyük model duyurusu; sabah AI, akşam platform. Kapak görsel türü, açık ton (son kayıt koyu).",
-      "media_id": "18457465903122891",
-      "published_at": "2026-11-18T08:57+03:00",
-      "status": "yayında (18 Kasım sabah görevi)"
-    },
-    {
-      "slug": "2026-11-19-gpt-6-2-karakter-sec",
-      "kind": "reel",
-      "style": "oyun",
-      "publish_date": "2026-11-18",
-      "files": [
-        "posts/2026-11-19-gpt-6-2-karakter-sec/reel.mp4"
-      ],
-      "cover": "posts/2026-11-19-gpt-6-2-karakter-sec/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "ai",
-      "layout": "game",
-      "voice": true,
-      "caption": "GPT-6.2 Astra mı, GPT-6.2 Sol mü? Hangisi sana lazım, kısaca anlattık.\n\nOpenAI 17 Kasım'da iki yeni model duyurdu:\n\nAstra: Zor işler için. Sunum, tablo ve belge hazırlıyor. Bir slaydın ekran görüntüsünden düzeni, renkleri ve yazı boyutunu bile kopyalayabiliyor. Erken test eden muhasebe girişimi Basis'e göre uzun muhasebe işlerinde ortalama süre yarı yarıya kısaldı.\n\nSol: Günlük işler için. OpenAI'ın paylaştığı FrontierCode 2.0 kod testinde Astra'ya yarım puan kadar yaklaşıyor, maliyeti ise yaklaşık beşte biri.\n\nKimler kullanabilir? İkisi de ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açık. Enterprise ve Edu'da erişimi yöneticinin açması gerekiyor.\n\nSen hangisini seçerdin? Yorumlara yaz, bu ikisini kıyaslayan arkadaşına da gönder.\n\nKaynak: OpenAI duyurusu, SiliconANGLE, 9to5Mac\n\n#yapayzeka #chatgpt #openai #gpt6 #verimlilik #dijitalgündem #teknoloji",
-      "sources": [
-        "https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/",
-        "https://9to5mac.com/2026/11/17/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-2-astra-and-sol-models/",
-        "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
-      ],
-      "note": "Ece ile hazırlandı: oyun tarzı 'karakter seç', Ece'nin seslendirmesi. Ece'nin isteğiyle 18 Kasım 10:49'da elle yayınlandı (günün 2. gönderisi; akşam Direct Reel'i ile 3).",
-      "media_id": "17914541763574067",
-      "published_at": "2026-11-18T10:49+03:00"
-    },
-    {
-      "slug": "2026-11-18-instagram-direct",
-      "kind": "reel",
-      "style": "cizgi-film",
-      "publish_date": "2026-11-18",
-      "title": "Instagram'ın ayrı mesajlaşma uygulaması Direct yalnızca Türkiye ve Tayland'da test ediliyor (hesapsız kayıt, senkron sohbet, Çizim/Notlar/çıkartma/ses efekti, güvenlik)",
-      "files": [
-        "posts/2026-11-18-instagram-direct/reel.mp4"
-      ],
-      "cover": "posts/2026-11-18-instagram-direct/cover.jpg",
-      "cover_type": "tipografi",
-      "cover_tone": "dark",
-      "topic_area": "platform",
-      "layout": "cartoon",
-      "music": "funk",
-      "caption": "Instagram'ın yeni uygulaması şu an sadece 2 ülkede test ediliyor. Biri Türkiye.\n\nMeta 17 Kasım'da Direct'i duyurdu: Instagram'dan ayrı, sadece mesajlaşma için bir uygulama. Test Türkiye ve Tayland'da, Android ve iOS'ta yayılıyor.\n\nBilmen gerekenler:\n• Instagram hesabı şart değil: E-posta adresi ya da telefon numarasıyla kaydolabiliyorsun.\n• Instagram kullanıcı adın ve şifrenle girersen mevcut sohbetlerin iki uygulamada da eşitleniyor.\n• Özellikler: çizim (sohbette karalama), Notlar (arkadaşlarının kısa güncellemeleri mesaj kutusunun üstünde), özel çıkartmalar, ses efektleri (kalabalık kahkahası, su altı sesi gibi) ve sohbet temaları.\n• Sana yalnızca rehberindeki kişiler ve zaten bağlantılı olduğun hesaplar yazabiliyor ya da seni bir gruba ekleyebiliyor.\n• Yaş sınırı 13. Instagram hesabıyla giren gençler Genç Hesap mesaj korumalarını Direct'te de alıyor; ebeveynler denetim araçlarıyla günlük süre sınırı koyabiliyor.\n\nNot: Meta uygulamanın başka ülkelere ne zaman açılacağını söylemedi. Instagram'ın 2017'de de Direct adında ayrı bir mesaj uygulaması vardı; 2019'da kapatılma kararı alınmıştı.\n\nTelefonunda Direct'i gördün mü? Yorumlara yaz. Instagram'da en çok DM atan arkadaşına da gönder.\n\n#instagram #direct #sosyalmedya #dijitalgündem #mesajlaşma #meta #türkiye",
-      "sources": [
-        "https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging/",
-        "https://techcrunch.com/2026/11/17/meta-launches-direct-a-standalone-messaging-app-for-instagram/",
-        "https://webrazzi.com/2026/11/17/meta-instagramin-bagimsiz-mesajlasma-uygulamasi-directi-turkiyede-test-ediyor/",
-        "https://www.lowyat.net/2026/409934/meta-instagram-direct-messaging-app/"
-      ],
-      "note": "18 Kasım sabah görevi: Sıcak Gelişme Reel'i, çizgi film tarzı (28,5 sn, outro yok, seslendirmesiz; seslendirme metni Ece'ye gönderildi). Kanca: 'Instagram'ın yeni uygulaması sadece 2 ülkede' + Kare 'Biri Türkiye!'. Direct ikonu kendi çizimimiz (kâğıt uçak), Meta'nın gerçek ikonu değil. youtube-co-views hot_pending'de kaldı. 18 Kasım 11:05: Ece'nin seslendirmesi eklendi (sese hizalı), logo kapanışı ve yeni kapak eklendi. 43,8 sn.",
-      "voice": true,
-      "media_id": "17991178818089969",
-      "published_at": "2026-11-18T19:15+03:00",
-      "status": "yayında (18 Kasım akşam görevi)"
-    },
-    {
-      "slug": "2026-11-19-story-duzenleme",
-      "kind": "short-reel",
-      "style": "arayuz",
-      "media_id": "18668539741040283",
-      "publish_date": "2026-11-19",
-      "published_at": "2026-11-19T08:49+03:00",
-      "title": "Instagram: paylaşılan story ilk 15 dakika içinde düzenlenebiliyor (yazı, müzik, çıkartma, çizim; izlenmeler korunuyor)",
-      "files": [
-        "posts/2026-11-19-story-duzenleme/reel.mp4"
-      ],
-      "cover": "posts/2026-11-19-story-duzenleme/cover.jpg",
-      "cover_type": "kare",
-      "cover_tone": "light",
-      "topic_area": "platform",
-      "layout": "ui",
-      "music": "pop",
-      "caption": "Story'de yazım hatası mı var, saati mi yanlış yazdın? Artık silip baştan atmana gerek yok.\n\nInstagram'ın başı Adam Mosseri 18 Kasım'da duyurdu: Paylaştığın story'yi ilk 15 dakika içinde düzenleyebiliyorsun.\n\nNeleri değiştirebilirsin?\n• Yazı (yazım hatası, yanlış saat, yanlış fiyat)\n• Müzik\n• Çıkartmalar\n• Çizimler\n\nNasıl? Story'ni aç, alttaki üç nokta menüsüne dokun ve düzenleme seçeneğini seç.\n\nEn güzel kısmı: Silip yeniden attığında sıfırdan başlayan izlenmeler, beğeniler ve yanıtlar bu sefer yerinde kalıyor.\n\nÖzellik kademeli olarak açılıyor; Türkiye'ye de önümüzdeki günlerde gelmesi bekleniyor. 15 dakika geçtiyse tek yol yine silip yeniden paylaşmak.\n\nSende var mı? Yorumlara yaz. Kaydet, lazım olur.\n\nKaynak: 9to5Mac, Techturco (The Verge'e dayanarak)\n\n#instagram #instagramipuçları #sosyalmedya #içeriküretimi #içeriküreticisi #dijitalpazarlama",
-      "sources": [
-        "https://9to5mac.com/2026/11/18/instagram-finally-lets-users-edit-stories-after-publishing-but-theres-a-catch/",
-        "https://www.techturco.com/en/software/instagram-lets-users-edit-stories-for-15-minutes-after-104222",
-        "https://kantan.news/news/instagram-launches-feature-to-edit-shared-stories"
-      ],
-      "note": "19 Kasım sabah görevi: büyük platform gelişmesi (Mosseri, 18 Kasım) aynı gün; 8,6 sn sahne + 3,2 sn logo kapanışı = 11,8 sn. Akşam Reel'i Ece'yle hazırlanmış seslendirmeli plan olduğu için yerinden oynatılmadı; büyük gelişme sabah kısa Reel'inde işlendi.",
-      "status": "yayında (19 Kasım sabah görevi)"
-    },
-    {
-      "slug": "2026-11-19-logolar-neden-ayni",
-      "kind": "reel",
-      "style": "3d",
-      "publish_date": "2026-11-19",
-      "files": [
-        "posts/2026-11-19-logolar-neden-ayni/reel.mp4"
-      ],
-      "cover": "posts/2026-11-19-logolar-neden-ayni/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "marka",
-      "voice": true,
-      "caption": "Lüks markaların logoları neden birbirine benzemeye başladı?\n\nBurberry, Balenciaga, Saint Laurent, Balmain... Son yıllarda birçok moda markası süslü yazılarını bırakıp sade, büyük harfli, tırnaksız (sans serif) logolara geçti. Bu eğilime \"blanding\" deniyor: İngilizcede brand (marka) ve bland (yavan) kelimelerinin birleşimi.\n\nNeden? Logolar artık en çok telefon ekranında ve küçük profil fotoğraflarında görünüyor. Sade yazı küçükken de okunuyor.\n\nBedeli: Markalar birbirine benzemeye başladı.\n\nBazıları geri dönüyor: Burberry, 2023'te 1901 tarihli atlı şövalye logosunun yenilenmiş hâlini ve daha klasik, tırnaklı bir yazıyı geri getirdi.\n\nSence sade logo mu, karakterli logo mu? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\nKaynak: The Drum, NSS Magazine, Campaign Asia\nLogolar markalarına aittir; yorum ve analiz amacıyla gösterilmiştir.\n\n#marka #logo #tasarım #grafiktasarım #tipografi #moda #branding",
-      "sources": [
-        "https://www.thedrum.com/opinion/2020/11/20/fashion-shot-the-serif-homogeneous-logos-and-luxury-branding-intertwine",
-        "https://www.nssmag.com/en/article/41960",
-        "https://www.campaignasia.com/article/burberrys-return-to-british-eccentricity-defies-8216reblanding8217-trend/483228"
-      ],
-      "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik lofi). Akşam 19:10.",
-      "cover_type": "gorsel",
-      "media_id": "17981484864140074",
-      "published_at": "2026-11-19T19:15+03:00",
-      "music": "lofi"
-    },
-    {
-      "slug": "2026-11-20-yukleme-cubugu",
-      "kind": "short-reel",
-      "style": "oyun",
-      "media_id": "18123156926059374",
-      "publish_date": "2026-11-20",
-      "published_at": "2026-11-20T08:58+03:00",
-      "title": "Mini test: iki yükleme çubuğu aynı 5 saniyede doluyor; geriye akan çizgili olan beklemeyi %11 daha kısa hissettiriyor (CHI 2010)",
-      "files": [
-        "posts/2026-11-20-yukleme-cubugu/reel.mp4"
-      ],
-      "cover": "posts/2026-11-20-yukleme-cubugu/cover.jpg",
-      "cover_type": "tipografi",
-      "cover_tone": "light",
-      "topic_area": "psikoloji",
-      "layout": "game",
-      "music": "synthwave",
-      "caption": "Hangisi daha hızlı doldu sence: A mı, B mi?\n\nİkisi de tam 5 saniyede doluyor. Ama çizgili olan daha çabuk bitmiş gibi gelebilir.\n\n2010'da CHI konferansında yayımlanan bir araştırmada (Harrison, Yeo ve Hudson) katılımcılara farklı yükleme çubukları izletildi. En etkili olan, çizgileri ilerlemenin tersine, yani geriye doğru akan ve giderek yavaşlayan çubuktu: Bekleme süresini %11 daha kısa hissettirdi. Süre aynı, his farklı.\n\nSenin için anlamı:\n• Uygulama, site ya da form tasarlıyorsan yükleme çubuğuna geriye akan çizgiler eklemeyi dene.\n• Bekleme kısalmasa bile beklemenin hissi tasarlanabilir.\n\nA mı dedin, B mi? Yorumlara yaz. Kaydet, bir gün bir yükleme ekranı tasarlarken lazım olur.\n\nKaynak: Harrison, Yeo, Hudson, \"Faster Progress Bars\", CHI 2010\n\n#tasarım #uxtasarım #arayüztasarımı #psikoloji #kullanıcıdeneyimi #grafiktasarım #biliyormuydun",
-      "sources": [
-        "https://chrisharrison.net/index.php/Research/ProgressBars2",
-        "https://chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf",
-        "https://www.figlab.com/research/2010/faster-progress-bars"
-      ],
-      "note": "20 Kasım sabah görevi: krem zeminli oyun tarzı mini test (10 sn + 3,2 sn logo kapanışı). Ders: sessiz kısa sabah Reel'leri ~110 erişimde kalıyor; bu sefer sonuna kadar izletecek bir test/cevap yapısı ve yoruma davet (A mı, B mi?) denendi.",
-      "status": "yayında (20 Kasım sabah görevi)"
-    },
-    {
-      "slug": "2026-11-20-en-degerli-tepki",
-      "kind": "reel",
-      "style": "arayuz",
-      "publish_date": "2026-11-20",
-      "files": [
-        "posts/2026-11-20-en-degerli-tepki/reel.mp4"
-      ],
-      "cover": "posts/2026-11-20-en-degerli-tepki/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "platform",
-      "voice": true,
-      "caption": "Instagram'da en değerli tepki hangisi: beğeni mi, yorum mu, paylaşım mı?\n\nInstagram'ın başındaki Adam Mosseri, Ocak 2025'te sıralamada en önemli üç sinyali açıkladı: izlenme süresi, beğeni ve gönderme (DM ile paylaşım).\n\nAma bakman gereken sayı değil, oran:\n• Ortalama izlenme süresi\n• Erişim başına beğeni\n• Erişim başına gönderme\n\nMosseri'ye göre beğeni, takipçilerine giden içerikte biraz daha önemli. Takip etmeyenlere ulaşmak içinse gönderme biraz daha önemli.\n\nYani yeni insanlara ulaşmak istiyorsan paylaşmadan önce kendine şunu sor: Bunu biri arkadaşına atar mı?\n\nSen en son hangi videoyu birine gönderdin? Yorumlara yaz. Bu videoyu da içerik üreten bir arkadaşına gönder.\n\nKaynak: Social Media Today, Adam Mosseri'nin açıklamaları (Ocak 2025)\n\n#instagram #instagramipuçları #sosyalmedya #reels #algoritma #içerikstratejisi #içeriküretimi",
-      "sources": [
-        "https://www.socialmediatoday.com/news/instagram-shares-algorithm-2025/738034/",
-        "https://creatorflow.so/blog/instagram-algorithm/"
-      ],
-      "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik house). Akşam 19:10.",
-      "media_id": "17977057674151921",
-      "published_at": "2026-11-20T19:15+03:00",
-      "date": "2026-11-20"
-    },
-    {
-      "slug": "2026-11-21-canli-dikte",
-      "kind": "short-reel",
-      "style": "3d",
-      "media_id": "17958169884268324",
-      "publish_date": "2026-11-21",
-      "published_at": "2026-11-21T08:59+03:00",
-      "title": "ChatGPT canlı dikte: konuştukça yazıyor, 10 dakika kayıt sınırı kalktı (18 Kasım, tüm planlar, kademeli)",
-      "files": [
-        "posts/2026-11-21-canli-dikte/reel.mp4"
-      ],
-      "cover": "posts/2026-11-21-canli-dikte/cover.jpg",
-      "cover_type": "gorsel",
-      "cover_tone": "light",
-      "topic_area": "ai",
-      "layout": "3d",
-      "music": "pop",
-      "caption": "Uzun mesajı yazmakla uğraşma, söyle: ChatGPT konuştukça yazıyor.\n\nOpenAI 18 Kasım'da ChatGPT'ye \"canlı dikte\" özelliğini getirdi. Mesaj kutusundaki mikrofona dokunup konuşuyorsun, söylediklerin sen konuşurken yazıya dönüşüyor.\n\nNeler değişti?\n• Metin, kaydın bitmesini beklemeden ekranda beliriyor.\n• Göndermeden önce yazıyı düzeltebiliyorsun.\n• Eski 10 dakikalık kayıt sınırı kaldırıldı.\n\nKimler kullanabiliyor? Ücretsiz dahil tüm ChatGPT planları; iOS, Android, web ve masaüstü uygulaması. Özellik kademeli açılıyor, sende henüz görünmüyorsa biraz zaman alabilir.\n\nİpucu: Bunu sesli modla karıştırma. Sesli modda ChatGPT'yle karşılıklı konuşursun; dikte ise söylediğini yazıya çevirip mesaj kutusuna koyar.\n\nSen ChatGPT'ye yazıyor musun, konuşuyor musun? Yorumlara yaz. Kaydet, uzun bir mesaj yazarken lazım olur.\n\nKaynak: OpenAI ChatGPT sürüm notları (9to5Mac ve Notebookcheck'in aktardığı şekliyle)\n\n#chatgpt #yapayzeka #yapayzekaaraçları #verimlilik #dijitalgündem #teknoloji #ipucu",
-      "sources": [
-        "https://9to5mac.com/2026/11/18/chatgpt-app-gains-enhanced-live-dictation-streaming-without-10-minute-limit/",
-        "https://www.notebookcheck.net/ChatGPT-Live-Dictation-removes-the-10-minute-limit-for-all-plans.1455249.0.html",
-        "https://tbreak.com/chatgpt-live-dictation/",
-        "https://www.digitaltrends.com/computing/chatgpt-now-supports-live-dictation-openai-removes-the-10-minute-recording-limit/"
-      ],
-      "note": "21 Kasım sabah görevi: 3D (yeni 3D mikrofon nesnesi + konuşan Kare), 9,6 sn + logo kapanışı. Ders: sessiz kısa sabah Reel'leri ~110'da kalıyor; bu sefer herkesin bildiği isim (ChatGPT) + 0. karede dönen, konuşan Kare ve canlı yazılan mesaj kutusu.",
-      "status": "yayında (21 Kasım sabah görevi)"
-    },
-    {
-      "slug": "2026-11-21-kerning-nedir",
-      "kind": "reel",
-      "style": "oyun",
-      "publish_date": "2026-11-21",
-      "files": [
-        "posts/2026-11-21-kerning-nedir/reel.mp4"
-      ],
-      "cover": "posts/2026-11-21-kerning-nedir/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "tasarim",
-      "voice": true,
-      "caption": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Büyük A ile V yan yana gelince, matematiksel olarak eşit aralık bile gözümüze fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? r ile n fazla yaklaşırsa m gibi okunur: \"kurnaz\" bir anda \"kumaz\" oluverir. Bu hataya şakayla \"keming\" deniyor.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir ayar: tracking.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: ilk freelance müşterini nereden bulursun?\n\n#tipografi #tasarım #grafiktasarım #kerning #tasarımipuçları #yazıkarakteri #kareaçıklıyor",
-      "sources": [
-        "https://en.wikipedia.com/wiki/Kerning",
-        "https://www.shopify.com/blog/what-is-kerning"
-      ],
-      "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik synthwave). Akşam 19:10.",
-      "media_id": "18095163653204124",
-      "date": "2026-11-21",
-      "published_at": "2026-11-21T19:13+03:00",
-      "music": "synthwave"
-    },
-    {
-      "slug": "2026-11-22-icerik-koruma",
-      "kind": "short-reel",
-      "style": "arayuz",
-      "media_id": "18204297724401494",
-      "publish_date": "2026-11-22",
-      "published_at": "2026-11-22T09:08+03:00",
-      "title": "Instagram içerik koruma: kopyalanan Reel'leri bulup engelleme, 'orijinal' etiketi ya da takip (17 Kasım, uygun içerik üreticileri)",
-      "files": [
-        "posts/2026-11-22-icerik-koruma/reel.mp4"
-      ],
-      "cover": "posts/2026-11-22-icerik-koruma/cover.jpg",
-      "cover_type": "kare",
-      "cover_tone": "light",
-      "topic_area": "platform",
-      "layout": "arayuz",
-      "music": "house",
-      "caption": "Reel'ini başka bir hesap paylaşıp izlenmeleri mi topluyor? Instagram artık bu kopyaları kendisi arıyor.\n\nInstagram 17 Kasım'da \"içerik koruma\" aracını uygun içerik üreticilerine açtı. Araç, koruma altına aldığın videoların izinsiz yüklenen kopyalarını sürekli tarıyor ve bir eşleşme bulunca sana haber veriyor.\n\nEşleşme bulunduğunda ne yapabilirsin?\n• Engelle: Kopya video Instagram ve Facebook'ta gizlenir.\n• Etiketle: Kopyaya, izleyeni senin orijinal videona götüren bir \"orijinal\" etiketi eklenir.\n• Takipte tut: Kopya görünür kalır, sen performansını izlersin.\n• Ya da hak talebinden vazgeçip videonun yayında kalmasına izin verirsin.\n\nİzin verdiğin hesapları (ikinci hesabın ya da birlikte çalıştığın bir marka) bir listeye ekleyebiliyorsun; onların paylaşımları kopya sayılmıyor.\n\nNasıl açılır? Uygun hesaplara etkinlik bildirimlerinde bir davet geliyor. Katıldıktan sonra paylaştığın her yeni orijinal video otomatik korunuyor; eski videolarını da tek tek seçip koruma altına alabiliyorsun.\n\nSırada ne var? Görüntüsü yapay zekâyla değiştirilip senin videondaki sesi kullanan kopyaları yakalama özelliği önümüzdeki haftalarda küçük bir grup içerik üreticisiyle test edilecek.\n\nSana bu bildirim geldi mi? Yorumlara yaz. Videoları sürekli kopyalanan bir içerik üreticisi tanıyorsan ona da gönder.\n\nKaynak: TechCrunch, 17 Kasım 2026\n\n#instagram #içeriküreticisi #instagramipuçları #reels #sosyalmedya #telifhakkı #dijitalgündem",
-      "sources": [
-        "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/"
-      ],
-      "note": "22 Kasım sabah görevi: gerçekçi arayüz (telefon: Reel'in başka hesapta → 'İçerik koruma' bildirimi → Engelle → video gizlendi), 9 sn + logo kapanışı, house müzik. hot_pending'den.",
-      "status": "yayında (22 Kasım sabah görevi)"
-    },
-    {
-      "slug": "2026-11-22-ilk-freelance-musteri",
-      "kind": "reel",
-      "style": "3d",
-      "publish_date": "2026-11-22",
-      "files": [
-        "posts/2026-11-22-ilk-freelance-musteri/reel.mp4"
-      ],
-      "cover": "posts/2026-11-22-ilk-freelance-musteri/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "para",
-      "voice": true,
-      "caption": "İlk freelance müşterini nereden bulursun? Üç adımda:\n\n1. Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\n2. Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\n3. Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?\n\n#freelance #serbestçalışma #sosyalmedyauzmanı #grafiktasarım #portfolyo #ekgelir #içeriküretimi",
-      "sources": [],
-      "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik funk). Akşam 19:10.",
-      "media_id": "18127368056476510",
-      "date": "2026-11-22",
-      "published_at": "2026-11-22T19:13+03:00",
-      "music": "funk"
-    },
-    {
-      "slug": "2026-11-23-canva-ai-kapat",
-      "kind": "short-reel",
-      "style": "arayuz",
-      "media_id": "17915757267510746",
-      "publish_date": "2026-11-23",
-      "published_at": "2026-11-23T08:54:19+03:00",
-      "title": "Canva'da üretken yapay zekâyı kapatma ayarı",
-      "files": [
-        "posts/2026-11-23-canva-ai-kapat/reel.mp4"
-      ],
-      "cover": "posts/2026-11-23-canva-ai-kapat/cover.jpg",
-      "cover_type": "gorsel",
-      "cover_tone": "light",
-      "topic_area": "tasarim",
-      "layout": "arayuz",
-      "music": "minimal",
-      "caption": "Canva'daki yapay zekâ önerilerinden sıkıldıysan artık hepsini kapatabilirsin.\n\nCanva, 19 Kasım'da Free ve Pro kullanıcıları için iki yeni ayar duyurdu. İkisi de ücretsiz:\n\n1. Üretken yapay zekâyı kapat: Profil > Ayarlar > İzinler (İngilizce arayüzde Settings > Permissions > \"Enable generative AI features\"). Kapatınca Magic Write, Magic Expand, Magic Design, Dream Lab gibi görsel ve metin üreten araçlar gizleniyor.\n\n2. Daha az yapay zekâ içeriği gör: profil simgesi > Your account > AI personalization (İngilizce arayüzdeki adlarıyla). Şablon ve öğe aramalarında yapay zekâyla üretilmiş içerik daha az çıkıyor.\n\nArka plan kaldırma ve Magic Grab gibi düzenleme araçları açık kalıyor; çünkü yeni bir şey üretmiyor, elindeki tasarımı düzenliyor.\n\nAyarlar kademeli açılıyor, sende henüz görünmeyebilir. Ekiplerde bu kararı yönetici veriyor.\n\nSen kapatır mısın, yoksa açık mı tutarsın? Yorumlara yaz.\n\n#canva #grafiktasarım #tasarım #yapayzeka #tasarımipuçları #sosyalmedya #içeriküretimi",
-      "sources": [
-        "https://www.canva.com/help/manage-ai-features/",
-        "https://petapixel.com/2026/11/19/canva-now-lets-users-turn-off-generative-ai-features/",
-        "https://tbreak.com/canva-turn-off-generative-ai-tools/",
-        "https://aiweekly.co/alerts/canva-ships-toggle-that-turns-off-nine-generative-ai-features"
-      ],
-      "note": "Tasarım ekranında yapay zekâ öneri balonları üst üste açılıyor → Ayarlar > İzinler anahtarı kapanıyor → balonlar kayboluyor, 'Arka planı kaldır' kalıyor. Kare 0. karede şaşkın, izleyiciye bakıyor.",
-      "status": "published"
-    }
-  ],
-  "queue": [
-    {
-      "slug": "2026-11-23-youtube-tv-izlenme",
-      "kind": "reel",
-      "style": "oyun",
-      "publish_date": "2026-11-23",
-      "title": "TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?",
-      "files": [
-        "posts/2026-11-23-youtube-tv-izlenme/reel.mp4"
-      ],
-      "cover": "posts/2026-11-23-youtube-tv-izlenme/cover.jpg",
-      "cover_type": "tipografi",
-      "cover_tone": "dark",
-      "topic_area": "platform",
-      "layout": "oyun",
-      "music": "pop",
-      "caption": "Bir videoyu salonda üç kişi izlerse YouTube kaç izlenme sayar? Artık üç.\n\nYouTube, Kasım 2026'dan itibaren TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına ekliyor.\n\nBilmen gerekenler:\n• Sadece TV. Telefonda, tablette ve bilgisayarda bir oynatma yine bir izlenme.\n• Gelir ve Partner Programı şartları bu tahminden etkilenmiyor; onlar ayrı ölçümlerle hesaplanıyor.\n• YouTube kamera ya da mikrofon kullanmadığını söylüyor; sayı bir tahmin modeliyle bulunuyor.\n• Eski izlenme sayıları geriye dönük değişmiyor; eski videoların yeni TV izlenmeleri sayılıyor.\n• YouTube Studio'da \"co-view rate\" (birlikte izlenme oranı) adında yeni bir ölçüm var.\n\nSen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz. YouTube'a video yükleyen arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?\n\n#youtube #youtuber #içeriküretimi #içeriküreticisi #sosyalmedya #dijitalpazarlama #videopazarlama",
-      "sources": [
-        "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
-        "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/",
-        "https://winbuzzer.com/2026/11/18/one-tv-playback-several-public-youtube-views-xcxwbn/",
-        "https://www.tweaktown.com/news/114751/youtube-view-counts-now-include-estimated-co-viewers-so-one-tv-play-can-count-as-several-views/index.html",
-        "https://allaboutcookies.org/youtube-co-view-tracking-privacy"
-      ],
-      "note": "planned_reels 23 Kasım kaydından. Seslendirme yok (voice.mp3 gelmedi), müzikli; ekran yazısı altyazı gibi sırayla geliyor. 28 sn + 3,2 sn logo kapanışı.",
-      "status": "queued"
-    },
-    {
-      "slug": "2026-12-31-yilbasi",
-      "kind": "reel",
-      "style": "hipergerçekçi",
-      "publish_date": "2026-12-31",
-      "files": [
-        "posts/2026-12-31-yilbasi/yilbasi-dikey.mp4"
-      ],
-      "cover": "posts/2026-12-31-yilbasi/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "perde arkası",
-      "voice": false,
-      "caption": "Bir yıl, aslında binlerce kareden oluşur. Yeni yılın her karesi güzel olsun.\n\nBu videonun her sahnesini yapay zekâyla ürettik; senaryo, kurgu ve müzik de bizden. Markan için de böyle bir video ister misin? DM'den yaz.\n\n#yeniyıl #yılbaşı #yapayzeka #aivideo #reklamfilmi #markailetişimi #framelab",
-      "sources": [],
-      "note": "Yılbaşı hipergerçekçi video; sahneler Ece'nin ChatGPT'de ürettiği görsellerden, kurgu/renk/metin/müzik Claude. Yatay ana sürüm yilbasi-yatay.mp4 (portfolyo). Yumuşak hizmet tanıtımı. Ece seslendirme gönderirse sese göre yeniden hizala. Akşam 19:10."
-    }
-  ],
-  "stories": [
-    {
-      "date": "2026-11-09",
-      "slug": "2026-11-09-story",
-      "file": "posts/2026-11-09-story/story.jpg",
-      "about": "İlk deney Reel'inin duyurusu",
-      "media_id": "17896327833681957"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-baslangic",
-      "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "18027181781863647"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-gundem",
-      "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "17919048858467844"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-ai-lab",
-      "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "18115804277127596"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-tasarim",
-      "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "17887896783503923"
-    },
-    {
-      "date": "2026-11-09",
-      "slug": "one-cikan-mutfak",
-      "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
-      "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
-      "media_id": "18101888147645978"
-    },
-    {
-      "date": "2026-11-10",
-      "slug": "2026-11-10-story",
-      "file": "posts/2026-11-10-story/story.jpg",
-      "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
-      "media_id": "17960983923258520"
-    },
-    {
-      "date": "2026-11-10",
-      "slug": "2026-11-10-story-gundem",
-      "file": "posts/2026-11-10-story-gundem/story.jpg",
-      "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
-      "media_id": "18120361793078882",
-      "sources": [
-        "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
-        "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
-        "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
-        "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "slug": "2026-11-11-story",
-      "file": "posts/2026-11-11-story/story.jpg",
-      "about": "Biliyor muydun: Adobe Firefly Plan Mode + 'önce plan' prompt'u (chat düzeni)",
-      "layout": "chat",
-      "sources": [
-        "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
-        "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/"
-      ],
-      "media_id": "17968221638979469"
-    },
-    {
-      "date": "2026-11-12",
-      "slug": "2026-11-12-story",
-      "file": "posts/2026-11-12-story/story.jpg",
-      "about": "Biliyor muydun: ChatGPT Business Hub (beta) — anılma, tık, konu, ajan + 'kendin dene' sorusu (tiles düzeni, koyu)",
-      "layout": "tiles",
-      "sources": [
-        "https://www.seroundtable.com/chatgpt-business-hub-42505.html",
-        "https://ppc.land/businesses-gain-chatgpt-click-and-mention-counts-in-openais-business-hub/",
-        "https://tech-ish.com/2026/11/11/openais-business-hub-lets-you-manage-your-business-in-chatgpt/"
-      ],
-      "media_id": "18109814321248870"
-    },
-    {
-      "date": "2026-11-13",
-      "slug": "2026-11-13-story",
-      "file": "posts/2026-11-13-story/story.jpg",
-      "about": "Biliyor muydun: YouTube Hype (Jewels/Rubies) artık Türkiye'de — nasıl çalışır + şartlar, 'DM'den yaz' (steps düzeni, açık)",
-      "layout": "steps",
-      "sources": [
-        "https://www.socialmediatoday.com/news/youtube-expands-custom-feeds-and-offers-new-partnership-options/874068/",
-        "https://ppc.land/youtube-creators-in-us-uk-and-7-more-markets-gain-income-from-paid-hypes/"
-      ],
-      "media_id": "18029963495869441"
-    },
-    {
-      "date": "2026-11-14",
-      "slug": "2026-11-14-story",
-      "file": "posts/2026-11-14-story/story.jpg",
-      "about": "Biliyor muydun: Tomy 20 yıl sonra TAKARATOMY oluyor (bugün/1 Nisan 2027 karşılaştırması, asobi sembolü, 'logon tek bakışta okunuyor mu?' DM sorusu; compare düzeni, koyu)",
-      "layout": "compare",
-      "topic_area": "marka",
-      "sources": [
-        "https://kyodonewsprwire.jp/release/202611099717",
-        "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled"
-      ],
-      "media_id": "17922183303526724"
-    },
-    {
-      "date": "2026-11-15",
-      "slug": "2026-11-15-story",
-      "file": "posts/2026-11-15-story/story.jpg",
-      "about": "Biliyor muydun: Microsoft 365 ~18 saat çöktü, internet 'Microsoft 364' dedi; ders: adındaki sayı bir vaattir + 'DM'den yaz' (bignum düzeni, koyu)",
-      "layout": "bignum",
-      "topic_area": "trend",
-      "sources": [
-        "https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/",
-        "https://knowyourmeme.com/memes/microsoft-364"
-      ],
-      "media_id": "18030220238699530"
-    },
-    {
-      "date": "2026-11-16",
-      "slug": "2026-11-16-story",
-      "file": "posts/2026-11-16-story/story.jpg",
-      "about": "Biliyor muydun: 'Remember November 2026' kutup ayısı memesi (2023 TikTok, Rusça yazı, Ağustos 2026'da geri döndü); ders: merak boşluğu + 'DM'den yaz' (quote düzeni, açık)",
-      "layout": "quote",
-      "topic_area": "trend",
-      "sources": [
-        "https://knowyourmeme.com/memes/remember-november-2026-is-coming",
-        "https://www.yahoo.com/entertainment/articles/remember-november-2026-meme-viral-193000262.html"
-      ],
-      "media_id": "18131814574694760"
-    },
-    {
-      "date": "2026-11-17",
-      "slug": "2026-11-17-story",
-      "file": "posts/2026-11-17-story/story.jpg",
-      "about": "Biliyor muydun: Instagram Amazon ortaklık linkleri Reel (30 ürün) ve gönderilere (20 ürün), şimdilik ABD; içerikteki ürün linki biyodakinden ~2 kat tık + 'DM'den yaz' (phone düzeni, açık)",
-      "layout": "phone",
-      "topic_area": "para",
-      "sources": [
-        "https://techcrunch.com/2026/11/16/instagram-now-lets-creators-add-amazon-affiliate-links-in-reels-and-feed-posts/",
-        "https://www.netinfluencer.com/instagram-amazon-affiliate-links-reels-feed-posts-ltk-shopmy/"
-      ],
-      "media_id": "18149580655576175"
-    },
-    {
-      "date": "2026-11-18",
-      "slug": "2026-11-18-story",
-      "file": "posts/2026-11-18-story/story.jpg",
-      "about": "Biliyor muydun: Cambridge Dictionary 2026 yılın kelimesi 'human' (insan); sebep: yapay zekâ çağında insan yaratıcılığına, bağına ve sahiciliğine yeniden değer; piksel Kare 'Ben de miyim?' + 'DM'den yaz' (oyun tarzı, koyu)",
-      "layout": "game",
-      "style": "oyun",
-      "topic_area": "trend",
-      "sources": [
-        "https://dictionaryblog.cambridge.org/2026/11/18/word-of-the-year-2026/"
-      ],
-      "media_id": "18194141809404414"
-    },
-    {
-      "date": "2026-11-18",
-      "slug": "2026-11-18-story-v2",
-      "file": "posts/2026-11-18-story/story-v2.jpg",
-      "about": "Düzeltilmiş story: 'Ben de insan mıyım?' (ilk sürümde anlamsız 'Ben de miyim?' vardı; Ece eskisini silecek)",
-      "style": "oyun",
-      "media_id": "18447555022133162"
-    },
-    {
-      "date": "2026-11-19",
-      "slug": "2026-11-19-story",
-      "file": "posts/2026-11-19-story/story.jpg",
-      "about": "GTA VI bugün çıktı; önceki oyun GTA V 2013'te: arada 13 yıldan fazla var. Piksel yükleme çubuğu (%100), kumandalı piksel Kare, 'Sen oynayacak mısın? DM'den yaz.'",
-      "layout": "game",
-      "style": "oyun",
-      "topic_area": "trend",
-      "sources": [
-        "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
-        "https://gulfnews.com/technology/gaming/gta-6-drops-nov-19-as-preloads-open-nov-10-five-things-to-know-about-grand-theft-auto-1.500740670",
-        "https://allthings.how/how-long-the-wait-for-gta-6-has-been-release-set-for/"
-      ],
-      "media_id": "18097896470159431"
-    },
-    {
-      "date": "2026-11-20",
-      "slug": "2026-11-20-story",
-      "file": "posts/2026-11-20-story/story.jpg",
-      "about": "Biliyor muydun: Kling Image 4.0 tek görsele 2.000 karaktere kadar yazı yazabiliyor; ipucu: yine de her harfi kendin kontrol et; 'Sen denedin mi? DM'den yaz.' (3D Kare, koyu)",
-      "layout": "3d",
-      "style": "3d",
-      "topic_area": "ai",
-      "sources": [
-        "https://technode.com/2026/11/18/kuaishou-launches-kling-image-4-0-with-native-8k-generation"
-      ],
-      "media_id": "18222774934344719"
-    },
-    {
-      "date": "2026-11-21",
-      "slug": "2026-11-21-story",
-      "file": "posts/2026-11-21-story/story.jpg",
-      "about": "Biliyor muydun: YouTube, TV'de birlikte izleyenleri tahmin edip izlenme sayısına da ekliyor; telefon ve bilgisayarda değişen bir şey yok. Piksel TV + kanepede Kare ve iki izleyici, '1 TV, 3 kişi = 3 izlenme'; 'Sence adil mi? DM'den yaz.'",
-      "layout": "game",
-      "style": "oyun",
-      "topic_area": "platform",
-      "sources": [
-        "https://support.google.com/youtube/answer/2991785",
-        "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/"
-      ],
-      "media_id": "17977586139149651"
-    },
-    {
-      "date": "2026-11-22",
-      "slug": "2026-11-22-story",
-      "file": "posts/2026-11-22-story/story.jpg",
-      "about": "Biliyor muydun: Gemini uygulaması yazıdan, fotoğraftan ya da videodan ~3 sn'lik döngülü GIF yapıyor; Türkiye'de şimdilik Google AI abonelerine açılıyor; 'Hangi GIF'i yaptırırdın? DM'den yaz.' (3D Kare, koyu)",
-      "layout": "3d",
-      "style": "3d",
-      "topic_area": "ai",
-      "sources": [
-        "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
-        "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
-      ],
-      "media_id": "18123267931940582"
-    },
-    {
-      "date": "2026-11-23",
-      "slug": "2026-11-23-story",
-      "file": "posts/2026-11-23-story/story.jpg",
-      "about": "Freelance ipucu: “Ne lazımsa yaparım” deme, net teklif ver; kalıp: 'Ayda 8 gönderi + 4 story, her pazartesi teslim, aylık sabit fiyat.'; 'Kaydet, ilk teklifinde kullan.'; 'Senin teklifin ne? DM’den yaz.' (3D madeni paralar, koyu). 22 Kasım freelance Reel'inin (15 kaydetme) devamı.",
-      "layout": "3d",
-      "style": "3d",
-      "topic_area": "para",
-      "sources": [],
-      "media_id": "17962798551040077"
-    }
-  ],
-  "replied_comments": [
-    "18127192088314324"
-  ],
-  "covered_topics": [
-    "instagram-effect-builder",
-    "adobe-max-2026",
-    "claude-fable-5-2",
-    "ogilvy-echo",
-    "adobe-max-2026-firefly-creative-agent",
-    "claude-meetings-sheets-whiteboards",
-    "gemini-4-carbon",
-    "gemini-4-hydrogen",
-    "von-restorff-etkisi",
-    "takaratomy-rebrand",
-    "youtube-gta-vi-paketi",
-    "60-30-10-renk-kurali",
-    "microsoft-364",
-    "edits-speed-curves",
-    "satir-uzunlugu-66-karakter",
-    "linkedin-ai-yorumlari",
-    "instagram-amazon-affiliate-linkleri",
-    "dikkat-1-7-saniye",
-    "gpt-6-2-astra-sol",
-    "instagram-direct-app",
-    "gpt-6-2-karakter-sec",
-    "instagram-story-duzenleme",
-    "yukleme-cubugu-algi",
-    "kling-image-4-yazi",
-    "chatgpt-live-dictation",
-    "instagram-content-protection",
-    "gemini-gif",
-    "canva-ai-controls",
-    "youtube-co-views"
-  ],
-  "hot_pending": [
-    {
-      "key": "cambridge-woty-2026-human",
-      "topic": "Cambridge Dictionary 2026 yılın kelimesi: 'human' (yapay zekâ ile insan arasındaki sınır tartışması); yeni eklenenler: aura farming, looksmaxxing",
-      "found": "2026-11-18",
-      "big": false,
-      "sources": [
-        "https://dictionaryblog.cambridge.org/2026/11/18/word-of-the-year-2026/"
-      ],
-      "note": "18 Kasım story'sinde kısaca işlendi; feed için ancak yeni bir açı varsa."
-    },
-    {
-      "key": "gemini-4-neon",
-      "topic": "Google Gemini 4 Neon'u yayınladı (bir ayda dördüncü Gemini 4 modeli; AI Pro/Ultra)",
-      "found": "2026-11-19",
-      "big": false,
-      "note": "Gemini ×2 zaten işlendi ve veri dersine göre aynı markanın tekrarı tutmadı; yapay zekâ kotası (dün 2 AI gönderisi). Ancak yeni bir somut açı varsa.",
-      "sources": [
-        "https://www.androidauthority.com/gemini-4-neon-3736931/",
-        "https://www.digitaltrends.com/computing/google-says-gemini-4-neon-can-hang-with-claude-opus-5-5-and-gpt-6-2-sol-for-less/"
-      ]
-    },
-    {
-      "key": "anthropic-ipo",
-      "topic": "Anthropic bugün (19 Kasım) Nasdaq'ta halka arz oluyor (ANT, hisse 83 $)",
-      "found": "2026-11-19",
-      "big": false,
-      "note": "Finans haberi, yaratıcı dijital kapsamın dışında; feed için uygun değil.",
-      "sources": [
-        "https://www.cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut/"
-      ]
-    },
-    {
-      "key": "coca-cola-enjoy-joy-yapay-zekasiz",
-      "topic": "Coca-Cola, son iki yılın tartışmalı yapay zekâ yılbaşı reklamlarından sonra 2026 ABD yılbaşı kampanyası 'Enjoy Joy'u gerçek çekimle yaptı (Ogilvy / WPP Open X, yönetmen Paul Dektor)",
-      "found": "2026-11-20",
-      "big": false,
-      "note": "19 Kasım. 30/15/6 sn'lik kesimler, 'Grandma's Holiday Table' sosyal serisi, 270'ten fazla duraklı Holiday Caravan. Resmî görsel var (Marketing Dive, 'Courtesy of Coca-Cola'). Marka/reklam alanı için güçlü aday; görsel kuralı geçerli.",
-      "sources": [
-        "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215/",
-        "https://www.contentgrip.com/coca-cola-enjoy-joy-holiday/"
-      ]
-    },
-    {
-      "key": "gta-vi-cikis-rekorlari",
-      "topic": "GTA VI çıkışının ilk günü: Metacritic 99 (Ocarina of Time ile en yüksek puana ortak), Twitch'te izleyici rekoru; markaların GTA pazarlaması (Specsavers 'GTA Transport', Logitech izin günü, Popeyes)",
-      "found": "2026-11-20",
-      "big": false,
-      "note": "Çıkış (19 Kasım) 19 Kasım story'sinde işlendi. Twitch rakamları kaynaklara göre değişiyor (Engadget 3,3 milyon+, Kotaku ~2,8 milyon); satış rakamları yalnızca tahmin (Sensor Tower), Take-Two resmî rakam vermedi. İşlenecekse 'markalar GTA VI'dan nasıl pay kaptı' açısı, rakamlar yeniden doğrulanarak.",
-      "sources": [
-        "https://www.engadget.com/2320788/gta-vi-launch-day-live-blog/",
-        "https://kotaku.com/live-updates-on-gta-6-the-biggest-launch-in-gaming-history-2000758030",
-        "https://www.creativebloq.com/news/the-specsavers-gta-6-campaign-is-hilariously-on-brand",
-        "https://www.adweek.com/brand-marketing/6-ways-brands-are-capturing-buzz-around-gta-6s-release/"
-      ]
-    },
-    {
-      "key": "gemini-gif",
-      "topic": "Gemini uygulaması GIF üretiyor (Gemini Omni 1.2 Flash; yazı, fotoğraf ya da videodan ~3 sn döngülü GIF; Google AI abonelerine küresel, ücretsiz kullanıcılara 8 ülkede — Türkiye yok)",
-      "found": "2026-11-22",
-      "big": false,
-      "note": "22 Kasım story'sinde işlendi; feed için ancak yeni bir açı varsa.",
-      "sources": [
-        "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
-        "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
-      ]
-    }
-  ],
-  "scheduled": [],
-  "pending_replies": [
-    {
-      "comment_id": "18130577105477477",
-      "media_id": "18105721748566120",
-      "username": "karacaisaaa",
-      "comment": "Video tarzın çok güzel birde kendine özgü ses buldun mu yürürsün güzel bir tasarım dilin var 1 aya 10k",
-      "draft": "Çok teşekkürler, bu yorum çok motive etti! Ses konusunda haklısın, son videolarda seslendirmeyi de denemeye başladık. 10k hedefini not aldık 🙌",
-      "created": "2026-11-14"
-    },
-    {
-      "comment_id": "17942939919389976",
-      "media_id": "17955542733341306",
-      "username": "m3metmehm4t",
-      "comment": "Bende izliyorum 41 milyar",
-      "draft": "Demek o fazladan 1 milyar senden geldi 😄 19 Kasım'daki 24 saatlik yayını da izleyecek misin?",
-      "created": "2026-11-14"
-    },
-    {
-      "comment_id": "18106188500627518",
-      "media_id": "17977057674151921",
-      "username": "neyazim_bulamadm",
-      "comment": "İzlenme sayisi bence",
-      "draft": "İzlenme sayısı ilk bakışta en çok göze çarpan sayı, haklısın! Mosseri'ye göre asıl belirleyici olan ise izlenme süresi, yani videonun ne kadar uzun izlendiği 👀",
-      "created": "2026-11-21"
-    }
-  ],
-  "weekly_metrics": [
-    {
-      "week_end": "2026-11-14",
-      "range": "2026-11-08..2026-11-14",
-      "followers": 5,
-      "followers_prev": null,
-      "note": "İlk haftalık kayıt; 10 Kasım notunda 3 takipçi yazıyordu.",
-      "posts": 11,
-      "views": 2392,
-      "reach": 1973,
-      "reels_skip_rate_range": "61–85%",
-      "reels_avg_watch_s_range": "2.7–11.2",
-      "best": "18173187451461130 (Fable 5.2: erişim 1400, skip %61, 11,2 sn, 9 kaydetme, 6 paylaşım)",
-      "worst": "18139861054680639 (Claude Meetings: erişim 109, skip %85, 2,7 sn)"
-    },
-    {
-      "week_end": "2026-11-21",
-      "range": "2026-11-15..2026-11-21",
-      "followers": 6,
-      "followers_prev": 5,
-      "followers_change": 1,
-      "note": "Windsor last_14d, force_refresh yok. 21 Kasım sabah Reel'i (17958169884268324) veride yok; 20 Kasım sabah Reel'i (18123156926059374) erişim 3 ile eksik görünüyor, toplamlara dahil ama yorumlanmadı.",
-      "posts": 12,
-      "views": 7457,
-      "reach": 6499,
-      "voiced_reels": "5/5 test havuzunu aştı (1.014–1.404 erişim, skip %45–54, 8,7–13 sn)",
-      "silent_reels": "6/6 ~105–118 erişimde kaldı (skip %66–88, 2,6–4,4 sn)",
-      "best": "17991178818089969 (Instagram Direct: erişim 1404, 132 paylaşım = %9,4 gönderim/erişim, skip %54, 12,1 sn); en iyi tutma 17981484864140074 (Logolar: skip %45,5, 13 sn, 10 kaydetme)",
-      "worst": "18477298123184660 (LinkedIn yapay zekâ yorumları: erişim 105, skip %88, 2,6 sn, sessiz editoryal)"
-    }
-  ],
-  "daily_metrics": [
-    {
-      "date": "2026-11-18",
-      "followers": 5,
-      "yesterday_morning": {
-        "media_id": "18129678413489983",
-        "slug": "2026-11-17-satir-uzunlugu",
-        "kind": "static",
-        "reach": 3,
-        "views": 6,
-        "shares": 0,
-        "style": "editoryal statik (bignum)"
-      },
-      "yesterday_midday": {
-        "media_id": "18084742475717388",
-        "slug": "2026-11-18-dikkat-1-7-saniye",
-        "kind": "reel",
-        "reach": 1010,
-        "views": 1159,
-        "skip_rate": 0.447,
-        "avg_watch_s": 8.7,
-        "shares": 2,
-        "saved": 3,
-        "style": "cizgi-film (Ece seslendirmesi)"
-      },
-      "yesterday_evening": {
-        "media_id": "18477298123184660",
-        "slug": "2026-11-17-linkedin-ai-yorumlar",
-        "kind": "reel",
-        "reach": 104,
-        "views": 117,
-        "skip_rate": 0.876,
-        "avg_watch_s": 2.6,
-        "shares": 0,
-        "style": "editoryal (render.py)"
-      },
-      "lesson": "İzleyiciye bakan çizgi film Kare + 'bunu da kaydıracaktın' gibi doğrudan izleyiciye hitap eden açılış %45 skip, 1.010 erişim; metin ağırlıklı editoryal Reel %88 skip, 104 erişim; statik 3 erişim. Bugün iki gönderi de karakterle (3D Kare sabah, çizgi film Kare akşam) ve ilk karede hareketle açılıyor, editoryal motor kullanılmadı."
-    },
-    {
-      "date": "2026-11-19",
-      "followers": 5,
-      "yesterday_morning": {
-        "media_id": "18457465903122891",
-        "slug": "2026-11-18-gpt-6-2-slayt",
-        "kind": "short-reel",
-        "style": "3d",
-        "reach": 107,
-        "views": 119,
-        "skip_rate": 0.806,
-        "avg_watch_s": 2.8,
-        "shares": 0
-      },
-      "yesterday_midday": {
-        "media_id": "17914541763574067",
-        "slug": "2026-11-19-gpt-6-2-karakter-sec",
-        "kind": "reel",
-        "style": "oyun (Ece seslendirmesi)",
-        "reach": 1026,
-        "views": 1183,
-        "skip_rate": 0.488,
-        "avg_watch_s": 10.4,
-        "shares": 1,
-        "saved": 3
-      },
-      "yesterday_evening": {
-        "media_id": "17991178818089969",
-        "slug": "2026-11-18-instagram-direct",
-        "kind": "reel",
-        "style": "cizgi-film (Ece seslendirmesi)",
-        "reach": 1254,
-        "views": 1451,
-        "skip_rate": 0.534,
-        "avg_watch_s": 12.5,
-        "shares": 132,
-        "saved": 6
-      },
-      "lesson": "Herkesin kullandığı Instagram özelliği (Direct, Türkiye'de test) 132 paylaşım ve 1.254 erişim aldı; anlatımlı oyun Reel'i de 1.026 erişim. Metin ağırlıklı 3D kısa sabah Reel'i (GPT-6.2 slayt) %81 skip, 107 erişimde kaldı. Bugün sabah gönderisi yine geniş kitlenin kullandığı bir Instagram özelliği (story düzenleme), ilk karede telefon + izleyiciye bakan Kare, doğrudan hitap eden soru ('Story'de hata mı yaptın?')."
-    },
-    {
-      "date": "2026-11-20",
-      "followers": 5,
-      "yesterday_morning": {
-        "media_id": "18668539741040283",
-        "slug": "2026-11-19-story-duzenleme",
-        "kind": "short-reel",
-        "style": "arayuz",
-        "reach": 113,
-        "views": 140,
-        "skip_rate": 0.655,
-        "avg_watch_s": 4.5,
-        "shares": 3,
-        "saved": 0
-      },
-      "yesterday_evening": {
-        "media_id": "17981484864140074",
-        "slug": "2026-11-19-logolar-neden-ayni",
-        "kind": "reel",
-        "style": "3d (Ece seslendirmesi)",
-        "reach": 1300,
-        "views": 1440,
-        "skip_rate": 0.447,
-        "avg_watch_s": 13.1,
-        "shares": 5,
-        "saved": 9
-      },
-      "lesson": "Seslendirmeli 4 Reel üst üste test havuzunu aştı (1.014–1.402 erişim, skip %45–54); sessiz kısa sabah Reel'leri yine ~110'da kaldı (skip %65–81, izlenme 2,7–4,5 sn). Bugün sabah Reel'i sonuna kadar izletecek bir mini test (cevap 5. saniyede) ve A/B yorum çağrısıyla açıldı; Kare 0. karede izleyiciye bakıyor."
-    },
-    {
-      "date": "2026-11-21",
-      "followers": 6,
-      "yesterday_morning": {
-        "media_id": "18123156926059374",
-        "slug": "2026-11-20-yukleme-cubugu",
-        "kind": "short-reel",
-        "style": "oyun",
-        "reach": 3,
-        "views": 2,
-        "shares": 0,
-        "note": "Windsor verisi eksik görünüyor (erişim 3, izlenme 2); önbellek gecikmesi olabilir, yarın tekrar bakılmalı"
-      },
-      "yesterday_evening": {
-        "media_id": "17977057674151921",
-        "slug": "2026-11-20-en-degerli-tepki",
-        "kind": "reel",
-        "style": "arayuz (Ece seslendirmesi)",
-        "reach": 1126,
-        "views": 1291,
-        "skip_rate": 0.474,
-        "avg_watch_s": 10.1,
-        "shares": 3,
-        "saved": 3,
-        "likes": 20,
-        "comments": 1
-      },
-      "lesson": "Seslendirmeli akşam Reel'leri 5'te 5 test havuzunu aştı (1.014–1.404 erişim, skip %45–54, izlenme 10–13 sn); sessiz kısa sabah Reel'leri hâlâ ~110'da (dünkü verisi eksik). Bugün sabah Reel'i herkesin bildiği bir isimle (ChatGPT) ve 0. karede konuşan, dönen 3D Kare + canlı yazılan mesaj kutusuyla açıldı."
-    },
-    {
-      "date": "2026-11-22",
-      "followers": 6,
-      "yesterday_morning": {
-        "media_id": "17958169884268324",
-        "slug": "2026-11-21-canli-dikte",
-        "kind": "short-reel",
-        "style": "3d",
-        "reach": 106,
-        "views": 128,
-        "skip_rate": 0.712,
-        "avg_watch_s": 3.6,
-        "shares": 0,
-        "saved": 0,
-        "likes": 0
-      },
-      "yesterday_evening": {
-        "media_id": "18095163653204124",
-        "slug": "2026-11-21-kerning-nedir",
-        "kind": "reel",
-        "style": "oyun (Ece seslendirmesi)",
-        "reach": 104,
-        "views": 112,
-        "skip_rate": 0.59,
-        "avg_watch_s": 7.1,
-        "shares": 0,
-        "saved": 0,
-        "likes": 1,
-        "note": "Yayından ~16 saat sonra ölçüldü; hâlâ test havuzunda, genişleyebilir"
-      },
-      "note_2026_11_20_morning": "yukleme-cubugu (18123156926059374) hâlâ erişim 3, izlenme 4: veri eksik değil, Reel dağıtılmamış görünüyor",
-      "lesson": "Sessiz sabah Reel'i (3D, ChatGPT) yine ~106'da kaldı (skip %71, 3,6 sn). Seslendirmeli kerning Reel'i skip %59 ile hedefin hemen altında ama izlenme 7,1 sn ve 0 paylaşım: niş kavram ilk gün genişlemedi (geniş tanınırlık dersi). Bugün sabah Reel'i herkesin yaşadığı bir soruna (Reel'in başka hesapta dönmesi) doğrudan soruyla açıldı; gerçekçi arayüz ve hikâye 0. karede başlıyor, gönderme CTA'sı kişiyi hedefliyor."
-    },
-    {
-      "date": "2026-11-23",
-      "followers": 8,
-      "yesterday_morning": {
-        "media_id": "18204297724401494",
-        "slug": "2026-11-22-icerik-koruma",
-        "kind": "short-reel",
-        "style": "arayuz",
-        "reach": 110,
-        "views": 130,
-        "skip_rate": 0.602,
-        "avg_watch_s": 4.0,
-        "shares": 0,
-        "saved": 1,
-        "likes": 2
-      },
-      "yesterday_evening": {
-        "media_id": "18127368056476510",
-        "slug": "2026-11-22-ilk-freelance-musteri",
-        "kind": "reel",
-        "style": "3d (Ece seslendirmesi)",
-        "reach": 1084,
-        "views": 1189,
-        "skip_rate": 0.517,
-        "avg_watch_s": 7.9,
-        "shares": 3,
-        "saved": 15,
-        "likes": 5
-      },
-      "note": "kerning-nedir (18095163653204124) 2. günde 135 erişim, skip %61, 6,5 sn: genişlemedi. Takipçi 6 → 8.",
-      "lesson": "Seslendirmeli akşam Reel'i 6/7 kez test havuzunu aştı; 'ilk müşteriyi bulmanın 3 adımı' gibi uygulanabilir adımlar rekor kaydetme getirdi (15). Sessiz sabah Reel'i yine ~110 (skip %60, 4 sn). Bugün sabah Reel'i herkesin bildiği bir araçla (Canva) ve kaydedilecek somut bir ayar yoluyla açıldı; story de dünkü en çok kaydedilen Reel'in devamı olan bir teklif kalıbı."
-    }
-  ],
-  "planned_reels": [
-    {
-      "date": "2026-11-19",
-      "slug": "2026-11-19-logolar-neden-ayni",
-      "style": "3d",
-      "topic_area": "marka",
-      "title": "Lüks markaların logoları neden birbirine benziyor? (blanding)",
-      "script": "Lüks markaların logoları neden birbirine benzemeye başladı?\n\nBurberry, Balenciaga, Saint Laurent, Balmain… Birçok moda markası süslü yazılarını bırakıp sade, büyük harfli logolara geçti.\n\nBuna \"blanding\" deniyor: marka ile yavanlığın birleşimi.\n\nSebep basit: Logo artık en çok telefon ekranında ve küçücük profil fotoğraflarında görünüyor. Sade yazı küçükken de okunuyor.\n\nAma bir bedeli var: Herkes aynı görünmeye başladı.\n\nŞimdi bazıları geri dönüyor. Burberry, 2023'te atlı şövalyesini ve daha klasik bir yazıyı geri getirdi.\n\nSence sade logo mu, karakterli logo mu? Yorumlara yaz.",
-      "visual_note": "Gerçek logolar GÖSTERİLMEZ. 3D 'MARKA' kelimesi süslü serif yazıdan sade büyük harfe dönüşür, sonra yan yana aynı görünen kopyalar; Burberry kısmında genel bir at/şövalye silüeti (logo kopyası değil).",
-      "sources": [
-        "https://www.thedrum.com/opinion/2020/11/20/fashion-shot-the-serif-homogeneous-logos-and-luxury-branding-intertwine",
-        "https://www.nssmag.com/en/article/41960",
-        "https://www.campaignasia.com/article/burberrys-return-to-british-eccentricity-defies-8216reblanding8217-trend/483228"
-      ],
-      "produced": true
-    },
-    {
-      "date": "2026-11-20",
-      "slug": "2026-11-20-en-degerli-tepki",
-      "style": "arayuz",
-      "topic_area": "platform",
-      "title": "Instagram'da en değerli tepki hangisi?",
-      "script": "Instagram'da en değerli tepki hangisi: beğeni mi, yorum mu, paylaşım mı?\n\nInstagram'ın başındaki Adam Mosseri bunu açıkça söyledi. En önemli üç sinyal: izlenme süresi, beğeni ve gönderme.\n\nAma asıl ölçü sayı değil, oran. Kaç kişiye ulaştın, bunların kaçı beğendi, kaçı bir arkadaşına gönderdi?\n\nBeğeni, takipçilerinde biraz daha önemli. Takip etmeyenlere ulaşmak içinse gönderme biraz daha önemli.\n\nYani yeni insanlara ulaşmak istiyorsan şunu sor: Bunu biri arkadaşına atar mı?\n\nSen en son hangi videoyu birine gönderdin? Yorumlara yaz. Bu videoyu da içerik üreten bir arkadaşına gönder!",
-      "visual_note": "Gerçekçi arayüz (tools/scenes/ui-telefon.html): telefonda bir Reel, beğeni/yorum/gönder ikonları; istatistik ekranında 'izlenme süresi, beğeni/erişim, gönderme/erişim'; gönder butonuna dokunma. Instagram logosu kullanılmaz.",
-      "sources": [
-        "https://www.socialmediatoday.com/news/instagram-shares-algorithm-2025/738034/",
-        "https://creatorflow.so/blog/instagram-algorithm/"
-      ],
-      "produced": true
-    },
-    {
-      "date": "2026-11-21",
-      "slug": "2026-11-21-kerning-nedir",
-      "style": "oyun",
-      "topic_area": "tasarim",
-      "title": "Kare Açıklıyor: Kerning nedir?",
-      "script": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Mesela A ile V yan yana gelince eşit aralık bile fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? R ile n fazla yaklaşırsa m gibi okunur. \"Kurnaz\" bir anda \"kumaz\" oluverir.\n\nBunun bir adı bile var: keming.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir şey; ona tracking deniyor.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz!",
-      "visual_note": "Oyun tarzı: harfler piksel bloklar, Kare 'A' ile 'V'yi itip yaklaştırıyor; 'KURNAZ' yazısında r ve n çarpışıp 'm' oluyor (KUMAZ), 'KEMİNG' rozeti; tracking için tüm satır akordeon gibi açılıp kapanıyor.",
-      "sources": [
-        "https://en.wikipedia.com/wiki/Kerning",
-        "https://www.shopify.com/blog/what-is-kerning"
-      ],
-      "produced": true
-    },
-    {
-      "date": "2026-11-22",
-      "slug": "2026-11-22-ilk-freelance-musteri",
-      "style": "3d",
-      "topic_area": "para",
-      "title": "İlk freelance müşterini nereden bulursun?",
-      "script": "İlk freelance müşterini nereden bulursun? Üç adımda anlatayım.\n\nBir: Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\nİki: Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\nÜç: Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.",
-      "visual_note": "3D: üç basamaklı merdiven, her basamakta 3D nesne (mesaj balonu, portfolyo kartları, fiyat etiketi); Kare basamakları çıkıyor.",
-      "sources": [],
-      "produced": true
-    },
-    {
-      "date": "2026-11-23",
-      "slug": "2026-11-23-youtube-tv-izlenme",
-      "style": "oyun",
-      "topic_area": "platform",
-      "title": "TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?",
-      "script": "Bir videoyu salonda üç kişi izlerseniz YouTube kaç izlenme sayar? Artık üç.\n\nYouTube, TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına eklemeye başladı. Telefonda, bilgisayarda ve tablette değişen bir şey yok; sadece TV.\n\nPeki içerik üreticisi daha çok mu kazanacak? Hayır. Gelir ve para kazanma şartları bu tahminden etkilenmiyor.\n\nBir de merak edenler için: YouTube bunu kamera ya da mikrofonla değil, bir tahmin modeliyle hesaplıyor.\n\nSen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?",
-      "visual_note": "Oyun tarzı: piksel salon, TV ve kanepe; tek izleyici sayacı 1, iki kişi daha oturunca 3'e çıkar; telefon/tablet ikonlarında sayaç 1'de kalır; para kesesi değişmez (gelir etkilenmiyor); kamera/mikrofon ikonu üstü çizili. 21 Kasım story'sinden farklı yeni sahne. YouTube logosu kullanılmaz.",
-      "sources": [
-        "https://support.google.com/youtube/answer/2991785",
-        "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
-        "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/"
-      ],
-      "produced": true
-    },
-    {
-      "date": "2026-11-24",
-      "slug": "2026-11-24-sesli-mi-sessiz-mi",
-      "style": "arayuz",
-      "topic_area": "perde-arkasi",
-      "title": "Sesli video mu, sessiz video mu? Kendi 11 Reel'imizden",
-      "script": "Aynı hesap, aynı hafta, on bir video. Aradaki tek büyük fark: ses.\n\nSeslendirdiğimiz beş videonun beşi de bin kişiden fazlasına ulaştı. Sadece yazı ve müzikle çıkan altı videonun altısı da yüz yirmi kişinin altında kaldı.\n\nİlk üç saniyede kaydırıp geçenler sesli videolarda yarıya yakındı, sessizlerde üçte ikiden fazla.\n\nYani yüzünü göstermek zorunda değilsin, ama sesini kullan. Bir ses sana konuşunca durup dinliyorsun.\n\nSen videolarını seslendiriyor musun? Yorumlara yaz, video çeken arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: film afişleri neden hep turuncu ve mavi?",
-      "visual_note": "Gerçekçi arayüz: telefonda istatistik ekranı; iki sütun Reel kartı (hoparlör ikonlu / sessiz ikonlu), erişim sayıları sayarak yükselir; skip oranı halkaları. Veriler: 15–20 Kasım, seslendirmeli 5 Reel 1.014–1.404 erişim, skip %45–54; sessiz 6 Reel 105–118 erişim, skip %66–88 (state.json daily_metrics). Yeni veri gelirse rakamları yeniden kontrol et.",
-      "sources": [
-        "kendi verimiz: posts/state.json daily_metrics ve weekly_metrics (15–20 Kasım)"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "slug": "2026-11-25-turuncu-mavi-afisler",
-      "style": "3d",
-      "topic_area": "gorsel-kultur",
-      "title": "Film afişleri neden hep turuncu ve mavi?",
-      "script": "Son gördüğün film afişini hatırla. Büyük ihtimalle turuncu ve mavi.\n\nHollywood'da çok sevilen bu ikilinin adı turkuaz ve turuncu.\n\nSebep insan teni. Ten rengi turuncuya yakın. Arka planı mavi-yeşile çekince yüzler öne çıkıyor, çünkü bu iki renk renk çemberinde birbirinin karşısında.\n\nAteş, patlama ve gün batımı zaten turuncu; gece ve gökyüzü mavi. Kontrast hazır.\n\nKapak görselinde bir şeyi öne çıkarmak mı istiyorsun? Karşıt rengini arkaya koy.\n\nSen bu ikiliyi en son hangi afişte gördün? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
-      "visual_note": "3D: genel bir afiş çerçevesi (gerçek film afişi yok), içinde turuncu ışıklı 3D Kare yüzü + turkuaz zemin; renk çemberi döner, turuncu ve turkuaz karşı karşıya kilitlenir; son sahnede kapak görseli örneği.",
-      "sources": [
-        "https://www.adobe.com/creativecloud/video/hub/features/why-use-orange-teal-grading",
-        "https://petapixel.com/2017/02/23/orange-teal-look-popular-hollywood/"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "slug": "2026-11-26-doksan-dokuz",
-      "style": "oyun",
-      "topic_area": "psikoloji",
-      "title": "Neden fiyatlar hep 99 ile biter? (soldaki rakam etkisi)",
-      "script": "Neden fiyatlar hep doksan dokuzla biter? Cevap: soldaki rakam.\n\nBeynimiz bir fiyatı soldan okur ve ilk rakama çok önem verir. Üç lira yerine iki lira doksan dokuz kuruş yazınca ilk rakam üçten ikiye düşer.\n\nNew York Üniversitesi'nden iki araştırmacı bunu inceledi: Doksan dokuzla biten fiyat her zaman değil, ama özellikle soldaki rakam değiştiğinde daha ucuz algılanabiliyor.\n\nYani asıl iş bir kuruşta değil, değişen ilk rakamda.\n\nSen en son hangi doksan dokuzlu fiyatı ucuz sandın? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: saatlik mi, proje başı mı fiyat?",
-      "visual_note": "Oyun tarzı: piksel market rafı, etiket 3,00 → 2,99 olurken soldaki rakam dev gibi büyüyüp küçülür; Kare'nin gözü önce soldaki rakama kayar (göz izi noktaları soldan sağa). 'Her zaman değil' kısmı için ikinci etikette rakam değişmeyince Kare omuz silker. Gerçek marka etiketi yok.",
-      "sources": [
-        "https://www.sciencedaily.com/releases/2005/06/050607030351.htm",
-        "https://phys.org/news/2005-06-consumers-react-prices.html"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "slug": "2026-11-27-saatlik-mi-proje-mi",
-      "style": "arayuz",
-      "topic_area": "para",
-      "title": "Saatlik mi, proje başı mı fiyat vermelisin?",
-      "script": "Freelance iş alırken saatlik mi fiyat verirsin, proje başı mı?\n\nSaatlik fiyat, işin ne kadar süreceği belli değilse seni korur. Ama hızlandıkça daha az kazanırsın.\n\nProje başı fiyat, müşterinin toplam tutarı baştan görmesini sağlar. Hızlı çalışırsan kazancın artar. Ama kapsamı yazmazsan iş büyür, ücret aynı kalır.\n\nPratik yol: Kapsamı net yaz, revizyon sayısını belirle, ekstralara ayrı fiyat koy.\n\nSen hangisiyle çalışıyorsun? Yorumlara yaz, freelance başlayan arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: Instagram algoritması ne demek?",
-      "visual_note": "Gerçekçi arayüz: telefonda teklif ekranı; iki sekme 'Saatlik' / 'Proje başı'. Saatlikte kronometre döner, hız artınca kazanç çubuğu kısalır; proje başında sabit tutar kartı, kapsam satırları eklendikçe 'Revizyon: 2', 'Ekstra: ayrı fiyat' kilitlenir. Rakam ve TL tutarı yazılmaz (genel tavsiye).",
-      "sources": [
-        "genel tavsiye; istatistik yok"
-      ]
-    },
-    {
-      "date": "2026-11-28",
-      "slug": "2026-11-28-algoritma-nedir",
-      "style": "3d",
-      "topic_area": "platform",
-      "title": "Kare Açıklıyor: Instagram algoritması ne demek?",
-      "script": "Kare Açıklıyor: Instagram algoritması ne demek?\n\nAslında tek bir algoritma yok. Instagram'ın kendi açıklamasına göre akış, hikâyeler, keşfet ve Reels'in her biri kendi sıralama sistemini kullanıyor.\n\nReels'te en önemli tahminler şunlar: Videoyu birine gönderir misin, sonuna kadar izler misin, beğenir misin, sesine tıklar mısın?\n\nYani algoritma, ne yapacağını tahmin etmeye çalışan bir sistem. Ona yön veren de senin davranışın.\n\nSen Instagram'da en çok hangi bölümde vakit geçiriyorsun? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
-      "visual_note": "3D: Kare'nin önünde dört ayrı 3D çark/kutu (akış, hikâyeler, keşfet, Reels), her biri farklı hızda döner; Reels kutusundan dört ikon çıkar (gönder, tam izleme, beğeni, ses). Instagram logosu kullanılmaz.",
-      "sources": [
-        "https://about.instagram.com/blog/announcements/instagram-ranking-explained"
-      ]
-    }
-  ]
+ "instagram_account": "17841469889313843",
+ "raw_base": "https://raw.githubusercontent.com/framelabed-ux/frame-lab-media/main/",
+ "grid": [
+  {
+   "date": "2026-11-09",
+   "kind": "carousel",
+   "slug": "2026-11-09-tanisma",
+   "cover_tone": "light",
+   "media_id": "18031318442692957",
+   "title": "Tanışma: Merhaba, ben Kare",
+   "layout": "classic",
+   "topic_area": "tanitim"
+  },
+  {
+   "date": "2026-11-09",
+   "kind": "reel",
+   "slug": "2026-11-09-ilk-deney",
+   "cover_tone": "dark",
+   "media_id": "18090307286284943",
+   "status": "yayında (20:00)",
+   "title": "Aynı isteği yapay zekâya 3 farklı şekilde yazdım",
+   "layout": "classic",
+   "music": "pop",
+   "topic_area": "ai"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "carousel",
+   "slug": "2026-11-10-kareden-haberler-1-v2",
+   "cover_tone": "light",
+   "media_id": "18028944962874334",
+   "status": "yayında (yeniden tasarım; eski sürüm 17993387007119720 silindi)",
+   "title": "Kare'den Haberler #1: Instagram Effect Builder ve Adobe MAX",
+   "files": [
+    "posts/2026-11-10-kareden-haberler-1-v2/1.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/2.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/3.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/4.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/5.jpg",
+    "posts/2026-11-10-kareden-haberler-1-v2/6.jpg"
+   ],
+   "caption_file": "posts/2026-11-10-kareden-haberler-1-v2/caption.txt",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+    "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+    "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+    "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+   ],
+   "layout": "bignum",
+   "topic_area": "ai"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "reel",
+   "slug": "2026-11-10-fable-5-2",
+   "cover_tone": "dark",
+   "layout": "classic-sticker",
+   "media_id": "18173187451461130",
+   "status": "yayında (13:00)",
+   "title": "Claude Fable 5.2 çıktı",
+   "sources": [
+    "https://www.anthropic.com/claude/fable",
+    "https://x.com/claudeai/status/2119867114450268322",
+    "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns",
+    "https://www.storyboard18.com/advertising/anthropic-launches-claude-fable-5-2-and-mythos-5-2-ws-l-114404.htm"
+   ],
+   "music": "pop",
+   "topic_area": "ai"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "static",
+   "slug": "2026-11-10-prompt-rehberi",
+   "cover_tone": "light",
+   "media_id": "18129784361476884",
+   "status": "yayında (19:15)",
+   "title": "Prompt rehberi: Boş sayfaya bakma, kopyala.",
+   "files": [
+    "posts/2026-11-10-prompt-rehberi/1.jpg"
+   ],
+   "layout": "chat",
+   "keyword": "REHBER",
+   "topic_area": "ai"
+  },
+  {
+   "slug": "2026-11-11-reklam-lab-1-ogilvy-echo",
+   "kind": "carousel",
+   "publish_date": "2026-11-11",
+   "files": [
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/2.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/3.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/4.jpg",
+    "posts/2026-11-11-reklam-lab-1-ogilvy-echo/5.jpg"
+   ],
+   "cover": "posts/2026-11-11-reklam-lab-1-ogilvy-echo/1.jpg",
+   "cover_tone": "dark",
+   "layout": "photo",
+   "caption": "Ünlüler artık reklam çekimine bir kez gidecek.\n\nReklam Lab'in ilk bölümünde Ogilvy'nin 9 Kasım'da duyurduğu yapay zekâ platformu ECHO var. CAA ve WPP ile birlikte geliştirilen sistemde ünlünün yüzü ve sesi bir kez taranıyor. Normalde 8–10 görsel çıkan bir çekimden 30–50 reklam üretilebiliyor. Ogilvy'ye göre görsel başına maliyet %65–75'e kadar düşebilir.\n\nPeki ünlünün izni? Hiçbir görsel ünlü onaylamadan yayınlanamıyor, her reklamda da \"Ünlü onayladı · Yapay zekâyla üretildi\" filigranı bulunuyor. Platforma ilk katılan isim oyuncu Terry Crews.\n\nİşin asıl dikkat çeken tarafı güven: Ogilvy'nin araştırmasına göre tüketicilerin %80'inden fazlası \"ünlü onayladı\" notunu izin işareti olarak görüyor.\n\nKüçük bir marka ya da serbest çalışan olarak çıkaracağın ders: Yapay zekâ kullandıysan gizleme, yüzü kullanılan kişinin onayını al ve bunu görünür kıl.\n\nBir ünlü reklamında yapay zekâ kullanıldığını bilsen markaya güvenin azalır mı? Yorumlara yaz.\n\nGörsel: Ogilvy / CAA\n\n#reklam #yapayzeka #pazarlama #dijitalpazarlama #reklamcılık #marka #sosyalmedya",
+   "sources": [
+    "https://www.ogilvy.com/ideas/ogilvy-launches-echo-industrys-first-talent-consent-based-creative-ai-platform",
+    "https://www.storyboard18.com/advertising/ogilvy-launches-echo-an-ai-platform-to-scale-celebrity-led-advertising-ws-l-114420.htm",
+    "https://bestmediainfo.com/mediainfo/mediainfo-marketing/ogilvy-launches-echo-ai-platform-to-scale-celebrity-campaigns-with-talent-consent-12798305",
+    "https://indiantelevision.com/mam/ogilvy-launches-echo-a-consent-first-ai-platform-to-protect-celebrity-likenesses/",
+    "https://reel360.com/article/caa-and-ogilvy-launch-echo-bringing-ai-celebrity-doubles-to-advertising/"
+   ],
+   "note": "Reklam Lab serisinin 1. bölümü (10 Kasım'da hazırlandı). Sabah görevi bugün için ayrı feed gönderisi üretmesin; gündemde daha büyük bir gelişme olursa bunu ertele. | 10 Kasım 13:50: Ece'nin isteğiyle kapak, Ogilvy'nin resmî ECHO görseliyle yenilendi (7 slayt). Görsel ünlü içermeyen illüstrasyon; künye kapakta ve caption'da. | 13:58: Ece'nin isteğiyle 5 slayta kısaltıldı.",
+   "media_id": "18100588367424828",
+   "status": "yayında (11 Kasım 09:45, Ece'nin isteğiyle sabah)",
+   "topic_area": "marka"
+  },
+  {
+   "slug": "2026-11-11-adobe-max-creative-agent",
+   "kind": "reel",
+   "publish_date": "2026-11-11",
+   "layout": "editorial",
+   "files": [
+    "posts/2026-11-11-adobe-max-creative-agent/reel.mp4"
+   ],
+   "cover": "posts/2026-11-11-adobe-max-creative-agent/cover.jpg",
+   "cover_tone": "light",
+   "caption": "Adobe uygulamalarına artık yazarak iş verebilirsin.\n\nAdobe MAX 2026'nın (10 Kasım) öne çıkan duyurusu Adobe Creative Agent oldu:\n\n• Firefly AI Assistant (beta): Hedefini sade bir dille yazıyorsun; asistan araçları ve yapay zekâ modelini seçip işi adım adım yapıyor.\n• Plan Mode: Asistan başlamadan önce planını gösteriyor, sen onaylıyorsun.\n• Sadece Firefly'da değil: Photoshop, Premiere, Illustrator, InDesign, After Effects ve Frame.io'da da AI Assistant (beta) olarak geliyor.\n• Model seçimi: Google, OpenAI, Kling, ByteDance ve ElevenLabs gibi şirketlerin modelleri Firefly'da tek yerde.\n\nNot: Bu özelliklerin çoğu şimdilik beta ya da önizleme aşamasında.\n\nSen ilk hangi işi asistana devrederdin? Yorumlara yaz.\n\n#yapayzeka #adobe #photoshop #firefly #grafiktasarım #tasarım #dijitalgündem",
+   "sources": [
+    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+    "https://variety.com/2026/digital/news/adobe-ai-agentic-features-max-2026-1236943958/",
+    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/",
+    "https://itbrief.asia/story/adobe-unveils-ai-agents-across-firefly-creative-cloud-at-max"
+   ],
+   "note": "11 Kasım: Ece Reklam Lab'i sabah yayınlattı, akşam slotu için yeni motor + editoryal tasarımla üretildi (23,6 sn, outro dahil). | 09:55: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,8 sn.",
+   "music": "synthwave",
+   "media_id": "18172083973473135",
+   "status": "yayında (12:01)",
+   "topic_area": "ai"
+  },
+  {
+   "slug": "2026-11-11-claude-meetings",
+   "kind": "reel",
+   "publish_date": "2026-11-11",
+   "layout": "editorial",
+   "files": [
+    "posts/2026-11-11-claude-meetings/reel.mp4"
+   ],
+   "cover": "posts/2026-11-11-claude-meetings/cover.jpg",
+   "cover_tone": "dark",
+   "caption": "Claude artık toplantılara katılıp not almanın ötesine geçiyor.\n\nAnthropic 10 Kasım'da Claude Meetings'i duyurdu:\n\n• Toplantıya görünür bir katılımcı olarak giriyor, kendini tanıtıp sohbete bildirim bırakıyor.\n• Konuşma sürerken işe başlıyor: konuşulan planın taslağını çıkarıyor, zaman çizelgesi hazırlıyor, sohbetteki sorulara cevap veriyor.\n• Toplantı bitince notlar, görevler ve hazırladığı her şey Claude'da duruyor.\n• Gizlilik: Yönetici izin vermedikçe dışarıdan misafir olan toplantılara girmiyor, sonradan biri katılırsa toplantıdan çıkıyor.\n\nŞimdilik beta: Team ve Enterprise planlarında, Google Meet'te çalışıyor. Diğer platformların sonra geleceği söyleniyor. Aynı gün Claude Whiteboards ve Claude Sheets de beta olarak tüm ücretli planlara geldi.\n\nToplantı notlarını yapay zekâya bırakır mıydın? Yorumlara yaz.\n\n#yapayzeka #claude #anthropic #verimlilik #toplantı #dijitalgündem #reels",
+   "sources": [
+    "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+    "https://www.thestar.com.my/tech/tech-news/2026/11/11/anthropic-brings-claude-to-google-meet-to-tackle-tasks-live"
+   ],
+   "note": "11 Kasım: Ece Adobe Reel'ini 12:00'ye aldı, akşam için üretildi (23,6 sn, outro dahil). Bugün 3 feed gönderisi oldu (Ece'nin isteğiyle). | 10:30: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 25,3 sn.",
+   "music": "lofi",
+   "media_id": "18139861054680639",
+   "status": "yayında (11 Kasım 19:15, akşam görevi)",
+   "topic_area": "ai"
+  },
+  {
+   "slug": "2026-11-11-gemini-4-carbon",
+   "kind": "reel",
+   "publish_date": "2026-11-12",
+   "layout": "bignum",
+   "files": [
+    "posts/2026-11-11-gemini-4-carbon/reel.mp4"
+   ],
+   "cover": "posts/2026-11-11-gemini-4-carbon/cover.jpg",
+   "cover_tone": "light",
+   "caption": "Google'ın en güçlü modeli artık kullanımda: Gemini 4 Carbon.\n\n28 Ekim'de yalnızca seçili siber güvenlik ekiplerine açılmıştı. Google 10 Kasım'da erişimi genişletti:\n\n• Kimler kullanabilir? Google AI Ultra aboneleri (Gemini uygulaması, Arama'daki AI Mode ve Antigravity) ile ücretli Gemini API kullanan geliştiriciler.\n• Neyde iddialı? Google'a göre kodlama testi CursorBench 4.0'da ilk sırada ve görev başına maliyeti en yakın rakibinin yarısından da az.\n• /swarm (önizleme): Antigravity'de tek bir prompt'u birlikte çalışan bir ajan ekibine çeviriyor, ilerlemeyi canlı izliyorsun.\n• Fiyat: 30 Kasım'a kadar 1 milyon girdi token'ı 2 $, çıktı 10 $. Sonrasında 4 $ ve 20 $.\n\nNot: Google, işlerin çoğu için hâlâ Gemini 4 Argon'u öneriyor. Carbon en zor görevler için.\n\nKodlayan bir arkadaşına gönder: Sence Carbon, Claude ve GPT'nin yanında nerede durur? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #yazılım #dijitalgündem #reels",
+   "sources": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "https://9to5google.com/2026/11/10/gemini-app-4-carbon/",
+    "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/"
+   ],
+   "music": "house",
+   "note": "11 Kasım öğle taramasında hazırlandı (31,8 sn, outro dahil). Günlük 2 gönderi sınırı nedeniyle bugün yayınlanmadı; Ece 'Yarın yayınla' dedi. 12 Kasım'ın feed gönderisi budur: sabah görevi ayrı feed gönderisi üretmesin (yalnızca story), akşam görevi 19:10'da yayınlasın. Kapak bignum düzeninde (akşamki Claude Meetings editoryal olduğu için), açık ton. Format sırasındaki carousel/statik bir sonraki güne kayar. Fiyat bilgisi 30 Kasım'a kadar geçerli.",
+   "media_id": "17887918917625015",
+   "status": "yayında (12 Kasım 19:14, akşam görevi)",
+   "topic_area": "ai"
+  },
+  {
+   "slug": "2026-11-13-gemini-4-hydrogen",
+   "kind": "reel",
+   "publish_date": "2026-11-13",
+   "layout": "bars",
+   "files": [
+    "posts/2026-11-13-gemini-4-hydrogen/reel.mp4"
+   ],
+   "cover": "posts/2026-11-13-gemini-4-hydrogen/cover.jpg",
+   "cover_tone": "dark",
+   "caption": "Gemini'nin yeni modeli 2,5 kat daha hızlı ve ücretsiz hesaplara da geliyor.\n\nGoogle 12 Kasım'da Gemini 4 Hydrogen modelini duyurdu. Önceki hızlı model Gemini 3.8 Flash'ın yerini alıyor:\n\n• Hız: Google'a göre işleri 3.8 Flash'tan 2,5 kat hızlı bitiriyor.\n• Zekâ: Artificial Analysis Zekâ Endeksi'nde 51 puanla Google'ın büyük modeli Gemini 4 Argon'u (50) az farkla geçti. 3.8 Flash'ın puanı 31.\n• Nerede? Google Arama'da dünya genelinde tüm kullanıcılara açılıyor. Gemini uygulamasında ücretsiz kullanıcılar için otomatik model seçimi uygun gördüğünde Hydrogen devreye giriyor.\n• Geliştiriciler için: Gemini API'de 1 milyon girdi token'ı 1,50 $, çıktı 7,50 $.\n\nHangi işe hangi model? Hız gereken günlük işler ve çok adımlı görevler için Hydrogen; uzun soluklu, derin düşünme gerektiren işler için Carbon ve Argon. Google da modelleri böyle konumlandırıyor.\n\nKaydet, model seçerken lazım olur. Sen Gemini'yi en çok ne için açıyorsun? Yorumlara yaz.\n\n#yapayzeka #gemini #google #teknoloji #dijitalgündem #verimlilik #reels",
+   "sources": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/",
+    "https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/",
+    "https://venturebeat.com/technology/google-launches-gemini-4-hydrogen-a-faster-smarter-pricier-flash-successor",
+    "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
+   ],
+   "music": "minimal",
+   "note": "13 Kasım sabah görevi: büyük gelişme (yeni Gemini modeli, Arama'da tüm kullanıcılara) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,8 sn (outro dahil). Kapak bars düzeni, koyu ton. 13 Kasım 18:20 güncellendi (Ece): süs öğeleri (nokta deseni, kayan yazı, köşe çizgileri, parıltı) çıkarıldı, pembe ikinci vurgu eklendi. Ece'nin isteğiyle 18:16'da elle yayınlandı (seslendirmesiz).",
+   "cover_type": "tipografi",
+   "topic_area": "ai",
+   "media_id": "18105721748566120",
+   "published_at": "2026-11-13T18:16+03:00"
+  },
+  {
+   "slug": "2026-11-14-youtube-gta-vi",
+   "kind": "reel",
+   "publish_date": "2026-11-14",
+   "extra": true,
+   "title": "YouTube'un GTA VI çıkış hazırlığı (40 milyar izlenme, 24 saatlik yayın, Shorts efekti, hediyeler)",
+   "layout": "photo",
+   "cover_type": "gorsel",
+   "topic_area": "platform",
+   "files": [
+    "posts/2026-11-14-youtube-gta-vi/reel.mp4"
+   ],
+   "cover": "posts/2026-11-14-youtube-gta-vi/cover.jpg",
+   "cover_tone": "light",
+   "music": "synthwave",
+   "voice": "posts/2026-11-14-youtube-gta-vi/voice.mp3",
+   "caption": "GTA VI daha çıkmadı ama YouTube'da 40 milyar izlenmeyi geçti.\n\nOyun 19 Kasım'da çıkıyor. YouTube 12 Kasım'da çıkış için hazırladıklarını açıkladı:\n\n• 24 saatlik canlı yayın: 19 Kasım'da Türkiye saatiyle 08:00'de youtube.com/youtube kanalında başlıyor. Oyun içerik üreticileri canlı oynanış, podcast ve özel içeriklerle yayında olacak.\n• Shorts efekti: \"GTAVI: Visit Vice City\" efektiyle kendini oyunun dünyasına koyabiliyorsun. YouTube efektin hangi ülkelerde açık olduğunu belirtmedi.\n• Canlı yayın hediyeleri: GTA temalı 5 sınırlı sürüm hediye geliyor. Biri, seçili yayınlarda stoklar bitene kadar ücretsiz.\n• YouTube Music: Oyunun müzikleri çıkış haftası boyunca ana sayfada.\n\nYouTube'a göre GTA serisiyle ilgili videolar toplamda 900 milyardan fazla izlendi.\n\nKapaktaki görsel, serinin 2002'deki oyunu GTA: Vice City'den. GTA VI de seriyi Vice City'ye geri götürüyor.\n\nİçerik üreticisiysen: Efekti çıkış haftasında dene, kendi açını bul (yorum, tepki, karşılaştırma) ve canlı yayında hangi formatların tuttuğuna bak.\n\nSen GTA VI oynayacak mısın? Yorumlara yaz, oyun seven arkadaşına gönder.\n\n#youtube #gta6 #oyun #shorts #içeriküreticisi #sosyalmedya #dijitalgündem",
+   "sources": [
+    "https://www.socialmediatoday.com/news/youtube-announces-gta-vi-activations/874583/",
+    "https://ppc.land/gta-vi-videos-gain-40-billion-youtube-views-before-the-game-launches/",
+    "https://abcnews4.com/news/offbeat/rockstar-games-grand-theft-auto-vi-brings-series-back-florida-inspired-vice-city-leonida-everglades-miami-florida-keys-wetland-video-game-xbox-playstation-jason-duval-lucia-caminos"
+   ],
+   "note": "14 Kasım: Ece'nin isteğiyle hafta sonu ek Reel olarak öğlen yayınlandı. Kapak: dev 'GTA VI' + Ece'nin gönderdiği GTA: Vice City (2002) görseli (künyeli). Ece'nin ElevenLabs seslendirmesi, 40,5 sn. Kapak türü döngüde Kare sırasıydı ama Ece görsel istediği için 'görsel' oldu.",
+   "media_id": "17955542733341306",
+   "status": "yayında (14 Kasım, Ece'nin onayıyla)",
+   "published_at": "2026-11-14"
+  },
+  {
+   "slug": "2026-11-14-von-restorff",
+   "kind": "reel",
+   "publish_date": "2026-11-14",
+   "extra": true,
+   "title": "Kare Açıklıyor: Von Restorff etkisi (farklı olan akılda kalır)",
+   "layout": "quote",
+   "cover_type": "tipografi",
+   "topic_area": "psikoloji",
+   "files": [
+    "posts/2026-11-14-von-restorff/reel.mp4"
+   ],
+   "cover": "posts/2026-11-14-von-restorff/cover.jpg",
+   "cover_tone": "dark",
+   "music": "funk",
+   "caption": "Bu listeden aklında hangi kelime kaldı: kalem, silgi, defter, cetvel, zürafa, makas?\n\nBüyük ihtimalle zürafa. Buna Von Restorff etkisi (izolasyon etkisi) deniyor.\n\n1933'te Berlin'de Hedwig von Restorff'un deneyleri şunu gösterdi: Birbirine benzeyen öğelerin arasındaki tek farklı öğe daha iyi hatırlanıyor.\n\nTasarımda nasıl kullanırsın?\n• Kapakta yalnızca bir kelimeyi vurgula.\n• Sayfada tek bir buton farklı renkte olsun.\n• Fiyat tablosunda öne çıkarmak istediğin paketi ayır.\n\nEn sık hata her şeyi vurgulamak. Her şey kalın ve renkliyse hiçbir şey öne çıkmaz. Bir de yalnızca renge güvenme: Renk körlüğü olan biri farkı göremeyebilir, boyut ya da konumla da ayır.\n\nSon paylaşımında kaç vurgu vardı? Yorumlara yaz, tasarım yapan bir arkadaşına da gönder.\n\n#tasarım #grafiktasarım #psikoloji #pazarlama #sosyalmedya #tipografi #içerikpazarlaması",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hedwig_von_Restorff",
+    "https://lawsofux.com/von-restorff-effect/"
+   ],
+   "note": "14 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,7 sn, outro dahil, seslendirmesiz). Kapak quote ailesi + büyük Kare, açık ton (önceki koyu). Son 3 gönderi AI olduğu için psikoloji/tasarım alanı seçildi. | GTA VI Reel'i öğlen (açık, görsel) yayınlandığı için kapak koyu tona ve tipografi türüne çevrildi; alt bilgi yeni küçük FL logosuyla yeniden üretildi. | 14 Kasım: Ece'nin ElevenLabs seslendirmesi eklendi (voice.mp3), süre 43,0 sn (outro dahil). | Ece'nin isteğiyle liste sahnesinden sonra boş ekranda 3 saniye ilerleyen kronometre + alarm sahnesi eklendi (müzik kısık, tık sesleri). Seslendirmedeki duraklar biraz sıkılaştırıldı (voice_tight.wav). Süre 44,8 sn.",
+   "voice": "posts/2026-11-14-von-restorff/voice_tight.wav",
+   "media_id": "17913159696588712",
+   "published_at": "2026-11-14T19:15+03:00",
+   "status": "yayında (14 Kasım akşam görevi)"
+  },
+  {
+   "slug": "2026-11-15-60-30-10",
+   "kind": "reel",
+   "publish_date": "2026-11-15",
+   "extra": true,
+   "title": "Kare Açıklıyor: 60-30-10 renk kuralı",
+   "layout": "classic",
+   "cover_type": "kare",
+   "topic_area": "tasarim",
+   "files": [
+    "posts/2026-11-15-60-30-10/reel.mp4"
+   ],
+   "cover": "posts/2026-11-15-60-30-10/cover.jpg",
+   "cover_tone": "light",
+   "music": "lofi",
+   "caption": "Aynı 3 renk, iki tasarım: biri dağınık, biri net. Fark renklerde değil, oranlarda.\n\nBunun adı 60-30-10 kuralı. İç mimarlıkta onlarca yıldır kullanılan pratik bir kural; ekran tasarımında da aynı mantık işliyor:\n\n• %60 ana renk: zemin, büyük alanlar\n• %30 ikinci renk: metin, görseller, kartlar\n• %10 vurgu: buton, tek kelime, ikon\n\nVurgu az yer kapladığı için öne çıkar. Her yeri vurgularsan göz nereye bakacağını bilemez.\n\nOdadaki karşılığı: duvarlar %60, perde ve döşeme %30, lamba ve yastıklar %10.\n\nOranlar kesin değil, bir başlangıç noktası. Ama dağınık görünen bir tasarımda ilk bakılacak yer burası.\n\nBizim paletimiz de bu mantıkla çalışıyor: krem ya da siyah zemin, karşıt renkte yazı, yeşil yalnızca vurguda.\n\nSon paylaşımında vurgu rengin ne kadar yer kaplıyor: %10 mu, daha fazlası mı? Yorumlara yaz. Kaydet, bir sonraki tasarımda lazım olur.\n\n#tasarım #grafiktasarım #renkpaleti #tasarımipuçları #sosyalmedya #içerikpazarlaması #uxtasarım",
+   "sources": [
+    "https://bobvila.com/articles/60-30-10-rule",
+    "https://uxplanet.org/the-60-30-10-rule-a-simple-way-to-creating-catchy-user-interfaces-e9e2cf957213"
+   ],
+   "note": "15 Kasım sabah görevi: hafta sonu evergreen Kare Açıklıyor Reel'i (34,4 sn, outro dahil, seslendirmesiz). Kapak classic ailesi + büyük Kare, açık ton (önceki koyu), sütun döngüsünde sıra Kare'deydi. Son 3 kayıt ai/platform/psikoloji olduğu için tasarım alanı seçildi. Karşılaştırma görseli kendi çizimimiz (src/karsilastirma.png).",
+   "media_id": "17896261899438742",
+   "published_at": "2026-11-15T19:12+03:00",
+   "status": "yayında (15 Kasım akşam görevi)"
+  },
+  {
+   "slug": "2026-11-16-edits-hiz-egrisi",
+   "kind": "reel",
+   "publish_date": "2026-11-16",
+   "title": "Edits'e hız eğrisi geldi (hız eğrisi, otomatik ses dengeleme, yazı animasyonu, İlham sekmesi) + 3 adımlık hız eğrisi formülü",
+   "layout": "editorial",
+   "cover_type": "gorsel",
+   "topic_area": "platform",
+   "files": [
+    "posts/2026-11-16-edits-hiz-egrisi/reel.mp4"
+   ],
+   "cover": "posts/2026-11-16-edits-hiz-egrisi/cover.jpg",
+   "cover_tone": "dark",
+   "music": "house",
+   "caption": "Tek klipte hem hızlanma hem ağır çekim: Edits'e hız eğrisi geldi.\n\nMeta 12 Kasım'da Instagram'ın video düzenleme uygulaması Edits için yeni bir güncelleme duyurdu:\n\n• Hız eğrisi: Klibin hızını tek bir sabit değerle değil, an an ayarlıyorsun. Hazır eğrilerden birini seçebilir ya da kendi eğrini çizebilirsin.\n• Otomatik ses dengeleme: Müzik, seslendirme ve ortam sesinin seviyesi otomatik dengeleniyor.\n• Yazı animasyonu ayarı: Yazının ekranda ne kadar kalacağını, ne hızla girip çıkacağını ve animasyonun döngü hızını sen belirliyorsun.\n• İlham sekmesi: Hangi konulardan daha çok, hangilerinden daha az örnek göreceğini seçebiliyorsun.\n\nHız eğrisini nasıl kullanmalı? 3 adımlık formül:\n1. Hızlı gir: Girişi kısalt, tempoyu kur.\n2. En iyi anda yavaşla: Zıplama, dönüş, ürünün göründüğü an.\n3. Hızlı çık: Bir sonraki sahneye enerjiyle geç.\n\nNot: Meta, özelliklerin hangi ülkelerde ve ne zaman açılacağını belirtmedi. Henüz görmüyorsan uygulamayı güncelle ve birkaç gün sonra tekrar bak.\n\nHangisini ilk denersin? Yorumlara yaz, video kurgulayan bir arkadaşına da gönder.\n\n#instagram #edits #reels #videokurgu #içeriküreticisi #sosyalmedya #dijitalgündem",
+   "sources": [
+    "https://www.socialmediatoday.com/news/metas-edits-app-gets-speed-curves-and-auto-audio-balancing/874586/",
+    "https://www.techjuice.pk/instagram-edits-speed-curves-audio-balancing/"
+   ],
+   "note": "16 Kasım sabah görevi: hot_pending'deki büyük gelişme (içerik üreticilerini doğrudan etkileyen Edits özelliği) olduğu için Reel; carousel/statik sırası sonraki güne kayar. 35,0 sn (outro dahil), seslendirmesiz. Kapak: kendi çizdiğimiz hız eğrisi grafiği (src/egri-koyu.png) + başlık, koyu ton, görsel türü. Hazır eğri adları doğrulanamadığı için yazılmadı; bölge/tarih bilgisi yok (caption'da belirtildi).",
+   "media_id": "17966520864228296",
+   "published_at": "2026-11-16T19:20+03:00",
+   "status": "yayında (16 Kasım akşam görevi; raw video adresi 'could not process' verdi, GitHub Pages adresiyle yayınlandı)"
+  },
+  {
+   "slug": "2026-11-17-satir-uzunlugu",
+   "kind": "static",
+   "publish_date": "2026-11-17",
+   "title": "Tasarım Kuralı: 66 karakter ideal satır uzunluğu (45–75 rahat aralık)",
+   "files": [
+    "posts/2026-11-17-satir-uzunlugu/1.jpg"
+   ],
+   "layout": "bignum",
+   "cover_type": "tipografi",
+   "cover_tone": "light",
+   "topic_area": "tasarim",
+   "caption": "Metnin okunmuyorsa sorun yazıda değil, satırın uzunluğunda olabilir.\n\nTipografinin en bilinen kurallarından biri: Bir satırda 66 karakter (harfler ve boşluklar dahil) ideal kabul edilir. Rahat aralık 45–75 karakter.\n\nNeden?\n• Satır çok uzunsa göz bir sonraki satırın başını bulmakta zorlanır. Okur yorulur, metni atlar.\n• Satır çok kısaysa göz çok sık geri döner, okuma ritmi bozulur.\n\nNerede işine yarar?\n• Web sitesi ve blog: Metin alanının genişliğini sınırla, yazıyı ekranın tamamına yayma.\n• Sunum ve görsel: Uzun paragraf yerine kısa satırlar kur.\n• Çok sütunlu düzen (bülten, dergi): 40–50 karakter daha iyi çalışır.\n\nKendin dene: Son yazdığın metinden bir satır seç, boşluklar dahil karakterlerini say. 45–75 arasında mı?\n\nKaynak: Robert Bringhurst, The Elements of Typographic Style\n\nKaydet, bir sonraki tasarımda lazım olur. Senin satırın kaç karakter çıktı? Yorumlara yaz.\n\n#tasarım #tipografi #grafiktasarım #webtasarım #tasarımipuçları #uxtasarım #okunabilirlik",
+   "sources": [
+    "https://webtypography.net/2.1.2",
+    "https://baymard.com/blog/line-length-readability"
+   ],
+   "media_id": "18129678413489983",
+   "published_at": "2026-11-17T08:50+03:00",
+   "status": "yayında (17 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-18-dikkat-1-7-saniye",
+   "kind": "reel",
+   "style": "cizgi-film",
+   "publish_date": "2026-11-17",
+   "files": [
+    "posts/2026-11-18-dikkat-1-7-saniye/reel.mp4"
+   ],
+   "cover": "posts/2026-11-18-dikkat-1-7-saniye/cover.jpg",
+   "cover_tone": "light",
+   "cover_type": "kare",
+   "topic_area": "psikoloji",
+   "layout": "cartoon",
+   "voice": true,
+   "caption": "Bu videoyu da kaydıracaktın. Ama hâlâ buradasın.\n\nAkışta bir gönderiye ortalama 1,7 saniye bakıyoruz. O kısa sürede seni durduran 3 şey var:\n\n1. Hareket: Göz önce hareketi görür. İlk karede bir şey kıpırdasın.\n2. Göz teması: Beyin yüzleri her şeyden hızlı fark eder; çizgi film yüzü bile.\n3. Merak: Cevabı hemen verme. Yarım bilgi sonuna kadar izletir.\n\nBu videoda üçü de vardı. Sence en güçlüsü hangisi? Yorumlara yaz, içerik üreten arkadaşına da gönder.\n\nKaynak: Facebook IQ, 2016 (mobil akışta bir içeriğe ortalama bakma süresi)\n\n#sosyalmedya #içerikstratejisi #reels #dikkat #tasarım #instagramipuçları #içerikkurgusu",
+   "sources": [
+    "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative"
+   ],
+   "note": "Ece ile hazırlandı, çizgi film tarzı, Ece'nin seslendirmesi. Ece'nin isteğiyle 17 Kasım 14:13'te elle yayınlandı (günün 3. gönderisi).",
+   "media_id": "18084742475717388",
+   "published_at": "2026-11-17T14:13+03:00"
+  },
+  {
+   "slug": "2026-11-17-linkedin-ai-yorumlar",
+   "kind": "reel",
+   "publish_date": "2026-11-17",
+   "title": "LinkedIn yapay zekâ yorumlarını alta itiyor (sıralama, bildirim, silme yok; testte %20+ düşüş) + görünen yorum için 3 kural",
+   "layout": "classic",
+   "cover_type": "kare",
+   "topic_area": "platform",
+   "files": [
+    "posts/2026-11-17-linkedin-ai-yorumlar/reel.mp4"
+   ],
+   "cover": "posts/2026-11-17-linkedin-ai-yorumlar/cover.jpg",
+   "cover_tone": "dark",
+   "music": "minimal",
+   "caption": "\"Harika paylaşım, çok değerli bilgiler!\" Bu tarz kalıp yorumlar yapay zekâ kokuyor. LinkedIn de yapay zekâ yorumlarını daha az gösterecek.\n\nLinkedIn'in baş ürün sorumlusu Hari Srinivasan, yorumlar için tespit sistemini ve sınıflandırıcıları güncellediklerini açıkladı:\n\n• Sıralama: Yeni sınıflandırıcılar yorumun gönderiyle ne kadar alakalı olduğuna bakıyor. Yapay zekâyla yazıldığından şüphelenilen yorumlar varsayılan \"en alakalı\" görünümde alta iniyor.\n• Bildirim: İçerik üreticilerine yalnızca \"ilgileneceğin kaliteli yorumlar\" bildiriliyor.\n• Silme yok: Yorumlar kaldırılmıyor, sadece daha az kişi görüyor.\n\nTestte bu tür yorumların görüntülenmesi %20'den fazla düştü. LinkedIn değişikliği yakında herkese açacağını söyledi.\n\nNeden şimdi? Kullanıcılar akışın yapay zekâ içeriğiyle dolduğundan şikâyet ediyordu. LinkedIn'in bu yaz eklediği \"yapay zekâ içeriği\" bildirme seçeneğini ilk 3 haftada 1 milyondan fazla kişi kullandı.\n\nGörünen bir yorum için 3 kural:\n1. Gönderiden bir ayrıntı yakala.\n2. Kendi deneyimini ekle.\n3. Gerçek bir soru sor.\n\nYorumunu yapay zekâya yazdırır mısın? Yorumlara yaz, LinkedIn kullanan bir arkadaşına da gönder.\n\n#linkedin #sosyalmedya #yapayzeka #kişiselmarka #içeriküreticisi #dijitalgündem #kariyer",
+   "sources": [
+    "https://www.socialmediatoday.com/news/linkedin-cracks-down-on-ai-generated-comments/874707/",
+    "https://dataconomy.com/2026/11/16/linkedin-cuts-visibility-of-ai-generated-comments/",
+    "https://fortune.com/2026/07/31/linkedin-seems-like-ai-slop-button-billions-automated-comments-attempts/"
+   ],
+   "note": "17 Kasım sabah görevi: hafta içi Sıcak Gelişme Reel'i (33,7 sn, outro dahil, seslendirmesiz). Sabah statiği tasarım (açık, tipografi, bignum) olduğu için Reel platform alanından; kapak koyu, Kare türü, classic düzen. 'Genel geçer/özgün' yorum örnekleri ve 3 kural bizim önerimiz, LinkedIn'in açıklaması değil (Reel'de ve caption'da böyle çerçevelendi).",
+   "media_id": "18477298123184660",
+   "published_at": "2026-11-17T19:15+03:00",
+   "status": "yayında (17 Kasım akşam görevi)"
+  },
+  {
+   "slug": "2026-11-18-gpt-6-2-slayt",
+   "kind": "short-reel",
+   "style": "3d",
+   "publish_date": "2026-11-18",
+   "title": "GPT-6.2 çıktı: Astra slayt şablonunu ekran görüntüsünden eşleştiriyor (düzen, renk, yazı boyutu)",
+   "files": [
+    "posts/2026-11-18-gpt-6-2-slayt/reel.mp4"
+   ],
+   "cover": "posts/2026-11-18-gpt-6-2-slayt/cover.jpg",
+   "cover_type": "gorsel",
+   "cover_tone": "light",
+   "topic_area": "ai",
+   "layout": "3d",
+   "music": "synthwave",
+   "caption": "Sunum şablonunu tarif etmekle uğraşma: GPT-6.2 ekran görüntüsünden kopyalıyor.\n\nOpenAI 17 Kasım'da iki yeni model duyurdu: GPT-6.2 Astra (en zor işler için) ve GPT-6.2 Sol (günlük işler için, daha uygun fiyatlı).\n\nTasarım tarafını ilgilendiren kısım şu: Astra bir slayt şablonunu orijinal dosyadan ya da sadece ekran görüntüsünden alıp yeni slaytlarda aynı düzeni, renkleri ve yazı tipini, yazı boyutuna kadar eşleştirebiliyor.\n\nNasıl denersin?\n1. Şirketinin ya da okulunun şablonundaki bir slaydın ekran görüntüsünü al.\n2. Astra'ya ver: \"Bu şablonla 5 slaytlık bir sunum hazırla: [konu]\"\n3. Çıkan slaytlarda renkleri, yazı boyutunu ve hizalamayı kontrol et.\n\nKimler kullanabiliyor? Modeller ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açıldı.\n\nSunum hazırlayan bir arkadaşına gönder. Sen ilk hangi şablonu denerdin? Yorumlara yaz.\n\n#yapayzeka #chatgpt #sunum #sunumtasarımı #tasarım #dijitalgündem #verimlilik",
+   "sources": [
+    "https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/",
+    "https://9to5mac.com/2026/11/17/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-2-astra-and-sol-models/",
+    "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
+   ],
+   "note": "18 Kasım sabah görevi: 9,6 sn 3D kısa Reel (outro yok). Büyük model duyurusu; sabah AI, akşam platform. Kapak görsel türü, açık ton (son kayıt koyu).",
+   "media_id": "18457465903122891",
+   "published_at": "2026-11-18T08:57+03:00",
+   "status": "yayında (18 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-19-gpt-6-2-karakter-sec",
+   "kind": "reel",
+   "style": "oyun",
+   "publish_date": "2026-11-18",
+   "files": [
+    "posts/2026-11-19-gpt-6-2-karakter-sec/reel.mp4"
+   ],
+   "cover": "posts/2026-11-19-gpt-6-2-karakter-sec/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "ai",
+   "layout": "game",
+   "voice": true,
+   "caption": "GPT-6.2 Astra mı, GPT-6.2 Sol mü? Hangisi sana lazım, kısaca anlattık.\n\nOpenAI 17 Kasım'da iki yeni model duyurdu:\n\nAstra: Zor işler için. Sunum, tablo ve belge hazırlıyor. Bir slaydın ekran görüntüsünden düzeni, renkleri ve yazı boyutunu bile kopyalayabiliyor. Erken test eden muhasebe girişimi Basis'e göre uzun muhasebe işlerinde ortalama süre yarı yarıya kısaldı.\n\nSol: Günlük işler için. OpenAI'ın paylaştığı FrontierCode 2.0 kod testinde Astra'ya yarım puan kadar yaklaşıyor, maliyeti ise yaklaşık beşte biri.\n\nKimler kullanabilir? İkisi de ChatGPT Work ve Codex'te Plus, Pro, Enterprise ve Edu kullanıcılarına açık. Enterprise ve Edu'da erişimi yöneticinin açması gerekiyor.\n\nSen hangisini seçerdin? Yorumlara yaz, bu ikisini kıyaslayan arkadaşına da gönder.\n\nKaynak: OpenAI duyurusu, SiliconANGLE, 9to5Mac\n\n#yapayzeka #chatgpt #openai #gpt6 #verimlilik #dijitalgündem #teknoloji",
+   "sources": [
+    "https://siliconangle.com/2026/11/17/openai-rolls-out-gpt-6-2-astra-for-professional-work-and-gpt-6-2-sol-for-everyday-work/",
+    "https://9to5mac.com/2026/11/17/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-2-astra-and-sol-models/",
+    "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
+   ],
+   "note": "Ece ile hazırlandı: oyun tarzı 'karakter seç', Ece'nin seslendirmesi. Ece'nin isteğiyle 18 Kasım 10:49'da elle yayınlandı (günün 2. gönderisi; akşam Direct Reel'i ile 3).",
+   "media_id": "17914541763574067",
+   "published_at": "2026-11-18T10:49+03:00"
+  },
+  {
+   "slug": "2026-11-18-instagram-direct",
+   "kind": "reel",
+   "style": "cizgi-film",
+   "publish_date": "2026-11-18",
+   "title": "Instagram'ın ayrı mesajlaşma uygulaması Direct yalnızca Türkiye ve Tayland'da test ediliyor (hesapsız kayıt, senkron sohbet, Çizim/Notlar/çıkartma/ses efekti, güvenlik)",
+   "files": [
+    "posts/2026-11-18-instagram-direct/reel.mp4"
+   ],
+   "cover": "posts/2026-11-18-instagram-direct/cover.jpg",
+   "cover_type": "tipografi",
+   "cover_tone": "dark",
+   "topic_area": "platform",
+   "layout": "cartoon",
+   "music": "funk",
+   "caption": "Instagram'ın yeni uygulaması şu an sadece 2 ülkede test ediliyor. Biri Türkiye.\n\nMeta 17 Kasım'da Direct'i duyurdu: Instagram'dan ayrı, sadece mesajlaşma için bir uygulama. Test Türkiye ve Tayland'da, Android ve iOS'ta yayılıyor.\n\nBilmen gerekenler:\n• Instagram hesabı şart değil: E-posta adresi ya da telefon numarasıyla kaydolabiliyorsun.\n• Instagram kullanıcı adın ve şifrenle girersen mevcut sohbetlerin iki uygulamada da eşitleniyor.\n• Özellikler: çizim (sohbette karalama), Notlar (arkadaşlarının kısa güncellemeleri mesaj kutusunun üstünde), özel çıkartmalar, ses efektleri (kalabalık kahkahası, su altı sesi gibi) ve sohbet temaları.\n• Sana yalnızca rehberindeki kişiler ve zaten bağlantılı olduğun hesaplar yazabiliyor ya da seni bir gruba ekleyebiliyor.\n• Yaş sınırı 13. Instagram hesabıyla giren gençler Genç Hesap mesaj korumalarını Direct'te de alıyor; ebeveynler denetim araçlarıyla günlük süre sınırı koyabiliyor.\n\nNot: Meta uygulamanın başka ülkelere ne zaman açılacağını söylemedi. Instagram'ın 2017'de de Direct adında ayrı bir mesaj uygulaması vardı; 2019'da kapatılma kararı alınmıştı.\n\nTelefonunda Direct'i gördün mü? Yorumlara yaz. Instagram'da en çok DM atan arkadaşına da gönder.\n\n#instagram #direct #sosyalmedya #dijitalgündem #mesajlaşma #meta #türkiye",
+   "sources": [
+    "https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging/",
+    "https://techcrunch.com/2026/11/17/meta-launches-direct-a-standalone-messaging-app-for-instagram/",
+    "https://webrazzi.com/2026/11/17/meta-instagramin-bagimsiz-mesajlasma-uygulamasi-directi-turkiyede-test-ediyor/",
+    "https://www.lowyat.net/2026/409934/meta-instagram-direct-messaging-app/"
+   ],
+   "note": "18 Kasım sabah görevi: Sıcak Gelişme Reel'i, çizgi film tarzı (28,5 sn, outro yok, seslendirmesiz; seslendirme metni Ece'ye gönderildi). Kanca: 'Instagram'ın yeni uygulaması sadece 2 ülkede' + Kare 'Biri Türkiye!'. Direct ikonu kendi çizimimiz (kâğıt uçak), Meta'nın gerçek ikonu değil. youtube-co-views hot_pending'de kaldı. 18 Kasım 11:05: Ece'nin seslendirmesi eklendi (sese hizalı), logo kapanışı ve yeni kapak eklendi. 43,8 sn.",
+   "voice": true,
+   "media_id": "17991178818089969",
+   "published_at": "2026-11-18T19:15+03:00",
+   "status": "yayında (18 Kasım akşam görevi)"
+  },
+  {
+   "slug": "2026-11-19-story-duzenleme",
+   "kind": "short-reel",
+   "style": "arayuz",
+   "media_id": "18668539741040283",
+   "publish_date": "2026-11-19",
+   "published_at": "2026-11-19T08:49+03:00",
+   "title": "Instagram: paylaşılan story ilk 15 dakika içinde düzenlenebiliyor (yazı, müzik, çıkartma, çizim; izlenmeler korunuyor)",
+   "files": [
+    "posts/2026-11-19-story-duzenleme/reel.mp4"
+   ],
+   "cover": "posts/2026-11-19-story-duzenleme/cover.jpg",
+   "cover_type": "kare",
+   "cover_tone": "light",
+   "topic_area": "platform",
+   "layout": "ui",
+   "music": "pop",
+   "caption": "Story'de yazım hatası mı var, saati mi yanlış yazdın? Artık silip baştan atmana gerek yok.\n\nInstagram'ın başı Adam Mosseri 18 Kasım'da duyurdu: Paylaştığın story'yi ilk 15 dakika içinde düzenleyebiliyorsun.\n\nNeleri değiştirebilirsin?\n• Yazı (yazım hatası, yanlış saat, yanlış fiyat)\n• Müzik\n• Çıkartmalar\n• Çizimler\n\nNasıl? Story'ni aç, alttaki üç nokta menüsüne dokun ve düzenleme seçeneğini seç.\n\nEn güzel kısmı: Silip yeniden attığında sıfırdan başlayan izlenmeler, beğeniler ve yanıtlar bu sefer yerinde kalıyor.\n\nÖzellik kademeli olarak açılıyor; Türkiye'ye de önümüzdeki günlerde gelmesi bekleniyor. 15 dakika geçtiyse tek yol yine silip yeniden paylaşmak.\n\nSende var mı? Yorumlara yaz. Kaydet, lazım olur.\n\nKaynak: 9to5Mac, Techturco (The Verge'e dayanarak)\n\n#instagram #instagramipuçları #sosyalmedya #içeriküretimi #içeriküreticisi #dijitalpazarlama",
+   "sources": [
+    "https://9to5mac.com/2026/11/18/instagram-finally-lets-users-edit-stories-after-publishing-but-theres-a-catch/",
+    "https://www.techturco.com/en/software/instagram-lets-users-edit-stories-for-15-minutes-after-104222",
+    "https://kantan.news/news/instagram-launches-feature-to-edit-shared-stories"
+   ],
+   "note": "19 Kasım sabah görevi: büyük platform gelişmesi (Mosseri, 18 Kasım) aynı gün; 8,6 sn sahne + 3,2 sn logo kapanışı = 11,8 sn. Akşam Reel'i Ece'yle hazırlanmış seslendirmeli plan olduğu için yerinden oynatılmadı; büyük gelişme sabah kısa Reel'inde işlendi.",
+   "status": "yayında (19 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-19-logolar-neden-ayni",
+   "kind": "reel",
+   "style": "3d",
+   "publish_date": "2026-11-19",
+   "files": [
+    "posts/2026-11-19-logolar-neden-ayni/reel.mp4"
+   ],
+   "cover": "posts/2026-11-19-logolar-neden-ayni/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "marka",
+   "voice": true,
+   "caption": "Lüks markaların logoları neden birbirine benzemeye başladı?\n\nBurberry, Balenciaga, Saint Laurent, Balmain... Son yıllarda birçok moda markası süslü yazılarını bırakıp sade, büyük harfli, tırnaksız (sans serif) logolara geçti. Bu eğilime \"blanding\" deniyor: İngilizcede brand (marka) ve bland (yavan) kelimelerinin birleşimi.\n\nNeden? Logolar artık en çok telefon ekranında ve küçük profil fotoğraflarında görünüyor. Sade yazı küçükken de okunuyor.\n\nBedeli: Markalar birbirine benzemeye başladı.\n\nBazıları geri dönüyor: Burberry, 2023'te 1901 tarihli atlı şövalye logosunun yenilenmiş hâlini ve daha klasik, tırnaklı bir yazıyı geri getirdi.\n\nSence sade logo mu, karakterli logo mu? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\nKaynak: The Drum, NSS Magazine, Campaign Asia\nLogolar markalarına aittir; yorum ve analiz amacıyla gösterilmiştir.\n\n#marka #logo #tasarım #grafiktasarım #tipografi #moda #branding",
+   "sources": [
+    "https://www.thedrum.com/opinion/2020/11/20/fashion-shot-the-serif-homogeneous-logos-and-luxury-branding-intertwine",
+    "https://www.nssmag.com/en/article/41960",
+    "https://www.campaignasia.com/article/burberrys-return-to-british-eccentricity-defies-8216reblanding8217-trend/483228"
+   ],
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik lofi). Akşam 19:10.",
+   "cover_type": "gorsel",
+   "media_id": "17981484864140074",
+   "published_at": "2026-11-19T19:15+03:00",
+   "music": "lofi"
+  },
+  {
+   "slug": "2026-11-20-yukleme-cubugu",
+   "kind": "short-reel",
+   "style": "oyun",
+   "media_id": "18123156926059374",
+   "publish_date": "2026-11-20",
+   "published_at": "2026-11-20T08:58+03:00",
+   "title": "Mini test: iki yükleme çubuğu aynı 5 saniyede doluyor; geriye akan çizgili olan beklemeyi %11 daha kısa hissettiriyor (CHI 2010)",
+   "files": [
+    "posts/2026-11-20-yukleme-cubugu/reel.mp4"
+   ],
+   "cover": "posts/2026-11-20-yukleme-cubugu/cover.jpg",
+   "cover_type": "tipografi",
+   "cover_tone": "light",
+   "topic_area": "psikoloji",
+   "layout": "game",
+   "music": "synthwave",
+   "caption": "Hangisi daha hızlı doldu sence: A mı, B mi?\n\nİkisi de tam 5 saniyede doluyor. Ama çizgili olan daha çabuk bitmiş gibi gelebilir.\n\n2010'da CHI konferansında yayımlanan bir araştırmada (Harrison, Yeo ve Hudson) katılımcılara farklı yükleme çubukları izletildi. En etkili olan, çizgileri ilerlemenin tersine, yani geriye doğru akan ve giderek yavaşlayan çubuktu: Bekleme süresini %11 daha kısa hissettirdi. Süre aynı, his farklı.\n\nSenin için anlamı:\n• Uygulama, site ya da form tasarlıyorsan yükleme çubuğuna geriye akan çizgiler eklemeyi dene.\n• Bekleme kısalmasa bile beklemenin hissi tasarlanabilir.\n\nA mı dedin, B mi? Yorumlara yaz. Kaydet, bir gün bir yükleme ekranı tasarlarken lazım olur.\n\nKaynak: Harrison, Yeo, Hudson, \"Faster Progress Bars\", CHI 2010\n\n#tasarım #uxtasarım #arayüztasarımı #psikoloji #kullanıcıdeneyimi #grafiktasarım #biliyormuydun",
+   "sources": [
+    "https://chrisharrison.net/index.php/Research/ProgressBars2",
+    "https://chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf",
+    "https://www.figlab.com/research/2010/faster-progress-bars"
+   ],
+   "note": "20 Kasım sabah görevi: krem zeminli oyun tarzı mini test (10 sn + 3,2 sn logo kapanışı). Ders: sessiz kısa sabah Reel'leri ~110 erişimde kalıyor; bu sefer sonuna kadar izletecek bir test/cevap yapısı ve yoruma davet (A mı, B mi?) denendi.",
+   "status": "yayında (20 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-20-en-degerli-tepki",
+   "kind": "reel",
+   "style": "arayuz",
+   "publish_date": "2026-11-20",
+   "files": [
+    "posts/2026-11-20-en-degerli-tepki/reel.mp4"
+   ],
+   "cover": "posts/2026-11-20-en-degerli-tepki/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "platform",
+   "voice": true,
+   "caption": "Instagram'da en değerli tepki hangisi: beğeni mi, yorum mu, paylaşım mı?\n\nInstagram'ın başındaki Adam Mosseri, Ocak 2025'te sıralamada en önemli üç sinyali açıkladı: izlenme süresi, beğeni ve gönderme (DM ile paylaşım).\n\nAma bakman gereken sayı değil, oran:\n• Ortalama izlenme süresi\n• Erişim başına beğeni\n• Erişim başına gönderme\n\nMosseri'ye göre beğeni, takipçilerine giden içerikte biraz daha önemli. Takip etmeyenlere ulaşmak içinse gönderme biraz daha önemli.\n\nYani yeni insanlara ulaşmak istiyorsan paylaşmadan önce kendine şunu sor: Bunu biri arkadaşına atar mı?\n\nSen en son hangi videoyu birine gönderdin? Yorumlara yaz. Bu videoyu da içerik üreten bir arkadaşına gönder.\n\nKaynak: Social Media Today, Adam Mosseri'nin açıklamaları (Ocak 2025)\n\n#instagram #instagramipuçları #sosyalmedya #reels #algoritma #içerikstratejisi #içeriküretimi",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-shares-algorithm-2025/738034/",
+    "https://creatorflow.so/blog/instagram-algorithm/"
+   ],
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik house). Akşam 19:10.",
+   "media_id": "17977057674151921",
+   "published_at": "2026-11-20T19:15+03:00",
+   "date": "2026-11-20"
+  },
+  {
+   "slug": "2026-11-21-canli-dikte",
+   "kind": "short-reel",
+   "style": "3d",
+   "media_id": "17958169884268324",
+   "publish_date": "2026-11-21",
+   "published_at": "2026-11-21T08:59+03:00",
+   "title": "ChatGPT canlı dikte: konuştukça yazıyor, 10 dakika kayıt sınırı kalktı (18 Kasım, tüm planlar, kademeli)",
+   "files": [
+    "posts/2026-11-21-canli-dikte/reel.mp4"
+   ],
+   "cover": "posts/2026-11-21-canli-dikte/cover.jpg",
+   "cover_type": "gorsel",
+   "cover_tone": "light",
+   "topic_area": "ai",
+   "layout": "3d",
+   "music": "pop",
+   "caption": "Uzun mesajı yazmakla uğraşma, söyle: ChatGPT konuştukça yazıyor.\n\nOpenAI 18 Kasım'da ChatGPT'ye \"canlı dikte\" özelliğini getirdi. Mesaj kutusundaki mikrofona dokunup konuşuyorsun, söylediklerin sen konuşurken yazıya dönüşüyor.\n\nNeler değişti?\n• Metin, kaydın bitmesini beklemeden ekranda beliriyor.\n• Göndermeden önce yazıyı düzeltebiliyorsun.\n• Eski 10 dakikalık kayıt sınırı kaldırıldı.\n\nKimler kullanabiliyor? Ücretsiz dahil tüm ChatGPT planları; iOS, Android, web ve masaüstü uygulaması. Özellik kademeli açılıyor, sende henüz görünmüyorsa biraz zaman alabilir.\n\nİpucu: Bunu sesli modla karıştırma. Sesli modda ChatGPT'yle karşılıklı konuşursun; dikte ise söylediğini yazıya çevirip mesaj kutusuna koyar.\n\nSen ChatGPT'ye yazıyor musun, konuşuyor musun? Yorumlara yaz. Kaydet, uzun bir mesaj yazarken lazım olur.\n\nKaynak: OpenAI ChatGPT sürüm notları (9to5Mac ve Notebookcheck'in aktardığı şekliyle)\n\n#chatgpt #yapayzeka #yapayzekaaraçları #verimlilik #dijitalgündem #teknoloji #ipucu",
+   "sources": [
+    "https://9to5mac.com/2026/11/18/chatgpt-app-gains-enhanced-live-dictation-streaming-without-10-minute-limit/",
+    "https://www.notebookcheck.net/ChatGPT-Live-Dictation-removes-the-10-minute-limit-for-all-plans.1455249.0.html",
+    "https://tbreak.com/chatgpt-live-dictation/",
+    "https://www.digitaltrends.com/computing/chatgpt-now-supports-live-dictation-openai-removes-the-10-minute-recording-limit/"
+   ],
+   "note": "21 Kasım sabah görevi: 3D (yeni 3D mikrofon nesnesi + konuşan Kare), 9,6 sn + logo kapanışı. Ders: sessiz kısa sabah Reel'leri ~110'da kalıyor; bu sefer herkesin bildiği isim (ChatGPT) + 0. karede dönen, konuşan Kare ve canlı yazılan mesaj kutusu.",
+   "status": "yayında (21 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-21-kerning-nedir",
+   "kind": "reel",
+   "style": "oyun",
+   "publish_date": "2026-11-21",
+   "files": [
+    "posts/2026-11-21-kerning-nedir/reel.mp4"
+   ],
+   "cover": "posts/2026-11-21-kerning-nedir/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "tasarim",
+   "voice": true,
+   "caption": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Büyük A ile V yan yana gelince, matematiksel olarak eşit aralık bile gözümüze fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? r ile n fazla yaklaşırsa m gibi okunur: \"kurnaz\" bir anda \"kumaz\" oluverir. Bu hataya şakayla \"keming\" deniyor.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir ayar: tracking.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz, tasarımcı arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: ilk freelance müşterini nereden bulursun?\n\n#tipografi #tasarım #grafiktasarım #kerning #tasarımipuçları #yazıkarakteri #kareaçıklıyor",
+   "sources": [
+    "https://en.wikipedia.com/wiki/Kerning",
+    "https://www.shopify.com/blog/what-is-kerning"
+   ],
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik synthwave). Akşam 19:10.",
+   "media_id": "18095163653204124",
+   "date": "2026-11-21",
+   "published_at": "2026-11-21T19:13+03:00",
+   "music": "synthwave"
+  },
+  {
+   "slug": "2026-11-22-icerik-koruma",
+   "kind": "short-reel",
+   "style": "arayuz",
+   "media_id": "18204297724401494",
+   "publish_date": "2026-11-22",
+   "published_at": "2026-11-22T09:08+03:00",
+   "title": "Instagram içerik koruma: kopyalanan Reel'leri bulup engelleme, 'orijinal' etiketi ya da takip (17 Kasım, uygun içerik üreticileri)",
+   "files": [
+    "posts/2026-11-22-icerik-koruma/reel.mp4"
+   ],
+   "cover": "posts/2026-11-22-icerik-koruma/cover.jpg",
+   "cover_type": "kare",
+   "cover_tone": "light",
+   "topic_area": "platform",
+   "layout": "arayuz",
+   "music": "house",
+   "caption": "Reel'ini başka bir hesap paylaşıp izlenmeleri mi topluyor? Instagram artık bu kopyaları kendisi arıyor.\n\nInstagram 17 Kasım'da \"içerik koruma\" aracını uygun içerik üreticilerine açtı. Araç, koruma altına aldığın videoların izinsiz yüklenen kopyalarını sürekli tarıyor ve bir eşleşme bulunca sana haber veriyor.\n\nEşleşme bulunduğunda ne yapabilirsin?\n• Engelle: Kopya video Instagram ve Facebook'ta gizlenir.\n• Etiketle: Kopyaya, izleyeni senin orijinal videona götüren bir \"orijinal\" etiketi eklenir.\n• Takipte tut: Kopya görünür kalır, sen performansını izlersin.\n• Ya da hak talebinden vazgeçip videonun yayında kalmasına izin verirsin.\n\nİzin verdiğin hesapları (ikinci hesabın ya da birlikte çalıştığın bir marka) bir listeye ekleyebiliyorsun; onların paylaşımları kopya sayılmıyor.\n\nNasıl açılır? Uygun hesaplara etkinlik bildirimlerinde bir davet geliyor. Katıldıktan sonra paylaştığın her yeni orijinal video otomatik korunuyor; eski videolarını da tek tek seçip koruma altına alabiliyorsun.\n\nSırada ne var? Görüntüsü yapay zekâyla değiştirilip senin videondaki sesi kullanan kopyaları yakalama özelliği önümüzdeki haftalarda küçük bir grup içerik üreticisiyle test edilecek.\n\nSana bu bildirim geldi mi? Yorumlara yaz. Videoları sürekli kopyalanan bir içerik üreticisi tanıyorsan ona da gönder.\n\nKaynak: TechCrunch, 17 Kasım 2026\n\n#instagram #içeriküreticisi #instagramipuçları #reels #sosyalmedya #telifhakkı #dijitalgündem",
+   "sources": [
+    "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/"
+   ],
+   "note": "22 Kasım sabah görevi: gerçekçi arayüz (telefon: Reel'in başka hesapta → 'İçerik koruma' bildirimi → Engelle → video gizlendi), 9 sn + logo kapanışı, house müzik. hot_pending'den.",
+   "status": "yayında (22 Kasım sabah görevi)"
+  },
+  {
+   "slug": "2026-11-22-ilk-freelance-musteri",
+   "kind": "reel",
+   "style": "3d",
+   "publish_date": "2026-11-22",
+   "files": [
+    "posts/2026-11-22-ilk-freelance-musteri/reel.mp4"
+   ],
+   "cover": "posts/2026-11-22-ilk-freelance-musteri/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "para",
+   "voice": true,
+   "caption": "İlk freelance müşterini nereden bulursun? Üç adımda:\n\n1. Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\n2. Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\n3. Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?\n\n#freelance #serbestçalışma #sosyalmedyauzmanı #grafiktasarım #portfolyo #ekgelir #içeriküretimi",
+   "sources": [],
+   "note": "Haftalık plan; Ece'nin seslendirmesiyle 18 Kasım'da hazırlandı (sese hizalı, logo kapanışlı, müzik funk). Akşam 19:10.",
+   "media_id": "18127368056476510",
+   "date": "2026-11-22",
+   "published_at": "2026-11-22T19:13+03:00",
+   "music": "funk"
+  },
+  {
+   "slug": "2026-11-23-canva-ai-kapat",
+   "kind": "short-reel",
+   "style": "arayuz",
+   "media_id": "17915757267510746",
+   "publish_date": "2026-11-23",
+   "published_at": "2026-11-23T08:54:19+03:00",
+   "title": "Canva'da üretken yapay zekâyı kapatma ayarı",
+   "files": [
+    "posts/2026-11-23-canva-ai-kapat/reel.mp4"
+   ],
+   "cover": "posts/2026-11-23-canva-ai-kapat/cover.jpg",
+   "cover_type": "gorsel",
+   "cover_tone": "light",
+   "topic_area": "tasarim",
+   "layout": "arayuz",
+   "music": "minimal",
+   "caption": "Canva'daki yapay zekâ önerilerinden sıkıldıysan artık hepsini kapatabilirsin.\n\nCanva, 19 Kasım'da Free ve Pro kullanıcıları için iki yeni ayar duyurdu. İkisi de ücretsiz:\n\n1. Üretken yapay zekâyı kapat: Profil > Ayarlar > İzinler (İngilizce arayüzde Settings > Permissions > \"Enable generative AI features\"). Kapatınca Magic Write, Magic Expand, Magic Design, Dream Lab gibi görsel ve metin üreten araçlar gizleniyor.\n\n2. Daha az yapay zekâ içeriği gör: profil simgesi > Your account > AI personalization (İngilizce arayüzdeki adlarıyla). Şablon ve öğe aramalarında yapay zekâyla üretilmiş içerik daha az çıkıyor.\n\nArka plan kaldırma ve Magic Grab gibi düzenleme araçları açık kalıyor; çünkü yeni bir şey üretmiyor, elindeki tasarımı düzenliyor.\n\nAyarlar kademeli açılıyor, sende henüz görünmeyebilir. Ekiplerde bu kararı yönetici veriyor.\n\nSen kapatır mısın, yoksa açık mı tutarsın? Yorumlara yaz.\n\n#canva #grafiktasarım #tasarım #yapayzeka #tasarımipuçları #sosyalmedya #içeriküretimi",
+   "sources": [
+    "https://www.canva.com/help/manage-ai-features/",
+    "https://petapixel.com/2026/11/19/canva-now-lets-users-turn-off-generative-ai-features/",
+    "https://tbreak.com/canva-turn-off-generative-ai-tools/",
+    "https://aiweekly.co/alerts/canva-ships-toggle-that-turns-off-nine-generative-ai-features"
+   ],
+   "note": "Tasarım ekranında yapay zekâ öneri balonları üst üste açılıyor → Ayarlar > İzinler anahtarı kapanıyor → balonlar kayboluyor, 'Arka planı kaldır' kalıyor. Kare 0. karede şaşkın, izleyiciye bakıyor.",
+   "status": "published"
+  }
+ ],
+ "queue": [
+  {
+   "slug": "2026-11-23-youtube-tv-izlenme",
+   "kind": "reel",
+   "style": "oyun",
+   "publish_date": "2026-11-23",
+   "title": "TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?",
+   "files": [
+    "posts/2026-11-23-youtube-tv-izlenme/reel.mp4"
+   ],
+   "cover": "posts/2026-11-23-youtube-tv-izlenme/cover.jpg",
+   "cover_type": "tipografi",
+   "cover_tone": "dark",
+   "topic_area": "platform",
+   "layout": "oyun",
+   "music": "pop",
+   "caption": "Bir videoyu salonda üç kişi izlerse YouTube kaç izlenme sayar? Artık üç.\n\nYouTube, Kasım 2026'dan itibaren TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına ekliyor.\n\nBilmen gerekenler:\n• Sadece TV. Telefonda, tablette ve bilgisayarda bir oynatma yine bir izlenme.\n• Gelir ve Partner Programı şartları bu tahminden etkilenmiyor; onlar ayrı ölçümlerle hesaplanıyor.\n• YouTube kamera ya da mikrofon kullanmadığını söylüyor; sayı bir tahmin modeliyle bulunuyor.\n• Eski izlenme sayıları geriye dönük değişmiyor; eski videoların yeni TV izlenmeleri sayılıyor.\n• YouTube Studio'da \"co-view rate\" (birlikte izlenme oranı) adında yeni bir ölçüm var.\n\nSen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz. YouTube'a video yükleyen arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?\n\n#youtube #youtuber #içeriküretimi #içeriküreticisi #sosyalmedya #dijitalpazarlama #videopazarlama",
+   "sources": [
+    "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
+    "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/",
+    "https://winbuzzer.com/2026/11/18/one-tv-playback-several-public-youtube-views-xcxwbn/",
+    "https://www.tweaktown.com/news/114751/youtube-view-counts-now-include-estimated-co-viewers-so-one-tv-play-can-count-as-several-views/index.html",
+    "https://allaboutcookies.org/youtube-co-view-tracking-privacy"
+   ],
+   "note": "planned_reels 23 Kasım kaydından. Seslendirme yok (voice.mp3 gelmedi), müzikli; ekran yazısı altyazı gibi sırayla geliyor. 28 sn + 3,2 sn logo kapanışı.",
+   "status": "queued"
+  },
+  {
+   "slug": "2026-12-31-yilbasi",
+   "kind": "reel",
+   "style": "hipergerçekçi",
+   "publish_date": "2026-12-31",
+   "files": [
+    "posts/2026-12-31-yilbasi/yilbasi-dikey.mp4"
+   ],
+   "cover": "posts/2026-12-31-yilbasi/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "perde arkası",
+   "voice": false,
+   "caption": "Bir yıl, aslında binlerce kareden oluşur. Yeni yılın her karesi güzel olsun.\n\nBu videonun her sahnesini yapay zekâyla ürettik; senaryo, kurgu ve müzik de bizden. Markan için de böyle bir video ister misin? DM'den yaz.\n\n#yeniyıl #yılbaşı #yapayzeka #aivideo #reklamfilmi #markailetişimi #framelab",
+   "sources": [],
+   "note": "Yılbaşı hipergerçekçi video; sahneler Ece'nin ChatGPT'de ürettiği görsellerden, kurgu/renk/metin/müzik Claude. Yatay ana sürüm yilbasi-yatay.mp4 (portfolyo). Yumuşak hizmet tanıtımı. Ece seslendirme gönderirse sese göre yeniden hizala. Akşam 19:10."
+  }
+ ],
+ "stories": [
+  {
+   "date": "2026-11-09",
+   "slug": "2026-11-09-story",
+   "file": "posts/2026-11-09-story/story.jpg",
+   "about": "İlk deney Reel'inin duyurusu",
+   "media_id": "17896327833681957"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-baslangic",
+   "file": "brand/one-cikanlar/one-cikan-baslangic.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "18027181781863647"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-gundem",
+   "file": "brand/one-cikanlar/one-cikan-gundem.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "17919048858467844"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-ai-lab",
+   "file": "brand/one-cikanlar/one-cikan-ai-lab.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "18115804277127596"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-tasarim",
+   "file": "brand/one-cikanlar/one-cikan-tasarim.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "17887896783503923"
+  },
+  {
+   "date": "2026-11-09",
+   "slug": "one-cikan-mutfak",
+   "file": "brand/one-cikanlar/one-cikan-mutfak.jpg",
+   "about": "Öne çıkan kapağı (öne çıkana eklenmek için)",
+   "media_id": "18101888147645978"
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "2026-11-10-story",
+   "file": "posts/2026-11-10-story/story.jpg",
+   "about": "Akşamki prompt rehberi statik gönderisinin duyurusu",
+   "media_id": "17960983923258520"
+  },
+  {
+   "date": "2026-11-10",
+   "slug": "2026-11-10-story-gundem",
+   "file": "posts/2026-11-10-story-gundem/story.jpg",
+   "about": "Gündem: Instagram Effect Builder ve Adobe MAX (10–12 Kasım)",
+   "media_id": "18120361793078882",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-launches-visual-effects-creator-for-edits/874205/",
+    "https://www.unite.ai/instagram-launches-effect-builder-to-make-ai-effects-for-stories/",
+    "https://www.techbuzz.ai/articles/instagram-launches-ai-filter-builder-for-custom-stories-effects",
+    "https://www.redsharknews.com/adobe-max-2026-preview-miami-beach"
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "slug": "2026-11-11-story",
+   "file": "posts/2026-11-11-story/story.jpg",
+   "about": "Biliyor muydun: Adobe Firefly Plan Mode + 'önce plan' prompt'u (chat düzeni)",
+   "layout": "chat",
+   "sources": [
+    "https://news.adobe.com/news/2026/11/adobe-firefly-expands",
+    "https://www.digitaltrends.com/computing/adobe-max-2026-firefly-creative-cloud-ai/"
+   ],
+   "media_id": "17968221638979469"
+  },
+  {
+   "date": "2026-11-12",
+   "slug": "2026-11-12-story",
+   "file": "posts/2026-11-12-story/story.jpg",
+   "about": "Biliyor muydun: ChatGPT Business Hub (beta) — anılma, tık, konu, ajan + 'kendin dene' sorusu (tiles düzeni, koyu)",
+   "layout": "tiles",
+   "sources": [
+    "https://www.seroundtable.com/chatgpt-business-hub-42505.html",
+    "https://ppc.land/businesses-gain-chatgpt-click-and-mention-counts-in-openais-business-hub/",
+    "https://tech-ish.com/2026/11/11/openais-business-hub-lets-you-manage-your-business-in-chatgpt/"
+   ],
+   "media_id": "18109814321248870"
+  },
+  {
+   "date": "2026-11-13",
+   "slug": "2026-11-13-story",
+   "file": "posts/2026-11-13-story/story.jpg",
+   "about": "Biliyor muydun: YouTube Hype (Jewels/Rubies) artık Türkiye'de — nasıl çalışır + şartlar, 'DM'den yaz' (steps düzeni, açık)",
+   "layout": "steps",
+   "sources": [
+    "https://www.socialmediatoday.com/news/youtube-expands-custom-feeds-and-offers-new-partnership-options/874068/",
+    "https://ppc.land/youtube-creators-in-us-uk-and-7-more-markets-gain-income-from-paid-hypes/"
+   ],
+   "media_id": "18029963495869441"
+  },
+  {
+   "date": "2026-11-14",
+   "slug": "2026-11-14-story",
+   "file": "posts/2026-11-14-story/story.jpg",
+   "about": "Biliyor muydun: Tomy 20 yıl sonra TAKARATOMY oluyor (bugün/1 Nisan 2027 karşılaştırması, asobi sembolü, 'logon tek bakışta okunuyor mu?' DM sorusu; compare düzeni, koyu)",
+   "layout": "compare",
+   "topic_area": "marka",
+   "sources": [
+    "https://kyodonewsprwire.jp/release/202611099717",
+    "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled"
+   ],
+   "media_id": "17922183303526724"
+  },
+  {
+   "date": "2026-11-15",
+   "slug": "2026-11-15-story",
+   "file": "posts/2026-11-15-story/story.jpg",
+   "about": "Biliyor muydun: Microsoft 365 ~18 saat çöktü, internet 'Microsoft 364' dedi; ders: adındaki sayı bir vaattir + 'DM'den yaz' (bignum düzeni, koyu)",
+   "layout": "bignum",
+   "topic_area": "trend",
+   "sources": [
+    "https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/",
+    "https://knowyourmeme.com/memes/microsoft-364"
+   ],
+   "media_id": "18030220238699530"
+  },
+  {
+   "date": "2026-11-16",
+   "slug": "2026-11-16-story",
+   "file": "posts/2026-11-16-story/story.jpg",
+   "about": "Biliyor muydun: 'Remember November 2026' kutup ayısı memesi (2023 TikTok, Rusça yazı, Ağustos 2026'da geri döndü); ders: merak boşluğu + 'DM'den yaz' (quote düzeni, açık)",
+   "layout": "quote",
+   "topic_area": "trend",
+   "sources": [
+    "https://knowyourmeme.com/memes/remember-november-2026-is-coming",
+    "https://www.yahoo.com/entertainment/articles/remember-november-2026-meme-viral-193000262.html"
+   ],
+   "media_id": "18131814574694760"
+  },
+  {
+   "date": "2026-11-17",
+   "slug": "2026-11-17-story",
+   "file": "posts/2026-11-17-story/story.jpg",
+   "about": "Biliyor muydun: Instagram Amazon ortaklık linkleri Reel (30 ürün) ve gönderilere (20 ürün), şimdilik ABD; içerikteki ürün linki biyodakinden ~2 kat tık + 'DM'den yaz' (phone düzeni, açık)",
+   "layout": "phone",
+   "topic_area": "para",
+   "sources": [
+    "https://techcrunch.com/2026/11/16/instagram-now-lets-creators-add-amazon-affiliate-links-in-reels-and-feed-posts/",
+    "https://www.netinfluencer.com/instagram-amazon-affiliate-links-reels-feed-posts-ltk-shopmy/"
+   ],
+   "media_id": "18149580655576175"
+  },
+  {
+   "date": "2026-11-18",
+   "slug": "2026-11-18-story",
+   "file": "posts/2026-11-18-story/story.jpg",
+   "about": "Biliyor muydun: Cambridge Dictionary 2026 yılın kelimesi 'human' (insan); sebep: yapay zekâ çağında insan yaratıcılığına, bağına ve sahiciliğine yeniden değer; piksel Kare 'Ben de miyim?' + 'DM'den yaz' (oyun tarzı, koyu)",
+   "layout": "game",
+   "style": "oyun",
+   "topic_area": "trend",
+   "sources": [
+    "https://dictionaryblog.cambridge.org/2026/11/18/word-of-the-year-2026/"
+   ],
+   "media_id": "18194141809404414"
+  },
+  {
+   "date": "2026-11-18",
+   "slug": "2026-11-18-story-v2",
+   "file": "posts/2026-11-18-story/story-v2.jpg",
+   "about": "Düzeltilmiş story: 'Ben de insan mıyım?' (ilk sürümde anlamsız 'Ben de miyim?' vardı; Ece eskisini silecek)",
+   "style": "oyun",
+   "media_id": "18447555022133162"
+  },
+  {
+   "date": "2026-11-19",
+   "slug": "2026-11-19-story",
+   "file": "posts/2026-11-19-story/story.jpg",
+   "about": "GTA VI bugün çıktı; önceki oyun GTA V 2013'te: arada 13 yıldan fazla var. Piksel yükleme çubuğu (%100), kumandalı piksel Kare, 'Sen oynayacak mısın? DM'den yaz.'",
+   "layout": "game",
+   "style": "oyun",
+   "topic_area": "trend",
+   "sources": [
+    "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+    "https://gulfnews.com/technology/gaming/gta-6-drops-nov-19-as-preloads-open-nov-10-five-things-to-know-about-grand-theft-auto-1.500740670",
+    "https://allthings.how/how-long-the-wait-for-gta-6-has-been-release-set-for/"
+   ],
+   "media_id": "18097896470159431"
+  },
+  {
+   "date": "2026-11-20",
+   "slug": "2026-11-20-story",
+   "file": "posts/2026-11-20-story/story.jpg",
+   "about": "Biliyor muydun: Kling Image 4.0 tek görsele 2.000 karaktere kadar yazı yazabiliyor; ipucu: yine de her harfi kendin kontrol et; 'Sen denedin mi? DM'den yaz.' (3D Kare, koyu)",
+   "layout": "3d",
+   "style": "3d",
+   "topic_area": "ai",
+   "sources": [
+    "https://technode.com/2026/11/18/kuaishou-launches-kling-image-4-0-with-native-8k-generation"
+   ],
+   "media_id": "18222774934344719"
+  },
+  {
+   "date": "2026-11-21",
+   "slug": "2026-11-21-story",
+   "file": "posts/2026-11-21-story/story.jpg",
+   "about": "Biliyor muydun: YouTube, TV'de birlikte izleyenleri tahmin edip izlenme sayısına da ekliyor; telefon ve bilgisayarda değişen bir şey yok. Piksel TV + kanepede Kare ve iki izleyici, '1 TV, 3 kişi = 3 izlenme'; 'Sence adil mi? DM'den yaz.'",
+   "layout": "game",
+   "style": "oyun",
+   "topic_area": "platform",
+   "sources": [
+    "https://support.google.com/youtube/answer/2991785",
+    "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/"
+   ],
+   "media_id": "17977586139149651"
+  },
+  {
+   "date": "2026-11-22",
+   "slug": "2026-11-22-story",
+   "file": "posts/2026-11-22-story/story.jpg",
+   "about": "Biliyor muydun: Gemini uygulaması yazıdan, fotoğraftan ya da videodan ~3 sn'lik döngülü GIF yapıyor; Türkiye'de şimdilik Google AI abonelerine açılıyor; 'Hangi GIF'i yaptırırdın? DM'den yaz.' (3D Kare, koyu)",
+   "layout": "3d",
+   "style": "3d",
+   "topic_area": "ai",
+   "sources": [
+    "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
+    "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
+   ],
+   "media_id": "18123267931940582"
+  },
+  {
+   "date": "2026-11-23",
+   "slug": "2026-11-23-story",
+   "file": "posts/2026-11-23-story/story.jpg",
+   "about": "Freelance ipucu: “Ne lazımsa yaparım” deme, net teklif ver; kalıp: 'Ayda 8 gönderi + 4 story, her pazartesi teslim, aylık sabit fiyat.'; 'Kaydet, ilk teklifinde kullan.'; 'Senin teklifin ne? DM’den yaz.' (3D madeni paralar, koyu). 22 Kasım freelance Reel'inin (15 kaydetme) devamı.",
+   "layout": "3d",
+   "style": "3d",
+   "topic_area": "para",
+   "sources": [],
+   "media_id": "17962798551040077"
+  }
+ ],
+ "replied_comments": [
+  "18127192088314324"
+ ],
+ "covered_topics": [
+  "instagram-effect-builder",
+  "adobe-max-2026",
+  "claude-fable-5-2",
+  "ogilvy-echo",
+  "adobe-max-2026-firefly-creative-agent",
+  "claude-meetings-sheets-whiteboards",
+  "gemini-4-carbon",
+  "gemini-4-hydrogen",
+  "von-restorff-etkisi",
+  "takaratomy-rebrand",
+  "youtube-gta-vi-paketi",
+  "60-30-10-renk-kurali",
+  "microsoft-364",
+  "edits-speed-curves",
+  "satir-uzunlugu-66-karakter",
+  "linkedin-ai-yorumlari",
+  "instagram-amazon-affiliate-linkleri",
+  "dikkat-1-7-saniye",
+  "gpt-6-2-astra-sol",
+  "instagram-direct-app",
+  "gpt-6-2-karakter-sec",
+  "instagram-story-duzenleme",
+  "yukleme-cubugu-algi",
+  "kling-image-4-yazi",
+  "chatgpt-live-dictation",
+  "instagram-content-protection",
+  "gemini-gif",
+  "canva-ai-controls",
+  "youtube-co-views"
+ ],
+ "hot_pending": [
+  {
+   "key": "cambridge-woty-2026-human",
+   "topic": "Cambridge Dictionary 2026 yılın kelimesi: 'human' (yapay zekâ ile insan arasındaki sınır tartışması); yeni eklenenler: aura farming, looksmaxxing",
+   "found": "2026-11-18",
+   "big": false,
+   "sources": [
+    "https://dictionaryblog.cambridge.org/2026/11/18/word-of-the-year-2026/"
+   ],
+   "note": "18 Kasım story'sinde kısaca işlendi; feed için ancak yeni bir açı varsa."
+  },
+  {
+   "key": "gemini-4-neon",
+   "topic": "Google Gemini 4 Neon'u yayınladı (bir ayda dördüncü Gemini 4 modeli; AI Pro/Ultra)",
+   "found": "2026-11-19",
+   "big": false,
+   "note": "Gemini ×2 zaten işlendi ve veri dersine göre aynı markanın tekrarı tutmadı; yapay zekâ kotası (dün 2 AI gönderisi). Ancak yeni bir somut açı varsa.",
+   "sources": [
+    "https://www.androidauthority.com/gemini-4-neon-3736931/",
+    "https://www.digitaltrends.com/computing/google-says-gemini-4-neon-can-hang-with-claude-opus-5-5-and-gpt-6-2-sol-for-less/"
+   ]
+  },
+  {
+   "key": "anthropic-ipo",
+   "topic": "Anthropic bugün (19 Kasım) Nasdaq'ta halka arz oluyor (ANT, hisse 83 $)",
+   "found": "2026-11-19",
+   "big": false,
+   "note": "Finans haberi, yaratıcı dijital kapsamın dışında; feed için uygun değil.",
+   "sources": [
+    "https://www.cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut/"
+   ]
+  },
+  {
+   "key": "coca-cola-enjoy-joy-yapay-zekasiz",
+   "topic": "Coca-Cola, son iki yılın tartışmalı yapay zekâ yılbaşı reklamlarından sonra 2026 ABD yılbaşı kampanyası 'Enjoy Joy'u gerçek çekimle yaptı (Ogilvy / WPP Open X, yönetmen Paul Dektor)",
+   "found": "2026-11-20",
+   "big": false,
+   "note": "19 Kasım. 30/15/6 sn'lik kesimler, 'Grandma's Holiday Table' sosyal serisi, 270'ten fazla duraklı Holiday Caravan. Resmî görsel var (Marketing Dive, 'Courtesy of Coca-Cola'). Marka/reklam alanı için güçlü aday; görsel kuralı geçerli.",
+   "sources": [
+    "https://www.marketingdive.com/news/coca-cola-pivots-from-divisive-ai-generated-ads-for-holiday-campaign/875215/",
+    "https://www.contentgrip.com/coca-cola-enjoy-joy-holiday/"
+   ]
+  },
+  {
+   "key": "gta-vi-cikis-rekorlari",
+   "topic": "GTA VI çıkışının ilk günü: Metacritic 99 (Ocarina of Time ile en yüksek puana ortak), Twitch'te izleyici rekoru; markaların GTA pazarlaması (Specsavers 'GTA Transport', Logitech izin günü, Popeyes)",
+   "found": "2026-11-20",
+   "big": false,
+   "note": "Çıkış (19 Kasım) 19 Kasım story'sinde işlendi. Twitch rakamları kaynaklara göre değişiyor (Engadget 3,3 milyon+, Kotaku ~2,8 milyon); satış rakamları yalnızca tahmin (Sensor Tower), Take-Two resmî rakam vermedi. İşlenecekse 'markalar GTA VI'dan nasıl pay kaptı' açısı, rakamlar yeniden doğrulanarak.",
+   "sources": [
+    "https://www.engadget.com/2320788/gta-vi-launch-day-live-blog/",
+    "https://kotaku.com/live-updates-on-gta-6-the-biggest-launch-in-gaming-history-2000758030",
+    "https://www.creativebloq.com/news/the-specsavers-gta-6-campaign-is-hilariously-on-brand",
+    "https://www.adweek.com/brand-marketing/6-ways-brands-are-capturing-buzz-around-gta-6s-release/"
+   ]
+  },
+  {
+   "key": "gemini-gif",
+   "topic": "Gemini uygulaması GIF üretiyor (Gemini Omni 1.2 Flash; yazı, fotoğraf ya da videodan ~3 sn döngülü GIF; Google AI abonelerine küresel, ücretsiz kullanıcılara 8 ülkede — Türkiye yok)",
+   "found": "2026-11-22",
+   "big": false,
+   "note": "22 Kasım story'sinde işlendi; feed için ancak yeni bir açı varsa.",
+   "sources": [
+    "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
+    "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
+   ]
+  }
+ ],
+ "scheduled": [],
+ "pending_replies": [
+  {
+   "comment_id": "18130577105477477",
+   "media_id": "18105721748566120",
+   "username": "karacaisaaa",
+   "comment": "Video tarzın çok güzel birde kendine özgü ses buldun mu yürürsün güzel bir tasarım dilin var 1 aya 10k",
+   "draft": "Çok teşekkürler, bu yorum çok motive etti! Ses konusunda haklısın, son videolarda seslendirmeyi de denemeye başladık. 10k hedefini not aldık 🙌",
+   "created": "2026-11-14"
+  },
+  {
+   "comment_id": "17942939919389976",
+   "media_id": "17955542733341306",
+   "username": "m3metmehm4t",
+   "comment": "Bende izliyorum 41 milyar",
+   "draft": "Demek o fazladan 1 milyar senden geldi 😄 19 Kasım'daki 24 saatlik yayını da izleyecek misin?",
+   "created": "2026-11-14"
+  },
+  {
+   "comment_id": "18106188500627518",
+   "media_id": "17977057674151921",
+   "username": "neyazim_bulamadm",
+   "comment": "İzlenme sayisi bence",
+   "draft": "İzlenme sayısı ilk bakışta en çok göze çarpan sayı, haklısın! Mosseri'ye göre asıl belirleyici olan ise izlenme süresi, yani videonun ne kadar uzun izlendiği 👀",
+   "created": "2026-11-21"
+  }
+ ],
+ "weekly_metrics": [
+  {
+   "week_end": "2026-11-14",
+   "range": "2026-11-08..2026-11-14",
+   "followers": 5,
+   "followers_prev": null,
+   "note": "İlk haftalık kayıt; 10 Kasım notunda 3 takipçi yazıyordu.",
+   "posts": 11,
+   "views": 2392,
+   "reach": 1973,
+   "reels_skip_rate_range": "61–85%",
+   "reels_avg_watch_s_range": "2.7–11.2",
+   "best": "18173187451461130 (Fable 5.2: erişim 1400, skip %61, 11,2 sn, 9 kaydetme, 6 paylaşım)",
+   "worst": "18139861054680639 (Claude Meetings: erişim 109, skip %85, 2,7 sn)"
+  },
+  {
+   "week_end": "2026-11-21",
+   "range": "2026-11-15..2026-11-21",
+   "followers": 6,
+   "followers_prev": 5,
+   "followers_change": 1,
+   "note": "Windsor last_14d, force_refresh yok. 21 Kasım sabah Reel'i (17958169884268324) veride yok; 20 Kasım sabah Reel'i (18123156926059374) erişim 3 ile eksik görünüyor, toplamlara dahil ama yorumlanmadı.",
+   "posts": 12,
+   "views": 7457,
+   "reach": 6499,
+   "voiced_reels": "5/5 test havuzunu aştı (1.014–1.404 erişim, skip %45–54, 8,7–13 sn)",
+   "silent_reels": "6/6 ~105–118 erişimde kaldı (skip %66–88, 2,6–4,4 sn)",
+   "best": "17991178818089969 (Instagram Direct: erişim 1404, 132 paylaşım = %9,4 gönderim/erişim, skip %54, 12,1 sn); en iyi tutma 17981484864140074 (Logolar: skip %45,5, 13 sn, 10 kaydetme)",
+   "worst": "18477298123184660 (LinkedIn yapay zekâ yorumları: erişim 105, skip %88, 2,6 sn, sessiz editoryal)"
+  }
+ ],
+ "daily_metrics": [
+  {
+   "date": "2026-11-18",
+   "followers": 5,
+   "yesterday_morning": {
+    "media_id": "18129678413489983",
+    "slug": "2026-11-17-satir-uzunlugu",
+    "kind": "static",
+    "reach": 3,
+    "views": 6,
+    "shares": 0,
+    "style": "editoryal statik (bignum)"
+   },
+   "yesterday_midday": {
+    "media_id": "18084742475717388",
+    "slug": "2026-11-18-dikkat-1-7-saniye",
+    "kind": "reel",
+    "reach": 1010,
+    "views": 1159,
+    "skip_rate": 0.447,
+    "avg_watch_s": 8.7,
+    "shares": 2,
+    "saved": 3,
+    "style": "cizgi-film (Ece seslendirmesi)"
+   },
+   "yesterday_evening": {
+    "media_id": "18477298123184660",
+    "slug": "2026-11-17-linkedin-ai-yorumlar",
+    "kind": "reel",
+    "reach": 104,
+    "views": 117,
+    "skip_rate": 0.876,
+    "avg_watch_s": 2.6,
+    "shares": 0,
+    "style": "editoryal (render.py)"
+   },
+   "lesson": "İzleyiciye bakan çizgi film Kare + 'bunu da kaydıracaktın' gibi doğrudan izleyiciye hitap eden açılış %45 skip, 1.010 erişim; metin ağırlıklı editoryal Reel %88 skip, 104 erişim; statik 3 erişim. Bugün iki gönderi de karakterle (3D Kare sabah, çizgi film Kare akşam) ve ilk karede hareketle açılıyor, editoryal motor kullanılmadı."
+  },
+  {
+   "date": "2026-11-19",
+   "followers": 5,
+   "yesterday_morning": {
+    "media_id": "18457465903122891",
+    "slug": "2026-11-18-gpt-6-2-slayt",
+    "kind": "short-reel",
+    "style": "3d",
+    "reach": 107,
+    "views": 119,
+    "skip_rate": 0.806,
+    "avg_watch_s": 2.8,
+    "shares": 0
+   },
+   "yesterday_midday": {
+    "media_id": "17914541763574067",
+    "slug": "2026-11-19-gpt-6-2-karakter-sec",
+    "kind": "reel",
+    "style": "oyun (Ece seslendirmesi)",
+    "reach": 1026,
+    "views": 1183,
+    "skip_rate": 0.488,
+    "avg_watch_s": 10.4,
+    "shares": 1,
+    "saved": 3
+   },
+   "yesterday_evening": {
+    "media_id": "17991178818089969",
+    "slug": "2026-11-18-instagram-direct",
+    "kind": "reel",
+    "style": "cizgi-film (Ece seslendirmesi)",
+    "reach": 1254,
+    "views": 1451,
+    "skip_rate": 0.534,
+    "avg_watch_s": 12.5,
+    "shares": 132,
+    "saved": 6
+   },
+   "lesson": "Herkesin kullandığı Instagram özelliği (Direct, Türkiye'de test) 132 paylaşım ve 1.254 erişim aldı; anlatımlı oyun Reel'i de 1.026 erişim. Metin ağırlıklı 3D kısa sabah Reel'i (GPT-6.2 slayt) %81 skip, 107 erişimde kaldı. Bugün sabah gönderisi yine geniş kitlenin kullandığı bir Instagram özelliği (story düzenleme), ilk karede telefon + izleyiciye bakan Kare, doğrudan hitap eden soru ('Story'de hata mı yaptın?')."
+  },
+  {
+   "date": "2026-11-20",
+   "followers": 5,
+   "yesterday_morning": {
+    "media_id": "18668539741040283",
+    "slug": "2026-11-19-story-duzenleme",
+    "kind": "short-reel",
+    "style": "arayuz",
+    "reach": 113,
+    "views": 140,
+    "skip_rate": 0.655,
+    "avg_watch_s": 4.5,
+    "shares": 3,
+    "saved": 0
+   },
+   "yesterday_evening": {
+    "media_id": "17981484864140074",
+    "slug": "2026-11-19-logolar-neden-ayni",
+    "kind": "reel",
+    "style": "3d (Ece seslendirmesi)",
+    "reach": 1300,
+    "views": 1440,
+    "skip_rate": 0.447,
+    "avg_watch_s": 13.1,
+    "shares": 5,
+    "saved": 9
+   },
+   "lesson": "Seslendirmeli 4 Reel üst üste test havuzunu aştı (1.014–1.402 erişim, skip %45–54); sessiz kısa sabah Reel'leri yine ~110'da kaldı (skip %65–81, izlenme 2,7–4,5 sn). Bugün sabah Reel'i sonuna kadar izletecek bir mini test (cevap 5. saniyede) ve A/B yorum çağrısıyla açıldı; Kare 0. karede izleyiciye bakıyor."
+  },
+  {
+   "date": "2026-11-21",
+   "followers": 6,
+   "yesterday_morning": {
+    "media_id": "18123156926059374",
+    "slug": "2026-11-20-yukleme-cubugu",
+    "kind": "short-reel",
+    "style": "oyun",
+    "reach": 3,
+    "views": 2,
+    "shares": 0,
+    "note": "Windsor verisi eksik görünüyor (erişim 3, izlenme 2); önbellek gecikmesi olabilir, yarın tekrar bakılmalı"
+   },
+   "yesterday_evening": {
+    "media_id": "17977057674151921",
+    "slug": "2026-11-20-en-degerli-tepki",
+    "kind": "reel",
+    "style": "arayuz (Ece seslendirmesi)",
+    "reach": 1126,
+    "views": 1291,
+    "skip_rate": 0.474,
+    "avg_watch_s": 10.1,
+    "shares": 3,
+    "saved": 3,
+    "likes": 20,
+    "comments": 1
+   },
+   "lesson": "Seslendirmeli akşam Reel'leri 5'te 5 test havuzunu aştı (1.014–1.404 erişim, skip %45–54, izlenme 10–13 sn); sessiz kısa sabah Reel'leri hâlâ ~110'da (dünkü verisi eksik). Bugün sabah Reel'i herkesin bildiği bir isimle (ChatGPT) ve 0. karede konuşan, dönen 3D Kare + canlı yazılan mesaj kutusuyla açıldı."
+  },
+  {
+   "date": "2026-11-22",
+   "followers": 6,
+   "yesterday_morning": {
+    "media_id": "17958169884268324",
+    "slug": "2026-11-21-canli-dikte",
+    "kind": "short-reel",
+    "style": "3d",
+    "reach": 106,
+    "views": 128,
+    "skip_rate": 0.712,
+    "avg_watch_s": 3.6,
+    "shares": 0,
+    "saved": 0,
+    "likes": 0
+   },
+   "yesterday_evening": {
+    "media_id": "18095163653204124",
+    "slug": "2026-11-21-kerning-nedir",
+    "kind": "reel",
+    "style": "oyun (Ece seslendirmesi)",
+    "reach": 104,
+    "views": 112,
+    "skip_rate": 0.59,
+    "avg_watch_s": 7.1,
+    "shares": 0,
+    "saved": 0,
+    "likes": 1,
+    "note": "Yayından ~16 saat sonra ölçüldü; hâlâ test havuzunda, genişleyebilir"
+   },
+   "note_2026_11_20_morning": "yukleme-cubugu (18123156926059374) hâlâ erişim 3, izlenme 4: veri eksik değil, Reel dağıtılmamış görünüyor",
+   "lesson": "Sessiz sabah Reel'i (3D, ChatGPT) yine ~106'da kaldı (skip %71, 3,6 sn). Seslendirmeli kerning Reel'i skip %59 ile hedefin hemen altında ama izlenme 7,1 sn ve 0 paylaşım: niş kavram ilk gün genişlemedi (geniş tanınırlık dersi). Bugün sabah Reel'i herkesin yaşadığı bir soruna (Reel'in başka hesapta dönmesi) doğrudan soruyla açıldı; gerçekçi arayüz ve hikâye 0. karede başlıyor, gönderme CTA'sı kişiyi hedefliyor."
+  },
+  {
+   "date": "2026-11-23",
+   "followers": 8,
+   "yesterday_morning": {
+    "media_id": "18204297724401494",
+    "slug": "2026-11-22-icerik-koruma",
+    "kind": "short-reel",
+    "style": "arayuz",
+    "reach": 110,
+    "views": 130,
+    "skip_rate": 0.602,
+    "avg_watch_s": 4.0,
+    "shares": 0,
+    "saved": 1,
+    "likes": 2
+   },
+   "yesterday_evening": {
+    "media_id": "18127368056476510",
+    "slug": "2026-11-22-ilk-freelance-musteri",
+    "kind": "reel",
+    "style": "3d (Ece seslendirmesi)",
+    "reach": 1084,
+    "views": 1189,
+    "skip_rate": 0.517,
+    "avg_watch_s": 7.9,
+    "shares": 3,
+    "saved": 15,
+    "likes": 5
+   },
+   "note": "kerning-nedir (18095163653204124) 2. günde 135 erişim, skip %61, 6,5 sn: genişlemedi. Takipçi 6 → 8.",
+   "lesson": "Seslendirmeli akşam Reel'i 6/7 kez test havuzunu aştı; 'ilk müşteriyi bulmanın 3 adımı' gibi uygulanabilir adımlar rekor kaydetme getirdi (15). Sessiz sabah Reel'i yine ~110 (skip %60, 4 sn). Bugün sabah Reel'i herkesin bildiği bir araçla (Canva) ve kaydedilecek somut bir ayar yoluyla açıldı; story de dünkü en çok kaydedilen Reel'in devamı olan bir teklif kalıbı."
+  }
+ ],
+ "planned_reels": [
+  {
+   "date": "2026-11-19",
+   "slug": "2026-11-19-logolar-neden-ayni",
+   "style": "3d",
+   "topic_area": "marka",
+   "title": "Lüks markaların logoları neden birbirine benziyor? (blanding)",
+   "script": "Lüks markaların logoları neden birbirine benzemeye başladı?\n\nBurberry, Balenciaga, Saint Laurent, Balmain… Birçok moda markası süslü yazılarını bırakıp sade, büyük harfli logolara geçti.\n\nBuna \"blanding\" deniyor: marka ile yavanlığın birleşimi.\n\nSebep basit: Logo artık en çok telefon ekranında ve küçücük profil fotoğraflarında görünüyor. Sade yazı küçükken de okunuyor.\n\nAma bir bedeli var: Herkes aynı görünmeye başladı.\n\nŞimdi bazıları geri dönüyor. Burberry, 2023'te atlı şövalyesini ve daha klasik bir yazıyı geri getirdi.\n\nSence sade logo mu, karakterli logo mu? Yorumlara yaz.",
+   "visual_note": "Gerçek logolar GÖSTERİLMEZ. 3D 'MARKA' kelimesi süslü serif yazıdan sade büyük harfe dönüşür, sonra yan yana aynı görünen kopyalar; Burberry kısmında genel bir at/şövalye silüeti (logo kopyası değil).",
+   "sources": [
+    "https://www.thedrum.com/opinion/2020/11/20/fashion-shot-the-serif-homogeneous-logos-and-luxury-branding-intertwine",
+    "https://www.nssmag.com/en/article/41960",
+    "https://www.campaignasia.com/article/burberrys-return-to-british-eccentricity-defies-8216reblanding8217-trend/483228"
+   ],
+   "produced": true
+  },
+  {
+   "date": "2026-11-20",
+   "slug": "2026-11-20-en-degerli-tepki",
+   "style": "arayuz",
+   "topic_area": "platform",
+   "title": "Instagram'da en değerli tepki hangisi?",
+   "script": "Instagram'da en değerli tepki hangisi: beğeni mi, yorum mu, paylaşım mı?\n\nInstagram'ın başındaki Adam Mosseri bunu açıkça söyledi. En önemli üç sinyal: izlenme süresi, beğeni ve gönderme.\n\nAma asıl ölçü sayı değil, oran. Kaç kişiye ulaştın, bunların kaçı beğendi, kaçı bir arkadaşına gönderdi?\n\nBeğeni, takipçilerinde biraz daha önemli. Takip etmeyenlere ulaşmak içinse gönderme biraz daha önemli.\n\nYani yeni insanlara ulaşmak istiyorsan şunu sor: Bunu biri arkadaşına atar mı?\n\nSen en son hangi videoyu birine gönderdin? Yorumlara yaz. Bu videoyu da içerik üreten bir arkadaşına gönder!",
+   "visual_note": "Gerçekçi arayüz (tools/scenes/ui-telefon.html): telefonda bir Reel, beğeni/yorum/gönder ikonları; istatistik ekranında 'izlenme süresi, beğeni/erişim, gönderme/erişim'; gönder butonuna dokunma. Instagram logosu kullanılmaz.",
+   "sources": [
+    "https://www.socialmediatoday.com/news/instagram-shares-algorithm-2025/738034/",
+    "https://creatorflow.so/blog/instagram-algorithm/"
+   ],
+   "produced": true
+  },
+  {
+   "date": "2026-11-21",
+   "slug": "2026-11-21-kerning-nedir",
+   "style": "oyun",
+   "topic_area": "tasarim",
+   "title": "Kare Açıklıyor: Kerning nedir?",
+   "script": "Kare Açıklıyor: Kerning nedir?\n\nKerning, iki harf arasındaki boşluğun tek tek ayarlanması.\n\nHer harf çifti aynı boşluğu istemez. Mesela A ile V yan yana gelince eşit aralık bile fazla açık görünür; tasarımcı bu ikisini biraz yaklaştırır.\n\nAyar kaçarsa ne olur? R ile n fazla yaklaşırsa m gibi okunur. \"Kurnaz\" bir anda \"kumaz\" oluverir.\n\nBunun bir adı bile var: keming.\n\nTüm satırdaki aralığı birden açıp kısmak ise başka bir şey; ona tracking deniyor.\n\nSen hiç kerning hatası yüzünden yanlış okuduğun bir tabela gördün mü? Yorumlara yaz!",
+   "visual_note": "Oyun tarzı: harfler piksel bloklar, Kare 'A' ile 'V'yi itip yaklaştırıyor; 'KURNAZ' yazısında r ve n çarpışıp 'm' oluyor (KUMAZ), 'KEMİNG' rozeti; tracking için tüm satır akordeon gibi açılıp kapanıyor.",
+   "sources": [
+    "https://en.wikipedia.com/wiki/Kerning",
+    "https://www.shopify.com/blog/what-is-kerning"
+   ],
+   "produced": true
+  },
+  {
+   "date": "2026-11-22",
+   "slug": "2026-11-22-ilk-freelance-musteri",
+   "style": "3d",
+   "topic_area": "para",
+   "title": "İlk freelance müşterini nereden bulursun?",
+   "script": "İlk freelance müşterini nereden bulursun? Üç adımda anlatayım.\n\nBir: Önce çevren. Tanıdığın işletmelere ve eski iş arkadaşlarına ne yaptığını kısa bir mesajla anlat. İlk iş için en sıcak kapı burası.\n\nİki: Portfolyon yoksa kendin üret. Hayali bir marka ya da yakınındaki bir kafe için örnek işler hazırla. Örnek, özgeçmişten çok daha fazlasını anlatır.\n\nÜç: Teklifini net yap. \"Ne lazımsa yaparım\" yerine \"Ayda sekiz gönderi, şu fiyat\" de. Net teklif, karar vermeyi kolaylaştırır.\n\nSen ilk müşterini nasıl buldun? Yorumlara yaz, freelance başlamak isteyen arkadaşına da gönder.",
+   "visual_note": "3D: üç basamaklı merdiven, her basamakta 3D nesne (mesaj balonu, portfolyo kartları, fiyat etiketi); Kare basamakları çıkıyor.",
+   "sources": [],
+   "produced": true
+  },
+  {
+   "date": "2026-11-23",
+   "slug": "2026-11-23-youtube-tv-izlenme",
+   "style": "oyun",
+   "topic_area": "platform",
+   "title": "TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?",
+   "script": "Bir videoyu salonda üç kişi izlerse YouTube kaç izlenme sayar? Artık üç.\n\nYouTube, TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına eklemeye başladı. Telefonda, bilgisayarda ve tablette değişen bir şey yok; sadece TV.\n\nPeki içerik üreticisi daha çok mu kazanacak? Hayır. Gelir ve para kazanma şartları bu tahminden etkilenmiyor.\n\nBir de merak edenler için: YouTube bunu kamera ya da mikrofonla değil, bir tahmin modeliyle hesaplıyor.\n\nSen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?",
+   "visual_note": "Oyun tarzı: piksel salon, TV ve kanepe; tek izleyici sayacı 1, iki kişi daha oturunca 3'e çıkar; telefon/tablet ikonlarında sayaç 1'de kalır; para kesesi değişmez (gelir etkilenmiyor); kamera/mikrofon ikonu üstü çizili. 21 Kasım story'sinden farklı yeni sahne. YouTube logosu kullanılmaz.",
+   "sources": [
+    "https://support.google.com/youtube/answer/2991785",
+    "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
+    "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/"
+   ],
+   "produced": true
+  },
+  {
+   "date": "2026-11-24",
+   "slug": "2026-11-24-sesli-mi-sessiz-mi",
+   "style": "arayuz",
+   "topic_area": "perde-arkasi",
+   "title": "Sesli video mu, sessiz video mu? Kendi 14 Reel'imizden",
+   "script": "Aynı hesap, aynı hafta, on dört video. Aradaki en büyük fark: ses.\n\nSeslendirdiğimiz yedi videonun altısı bin kişiden fazlasına ulaştı. Sadece yazı ve müzikle çıkan yedi videonun yedisi de yüz yirmi kişinin altında kaldı.\n\nİlk üç saniyede kaydırıp geçenler, sesli videolarda izleyenlerin yarısıydı; sessizlerde dörtte üçü.\n\nDürüst olalım, sessiz videolar daha kısaydı. Ama fark on kat.\n\nYani yüzünü göstermek zorunda değilsin, ama sesini kullan. Bir ses sana konuşunca durup dinliyorsun.\n\nSen videolarını seslendiriyor musun? Yorumlara yaz, video çeken arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: film afişleri neden hep turuncu ve mavi?",
+   "visual_note": "Gerçekçi arayüz: telefonda istatistik ekranı; iki sütun Reel kartı (hoparlör ikonlu / sessiz ikonlu), erişim sayıları sayarak yükselir; skip oranı halkaları. Veriler (Windsor, 23 Kasım 14:00 okuması, 17–23 Kasım): seslendirmeli 7 Reel: 1.015, 1.028, 1.404, 1.365, 1.133, 136, 1.155 erişim (6/7 > 1.000), skip ortalaması ~%50. Sessiz 7 Reel: 107, 110, 115, 5, 108, 110, 105 erişim (hepsi < 120), skip ortalaması ~%74 (erişimi 5 olan hariç). Sessizler 7–10 sn'lik sabah videoları; metinde bu açıkça söyleniyor.",
+   "sources": [
+    "kendi verimiz: posts/state.json daily_metrics ve weekly_metrics (15–20 Kasım)"
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "slug": "2026-11-25-turuncu-mavi-afisler",
+   "style": "3d",
+   "topic_area": "gorsel-kultur",
+   "title": "Film afişleri neden hep turuncu ve mavi?",
+   "script": "Son gördüğün film afişini hatırla. Büyük ihtimalle turuncu ve mavi.\n\nHollywood'da çok sevilen bu ikilinin adı turkuaz ve turuncu.\n\nSebep insan teni. Ten rengi turuncuya yakın. Arka planı mavi-yeşile çekince yüzler öne çıkıyor, çünkü bu iki renk renk çemberinde birbirinin karşısında.\n\nAteş, patlama ve gün batımı zaten turuncu; gece ve gökyüzü mavi. Kontrast hazır.\n\nKapak görselinde bir şeyi öne çıkarmak mı istiyorsun? Karşıt rengini arkaya koy.\n\nSen bu ikiliyi en son hangi afişte gördün? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
+   "visual_note": "3D: genel bir afiş çerçevesi (gerçek film afişi yok), içinde turuncu ışıklı 3D Kare yüzü + turkuaz zemin; renk çemberi döner, turuncu ve turkuaz karşı karşıya kilitlenir; son sahnede kapak görseli örneği.",
+   "sources": [
+    "https://www.adobe.com/creativecloud/video/hub/features/why-use-orange-teal-grading",
+    "https://petapixel.com/2017/02/23/orange-teal-look-popular-hollywood/"
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "slug": "2026-11-26-doksan-dokuz",
+   "style": "oyun",
+   "topic_area": "psikoloji",
+   "title": "Neden fiyatlar hep 99 ile biter? (soldaki rakam etkisi)",
+   "script": "Neden fiyatlar hep doksan dokuzla biter? Cevap: soldaki rakam.\n\nBeynimiz bir fiyatı soldan okur ve ilk rakama çok önem verir. Üç lira yerine iki lira doksan dokuz kuruş yazınca ilk rakam üçten ikiye düşer.\n\nNew York Üniversitesi'nden iki araştırmacı bunu inceledi: Doksan dokuzla biten fiyat her zaman değil, ama özellikle soldaki rakam değiştiğinde daha ucuz algılanabiliyor.\n\nYani asıl iş bir kuruşta değil, değişen ilk rakamda.\n\nSen en son hangi doksan dokuzlu fiyatı ucuz sandın? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: saatlik mi, proje başı mı fiyat?",
+   "visual_note": "Oyun tarzı: piksel market rafı, etiket 3,00 → 2,99 olurken soldaki rakam dev gibi büyüyüp küçülür; Kare'nin gözü önce soldaki rakama kayar (göz izi noktaları soldan sağa). 'Her zaman değil' kısmı için ikinci etikette rakam değişmeyince Kare omuz silker. Gerçek marka etiketi yok.",
+   "sources": [
+    "https://www.sciencedaily.com/releases/2005/06/050607030351.htm",
+    "https://phys.org/news/2005-06-consumers-react-prices.html"
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "slug": "2026-11-27-saatlik-mi-proje-mi",
+   "style": "arayuz",
+   "topic_area": "para",
+   "title": "Saatlik mi, proje başı mı fiyat vermelisin?",
+   "script": "Freelance iş alırken saatlik mi fiyat verirsin, proje başı mı?\n\nSaatlik fiyat, işin ne kadar süreceği belli değilse seni korur. Ama hızlandıkça daha az kazanırsın.\n\nProje başı fiyat, müşterinin toplam tutarı baştan görmesini sağlar. Hızlı çalışırsan kazancın artar. Ama kapsamı yazmazsan iş büyür, ücret aynı kalır.\n\nPratik yol: Kapsamı net yaz, revizyon sayısını belirle, ekstralara ayrı fiyat koy.\n\nSen hangisiyle çalışıyorsun? Yorumlara yaz, freelance başlayan arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: Instagram algoritması ne demek?",
+   "visual_note": "Gerçekçi arayüz: telefonda teklif ekranı; iki sekme 'Saatlik' / 'Proje başı'. Saatlikte kronometre döner, hız artınca kazanç çubuğu kısalır; proje başında sabit tutar kartı, kapsam satırları eklendikçe 'Revizyon: 2', 'Ekstra: ayrı fiyat' kilitlenir. Rakam ve TL tutarı yazılmaz (genel tavsiye).",
+   "sources": [
+    "genel tavsiye; istatistik yok"
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "slug": "2026-11-28-algoritma-nedir",
+   "style": "3d",
+   "topic_area": "platform",
+   "title": "Kare Açıklıyor: Instagram algoritması ne demek?",
+   "script": "Kare Açıklıyor: Instagram algoritması ne demek?\n\nAslında tek bir algoritma yok. Instagram'ın kendi açıklamasına göre akış, hikâyeler, keşfet ve Reels'in her biri kendi sıralama sistemini kullanıyor.\n\nReels'te en önemli tahminler şunlar: Videoyu birine gönderir misin, sonuna kadar izler misin, beğenir misin, sesine tıklar mısın?\n\nYani algoritma, ne yapacağını tahmin etmeye çalışan bir sistem. Ona yön veren de senin davranışın.\n\nSen Instagram'da en çok hangi bölümde vakit geçiriyorsun? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
+   "visual_note": "3D: Kare'nin önünde dört ayrı 3D çark/kutu (akış, hikâyeler, keşfet, Reels), her biri farklı hızda döner; Reels kutusundan dört ikon çıkar (gönder, tam izleme, beğeni, ses). Instagram logosu kullanılmaz.",
+   "sources": [
+    "https://about.instagram.com/blog/announcements/instagram-ranking-explained"
+   ]
+  }
+ ]
 }

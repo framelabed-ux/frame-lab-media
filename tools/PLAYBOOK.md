@@ -292,3 +292,8 @@ Her cumartesi görev; verilere ve global örneklere bakıp en fazla 3 kanıta da
 - 2026-11-21 (2): "Veri dersleri" 7: Türkiye açısı + gönderim/erişim ≥ %1 hedefi. Kanıt: Direct Reel'i %9,4 (132 paylaşım), diğerleri %0–2,7; dış ölçüt %1–2 güçlü, %3+ viral.
 - 2026-11-21 (3): "Büyüme ve gelir": takipçiye çevirme kuralı (sonraki içeriği vaat eden son satır) ve Instagram içerik koruma aracı notu. Kanıt: ~6.500 erişim → +1 takipçi; TechCrunch 17 Kasım 2026, seri bağlama (TechCrunch 2025), iMark ve Mander Marketing.
 - 2026-11-14 (3): Reel hedef çizgisi (skip < %60, izlenme ≥ 8 sn) ve `state.json` → `weekly_metrics` haftalık özet kaydı. Kanıt: skip %73–85 olan 6 Reel ~110 erişimde kaldı, %61 olan 1.400'e çıktı. Mosseri'nin küçük hesap içeriğini takipçi olmayanlara deneme amaçlı gösterme ilkesi (socialmediatoday.com, 24 Eylül 2026).
+
+### Günde 2 Reel etkileşimi düşürüyor mu? (23 Kasım kontrolü)
+- Hayır, veride böyle bir iz yok. 18 Kasım'da 3 Reel çıktı; ikisi 1.000'i geçti (1.028 ve 1.404). Sabah Reel'i olan 19, 20 ve 22 Kasım akşamlarında seslendirmeli Reel'ler 1.133–1.365 erişime ulaştı.
+- Erişimi belirleyen sıklık değil, içerik: seslendirmeli akşam Reel'lerinin 7'de 6'sı 1.000+; seslendirmesiz kısa sabah Reel'lerinin 7'de 7'si 120'nin altında (skip %60–87).
+- Sabah Reel'i zarar vermiyor ama katkı da vermiyor. Sıklığı değiştirme kararı Ece'nin.
