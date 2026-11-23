@@ -1,0 +1,16 @@
+Bir videoyu salonda üç kişi izlerse YouTube kaç izlenme sayar? Artık üç.
+
+YouTube, Kasım 2026'dan itibaren TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına ekliyor.
+
+Bilmen gerekenler:
+• Sadece TV. Telefonda, tablette ve bilgisayarda bir oynatma yine bir izlenme.
+• Gelir ve Partner Programı şartları bu tahminden etkilenmiyor; onlar ayrı ölçümlerle hesaplanıyor.
+• YouTube kamera ya da mikrofon kullanmadığını söylüyor; sayı bir tahmin modeliyle bulunuyor.
+• Eski izlenme sayıları geriye dönük değişmiyor; eski videoların yeni TV izlenmeleri sayılıyor.
+• YouTube Studio'da "co-view rate" (birlikte izlenme oranı) adında yeni bir ölçüm var.
+
+Sen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz. YouTube'a video yükleyen arkadaşına da gönder.
+
+Her akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?
+
+#youtube #youtuber #içeriküretimi #içeriküreticisi #sosyalmedya #dijitalpazarlama #videopazarlama

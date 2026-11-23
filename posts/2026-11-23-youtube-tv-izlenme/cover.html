@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* KAPAK (tipografi türü, koyu ton). Frame Lab akşam Reel'i (oyun tarzı, game-kare.html ailesinden yeniden yazıldı): 270x480 tuval, 4 kat büyütülür.
+   Konu: YouTube, TV'de birlikte izlendiği tahmin edilen kişileri herkese açık izlenme sayısına ekliyor (Kasım 2026).
+   Hikâye: Kare salonda tek başına izliyor (1) → iki arkadaşı geliyor (3) → sadece TV'de, diğer cihazlarda 1 →
+   gelir değişmiyor (+0) → kamera/mikrofon yok, tahmin modeli → izleyiciye soru. */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00', WALL='#1C1C22', SKIN='#F2C9A0';
+window.DUR=28.0;
+window.SFX=[[0.05,'pop2'],[2.2,'pop'],[2.6,'tick'],[3.2,'pop'],[3.5,'tick'],[3.9,'ding'],[5.0,'whoosh'],[8.0,'whoosh'],[8.5,'pop'],[8.8,'pop'],[9.1,'pop'],[9.4,'ding'],
+  [11.0,'whoosh'],[12.2,'pop2'],[13.0,'pop2'],[14.2,'alarm'],[17.0,'whoosh'],[18.0,'pop'],[18.8,'pop'],[19.8,'ding'],[22.5,'whoosh'],[23.4,'pop'],[24.6,'pop'],[25.8,'pop'],[26.6,'ding']];
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler) */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16],"'":[4,4,8,0,0,0,0]};
+/* Not: 'I' (noktasız) ve 'İ' (noktalı) ayrı çizilir: İ = I + üst nokta. */
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite (izleyiciye bakar) */
+function kareSprite(x0,y0,frame,face='happy',k=3,sit=false){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else if(face==='wink'){X.fillRect(x+4,y+5,2,2);X.fillRect(x+10,y+6,3,1);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  else if(face==='meh'){X.fillRect(x+4,y+6,3,1);X.fillRect(x+10,y+6,3,1);X.fillRect(x+6,y+9,5,1);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM;
+  if(sit){X.fillRect(x+3,y+14,4,2);X.fillRect(x+10,y+14,4,2);}
+  else if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+/* genel piksel insan (oturan) */
+function person(x0,y0,shirt,hair,k=3){X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);
+  X.fillStyle=INK;X.fillRect(1,0,10,10);X.fillStyle=SKIN;X.fillRect(2,1,8,8);X.fillStyle=hair;X.fillRect(2,1,8,3);X.fillRect(2,1,1,5);
+  X.fillStyle=INK;X.fillRect(4,5,1,2);X.fillRect(7,5,1,2);X.fillRect(5,8,2,1);
+  X.fillStyle=INK;X.fillRect(0,10,12,9);X.fillStyle=shirt;X.fillRect(1,11,10,7);
+  X.restore();}
+function head(x,y,col){X.fillStyle=INK;X.fillRect(x,y,8,8);X.fillStyle=SKIN;X.fillRect(x+1,y+1,6,6);X.fillStyle=col;X.fillRect(x+1,y+1,6,2);}
+function tvSet(x,y,w,h,t,on=true){box(x,y,w,h,'#2A2A33',INK,2);X.fillStyle=on?'#0E1A2A':'#000';X.fillRect(x+5,y+5,w-10,h-10);
+  if(on){const s=Math.round(h*0.22),cx=x+w/2,cy=y+h/2; X.fillStyle=PINK;
+    for(let r=-s;r<=s;r++){const len=Math.round((s-Math.abs(r))*1.4);X.fillRect(cx-s*0.5,cy+r,len,1);}
+    X.fillStyle=LIME;X.fillRect(x+8,y+h-10,Math.round((w-16)*((t*0.08)%1)),2);}
+  X.fillStyle=INK;X.fillRect(x+w/2-3,y+h,6,6);X.fillRect(x+w/2-12,y+h+6,24,3);}
+function phoneIcon(x,y){box(x,y,16,28,'#3A5A80',CREAM,2);X.fillStyle=GREY;X.fillRect(x+6,y+24,4,1);}
+function tabletIcon(x,y){box(x,y,26,34,'#3A5A80',CREAM,2);X.fillStyle=GREY;X.fillRect(x+11,y+30,4,1);}
+function laptopIcon(x,y){box(x+3,y,28,20,'#3A5A80',CREAM,2);X.fillStyle=INK;X.fillRect(x,y+20,34,4);X.fillStyle=CREAM;X.fillRect(x+1,y+21,32,2);}
+function coin(x,y,t){const w=Math.round(Math.abs(Math.cos(t*6))*3)+1;X.fillStyle=INK;X.fillRect(x-w-1,y-4,2*w+2,9);X.fillStyle=LIME;X.fillRect(x-w,y-3,2*w,7);}
+function bag(x,y){X.fillStyle=INK;X.fillRect(x+12,y,16,6);X.fillRect(x+2,y+8,36,34);X.fillRect(x+6,y+5,28,4);
+  X.fillStyle=CREAM;X.fillRect(x+14,y+1,12,4);X.fillRect(x+4,y+10,32,30);X.fillRect(x+8,y+6,24,3);
+  X.fillStyle=PINK;X.fillRect(x+12,y+7,16,2);X.fillStyle=DLIME;X.fillRect(x+18,y+16,4,18);X.fillRect(x+13,y+19,14,3);X.fillRect(x+13,y+28,14,3);}
+function camIcon(x,y){box(x,y+6,40,28,GREY,INK,2);X.fillStyle=INK;X.fillRect(x+14,y,12,8);X.fillStyle=CREAM;X.fillRect(x+13,y+12,14,14);X.fillStyle=INK;X.fillRect(x+16,y+15,8,8);}
+function micIcon(x,y){box(x+10,y,20,26,GREY,INK,2);X.fillStyle=INK;X.fillRect(x+4,y+16,2,12);X.fillRect(x+34,y+16,2,12);X.fillRect(x+4,y+28,32,2);X.fillRect(x+19,y+30,2,6);X.fillRect(x+12,y+36,16,2);}
+function cross(x,y,s,p){if(p<=0)return;const n=Math.round(s*clamp(p));X.fillStyle=PINK;for(let i=0;i<n;i++){X.fillRect(x+i,y+i,4,4);X.fillRect(x+s-i,y+i,4,4);}}
+function K(x,y,k,fn){X.save();X.translate(Math.round(x),Math.round(y));X.scale(k,k);fn();X.restore();}
+function wipe(t,t0){const d=t-t0; if(d<-0.18||d>0.18) return; const f=(d+0.18)/0.36; X.fillStyle=LIME;X.fillRect(Math.round(-270+f*540),0,270,480);}
+const DLG=[
+ [0.0,['KARE TEK BAŞINA','İZLİYOR:','1 İZLENME.'],2],
+ [2.0,['İKİ ARKADAŞI GELDİ.','YENİ KURALLA:','3 İZLENME!'],2],
+ [5.0,["YOUTUBE, TV'DE",'BİRLİKTE İZLEYEN','HERKESİ TAHMİN EDİP','SAYIYA EKLİYOR.'],-1],
+ [8.0,['TELEFON, TABLET VE','BİLGİSAYARDA','DEĞİŞİKLİK YOK.','SADECE TV.'],3],
+ [11.0,['PEKİ İÇERİK ÜRETİCİ','DAHA ÇOK MU','KAZANACAK?'],2],
+ [14.0,['HAYIR. GELİR VE','PARA KAZANMA','ŞARTLARI','DEĞİŞMİYOR.'],0],
+ [17.0,['KAMERA YOK,','MİKROFON YOK.','SAYIYI BİR TAHMİN','MODELİ HESAPLIYOR.'],-1],
+ [22.5,["SEN YOUTUBE'U",'EN ÇOK NEREDE','İZLİYORSUN?','YORUMLARA YAZ!'],3]];
+window.render=function(t){
+  X.imageSmoothingEnabled=false; X.fillStyle=INK;X.fillRect(0,0,270,480);
+  X.fillStyle=WALL;X.fillRect(0,250,270,130);
+  txt("TV'DE 3 KİŞİ",135,74,3,WHITE,'center');
+  txt('3',135,104,14,PINK,'center');
+  txt('İZLENME',135,212,3,LIME,'center');
+  tvSet(16,280,96,66,0.3);
+  box(126,330,136,44,PINK,INK,2); box(122,344,12,34,PINK,INK,2); box(254,344,12,34,PINK,INK,2);
+  kareSprite(134,300,0,'wow',3,true);
+  person(190,294,CREAM,'#5A3A20',3); person(222,294,LIME,INK,3);
+  X.fillStyle=LIME;X.fillRect(0,380,270,6);
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+};
+window.render(0);
+</script></body></html>

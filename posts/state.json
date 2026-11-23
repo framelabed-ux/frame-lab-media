@@ -670,6 +670,32 @@
   ],
   "queue": [
     {
+      "slug": "2026-11-23-youtube-tv-izlenme",
+      "kind": "reel",
+      "style": "oyun",
+      "publish_date": "2026-11-23",
+      "title": "TV'de üç kişi izleyince YouTube kaç izlenme sayıyor?",
+      "files": [
+        "posts/2026-11-23-youtube-tv-izlenme/reel.mp4"
+      ],
+      "cover": "posts/2026-11-23-youtube-tv-izlenme/cover.jpg",
+      "cover_type": "tipografi",
+      "cover_tone": "dark",
+      "topic_area": "platform",
+      "layout": "oyun",
+      "music": "pop",
+      "caption": "Bir videoyu salonda üç kişi izlerse YouTube kaç izlenme sayar? Artık üç.\n\nYouTube, Kasım 2026'dan itibaren TV'de birlikte izlendiği tahmin edilen her kişiyi herkese açık izlenme sayısına ekliyor.\n\nBilmen gerekenler:\n• Sadece TV. Telefonda, tablette ve bilgisayarda bir oynatma yine bir izlenme.\n• Gelir ve Partner Programı şartları bu tahminden etkilenmiyor; onlar ayrı ölçümlerle hesaplanıyor.\n• YouTube kamera ya da mikrofon kullanmadığını söylüyor; sayı bir tahmin modeliyle bulunuyor.\n• Eski izlenme sayıları geriye dönük değişmiyor; eski videoların yeni TV izlenmeleri sayılıyor.\n• YouTube Studio'da \"co-view rate\" (birlikte izlenme oranı) adında yeni bir ölçüm var.\n\nSen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? Yorumlara yaz. YouTube'a video yükleyen arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: sesli video mu, sessiz video mu?\n\n#youtube #youtuber #içeriküretimi #içeriküreticisi #sosyalmedya #dijitalpazarlama #videopazarlama",
+      "sources": [
+        "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
+        "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/",
+        "https://winbuzzer.com/2026/11/18/one-tv-playback-several-public-youtube-views-xcxwbn/",
+        "https://www.tweaktown.com/news/114751/youtube-view-counts-now-include-estimated-co-viewers-so-one-tv-play-can-count-as-several-views/index.html",
+        "https://allaboutcookies.org/youtube-co-view-tracking-privacy"
+      ],
+      "note": "planned_reels 23 Kasım kaydından. Seslendirme yok (voice.mp3 gelmedi), müzikli; ekran yazısı altyazı gibi sırayla geliyor. 28 sn + 3,2 sn logo kapanışı.",
+      "status": "queued"
+    },
+    {
       "slug": "2026-12-31-yilbasi",
       "kind": "reel",
       "style": "hipergerçekçi",
@@ -947,22 +973,10 @@
     "chatgpt-live-dictation",
     "instagram-content-protection",
     "gemini-gif",
-    "canva-ai-controls"
+    "canva-ai-controls",
+    "youtube-co-views"
   ],
   "hot_pending": [
-    {
-      "key": "youtube-co-views",
-      "topic": "YouTube herkese açık izlenme sayılarına TV'deki birlikte izleyenleri (co-views) ekledi",
-      "found": "2026-11-17",
-      "big": true,
-      "note": "16 Kasım'da duyuruldu, Kasım 2026'dan itibaren yayılıyor: TV'de birlikte izlendiği tahmin edilen her kişi herkese açık izlenme sayısına ekleniyor (yalnızca TV; telefon/bilgisayar/tablet değişmedi). YPP gelirleri ve uygunluk etkilenmiyor (engaged views'a dahil değil). Studio'da 'co-view rate' metriği var; tahmin modeli kamera/mikrofon kullanmıyor. YouTube TV'de günde 1 milyar saatten fazla izleniyor. Öğle görevi (17 Kasım): akşamki LinkedIn Reel'i zaten Sıcak Gelişme olduğu için kuyruğa dokunulmadı; 18 Kasım akşam Reel'i için aday. 18 Kasım: akşam Reel'i Instagram Direct (Türkiye testi) oldu; co-views yine bekliyor. 21 Kasım: story'de kısaca işlendi (feed için yine aday).",
-      "sources": [
-        "https://support.google.com/youtube/answer/2991785",
-        "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
-        "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/",
-        "https://www.dexerto.com/entertainment/youtube-now-shows-co-views-in-big-shake-up-to-view-counts-3428863/"
-      ]
-    },
     {
       "key": "cambridge-woty-2026-human",
       "topic": "Cambridge Dictionary 2026 yılın kelimesi: 'human' (yapay zekâ ile insan arasındaki sınır tartışması); yeni eklenenler: aura farming, looksmaxxing",
@@ -1357,7 +1371,8 @@
         "https://support.google.com/youtube/answer/2991785",
         "https://www.netinfluencer.com/youtube-adds-estimated-tv-co-views-to-public-view-counts/",
         "https://ppc.land/youtube-adds-estimated-tv-co-viewers-to-public-view-counts/"
-      ]
+      ],
+      "produced": true
     },
     {
       "date": "2026-11-24",
