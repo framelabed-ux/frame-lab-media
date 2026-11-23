@@ -10,7 +10,7 @@
 const OUT=document.getElementById('c').getContext('2d');
 const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
 const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00', WALL='#1C1C22', SKIN='#F2C9A0';
-window.DUR=28.0;
+window.DUR=44.6;
 window.SFX=[[0.05,'pop2'],[2.2,'pop'],[2.6,'tick'],[3.2,'pop'],[3.5,'tick'],[3.9,'ding'],[5.0,'whoosh'],[8.0,'whoosh'],[8.5,'pop'],[8.8,'pop'],[9.1,'pop'],[9.4,'ding'],
   [11.0,'whoosh'],[12.2,'pop2'],[13.0,'pop2'],[14.2,'alarm'],[17.0,'whoosh'],[18.0,'pop'],[18.8,'pop'],[19.8,'ding'],[22.5,'whoosh'],[23.4,'pop'],[24.6,'pop'],[25.8,'pop'],[26.6,'ding']];
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
@@ -92,8 +92,9 @@ const DLG=[
  [11.0,['PEKİ İÇERİK ÜRETİCİ','DAHA ÇOK MU','KAZANACAK?'],2],
  [14.0,['HAYIR. GELİR VE','PARA KAZANMA','ŞARTLARI','DEĞİŞMİYOR.'],0],
  [17.0,['KAMERA YOK,','MİKROFON YOK.','SAYIYI BİR TAHMİN','MODELİ HESAPLIYOR.'],-1],
- [22.5,["SEN YOUTUBE'U",'EN ÇOK NEREDE','İZLİYORSUN?','YORUMLARA YAZ!'],3]];
-window.render=function(t){
+ [22.5,["SEN YOUTUBE'U",'EN ÇOK NEREDE','İZLİYORSUN?','YORUMLARA YAZ!'],3],
+ [24.78,['HER AKŞAM BİR KONU,','30 SANİYEDE.','YARIN: SESLİ Mİ,','SESSİZ Mİ?'],2]];
+function renderScene(t){
   X.imageSmoothingEnabled=false;
   X.fillStyle=INK;X.fillRect(0,0,270,480);
   const sc=t<5?0:t<8?1:t<11?2:t<17?3:t<22.5?4:5;
@@ -189,6 +190,13 @@ window.render=function(t){
   // geçiş perdeleri
   [5.0,8.0,11.0,17.0,22.5].forEach(a=>wipe(t,a));
   OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
-};
+}
+/* Ece'nin seslendirmesine hizalama: sahne zamanı (WS) -> ses zamanı (WV) */
+const WS=[0,2.0,3.9,5.0,8.0,11.0,14.0,17.0,18.0,18.8,19.8,22.5,28.0];
+const WV=[0,2.2,4.77,5.98,13.0,17.79,20.89,25.15,28.2,29.0,30.0,31.72,44.6];
+function lin(x,A,B){if(x<=A[0])return B[0];for(let i=1;i<A.length;i++){if(x<=A[i]){const f=(x-A[i-1])/(A[i]-A[i-1]);return B[i-1]+f*(B[i]-B[i-1]);}}return B[B.length-1];}
+const warp=t=>lin(t,WS,WV), unwarp=v=>lin(v,WV,WS);
+window.SFX=window.SFX.map(([a,n])=>[Math.round(warp(a)*100)/100,n]);
+window.render=function(v){renderScene(unwarp(v));};
 window.render(0);
 </script></body></html>
