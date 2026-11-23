@@ -697,6 +697,27 @@
    "voice": true
   },
   {
+   "slug": "2026-11-24-sesli-mi-sessiz-mi",
+   "kind": "reel",
+   "style": "arayuz",
+   "publish_date": "2026-11-24",
+   "title": "Sesli video mu, sessiz video mu? Kendi 14 Reel'imizden",
+   "files": [
+    "posts/2026-11-24-sesli-mi-sessiz-mi/reel.mp4"
+   ],
+   "cover": "posts/2026-11-24-sesli-mi-sessiz-mi/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "perde-arkasi",
+   "voice": true,
+   "music": "house",
+   "caption": "Sesli video mu, sessiz video mu? Kendi hesabımızın son 7 gününe baktık.\n\nSeslendirdiğimiz 7 Reel'in 6'sı 1.000'den fazla kişiye ulaştı. Sadece yazı ve müzikle çıkan 7 Reel'in 7'si de 120 kişinin altında kaldı.\n\nİlk 3 saniyede kaydırıp geçenler, sesli videolarda izleyenlerin yarısıydı; sessizlerde dörtte üçü.\n\nDürüst olalım: Sessiz videolar daha kısaydı. Ama erişim farkı 10 kat.\n\nYüzünü göstermek zorunda değilsin, ama sesini kullan.\n\nSen videolarını seslendiriyor musun? Yorumlara yaz, video çeken arkadaşına da gönder.\n\nVeri: @frame.labo, 17–23 Kasım 2026, Instagram istatistikleri.\n\n#reels #instagramreels #içeriküretimi #seslendirme #sosyalmedya #reelsipuçları #dijitalpazarlama",
+   "sources": [
+    "kendi verimiz: Windsor instagram, 23 Kasım 14:00 okuması, 17–23 Kasım"
+   ],
+   "note": "Ece'nin seslendirmesiyle 23 Kasım'da hazırlandı (sahne doğrudan ses zamanında). 48,6 sn + 3,2 sn logo kapanışı. Akşam 19:10.",
+   "status": "queued"
+  },
+  {
    "slug": "2026-12-31-yilbasi",
    "kind": "reel",
    "style": "hipergerçekçi",
@@ -1396,7 +1417,8 @@
    "visual_note": "Gerçekçi arayüz: telefonda istatistik ekranı; iki sütun Reel kartı (hoparlör ikonlu / sessiz ikonlu), erişim sayıları sayarak yükselir; skip oranı halkaları. Veriler (Windsor, 23 Kasım 14:00 okuması, 17–23 Kasım): seslendirmeli 7 Reel: 1.015, 1.028, 1.404, 1.365, 1.133, 136, 1.155 erişim (6/7 > 1.000), skip ortalaması ~%50. Sessiz 7 Reel: 107, 110, 115, 5, 108, 110, 105 erişim (hepsi < 120), skip ortalaması ~%74 (erişimi 5 olan hariç). Sessizler 7–10 sn'lik sabah videoları; metinde bu açıkça söyleniyor.",
    "sources": [
     "kendi verimiz: posts/state.json daily_metrics ve weekly_metrics (15–20 Kasım)"
-   ]
+   ],
+   "produced": true
   },
   {
    "date": "2026-11-25",
