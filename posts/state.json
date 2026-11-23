@@ -718,6 +718,28 @@
    "status": "queued"
   },
   {
+   "slug": "2026-11-25-turuncu-mavi-afisler",
+   "kind": "reel",
+   "style": "3d",
+   "publish_date": "2026-11-25",
+   "title": "Film afişleri neden hep turuncu ve mavi?",
+   "files": [
+    "posts/2026-11-25-turuncu-mavi-afisler/reel.mp4"
+   ],
+   "cover": "posts/2026-11-25-turuncu-mavi-afisler/cover.jpg",
+   "cover_tone": "dark",
+   "topic_area": "gorsel-kultur",
+   "voice": true,
+   "music": "synthwave",
+   "caption": "Film afişleri neden hep turuncu ve mavi?\n\nHollywood'da çok sevilen bu ikilinin adı turkuaz ve turuncu. Sebep insan teni: Ten rengi turuncuya yakın. Arka planı mavi-yeşile çekince yüzler öne çıkıyor, çünkü bu iki renk renk çemberinde birbirinin karşısında.\n\nAteş, patlama ve gün batımı zaten turuncu; gece ve gökyüzü mavi. Kontrast hazır.\n\nKapak görselinde bir şeyi öne çıkarmak mı istiyorsun? Karşıt rengini arkaya koy.\n\nSen bu ikiliyi en son hangi afişte gördün? Yorumlara yaz.\n\nKaynak: Adobe, PetaPixel\n\n#renkteorisi #grafiktasarım #sinema #filmafişi #renkpaleti #tasarım #görselkültür",
+   "sources": [
+    "https://www.adobe.com/creativecloud/video/hub/features/why-use-orange-teal-grading",
+    "https://petapixel.com/2017/02/23/orange-teal-look-popular-hollywood/"
+   ],
+   "note": "Ece'nin seslendirmesiyle 23 Kasım'da hazırlandı (sahne doğrudan ses zamanında). 39,4 sn + 3,2 sn logo kapanışı. Turuncu/turkuaz yalnızca konu gereği afiş, renk çemberi ve örnek kartlarda; zemin marka koyusu. Akşam 19:10.",
+   "status": "queued"
+  },
+  {
    "slug": "2026-12-31-yilbasi",
    "kind": "reel",
    "style": "hipergerçekçi",
@@ -1431,7 +1453,8 @@
    "sources": [
     "https://www.adobe.com/creativecloud/video/hub/features/why-use-orange-teal-grading",
     "https://petapixel.com/2017/02/23/orange-teal-look-popular-hollywood/"
-   ]
+   ],
+   "produced": true
   },
   {
    "date": "2026-11-26",
