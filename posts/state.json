@@ -666,9 +666,7 @@
    ],
    "note": "Tasarım ekranında yapay zekâ öneri balonları üst üste açılıyor → Ayarlar > İzinler anahtarı kapanıyor → balonlar kayboluyor, 'Arka planı kaldır' kalıyor. Kare 0. karede şaşkın, izleyiciye bakıyor.",
    "status": "published"
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-23-youtube-tv-izlenme",
    "kind": "reel",
@@ -693,9 +691,13 @@
     "https://allaboutcookies.org/youtube-co-view-tracking-privacy"
    ],
    "note": "Ece'nin seslendirmesiyle yeniden hizalandı (23 Kasım 14:00; WARP). 44,6 sn + 3,2 sn logo kapanışı. Sessiz eski sürüm: sessiz-reel.mp4.",
-   "status": "queued",
-   "voice": true
-  },
+   "status": "published",
+   "voice": true,
+   "media_id": "17908664565600608",
+   "published_at": "2026-11-23T19:15:12+03:00"
+  }
+ ],
+ "queue": [
   {
    "slug": "2026-11-24-sesli-mi-sessiz-mi",
    "kind": "reel",
