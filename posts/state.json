@@ -1409,6 +1409,43 @@
         "https://www.adobe.com/creativecloud/video/hub/features/why-use-orange-teal-grading",
         "https://petapixel.com/2017/02/23/orange-teal-look-popular-hollywood/"
       ]
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "2026-11-26-doksan-dokuz",
+      "style": "oyun",
+      "topic_area": "psikoloji",
+      "title": "Neden fiyatlar hep 99 ile biter? (soldaki rakam etkisi)",
+      "script": "Neden fiyatlar hep doksan dokuzla biter? Cevap: soldaki rakam.\n\nBeynimiz bir fiyatı soldan okur ve ilk rakama çok önem verir. Üç lira yerine iki lira doksan dokuz kuruş yazınca ilk rakam üçten ikiye düşer.\n\nNew York Üniversitesi'nden iki araştırmacı bunu inceledi: Doksan dokuzla biten fiyat her zaman değil, ama özellikle soldaki rakam değiştiğinde daha ucuz algılanabiliyor.\n\nYani asıl iş bir kuruşta değil, değişen ilk rakamda.\n\nSen en son hangi doksan dokuzlu fiyatı ucuz sandın? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: saatlik mi, proje başı mı fiyat?",
+      "visual_note": "Oyun tarzı: piksel market rafı, etiket 3,00 → 2,99 olurken soldaki rakam dev gibi büyüyüp küçülür; Kare'nin gözü önce soldaki rakama kayar (göz izi noktaları soldan sağa). 'Her zaman değil' kısmı için ikinci etikette rakam değişmeyince Kare omuz silker. Gerçek marka etiketi yok.",
+      "sources": [
+        "https://www.sciencedaily.com/releases/2005/06/050607030351.htm",
+        "https://phys.org/news/2005-06-consumers-react-prices.html"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "slug": "2026-11-27-saatlik-mi-proje-mi",
+      "style": "arayuz",
+      "topic_area": "para",
+      "title": "Saatlik mi, proje başı mı fiyat vermelisin?",
+      "script": "Freelance iş alırken saatlik mi fiyat verirsin, proje başı mı?\n\nSaatlik fiyat, işin ne kadar süreceği belli değilse seni korur. Ama hızlandıkça daha az kazanırsın.\n\nProje başı fiyat, müşterinin toplam tutarı baştan görmesini sağlar. Hızlı çalışırsan kazancın artar. Ama kapsamı yazmazsan iş büyür, ücret aynı kalır.\n\nPratik yol: Kapsamı net yaz, revizyon sayısını belirle, ekstralara ayrı fiyat koy.\n\nSen hangisiyle çalışıyorsun? Yorumlara yaz, freelance başlayan arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: Instagram algoritması ne demek?",
+      "visual_note": "Gerçekçi arayüz: telefonda teklif ekranı; iki sekme 'Saatlik' / 'Proje başı'. Saatlikte kronometre döner, hız artınca kazanç çubuğu kısalır; proje başında sabit tutar kartı, kapsam satırları eklendikçe 'Revizyon: 2', 'Ekstra: ayrı fiyat' kilitlenir. Rakam ve TL tutarı yazılmaz (genel tavsiye).",
+      "sources": [
+        "genel tavsiye; istatistik yok"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "slug": "2026-11-28-algoritma-nedir",
+      "style": "3d",
+      "topic_area": "platform",
+      "title": "Kare Açıklıyor: Instagram algoritması ne demek?",
+      "script": "Kare Açıklıyor: Instagram algoritması ne demek?\n\nAslında tek bir algoritma yok. Instagram'ın kendi açıklamasına göre akış, hikâyeler, keşfet ve Reels'in her biri kendi sıralama sistemini kullanıyor.\n\nReels'te en önemli tahminler şunlar: Videoyu birine gönderir misin, sonuna kadar izler misin, beğenir misin, sesine tıklar mısın?\n\nYani algoritma, ne yapacağını tahmin etmeye çalışan bir sistem. Ona yön veren de senin davranışın.\n\nSen Instagram'da en çok hangi bölümde vakit geçiriyorsun? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
+      "visual_note": "3D: Kare'nin önünde dört ayrı 3D çark/kutu (akış, hikâyeler, keşfet, Reels), her biri farklı hızda döner; Reels kutusundan dört ikon çıkar (gönder, tam izleme, beğeni, ses). Instagram logosu kullanılmaz.",
+      "sources": [
+        "https://about.instagram.com/blog/announcements/instagram-ranking-explained"
+      ]
     }
   ]
 }
