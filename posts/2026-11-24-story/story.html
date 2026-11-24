@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab story (oyun tarzı): seslendirme ipucu. Stüdyo yoksa telefonla, açık kıyafet dolabına doğru konuşarak kaydet; kıyafetler yankıyı emer. */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00';
+
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler). Her satır 5 bitlik sayı. Aksanlar ayrı satırda. */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'%':[24,25,2,4,8,19,3],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite: 16x18, kafa yeşil, ekran siyah, beyaz gözler */
+function kareSprite(x0,y0,frame,face='happy',k=3){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM; // bacaklar
+  if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  // kollar
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+
+/* askıdaki kıyafet: askı + gövde */
+function shirt(x,y,col,h=46){X.fillStyle=CREAM;X.fillRect(x+7,y,2,4);X.fillRect(x+2,y+4,12,2);
+  X.fillStyle=INK;X.fillRect(x-1,y+5,18,h+2);X.fillStyle=col;X.fillRect(x,y+6,16,h);X.fillRect(x-3,y+6,3,10);X.fillRect(x+16,y+6,3,10);
+  X.fillStyle=INK;X.fillRect(x+7,y+6,2,6);}
+/* piksel telefon */
+function phone(x,y){box(x,y,12,20,INK,CREAM,2);X.fillStyle=PINK;X.fillRect(x+4,y+6,4,6);X.fillStyle=WHITE;X.fillRect(x+5,y+15,2,2);}
+function render(){
+  X.imageSmoothingEnabled=false;
+  X.fillStyle=INK;X.fillRect(0,0,270,480);
+  box(64,40,142,30,PINK,INK,3); txt('SES İPUCU',135,50,2,WHITE,'center');
+  // dolap: gövde, açık kapaklar, askı borusu, kıyafetler
+  box(55,88,160,170,'#1B1B20',CREAM,3);
+  box(22,92,34,162,DLIME,INK,2); box(214,92,34,162,DLIME,INK,2);
+  X.fillStyle=INK;X.fillRect(48,170,4,10);X.fillRect(218,170,4,10);
+  X.fillStyle=CREAM;X.fillRect(60,100,150,3);
+  shirt(64,98,PINK,52); shirt(88,98,CREAM,40); shirt(164,98,LIME,48); shirt(188,98,PINK,38);
+  // ses dalgaları kıyafetlere gidip sönüyor
+  X.fillStyle=LIME; for(let i=0;i<3;i++){X.fillRect(126-i*7,150-i*5,2,10+i*10);X.fillRect(142+i*7,150-i*5,2,10+i*10);}
+  // Kare dolabın önünde, telefonla konuşuyor
+  kareSprite(122,186,0,'wow',2); phone(158,196);
+  X.fillStyle=CREAM; X.fillRect(55,262,160,3);
+  txt('YANKI YOK',135,290,3,LIME,'center',null);
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+  const O=OUT; O.fillStyle=INK; O.beginPath();O.roundRect(48,1350,984,400,28);O.fill();O.lineWidth=8;O.strokeStyle=LIME;O.stroke();
+  O.textAlign='center';O.textBaseline='alphabetic';
+  O.fillStyle=WHITE;O.font='800 48px "Inter"';
+  O.fillText('Seslendirme için stüdyo şart değil:',540,1432);O.fillText('telefonunla, açık kıyafet dolabına',540,1492);O.fillText('doğru konuşarak kaydet.',540,1552);
+  O.fillStyle='#D2D2D8';O.font='500 38px "Inter"';O.fillText('Kıyafetler yankıyı emer, ses daha temiz çıkar.',540,1616);
+  O.fillStyle=PINK;O.font='800 44px "Inter"';O.fillText("Sen nerede kaydediyorsun? DM'den yaz.",540,1696);
+}
+render();
+</script></body></html>
