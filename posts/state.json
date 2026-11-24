@@ -717,9 +717,7 @@
     "https://arxiv.org/pdf/1907.07032"
    ],
    "note": "Black Friday (27 Kasım) öncesi kıtlık etkisi; sıfırlanan sayaç esprisi, 3D Kare + 3D yüzde etiketi. Sessiz (müzikli), 10 sn + 3,2 sn logo."
-  }
- ],
- "queue": [
+  },
   {
    "slug": "2026-11-24-sesli-mi-sessiz-mi",
    "kind": "reel",
@@ -734,13 +732,18 @@
    "topic_area": "perde-arkasi",
    "voice": true,
    "music": "house",
-   "caption": "Sesli video mu, sessiz video mu? Kendi hesabımızın son 7 gününe baktık.\n\nSeslendirdiğimiz 7 Reel'in 6'sı 1.000'den fazla kişiye ulaştı. Sadece yazı ve müzikle çıkan 7 Reel'in 7'si de 120 kişinin altında kaldı.\n\nİlk 3 saniyede kaydırıp geçenler, sesli videolarda izleyenlerin yarısıydı; sessizlerde dörtte üçü.\n\nDürüst olalım: Sessiz videolar daha kısaydı. Ama erişim farkı 10 kat.\n\nYüzünü göstermek zorunda değilsin, ama sesini kullan.\n\nSen videolarını seslendiriyor musun? Yorumlara yaz, video çeken arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi kısa ve net çözüyoruz. Yarınki: film afişleri neden hep turuncu ve mavi?\n\nVeri: @frame.labo, 17–23 Kasım 2026, Instagram istatistikleri.\n\n#reels #instagramreels #içeriküretimi #seslendirme #sosyalmedya #reelsipuçları #dijitalpazarlama",
+   "caption": "Sesli video mu, sessiz video mu? Kendi hesabımızın son 7 gününe baktık.\n\nSeslendirdiğimiz 7 Reel'in 6'sı 1.000'den fazla kişiye ulaştı. Sadece yazı ve müzikle çıkan 7 Reel'in 7'si de 120 kişinin altında kaldı.\n\nİlk 3 saniyede kaydırıp geçenler, sesli videolarda izleyenlerin yarısıydı; sessizlerde dörtte üçü.\n\nDürüst olalım: Sessiz videolar daha kısaydı. Ama erişim farkı 10 kat.\n\nYüzünü göstermek zorunda değilsin, ama sesini kullan.\n\nSen videolarını seslendiriyor musun? Yorumlara yaz, video çeken arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi kısa ve net çözüyoruz. Yarınki: Film afişleri neden hep turuncu ve mavi?\n\nVeri: @frame.labo, 17–23 Kasım 2026, Instagram istatistikleri.\n\n#reels #instagramreels #içeriküretimi #seslendirme #sosyalmedya #reelsipuçları #dijitalpazarlama",
    "sources": [
     "kendi verimiz: Windsor instagram, 23 Kasım 14:00 okuması, 17–23 Kasım"
    ],
    "note": "Ece'nin seslendirmesiyle 23 Kasım'da hazırlandı (sahne doğrudan ses zamanında). 48,6 sn + 3,2 sn logo kapanışı. Akşam 19:10.",
-   "status": "queued"
-  },
+   "status": "published",
+   "media_id": "18121114789800530",
+   "published_at": "2026-11-24T19:15+03:00",
+   "date": "2026-11-24"
+  }
+ ],
+ "queue": [
   {
    "slug": "2026-11-25-turuncu-mavi-afisler",
    "kind": "reel",
@@ -1160,6 +1163,14 @@
    "comment": "İzlenme sayisi bence",
    "draft": "İzlenme sayısı ilk bakışta en çok göze çarpan sayı, haklısın! Mosseri'ye göre asıl belirleyici olan ise izlenme süresi, yani videonun ne kadar uzun izlendiği 👀",
    "created": "2026-11-21"
+  },
+  {
+   "comment_id": "18104009567273721",
+   "media_id": "17908664565600608",
+   "username": "nabe.r7639",
+   "comment": "İlk sabit",
+   "draft": "İlk yorum senden geldi, teşekkürler! Sen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? 📺",
+   "created": "2026-11-24"
   }
  ],
  "weekly_metrics": [
