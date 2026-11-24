@@ -695,6 +695,28 @@
    "voice": true,
    "media_id": "17908664565600608",
    "published_at": "2026-11-23T19:15:12+03:00"
+  },
+  {
+   "slug": "2026-11-24-indirim-sayaci",
+   "kind": "short-reel",
+   "style": "3d",
+   "media_id": "18169695973478308",
+   "publish_date": "2026-11-24",
+   "published_at": "2026-11-24T09:00+03:00",
+   "cover_type": "kare",
+   "cover_tone": "light",
+   "topic_area": "psikoloji",
+   "music": "funk",
+   "files": [
+    "posts/2026-11-24-indirim-sayaci/reel.mp4"
+   ],
+   "cover": "posts/2026-11-24-indirim-sayaci/cover.jpg",
+   "caption": "Sayaç sıfıra indi, sonra yeniden 10 dakikadan başladı. Tanıdık mı?\n\nBlack Friday bu cuma, 27 Kasım'da. Önümüzdeki günlerde \"İndirim bitiyor!\" yazan sayaçları ve \"Son 2 ürün\" uyarılarını çok göreceksin.\n\nNeden işe yarıyor? Psikolojide adı kıtlık etkisi: Bir şey azaldığında ya da süresi dolmak üzereyken onu daha değerli buluruz. Süre baskısı da acele karar verdirir.\n\nBazı sayaçlar gerçek bile değil. Princeton araştırmacıları 2019'da 11 bin alışveriş sitesini taradı ve 361 sitede geri sayım sayacı buldu. Bir kısmında süre dolunca sayaç baştan başlıyordu ya da süre bittiği hâlde indirim sürüyordu.\n\nKendine bir kural koy:\n• Sepete ekle, 24 saat bekle.\n• Ertesi gün hâlâ istiyorsan al.\n• Fiyatı başka bir sitede de karşılaştır.\n\nBunu indirim seven arkadaşına gönder. Sen en son hangi sayaca kandın? Yorumlara yaz.\n\nHer gün dijital dünyadan bir şeyi kısa ve net çözüyoruz. Bu akşamki: sesli video mu, sessiz video mu?\n\nKaynak: Mathur ve ark., \"Dark Patterns at Scale\", Princeton Üniversitesi, 2019 (webtransparency.cs.princeton.edu/dark-patterns)\n\n#blackfriday #indirim #psikoloji #pazarlama #alışveriş #tasarım #dijitalgündem",
+   "sources": [
+    "https://webtransparency.cs.princeton.edu/dark-patterns",
+    "https://arxiv.org/pdf/1907.07032"
+   ],
+   "note": "Black Friday (27 Kasım) öncesi kıtlık etkisi; sıfırlanan sayaç esprisi, 3D Kare + 3D yüzde etiketi. Sessiz (müzikli), 10 sn + 3,2 sn logo."
   }
  ],
  "queue": [
@@ -997,6 +1019,17 @@
    "topic_area": "para",
    "sources": [],
    "media_id": "17962798551040077"
+  },
+  {
+   "date": "2026-11-24",
+   "slug": "2026-11-24-story",
+   "file": "posts/2026-11-24-story/story.jpg",
+   "about": "Seslendirme ipucu: stüdyo şart değil, telefonla açık kıyafet dolabına doğru konuşarak kaydet; kıyafetler yankıyı emer. 'Sen nerede kaydediyorsun? DM'den yaz.' (oyun tarzı, koyu)",
+   "layout": "game",
+   "style": "oyun",
+   "topic_area": "perde-arkasi",
+   "sources": [],
+   "media_id": "18201667504402037"
   }
  ],
  "replied_comments": [
@@ -1031,7 +1064,8 @@
   "instagram-content-protection",
   "gemini-gif",
   "canva-ai-controls",
-  "youtube-co-views"
+  "youtube-co-views",
+  "indirim-sayaci-kitlik-etkisi"
  ],
  "hot_pending": [
   {
@@ -1359,6 +1393,39 @@
    },
    "note": "kerning-nedir (18095163653204124) 2. günde 135 erişim, skip %61, 6,5 sn: genişlemedi. Takipçi 6 → 8.",
    "lesson": "Seslendirmeli akşam Reel'i 6/7 kez test havuzunu aştı; 'ilk müşteriyi bulmanın 3 adımı' gibi uygulanabilir adımlar rekor kaydetme getirdi (15). Sessiz sabah Reel'i yine ~110 (skip %60, 4 sn). Bugün sabah Reel'i herkesin bildiği bir araçla (Canva) ve kaydedilecek somut bir ayar yoluyla açıldı; story de dünkü en çok kaydedilen Reel'in devamı olan bir teklif kalıbı."
+  },
+  {
+   "date": "2026-11-24",
+   "followers": 9,
+   "yesterday_morning": {
+    "media_id": "17915757267510746",
+    "slug": "2026-11-23-canva-ai-kapat",
+    "kind": "short-reel",
+    "style": "arayuz",
+    "reach": 107,
+    "views": 124,
+    "skip_rate": 0.827,
+    "avg_watch_s": 2.5,
+    "shares": 0,
+    "saved": 0,
+    "likes": 1
+   },
+   "yesterday_evening": {
+    "media_id": "17908664565600608",
+    "slug": "2026-11-23-youtube-tv-izlenme",
+    "kind": "reel",
+    "style": "oyun (Ece seslendirmesi)",
+    "reach": 1178,
+    "views": 1358,
+    "skip_rate": 0.403,
+    "avg_watch_s": 15.5,
+    "shares": 2,
+    "saved": 1,
+    "likes": 7,
+    "comments": 1
+   },
+   "note": "Yayından ~16 saat sonra ölçüldü. Akşam Reel'i şimdiye kadarki en iyi tutma (skip %40, 15,5 sn). ilk-freelance-musteri 2. günde 1.163 erişim, 14 kaydetme. Takipçi 8 → 9.",
+   "lesson": "Seslendirmeli akşam Reel'i 7/8 kez test havuzunu aştı ve en iyi tutmaya ulaştı (oyun tarzı + herkesin bildiği YouTube). Sessiz sabah Reel'i en kötü skip'te (%83): açılış bir ayar ekranıydı, karakter yoktu. Bugün sabah Reel'i 0. karede izleyiciye bakan, konuşan 3D Kare + ilerleyen sayaçla ve herkesin bu hafta göreceği bir durumla (Black Friday sayaçları) açıldı."
   }
  ],
  "planned_reels": [
