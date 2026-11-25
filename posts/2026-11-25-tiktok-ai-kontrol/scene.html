@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab sabah kısa Reel'i 25 Kasım (oyun tarzı): TikTok'un herkese açık yapay zekâ kontrol aracı.
+   Kare büyüteçle bir kedi videosunu tarar; araç TikTok ve CapCut (ByteDance) yapay zekâsıyla yapılanı bulur, başka araçlarla yapılanı bulamaz.
+   Kaynak: TNW, Music Business Worldwide, Dataconomy (23 Kasım 2026). */
+const COVER=(location.hash==='#cover');
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', SKY='#2B2B33', SHADE='#D9D5C8';
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'%':[24,25,2,4,8,19,3],"'":[4,4,8,0,0,0,0]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml'],'Â':['A','circ']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='circ'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);X.fillRect(x+2*sz,y-3*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=null){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+window.DUR=10.0;
+window.SFX=[[0.05,'pop2'],[2.2,'whoosh'],[2.5,'tick'],[2.8,'tick'],[3.1,'tick'],[3.25,'ding'],[5.2,'pop'],[6.9,'whoosh'],[8.5,'pop2']];
+/* Kare sprite 17x18 */
+function kare(x0,y0,frame,face,k,glass){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);
+  X.fillStyle=PINK;X.fillRect(7,-4,3,3);X.fillStyle=INK;X.fillRect(8,-1,1,2);
+  box(0,1,17,13,LIME,INK,1);X.fillStyle=INK;X.fillRect(2,3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(4,5,3,3);X.fillRect(10,5,3,3);X.fillStyle=PINK;X.fillRect(7,9,3,2);}
+  else if(face==='wink'){X.fillRect(4,6,3,1);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);}
+  else{X.fillRect(4,5,2,3);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);}
+  X.fillStyle=INK;
+  if(frame===0){X.fillRect(4,14,2,3);X.fillRect(11,14,2,3);X.fillRect(3,17,4,1);X.fillRect(10,17,4,1);}
+  else{X.fillRect(4,14,2,3);X.fillRect(11,14,2,2);X.fillRect(3,17,4,1);X.fillRect(11,16,4,1);}
+  X.fillRect(17,7,2,1);
+  if(glass){ // sol elde büyüteç: halka cam + çapraz sap
+    X.fillRect(-2,7,2,1);X.fillRect(-3,6,1,1);X.fillRect(-4,5,1,1);X.fillRect(-5,4,1,1);
+    const ring=[' XXXXX ','X     X','X     X','X     X','X     X','X     X',' XXXXX '];
+    X.fillStyle='rgba(198,242,78,.55)';X.fillRect(-12,-4,5,5);X.fillRect(-13,-3,7,3);X.fillRect(-12,-5,5,7);
+    X.fillStyle=INK;ring.forEach((r,i)=>{for(let j=0;j<7;j++) if(r[j]==='X') X.fillRect(-13+j,-6+i,1,1);});
+    X.fillStyle=WHITE;X.fillRect(-11,-4,1,2);
+  } else {X.fillRect(-2,7,2,1);}
+  X.restore();
+}
+/* telefon + içindeki "video" */
+function phone(x,y,w,h,t,kind,scan){
+  box(x,y,w,h,INK,INK,2);
+  const sx=x+4,sy=y+8,sw=w-8,sh=h-18;
+  X.fillStyle=SKY;X.fillRect(sx,sy,sw,sh);
+  X.save();X.beginPath();X.rect(sx,sy,sw,sh);X.clip();
+  if(kind==='cat'){ // zıplayan kedi
+    X.fillStyle='#3A3A44';X.fillRect(sx,sy+sh-14,sw,14);
+    const b=Math.round(Math.abs(Math.sin(t*6))*8), cx=sx+sw/2-11, cy=sy+sh-38-b;
+    X.fillStyle=WHITE;X.fillRect(cx,cy+6,22,16);X.fillRect(cx,cy,5,6);X.fillRect(cx+17,cy,5,6);
+    X.fillRect(cx+4,cy+22,4,4);X.fillRect(cx+14,cy+22,4,4);
+    X.fillStyle=INK;X.fillRect(cx+5,cy+11,3,3);X.fillRect(cx+14,cy+11,3,3);X.fillStyle=PINK;X.fillRect(cx+10,cy+16,2,2);
+    X.fillStyle=WHITE;const tw=Math.round(Math.sin(t*6)*3);X.fillRect(cx+22,cy+12+tw,6,3);
+    X.fillStyle='#3A3A44';X.fillRect(cx+2,sy+sh-14,18,2);
+  } else { // dans eden robot
+    X.fillStyle='#3A3A44';X.fillRect(sx,sy+sh-14,sw,14);
+    const sway=Math.round(Math.sin(t*5)*4), cx=sx+sw/2-9+sway, cy=sy+sh-46;
+    X.fillStyle=PINK;X.fillRect(cx,cy,18,14);X.fillStyle=INK;X.fillRect(cx+4,cy+5,3,3);X.fillRect(cx+11,cy+5,3,3);
+    X.fillStyle=PINK;X.fillRect(cx+2,cy+16,14,14);X.fillRect(cx+4,cy+30,3,6);X.fillRect(cx+11,cy+30,3,6);
+    const a=Math.sin(t*5)>0?-6:0;X.fillRect(cx-5,cy+17+a,5,3);X.fillRect(cx+18,cy+17-a-6+6,5,3);
+  }
+  if(scan!=null){ // tarama çizgisi
+    const ly=sy+Math.round(scan*(sh-2));
+    X.fillStyle='rgba(198,242,78,.28)';X.fillRect(sx,sy,sw,ly-sy);
+    X.fillStyle=LIME;X.fillRect(sx,ly,sw,2);
+  }
+  X.restore();
+  X.fillStyle='#55555F';X.fillRect(x+w/2-6,y+h-7,12,2);
+}
+function check(x,y,col){ // piksel onay işareti, 20x16
+  X.fillStyle=INK;
+  const P=[[0,8],[2,10],[4,12],[6,10],[8,8],[10,6],[12,4],[14,2],[16,0]];
+  P.forEach(([a,b])=>X.fillRect(x+a-1,y+b-1,6,6));
+  X.fillStyle=col;P.forEach(([a,b])=>X.fillRect(x+a,y+b,4,4));
+}
+function stamp(cx,cy,col,kind,s){ // daire içinde işaret, s: ölçek 0..1
+  if(s<=0) return; const r=Math.round(17*s);
+  X.fillStyle=INK;X.fillRect(cx-r-2,cy-r+2,2*r+4,2*r-4);X.fillRect(cx-r+2,cy-r-2,2*r-4,2*r+4);
+  X.fillStyle=col;X.fillRect(cx-r,cy-r+2,2*r,2*r-4);X.fillRect(cx-r+2,cy-r,2*r-4,2*r);
+  if(s<1) return;
+  if(kind==='ok') check(cx-10,cy-8,WHITE); else {X.fillStyle=WHITE; txt('?',cx-7,cy-10,3,WHITE);}
+}
+const ease=x=>1-Math.pow(1-clamp(x),3);
+const pop=(t,t0)=>{const d=t-t0; if(d<0) return 0; if(d<0.12) return d/0.12*1.25; if(d<0.22) return 1.25-(d-0.12)/0.1*0.25; return 1;};
+window.render=function(t){
+  X.imageSmoothingEnabled=false;
+  X.fillStyle=CREAM;X.fillRect(0,0,270,480);
+  if(COVER){ renderCover(t); return blit(); }
+  // seri etiketi + başlık (0. karede tam)
+  box(85,38,100,15,PINK,INK,2);txt('YENİ ARAÇ',135,42,1,WHITE,'center');
+  txt('BU VİDEO',135,64,4,INK,'center');
+  txt('YAPAY ZEKÂ MI?',135,104,3,PINK,'center');
+  const split=ease((t-3.2)/0.45);         // 3.2 sn'de tek telefon ikiye ayrılır
+  const fr=Math.floor(t*4)%2;
+  // tek telefon (0–3.2): kedi videosu + tarama
+  if(split<1){
+    const scan=t<2.2?((t*0.9)%1):(t<3.2?((t-2.2)/1.0):null);
+    const px=40+Math.round(-18*split), py=140;
+    phone(px,py,96,168,t,'cat',scan);
+    if(t>=2.2&&t<3.2){ // tarama çubuğu
+      box(px,py+174,96,12,WHITE,INK,2);X.fillStyle=LIME;X.fillRect(px+3,py+177,Math.round(90*clamp((t-2.2)/1.0)),6);
+    }
+    // Kare büyüteçle sağda
+    const ky=196+Math.round(Math.sin(t*5)*1.5);
+    X.fillStyle=SHADE;X.fillRect(178,ky+56,46,3);
+    kare(176,ky,fr,'happy',3,true);
+  } else {
+    // iki telefon: solda TikTok/CapCut (bulur), sağda başka araç (bulamaz)
+    phone(18,140,86,150,t,'cat',null);
+    phone(166,140,86,150,t,'robot',null);
+    stamp(61,215,LIME,'ok',pop(t,3.3));
+    if(t>=5.2) stamp(209,215,PINK,'no',pop(t,5.2));
+    txt('TİKTOK VE',61,298,1,INK,'center');txt('CAPCUT',61,307,1,INK,'center');
+    txt('BAŞKA',209,298,1,INK,'center');txt('ARAÇLAR',209,307,1,INK,'center');
+    // Kare ortada, izleyiciye bakar
+    const face=(t>=5.2&&t<6.9)?'wow':(t>=8.5?'wink':'happy');
+    let ky=226+Math.round(Math.sin(t*5)*1.5); if(t>=5.2&&t<5.6) ky-=Math.round(Math.sin((t-5.2)/0.4*Math.PI)*10);
+    X.fillStyle=SHADE;X.fillRect(113,ky+56,46,3);
+    kare(110,ky,fr,face,3,false);
+  }
+  // diyalog kutusu
+  let L, c0=INK;
+  if(t<2.2){L=["TİKTOK'UN YENİ","ARACI SÖYLÜYOR.","AMA BİR ŞARTLA."];c0=INK;}
+  else if(t<3.2){L=['VİDEOYU YÜKLE,','ARAÇ TARASIN...'];}
+  else if(t<5.2){L=["TİKTOK VE CAPCUT'IN","YAPAY ZEKÂSIYLA","YAPILDIYSA: BULUR."];}
+  else if(t<6.9){L=['BAŞKA ARAÇLARLA','YAPILDIYSA:','BULAMAZ.'];c0=PINK;}
+  else if(t<8.5){L=['BULAMADIYSA BİLE','VİDEO GERÇEK','OLMAYABİLİR.'];}
+  else{L=['SEN AYIRT','EDEBİLİYOR MUSUN?','YORUMA YAZ!'];c0=PINK;}
+  box(8,326,254,84,WHITE,INK,3);
+  L.forEach((l,i)=>txt(l,18,340+i*22,2,(i===0||(c0===PINK&&i===L.length-1))?c0:INK,'left'));
+  blit();
+};
+function renderCover(t){
+  box(85,76,100,15,PINK,INK,2);txt('YENİ ARAÇ',135,80,1,WHITE,'center');
+  txt('BU VİDEO',135,100,5,INK,'center');
+  txt('YAPAY',135,150,5,PINK,'center');
+  txt('ZEKÂ MI?',135,206,5,PINK,'center');
+  phone(46,250,90,152,0.3,'cat',0.55);
+  X.fillStyle=SHADE;X.fillRect(166,398,52,3);
+  kare(164,339,0,'happy',3.3,true);
+}
+function blit(){OUT.imageSmoothingEnabled=false;OUT.drawImage(S,0,0,270,480,0,0,1080,1920);}
+window.render(0);
+</script></body></html>
