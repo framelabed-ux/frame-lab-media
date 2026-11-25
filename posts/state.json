@@ -1172,6 +1172,27 @@
         "https://www.digitaltrends.com/cool-tech/google-gemini-ai-gif-generation/",
         "https://9to5google.com/2026/11/21/gemini-camera-redesign/"
       ]
+    },
+    {
+      "key": "youtube-shorts-ozel-kapak-herkese",
+      "topic": "YouTube Shorts'ta özel kapak (thumbnail) yükleme artık tüm içerik üreticilerine açık (Temmuz'da yalnızca YPP üyelerineydi); YouTube Studio'da Short'un kalem simgesi, masaüstü ve mobil",
+      "found": "2026-11-25",
+      "big": false,
+      "note": "Neal Mohan 23 Kasım'da X'te duyurdu, Tubefilter 25 Kasım'da yazdı. Mevcut özelliğin genişlemesi, büyük gelişme ölçütüne girmedi; YouTube 23 Kasım'da işlendi (co-views). Kapak/thumbnail ipucu içeriğine (story ya da 'Mutfaktan') bağlanabilir.",
+      "sources": [
+        "https://www.tubefilter.com/2026/11/25/youtube-shorts-thumbnails-all-creators/",
+        "https://x.com/nealmohan/status/2124992445608075268"
+      ]
+    },
+    {
+      "key": "tidal-yapay-zeka-muzik-yasagi",
+      "topic": "Tidal, tamamen yapay zekâyla üretilmiş müziği 9 Aralık'tan itibaren yasaklıyor (son 90 günde dağıtılan parçaların ~%43'ü bu türdeymiş)",
+      "found": "2026-11-25",
+      "big": false,
+      "note": "24 Kasım; yalnızca Techmeme özetinden görüldü, kaynak sayfası açılıp doğrulanmadı. İşlenecekse rakam Hollywood Reporter ve ikinci bir kaynaktan doğrulanmalı.",
+      "sources": [
+        "https://www.hollywoodreporter.com/music/music-industry-news/tidal-bans-wholly-ai-generated-music-1236762171/"
+      ]
     }
   ],
   "scheduled": [],
