@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#1B1B20;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab akşam Reel'i 26 Kasım (oyun tarzı): Neden fiyatlar hep 99 ile biter? Soldaki rakam etkisi.
+   Gece marketinde Kare bir etiketin 3,00'tan 2,99'a düşmesini izler; göz izi ilk rakama gider; 3,60 → 3,59'da ilk rakam aynı kalır, etki yok.
+   Kaynak: Thomas ve Morwitz, NYU Stern, Journal of Consumer Research, Haziran 2005 (phys.org, NYU Stern). Altyazılar Instagram'ın
+   güvenli alanında (üstten %14, alttan %35 dışı). */
+const COVER=(location.hash==='#cover');
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', SKY='#2B2B33', SHADE='#D9D5C8';
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'%':[24,25,2,4,8,19,3],"'":[4,4,8,0,0,0,0]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml'],'Â':['A','circ']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='circ'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);X.fillRect(x+2*sz,y-3*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=null){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+const ease=x=>1-Math.pow(1-clamp(x),3);
+window.DUR=29.6;
+window.SFX=[[0.05,'pop2'],[2.4,'whoosh'],[2.55,'pop'],[4.0,'pop'],[4.3,'tick'],[4.5,'tick'],[4.7,'tick'],[4.9,'ding'],[6.6,'pop'],[9.6,'whoosh'],[11.0,'whoosh'],[11.15,'pop'],[12.6,'pop2'],[15.6,'whoosh'],[15.8,'ding'],[19.6,'pop'],[20.0,'ding'],[23.6,'pop'],[24.6,'whoosh'],[24.75,'pop'],[26.8,'pop2'],[27.4,'ding']];
+const DARK='#1B1B20', PLANK='#4A4A55', FLOOR='#26262D';
+/* Kare sprite 17x18; face: happy | wow | wink | shrug */
+function kare(x0,y0,frame,face,k){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);
+  X.fillStyle=PINK;X.fillRect(7,-4,3,3);X.fillStyle=WHITE;X.fillRect(8,-1,1,2);
+  box(0,1,17,13,LIME,INK,1);X.fillStyle=INK;X.fillRect(2,3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(4,5,3,3);X.fillRect(10,5,3,3);X.fillStyle=PINK;X.fillRect(7,9,3,2);}
+  else if(face==='wink'){X.fillRect(4,6,3,1);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);}
+  else if(face==='shrug'){X.fillRect(4,6,2,2);X.fillRect(11,6,2,2);X.fillRect(6,10,5,1);}
+  else{X.fillRect(4,5,2,3);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);}
+  X.fillStyle=WHITE;
+  if(frame===0){X.fillRect(4,14,2,3);X.fillRect(11,14,2,3);X.fillRect(3,17,4,1);X.fillRect(10,17,4,1);}
+  else{X.fillRect(4,14,2,3);X.fillRect(11,14,2,2);X.fillRect(3,17,4,1);X.fillRect(11,16,4,1);}
+  if(face==='shrug'){ // iki kol yukarı: omuz silker
+    X.fillRect(-2,6,2,1);X.fillRect(-3,4,1,2);X.fillRect(-4,3,1,1);X.fillRect(17,6,2,1);X.fillRect(19,4,1,2);X.fillRect(20,3,1,1);
+  } else {X.fillRect(-2,7,2,1);X.fillRect(17,7,2,1);}
+  X.restore();
+}
+/* fiyat etiketi: cx merkez, y üst, metin "3,00"; hi: ilk rakamı pembe büyüt (0..1); flip: 0..1 dönme */
+function tag(cx,y,w,price,sz,hi,flip,old){
+  let ph=price;
+  let sq=1;
+  if(old&&flip<=0) ph=old;
+  if(flip>0&&flip<1){sq=Math.abs(Math.cos(flip*Math.PI)); if(flip<0.5) ph=old;}
+  X.fillStyle=WHITE;X.fillRect(cx,y-12,1,12); // ip
+  const h=sz*7+18;
+  X.save();X.translate(cx,y+h/2);X.scale(1,Math.max(sq,0.08));X.translate(-cx,-(y+h/2));
+  box(Math.round(cx-w/2),y,w,h,WHITE,INK,2);
+  X.fillStyle=INK;X.fillRect(cx-1,y+3,3,3); // delik
+  const s=ph.toLocaleUpperCase('tr-TR'), tw=s.length*6*sz-sz, x0=Math.round(cx-tw/2-6), ty=y+11;
+  for(let i=0;i<s.length;i++){
+    if(i===0&&hi>0) continue;
+    glyph(s[i],x0+i*6*sz,ty,sz,INK);
+  }
+  txt('TL',x0+tw+4,ty+sz*7-7,1,'#77777F','left');
+  X.restore();
+  if(hi>0){ // ilk rakam büyüyüp pembe olur
+    const big=Math.round(sz+hi*sz*0.5), gx=x0+Math.round(2.5*sz)-Math.round(2.5*big), gy=ty+Math.round(3.5*sz)-Math.round(3.5*big);
+    glyph(s[0],gx+2,gy+2,big,INK);glyph(s[0],gx,gy,big,PINK);
+  }
+  return {x0,ty};
+}
+function eyeDots(x1,y1,x2,y2,p){ // göz izi: Kare'den ilk rakama doğru noktalar
+  const n=7;for(let i=0;i<n;i++){ if(i/n>p) break; const a=i/(n-1);
+    const x=Math.round(x1+(x2-x1)*a), y=Math.round(y1+(y2-y1)*a-Math.sin(a*Math.PI)*14);
+    X.fillStyle=i===n-1?PINK:LIME;X.fillRect(x-2,y-2,4,4);}
+}
+function scene(){ // raf ve zemin
+  X.fillStyle=DARK;X.fillRect(0,0,270,480);
+  X.fillStyle=FLOOR;X.fillRect(0,362,270,118);
+  for(let r=0;r<6;r++)for(let c=0;c<10;c++) if((r+c)%2===0){X.fillStyle='#2C2C34';X.fillRect(c*27,365+r*20,27,20);}
+  X.fillStyle=PLANK;X.fillRect(0,362,270,3);
+  X.fillStyle=PLANK;X.fillRect(18,206,234,5);X.fillStyle='#2E2E36';X.fillRect(18,211,234,2);
+}
+function title(){
+  txt('NEDEN FİYATLAR HEP',135,74,2,WHITE,'center',INK);
+  txt("99'LA BİTER?",135,96,3,LIME,'center',INK);
+}
+function dialog(L,col){
+  box(14,118,242,84,WHITE,INK,3);
+  L.forEach((l,i)=>txt(l,22,130+i*24,2,(col&&i===L.length-1)?col:INK,'left'));
+}
+window.render=function(t){
+  X.imageSmoothingEnabled=false;
+  if(COVER){ renderCover(); return blit(); }
+  scene(); title();
+  const fr=Math.floor(t*4)%2, sw=Math.round(Math.sin(t*3)*2);
+  let face='happy', kx=166, ky=274+Math.round(Math.sin(t*5)*1.5);
+  if(t<1.2){kx=Math.round(206-40*ease(t/1.2)); ky=274-Math.round(Math.abs(Math.sin(t*9))*4);}
+  // --- etiketler ---
+  if(t<9.6){
+    const fl=clamp((t-2.4)/0.3), hi=t>=4.6&&t<9.6?(t<5.0?ease((t-4.6)/0.4):1)*(0.85+0.15*Math.sin(t*8)):0;
+    tag(118+sw,222,128,'2,99',4,hi,fl,'3,00');
+    if(t>=4.0&&t<6.6) eyeDots(kx+30,ky+20,84,244,clamp((t-4.0)/0.8));
+    face=t<2.4?'happy':(t<4.0?'wow':(t<6.6?'happy':'wow'));
+  } else if(t<15.6){
+    const m=ease((t-9.6)/0.5);
+    tag(Math.round(118-46*m)+sw,222,Math.round(128-30*m),'2,99',m<1?4:3,0,0);
+    if(t>=9.8){const fl=clamp((t-11.0)/0.3); tag(200-sw,222,98,'3,59',3,0,fl,'3,60');}
+    kx=Math.round(166-74*m); ky+=Math.round(4*m); face=t<12.6?'wow':'shrug';
+    if(t>=12.8){ // aynı kalan ilk rakamı göster: 3 üstünde lime çerçeve
+      if(Math.floor(t*3)%2===0){X.fillStyle=LIME;X.fillRect(165,230,21,2);X.fillRect(165,255,21,2);X.fillRect(165,230,2,27);X.fillRect(184,230,2,27);}
+    }
+  } else if(t<19.6){
+    const a=ease((t-15.6)/0.4);
+    const pw=Math.round(176*a);
+    if(pw>10){box(116-pw/2,216,pw,68,WHITE,PINK,3);}
+    if(a>=1){txt('NEW YORK',116,224,2,INK,'center');txt('ÜNİVERSİTESİ',116,244,2,INK,'center');txt('2005',116,262,2,PINK,'center');}
+    kx=180; face='happy';
+  } else {
+    // büyük etiket: önce 2,99 (ilk rakam pembe), 24.6'da 3,00'a yuvarlanır
+    const hi=t<24.6?(0.85+0.15*Math.sin(t*8)):0, fl=clamp((t-24.6)/0.3);
+    tag(118+sw,222,128,t<24.6?'2,99':'3,00',4,t<24.6?hi:0,t<24.6?0:fl,'2,99');
+    face=t<23.6?'happy':(t<26.8?'happy':'wink');
+  }
+  X.fillStyle='#0E0E12';X.fillRect(kx+4,ky+90,78,4);
+  kare(kx,ky,fr,face,5);
+  // --- altyazı kutusu ---
+  let L,c=null;
+  if(t<4.0) L=['YARIN BLACK FRIDAY.','BU ETİKETE','1 KURUŞ İNDİRİM...'];
+  else if(t<6.6) L=['BEYNİMİZ FİYATI','SOLDAN OKUR.'];
+  else if(t<9.6){L=["İLK RAKAM 3'TEN","2'YE DÜŞÜNCE FİYAT",'UCUZ GÖRÜNEBİLİR.'];c=PINK;}
+  else if(t<12.6) L=['PEKİ 3,60 YERİNE','3,59 YAZINCA?'];
+  else if(t<15.6){L=['İLK RAKAM AYNI.','ARAŞTIRMADA BU','ETKİ GÖRÜLMEDİ.'];c=PINK;}
+  else if(t<19.6) L=['KAYNAK: NEW YORK',"ÜNİVERSİTESİ'NİN","2005 ARAŞTIRMASI."];
+  else if(t<23.6){L=['YANİ İŞİ 1 KURUŞ','DEĞİL, DEĞİŞEN','İLK RAKAM YAPIYOR.'];c=PINK;}
+  else if(t<26.8) L=['SEPETE ATMADAN ÖNCE','FİYATI YUVARLA:','2,99 DEMEK 3 LİRA.'];
+  else {L=['İNDİRİM AVCISI','ARKADAŞINA GÖNDER!'];c=PINK;}
+  dialog(L,c);
+  blit();
+};
+function renderCover(){
+  X.fillStyle=DARK;X.fillRect(0,0,270,480);
+  txt('NEDEN HEP',135,96,4,WHITE,'center',INK);
+  txt("99?",135,132,7,LIME,'center',INK);
+  X.fillStyle=PLANK;X.fillRect(18,212,234,5);
+  tag(122,228,170,'2,99',6,1,0);
+  X.fillStyle='#0E0E12';X.fillRect(158,382,68,4);
+  kare(156,306,0,'wow',4.2);
+}
+function blit(){OUT.imageSmoothingEnabled=false;OUT.drawImage(S,0,0,270,480,0,0,1080,1920);}
+window.render(0);
+</script></body></html>

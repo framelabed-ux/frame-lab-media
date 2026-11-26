@@ -814,6 +814,29 @@
   ],
   "queue": [
     {
+      "slug": "2026-11-26-doksan-dokuz",
+      "kind": "reel",
+      "style": "oyun",
+      "publish_date": "2026-11-26",
+      "title": "Neden fiyatlar hep 99 ile biter? (soldaki rakam etkisi)",
+      "files": [
+        "posts/2026-11-26-doksan-dokuz/reel.mp4"
+      ],
+      "cover": "posts/2026-11-26-doksan-dokuz/cover.jpg",
+      "cover_tone": "dark",
+      "cover_type": "tipografi",
+      "topic_area": "psikoloji",
+      "music": "funk",
+      "voice": false,
+      "caption": "Neden fiyatlar hep 99 ile biter? Cevap: soldaki rakam.\n\nBeynimiz bir fiyatı soldan okur ve ilk rakama çok önem verir. 3,00 TL yerine 2,99 TL yazınca ilk rakam 3'ten 2'ye düşer. Fiyat bu yüzden daha ucuz görünebilir.\n\nAma her zaman değil. New York Üniversitesi'nden Manoj Thomas ve Vicki Morwitz'in 2005'teki çalışmasında 3,60 yerine 3,59 yazmak fiyatı daha düşük göstermedi, çünkü ilk rakam değişmedi. Etki yalnızca 99 ile bitiş ilk rakamı değiştirdiğinde ortaya çıktı.\n\nYarın Black Friday. Sepete atmadan önce fiyatı yuvarla: 2,99 demek 3 lira, 1.999 demek 2.000.\n\nSen en son hangi 99'lu fiyatı ucuz sandın? Yorumlara yaz. İndirim avcısı arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: Saatlik mi, proje başı mı fiyat?\n\nKaynak: Thomas ve Morwitz, Journal of Consumer Research (Haziran 2005); phys.org, NYU Stern\n\n#pazarlama #tüketicipsikolojisi #blackfriday #fiyatlandırma #psikoloji #indirim #marka",
+      "sources": [
+        "https://phys.org/news/2005-06-consumers-react-prices.html",
+        "https://w4.stern.nyu.edu/sternbusiness/fall_2005/pennySaved.html"
+      ],
+      "note": "planned_reels 26 Kasım kaydından; Ece'nin sesi yoktu, müzikle (funk) ve altyazı kurgusuyla çıktı. 29,6 sn + 3,2 sn logo kapanışı. Altyazılar güvenli alanda. Black Friday (27 Kasım) açısıyla açılıyor. Akşam 19:10.",
+      "status": "queued"
+    },
+    {
       "slug": "2026-12-31-yilbasi",
       "kind": "reel",
       "style": "hipergerçekçi",
@@ -1128,7 +1151,8 @@
     "youtube-co-views",
     "indirim-sayaci-kitlik-etkisi",
     "tiktok-ai-content-checker",
-    "reel-guvenli-alan"
+    "reel-guvenli-alan",
+    "doksan-dokuz-soldaki-rakam"
   ],
   "hot_pending": [
     {
