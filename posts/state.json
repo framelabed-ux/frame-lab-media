@@ -810,9 +810,7 @@
         "https://blog.adnabu.com/meta-ads/meta-safe-zones/",
         "https://moda.app/resources/sizes/meta-stories-ad"
       ]
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "2026-11-26-doksan-dokuz",
       "kind": "reel",
@@ -833,10 +831,14 @@
         "https://phys.org/news/2005-06-consumers-react-prices.html",
         "https://w4.stern.nyu.edu/sternbusiness/fall_2005/pennySaved.html"
       ],
-      "note": "planned_reels 26 Kasım kaydından; Ece'nin sesi yoktu, müzikle (funk) ve altyazı kurgusuyla çıktı. 29,6 sn + 3,2 sn logo kapanışı. Altyazılar güvenli alanda. Black Friday (27 Kasım) açısıyla açılıyor. Akşam 19:10.",
-      "status": "queued",
-      "music_seed": 26
-    },
+      "note": "planned_reels 26 Kasım kaydından; Ece'nin sesi yoktu, müzikle (funk) ve altyazı kurgusuyla çıktı. 29,6 sn + 3,2 sn logo kapanışı. Altyazılar güvenli alanda. Black Friday (27 Kasım) açısıyla açılıyor. Akşam 19:10. Akşam görevi: ekran yazısı ve caption'da 'New York Üniversitesi'nin/'nden' → kesme işaretsiz (TDK: kurum adları) düzeltildi, funk seed 26 ile yeniden render.",
+      "status": "published",
+      "music_seed": 26,
+      "media_id": "18165104401500354",
+      "published_at": "2026-11-26T19:20+03:00"
+    }
+  ],
+  "queue": [
     {
       "slug": "2026-12-31-yilbasi",
       "kind": "reel",
@@ -1320,6 +1322,15 @@
       "comment": "İlk sabit",
       "draft": "İlk yorum senden geldi, teşekkürler! Sen YouTube'u en çok nerede izliyorsun, telefonda mı, TV'de mi? 📺",
       "created": "2026-11-24"
+    },
+    {
+      "comment_id": "18059661110800881",
+      "media_id": "18121114789800530",
+      "username": "xentriex",
+      "comment": "As bayrakları türkler için geliştirdiğim oyun yakında çıkacak. Arkadaşının parmağınımı kırmalar dersin ihanetmi dersin varda var. 5 saniyelik göz atmanı tavsiye ederim @52trials.dev",
+      "draft": "Oyununa şimdiden başarılar!",
+      "note": "Kendi oyununu tanıtan reklam yorumu, spam olabilir: gizleyelim mi?",
+      "created": "2026-11-26"
     }
   ],
   "weekly_metrics": [
