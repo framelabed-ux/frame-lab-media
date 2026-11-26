@@ -1272,6 +1272,18 @@
       "sources": [
         "https://techcrunch.com/2026/11/24/threads-comes-to-ipad-and-takes-a-page-from-xs-playbook-with-cashtags/"
       ]
+    },
+    {
+      "key": "canva-mcp-api-acik",
+      "topic": "Canva, MCP sunucusunu genel kullanıma açtı; yeni API'ler ve CLI ile yapay zekâ ajanları ve geliştiriciler Canva'da düzenlenebilir tasarım, görsel ve video üretebiliyor; kendi görsel modeli Craft da API'ye açıldı; Anthropic ortaklığıyla Claude içinde 'tasarım katmanı'",
+      "found": "2026-11-26",
+      "big": false,
+      "note": "24–25 Kasım. Geliştirici/altyapı duyurusu; Canva'nın Claude içindeki bağlantısı 2025'ten beri var, içerik üreticisine dönük yeni bir özellik sayılmadı. 'Sohbette Instagram gönderisi iste, düzenlenebilir Canva tasarımı gelsin' açısıyla ancak somut bir deneme yapılırsa.",
+      "sources": [
+        "https://dataconomy.com/2026/11/25/canva-opens-design-tools-to-ai-agents-and-developers",
+        "https://www.canva.dev/blog/developers/canva-mcp-ga/",
+        "https://thenextweb.com/news/canva-anthropic-claude-design-ai-powered-visual-suite"
+      ]
     }
   ],
   "scheduled": [],
