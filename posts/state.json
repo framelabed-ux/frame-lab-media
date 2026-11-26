@@ -1114,6 +1114,17 @@
       "topic_area": "tasarim",
       "sources": [],
       "media_id": "18107892593633877"
+    },
+    {
+      "date": "2026-11-26",
+      "slug": "2026-11-26-story",
+      "file": "posts/2026-11-26-story/story.jpg",
+      "about": "Black Friday ipucu: İndirimli aboneliği almadan önce yenileme fiyatına bak; bazı indirimler yalnızca ilk ay ya da ilk yıl geçerli. 'Bu yıl ne almayı düşünüyorsun? DM’den yaz.' (3D madeni paralar, koyu)",
+      "layout": "3d",
+      "style": "3d",
+      "topic_area": "para",
+      "sources": [],
+      "media_id": "17981412984148357"
     }
   ],
   "replied_comments": [
@@ -1763,6 +1774,42 @@
       "visual_note": "3D: Kare'nin önünde dört ayrı 3D çark/kutu (akış, hikâyeler, keşfet, Reels), her biri farklı hızda döner; Reels kutusundan dört ikon çıkar (gönder, tam izleme, beğeni, ses). Instagram logosu kullanılmaz.",
       "sources": [
         "https://about.instagram.com/blog/announcements/instagram-ranking-explained"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "slug": "2026-11-29-sunum-ucuz-gorunuyor",
+      "style": "oyun",
+      "topic_area": "tasarim",
+      "title": "Kare Açıklıyor: Sunumun neden ucuz görünüyor?",
+      "script": "Kare Açıklıyor: Sunumun neden ucuz görünüyor?\n\nÇoğu zaman sebep tasarım değil, düzen.\n\nBir: İkiden fazla yazı tipi kullanma. Bir başlık, bir metin fontu yeter.\n\nİki: Her şeyi aynı çizgiye hizala. Ortada, solda, sağda dağınık duran yazılar acemi gösterir.\n\nÜç: Boşluktan korkma. Sayfayı doldurmak yerine nefes aldır.\n\nBir dahaki sunumunda bu üçünü dene.\n\nSen sunumda en çok neye takılıyorsun? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: Logon küçükken okunuyor mu?",
+      "visual_note": "Oyun tarzı: Kare dağınık bir slaytın içinde 'level' geçiyor; her kural bir güçlendirme: fontlar ikiye iner, kutular hizaya kilitlenir, kalabalık öğeler dışarı uçar ve sahne ferahlar. Gerçek uygulama logosu yok.",
+      "sources": [
+        "genel tavsiye; istatistik yok"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "slug": "2026-11-30-logo-kucuk-test",
+      "style": "arayuz",
+      "topic_area": "marka",
+      "title": "Logon küçükken okunuyor mu?",
+      "script": "Logon küçükken okunuyor mu?\n\nLogon en çok nerede görünür? Büyük bir afişte değil; profil fotoğrafında, tarayıcı sekmesinde, uygulama simgesinde. Yani küçücük.\n\nBasit bir test: Logonu parmak ucu boyutuna küçült ve kol boyu uzaktan bak.\n\nİnce çizgiler kayboluyorsa, yazı okunmuyorsa küçük boyut için sade bir versiyon hazırla. Birçok marka bunu yapıyor: tam logo bir yanda, tek harf ya da simge bir yanda.\n\nSenin logon bu testi geçer mi? Yorumlara yaz, logosu olan arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz. Yarınki: Bir Reel'i otuz saniyeye nasıl sığdırıyoruz?",
+      "visual_note": "Gerçekçi arayüz: uydurma bir kahve markasının logosu telefonda profil fotoğrafına, tarayıcı sekmesine ve uygulama simgesine küçülür; ince yazı bulanıklaşır; sonra tek harflik sade versiyon net görünür. Gerçek marka logosu kullanılmaz.",
+      "sources": [
+        "genel tavsiye; istatistik yok"
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "slug": "2026-12-01-otuz-saniye-kurgu",
+      "style": "3d",
+      "topic_area": "perde-arkasi",
+      "title": "Bir Reel'i 30 saniyeye nasıl sığdırıyoruz?",
+      "script": "Bir Reel'i otuz saniyeye nasıl sığdırıyoruz? Üç kesme kuralımız var.\n\nBir: İlk cümle sonucu söyler. Giriş yok, selam yok.\n\nİki: Her cümle tek fikir taşır. İkinci fikir gelirse yeni sahne açarız.\n\nÜç: Bir cümle çıkınca video bozulmuyorsa, o cümle zaten fazlaydı.\n\nBu videoyu da bu kurallarla yaptık.\n\nSen videolarını kaç saniyede tutuyorsun? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi otuz saniyede çözüyoruz.",
+      "visual_note": "3D: Kare bir film şeridini makasla keser; her kuralda şeritten bir parça düşer ve kronometre kısalır; sonunda şerit tek ve kısa kalır.",
+      "sources": [
+        "kendi kurgu kurallarımız; istatistik yok"
       ]
     }
   ]
