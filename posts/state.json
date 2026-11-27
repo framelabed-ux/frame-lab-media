@@ -874,6 +874,25 @@
       "caption": "Bir yıl, aslında binlerce kareden oluşur. Yeni yılın her karesi güzel olsun.\n\nBu videonun her sahnesini yapay zekâyla ürettik; senaryo, kurgu ve müzik de bizden. Markan için de böyle bir video ister misin? DM'den yaz.\n\n#yeniyıl #yılbaşı #yapayzeka #aivideo #reklamfilmi #markailetişimi #framelab",
       "sources": [],
       "note": "Yılbaşı hipergerçekçi video; sahneler Ece'nin ChatGPT'de ürettiği görsellerden, kurgu/renk/metin/müzik Claude. Yatay ana sürüm yilbasi-yatay.mp4 (portfolyo). Yumuşak hizmet tanıtımı. Ece seslendirme gönderirse sese göre yeniden hizala. Akşam 19:10."
+    },
+    {
+      "slug": "2026-11-27-saatlik-mi-proje-mi",
+      "kind": "reel",
+      "style": "arayuz",
+      "publish_date": "2026-11-27",
+      "cover_type": "gorsel",
+      "topic_area": "para",
+      "files": [
+        "posts/2026-11-27-saatlik-mi-proje-mi/reel.mp4"
+      ],
+      "cover": "posts/2026-11-27-saatlik-mi-proje-mi/cover.jpg",
+      "cover_tone": "dark",
+      "music": "minimal",
+      "voice": false,
+      "caption": "Freelance iş alırken saatlik mi fiyat verirsin, proje başı mı? İkisinin de bir tuzağı var.\n\nSaatlik fiyat\n• İşin ne kadar süreceği belli değilse seni korur.\n• Ama hızlandıkça aynı işten daha az kazanırsın.\n\nProje başı fiyat\n• Müşteri toplam tutarı baştan görür, karar vermesi kolaylaşır.\n• Hızlı bitirirsen saat başına daha çok kazanırsın.\n• Ama kapsamı yazmazsan iş büyür, ücret aynı kalır (\"Bir de kartvizit yapıverir misin?\").\n\nPratik yol: Teklifine şu üç satırı ekle.\n• Kapsam: Neyi teslim edeceğini tek tek yaz.\n• Revizyon: Kaç tur düzeltmenin dahil olduğunu belirt.\n• Ekstra: Kapsam dışındaki her işin ayrı fiyatlanacağını yaz.\n\nSen hangisiyle çalışıyorsun? Yorumlara yaz, freelance başlayan arkadaşına da gönder.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: Instagram algoritması ne demek?\n\n#freelance #serbestçalışma #tasarımcı #fiyatlandırma #girişimcilik #grafiktasarım #kariyer",
+      "sources": [
+        "genel tavsiye; istatistik yok"
+      ]
     }
   ],
   "stories": [
@@ -1148,6 +1167,19 @@
       "topic_area": "para",
       "sources": [],
       "media_id": "17981412984148357"
+    },
+    {
+      "date": "2026-11-27",
+      "slug": "2026-11-27-story",
+      "file": "posts/2026-11-27-story/story.jpg",
+      "about": "Günün prompt'u (rehberden 20. prompt, Editör modu): 'Az önce yazdığın metni bir editör gözüyle değerlendir… Sonra düzeltilmiş hâlini yaz.' 'Rehberde 20 hazır prompt var. Linki profilde.' (oyun tarzı, koyu)",
+      "layout": "game",
+      "style": "oyun",
+      "topic_area": "ai",
+      "sources": [
+        "https://framelabed-ux.github.io/frame-lab-media/rehber/"
+      ],
+      "media_id": "17908635462353586"
     }
   ],
   "replied_comments": [
@@ -1187,7 +1219,8 @@
     "tiktok-ai-content-checker",
     "reel-guvenli-alan",
     "doksan-dokuz-soldaki-rakam",
-    "whatsapp-zamanlanmis-mesaj"
+    "whatsapp-zamanlanmis-mesaj",
+    "saatlik-mi-proje-basi-mi"
   ],
   "hot_pending": [
     {
@@ -1841,7 +1874,8 @@
       "visual_note": "Gerçekçi arayüz: telefonda teklif ekranı; iki sekme 'Saatlik' / 'Proje başı'. Saatlikte kronometre döner, hız artınca kazanç çubuğu kısalır; proje başında sabit tutar kartı, kapsam satırları eklendikçe 'Revizyon: 2', 'Ekstra: ayrı fiyat' kilitlenir. Rakam ve TL tutarı yazılmaz (genel tavsiye).",
       "sources": [
         "genel tavsiye; istatistik yok"
-      ]
+      ],
+      "produced": true
     },
     {
       "date": "2026-11-28",
