@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#111114;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab story (oyun tarzı): Günün prompt'u, ücretsiz rehberden 20. prompt (Editör modu). Kare kırmızı kalemle metni düzeltiyor; hatalar pembe, düzeltilenler lime tik. */
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', GREY='#3A3A42', DLIME='#5E9E00';
+
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+/* 5x7 bit-map yazı (Türkçe büyük harfler). Her satır 5 bitlik sayı. Aksanlar ayrı satırda. */
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'+':[0,4,4,31,4,4,0],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'%':[24,25,2,4,8,19,3],'=':[0,0,31,0,31,0,0],'/':[1,1,2,4,8,16,16],"'":[4,4,8,0,0,0,0]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+function txt(s,x,y,sz=1,col=WHITE,align='left',shadow=INK){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+/* Kare sprite: 16x18, kafa yeşil, ekran siyah, beyaz gözler */
+function kareSprite(x0,y0,frame,face='happy',k=3){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);const x=0,y=0;
+  X.fillStyle=PINK;X.fillRect(x+7,y-4,3,3);X.fillStyle=INK;X.fillRect(x+8,y-1,1,2);
+  box(x,y+1,17,13,LIME,INK,1); X.fillStyle=INK;X.fillRect(x+2,y+3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(x+4,y+5,3,3);X.fillRect(x+10,y+5,3,3);X.fillStyle=PINK;X.fillRect(x+7,y+9,3,2);}
+  else{X.fillRect(x+4,y+5,2,3);X.fillRect(x+11,y+5,2,3);X.fillRect(x+6,y+9,5,1);X.fillRect(x+5,y+8,1,1);X.fillRect(x+11,y+8,1,1);}
+  X.fillStyle=CREAM; // bacaklar
+  if(frame===0){X.fillRect(x+4,y+14,2,3);X.fillRect(x+11,y+14,2,3);X.fillRect(x+3,y+17,4,1);X.fillRect(x+10,y+17,4,1);}
+  else{X.fillRect(x+3,y+14,2,2);X.fillRect(x+12,y+14,2,3);X.fillRect(x+1,y+16,4,1);X.fillRect(x+11,y+17,4,1);}
+  // kollar
+  X.fillRect(x-2,y+7+(frame?1:0),2,1);X.fillRect(x+17,y+7+(frame?0:1),2,1);
+  X.restore();
+}
+
+/* piksel kâğıt: metin satırları, hatalı satırların üstü pembe çizili, düzeltilenlerde tik */
+function paper(x,y){box(x,y,120,150,CREAM,INK,3);
+  const rows=[[96,0],[80,1],[100,0],[70,0],[90,1],[60,0]];
+  rows.forEach((r,i)=>{const yy=y+16+i*21;X.fillStyle=GREY;X.fillRect(x+12,yy,r[0],5);
+    if(r[1]===1){X.fillStyle=PINK;X.fillRect(x+10,yy+1,r[0]+4,3);}
+    if(r[1]>=1){X.fillStyle=r[1]===2?DLIME:DLIME;X.fillRect(x+108-6,yy+3,2,2);X.fillRect(x+108-4,yy+5,2,2);X.fillRect(x+108-2,yy+3,2,2);X.fillRect(x+108,yy+1,2,2);X.fillRect(x+110,yy-1,2,2);}
+  });}
+/* kalem */
+function pencil(x,y){X.fillStyle=INK;X.fillRect(x-1,y-1,8,30);X.fillStyle=PINK;X.fillRect(x,y,6,22);X.fillStyle=CREAM;X.fillRect(x,y+22,6,4);X.fillStyle=INK;X.fillRect(x+2,y+26,2,2);}
+function render(){
+  X.imageSmoothingEnabled=false;
+  X.fillStyle=INK;X.fillRect(0,0,270,480);
+  box(40,30,190,40,PINK,INK,3); txt("GÜNÜN PROMPT'U",135,46,2,WHITE,'center');
+  paper(40,92);
+  kareSprite(176,150,1,'happy',3); pencil(232,146);
+  txt('EDİTÖR MODU',135,268,3,LIME,'center',null);
+  OUT.imageSmoothingEnabled=false; OUT.drawImage(S,0,0,270,480,0,0,1080,1920);
+  const O=OUT; O.fillStyle=INK; O.beginPath();O.roundRect(48,1200,984,620,28);O.fill();O.lineWidth=8;O.strokeStyle=LIME;O.stroke();
+  O.textAlign='center';O.textBaseline='alphabetic';
+  O.fillStyle='#D2D2D8';O.font='600 36px "Inter"';O.fillText('Yapay zekâya bir metin yazdırdıktan sonra şunu yaz:',540,1272);
+  O.fillStyle=WHITE;O.font='700 44px "Inter"';
+  ['“Az önce yazdığın metni bir editör gözüyle','değerlendir: yazım hatalarını, tekrarları,','belirsiz ifadeleri ve daha güçlü olabilecek','cümleleri listele. Sonra düzeltilmiş','hâlini yaz.”'].forEach((l,i)=>O.fillText(l,540,1350+i*60));
+  O.fillStyle=PINK;O.font='800 42px "Inter"';O.fillText('Rehberde 20 hazır prompt var. Linki profilde.',540,1710);
+  O.fillStyle='#D2D2D8';O.font='500 34px "Inter"';O.fillText('Ücretsiz, kopyala ve kullan.',540,1770);
+}
+render();
+</script></body></html>
