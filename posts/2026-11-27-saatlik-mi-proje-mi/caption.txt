@@ -11,7 +11,7 @@ Proje başı fiyat
 
 Pratik yol: Teklifine şu üç satırı ekle.
 • Kapsam: Neyi teslim edeceğini tek tek yaz.
-• Revizyon: Kaç tur düzeltmenin dahil olduğunu belirt.
+• Revizyon: Kaç tur düzeltmenin dâhil olduğunu belirt.
 • Ekstra: Kapsam dışındaki her işin ayrı fiyatlanacağını yaz.
 
 Sen hangisiyle çalışıyorsun? Yorumlara yaz, freelance başlayan arkadaşına da gönder.
