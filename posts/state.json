@@ -836,6 +836,26 @@
       "music_seed": 26,
       "media_id": "18165104401500354",
       "published_at": "2026-11-26T19:20+03:00"
+    },
+    {
+      "slug": "2026-11-27-whatsapp-zamanla",
+      "kind": "short-reel",
+      "style": "3d",
+      "media_id": "17985604095066480",
+      "publish_date": "2026-11-27",
+      "published_at": "2026-11-27T05:56:10Z",
+      "cover_type": "kare",
+      "cover_tone": "light",
+      "topic_area": "platform",
+      "music": "house",
+      "voice": null,
+      "caption": "Gece yarısına kadar uyanık kalmadan doğum günü mesajı atmanın yolu: WhatsApp'ta mesaj zamanlama.\n\nWhatsApp 25 Kasım'da zamanlanmış mesajları duyurdu. Bireysel sohbetlerde de gruplarda da çalışıyor.\n\nNasıl yapılır?\n• Mesajını yaz ya da fotoğrafını, videonu seç.\n• Gönder düğmesine basılı tut.\n• Tarihi ve saati seç: en erken 10 dakika, en geç 14 gün sonrası.\n\nBilmen gerekenler:\n• Telefonun kapalı olsa bile mesaj zamanında gider.\n• Karşı taraf normal bir mesaj görür.\n• Fikrini değiştirirsen zamanlanmış mesajı gitmeden önce silebilirsin.\n• Grupta yalnızca mesajı zamanladığın anda grupta olanlar alır.\n\nÖzellik Android ve iPhone'da önümüzdeki haftalarda herkese açılıyor. Sende henüz yoksa uygulamayı güncel tut.\n\nDoğum günlerini unutan arkadaşına gönder. Sen ilk zamanlanmış mesajını kime atacaksın?\n\nHer gün dijital dünyadan bir şeyi kısa ve net çözüyoruz. Bu akşamki: Saatlik mi, proje başı mı fiyat vermelisin?\n\nKaynak: WABetaInfo ve TechCrunch, 25 Kasım 2026\n\n#whatsapp #ipucu #teknoloji #sosyalmedya #doğumgünü #dijitalgündem #uygulama",
+      "sources": [
+        "https://wabetainfo.com/whatsapp-launches-scheduled-messages-on-android-and-ios/",
+        "https://techcrunch.com/2026/11/25/whatsapp-now-lets-you-schedule-messages-in-group-and-individual-chats/",
+        "https://industrywired.com/tech/apps/whatsapp-finally-adds-scheduled-messages-across-chats-worldwide-12842864",
+        "https://thetechlantis.com/news/whatsapp-scheduled-messages-rollout"
+      ]
     }
   ],
   "queue": [
@@ -1166,7 +1186,8 @@
     "indirim-sayaci-kitlik-etkisi",
     "tiktok-ai-content-checker",
     "reel-guvenli-alan",
-    "doksan-dokuz-soldaki-rakam"
+    "doksan-dokuz-soldaki-rakam",
+    "whatsapp-zamanlanmis-mesaj"
   ],
   "hot_pending": [
     {
@@ -1664,6 +1685,40 @@
       },
       "note": "sesli-mi-sessiz-mi 2. günde 513 erişim (skip %51, 7,8 sn). youtube-tv-izlenme 1.203. Takipçi 9 → 9. 25 Kasım akşam Reel'i yayınlanmış ama state.json'a yazılmamıştı; grid'e eklendi.",
       "lesson": "Sabah Reel'i ilk kez skip'te hedefin altına indi (%56) ve test havuzunu biraz aştı (146): herkesin bildiği uygulama + izleyiciye soru sorulan açılış işe yarıyor. Seslendirmeli akşam Reel'i iyi tutuyor (9,1 sn, %53) ama 0 paylaşımla 125'te: renk teorisi 'arkadaşıma atarım' testinde zayıf. Bugün iki gönderi de kişinin kendi işine hemen uygulayacağı ya da yarınki Black Friday'de karşılaşacağı bir şeye bağlandı ve gönder CTA'sı kullanıldı."
+    },
+    {
+      "date": "2026-11-27",
+      "followers": 9,
+      "yesterday_morning": {
+        "media_id": "18110679518619110",
+        "slug": "2026-11-26-guvenli-alan",
+        "kind": "short-reel",
+        "style": "arayuz",
+        "reach": 108,
+        "views": 119,
+        "skip_rate": 0.738,
+        "avg_watch_s": 3.4,
+        "shares": 0,
+        "saved": 0,
+        "likes": 1
+      },
+      "yesterday_evening": {
+        "media_id": "18165104401500354",
+        "slug": "2026-11-26-doksan-dokuz",
+        "kind": "reel",
+        "style": "oyun (seslendirmesiz)",
+        "reach": 166,
+        "views": 183,
+        "skip_rate": 0.536,
+        "avg_watch_s": 6.8,
+        "shares": 0,
+        "saved": 0,
+        "likes": 1,
+        "comments": 0,
+        "note": "Yayından ~15 saat sonra ölçüldü"
+      },
+      "note": "turuncu-mavi-afisler 2. günde 145 erişim (skip %52, 8,9 sn, 0 paylaşım). sesli-mi-sessiz-mi 513. Takipçi 9 → 9.",
+      "lesson": "Seslendirmesiz akşam Reel'i skip'te hedefin altında (%54) ama 0 paylaşımla 166'da kaldı; sabah Reel'i yine ~110 (arayüz açılışı, karakter yok, skip %74). Son üç günde test havuzunu geçen olmadı: tutma yetmiyor, paylaşım sebebi lazım. Bugün sabah Reel'i herkesin kullandığı bir uygulamanın (WhatsApp) yeni ve hemen denenebilen özelliğiyle, 0. karede izleyiciye bakan 3D Kare ve 'doğum günlerini unutan arkadaşına gönder' CTA'sıyla açıldı."
     }
   ],
   "planned_reels": [
