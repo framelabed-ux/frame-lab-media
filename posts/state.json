@@ -856,24 +856,6 @@
         "https://industrywired.com/tech/apps/whatsapp-finally-adds-scheduled-messages-across-chats-worldwide-12842864",
         "https://thetechlantis.com/news/whatsapp-scheduled-messages-rollout"
       ]
-    }
-  ],
-  "queue": [
-    {
-      "slug": "2026-12-31-yilbasi",
-      "kind": "reel",
-      "style": "hipergerçekçi",
-      "publish_date": "2026-12-31",
-      "files": [
-        "posts/2026-12-31-yilbasi/yilbasi-dikey.mp4"
-      ],
-      "cover": "posts/2026-12-31-yilbasi/cover.jpg",
-      "cover_tone": "dark",
-      "topic_area": "perde arkası",
-      "voice": false,
-      "caption": "Bir yıl, aslında binlerce kareden oluşur. Yeni yılın her karesi güzel olsun.\n\nBu videonun her sahnesini yapay zekâyla ürettik; senaryo, kurgu ve müzik de bizden. Markan için de böyle bir video ister misin? DM'den yaz.\n\n#yeniyıl #yılbaşı #yapayzeka #aivideo #reklamfilmi #markailetişimi #framelab",
-      "sources": [],
-      "note": "Yılbaşı hipergerçekçi video; sahneler Ece'nin ChatGPT'de ürettiği görsellerden, kurgu/renk/metin/müzik Claude. Yatay ana sürüm yilbasi-yatay.mp4 (portfolyo). Yumuşak hizmet tanıtımı. Ece seslendirme gönderirse sese göre yeniden hizala. Akşam 19:10."
     },
     {
       "slug": "2026-11-27-saatlik-mi-proje-mi",
@@ -893,7 +875,27 @@
       "sources": [
         "genel tavsiye; istatistik yok"
       ],
-      "music_seed": 1127
+      "music_seed": 1127,
+      "media_id": "18289045885289290",
+      "published_at": "2026-11-27T19:20+03:00"
+    }
+  ],
+  "queue": [
+    {
+      "slug": "2026-12-31-yilbasi",
+      "kind": "reel",
+      "style": "hipergerçekçi",
+      "publish_date": "2026-12-31",
+      "files": [
+        "posts/2026-12-31-yilbasi/yilbasi-dikey.mp4"
+      ],
+      "cover": "posts/2026-12-31-yilbasi/cover.jpg",
+      "cover_tone": "dark",
+      "topic_area": "perde arkası",
+      "voice": false,
+      "caption": "Bir yıl, aslında binlerce kareden oluşur. Yeni yılın her karesi güzel olsun.\n\nBu videonun her sahnesini yapay zekâyla ürettik; senaryo, kurgu ve müzik de bizden. Markan için de böyle bir video ister misin? DM'den yaz.\n\n#yeniyıl #yılbaşı #yapayzeka #aivideo #reklamfilmi #markailetişimi #framelab",
+      "sources": [],
+      "note": "Yılbaşı hipergerçekçi video; sahneler Ece'nin ChatGPT'de ürettiği görsellerden, kurgu/renk/metin/müzik Claude. Yatay ana sürüm yilbasi-yatay.mp4 (portfolyo). Yumuşak hizmet tanıtımı. Ece seslendirme gönderirse sese göre yeniden hizala. Akşam 19:10."
     }
   ],
   "stories": [
