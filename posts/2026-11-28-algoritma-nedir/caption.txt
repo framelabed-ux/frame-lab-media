@@ -1,0 +1,21 @@
+Instagram'da tek bir algoritma yok. Her bölümün kendi sıralama sistemi var.
+
+Instagram'ın kendi açıklamasına göre akış, hikâyeler, keşfet, Reels ve arama ayrı ayrı sıralanıyor. Her biri, insanların o bölümü nasıl kullandığına göre ayarlanmış.
+
+Reels'te en önemli 4 tahmin:
+• Bu videoyu paylaşır mısın?
+• Sonuna kadar izler misin?
+• Beğenir misin?
+• Sesine tıklayıp ses sayfasına gider misin? (Instagram bunu "kendi videonu yapmak isteyebilirsin" işareti olarak görüyor.)
+
+Bu tahminlerde en çok senin son hareketlerin sayılıyor: Son zamanlarda beğendiğin, kaydettiğin, paylaştığın ve yorum yaptığın Reels'ler. Ardından paylaşan kişiyle etkileşim geçmişin, videonun kendisi (ses, görüntü, popülerlik) ve paylaşan hesap geliyor.
+
+Yani algoritma, ne yapacağını tahmin etmeye çalışan bir sistem. Ona yön veren de senin davranışın.
+
+Sen Instagram'da en çok hangi bölümde vakit geçiriyorsun? Yorumlara yaz.
+
+Her akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: Sunumun neden ucuz görünüyor?
+
+Kaynak: Instagram, "Instagram Ranking Explained" (Adam Mosseri, 2023)
+
+#instagram #algoritma #instagramalgoritması #sosyalmedya #reels #içeriküreticisi #dijitalpazarlama

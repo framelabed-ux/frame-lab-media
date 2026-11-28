@@ -919,6 +919,26 @@
       "caption": "Bir yıl, aslında binlerce kareden oluşur. Yeni yılın her karesi güzel olsun.\n\nBu videonun her sahnesini yapay zekâyla ürettik; senaryo, kurgu ve müzik de bizden. Markan için de böyle bir video ister misin? DM'den yaz.\n\n#yeniyıl #yılbaşı #yapayzeka #aivideo #reklamfilmi #markailetişimi #framelab",
       "sources": [],
       "note": "Yılbaşı hipergerçekçi video; sahneler Ece'nin ChatGPT'de ürettiği görsellerden, kurgu/renk/metin/müzik Claude. Yatay ana sürüm yilbasi-yatay.mp4 (portfolyo). Yumuşak hizmet tanıtımı. Ece seslendirme gönderirse sese göre yeniden hizala. Akşam 19:10."
+    },
+    {
+      "slug": "2026-11-28-algoritma-nedir",
+      "kind": "reel",
+      "style": "3d",
+      "publish_date": "2026-11-28",
+      "cover_type": "kare",
+      "topic_area": "platform",
+      "files": [
+        "posts/2026-11-28-algoritma-nedir/reel.mp4"
+      ],
+      "cover": "posts/2026-11-28-algoritma-nedir/cover.jpg",
+      "cover_tone": "dark",
+      "music": "pop",
+      "music_seed": 2811,
+      "voice": false,
+      "caption": "Instagram'da tek bir algoritma yok. Her bölümün kendi sıralama sistemi var.\n\nInstagram'ın kendi açıklamasına göre akış, hikâyeler, keşfet, Reels ve arama ayrı ayrı sıralanıyor. Her biri, insanların o bölümü nasıl kullandığına göre ayarlanmış.\n\nReels'te en önemli 4 tahmin:\n• Bu videoyu paylaşır mısın?\n• Sonuna kadar izler misin?\n• Beğenir misin?\n• Sesine tıklayıp ses sayfasına gider misin? (Instagram bunu \"kendi videonu yapmak isteyebilirsin\" işareti olarak görüyor.)\n\nBu tahminlerde en çok senin son hareketlerin sayılıyor: Son zamanlarda beğendiğin, kaydettiğin, paylaştığın ve yorum yaptığın Reels'ler. Ardından paylaşan kişiyle etkileşim geçmişin, videonun kendisi (ses, görüntü, popülerlik) ve paylaşan hesap geliyor.\n\nYani algoritma, ne yapacağını tahmin etmeye çalışan bir sistem. Ona yön veren de senin davranışın.\n\nSen Instagram'da en çok hangi bölümde vakit geçiriyorsun? Yorumlara yaz.\n\nHer akşam dijital dünyadan bir şeyi 30 saniyede çözüyoruz. Yarınki: Sunumun neden ucuz görünüyor?\n\nKaynak: Instagram, \"Instagram Ranking Explained\" (Adam Mosseri, 2023)\n\n#instagram #algoritma #instagramalgoritması #sosyalmedya #reels #içeriküreticisi #dijitalpazarlama",
+      "sources": [
+        "https://about.instagram.com/blog/announcements/instagram-ranking-explained"
+      ]
     }
   ],
   "stories": [
@@ -1206,6 +1226,17 @@
         "https://framelabed-ux.github.io/frame-lab-media/rehber/"
       ],
       "media_id": "17908635462353586"
+    },
+    {
+      "date": "2026-11-28",
+      "slug": "2026-11-28-story",
+      "file": "posts/2026-11-28-story/story.jpg",
+      "about": "Psikoloji ipucu: Dizi konumu etkisi. 'İlk ve son akılda kalır.' Bir listede insanlar en çok ilk ve son maddeleri hatırlar; sunumda en önemli şeyi başa ya da sona koy. CTA: 'Sunumu olan arkadaşına gönder' (oyun tarzı piksel liste + Kare, koyu)",
+      "layout": "game",
+      "style": "oyun",
+      "topic_area": "psikoloji",
+      "sources": [],
+      "media_id": "18060116885578671"
     }
   ],
   "replied_comments": [
@@ -1247,7 +1278,8 @@
     "doksan-dokuz-soldaki-rakam",
     "whatsapp-zamanlanmis-mesaj",
     "saatlik-mi-proje-basi-mi",
-    "tidal-yapay-zeka-muzik-yasagi"
+    "tidal-yapay-zeka-muzik-yasagi",
+    "instagram-algoritmasi-nedir"
   ],
   "hot_pending": [
     {
@@ -1769,6 +1801,40 @@
       },
       "note": "turuncu-mavi-afisler 2. günde 145 erişim (skip %52, 8,9 sn, 0 paylaşım). sesli-mi-sessiz-mi 513. Takipçi 9 → 9.",
       "lesson": "Seslendirmesiz akşam Reel'i skip'te hedefin altında (%54) ama 0 paylaşımla 166'da kaldı; sabah Reel'i yine ~110 (arayüz açılışı, karakter yok, skip %74). Son üç günde test havuzunu geçen olmadı: tutma yetmiyor, paylaşım sebebi lazım. Bugün sabah Reel'i herkesin kullandığı bir uygulamanın (WhatsApp) yeni ve hemen denenebilen özelliğiyle, 0. karede izleyiciye bakan 3D Kare ve 'doğum günlerini unutan arkadaşına gönder' CTA'sıyla açıldı."
+    },
+    {
+      "date": "2026-11-28",
+      "followers": 9,
+      "yesterday_morning": {
+        "media_id": "17985604095066480",
+        "slug": "2026-11-27-whatsapp-zamanla",
+        "kind": "short-reel",
+        "style": "3d",
+        "reach": 112,
+        "views": 133,
+        "skip_rate": 0.542,
+        "avg_watch_s": 4.9,
+        "shares": 0,
+        "saved": 0,
+        "likes": 1
+      },
+      "yesterday_evening": {
+        "media_id": "18289045885289290",
+        "slug": "2026-11-27-saatlik-mi-proje-mi",
+        "kind": "reel",
+        "style": "arayuz (seslendirmesiz)",
+        "reach": 125,
+        "views": 137,
+        "skip_rate": 0.906,
+        "avg_watch_s": 1.6,
+        "shares": 0,
+        "saved": 0,
+        "likes": 0,
+        "comments": 0,
+        "note": "Yayından ~15 saat sonra ölçüldü"
+      },
+      "note": "doksan-dokuz 2. günde 219 erişim (skip %50, 7,6 sn, 0 paylaşım). turuncu-mavi-afisler 145. Takipçi 9 → 9.",
+      "lesson": "Şimdiye kadarki en kötü açılış: telefonda teklif formu (arayüz, karakter yok) ile açılan akşam Reel'i %91 skip, 1,6 sn. Aynı gün 0. karede izleyiciye bakan büyük 3D Kare ile açılan sabah Reel'i %54 skip. Bugün iki gönderi de 0. karede büyük Kare ile açıldı: akşam Reel'i Kare'nin 'Instagram'da tek bir algoritma yok' cümlesiyle (sonucu önce söyleyen kanca), sabah Reel'i oyun sahnesinde Kare + kapıda silinen kaset ile."
     }
   ],
   "planned_reels": [
@@ -1904,7 +1970,8 @@
       "visual_note": "3D: Kare'nin önünde dört ayrı 3D çark/kutu (akış, hikâyeler, keşfet, Reels), her biri farklı hızda döner; Reels kutusundan dört ikon çıkar (gönder, tam izleme, beğeni, ses). Instagram logosu kullanılmaz.",
       "sources": [
         "https://about.instagram.com/blog/announcements/instagram-ranking-explained"
-      ]
+      ],
+      "produced": true
     },
     {
       "date": "2026-11-29",
