@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#1B1B20;font-family:Inter,sans-serif}
+canvas{position:absolute;left:0;top:0;image-rendering:pixelated}
+.t{position:absolute;left:90px;right:90px;text-align:center;color:#fff}
+.tag{top:250px;font:800 36px Inter;letter-spacing:.06em;color:#C6F24E}
+h1{position:absolute;left:70px;right:70px;top:330px;margin:0;text-align:center;font:900 112px/1.0 "Inter Display",Inter;letter-spacing:-4px;color:#fff}
+h1 em{font-style:normal;color:#C6F24E}
+.sub{top:1270px;font:600 46px/1.32 Inter;color:#E9E7E0}
+.sub b{color:#fff;font-weight:800}
+.cta{position:absolute;left:50%;top:1560px;transform:translateX(-50%);white-space:nowrap;background:#FF2E93;color:#fff;font:800 42px Inter;padding:26px 46px;border-radius:60px}
+</style></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="t tag">PSİKOLOJİ İPUCU</div>
+<h1>İlk ve son<br><em>akılda kalır.</em></h1>
+<div class="t sub">Bir listede insanlar en çok <b>ilk ve son</b> maddeleri hatırlar. Buna dizi konumu etkisi denir. Sunumunda en önemli şeyi başa ya da sona koy.</div>
+<div class="cta">Sunumu olan arkadaşına gönder</div>
+<script>
+/* 28 Kasım story (oyun tarzı): dizi konumu etkisi. 7 piksel kart; ilk (lime) ve son (pembe) parlıyor, ortadakiler soluk; Kare izleyiciye bakıyor. */
+const C=document.getElementById('c').getContext('2d'); const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', WHITE='#FFFFFF', DIM='#3A3A44', DIM2='#4A4A55';
+function box(x,y,w,h,f,b=INK,t=2){X.fillStyle=b;X.fillRect(x,y,w,h);X.fillStyle=f;X.fillRect(x+t,y+t,w-2*t,h-2*t);}
+X.fillStyle='#1B1B20';X.fillRect(0,0,270,480);
+// 7 kart (liste): x 96..250, y 150..300
+for(let i=0;i<7;i++){
+  const y=150+i*21, hi=(i===0||i===6), col=i===0?LIME:(i===6?PINK:DIM2);
+  if(hi){X.fillStyle=i===0?'rgba(198,242,78,.25)':'rgba(255,46,147,.25)';X.fillRect(92,y-4,166,23);}
+  box(98,y,154,15,hi?WHITE:DIM,INK,2);
+  X.fillStyle=col;X.fillRect(102,y+4,7,7);
+  X.fillStyle=hi?INK:'#5A5A66';X.fillRect(114,y+5,hi?96:80,2);X.fillRect(114,y+9,hi?64:52,2);
+}
+// Kare (17x18 sprite, ölçek 4) solda
+(function(){X.save();X.translate(14,214);X.scale(4,4);
+  X.fillStyle=PINK;X.fillRect(7,-4,3,3);X.fillStyle=WHITE;X.fillRect(8,-1,1,2);
+  box(0,1,17,13,LIME,INK,1);X.fillStyle=INK;X.fillRect(2,3,13,9);
+  X.fillStyle=WHITE;X.fillRect(4,5,2,3);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);
+  X.fillRect(4,14,2,3);X.fillRect(11,14,2,3);X.fillRect(3,17,4,1);X.fillRect(10,17,4,1);X.fillRect(-2,7,2,1);
+  X.fillRect(17,7,2,1);
+  X.restore();
+  X.fillStyle='#0E0E12';X.fillRect(20,288,58,3);})();
+C.imageSmoothingEnabled=false;C.drawImage(S,0,0,270,480,0,0,1080,1920);
+</script></body></html>
