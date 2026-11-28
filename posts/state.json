@@ -1390,6 +1390,16 @@
         "https://www.canva.dev/blog/developers/canva-mcp-ga/",
         "https://thenextweb.com/news/canva-anthropic-claude-design-ai-powered-visual-suite"
       ]
+    },
+    {
+      "key": "visa-marka-yenileme-base-design",
+      "topic": "Visa, Base Design ile marka kimliğini yeniledi ('yeni nesil için')",
+      "found": "2026-11-28",
+      "big": false,
+      "note": "Dezeen 26 Kasım başlığından görüldü; sayfa bulut ortamında açılamadı, ayrıntılar (logo/renk/yazı tipi değişimi) doğrulanmadı. Marka haberi için resmî görsel gerekiyor (Görseli olmayan marka haberi yok kuralı); görsel alınamadığı için işlenmedi. Ece görsel sağlarsa ya da tarayıcı bağlıysa 'Marka Önce/Sonra' adayı.",
+      "sources": [
+        "https://www.dezeen.com/2026/11/26/visa-logo-redesign-base-design/"
+      ]
     }
   ],
   "scheduled": [],
