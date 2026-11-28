@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;image-rendering:pixelated}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+/* Frame Lab sabah kısa Reel'i 28 Kasım (oyun tarzı): Tidal, tamamen yapay zekâyla üretilmiş şarkıları 9 Aralık'tan itibaren kaldırıyor.
+   Mini hikâye: Kare bant başında kasetleri izler; robot etiketli (tamamen YZ) kaset kapıda silinir, nota etiketli geçer;
+   100 kareden 43'ü pembe dolar (son 90 günde gelenlerin %43'ü); YZ destekli (nota + küçük robot) kaset geçer; Kare izleyiciye sorar.
+   Kaynaklar: tidal.com/magazine/article/ai-music-is-banned/1-99745 (25 Kasım 2026), techcrunch.com 24 Kasım 2026. */
+const COVER=(location.hash==='#cover');
+const OUT=document.getElementById('c').getContext('2d');
+const S=document.createElement('canvas'); S.width=270; S.height=480; const X=S.getContext('2d');
+const INK='#111114', LIME='#C6F24E', PINK='#FF2E93', CREAM='#F4F1E8', WHITE='#FFFFFF', SHADE='#D9D5C8', GREY='#8A8880', BELT='#3A3A44';
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const G={
+A:[14,17,17,31,17,17,17],B:[30,17,17,30,17,17,30],C:[14,17,16,16,16,17,14],D:[30,17,17,17,17,17,30],E:[31,16,16,30,16,16,31],
+F:[31,16,16,30,16,16,16],G:[14,17,16,23,17,17,15],H:[17,17,17,31,17,17,17],I:[14,4,4,4,4,4,14],J:[7,2,2,2,2,18,12],
+K:[17,18,20,24,20,18,17],L:[16,16,16,16,16,16,31],M:[17,27,21,21,17,17,17],N:[17,17,25,21,19,17,17],O:[14,17,17,17,17,17,14],
+P:[30,17,17,30,16,16,16],R:[30,17,17,30,20,18,17],S:[15,16,16,14,1,1,30],T:[31,4,4,4,4,4,4],U:[17,17,17,17,17,17,14],
+V:[17,17,17,17,17,10,4],Y:[17,17,10,4,4,4,4],Z:[31,1,2,4,8,16,31],W:[17,17,17,21,21,21,10],X:[17,17,10,4,10,17,17],Q:[14,17,17,17,21,18,13],
+'0':[14,17,19,21,25,17,14],'1':[4,12,4,4,4,4,14],'2':[14,17,1,2,4,8,31],'3':[30,1,1,14,1,1,30],'4':[2,6,10,18,31,2,2],
+'5':[31,16,30,1,1,17,14],'6':[6,8,16,30,17,17,14],'7':[31,1,2,4,8,8,8],'8':[14,17,17,14,17,17,14],'9':[14,17,17,15,1,2,12],
+',':[0,0,0,0,0,4,8],'.':[0,0,0,0,0,0,4],'!':[4,4,4,4,4,0,4],':':[0,4,0,0,0,4,0],'?':[14,17,1,2,4,0,4],'-':[0,0,0,31,0,0,0],
+' ':[0,0,0,0,0,0,0],'%':[24,25,2,4,8,19,3],"'":[4,4,8,0,0,0,0],'/':[1,1,2,4,8,16,16]};
+const ACC={'Ç':['C','ced'],'Ğ':['G','breve'],'İ':['I','dot'],'Ö':['O','uml'],'Ş':['S','ced'],'Ü':['U','uml'],'Â':['A','circ']};
+function glyph(ch,x,y,sz,col){
+  let base=ch, acc=null; if(ACC[ch]){base=ACC[ch][0];acc=ACC[ch][1];}
+  const g=G[base]||G['?']; X.fillStyle=col;
+  for(let r=0;r<7;r++)for(let c=0;c<5;c++) if(g[r]&(16>>c)) X.fillRect(x+c*sz,y+r*sz,sz,sz);
+  if(acc==='dot') X.fillRect(x+2*sz,y-2*sz,sz,sz);
+  if(acc==='uml'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);}
+  if(acc==='breve'){X.fillRect(x+1*sz,y-3*sz,sz,sz);X.fillRect(x+3*sz,y-3*sz,sz,sz);X.fillRect(x+2*sz,y-2*sz,sz,sz);}
+  if(acc==='circ'){X.fillRect(x+1*sz,y-2*sz,sz,sz);X.fillRect(x+3*sz,y-2*sz,sz,sz);X.fillRect(x+2*sz,y-3*sz,sz,sz);}
+  if(acc==='ced'){X.fillRect(x+2*sz,y+7*sz,sz,sz);X.fillRect(x+1*sz,y+8*sz,sz,sz);}
+}
+/* Not: "TIDAL" marka adı olduğu için büyük harfle verilir; tr-TR büyütmesi I harfini değiştirmez. */
+function txt(s,x,y,sz=1,col=INK,align='left',shadow=null){
+  s=s.toLocaleUpperCase('tr-TR'); const w=s.length*6*sz-sz; let x0=align==='center'?Math.round(x-w/2):align==='right'?x-w:x;
+  if(shadow){for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz+sz,y+sz,sz,shadow);}
+  for(let i=0;i<s.length;i++) glyph(s[i],x0+i*6*sz,y,sz,col);
+  return w;
+}
+function box(x,y,w,h,fill,border=INK,b=2){X.fillStyle=border;X.fillRect(x,y,w,h);X.fillStyle=fill;X.fillRect(x+b,y+b,w-2*b,h-2*b);}
+const ease=x=>1-Math.pow(1-clamp(x),3);
+const pop=(t,t0)=>{const d=t-t0; if(d<0) return 0; if(d<0.12) return d/0.12*1.25; if(d<0.22) return 1.25-(d-0.12)/0.1*0.25; return 1;};
+window.DUR=10.2;
+window.SFX=[[0.05,'pop2'],[1.55,'whoosh'],[1.7,'pop'],[2.75,'ding'],[3.2,'whoosh'],[3.5,'tick'],[3.9,'tick'],[4.3,'tick'],[4.7,'tick'],[5.1,'ding'],[6.0,'whoosh'],[7.1,'ding'],[8.0,'pop2'],[9.6,'pop']];
+/* Kare sprite 17x18, izleyiciye bakar; face: happy | wow | wink */
+function kare(x0,y0,frame,face,k,armUp){
+  X.save();X.translate(Math.round(x0),Math.round(y0));X.scale(k,k);
+  X.fillStyle=PINK;X.fillRect(7,-4,3,3);X.fillStyle=INK;X.fillRect(8,-1,1,2);
+  box(0,1,17,13,LIME,INK,1);X.fillStyle=INK;X.fillRect(2,3,13,9);
+  X.fillStyle=WHITE;
+  if(face==='wow'){X.fillRect(4,5,3,3);X.fillRect(10,5,3,3);X.fillStyle=PINK;X.fillRect(7,9,3,2);}
+  else if(face==='wink'){X.fillRect(4,6,3,1);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);}
+  else{X.fillRect(4,5,2,3);X.fillRect(11,5,2,3);X.fillRect(6,10,5,1);X.fillRect(5,9,1,1);X.fillRect(11,9,1,1);}
+  X.fillStyle=INK;
+  if(frame===0){X.fillRect(4,14,2,3);X.fillRect(11,14,2,3);X.fillRect(3,17,4,1);X.fillRect(10,17,4,1);}
+  else{X.fillRect(4,14,2,3);X.fillRect(11,14,2,2);X.fillRect(3,17,4,1);X.fillRect(11,16,4,1);}
+  X.fillRect(-2,7,2,1);
+  if(armUp){X.fillRect(17,6,2,1);X.fillRect(19,4,1,2);X.fillRect(20,2,1,2);} else X.fillRect(17,7,2,1);
+  X.restore();
+}
+/* kaset 30x20: kind 'ai' (pembe robot etiketi), 'human' (lime nota), 'mix' (lime nota + küçük pembe robot) */
+function cassette(x,y,kind,sc=1){
+  if(sc<=0) return;
+  X.save();X.translate(Math.round(x+15),Math.round(y+10));X.scale(sc,sc);X.translate(-15,-10);
+  box(0,0,30,20,WHITE,INK,2);
+  X.fillStyle=kind==='ai'?PINK:LIME;X.fillRect(4,3,22,8);
+  X.fillStyle=INK;
+  if(kind==='ai'){ // robot yüzü
+    X.fillRect(11,4,8,6);X.fillStyle=WHITE;X.fillRect(12,6,2,2);X.fillRect(16,6,2,2);X.fillStyle=INK;X.fillRect(14,2,2,2);
+  } else { // nota
+    X.fillRect(15,4,1,5);X.fillRect(16,4,3,1);X.fillRect(18,5,1,1);X.fillRect(13,8,3,2);
+    if(kind==='mix'){X.fillStyle=PINK;X.fillRect(20,5,5,5);X.fillStyle=WHITE;X.fillRect(21,7,1,1);X.fillRect(23,7,1,1);}
+  }
+  X.fillStyle=INK;X.fillRect(7,13,5,4);X.fillRect(18,13,5,4);X.fillStyle=WHITE;X.fillRect(9,14,1,2);X.fillRect(20,14,1,2);
+  X.fillStyle=INK;X.fillRect(12,15,6,1);
+  X.restore();
+}
+function puff(cx,cy,p){ // piksel dağılma
+  if(p<=0||p>=1) return;
+  const n=10; for(let i=0;i<n;i++){const a=i/n*Math.PI*2+0.3, r=4+p*22;
+    X.fillStyle=i%2?PINK:INK; const s=Math.max(1,Math.round(4*(1-p)));
+    X.fillRect(Math.round(cx+Math.cos(a)*r),Math.round(cy+Math.sin(a)*r*0.8),s,s);}
+}
+function check(x,y,col){X.fillStyle=INK;const P=[[0,8],[2,10],[4,12],[6,10],[8,8],[10,6],[12,4],[14,2],[16,0]];
+  P.forEach(([a,b])=>X.fillRect(x+a-1,y+b-1,6,6));X.fillStyle=col;P.forEach(([a,b])=>X.fillRect(x+a,y+b,4,4));}
+function cross(cx,cy,col){for(let i=-7;i<=7;i++){X.fillStyle=INK;X.fillRect(cx+i-1,cy+i-1,5,5);X.fillRect(cx+i-1,cy-i-1,5,5);}
+  for(let i=-7;i<=7;i++){X.fillStyle=col;X.fillRect(cx+i,cy+i,3,3);X.fillRect(cx+i,cy-i,3,3);}}
+/* bant + kapı */
+function belt(t){
+  box(94,336,112,12,BELT,INK,2);
+  X.fillStyle='#55555F'; const off=Math.floor(t*40)%12; for(let x=96-12+off;x<204;x+=12){ if(x>=96) X.fillRect(x,339,5,6);}
+  X.fillStyle=INK;X.fillRect(100,348,6,8);X.fillRect(192,348,6,8);
+}
+function gate(state,a){ // state: 'idle' | 'block' | 'pass'
+  X.fillStyle=INK;X.fillRect(204,272,6,84);X.fillRect(254,272,6,84);X.fillRect(204,262,56,14);
+  txt('TIDAL',232,266,1,WHITE,'center');
+  if(state==='block'){X.fillStyle='rgba(255,46,147,'+(0.35*a)+')';X.fillRect(210,276,44,72);cross(232,312,PINK);}
+  if(state==='pass'){X.fillStyle='rgba(198,242,78,'+(0.35*a)+')';X.fillRect(210,276,44,72);check(223,302,LIME);}
+}
+function crate(){box(14,324,80,32,SHADE,INK,2);X.fillStyle=INK;X.fillRect(16,339,76,2);}
+function floor(){X.fillStyle=SHADE;X.fillRect(0,356,270,4);}
+function title(){
+  txt('TIDAL',135,66,4,INK,'center');
+  txt('YAPAY ZEKÂ',135,102,3,PINK,'center',INK);
+  txt('ŞARKILARINI SİLİYOR',135,132,2,INK,'center');
+}
+function dialog(L,col){
+  box(8,148,254,84,WHITE,INK,3);
+  L.forEach((l,i)=>txt(l,18,160+i*24,2,(col&&i===L.length-1)?col:INK,'left'));
+}
+/* 100 kare: 43'ü pembe */
+function grid100(n){
+  const x0=104,y0=250,c=9,gp=1;
+  for(let i=0;i<100;i++){const r=Math.floor(i/10),q=i%10;X.fillStyle=i<n?PINK:WHITE;
+    X.fillRect(x0+q*(c+gp),y0+r*(c+gp),c,c);X.fillStyle=INK;X.fillRect(x0+q*(c+gp),y0+r*(c+gp)+c-1,c,1);}
+}
+function frame100(){X.fillStyle=INK;X.fillRect(101,247,106,2);X.fillRect(101,351,106,2);X.fillRect(101,247,2,106);X.fillRect(205,247,2,106);}
+window.render=function(t){
+  X.imageSmoothingEnabled=false;
+  X.fillStyle=CREAM;X.fillRect(0,0,270,480);
+  if(COVER){ renderCover(); return blit(); }
+  title(); floor();
+  const fr=Math.floor(t*4)%2;
+  let face='happy', kx=22, ky=252+Math.round(Math.sin(t*5)*1.5), ks=4, arm=false;
+  if(t<3.2||(t>=6.0&&t<8.0)){
+    crate(); belt(t);
+    if(t<3.2){
+      // 1) robot etiketli kaset kapıya çarpar ve silinir, nota etiketli geçer
+      const xa=96+Math.min(t,1.55)*70;            // 0 → 1.55 sn: 96 → ~204
+      const blocked=t>=1.55;
+      if(!blocked) cassette(xa,316,'ai');
+      else puff(222,326,(t-1.55)/0.6);
+      const xh=t<0.9?60:96+(t-0.9)*72;           // ikinci kaset 0.9'da banda girer
+      if(t>=0.9&&xh<262) cassette(Math.min(xh,262),316,'human');
+      gate(blocked&&t<2.4?'block':(t>=2.6?'pass':'idle'),blocked?clamp(1-(t-1.55)/0.9):clamp((t-2.6)/0.2));
+      face=t>=1.55&&t<2.4?'wow':'happy';
+    } else {
+      // 3) YZ destekli (nota + küçük robot) kaset geçer
+      const lt=t-6.0, xm=96+lt*95;
+      if(xm<262) cassette(xm,316,'mix');
+      gate(lt>=1.1?'pass':'idle',clamp((lt-1.1)/0.2));
+      face='happy';
+      if(lt>=1.1) arm=true;
+    }
+  } else if(t<6.0){
+    // 2) 100 kareden 43'ü
+    const lt=t-3.2, n=Math.round(43*ease(clamp((lt-0.2)/1.7)));
+    grid100(n); frame100();
+    face=lt>2.0?'wow':'happy';
+  } else {
+    // 4) Kare izleyiciye sorar
+    const lt=t-8.0, e=ease(lt/0.4);
+    kx=Math.round(22+(98-22)*e); ky=268-Math.round(Math.sin(clamp(lt/0.4)*Math.PI)*12)+Math.round(Math.sin(t*5)*1.5); ks=4;
+    cassette(20,322,'ai',pop(t,8.3)); cassette(220,322,'human',pop(t,8.45));
+    if(lt>0.5){txt('?',35,302,2,PINK,'center');txt('?',235,302,2,PINK,'center');}
+    face=t>=9.6?'wink':'happy'; arm=t>=9.6;
+  }
+  X.fillStyle=SHADE;X.fillRect(kx+6,ky+70,58,3);
+  kare(kx,ky,fr,face,ks,arm);
+  let L,c=null;
+  if(t<3.2) L=['TAMAMEN YAPAY','ZEKÂYLA YAPILAN','ŞARKILAR SİLİNECEK.'];
+  else if(t<6.0){L=['SON 90 GÜNDE GELEN','ŞARKILARIN %43\'Ü','YAPAY ZEKÂ ÜRETİMİ.'];c=PINK;}
+  else if(t<8.0){L=['YAPAY ZEKÂ DESTEKLİ','ŞARKILAR KALIYOR.'];}
+  else {L=['SEN FARKI','ANLAYABİLİR MİSİN?','YORUMA YAZ!'];c=PINK;}
+  dialog(L,c);
+  blit();
+};
+function renderCover(){
+  txt("TIDAL'A GELEN",135,84,3,INK,'center');
+  txt('ŞARKILARIN',135,118,4,INK,'center');
+  txt("%43'Ü",135,166,7,PINK,'center',INK);
+  txt('YAPAY ZEKÂ',135,240,4,INK,'center');
+  X.fillStyle=SHADE;X.fillRect(0,388,270,3);
+  cassette(30,346,'ai',1.4); cassette(198,346,'human',1.4);
+  X.fillStyle=SHADE;X.fillRect(106,384,62,3);
+  kare(101,302,0,'wow',4,false);
+}
+function blit(){OUT.imageSmoothingEnabled=false;OUT.drawImage(S,0,0,270,480,0,0,1080,1920);}
+window.render(0);
+</script></body></html>
