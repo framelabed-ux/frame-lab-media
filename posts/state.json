@@ -878,6 +878,29 @@
       "music_seed": 1127,
       "media_id": "18289045885289290",
       "published_at": "2026-11-27T19:20+03:00"
+    },
+    {
+      "slug": "2026-11-28-tidal-yapay-zeka",
+      "kind": "short-reel",
+      "style": "oyun",
+      "media_id": "17994682997863751",
+      "publish_date": "2026-11-28",
+      "published_at": "2026-11-28T08:49+03:00",
+      "cover_type": "tipografi",
+      "cover_tone": "light",
+      "topic_area": "ai",
+      "music": "synthwave",
+      "music_seed": 1128,
+      "voice": false,
+      "files": [
+        "posts/2026-11-28-tidal-yapay-zeka/reel.mp4"
+      ],
+      "cover": "posts/2026-11-28-tidal-yapay-zeka/cover.jpg",
+      "caption": "Tidal'a son 90 günde gelen her 100 şarkıdan 43'ü tamamen yapay zekâyla üretilmiş. Platform 9 Aralık'tan itibaren bunları kaldırıyor.\n\nNe değişiyor?\n• Tamamen yapay zekâyla üretilen şarkılar reddedilecek ve platformdan kaldırılacak.\n• Yapay zekâ araçlarından destek alınarak yapılan, ama tamamen yapay zekâ çıktısı olmayan şarkılar kalabilecek.\n• Tidal, bu tür şarkıları bir süredir etiketliyor ve telif gelirinden çıkarıyordu. Kendi açıklamasına göre bunların %96'sı son üç ayda hiç dinlenmemiş.\n\nDiğer platformlar: TechCrunch'a göre Spotify ve YouTube Music şimdilik yalnızca etiketliyor, Deezer ise yapay zekâ müziğini gizleme seçeneği getirecek.\n\nSen dinlediğin bir şarkının yapay zekâyla yapıldığını anlayabilir misin? Yorumlara yaz.\n\nKaynak: Tidal (25 Kasım 2026), TechCrunch (24 Kasım 2026)\n\n#yapayzeka #müzik #tidal #spotify #dijitalgündem #teknoloji #müzikprodüksiyon",
+      "sources": [
+        "https://tidal.com/magazine/article/ai-music-is-banned/1-99745",
+        "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/"
+      ]
     }
   ],
   "queue": [
@@ -1223,7 +1246,8 @@
     "reel-guvenli-alan",
     "doksan-dokuz-soldaki-rakam",
     "whatsapp-zamanlanmis-mesaj",
-    "saatlik-mi-proje-basi-mi"
+    "saatlik-mi-proje-basi-mi",
+    "tidal-yapay-zeka-muzik-yasagi"
   ],
   "hot_pending": [
     {
@@ -1301,16 +1325,6 @@
       "sources": [
         "https://www.tubefilter.com/2026/11/25/youtube-shorts-thumbnails-all-creators/",
         "https://x.com/nealmohan/status/2124992445608075268"
-      ]
-    },
-    {
-      "key": "tidal-yapay-zeka-muzik-yasagi",
-      "topic": "Tidal, tamamen yapay zekâyla üretilmiş müziği 9 Aralık'tan itibaren yasaklıyor (son 90 günde dağıtılan parçaların ~%43'ü bu türdeymiş)",
-      "found": "2026-11-25",
-      "big": false,
-      "note": "24 Kasım; yalnızca Techmeme özetinden görüldü, kaynak sayfası açılıp doğrulanmadı. İşlenecekse rakam Hollywood Reporter ve ikinci bir kaynaktan doğrulanmalı.",
-      "sources": [
-        "https://www.hollywoodreporter.com/music/music-industry-news/tidal-bans-wholly-ai-generated-music-1236762171/"
       ]
     },
     {
