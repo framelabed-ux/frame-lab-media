@@ -1475,6 +1475,22 @@
       "silent_reels": "6/6 ~105–118 erişimde kaldı (skip %66–88, 2,6–4,4 sn)",
       "best": "17991178818089969 (Instagram Direct: erişim 1404, 132 paylaşım = %9,4 gönderim/erişim, skip %54, 12,1 sn); en iyi tutma 17981484864140074 (Logolar: skip %45,5, 13 sn, 10 kaydetme)",
       "worst": "18477298123184660 (LinkedIn yapay zekâ yorumları: erişim 105, skip %88, 2,6 sn, sessiz editoryal)"
+    },
+    {
+      "week_end": "2026-11-28",
+      "range": "2026-11-22..2026-11-28",
+      "followers": 9,
+      "followers_prev": 6,
+      "followers_change": 3,
+      "note": "Windsor 21–28 Kasım, force_refresh yok; 21 Kasım gönderileri geçen haftaya sayıldı. 28 Kasım sabah Reel'i yalnızca ~12 saatlik. 28 Kasım akşam Reel'i henüz yayınlanmadı.",
+      "posts": 13,
+      "views": 4740,
+      "reach": 4195,
+      "voiced_reels": "3/4 test havuzunu aştı (1.171, 1.203, 513); Turuncu-mavi afişler seslendirmeli ama 0 paylaşımla 145",
+      "silent_reels": "9/9 ~108–219'da kaldı; sessiz arayüz açılışı skip ort. %77, sessiz oyun/3D %56",
+      "best": "17908664565600608 (YouTube TV izlenme: erişim 1203, skip %40,7, 15,4 sn, 2 paylaşım); en çok kaydetme 18127368056476510 (İlk freelance müşteri: 1171 erişim, 13 kaydetme = %1,1)",
+      "worst": "18289045885289290 (Saatlik mi proje mi: erişim 125, skip %90,6, 1,6 sn, sessiz arayüz açılışı)",
+      "shares_per_reach_max": "%0,39 (Sesli mi sessiz mi); ≥ %1 hedefi tutmadı"
     }
   ],
   "daily_metrics": [
